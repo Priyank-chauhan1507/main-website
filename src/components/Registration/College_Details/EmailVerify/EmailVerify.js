@@ -1,8 +1,8 @@
 import React from "react";
 import "./EmailVerify.css";
 // import Nav from "../../web/NewNavbar/Nav";
-import logbg1 from "../../../assests/Regback.webp";
-import logbg2 from "../../../assests/Thomso_Navbar.png";
+import logbg1 from "../../../../assests/Regback.webp";
+import logbg2 from "../../../../assests/Thomso_Navbar.png"
 // import logbg2 from "../../../assets/Campus_Ambassador.svg";
 import { Link } from "react-router-dom";
 
@@ -11,14 +11,13 @@ const EmailVerify = () => {
     <div id="emailroot">
       {/* <Nav id="navemailbar" /> */}
       <div id="nav_ev">
-        <Link to="/">
-          <img src={logbg2} alt="" />
-        </Link>
+        <img src={logbg2} alt="" />
       </div>
       <div id="log_bg12">
         <img src={logbg1} className="emailVerifyBack" alt="" />
         <p className="mob_view">Registration</p>
         <div className="Box" id="box2_reg">
+            
           <div className="Box2">
             <h2>
               <strong>Email Verified Successfully!</strong>
