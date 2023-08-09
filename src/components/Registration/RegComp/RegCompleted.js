@@ -1,5 +1,6 @@
 import React from "react";
 import "./RegComp.css";
+// import Nav from "../../web/NewNavbar/Nav"
 import logbg1 from "../../../assests/Regback.webp";
 import logbg2 from "../../../assests/Thomso_Navbar.png";
 import { Link } from "react-router-dom";
