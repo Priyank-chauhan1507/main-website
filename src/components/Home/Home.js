@@ -8,6 +8,9 @@ import Navbar from '../Navbar/Navbar'
 import { useNavigate } from "react-router-dom";
 function Home() {
   const navigate = useNavigate();
+import {useNavigate} from "react-router-dom"
+function Home() {
+  const navigate=useNavigate();
   return (
     <div className='home'>
         <img src={Homebg}  className='homebg'
