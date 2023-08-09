@@ -4,10 +4,12 @@
 }
 .nav {
   width: 99vw;
-  display: grid;
+  display: flex;
   height: 14vh;
-  grid-template-columns: 30% 20% 20% 30%;
+  // grid-template-columns: 30% 20% 20% 30%;
   position: relative;
+  margin: auto;
+  justify-content: space-between;
   .logo {
     width: 100px;
     margin-left: 40px;
@@ -51,7 +53,7 @@
     gap: 5vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .nav {
     height: 7vh;
     .logo {
@@ -64,7 +66,7 @@
     button {
       font-size: 10px !important;
       padding: 2px 10px !important;
-      margin: auto;
+      // margin: auto;
       width: 60px;
       display: flex;
       align-items: center;
