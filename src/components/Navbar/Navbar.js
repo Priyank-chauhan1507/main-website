@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assests/logo.png";
+import logo from "../../assests/logo.svg";
 import "./Navbar.scss";
 function Navbar() {
   return (

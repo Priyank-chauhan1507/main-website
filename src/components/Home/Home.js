@@ -1,8 +1,8 @@
 import React from 'react'
 import Homebg from "../../assests/Landing-page.webp"
-import thomso from "../../assests/thomso.png"
-import singers from "../../assests/singers.png"
-import singersmob from "../../assests/singersmob.png"
+import thomso from "../../assests/thomso.webp"
+import singers from "../../assests/singers.webp"
+import singersmob from "../../assests/singersmob.webp"
 import "./Home.scss"
 import Navbar from '../Navbar/Navbar'
 import {useNavigate} from "react-router-dom"
