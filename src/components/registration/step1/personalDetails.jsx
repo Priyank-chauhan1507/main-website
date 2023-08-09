@@ -1,3 +1,9 @@
+import React from "react";
+import {Link} from 'react-router-dom'
+import "./personalDetails.css";
+
+const PersonalDetails = () => {
+  return (
 import React, {useState, useEffect} from "react";
 import {useNavigate} from 'react-router-dom'
 import "./personalDetails.css";
@@ -142,6 +148,11 @@ const PersonalDetails = () => {
             <div className="personal-step1-number-content">1</div>
           </div>
           <div className="personal-step1-description">
+            <div className="personal-step1-description-content-para1">
+              Step 1/2
+            </div>
+            <div className="personal-step1-description-content-para2">
+              Personal Details
             <div className="personal-step1-description-content-para1 comic-neue">
               Step 1/2
             </div>
@@ -155,6 +166,11 @@ const PersonalDetails = () => {
             <div className="personal-step2-number-content">2</div>
           </div>
           <div className="personal-step2-description">
+            <div className="personal-step2-description-content-para1">
+              Step 2/2
+            </div>
+            <div className="personal-step2-description-content-para2">
+              College Details
             <div className="personal-step2-description-content-para1 comic-neue">
               Step 2/2
             </div>
@@ -165,6 +181,11 @@ const PersonalDetails = () => {
         </div>
       </div>
 
+      <form>
+        <div className="personal-inputs">
+          <div className="personal-input1">
+            <div>
+              <input className="input-field" type="text" placeholder="Name *" />
       <form  onSubmit={(e) => onSubmit(e)}>
         <div className="personal-inputs">
           <div className="personal-input1">
@@ -190,11 +211,28 @@ const PersonalDetails = () => {
           </div>
           <div className="personal-input2">
             <div>
+              <select defaultValue={""} className="input-field select-field">
               <select className="input-field select-field" onChange={handleChange3}>
                 <option value="" disabled hidden>
                   Gender *
                 </option>
                 <option className="select-option" value="Gender 1">
+                  Gender 1
+                </option>
+                <option className="select-option" value="Gender 2">
+                  Gender 2
+                </option>
+                <option className="select-option" value="Gender 3">
+                  Gender 3
+                </option>
+              </select>
+            </div>
+            <div>
+              <input
+                className="input-field"
+                name="phone"
+                placeholder="Phone Number *"
+              />
                   Male
                 </option>
                 <option className="select-option" value="Gender 2">
@@ -234,6 +272,27 @@ const PersonalDetails = () => {
           </div>
           <div className="personal-input3">
             <div>
+              <input
+                className="input-field"
+                type="password"
+                placeholder="Create Password *"
+              />
+            </div>
+            <div>
+              <input
+                className="input-field"
+                type="password"
+                placeholder="Confirm Passpwrd *"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="personal-buttons">
+          <button type="submit" className="personal-button-submit">
+            Submit
+          </button>
+          <button type="button" className="personal-button-clear">
               <Input.Password
                 className="input-field"
                 type="password"
