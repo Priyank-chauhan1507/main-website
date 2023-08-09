@@ -2,11 +2,50 @@
   margin: auto;
   width: fit-content;
   height: 45vh;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+*{
+  /* overflow: auto; */
+  /* height: 100vh;
+  width: 100vw; */
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  /* overflow: hidden; */
+}
+
+.comic-neue {
+  font-family: 'Comic Neue', cursive;
+}
+
+.personal {
+  margin: auto;
+  width: fit-content;
+  height: 60vh;
   background-color: #ffffff;
   border: 2px solid #000000;
   border-radius: 8px;
   filter: drop-shadow(12px 12px 0px rgba(0, 0, 0, 0.4));
   padding: 7vh 5.4vw;
+  padding: 6vh 5vw;
+  margin-top: 8vh;
+  /* justify-self: center;
+  align-self: center; */
+  /* overflow: auto; */
+}
+
+#nav1bar {
+  position: relative;
+}
+
+#welcomebckbg12 {
+  z-index: -1;
+  width: 100vw;
+  height: 89vh;
+  margin-top: 11vh;
+  position: fixed;
 }
 
 .personal-steps {
@@ -31,6 +70,7 @@
   border: 1.19px solid #111111;
   border-radius: 5px;
   background-color: #ff5c00;
+  background-color: #12C459;
   box-shadow: 1.19px 2.38px 0px 0px #111111;
 }
 
@@ -83,6 +123,7 @@
   border: 1.19px solid #111111;
   border-radius: 5px;
   background-color: #ffffff;
+  background-color: #EDD729;
   box-shadow: 1.19px 2.38px 0px 0px #111111;
 }
 
@@ -93,6 +134,7 @@
   line-height: 20px;
   letter-spacing: 0.02em;
   color: #111111;
+  color: #ffffff;
 }
 
 .personal-inputs {
@@ -113,6 +155,10 @@
 .input-field {
   box-sizing: border-box;
   width: 25.1vw;
+.input-field,
+select-option {
+  box-sizing: border-box;
+  width: 19.44vw;
   height: 40px;
   padding: 12px 20px;
   border-radius: 6px;
@@ -130,6 +176,11 @@
 select option [value="Gender 1"] {
   background-color: transparent !important;
 }
+
+select option [value="Gender 1"] {
+  background-color: transparent !important;
+}
+
 .select-field {
   padding: 0 20px;
 }
@@ -164,6 +215,7 @@ select option [value="Gender 1"] {
   letter-spacing: 0em;
   border: 1.52px solid #505050;
   box-shadow: 1.5px 3px 0px 0px #505050;
+  cursor: pointer;
 }
 
 .personal-button-clear {
@@ -174,6 +226,7 @@ select option [value="Gender 1"] {
 .personal-button-submit {
   color: #ffffff;
   background-color: #cccccc;
+  /* background-color: #ff5c00; */
 }
 
 .personal-button-clear:hover {
@@ -189,10 +242,31 @@ select option [value="Gender 1"] {
 }
 
 @media screen and (max-width: 930px) {
+.bgimage123 {
+  display: none !important;
+}
+#log_bg1{
+  padding-bottom: 0;
+}
+@media screen and (max-width: 800px) {
   .personal {
     border-radius: 0;
     filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.32));
     padding: 3.8vh 6.1vw;
+    margin-top: 26vh;
+  }
+
+  #welcomebckbg12 {
+    display: none !important;
+  }
+
+  .bgimage123 {
+    display: block !important;
+    z-index: -1;
+    width: 100vw;
+    height: 91vh;
+    margin-top: 9vh;
+    position: fixed;
   }
 
   .personal-step2 {
@@ -253,4 +327,31 @@ select option [value="Gender 1"] {
     width: 37.22vw;
     font-size: 1rem;
   }
+}
+
+.backdrop {
+  display: block !important;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -14vh;
+    position: fixed;
+    /* margin-top: -50px; */
+}
+
+@media screen and (max-width: 800px) {
+
+  .backdrop {
+    visibility: hidden;
+    background-color: #101010;
+  }
+
+  .personal-step1 {
+    display: none;
+  }
+
+  body {
+    background-color: #101010;
+  }
+
 }
