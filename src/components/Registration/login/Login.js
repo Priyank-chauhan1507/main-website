@@ -1,26 +1,19 @@
-
-
-
-
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Input } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import SimpleReactValidator from "simple-react-validator";
 // import { login, fetchEvents, fetchUser } from "../../User/UserActions";
 import { connect } from "react-redux";
 import axios from "axios";
-// import Loader from "../../Loader/Loader";
+import Loader from "../../Loader/Loader";
 // import setAuthToken from "../../User/setAuthToken";
-
-
 import Regback from "../../../assests/reg-backi.webp";
-import logo from "../../../assests/logo.svg"
+import logo from "../../../assests/logo.svg";
 import "./Login.scss";
-// import Navbar from '../../Navbar/Navbar'
-
+import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 
 const Login = (props) => {
-let navigate = useNavigate();
+  let navigate = useNavigate();
 
   const validator = new SimpleReactValidator();
 
@@ -52,7 +45,6 @@ let navigate = useNavigate();
               setLoading(false);
               setVerifiederror(true);
               setNotFoundError(false);
-              
             } else if (res.data.error === "CA not found") {
               setNotFoundError(true);
               setVerifiederror(false);
@@ -84,92 +76,106 @@ let navigate = useNavigate();
   };
 
   useEffect(() => {
-    if(user.email && user.password && /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(user.email) ){
-      setActive(true)
-    }else{
+    if (
+      user.email &&
+      user.password &&
+      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(user.email)
+    ) {
+      setActive(true);
+    } else {
       setActive(false);
     }
-  }, [user])
+  }, [user]);
 
-    return(
-        <>
-        <div className='login-fullpage'>
-        
-        <img src={Regback}  className='regbg'alt="" />
-        <Link to='/'>
-        <img src={logo} className='logo' alt=""/>
+  return (
+    <>
+    {loading && <Loader />}
+      <div className="login-fullpage">
+        <img src={Regback} className="regbg" alt="" />
+        <Link to="/">
+          <img src={logo} className="logo" alt="" />
         </Link>
 
-
         <div id="bg">
-        <div id="log_bg1">
-        <div id="box">
-            <div id="center">
-              <div id="login">Log In</div>
-              <form  id="form" onSubmit={(e) => onSubmit(e)}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Id *"
-                  id="email1"
-                  value={user.email}
-                  required
-                  onChange={(e) => onInputChange(e)}
-                />
-                {validator.message("email", user.email, "required|email", {
-                  className: "text-danger",
-                })}
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password *"
-                  id="password1"
-                  value={user.password}
-                  required
-                  onChange={(e) => onInputChange(e)}
-                />
-             
-              <Link to="/forgotpassword" id="forget">
-                Forgot Password?
-              </Link>
-             
+          <div id="log_bg1">
+            <div id="box">
+              <div id="center">
+                <div id="login">Log In</div>
+                <form id="form" onSubmit={(e) => onSubmit(e)}>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Id *"
+                    id="email1"
+                    value={user.email}
+                    required
+                    onChange={(e) => onInputChange(e)}
+                  />
+                  {validator.message("email", user.email, "required|email", {
+                    className: "text-danger",
+                  })}
+                  <input
+                    type="password"
+                    name="password"
+                    iconRender={(visible) =>
+                      visible ? (
+                        <EyeTwoTone style={{ color: "black" }} />
+                      ) : (
+                        <EyeInvisibleOutlined style={{ color: "black" }} />
+                      )
+                    }
+                    placeholder="Password *"
+                    id="password1"
+                    value={user.password}
+                    required
+                    onChange={(e) => onInputChange(e)}
+                  />
 
-              <button type="submit" id="log" disabled={!active} style={active == true ? {background: "rgb(237,215,41)"} : {background: "rgb(204, 204, 204)"}}>
-                Log In
-              </button>
-              </form>
-              {error && (
-                <div className="text-danger">Email/Password is Incorrect</div>
-              )}
-              {verifiederror && (
-                <div className="text-danger">
-                  User is not verified. Please check registered mail.
-                </div>
-              )}
-              {notFoundError && (
-                <div className="text-danger">
-                  <div className="text-info">
-                    You are not registered as a CA.
+                  <Link to="/forgotpassword" id="forget">
+                    Forgot Password?
+                  </Link>
+
+                  <button
+                    type="submit"
+                    id="log"
+                    disabled={!active}
+                    style={
+                      active == true
+                        ? { background: "rgb(237,215,41)" }
+                        : { background: "rgb(204, 204, 204)" }
+                    }
+                  >
+                    Log In
+                  </button>
+                </form>
+                {error && (
+                  <div className="text-danger">Email/Password is Incorrect</div>
+                )}
+                {verifiederror && (
+                  <div className="text-danger">
+                    User is not verified. Please check registered mail.
                   </div>
+                )}
+                {notFoundError && (
+                  <div className="text-danger">
+                    <div className="text-info">
+                      You are not registered as a CA.
+                    </div>
+                  </div>
+                )}
+                <div id="niche">
+                  <div id="bottom">Don't have an account?</div>
+                  <Link to="/registration">
+                    <div id="register"> Register Now!</div>
+                  </Link>
                 </div>
-              )}
-              <div id="niche">
-                <div id="bottom">Don't have an account?</div>
-                <Link to="/registration">
-                  <div id="register"> Register Now!</div>
-                </Link>
               </div>
             </div>
           </div>
-          </div>
-          </div>
-          </div>
-        </>
-    );
-}
+        </div>
+      </div>
+    </>
+  );
+};
 
-
-export default Login
-
-
-
+export default Login;
