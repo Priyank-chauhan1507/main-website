@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.97bef029.css",
-    "main.js": "/static/js/main.87d0d8f5.js",
+    "main.css": "/static/css/main.757220e3.css",
+    "main.js": "/static/js/main.fdff3e52.js",
     "static/js/787.3bb570a7.chunk.js": "/static/js/787.3bb570a7.chunk.js",
     "static/media/Landing-page-2.webp": "/static/media/Landing-page-2.2b76d8768e1c38568271.webp",
     "static/media/reg-backi.webp": "/static/media/reg-backi.e1a535b72f0c9b18cc37.webp",
@@ -14,12 +14,12 @@
     "static/media/reg-logo.svg": "/static/media/reg-logo.7ff1b44e2c10de2dbb38076a1e4fbf12.svg",
     "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
     "index.html": "/index.html",
-    "main.97bef029.css.map": "/static/css/main.97bef029.css.map",
-    "main.87d0d8f5.js.map": "/static/js/main.87d0d8f5.js.map",
+    "main.757220e3.css.map": "/static/css/main.757220e3.css.map",
+    "main.fdff3e52.js.map": "/static/js/main.fdff3e52.js.map",
     "787.3bb570a7.chunk.js.map": "/static/js/787.3bb570a7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.97bef029.css",
-    "static/js/main.87d0d8f5.js"
+    "static/css/main.757220e3.css",
+    "static/js/main.fdff3e52.js"
   ]
 }
