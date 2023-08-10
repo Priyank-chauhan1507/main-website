@@ -1,0 +1,33 @@
+.hamburg{
+    display: none;
+    background-color: rgb(4, 4, 4);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw;
+    padding-inline: 5vw;
+}
+.hamburg-logo img{
+    width: 100px;
+}
+
+.spanlist span{
+    width: 40px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+}
+.spanlist{
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width:800px){
+    .navbar-container-0{
+        display: none;
+    }
+   
+    .hamburg{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

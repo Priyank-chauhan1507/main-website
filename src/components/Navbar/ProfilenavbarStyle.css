@@ -1,0 +1,27 @@
+.navbar-container-0{
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    background-color: black;
+    padding: 1vw;
+    padding-inline: 3vw;
+}
+.navbar-img-0 img{
+    width: 10vw;
+}
+.navbar-container-02{
+    display: flex;
+    align-items: center;
+}
+.navbar-container-02 ul{
+    display: flex;
+}
+.navbar-container-02 ul li{
+    list-style: none;
+    margin-inline: 1vw;
+}
+.navbar-container-02 ul li a{
+    text-decoration: none;
+    color: white;
+}
+
