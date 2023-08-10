@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Login from "./components/Registration/login/Login";
-import PersonalDetails from "./components/Registration/step1/personalDetails";
+import PersonalDetails from "./components/Registration/step2/personalDetails";
 import EmailVerify from "./components/Registration/EmailVerify/EmailVerify";
 import RegisComp from "./components/Registration/RegComp/RegCompleted";
 function App() {
