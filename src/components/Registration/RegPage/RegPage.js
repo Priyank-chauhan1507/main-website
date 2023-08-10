@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
 import "./RegPage.css";
 import { useState } from "react";
-
-
 import logbg1 from "../../../assests/RegBack.svg";
-// import logbg2 from "../../../assets/Campus_Ambassador.svg";
-import logo from "../../../assests/logo.svg"
+import logo from "../../../assests/reg-logo.svg"
 import { message } from "antd";
 import OtpInput from "react-otp-input";
 import background from "../../../assests/Regback.webp";
-import { useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function VerifyEmail() {
@@ -48,7 +45,7 @@ export default function VerifyEmail() {
         setLoading(false);
       }
       setLoading(false);
-      navigate("/collegedetailes");
+      navigate("/emailverified");
     } catch (err) {
       message.error("Invalid OTP");
       setLoading(false);
@@ -71,7 +68,9 @@ export default function VerifyEmail() {
     <div className="otpVerify" style={{ overflowY: "hidden" }}>
       {/* <Nav /> */}
       <div className="thomso_logo">
+        <Link to='/'>
         <img src={logo} alt="" />
+        </Link>
       </div>
       <div>
         <img className="otpBack" src={background} alt="back" />

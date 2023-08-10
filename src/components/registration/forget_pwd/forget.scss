@@ -160,16 +160,16 @@ body {
 }
 
 #bg {
-  a {
+  .forget-a {
     width: 100vw;
   }
 }
 
-.logo {
-  width: 10vmax;
-  max-width: 100px;
-  min-width: 80px;
+.logo-for {
   position: absolute;
+  width: 100px;
+    margin: 16px 34px;
+    cursor: pointer;
 }
 
   
@@ -186,6 +186,9 @@ body {
   @media only screen and (max-width: 800px) {
     .fp_maindiv {
       margin: 0;
+    }
+    .logo-for {
+      width: 60px;
     }
 
     .forgot {
@@ -214,9 +217,7 @@ body {
       width: 70vw !important;
     }
 
-    .logo {
-      margin-left: 6vw;
-    }
+    
 
     .email {
       width: 45vw;

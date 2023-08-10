@@ -1,5 +1,4 @@
-
-import logo from "../../../assests/logo.png";
+import logo from "../../../assests/reg-logo.svg";
 import "./resetPassword.scss";
 import Regback from "../../../assests/Regback.webp"
 import Regback1 from "../../../assests/RegbackMobile.webp"
@@ -59,7 +58,9 @@ const ResetPassword = () => {
         <div className="fullpage">
             <img src={Regback}  className='regbg'alt="" />
             <img src={Regback1}  className='regbg1'alt="" />
-        <img src={logo} className='logo' alt=""/>
+            <Link to='/'>
+        <img src={logo} className='logo-res' alt=""/>
+        </Link>
 
         <div className="rp-page">
       <div className="rp-content">

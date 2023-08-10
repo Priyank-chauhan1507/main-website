@@ -54,22 +54,22 @@ const PersonalDetails = () => {
         gender: user.gender,
         referral: user.referral,
       };
-      const response = await axios.post("/apiV1/registeruser", userresponse);
+      const response = await axios.put(`/apiV1/registeruser/${localStorage.getItem("user_id")}`, userresponse);
       const { data } = response;
       if (response.status === 201) {
-        localStorage.setItem("user_id", data.user_id);
+        // localStorage.setItem("user_id", data.user_id);
         setLoading(false);
         // setActive(false)
       }
       setLoading(false);
-      navigate("/verifyemail");
+      navigate("/otpverify");
     } catch (err) {
       setLoading(false);
       const { data } = err?.response;
       console.log("register Error:", data);
       var errorData = "";
       if (data?.error == "user_not_verified") {
-        errorData = `Please verify your registered email. <a href=/verifyemail>Click Here.`;
+        errorData = `Please verify your registered email. <a href=/otpverify>Click Here.`;
       } else {
         for (var key in data) {
           errorData += data[key] + "<br>";
@@ -143,6 +143,9 @@ const PersonalDetails = () => {
       </Link>
       <img src={backdrop} alt="" className="backdrop" />
       <img src={backdropmob} alt="" className="backdropmob" />
+      <div className="mobRegis2">
+        <h2>Registration</h2>
+      </div>
       <div className="personal">
         <div className="personal-steps">
           <div className="personal-step1">

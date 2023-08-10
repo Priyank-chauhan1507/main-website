@@ -8,7 +8,7 @@ import axios from "axios";
 import Loader from "../../Loader/Loader";
 // import setAuthToken from "../../User/setAuthToken";
 import Regback from "../../../assests/reg-backi.webp";
-import logo from "../../../assests/logo.svg";
+import logo from "../../../assests/reg-logo.svg";
 import "./Login.scss";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 
@@ -93,7 +93,7 @@ const Login = (props) => {
       <div className="login-fullpage">
         <img src={Regback} className="regbg" alt="" />
         <Link to="/">
-          <img src={logo} className="logo" alt="" />
+          <img src={logo} className="logo-log" alt="" />
         </Link>
 
         <div id="bg">
@@ -165,7 +165,7 @@ const Login = (props) => {
                 )}
                 <div id="niche">
                   <div id="bottom">Don't have an account?</div>
-                  <Link to="/registration">
+                  <Link to="/collegedetails">
                     <div id="register"> Register Now!</div>
                   </Link>
                 </div>

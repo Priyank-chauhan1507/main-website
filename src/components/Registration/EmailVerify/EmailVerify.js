@@ -28,7 +28,7 @@ const EmailVerify = () => {
 
             {/* <Link to='/collegedetailes'> */}
             <button className="submit">
-              <Link to="./../CollegeDetails.js" className="reg-btn1">
+              <Link to="/regcompleted" className="reg-btn1">
                 Continue Registration
               </Link>
             </button>
