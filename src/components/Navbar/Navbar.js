@@ -7,9 +7,9 @@ function Navbar() {
   return (
     <div className="nav">
       <img src={logo} alt="" className="logo" />
-      <Link to="\ca.thomso.in" target="_blank">CA Portal</Link>
-      <Link to='\zonals.thomso.in' target="_blank">Zonals</Link>
-      <button onClick={() => navigate('/login')} className="log-btn">LOGIN</button>
+      <Link to="\ca.thomso.in" target="_blank"><h2>CA Portal</h2></Link>
+      <Link to='\zonals.thomso.in' target="_blank"><h2>Zonals</h2></Link>
+      <button onClick={() => navigate('/login')} className="home-login">LOGIN</button>
     </div>
   );
 }
