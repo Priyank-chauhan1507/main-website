@@ -10,9 +10,9 @@
 }
 
 .logo {
-    width: 7vw;
-    margin-left: 40px;
-    margin-top: 12px;
+    width: 100px;
+    margin: 16px 34px;
+    cursor: pointer;
   }
 
 .regbg {
@@ -218,6 +218,9 @@
      display: inline-block;
      padding-left: 5.5vw !important;
      padding-right: 10.5vw !important;
+    }
+    .logo{
+        width: 60px;
     }
 
     .regbg{

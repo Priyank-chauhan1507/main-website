@@ -13,8 +13,8 @@ import axios from "axios";
 // import setAuthToken from "../../User/setAuthToken";
 
 
-import Regback from "../../../assests/Regback.webp";
-import logo from "../../../assests/logo.png"
+import Regback from "../../../assests/reg-backi.webp";
+import logo from "../../../assests/logo.svg"
 import "./Login.scss";
 // import Navbar from '../../Navbar/Navbar'
 
@@ -84,7 +84,7 @@ let navigate = useNavigate();
   };
 
   useEffect(() => {
-    if(user.email && user.password ){
+    if(user.email && user.password && /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(user.email) ){
       setActive(true)
     }else{
       setActive(false);
@@ -96,8 +96,9 @@ let navigate = useNavigate();
         <div className='login-fullpage'>
         
         <img src={Regback}  className='regbg'alt="" />
+        <Link to='/'>
         <img src={logo} className='logo' alt=""/>
-
+        </Link>
 
 
         <div id="bg">
