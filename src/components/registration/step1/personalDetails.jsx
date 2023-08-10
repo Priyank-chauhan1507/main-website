@@ -1,17 +1,12 @@
-import React, {useState, useEffect} from "react";
-import {useNavigate} from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./personalDetails.css";
 import Select from "react-select";
 // import CircularProgress from "@mui/material/CircularProgress";
 import axios from "axios";
-import Nav from "../../Navbar/Navbar";
-// import welcomebckbg from "../../../assets/registeration_thomso.webp"
-// import bgimage123 from "../../../assets/mobregbg.webp"
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Input } from "antd";
-
 import backdrop from "../../../assests/Landing-page-2.webp";
-
 const gender_choice = ["Male", "Female", "Others"].map((state) => ({
   value: state,
   label: state,
@@ -32,6 +27,7 @@ const PersonalDetails = () => {
     gender: "",
     password: "",
     confirmpassword: "",
+    referral: "",
   });
 
   const onInputChange = (e) => {
@@ -54,8 +50,9 @@ const PersonalDetails = () => {
         contact: user.contact,
         password: user.password,
         gender: user.gender,
+        referral: user.referral,
       };
-      const response = await axios.post("/apiV1/registerca", userresponse);
+      const response = await axios.post("/apiV1/registeruser", userresponse);
       const { data } = response;
       if (response.status === 201) {
         localStorage.setItem("user_id", data.user_id);
@@ -100,6 +97,7 @@ const PersonalDetails = () => {
       gender: "",
       password: "",
       confirmpassword: "",
+      referral: "",
     });
   };
 
@@ -107,90 +105,103 @@ const PersonalDetails = () => {
     setUser({ ...user, gender: gender?.value });
   };
 
-
-
   const validateMobileNumber = (e) => {
     if (e.target.value.length <= 10) {
       setMobile_check(true);
       setUser({ ...user, [e.target.name]: e.target.value });
       let mnumber = e.target.value;
-      if(mnumber.length==10){
+      if (mnumber.length == 10) {
         setMobile_check(false);
       }
     }
-  }
+  };
 
   useEffect(() => {
-    if(user.name  && user.email && user.gender && user.contact && user.password && user.confirmpassword && user.password === user.confirmpassword && user.contact.length === 10 && /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(user.email)){
-      setActive(true)
-    }else{
+    if (
+      user.name &&
+      user.email &&
+      user.gender &&
+      user.contact &&
+      user.password &&
+      user.confirmpassword &&
+      user.password === user.confirmpassword &&
+      user.contact.length === 10 &&
+      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(user.email)
+    ) {
+      setActive(true);
+    } else {
       setActive(false);
     }
-  }, [user])
+  }, [user]);
 
   return (
-    <>   
-     <Nav id="nav1bar"/>
-     <img src={backdrop} alt="" className='backdrop' />
+    <>
+      <img src={backdrop} alt="" className="backdrop" />
+      <img src={backdrop} alt="" className="backdrop" />
 
-    {/* <img src={welcomebckbg} id="welcomebckbg12" alt="" />
+      {/* <img src={welcomebckbg} id="welcomebckbg12" alt="" />
     <img src={bgimage123} alt="" className="bgimage123" /> */}
-    <div className="personal">
-      <div className="personal-steps">
-        <div className="personal-step1">
-          <div className="personal-step1-number">
-            <div className="personal-step1-number-content">1</div>
-          </div>
-          <div className="personal-step1-description">
-            <div className="personal-step1-description-content-para1 comic-neue">
-              Step 1/2
+      <div className="personal">
+        <div className="personal-steps">
+          <div className="personal-step1">
+            <div className="personal-step1-number">
+              <div className="personal-step1-number-content">1</div>
             </div>
-            <div className="personal-step1-description-content-para2 comic-neue">
-              College Details
+            <div className="personal-step1-description">
+              <div className="personal-step1-description-content-para1 comic-neue">
+                Step 1/2
+              </div>
+              <div className="personal-step1-description-content-para2 comic-neue">
+                College Details
+              </div>
+            </div>
+          </div>
+          <div className="personal-step2">
+            <div className="personal-step2-number">
+              <div className="personal-step2-number-content">2</div>
+            </div>
+            <div className="personal-step2-description">
+              <div className="personal-step2-description-content-para1 comic-neue">
+                Step 2/2
+              </div>
+              <div className="personal-step2-description-content-para2 comic-neue">
+                Personal Details
+              </div>
             </div>
           </div>
         </div>
-        <div className="personal-step2">
-          <div className="personal-step2-number">
-            <div className="personal-step2-number-content">2</div>
-          </div>
-          <div className="personal-step2-description">
-            <div className="personal-step2-description-content-para1 comic-neue">
-              Step 2/2
-            </div>
-            <div className="personal-step2-description-content-para2 comic-neue">
-              Personal Details
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <form  onSubmit={(e) => onSubmit(e)}>
-        <div className="personal-inputs">
-          <div className="personal-input1">
-            <div>
-              <input className="input-field" type="text" placeholder="Name *" name="name"
+        <form onSubmit={(e) => onSubmit(e)}>
+          <div className="personal-inputs">
+            <div className="personal-input1">
+              <div>
+                <input
+                  className="input-field"
+                  type="text"
+                  placeholder="Name *"
+                  name="name"
                   value={user.name}
                   required
                   // pattern="[a-zA-Z]"
-                  onChange={(e) => onInputChange(e)} />
-            </div>
-            <div>
-              <input
-                className="input-field"
-                type="email"
-                placeholder="Email ID *"
-                name="email"
+                  onChange={(e) => onInputChange(e)}
+                />
+              </div>
+              <div>
+                <input
+                  className="input-field"
+                  type="email"
+                  placeholder="Email ID *"
+                  name="email"
                   value={user.email}
                   required
-                  pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i"
+                  // pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i"
                   onChange={(e) => onInputChange(e)}
-              />
+                />
+              </div>
             </div>
-          </div>
-          <div className="personal-input2">
-            <div>
-              <select className="input-field select-field" onChange={handleChange3}>
+            <div className="personal-input2">
+              <div>
+                {/* <select className="input-field select-field" onChange={handleChange3}>
                 <option value="" disabled hidden>
                   Gender *
                 </option>
@@ -203,111 +214,122 @@ const PersonalDetails = () => {
                 <option className="select-option" value="Gender 3">
                   Others
                 </option>
-              </select>
+              </select> */}
 
-              <Select
+                <Select
                   className="select-option"
                   placeholder="Select Gender*"
                   required
                   onChange={handleChange3}
-                  // styles={customStyles}
                   options={gender_choice}
                   isSearchable={false}
                 />
-            </div>
-            <div>
-              <input
-              type="number"
-                className="input-field"
-                name="contact"
-                placeholder="Phone Number *"
-                value={user.contact}
-                pattern="/^[6-9]{1}+[0-9]{9}$/"
+              </div>
+              <div>
+                <input
+                  type="number"
+                  className="input-field"
+                  name="contact"
+                  placeholder="Phone Number *"
+                  value={user.contact}
+                  pattern="/^[6-9]{1}+[0-9]{9}$/"
                   onkeypress="limitKeypress(event,this.value,2)"
                   required
                   onChange={(e) => validateMobileNumber(e)}
-              />
-              {mobile_check && (
-                  <div className="text-danger">Please enter valid Mobile Number</div>
+                />
+                {mobile_check && (
+                  <div className="text-danger">
+                    Please enter valid Mobile Number
+                  </div>
                 )}
+              </div>
             </div>
-          </div>
-          <div className="personal-input3">
-            <div>
-              <Input.Password
-                className="input-field"
-                type="password"
-                iconRender={(visible) =>
-                  visible ? (
-                    <EyeTwoTone style={{ color: "black" }} />
-                  ) : (
-                    <EyeInvisibleOutlined style={{ color: "black" }} />
-                  )
-                }
-                placeholder="Create Password *"
-                name="password"
+            <div className="personal-input3">
+              <div>
+                <Input.Password
+                  className="input-field"
+                  type="password"
+                  iconRender={(visible) =>
+                    visible ? (
+                      <EyeTwoTone style={{ color: "black" }} />
+                    ) : (
+                      <EyeInvisibleOutlined style={{ color: "black" }} />
+                    )
+                  }
+                  placeholder="Create Password *"
+                  name="password"
                   value={user.password}
                   required
                   onChange={(e) => onInputChange(e)}
-              />
-            </div>
-            <div>
-              <Input.Password
-                className="input-field"
-                type="password"
-
-                iconRender={(visible) =>
-                  visible ? (
-                    <EyeTwoTone style={{ color: "black" }} />
-                  ) : (
-                    <EyeInvisibleOutlined style={{ color: "black" }} />
-                  )
-                }
-                placeholder="Confirm Passpwrd *"
-                name="confirmpassword"
+                />
+              </div>
+              <div>
+                <Input.Password
+                  className="input-field"
+                  type="password"
+                  iconRender={(visible) =>
+                    visible ? (
+                      <EyeTwoTone style={{ color: "black" }} />
+                    ) : (
+                      <EyeInvisibleOutlined style={{ color: "black" }} />
+                    )
+                  }
+                  placeholder="Confirm Passpwrd *"
+                  name="confirmpassword"
                   value={user.confirmpassword}
                   required
                   onChange={(e) => {
                     onInputChange(e);
                     confirm(e.target.value);
                   }}
-              />
-              {confirm_err && (
+                />
+                {confirm_err && (
                   <div className="text-danger">Password didn't match</div>
                 )}
+              </div>
             </div>
-            
-          </div>
-          <div>
-              <input className="input-field" type="text" placeholder="CA Referral Code" name="referral"
-                  value={user.name}
-                  required
-                  // pattern="[a-zA-Z]"
-                  onChange={(e) => onInputChange(e)} />
+            <div>
+              <input
+                className="input-field"
+                type="text"
+                placeholder="CA Referral Code"
+                name="referral"
+                value={user.referral}
+                onChange={(e) => onInputChange(e)}
+              />
             </div>
-          {error && (
+            {error && (
               <div
                 className="text-danger"
                 style={{ marginTop: "-10px" }}
                 dangerouslySetInnerHTML={{ __html: errorMsg }}
               ></div>
             )}
-        </div>
+          </div>
 
-        <div className="personal-buttons">
-          <button type="submit" className="personal-button-submit" disabled={!active} style={active == true ? {background: "#ff5c00"} : {background: "rgb(204, 204, 204)"}}>
-          {loading ? (
-                  {/* <CircularProgress color="inherit" size={20} /> */}
-                ) : (
-                  "Register"
-                )}
-          </button>
-          <button className="personal-button-clear" onClick={clearInput}>
-            Clear
-          </button>
-        </div>
-      </form>
-    </div>
+          <div className="personal-buttons">
+            <button
+              type="submit"
+              className="personal-button-submit"
+              disabled={!active}
+              style={
+                active == true
+                  ? { background: "#ff5c00" }
+                  : { background: "rgb(204, 204, 204)" }
+              }
+            >
+              {loading
+                ? {
+                    /* <CircularProgress color="inherit" size={20} /> */
+                  }
+                : "Register"}
+            </button>
+            <button className="personal-button-clear" onClick={clearInput}>
+              Clear
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

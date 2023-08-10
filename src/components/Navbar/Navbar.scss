@@ -4,18 +4,17 @@
 }
 .nav {
   width: 99vw;
-  display: flex;
+  display: grid;
   height: 14vh;
-  // grid-template-columns: 30% 20% 20% 30%;
+  grid-template-columns: 30% 20% 20% 30%;
   position: relative;
-  margin: auto;
-  justify-content: space-between;
   .logo {
     width: 100px;
     margin-left: 40px;
     margin: auto 50px;
+    cursor: pointer;
   }
-  h2 {
+  a {
     color: #fff;
     text-align: center;
     font-family: Comic Sans MS;
@@ -24,8 +23,9 @@
     font-weight: 700;
     margin: auto;
     line-height: normal;
+    text-decoration: none;
   }
-  button {
+  .log-btn {
     width: 150px;
     height: 40px;
     display: inline-flex;
@@ -44,7 +44,9 @@
     font-weight: 400;
     letter-spacing: 0.4px;
     margin-right: 40px;
+    cursor: pointer;
   }
+
   .row {
     display: flex;
     align-items: center;
@@ -66,7 +68,7 @@
     button {
       font-size: 10px !important;
       padding: 2px 10px !important;
-      // margin: auto;
+      margin: auto;
       width: 60px;
       display: flex;
       align-items: center;
