@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import "./personalDetails.css";
 import Select from "react-select";
-// import CircularProgress from "@mui/material/CircularProgress";
+import CircularProgress from "@mui/material/CircularProgress";
 import axios from "axios";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Input } from "antd";
 import backdrop from "../../../assests/Landing-page-2.webp";
+import logo from "../../../assests/reg-logo.svg";
+import backdropmob from '../../../assests/RegbackMobile.webp'
 const gender_choice = ["Male", "Female", "Others"].map((state) => ({
   value: state,
   label: state,
@@ -136,11 +138,11 @@ const PersonalDetails = () => {
 
   return (
     <>
+      <Link to="/">
+        <img src={logo} alt="" className="th-logo" />
+      </Link>
       <img src={backdrop} alt="" className="backdrop" />
-      <img src={backdrop} alt="" className="backdrop" />
-
-      {/* <img src={welcomebckbg} id="welcomebckbg12" alt="" />
-    <img src={bgimage123} alt="" className="bgimage123" /> */}
+      <img src={backdropmob} alt="" className="backdropmob" />
       <div className="personal">
         <div className="personal-steps">
           <div className="personal-step1">
@@ -318,11 +320,11 @@ const PersonalDetails = () => {
                   : { background: "rgb(204, 204, 204)" }
               }
             >
-              {loading
-                ? {
-                    /* <CircularProgress color="inherit" size={20} /> */
-                  }
-                : "Register"}
+              {loading ? (
+                <CircularProgress color="inherit" size={20} />
+              ) : (
+                "Register"
+              )}
             </button>
             <button className="personal-button-clear" onClick={clearInput}>
               Clear
