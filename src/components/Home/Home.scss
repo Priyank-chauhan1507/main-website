@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+.home {
+  min-height: 187vh;
+  width: 99vw;
+  background-color: #000000;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  .homebg {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 99vw;
+    overflow-x: hidden;
+  }
+  .thomso {
+    position: relative;
+    margin: 11vh 30vw;
+  }
+  .register {
+    width: 250px;
+    position: relative;
+    display: inline-flex;
+    margin: 1vh auto;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    font-family: Bangers;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 32px */
+    letter-spacing: 1.6px;
+    cursor: pointer;
+  }
+  .singers{
+    position: relative;
+    margin: 18vh 10vw;
+  }
+  .singersmob{
+    display: none ;
+  }
+}
+@media (max-width: 800px) {
+  .home{
+    min-height: 100vh !important;
+  }
+  .register{
+    width: 150px !important;
+    font-size: 20px !important;
+    margin: 3vh auto !important;
+    border-radius: 8.181px !important;
+  }
+  .thomso{
+    width: 80vw !important;
+    margin: .5vh auto !important;
+  }
+  .singers{
+    display: none !important;
+  }
+  .singersmob{
+    display: block !important;
+    position: relative;
+    // top: 3%;
+  }
+
+}
