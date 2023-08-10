@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.97bef029.css",
+    "main.js": "/static/js/main.14307fbf.js",
+    "static/js/787.3bb570a7.chunk.js": "/static/js/787.3bb570a7.chunk.js",
+    "static/media/Landing-page-2.webp": "/static/media/Landing-page-2.2b76d8768e1c38568271.webp",
+    "static/media/reg-backi.webp": "/static/media/reg-backi.e1a535b72f0c9b18cc37.webp",
+    "static/media/singers.webp": "/static/media/singers.71de47b1b6f7a50a7e55.webp",
+    "static/media/singersmob.webp": "/static/media/singersmob.1d206f8c3464ea00dde0.webp",
+    "static/media/Regback.webp": "/static/media/Regback.b51727b6557a74fd24b8.webp",
+    "static/media/Landing-page.webp": "/static/media/Landing-page.eb7eff00d36ecc7ac09e.webp",
+    "static/media/logo.svg": "/static/media/logo.d4efd29390d81abdc1528ccada2f09db.svg",
+    "static/media/thomso.webp": "/static/media/thomso.95fa23ea77b895417f22.webp",
+    "static/media/reg-logo.svg": "/static/media/reg-logo.37618676aa2e4d220bc1adafb9f7f7d0.svg",
+    "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
+    "index.html": "/index.html",
+    "main.97bef029.css.map": "/static/css/main.97bef029.css.map",
+    "main.14307fbf.js.map": "/static/js/main.14307fbf.js.map",
+    "787.3bb570a7.chunk.js.map": "/static/js/787.3bb570a7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97bef029.css",
+    "static/js/main.14307fbf.js"
+  ]
+}
