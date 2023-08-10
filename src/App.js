@@ -28,6 +28,10 @@ import ResetPassword from "./components/Registration/resetPassword/resetPassword
 
 
 import CollegeDetails from "./components/Registration/step1/collegeDetails";
+import PersonalDetails from "./components/Registration/step2/personalDetails";
+import EmailVerify from "./components/Registration/EmailVerify/EmailVerify";
+import RegisComp from "./components/Registration/RegComp/RegCompleted";
+import RegPage from "./components/Registration/RegPage/RegPage";
 import Profilenavbar from "./components/Navbar/Profilenavbar";
 
 function App() {
@@ -43,6 +47,7 @@ function App() {
           <Route path="/regcompleted" element={<RegisComp/>} />
           <Route exact={true} path="/login" element={<Login/>}/>
           <Route exact={true} path="/forget" element={<Forget/>} />
+          <Route path="/otpverify" element={<RegPage/>} />
 
 
           <Route  path="/resetPassword" element={<ResetPassword/>}/>

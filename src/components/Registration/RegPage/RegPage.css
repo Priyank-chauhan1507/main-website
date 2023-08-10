@@ -1,0 +1,278 @@
+#root{
+    height: 100vh;
+    position: relative;
+    /* overflow-x: hidden; */
+  }
+  .otpVerify{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  .mob_view {
+    display: none;
+  }
+  
+  .otpBox{
+    margin-top: -72vh;
+  }
+  .thomso_logo{
+  position: absolute;
+  width: 100px;
+  margin-left: 30px;
+  margin: 16px 34px;
+  cursor: pointer;
+  }
+  .registerPageContainer {
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    gap: 1.5rem;
+  }
+  
+  .otpBack{
+    height:100vh;
+    width: 100vw;
+  }
+  .registration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .title {
+    color: #fff;
+    text-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    font-family: Bangers;
+    /* font-size: 6.5rem; */
+    font-size: min(6.5rem,10vw);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.43rem;
+    transform: rotate(-3.786deg);
+  }
+  .subtitle {
+    transform: rotate(-2.58deg);
+    color: #000;
+    font-family: Comic Sans MS;
+    font-size: min(2rem,5vw);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.12rem;
+  }
+  .formContainer {
+    min-width: 47vw;
+    width: auto;
+    max-width: 70vw;
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px #000000 solid;
+    border-radius: 1rem;
+    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.4);
+  }
+  .otpContainer {
+    
+    width: 40vw;
+    background-color: #fff;
+    display: flex;
+    border:2px solid black;
+    border-radius:6px !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .verifyEmailText {
+    color: rgba(237, 215, 41, 1);
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 32px */
+    letter-spacing: 0.64px;
+  }
+  .otpSent {
+    width: 40%;
+    color: #555;
+    text-align: center;
+    font-family: Comic Neue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+  .inputBoxes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .inputBoxes input {
+    width: 3rem;
+    height: 1.5rem;
+    padding: 12px 20px;
+    border-radius: 5.96px;
+    border: 1.49px solid #505050;
+    background: #fff;
+    box-shadow: 1.5px 3px 0px 0px #505050;
+    display: flex;
+    text-align: center;
+  }
+  .verify_btn{
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 10px;
+    width: 6rem;
+    height: 3rem;
+    padding: 12px 20px;
+    border-radius: 6.07px;
+    border: 1.51px solid #505050;
+    background: rgba(237, 215, 41, 1);
+    box-shadow: 1.5px 3px 0px 0px #505050;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    font-size: larger;
+    color: #fff;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .inputBoxes input[type="number"]::-webkit-inner-spin-button,
+  .inputBoxes input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .otpContainer button:hover {
+    background-color:  rgba(237, 215, 41, 1);
+  }
+  .resendOtp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #555;
+    text-align: center;
+    font-family: Comic Neue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .resendOtp Button{
+      color: rgba(237, 215, 41, 1);
+      background-color: white;
+      border: none;
+
+  }
+  .resendOtp Button:hover{
+      background-color: #ffffff;
+  }
+  #log_bg2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 9.5vh;
+  }
+  @media only screen and (max-width:1079px){
+    .otpContainer{
+      width:50vw !important;
+    }
+    
+    #log_bg2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  
+  @media only screen and (max-width:800px){
+    .otpBack img{
+    display: none;
+    }
+    .otpVerify{
+        background-color: black;
+    }
+    .thomso_logo{
+        width:60px;
+    }
+    .otpBack{
+        opacity: 0;
+        height: 100vh;
+        width: 100vw;
+
+    }
+    .inputBoxes input{
+        width: 14px;
+        height: 14px;
+        padding: 8.461px 14.102px;
+      }
+    .mob_view {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 17vh;
+        left: 25vw;
+        font-size: 5vw;
+      }
+  }
+  @media only screen and (max-width:650px){
+    .otpContainer{
+      width:70vw !important;
+    }
+    .mob_view{
+        top: 19vh;
+        left: 20vw;
+    }
+  }
+  
+  @media only screen and (max-width:385px){
+    .otpContainer{
+      width: 80vw !important;
+      height:60vh !important;
+    }
+  }
+  
+  @media screen and (max-width:450px) {
+    .inputBoxes input{
+      width: 14px;
+      height: 14px;
+      padding: 8.461px 14.102px;
+    }
+    .verifyEmailText{
+      font-size: 1.25rem;
+    }
+    .otpSent{
+      width: 90%;
+    }
+    .formContainer{
+      height: 75vh;
+    }
+    .resendOtp{
+      flex-direction: column;
+    }
+    .otpBox{
+      padding-bottom: 15vh !important;
+    }
+    .thomso_logo img{
+        height: 8vw;
+    }
+    .mob_view {
+        font-size: 7vw;
+        left: 20vw;
+        top: 19vh;
+    }
+  }

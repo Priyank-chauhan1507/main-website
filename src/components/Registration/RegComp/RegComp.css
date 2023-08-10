@@ -62,7 +62,7 @@
       color: white;
       position: absolute;
       top: 20vh;
-      left: 20vw;
+      left: 22vw;
       font-size: 5vw;
   }
     #campus_ambd2 {
@@ -251,6 +251,7 @@
   }
   .mob_view{
       font-size: 7vw;
+      left: 12vw;
   }
   }
   
