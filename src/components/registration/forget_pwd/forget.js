@@ -1,12 +1,10 @@
 import React, { useState,useEffect } from "react";
 import "./forget.scss";
-// import Nav from "../../Navbar/Navbar";
 import welcomebckbg from "../../../assests/Landing-page-2.webp";
 import axios from "axios";
 import SimpleReactValidator from "simple-react-validator";
-// import cawelcome from "../../../assets/caWelcome.webp";
 import { message } from "antd";
-import logo from "../../../assests/logo.svg";
+import logo from "../../../assests/reg-logo.svg";
 import mobilewp from "../../../assests/RegbackMobile.webp";
 
 function ForgotPassword() {
@@ -17,7 +15,7 @@ function ForgotPassword() {
   async function handleSendEmail(e) {
     e.preventDefault();
     if (validator.allValid()) {
-      const response = await axios.post("/apiV1/resetpasswordca", {
+      const response = await axios.post("/apiV1/resetpassword", {
         email: email,
       });
       if (response?.status === 200) {
@@ -48,8 +46,8 @@ function ForgotPassword() {
     <>
       <div id="bg">
         {/* <Nav /> */}
-        <a href="/">
-            <img src={logo} className="logo" alt="" />
+        <a className="forget-a" href="/">
+            <img src={logo} className="logo-for" alt="" />
         </a>
         <img src={welcomebckbg} id="welcomebckbg" alt="" className="newBg" />
         <img src={mobilewp} id="mobilewp" alt="" className="newBgmob" />
