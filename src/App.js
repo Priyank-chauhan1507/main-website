@@ -6,6 +6,7 @@ import Login from "./components/Registration/login/Login";
 import PersonalDetails from "./components/Registration/step2/personalDetails";
 import EmailVerify from "./components/Registration/EmailVerify/EmailVerify";
 import RegisComp from "./components/Registration/RegComp/RegCompleted";
+import RegPage from "./components/Registration/RegPage/RegPage";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/emailverified" element={<EmailVerify/>} />
           <Route path="/regcompleted" element={<RegisComp/>} />
           <Route exact={true} path="/login" element={<Login/>}/>
+          <Route path="/otpverify" element={<RegPage/>} />
         </Routes>
       </Router>
     </>
