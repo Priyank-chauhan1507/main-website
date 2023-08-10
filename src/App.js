@@ -3,20 +3,37 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 
-import Login from "./components/Registration/login/Login";
+import Login from "./components/registration/login/Login";
+
+import PersonalDetails from "./components/registration/step2/personalDetails";
+import EmailVerify from "./components/registration/EmailVerify/EmailVerify";
+import RegisComp from "./components/registration/RegComp/RegCompleted";
+
+// import CollegeDetails from "./components/registration/CollegeDetailes/Collegedetailes";
+// import RegPage from "./components/registration/RegistrationPage/RegPage";
+// import PersonalDetails from "./components/registration/step1/personalDetails";
+
+// import PersonalDetails from "./components/registration/step1/personalDetails";
+
+
+// import EmailVerify from "./components/Registration/College_Details/EmailVerify/EmailVerify";
+// import RegisComp from "./components/Registration/College_Details/RegComp/RegCompleted";
+
+import Forget from "./components/registration/forget_pwd/forget";
+
+
+
 
 import ResetPassword from "./components/Registration/resetPassword/resetPassword";
 
-import EmailVerify from "./components/Registration/College_Details/EmailVerify/EmailVerify";
-import RegisComp from "./components/Registration/College_Details/RegComp/RegCompleted";
 
-import Login from "./components/Registration/login/Login";
 import CollegeDetails from "./components/Registration/step1/collegeDetails";
 import PersonalDetails from "./components/Registration/step2/personalDetails";
 import EmailVerify from "./components/Registration/EmailVerify/EmailVerify";
 import RegisComp from "./components/Registration/RegComp/RegCompleted";
 import RegPage from "./components/Registration/RegPage/RegPage";
 import Profilenavbar from "./components/Navbar/Profilenavbar";
+
 function App() {
   return (
     <>
@@ -29,11 +46,9 @@ function App() {
           <Route path="/emailverified" element={<EmailVerify/>} />
           <Route path="/regcompleted" element={<RegisComp/>} />
           <Route exact={true} path="/login" element={<Login/>}/>
+          <Route exact={true} path="/forget" element={<Forget/>} />
           <Route path="/otpverify" element={<RegPage/>} />
 
-          <Route path="/" element={<Home/>}/>
-          <Route path="/email" element={<EmailVerify/>} />
-          <Route path="/regComp" element={<RegisComp/>} />
 
           <Route  path="/resetPassword" element={<ResetPassword/>}/>
 
