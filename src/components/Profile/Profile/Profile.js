@@ -1,18 +1,17 @@
 import React, { useEffect } from "react";
 import "./Profile.css";
-import LeftSideProfile from "../LeftSideProfile/leftsideprofile";
+import LeftSideProfile from "../LeftSideProfile/Leftsideprofile";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import Navbar from "../../Navbar/Navbar";
-
 const Profile = ({ userDetails }) => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!userDetails?.id) {
-      navigate.push("/login");
+      // navigate.push("/login");
     }
   }, []);
   return (

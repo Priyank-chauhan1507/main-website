@@ -1,14 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import axios from "axios";
+import { Store } from "./Config/Store";
+import { Provider } from "react-redux";
+import { createBrowserHistory } from "history";
+const history = createBrowserHistory();
+axios.defaults.baseURL = "https://api.thomso.in";
+axios.defaults.headers.common.Authorization = `${
+  localStorage.getItem("token") === null
+    ? ``
+    : `JWT ${localStorage.getItem("token")}`
+}`;
+axios.defaults.headers.post["Content-Type"] = "application/json";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+  <Provider store={Store}>
+    <App history={history} />
+  </Provider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
