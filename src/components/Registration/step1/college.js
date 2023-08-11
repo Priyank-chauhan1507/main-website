@@ -1,4 +1,4 @@
-const college = [
+const College = [
     "46 GOVERNMENT COLLEGE, CHANDIGARH",
     "AKTU",
     "A.B.N SENIOUR SECONDERY PUBLIC SCHOOL",
@@ -9,7 +9,6 @@ const college = [
     "AATMA RAM SANATAN DHARMA",
     "ABC UNIVERSITY",
     "ABE'S INSTITUTE OF TECHNOLOGY GHAZIABAD",
-    "ABHISHEKGANOTRA1997@GMAIL.COM",
     "ABN SCHOOL",
     "ABV-IIITM GWALIOR",
     "ACHARYA NARENDRA DEV COLLEGE UNIVERSITY OF DELHI",
@@ -593,5 +592,5 @@ const college = [
     label: state,
   }));
   
-  export default college;
+  export default College;
   
