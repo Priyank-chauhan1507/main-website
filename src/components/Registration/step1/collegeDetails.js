@@ -222,7 +222,7 @@ const CollegeDetails = () => {
                 </option>
               </select> */}
                 <Creatable
-                  className="select-option-2 select-college input-field select-field"
+                  className="select-option-2 select-college input-field select-field widthController"
                   required
                   // value={this.state.college}
                   value={user.selectedOption}
