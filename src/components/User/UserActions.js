@@ -1,5 +1,5 @@
 import ACTIONS from "./UserActionsType";
-import setAuthToken from "./setAuthToken";
+import setAuthToken from "./SetAuthToken";
 
 export const login = (params = {}) => {
   console.log(params);
