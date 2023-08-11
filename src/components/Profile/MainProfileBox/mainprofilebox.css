@@ -1,0 +1,241 @@
+.main-prof-box {
+  width: 70vw;
+  height: 80vh;
+  background: radial-gradient(
+    111.43% 111.43% at 0% 0%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(42px);
+  margin-top: 10vh;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+}
+.main-prof-box-flex-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-left: 48px;
+  margin-top: 48px;
+}
+.main-prof-box-head-text {
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 400;
+  border-bottom: 2px solid white;
+  width: 20vw;
+  height: 5vh;
+  font-size: 24px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.main-prof-box-details-div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.main-prof-box-detail-row-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  width: 86px;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  color: #ffffff;
+}
+.main-prof-box-detail-row-text-col {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  width: 86px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  width: 175px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-prof-detail-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: flex-start;
+}
+
+.main-prof-detail-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: flex-start;
+}
+.main-prof-box-detail-row {
+  display: flex;
+  gap: 142px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main-prof-box-flex-2 {
+  margin-top: 48px;
+  margin-left: 99px;
+}
+.none {
+  display: none;
+}
+
+.flex-2-title {
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 400;
+  border-bottom: 2px solid white;
+  width: 18vw;
+  height: 5vh;
+  font-size: 24px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.mpb-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 44px;
+}
+
+.mpb-drop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px dashed #a3a4a5;
+  width: 20vw;
+  height: 25vh;
+  gap: 8px;
+}
+
+.drag-1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.drag-2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.drag-but {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 20px;
+  gap: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+.delete-but {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  gap: 10px;
+  background: #ff0000;
+  /* width: 100%; */
+  cursor: pointer;
+  border: none;
+  color: white !important;
+}
+.drag-3-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.drag-3 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #333333;
+}
+.delete-3 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.drag-3-input {
+  display: none;
+}
+
+.main-logout-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 20px;
+  gap: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  border: none;
+  width: 113.78px;
+  height: 32px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #333333;
+}
+.c-line {
+  margin-top: 48px;
+  margin-left: 87px;
+}
+
+.c-line img{
+  width: 2px;
+}
+
+.mpb-mobileview {
+  display: none;
+}
+
+.after-upload-container {
+  padding: 12px 16px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-top: 20px;
+}

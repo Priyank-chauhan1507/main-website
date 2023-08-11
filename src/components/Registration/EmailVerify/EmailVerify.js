@@ -1,9 +1,7 @@
 import React from "react";
 import "./EmailVerify.css";
-// import Nav from "../../web/NewNavbar/Nav";
 import logbg1 from "../../../assests/Regback.webp";
 import logbg2 from "../../../assests/reg-logo.svg"
-// import logbg2 from "../../../assets/Campus_Ambassador.svg";
 import { Link } from "react-router-dom";
 
 const EmailVerify = () => {
