@@ -162,7 +162,7 @@ const CollegeDetails = () => {
           </Link>
         </div>
         <div className="logButton">
-          <button className="registerNow">LOG IN</button>
+          <button onClick={() => navigate('/login')} className="registerNow">LOG IN</button>
         </div>
       </div>
       <img className="bkimg" src={backImg} />

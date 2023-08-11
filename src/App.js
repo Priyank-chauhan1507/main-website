@@ -11,26 +11,23 @@ import ResetPassword from "./components/Registration/resetPassword/resetPassword
 import CollegeDetails from "./components/Registration/step1/collegeDetails";
 import RegPage from "./components/Registration/RegPage/RegPage";
 import Profilenavbar from "./components/Navbar/Profilenavbar";
+import Profile from "./components/Profile/Profile/Profile";
 
 function App() {
   return (
     <>
       <Router>
-
       <Routes>
           <Route exact={true} path="/" element={<Home/>}/>
           <Route exact={true} path="/personaldetails" element={<PersonalDetails />} />
           <Route exact={true} path="/collegedetails" element={<CollegeDetails/>}/>
-          <Route path="/emailverified" element={<EmailVerify/>} />
-          <Route path="/regcompleted" element={<RegisComp/>} />
+          <Route exact={true} path="/emailverified" element={<EmailVerify/>} />
+          <Route exact={true} path="/regcompleted" element={<RegisComp/>} />
           <Route exact={true} path="/login" element={<Login/>}/>
           <Route exact={true} path="/forgotpassword" element={<Forget/>} />
-          <Route path="/otpverify" element={<RegPage/>} />
-
-
-          <Route  path="/resetPassword" element={<ResetPassword/>}/>
-
-          <Route path="/navbar" element={<Profilenavbar/>} />
+          <Route exact={true} path="/otpverify" element={<RegPage/>} />
+          <Route exact={true} path="/resetPassword" element={<ResetPassword/>}/>
+          <Route exact={true} path="/navbar" element={<Profilenavbar/>} />
         </Routes>
       </Router>
     </>

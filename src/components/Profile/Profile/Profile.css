@@ -1,0 +1,39 @@
+.nnp-container {
+    background: url("../../../assests/bg.svg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .nnp-content{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    margin-top: -50px;
+  }
+  .nnp-mobile {
+    display: none;
+  }
+  
+  .nnp-mobhead{
+    display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    .nnp-content{
+      display: none;
+    }
+  
+    .nnp-mobile {
+      display: contents;
+    }
+  
+    .nnp-laphead{
+      display: none;
+    }
+  
+    .nnp-mobhead{
+      display:contents;
+    }
+    }
+    
+    
