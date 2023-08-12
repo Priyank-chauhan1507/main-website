@@ -27,6 +27,10 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
   const [file, setFile] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [opencollege,setOpencollege] = useState(false);
+  const [openbranch,setOpenbranch] = useState(false);
+  const [openstate,setOpenstate] = useState(false);
+  const [openemail,setOpenemail] = useState(false);
   const locator = useLocation();
   console.log(userDetails);
   const deleteUserImage = () => {
@@ -45,6 +49,19 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
         // setLoading(false);
         console.log(error);
       });
+  };
+
+  const OpenCollege = () => {
+    setOpencollege(!opencollege);
+  };
+  const OpenBranch = () => {
+    setOpenbranch(!openbranch);
+  };
+  const OpenState = () => {
+    setOpenstate(!openstate);
+  };
+  const OpenEmail = () => {
+    setOpenemail(!openemail);
   };
 
   const changeHandler = async (file) => {
@@ -163,7 +180,7 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
         </div>
       </div>
       <div className="c-line1">
-          <img src={line} alt="line" />
+          <img className="c-line1-img" src={line} alt="line" />
         </div>
       {loading && <Loader />}
       <div className="main-prof-box">
@@ -175,25 +192,25 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">College</span>
-                <span className="main-prof-box-detail-row-text-col">
+                <span className={!opencollege ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenCollege}>
                   {userDetails?.college}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">City</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.city}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">State</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className={!openstate ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenState}>
                   {userDetails?.state}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Branch</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className={!openbranch ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenBranch}>
                   {userDetails?.branch}
                 </span>
               </div>
@@ -202,14 +219,14 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
                   <span className="main-prof-box-detail-row-text">
                     Graduation Year
                   </span>
-                  <span className="main-prof-box-detail-row-text">
+                  <span className="main-prof-box-detail-row-text-col">
                     {userDetails?.graduation_year}
                   </span>
                 </div>
               ) : (
                 <div className="main-prof-box-detail-row">
                   <span className="main-prof-box-detail-row-text">Year</span>
-                  <span className="main-prof-box-detail-row-text">
+                  <span className="main-prof-box-detail-row-text-col">
                     {userDetails?.year}
                   </span>
                 </div>
@@ -223,19 +240,19 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Email</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className={!openemail ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenEmail}>
                   {userDetails?.email}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Contact</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.contact}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Gender</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.gender}
                 </span>
               </div>
@@ -250,7 +267,7 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
           </button>
         </div>
         <div className="c-line">
-          <img src={line} alt="line" />
+          <img className="c-line1-img" src={line} alt="line" />
         </div>
         <div className="main-prof-box-flex-2">
           <div className="flex-2-title">College ID</div>

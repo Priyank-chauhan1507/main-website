@@ -57,7 +57,7 @@
 
 .lsp-box {
   margin-top: 10vh;
-  margin-left: 5vw;
+  /* margin-left: 5vw; */
   /* background-color: black; */
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@
   align-items: center;
   width: 15vw;
   height: 80vh;
-  gap: 80px;
+  gap: 7vh;
 
 }
 
@@ -80,8 +80,8 @@
   align-items: center; */
   letter-spacing: -0.02em;
   color: rgba(18, 17, 17, 0.98);
-  leading-trim: both;
-  text-edge: cap;
+  /* leading-trim: both; */
+  /* text-edge: cap; */
   font-family: Comic Neue;
   font-size: 20px;
   font-style: normal;
