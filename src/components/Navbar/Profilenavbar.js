@@ -3,11 +3,16 @@ import "./ProfilenavbarStyle.css"
 import logo from "../../assests/logo.svg";
 import lastimg from "../../assests/lastimg.png";
 import Medianav0 from './Medianav0';
+import {Link} from 'react-router-dom'
 export default function Profilenavbar() {
   return (
     <div>
       <div className="navbar-container-0">
-        <div className="navbar-img-0"><img src={logo} alt="" /></div>
+        <div className="navbar-img-0">
+          <Link to='/'>
+          <img src={logo} alt="" />
+          </Link>
+          </div>
         <div className="navbar-container-02">
           <div className="navbar-list-0">
             <ul>
