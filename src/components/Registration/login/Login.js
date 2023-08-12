@@ -56,7 +56,7 @@ const Login = (props) => {
               // props.fetchEvents();
               // localStorage.setItem("token", res.data?.access);
               // setAuthToken(localStorage.getItem("token"));
-              navigate(`/newprofile`);
+              navigate(`/profile`);
               // console.log(res);
             }
             setLoading(false);
@@ -178,4 +178,13 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // login: (id) => dispatch(login(id)),
+    login: (id) => dispatch(login(id)),
+    fetchUser: (id) => dispatch(fetchUser(id)),
+    // fetchEvents: (id) => dispatch(fetchEvents()),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Login);
