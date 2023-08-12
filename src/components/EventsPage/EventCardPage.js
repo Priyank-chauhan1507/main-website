@@ -33,11 +33,11 @@ const EventCardPage = ({
   };
   const [isOpen, setIsOpen] = useState(false);
   const [button, setButton] = useState("Login");
-  const [selectedOption, setSelectedOption] = useState("Interested");
+  // const [selectedOption, setSelectedOption] = useState("Interested");
   const toggling = () => setIsOpen(!isOpen);
 
   const onOptionClicked = (value) => {
-    setSelectedOption(value);
+    // setSelectedOption(value);
     setIsOpen(false);
   };
   useEffect(() => {
