@@ -7,6 +7,7 @@ import imgnav from "../../assests/imgnav.webp";
 import logo1 from "../../assests/Logo23.svg";
 import { RxCross2 } from "react-icons/rx";
 
+import {Link} from 'react-router-dom'
 export default function Medianav0() {
   const [open, setOpen] = useState(true);
   const [isActive, setisActive] = useState(false);
@@ -45,7 +46,7 @@ export default function Medianav0() {
   return (
     <div>
           <div className="hamburg">
-        <div className="hamburg-logo"><img src={logo} alt="" /> </div>
+        <div className="hamburg-logo"><Link to='/'><img src={logo} alt="" /></Link> </div>
         <div className="hamburg-style">
             <div className="spanlist" onClick={handleClick1}> 
             <span></span>

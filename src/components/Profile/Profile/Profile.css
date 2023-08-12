@@ -1,14 +1,25 @@
 .nnp-container {
     width: 100vw;
-    background: url(../../../assests/profile1.webp);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    /* background: url(../../../assests/profile1.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; */
+  }
+  .pro-back-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
   }
   .boxborder{
     position: absolute;
     width: 90vw;
-    height: 75vh;
+    height: 80vh;
     top: 15vh;
     left: 5vw;
     border: 2px solid rgba(42, 42, 42, 0.98);
@@ -17,7 +28,7 @@
   .nnp-content{
     display: flex;
     flex-direction: row;
-    gap: 48px;
+    gap: 3vw;
     margin-top: -50px;
   }
   .nnp-mobile {
