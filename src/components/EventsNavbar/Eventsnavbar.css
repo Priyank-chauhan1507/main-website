@@ -1,4 +1,4 @@
-.nav-comp{
+.nav-comp {
     display: flex;
     background-color: #2C2C2C;
     justify-content: space-between;
@@ -7,13 +7,15 @@
     padding-right: 4vw;
     height: 11vh;
 }
-.event-nav-right{
+
+.event-nav-right {
     display: flex;
     gap: 3vw;
     height: 100%;
     align-items: center;
 }
-.event-nav-right-compo{
+
+.event-nav-right-compo {
     color: var(--default-2, #FFF);
     text-align: justify;
     leading-trim: both;
@@ -26,7 +28,8 @@
     text-decoration: none;
     padding: 8px;
 }
-.event-regi-btn{
+
+.event-regi-btn {
     color: #000;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
@@ -34,14 +37,15 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
+    /* 24px */
     letter-spacing: 0.4px;
     text-decoration: none;
     border-radius: 8px;
     background: #F7B900;
-    
+
     display: inline-flex;
-    
+
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -49,27 +53,29 @@
     padding-right: 8px;
     padding-left: 8px;
 }
-.nav-events{
-  
-}
-.drop-row{
+
+.nav-events {}
+
+.drop-row {
     width: 20vw;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.drop{
+
+.drop {
     position: absolute;
     top: 11vh;
     right: 10vw;
     height: auto;
     display: flex;
-    padding: 0 10px 10px 10px ;
+    padding: 0 10px 30px 10px;
     justify-content: space-evenly;
     width: 80vw;
     background-color: #282828;
 }
-.drop-row .col{
+
+.drop-row .col {
     color: #fff;
     text-align: justify;
     leading-trim: both;
@@ -81,17 +87,141 @@
     line-height: normal;
     margin-left: 40px;
 }
-.col-yellow{
+
+.col-yellow {
     color: #F7B900 !important;
     margin-top: 25px !important;
     margin-bottom: 10px;
 }
-.col-yellow1{
+
+.col-yellow1 {
     color: #F7B900 !important;
-  
+
 }
-.drop2{
+
+.drop2 {
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+.nav-comp1 {
+    display: none;
+}
+
+.mainnav {
+    width: 100%;
+    display: contents;
+}
+
+@media (max-width:600px) {
+    .mainnav {
+        display: none;
+    }
+
+    .nav-comp1 {
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .nav-comp {
+        background: transparent;
+    }
+
+    .logo-width {
+        width: 90px;
+    }
+
+    .logo2 {
+        width: 40px;
+        height: 30px;
+    }
+
+    .slidebar1 {
+        position: absolute;
+        top: 10vh;
+        right: 0vw;
+        height: 92vh;
+        width: 100vw;
+        z-index: 6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: slide .5s ease-in forwards;
+        padding-bottom: 20px;
+    }
+
+    .slidebar1 h1 {
+        color: #F7B900;
+        text-align: justify;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Rowdies;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 30px 0;
+    }
+
+    .slidebar1 span {
+        color: #F7B900;
+        text-align: justify;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Comic Sans MS;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 10px 0;
+    }
+
+    .slidebar1 h3 {
+        color: #FFF;
+        text-align: justify;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Comic Sans MS;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 5px 0;
+    }
+
+    .bgmobile {
+        display: block !important;
+        position: absolute;
+        z-index: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .nav-comp {
+        position: relative;
+    }
+
+    .ECD-container {
+        position: relative;
+
+    }
+}
+
+.bgmobile {
+    display: none;
+}
+
+@keyframes slide {
+    0% {
+        right: -100vw;
+    }
+
+    100% {
+        right: 0vw;
+        backdrop-filter: blur(5px);
+    }
 }

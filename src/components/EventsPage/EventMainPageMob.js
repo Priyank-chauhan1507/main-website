@@ -46,7 +46,6 @@ const EventMainPageMob = ({
 
   return (
     <div className="event-mob-page-container">
-      <Navbar2 />
       <div className="ECD-container">
         {!search ? (
           <div className="ECD-searchbar-div">

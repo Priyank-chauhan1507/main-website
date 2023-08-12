@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import { escapeRegex } from "./helper";
 import { ImCross } from "react-icons/im";
 import Navbar2 from "../EventsNavbar/Eventsnavbar";
+import bgmobile from "../../assests/bgmobile.webp";
 
 const EventMainPage = ({ events }) => {
   const { dispatch } = Store;
@@ -65,13 +66,14 @@ const EventMainPage = ({ events }) => {
     const regExp = new RegExp(escapeRegex(search), "i");
     return regExp.test(pName);
   };
-
   console.log(categoryId);
-
+const [display, setdisplay] = useState(true)
   return (
     <>
+      <img src={bgmobile} alt="" className="bgmobile" />
+      <Navbar2 />
+
       <div className="EMP-container" id="event-page">
-        <Navbar2/>
         <div className="EMP-hero">
           <EventSideMenu
             activeCategory={categoryId}
@@ -115,6 +117,9 @@ const EventMainPage = ({ events }) => {
           </div>
         </div>
       </div>
+{
+  
+
       <div className="Event-MObile-View">
         <EventMainPageMob
           data={data}
@@ -123,6 +128,7 @@ const EventMainPage = ({ events }) => {
           changeCategory={changeCategory}
         />
       </div>
+    }
     </>
   );
 };
