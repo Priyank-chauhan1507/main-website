@@ -1,59 +1,110 @@
 .nnp-container {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    /* background: url(../../../assests/profile1.webp);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  /* background: url(../../../assests/profile1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; */
+}
+
+.pro-back-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.boxborder {
+  position: absolute;
+  width: 90vw;
+  height: 80vh;
+  top: 15vh;
+  left: 5vw;
+  border: 2px solid rgba(42, 42, 42, 0.98);
+}
+
+.nnp-content {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  margin-top: -50px;
+}
+
+.nnp-mobile {
+  display: none;
+}
+
+.nnp-mobhead {
+  display: none;
+}
+
+.pro-back-img2 {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nnp-content {
+    display: none;
   }
-  .pro-back-img{
+
+  .boxborder {
+    height: 100vh;
+  }
+
+  .boxborder::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nnp-mobile {
+    display: contents;
+  }
+
+  .boxborder {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 88vw;
+  }
+
+  .nnp-laphead {
+    display: none;
+  }
+
+  .pro-back-img2 {
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    z-index: -1;
+    z-index: 0;
+    display: block;
   }
-  .boxborder{
-    position: absolute;
-    width: 90vw;
-    height: 80vh;
-    top: 15vh;
-    left: 5vw;
-    border: 2px solid rgba(42, 42, 42, 0.98);
 
+  .nnp-mobhead {
+    display: contents;
   }
-  .nnp-content{
+
+  .nnp-head {
+    position: relative;
+  }
+
+  .hamburg {
+    background-color: transparent;
+  }
+
+  .main-prof-box {
+    width: 67vw;
+    height: 80vh;
+    margin-top: 10vh;
     display: flex;
     flex-direction: row;
-    gap: 3vw;
-    margin-top: -50px;
   }
-  .nnp-mobile {
-    display: none;
-  }
-  
-  .nnp-mobhead{
-    display: none;
-  }
-  @media only screen and (max-width: 768px) {
-    .nnp-content{
-      display: none;
-    }
-  
-    .nnp-mobile {
-      display: contents;
-    }
-  
-    .nnp-laphead{
-      display: none;
-    }
-  
-    .nnp-mobhead{
-      display:contents;
-    }
-    }
-    
-    
+}
+
+.leftPos {
+  z-index: 3;
+  height: 110vh;
+}

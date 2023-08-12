@@ -1,0 +1,83 @@
+.ani-butt {
+  color: black;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  background: white;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+  box-shadow: 0 0 5px white;
+  text-align: center;
+}
+.ani-butt-span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ani-butt:hover {
+  background: transparent;
+  color: white;
+}
+.ani-butt:before,
+.ani-butt:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 2px;
+  background: white;
+ box-shadow: 0 0 5px white;
+}
+.ani-butt:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.ani-butt:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.ani-butt:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.ani-butt:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.ani-butt-span:before,
+.ani-butt-span:after {
+  position: absolute;
+  content: "";
+  background: white;
+  box-shadow: 0 0 5px white;
+}
+.ani-butt-span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.ani-butt-span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.ani-butt-span:hover:before {
+  width: 100%;
+}
+.ani-butt-span:hover:after {
+  width: 100%;
+}
