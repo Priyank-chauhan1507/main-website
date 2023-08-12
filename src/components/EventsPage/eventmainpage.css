@@ -1,11 +1,12 @@
 .EMP-container {
-  background: url("../Sponsors/images/bg.svg");
+  /* background: url("./images/bg.jpg"); */
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   flex-direction: column;
   overflow-y: scroll;
 }
+
 .EMP-hero {
   display: flex;
   justify-content: flex-end;
@@ -14,14 +15,26 @@
   margin-left: 40px;
   /* margin-right: 40px; */
 }
-.Event-MObile-View{
+
+.Event-MObile-View {
   display: none;
 }
-@media screen and (max-width:768px){
-  .Event-MObile-View{
+
+.nav-events {
+  height: 3px;
+  position: relative;
+  top: 37px;
+  width: 76px;
+  right: 10px;
+  background: #F7B900;
+}
+
+@media screen and (max-width:768px) {
+  .Event-MObile-View {
     display: contents;
   }
-  .EMP-container{
+
+  .EMP-container {
     display: none;
   }
 }
