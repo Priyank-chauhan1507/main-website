@@ -9,6 +9,7 @@ import logo from "../../../assests/reg-logo.svg";
 import backdropmob from "../../../assests/RegbackMobile.webp";
 import CircularProgress from "@mui/material/CircularProgress";
 import colleges from "./College";
+import PersonalDetails from "../step2/PersonalDetails"
 
 const states = [
   "Andaman and Nicobar Islands",
@@ -97,37 +98,38 @@ const CollegeDetails = () => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const formSubmit = async (e) => {
-    e.preventDefault();
+  // const formSubmit = async (e) => {
+  //   e.preventDefault();
 
-    setLoading({ loading: true });
+  //   setLoading({ loading: true });
 
-    try {
-      const userresponse = {
-        state: user.state,
-        district: user.district,
-        college: user.college,
-        degree: user.degree,
-        year: user.year,
-      };
-      const response = await axios.post("/apiV1/registeruser", userresponse);
-      const { data } = response;
-      if (response.status === 201) {
-        localStorage.setItem("user_id", data.user_id);
-        setLoading(false);
-      }
-      setLoading(false);
-      navigate("/personaldetails");
-    } catch (err) {
-      setLoading(false);
-      const { data } = err?.response;
-      console.log("register Error:", data);
-      var errorData = "";
-      setErrorMsg(errorData);
-      setError(true);
-      setLoading(false);
-    }
-  };
+  //   try {
+  //     const userresponse = {
+  //       state: user.state,
+  //       district: user.district,
+  //       college: user.college,
+  //       degree: user.degree,
+  //       year: user.year,
+  //     };
+  //     const response = await axios.post("/apiV1/registeruser", userresponse);
+  //     const { data } = response;
+  //     if (response.status === 201) {
+  //       localStorage.setItem("user_id", data.user_id);
+  //       setLoading(false);
+  //     }
+  //     setLoading(false);
+  //     navigate("/personaldetails");
+  //   } catch (err) {
+  //     setLoading(false);
+  //     const { data } = err?.response;
+  //     console.log("register Error:", data);
+  //     var errorData = "";
+  //     setErrorMsg(errorData);
+  //     setError(true);
+  //     setLoading(false);
+  //   }
+  // };
+  
 
   const handleChange1 = (state) => {
     setUser({ ...user, state: state?.value });
@@ -155,9 +157,14 @@ const CollegeDetails = () => {
     }
   }, [user]);
 
+  const nextStep = ()=>{
+    setPersonal(true);
+  }
+
   return (
     <>
-       <div className="regNav">
+
+   {!personal ?  ( <><div className="regNav">
         <div>
           <Link to="/">
             <img src={logo} alt="" className="th-logo" />
@@ -205,7 +212,7 @@ const CollegeDetails = () => {
           </div>
         </div>
 
-        <form onSubmit={(e) => formSubmit(e)}>
+        <div>
           <div className="college-inputs">
             <div className="college-input2">
               <div id="reg-college-1">
@@ -315,7 +322,7 @@ const CollegeDetails = () => {
 
           <div className="college-buttons">
             <button
-              type="submit"
+              onClick ={nextStep}
               className="college-button-submit"
               disabled={!active}
               style={
@@ -323,19 +330,15 @@ const CollegeDetails = () => {
                   ? { background: "#ff5c00" }
                   : { background: "rgb(204, 204, 204)" }
               }
-            >
-              {loading ? (
-                <CircularProgress color="inherit" size={20} />
-              ) : (
-                "Next"
-              )}
+            > Next
+             
             </button>
             <button className="college-button-clear" onClick={clearInput}>
               Clear
             </button>
           </div>
-        </form>
-      </div> : 
+        </div>
+      </div> </>) :(<PersonalDetails  college={user.college} state={user.state} district={user.district} degree ={user.degree} year ={user.year} />)};
       
 
     

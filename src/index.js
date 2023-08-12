@@ -8,11 +8,11 @@ import { Store } from "./Config/Store";
 import { Provider } from "react-redux";
 import { createBrowserHistory } from "history";
 const history = createBrowserHistory();
-axios.defaults.baseURL = "https://api.thomso.in";
+axios.defaults.baseURL = "https://api1.thomso.in";
 axios.defaults.headers.common.Authorization = `${
   localStorage.getItem("token") === null
     ? ``
-    : `JWT ${localStorage.getItem("token")}`
+    : `Bearer ${localStorage.getItem("token")}`
 }`;
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
