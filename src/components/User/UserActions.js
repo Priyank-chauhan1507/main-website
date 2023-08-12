@@ -1,10 +1,10 @@
 import ACTIONS from "./UserActionsType";
-import setAuthToken from "./SetAuthToken";
+import setAuthToken from "./setAuthToken";
 
 export const login = (params = {}) => {
-  console.log(params);
-  localStorage.setItem("token", params.token);
-  localStorage.setItem("userId", params.user?.user_id);
+  // console.log(params);
+  localStorage.setItem("token", params?.access);
+  localStorage.setItem("user_id", params?.user_id);
   setAuthToken(localStorage.getItem("token"));
   return {
     type: ACTIONS.SIGN_UP,

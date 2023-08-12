@@ -6,7 +6,6 @@ import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
 import { connect } from "react-redux";
-import { LocationOnRounded } from "@material-ui/icons";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import { fetchUser } from "../../User/UserActions";

@@ -5,6 +5,6 @@ export default function setAuthToken(token) {
   delete axios.defaults.headers.common['Authorization']
 
   if (token) {
-    axios.defaults.headers.common['Authorization'] = `JWT  ${token}`
+    axios.defaults.headers.common['Authorization'] = `Bearer  ${token}`
   }
 }

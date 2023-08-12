@@ -4,12 +4,12 @@ import drag from "../../../assests/drag.svg";
 import log from "../../../assests/logout-logo.svg";
 import line from "../../../assests/line1.svg";
 import { connect } from "react-redux";
-import Alert from "@mui/material/Alert";
+// import Alert from "@mui/material/Alert";
 import cs1 from "../../../assests/CautionSign1.svg";
 import { FileUploader } from "react-drag-drop-files";
 import "./LogoutModel.css";
 import axios from "axios";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import { CgClose } from "react-icons/cg";
 import DeleteModule from "./DeleteModule";
 import Loader from "../../Loader/Loader";
@@ -22,7 +22,7 @@ import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
 const fileTypes = ["JPG", "PNG", "GIF"];
 
-const MainProfileBox = ({ userDetails, fetchUsers }) => {
+const MainProfileBox = ({ userDetails, fetchUser }) => {
   const [logout, setLogout] = useState(0);
   const [file, setFile] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -32,7 +32,8 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
   const [openstate,setOpenstate] = useState(false);
   const [openemail,setOpenemail] = useState(false);
   const locator = useLocation();
-  console.log(userDetails);
+
+  console.log(userDetails, "profiledetails");
   const deleteUserImage = () => {
     const obj = {
       user_id: userDetails.user_id,
@@ -40,7 +41,7 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
     axios
       .post("/apiV1/delete_user_image", obj)
       .then((res) => {
-        fetchUsers();
+        fetchUser(res.data);
         // setLoading(false);
         // setShowModal(false);
         // window.location.reload();
@@ -87,7 +88,7 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
     );
     if (response.status == 200) {
       setFile(file);
-      fetchUsers();
+      fetchUser();
       setLoading(false);
     } else {
       setLoading(false);
@@ -401,7 +402,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUsers: (params) => dispatch(fetchUser(params)),
+    fetchUser: (params) => dispatch(fetchUser(params)),
   };
 };
 

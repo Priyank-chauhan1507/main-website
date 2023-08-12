@@ -8,8 +8,8 @@ import backImg from "../../../assests/Landing-page-2.webp";
 import logo from "../../../assests/reg-logo.svg";
 import backdropmob from "../../../assests/RegbackMobile.webp";
 import CircularProgress from "@mui/material/CircularProgress";
-import colleges from "./College";
-import PersonalDetails from "../step2/PersonalDetails"
+import colleges from "./college";
+import PersonalDetails from "../step2/personalDetails"
 
 const states = [
   "Andaman and Nicobar Islands",
@@ -129,7 +129,7 @@ const CollegeDetails = () => {
   //     setLoading(false);
   //   }
   // };
-  
+
 
   const handleChange1 = (state) => {
     setUser({ ...user, state: state?.value });
@@ -151,7 +151,7 @@ const CollegeDetails = () => {
       user.year
     ) {
       setActive(true);
-      
+
     } else {
       setActive(false);
     }
@@ -273,7 +273,7 @@ const CollegeDetails = () => {
                   District *
                 </option>
                 <option className="select-option" value="Gender 1">
-                  Lucknow 
+                  Lucknow
                 </option>
                 <option className="select-option" value="Gender 2">
                   Gorakhpur
@@ -331,7 +331,7 @@ const CollegeDetails = () => {
                   : { background: "rgb(204, 204, 204)" }
               }
             > Next
-             
+
             </button>
             <button className="college-button-clear" onClick={clearInput}>
               Clear
@@ -339,12 +339,12 @@ const CollegeDetails = () => {
           </div>
         </div>
       </div> </>) :(<PersonalDetails  college={user.college} state={user.state} district={user.district} degree ={user.degree} year ={user.year} />)};
-      
 
-    
+
+
       </>
   );
-  
+
 };
 
 export default CollegeDetails;

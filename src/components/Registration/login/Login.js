@@ -6,7 +6,7 @@ import { login, fetchEvents, fetchUser } from "../../User/UserActions";
 import { connect } from "react-redux";
 import axios from "axios";
 import Loader from "../../Loader/Loader";
-import setAuthToken from "../../User/SetAuthToken";
+// import setAuthToken from "../../User/setAuthToken";
 import Regback from "../../../assests/reg-backi.webp";
 import logo from "../../../assests/reg-logo.svg";
 import "./Login.scss";

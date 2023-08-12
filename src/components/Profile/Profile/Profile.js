@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Profile.css";
-import LeftSideProfile from "../LeftSideProfile/Leftsideprofile";
+import LeftSideProfile from "../LeftSideProfile/leftsideprofile";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 import Navbar from "../../Navbar/Profilenavbar";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
+
 const Profile = ({ userDetails }) => {
   const navigate = useNavigate();
   useEffect(() => {

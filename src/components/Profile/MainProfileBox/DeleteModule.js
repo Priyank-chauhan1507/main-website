@@ -1,4 +1,3 @@
-import { SignalWifi1Bar } from "@material-ui/icons";
 import React from "react";
 import del1 from "../../../assests/bin1.svg";
 import "./LogoutModel.css";
