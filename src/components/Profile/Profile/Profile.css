@@ -108,3 +108,17 @@
   z-index: 3;
   height: 110vh;
 }
+
+.paymentcenterimg{
+  margin:auto;
+}
+
+.mobpaymentcenterimg{
+  margin-top: 17vh;
+    display: flex;
+    justify-content: center;
+}
+
+.paymentmobpage{
+  display: none;
+}
