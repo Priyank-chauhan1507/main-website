@@ -5,7 +5,8 @@ import singers from "../../assests/singers.webp"
 import singersmob from "../../assests/singersmob.webp"
 import "./Home.scss"
 import Navbar from '../EventsNavbar/Eventsnavbar'
-import {useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
+
 function Home() {
   const navigate=useNavigate();
   return (
@@ -14,7 +15,11 @@ function Home() {
         alt="" />
         <Navbar color="transparent"/>
         <img src={thomso} alt="" className='thomso'/>
-        <button className='register' onClick={()=>navigate("/register")}>Register Now!</button>
+        {localStorage.getItem('token') ? ( <Link style={{margin:"0 auto"}} to='/profile'>
+      <button className='register'>PROFILE</button>
+      </Link>) : (<Link  style={{margin:"0 auto"}} to='/register'>
+      <button className='register'>REGISTER NOW!</button>
+      </Link>)}
         <img src={singers} alt="" className='singers'/>
         <img src={singersmob} alt="" className='singersmob'/>
     </div>

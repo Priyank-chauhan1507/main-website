@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import logo from "../../assests/logo.svg";
 import "./Eventsnavbar.css";
 import MobEventnavbar from "./MobEventnavbar";
-import { Link } from "react-router-dom";
-function Navbar({color}) {
+// import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+function Navbar({ color }) {
   const [display1, setdisplay] = useState("none");
-  return (
-    <div style={{background:color}} className="nav-comp">
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    navigate("/");
+    localStorage.removeItem("token");
+    localStorage.removeItem("user_id");
+  };  return (
+    <div style={{ background: color }} className="nav-comp">
       <MobEventnavbar />
       <div className="mainnav">
         <Link to="/">
@@ -45,7 +52,7 @@ function Navbar({color}) {
               }}
             >
               <div className="drop-row">
-              {/* <div className="nav-events"/> */}
+                {/* <div className="nav-events"/> */}
                 <div className="col col-yellow">Dramatics</div>
                 <div className="col">Abhivyakti</div>
                 <div className="col">Nukkad Natak</div>
@@ -154,7 +161,28 @@ function Navbar({color}) {
           <a className="event-nav-right-compo" href="/">
             Zonals
           </a>
-          <button className="event-regi-btn">LOGIN</button>
+          {localStorage.getItem("token") ? (
+            <>
+              {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
+              <button
+                onClick={handleLogout}
+                className="event-regi-btn"
+                id="registernow"
+              >
+                LOG OUT
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => navigate("/login")}
+                className="event-regi-btn"
+                id="registernow"
+              >
+                LOG IN
+              </button>
+            </>
+          )}
         </div>
       </div>
     </div>
