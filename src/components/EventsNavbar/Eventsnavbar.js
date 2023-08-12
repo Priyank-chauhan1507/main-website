@@ -154,7 +154,7 @@ function Navbar({color}) {
           <a className="event-nav-right-compo" href="/">
             Zonals
           </a>
-          <button className="event-regi-btn">REGISTER</button>
+          <button className="event-regi-btn">LOGIN</button>
         </div>
       </div>
     </div>
