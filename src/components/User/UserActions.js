@@ -8,7 +8,7 @@ export const login = (params = {}) => {
   setAuthToken(localStorage.getItem("token"));
   return {
     type: ACTIONS.SIGN_UP,
-    payload: params.user,
+    payload: params,
   };
 };
 

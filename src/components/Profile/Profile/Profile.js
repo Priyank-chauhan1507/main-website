@@ -16,7 +16,7 @@ const Profile = ({ userDetails }) => {
     if (!userDetails?.id) {
       // navigate.push("/login");
     }
-  }, []);
+  }, [userDetails]);
   return (
     <>
       <div className="nnp-container">

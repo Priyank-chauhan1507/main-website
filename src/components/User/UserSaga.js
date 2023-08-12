@@ -6,7 +6,7 @@ import axios from "axios";
 
 function* getUser(action) {
   const { dispatch } = Store;
-  console.log(action.payload, "request actions");
+  console.log(action.payload, "request getuser");
   try {
     axios
       .get(`/apiV1/current_user_participant`)

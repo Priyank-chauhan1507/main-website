@@ -18,10 +18,11 @@ const userReducer = (state = initialState, action) => {
 
     case ACTIONS.SIGN_UP:
       return Object.assign({}, state, {
-        user: payload,
+        user: payload
       });
 
     case ACTIONS.FETCH_USER_REQUEST:
+      // console.log("fetch");
       return Object.assign({}, state, {
         loading: true,
       });
