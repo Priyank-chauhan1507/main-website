@@ -8,6 +8,8 @@ import Alert from "@mui/material/Alert";
 import cs1 from "../../../assests/CautionSign1.svg";
 import { FileUploader } from "react-drag-drop-files";
 import "./LogoutModel.css";
+import "../LeftSideProfile/leftsideprofile.css";
+import "../Profile/Profile.css";
 import axios from "axios";
 import { Button } from "@mui/material";
 import { CgClose } from "react-icons/cg";
@@ -142,7 +144,7 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
                 <Link
                   to="/pevents"
                   className={
-                    locator.pathname === "/pevents" ? "c1-text" : "c2-text"
+                    locator.pathname === "/eventbox" ? "c1-text" : "c2-text"
                   }
                 >
                   Events
@@ -155,7 +157,7 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
                 <Link
                   to="/payment-alumn"
                   className={
-                    locator.pathname === "/payment-alumn"
+                    locator.pathname === "/paymentbox"
                       ? "c1-text"
                       : "c2-text"
                   }

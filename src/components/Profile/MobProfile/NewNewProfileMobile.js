@@ -13,8 +13,10 @@ import { fetchUser } from "../../User/UserActions";
 import Loader from "../../Loader/Loader";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
+
 const NewNewProfileMobile = ({ userDetails, fetchUsers }) => {
   const Locator = useLocation();
+  const locator = useLocation();
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
 
@@ -135,14 +137,18 @@ const NewNewProfileMobile = ({ userDetails, fetchUsers }) => {
         </div>
         <div className="mpb-line1" />
       </div>
-      <div className="lsp-pic-1">
+      <div className={
+                  locator.pathname === "/paymentbox" || locator.pathname === "/eventbox" ? "paymentmobpage lsp-pic-1" : "lsp-pic-1"
+                }>
         <img className="lsp-img11" src={pic} alt="profilepic" />
         <div className="mob-lt1">
           <span className="lsp-text1">{userDetails?.name}</span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
         </div>
       </div>
-      <div className="main-prof-box">
+      <div className={
+                  locator.pathname === "/paymentbox" || locator.pathname === "/eventbox" ? "paymentmobpage main-prof-box" : "main-prof-box"
+                }>
         <div className="main-prof-box-flex-1">
           <div className="main-prof-detail-1">
             <div className="main-prof-box-head-div">
