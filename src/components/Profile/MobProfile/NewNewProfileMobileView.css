@@ -201,3 +201,7 @@
         width: 18vw;
     }
 }
+
+.paymentmobpage{
+    display: none;
+  }
