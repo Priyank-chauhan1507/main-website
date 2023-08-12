@@ -12,6 +12,7 @@ import CollegeDetails from "./components/Registration/step1/CollegeDetails";
 import RegPage from "./components/Registration/RegPage/RegPage";
 import Profilenavbar from "./components/Navbar/Profilenavbar";
 import Profile from "./components/Profile/Profile/Profile";
+import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route exact={true} path="/resetPassword" element={<ResetPassword/>}/>
           <Route exact={true} path="/navbar" element={<Profilenavbar/>} />
           <Route exact={true} path="/profile" element={<Profile/>} />
+          <Route exact={true} path="/eventsnavbar" element={<Eventsnavbar/>} />
         </Routes>
       </Router>
     </>

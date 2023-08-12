@@ -1,0 +1,53 @@
+.nav-comp{
+    display: flex;
+    background-color: #2C2C2C;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vw;
+    padding-right: 4vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+.event-nav-right{
+    display: flex;
+    gap: 3vw;
+}
+.event-nav-right-compo{
+    color: var(--default-2, #FFF);
+    text-align: justify;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Comic Sans MS;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    padding: 8px;
+}
+.event-regi-btn{
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Comic Sans MS;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #F7B900;
+    
+    display: inline-flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* margin-right: 4vw; */
+    padding-right: 8px;
+    padding-left: 8px;
+
+
+}
