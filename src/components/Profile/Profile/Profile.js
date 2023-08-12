@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import Navbar from "../../Navbar/Profilenavbar";
 import Back from "../../../assests/profile1.webp";
+import Back1 from "../../../assests/landingpage.webp";
 const Profile = ({ userDetails }) => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -19,6 +20,7 @@ const Profile = ({ userDetails }) => {
     <>
       <div className="nnp-container">
         <img src={Back} className="pro-back-img" alt="" />
+        <img src={Back1} className="pro-back-img2" alt="" />
         <div className="nnp-head">
           <Navbar />
           {/* <div className="nnp-mobhead">
