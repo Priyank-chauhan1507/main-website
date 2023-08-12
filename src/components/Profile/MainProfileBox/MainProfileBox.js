@@ -15,7 +15,11 @@ import DeleteModule from "./DeleteModule";
 import Loader from "../../Loader/Loader";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { fetchUser } from "../../User/UserActions";
-
+import { useLocation, Link } from "react-router-dom";
+import pic from "../../../assests/profilepic.png";
+import icon1 from "../../../assests/icon1.png";
+import icon2 from "../../../assests/events.svg";
+import icon3 from "../../../assests/payment.svg";
 const fileTypes = ["JPG", "PNG", "GIF"];
 
 const MainProfileBox = ({ userDetails, fetchUsers }) => {
@@ -23,7 +27,8 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
   const [file, setFile] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  const locator = useLocation();
+  console.log(userDetails);
   const deleteUserImage = () => {
     const obj = {
       user_id: userDetails.user_id,
@@ -89,6 +94,77 @@ const MainProfileBox = ({ userDetails, fetchUsers }) => {
 
   return (
     <>
+      <div className="lsp-background">
+        <div className="lsp-box">
+          <div className="lsp-pic">
+            <img className="lsp-img1" src={pic} alt="profilepic" />
+            <span className="lsp-text1">
+              {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
+            </span>
+            <span className="lsp-text2">{userDetails?.thomso_id}</span>
+          </div>
+          <div>
+            {userDetails?.username}
+            {userDetails?.thomso_id}
+          </div>
+          <div className="lsp-centre">
+            <div className="lsp-c1">
+              <img src={icon1} alt="icon1" />
+              <Link
+                to="/profile"
+                className={
+                  locator.pathname === "/profile" ? "c1-text" : "c2-text"
+                }
+              >
+                Profile
+              </Link>
+            </div>
+            {!userDetails?.is_iitr_alumn && (
+              <div className="lsp-c2">
+                <img src={icon2} alt="icon2" />
+                <Link
+                  to="/pevents"
+                  className={
+                    locator.pathname === "/pevents" ? "c1-text" : "c2-text"
+                  }
+                >
+                  Events
+                </Link>
+              </div>
+            )}
+            {userDetails?.is_iitr_alumn ? (
+              <div className="lsp-c3">
+                <img src={icon3} alt="icon3" />
+                <Link
+                  to="/payment-alumn"
+                  className={
+                    locator.pathname === "/payment-alumn"
+                      ? "c1-text"
+                      : "c2-text"
+                  }
+                >
+                  Payment
+                </Link>
+              </div>
+            ) : (
+              <div className="lsp-c3">
+                <img src={icon3} alt="icon3" />
+                <Link
+                  to="/payment"
+                  className={
+                    locator.pathname === "/payment" ? "c1-text" : "c2-text"
+                  }
+                >
+                  Payment
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className="c-line1">
+          <img src={line} alt="line" />
+        </div>
       {loading && <Loader />}
       <div className="main-prof-box">
         <div className="main-prof-box-flex-1">

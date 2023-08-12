@@ -1,103 +1,127 @@
-.lsp-c1, .lsp-c2, .lsp-c3{
-    display: flex;
-    gap: 12px;
-  }
-  
-  .lsp-img1 {
-    height: 20vh;
-    width: 13vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 33px;
-  }
-  
-  .lsp-text1 {
-    color: white;
-    font-family: "Oxanium";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
-  }
-  
-  .lsp-text2 {
-    color: white;
-    font-family: "Oxanium";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
-  }
-  
-  .lsp-pic {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    gap: 20px;
-  }
-  
-  .lsp-box {
-    margin-top: 10vh;
-    margin-left: 5vw;
-    /* background-color: black; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 15vw;
-    height: 80vh;
-    gap: 80px;
-    border: 1.5px solid gray;
-    background: radial-gradient(
-      111.43% 111.43% at 0% 0%,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    backdrop-filter: blur(42px);
-  }
-  
-  .c1-text {
-    color: #ffffff;
-    font-family: "Oxanium";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
-    /* display: flex;
+.lsp-c1,
+.lsp-c2,
+.lsp-c3 {
+  display: flex;
+  gap: 12px;
+}
+.lsp-c1{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 7px 25px;
+}
+.lsp-c2,.lsp-c3{
+  margin-left: 23px;
+}
+.lsp-img1 {
+  height: 15vh;
+  width: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 63px;
+}
+
+.lsp-text1 {
+  color: white;
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.lsp-text2 {
+  color: white;
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.lsp-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.lsp-box {
+  margin-top: 10vh;
+  margin-left: 5vw;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15vw;
+  height: 80vh;
+  gap: 80px;
+
+}
+
+.c1-text {
+  color: #ffffff;
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  /* display: flex;
   align-items: center; */
-    letter-spacing: -0.02em;
-  }
-  .c2-text {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: "Oxanium";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    /* display: flex;
+  letter-spacing: -0.02em;
+  color: rgba(18, 17, 17, 0.98);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Comic Neue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  /* 125% */
+  letter-spacing: -0.32px;
+  text-decoration:none !important;
+}
+
+.c2-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 400;
+  text-decoration:none !important;
+  font-size: 20px;
+  line-height: 20px;
+  /* display: flex;
   align-items: center; */
-    letter-spacing: -0.02em;
-  }
-  .c2-text:hover{
-    color: rgba(255, 255, 255, 0.8);
-  
-  }
-  
-  
-  .lsp-centre {
-    gap: 32px;
-    display: flex;
-    height: 14vh;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
+  letter-spacing: -0.02em;
+  color: #FFF;
+font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 15.748px; /* 98.427% */
+letter-spacing: -0.32px;
+}
+
+.c2-text:hover {
+  color: rgba(255, 255, 255, 0.8);
+
+}
+
+
+.lsp-centre {
+  gap: 32px;
+  display: flex;
+  height: 7vh;
+  flex-direction: column;
+  justify-content: center;
+}

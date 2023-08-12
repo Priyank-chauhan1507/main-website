@@ -6,7 +6,7 @@ import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import Navbar from "../../Navbar/Navbar";
+import Navbar from "../../Navbar/Profilenavbar";
 const Profile = ({ userDetails }) => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -18,16 +18,17 @@ const Profile = ({ userDetails }) => {
     <>
       <div className="nnp-container">
         <div className="nnp-head">
-          <div className="nnp-laphead">
             <Navbar/>
+    <div className="boxborder">
           </div>
           {/* <div className="nnp-mobhead">
             <EventMobileNav />
           </div> */}
         </div>
+          <div className="nnp-laphead">
         <div className="nnp-content">
-          <LeftSideProfile />
           <MainProfileBox />
+      </div>
         </div>
         <div className="nnp-mobile">
           <NewNewProfileMobile />
