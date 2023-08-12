@@ -11,7 +11,10 @@ import { connect } from "react-redux";
 import { escapeRegex } from "./helper";
 import { ImCross } from "react-icons/im";
 import Navbar2 from "../EventsNavbar/Eventsnavbar";
-
+import bgmobile from "../../assests/bgmobile.webp";
+import bg from "../../assests/eventback.webp";
+import photo from "../../assests/events.png";
+import photo1 from "../../assests/street_soccer_1.png";
 const EventMainPage = ({ events }) => {
   const { dispatch } = Store;
   const [data, setData] = useState();
@@ -65,63 +68,49 @@ const EventMainPage = ({ events }) => {
     const regExp = new RegExp(escapeRegex(search), "i");
     return regExp.test(pName);
   };
-
   console.log(categoryId);
-
+  const [display, setdisplay] = useState(true);
   return (
     <>
-      <div className="EMP-container" id="event-page">
-        <Navbar2/>
-        <div className="EMP-hero">
-          <EventSideMenu
-            activeCategory={categoryId}
-            data={category}
-            changeCategory={changeCategory}
-          />
-          <div className="EMP-hero-cd">
-            <div className="ECD-container">
-              <div className="ECD-searchbar-main">
-                <input
-                  className="ECD-searchbar-text-mian widd"
-                  type="text"
-                  placeholder="Search by Name"
-                  value={search}
-                  onChange={(e) => {
-                    setSearch(e.target.value);
-                  }}
-                ></input>
-                <span className="ECD-searchbar-text-mian pointer">
-                  {search.length > 0 ? (
-                    <ImCross
-                      onClick={() => {
-                        setSearch("");
-                      }}
-                    />
-                  ) : (
-                    <AiOutlineSearch size={"20px"} />
-                  )}
-                </span>
-              </div>
-              <div className="ECD-card-Display">
-                <EventCard
-                  data={
-                    search === ""
-                      ? data
-                      : data?.filter((item) => checkSearch(item.name))
-                  }
-                />
-              </div>
-            </div>
+      <img src={bgmobile} alt="" className="bgmobile" />
+      <Navbar2 />
+      <img src={bg} alt="" className="bg-events" />
+      <div className="events_back">
+        <div className="events-left">
+          <span className="events-left-event">
+            Events {">"} Choreo {">"} Footloose
+          </span>
+          <div className="events-left-event1">
+            <h1>Footloose</h1>
+            <span>Solo/team</span>
+          </div>
+          <p className="events-left-event2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam est
+            nullam pretium euismod nulla maecenas egestas. Orci viverra felis,
+            suscipit non mollis odio duis. Eget ornare eget elit ut in enim
+            sapien ac. Facilisis aliquet duis ornare vitae venenatis eget in
+            elit a.
+          </p>
+          <div className="events-left-event3">
+            <span>Note:</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam est
+              nullam pretium euismod nulla maecenas egestas.
+            </p>
+          </div>
+          <div className="events-left-event4">
+            <span>Prize <br/> Worth:</span>
+            <h1>25K</h1>
+          </div>
+          <div className="events-left-event5">
+            <button className="events-left-event5-btn1">REGISTER</button>
+            <button className="events-left-event5-btn2">RULEBOOK</button>
           </div>
         </div>
-      </div>
-      <div className="Event-MObile-View">
-        <EventMainPageMob
-          data={data}
-          category={category}
-          activeCategory={categoryId}
-          changeCategory={changeCategory}
-        />
+        <div className="events-right">
+          <img src={photo} className="event-photo" alt="" />
+          <img src={photo1} className="event-photo1" alt="" />
+        </div>
       </div>
     </>
   );
