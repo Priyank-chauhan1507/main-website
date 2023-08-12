@@ -1,0 +1,31 @@
+.payment-box{
+    display: flex;
+    flex-direction: column;
+    width: 312px;
+    height: 338px;
+    /* border: 2px solid white; */
+    
+}
+.box-text1{
+    color: #FFF;
+    text-align: center;
+    font-family: Rowdies;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 100%; /* 24px */
+    letter-spacing: -0.48px;
+    padding-top: 15px;
+    
+}
+.box-text2{
+    color: #FFF;
+    text-align: center;
+    font-family: Comic Neue;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+    letter-spacing: -0.28px;
+    padding-top: 20px;
+    }
