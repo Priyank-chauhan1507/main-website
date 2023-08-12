@@ -1,0 +1,79 @@
+.eh-nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  padding-right: 100px;
+  position: relative;
+  z-index:10000;
+}
+.eh-img {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+}
+.img-na {
+  margin: 25px;
+}
+.eh-nav-box {
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color:rgba(255,255,255,0.2);
+  gap: 25px;
+  text-decoration: none;
+
+}
+
+.eh-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 20px;
+  gap: 10px;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.eh-but-text {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #333333;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.eh-li {
+  text-decoration: none;
+  cursor:pointer;
+
+}
+
+.collapse {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 15px;
+}
+
+.line {
+  width: 33px;
+  background-color: orange;
+  height: 4px;
+  margin: 5px 3px;
+}
