@@ -14,7 +14,7 @@ const gender_choice = ["Male", "Female", "Others"].map((state) => ({
   label: state,
 }));
 
-const PersonalDetails = () => {
+const PersonalDetails = ({}) => {
   let navigate = useNavigate();
   const [active, setActive] = useState(false);
   const [confirm_err, setConfirm_err] = useState(false);
@@ -54,7 +54,7 @@ const PersonalDetails = () => {
         gender: user.gender,
         referral: user.referral,
       };
-      const response = await axios.put(`/apiV1/registeruser/${localStorage.getItem("user_id")}`, userresponse);
+      const response = await axios.post(`/apiV1/registeruser`, userresponse);
       const { data } = response;
       if (response.status === 201) {
         // localStorage.setItem("user_id", data.user_id);

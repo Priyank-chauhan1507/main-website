@@ -68,6 +68,7 @@ const year_choice = [
 
 const CollegeDetails = () => {
   let navigate = useNavigate();
+  const [personal,setPersonal] = useState(false);
 
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -148,6 +149,7 @@ const CollegeDetails = () => {
       user.year
     ) {
       setActive(true);
+      
     } else {
       setActive(false);
     }
@@ -155,7 +157,7 @@ const CollegeDetails = () => {
 
   return (
     <>
-      <div className="regNav">
+       <div className="regNav">
         <div>
           <Link to="/">
             <img src={logo} alt="" className="th-logo" />
@@ -333,9 +335,13 @@ const CollegeDetails = () => {
             </button>
           </div>
         </form>
-      </div>
-    </>
+      </div> : 
+      
+
+    
+      </>
   );
+  
 };
 
 export default CollegeDetails;
