@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./NewNewProfileMobileView.css";
 import { useState } from "react";
 import pic from "../../../assests/propic.svg";
@@ -31,7 +31,7 @@ const NewNewProfileMobile = ({data}) => {
     axios
       .post("/apiV1/delete_user_image", obj)
       .then((res) => {
-        fetchUsers();
+        // fetchUsers();
         // setLoading(false);
         // setShowModal(false);
         // window.location.reload();
@@ -69,7 +69,7 @@ const NewNewProfileMobile = ({data}) => {
       );
       if (response.status == 200) {
         setFile(file);
-        fetchUsers();
+        // fetchUsers();
         setLoading(false);
       } else {
         setLoading(false);
