@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./mainprofilebox.css";
 import drag from "../../../assests/drag.svg";
 import log from "../../../assests/logout-logo.svg";
@@ -24,7 +24,7 @@ import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
 const fileTypes = ["JPG", "PNG", "GIF"];
 
-const MainProfileBox = ({ userDetails, fetchUser }) => {
+const MainProfileBox = ({data}) => {
   const [logout, setLogout] = useState(0);
   const [file, setFile] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -34,6 +34,12 @@ const MainProfileBox = ({ userDetails, fetchUser }) => {
   const [openstate,setOpenstate] = useState(false);
   const [openemail,setOpenemail] = useState(false);
   const locator = useLocation();
+  const [userDetails, setuserDetails] = useState({})
+
+  useEffect(() => {
+    setuserDetails(data)
+  }, [data])
+
 
   console.log(userDetails, "profiledetails");
   const deleteUserImage = () => {

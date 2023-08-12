@@ -13,11 +13,16 @@ import Loader from "../../Loader/Loader";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 
-const NewNewProfileMobile = ({ userDetails, fetchUsers }) => {
+const NewNewProfileMobile = ({data}) => {
   const Locator = useLocation();
   const locator = useLocation();
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
+  const [userDetails, setuserDetails] = useState({})
+
+  useEffect(() => {
+    setuserDetails(data)
+  }, [data])
 
   const deleteUserImage = () => {
     const obj = {
