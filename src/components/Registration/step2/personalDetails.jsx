@@ -14,8 +14,8 @@ const gender_choice = ["Male", "Female", "Others"].map((state) => ({
   label: state,
 }));
 
-const PersonalDetails = ({}) => {
-  let navigate = useNavigate();
+const PersonalDetails = ({college,state,district,degree,year}) => {
+    let navigate = useNavigate();
   const [active, setActive] = useState(false);
   const [confirm_err, setConfirm_err] = useState(false);
   const [mobile_check, setMobile_check] = useState(false);
@@ -52,12 +52,20 @@ const PersonalDetails = ({}) => {
         contact: user.contact,
         password: user.password,
         gender: user.gender,
-        referral: user.referral,
+        referred_by: user.referral,
+        college: college,
+        state:state,
+        city:district,
+        branch:degree,
+        year:year
+
+
       };
+      console.log(userresponse);
       const response = await axios.post(`/apiV1/registeruser`, userresponse);
       const { data } = response;
-      if (response.status === 201) {
-        // localStorage.setItem("user_id", data.user_id);
+          if (response.status === 201) {
+        localStorage.setItem("user_id", data.user_id);
         setLoading(false);
         // setActive(false)
       }
@@ -238,7 +246,7 @@ const PersonalDetails = ({}) => {
                   placeholder="Phone Number *"
                   value={user.contact}
                   pattern="/^[6-9]{1}+[0-9]{9}$/"
-                  onkeypress="limitKeypress(event,this.value,2)"
+                  
                   required
                   onChange={(e) => validateMobileNumber(e)}
                 />
@@ -336,7 +344,7 @@ const PersonalDetails = ({}) => {
         </form>
       </div>
     </>
-  );
+  )
 };
 
 export default PersonalDetails;

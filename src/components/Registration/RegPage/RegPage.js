@@ -18,7 +18,7 @@ export default function VerifyEmail() {
   const [errorMsg, setErrorMsg] = useState("");
   const [user, setUser] = useState({
     otp: "",
-    type: "ca",
+    type: "participant",
     user_id: localStorage.getItem("user_id"),
   });
   const [code, setCode] = useState("");

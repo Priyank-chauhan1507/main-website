@@ -14,6 +14,8 @@ import Profilenavbar from "./components/Navbar/Profilenavbar";
 import Profile from "./components/Profile/Profile/Profile";
 import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";
 import EventMainPage from "./components/EventsPage/EventMainPage";
+import EventBox from "./components/Profile/EventBox/EventBox";
+import Paymentbox from "./components/Profile/PaymentBox/Paymentbox";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route exact={true} path="/eventsnavbar" element={<Eventsnavbar/>} />
           <Route exact={true} path="/events" element={<EventMainPage />} />
 
+          <Route exact={true} path="/eventbox" element={<EventBox/>} />
+          <Route exact={true} path="/paymentbox" element={<Paymentbox/>} />
         </Routes>
       </Router>
     </>
