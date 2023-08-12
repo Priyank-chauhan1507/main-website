@@ -1,5 +1,5 @@
 .main-prof-box {
-  width: 70vw;
+  width: 65vw;
   height: 80vh;
   margin-top: 10vh;
   display: flex;
@@ -14,6 +14,9 @@
   width: 75vw;
   overflow-x: hidden;
   padding-bottom: 5vh;
+}
+div.main-prof-box-flex-1::-webkit-scrollbar {
+  width:0px;
 }
 .main-prof-box-head-text {
   font-family: "Oxanium";
