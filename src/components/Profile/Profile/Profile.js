@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Profile.css";
 import LeftSideProfile from "../LeftSideProfile/leftsideprofile";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
@@ -9,14 +9,45 @@ import { connect } from "react-redux";
 import Navbar from "../../Navbar/Profilenavbar";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
+import axios from "axios";
+
 
 const Profile = ({ userDetails }) => {
   const navigate = useNavigate();
-  useEffect(() => {
-    if (!userDetails?.id) {
-      // navigate.push("/login");
+  const [user, setuser] = useState({})
+  // useEffect(() => {
+  //   if (!userDetails?.id) {
+  //     // navigate.push("/login");
+  //   }
+  // }, [userDetails]);
+
+   useEffect(() => {
+    loadUserData();
+  }, []);
+
+  const loadUserData = async () => {
+    try {
+      axios
+        .get(`/apiV1/current_user_participant`)
+        .then((res) => {
+          setuser(res.data);
+          localStorage.setItem("user_id", res.data?.user_id);
+          console.log("data", res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+          if (err?.response?.status == 401) {
+            if (localStorage.getItem("token")) {
+              localStorage.removeItem("token");
+              localStorage.removeItem("user_id");
+              window.location.pathname = "/";
+            }
+          }
+        });
+    } catch (error) {
+      console.log(error);
     }
-  }, [userDetails]);
+  };
   return (
     <>
       <div className="nnp-container">
@@ -31,11 +62,11 @@ const Profile = ({ userDetails }) => {
           <div className="boxborder">
         <div className="nnp-laphead">
           <div className="nnp-content">
-            <MainProfileBox />
+            <MainProfileBox data={user}/>
           </div>
         </div>
         <div className="nnp-mobile">
-          <NewNewProfileMobile />
+          <NewNewProfileMobile data={user}/>
         </div>
         </div>
       </div>
