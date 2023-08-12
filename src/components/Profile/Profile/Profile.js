@@ -6,7 +6,7 @@ import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import Navbar from "../../Navbar/Profilenavbar";
+import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
 

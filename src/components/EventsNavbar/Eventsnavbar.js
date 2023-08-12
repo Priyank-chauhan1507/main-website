@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import logo from "../../assests/logo.svg";
 import "./Eventsnavbar.css";
 import MobEventnavbar from "./MobEventnavbar";
-function Navbar() {
+import { Link } from "react-router-dom";
+function Navbar({color}) {
   const [display1, setdisplay] = useState("none");
   return (
-    <div className="nav-comp">
+    <div style={{background:color}} className="nav-comp">
       <MobEventnavbar />
       <div className="mainnav">
-        <img className="event-nav-left" src={logo} alt="" />
+        <Link to="/">
+          <img className="event-nav-left" src={logo} alt="" />
+        </Link>
         <div className="event-nav-right">
           <div
             className="drop2"
@@ -21,7 +24,7 @@ function Navbar() {
           >
             <a
               className="event-nav-right-compo"
-              href="/"
+              href="/events"
               onMouseOver={() => {
                 setdisplay("flex");
               }}
@@ -42,6 +45,7 @@ function Navbar() {
               }}
             >
               <div className="drop-row">
+              {/* <div className="nav-events"/> */}
                 <div className="col col-yellow">Dramatics</div>
                 <div className="col">Abhivyakti</div>
                 <div className="col">Nukkad Natak</div>

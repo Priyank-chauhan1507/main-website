@@ -4,7 +4,7 @@ import thomso from "../../assests/thomso.webp"
 import singers from "../../assests/singers.webp"
 import singersmob from "../../assests/singersmob.webp"
 import "./Home.scss"
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../EventsNavbar/Eventsnavbar'
 import {useNavigate} from "react-router-dom"
 function Home() {
   const navigate=useNavigate();
@@ -12,7 +12,7 @@ function Home() {
     <div className='home'>
         <img src={Homebg}  className='homebg'
         alt="" />
-        <Navbar/>
+        <Navbar color="transparent"/>
         <img src={thomso} alt="" className='thomso'/>
         <button className='register' onClick={()=>navigate("/collegedetails")}>Register Now!</button>
         <img src={singers} alt="" className='singers'/>
