@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../Profile/Profile.css";
-import LeftSideProfile from "../LeftSideProfile/leftsideprofile";
+import LeftSideProfile from "../LeftSideProfile/Leftsideprofile";
 import "../LeftSideProfile/leftsideprofile.css";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
@@ -72,7 +72,7 @@ const Profile = ({ userDetails }) => {
               }>
                 <img src={icon2} alt="icon2" />
                 <Link
-                  to="/eventbox"
+                  to="/pevents"
                   className={
                     locator.pathname === "/eventbox" ? "c1-text" : "c2-text"
                   }

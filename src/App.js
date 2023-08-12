@@ -40,8 +40,8 @@ function App() {
           <Route exact={true} path="/eventsnavbar" element={<Eventsnavbar />} />
           <Route exact={true} path="/events" element={<EventMainPage />} />
 
-          <Route exact={true} path="/eventbox" element={<EventBox />} />
-          <Route exact={true} path="/paymentbox" element={<Paymentbox />} />
+          <Route exact={true} path="/pevents" element={<EventBox />} />
+          <Route exact={true} path="/payment" element={<Paymentbox />} />
         </Routes>
       </Router>
     </>
