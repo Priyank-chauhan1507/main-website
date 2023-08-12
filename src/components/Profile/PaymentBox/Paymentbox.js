@@ -7,7 +7,7 @@ import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import Navbar from "../../Navbar/Profilenavbar";
+import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
@@ -32,7 +32,7 @@ const Profile = ({ userDetails }) => {
         <img src={Back} className="pro-back-img" alt="" />
         <img src={Back1} className="pro-back-img2" alt="" />
         <div className="nnp-head">
-          <Navbar />
+          <Navbar color="transparent"/>
           {/* <div className="nnp-mobhead">
             <EventMobileNav />
           </div> */}

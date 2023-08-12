@@ -155,10 +155,10 @@ function Navbar({ color }) {
               </div>
             </div>
           </div>
-          <a className="event-nav-right-compo" href="/">
+          <a className="event-nav-right-compo" href="https://ca.thomso.in/" target="blank">
             CA Portal
           </a>
-          <a className="event-nav-right-compo" href="/">
+          <a className="event-nav-right-compo" href="https://zonals.thomso.in/" target="blank">
             Zonals
           </a>
           {localStorage.getItem("token") ? (
