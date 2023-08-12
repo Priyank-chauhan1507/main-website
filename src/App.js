@@ -7,7 +7,7 @@ import Login from "./components/Registration/login/Login";
 import EmailVerify from "./components/Registration/EmailVerify/EmailVerify";
 import RegisComp from "./components/Registration/RegComp/RegCompleted";
 // import Forget from "./components/Registration/forget_pwd/Forget";
-import ResetPassword from "./components/Registration/resetPassword/resetPassword";
+import ResetPassword from "./components/Registration/resetPassword/ResetPassword";
 import CollegeDetails from "./components/Registration/step1/collegeDetails";
 import RegPage from "./components/Registration/RegPage/RegPage";
 import Profilenavbar from "./components/Navbar/Profilenavbar";
