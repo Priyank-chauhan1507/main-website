@@ -1,14 +1,7 @@
 .main-prof-box {
   width: 70vw;
   height: 80vh;
-  background: radial-gradient(
-    111.43% 111.43% at 0% 0%,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-  backdrop-filter: blur(42px);
   margin-top: 10vh;
-  border: 1px solid white;
   display: flex;
   flex-direction: row;
 }
@@ -29,33 +22,39 @@
   font-size: 24px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.63);
+  color: #FFF;
+font-family: Comic Neue;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .main-prof-box-details-div {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 19px;
+  
 }
 
 .main-prof-box-detail-row-text {
-  font-family: "Inter";
+  color: #FFF;
+  font-family: Comic Neue;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  width: 86px;
-  font-size: 16px;
-  line-height: 20px;
+  line-height: 20px; /* 125% */
   /* identical to box height, or 125% */
 
   color: #ffffff;
 }
 .main-prof-box-detail-row-text-col {
-  font-family: "Inter";
+  color: #FFF;
+  font-family: Comic Neue;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  width: 86px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
+  line-height: 20px; /* 125% */
   width: 175px;
   white-space: nowrap;
   overflow: hidden;
@@ -99,6 +98,12 @@
   font-size: 24px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.63);
+  color: #FFF;
+font-family: Comic Neue;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .mpb-text {
@@ -109,6 +114,12 @@
   line-height: 24px;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 44px;
+  color: #FFF;
+font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .mpb-drop {
@@ -118,8 +129,8 @@
   align-items: center;
   margin-top: 20px;
   border: 1px dashed #a3a4a5;
-  width: 20vw;
-  height: 25vh;
+  width: 24vw;
+  height: 28vh;
   gap: 8px;
 }
 
@@ -216,10 +227,14 @@
   align-items: center;
   letter-spacing: -0.02em;
   color: #333333;
+  background: #FFC414;
 }
 .c-line {
   margin-top: 48px;
-  margin-left: 87px;
+  margin-left: 13vw;}
+.c-line1 {
+  margin-top: 128px;
+  margin-left: 0px;
 }
 
 .c-line img{
