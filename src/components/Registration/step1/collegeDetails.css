@@ -259,7 +259,9 @@ letter-spacing: 1.2px;
     box-shadow: 1.5px 3px 0px 0px #111111;
   }
 
-  
+  .widthController{
+    width: 40vw;
+  }
 
 
   /* //////////////////////// */
@@ -268,6 +270,9 @@ letter-spacing: 1.2px;
 
 
   @media screen and (max-width: 930px) {
+    .input-field{
+      width: 100% !important;
+    }
     .college {
       border-radius: 0;
       filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.32));
@@ -364,12 +369,12 @@ letter-spacing: 1.2px;
    
     }
   }
-@media only screen and (min-width:930px){
+/* @media only screen and (min-width:930px){
 
   .widthController{
     width:53.5vw;
   }
-}
+} */
 
 .css-13cymwt-control{
 width:auto;

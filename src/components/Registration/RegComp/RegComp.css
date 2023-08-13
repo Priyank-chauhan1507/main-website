@@ -34,6 +34,26 @@
     overflow-y: hidden;
     overflow-x: hidden;
   }
+
+  .submit-log{
+    display: block;
+  width: 40%;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgba(237, 215, 41, 1);
+  color: #ffffff;
+  margin: 2rem auto 0 auto;
+  border: 1.52px solid #505050;
+  box-shadow: 1.518475890159607px 3.036951780319214px 0px 0px #505050;
+  font-family: Comic Sans MS;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  }
   
   /* .regcompleteback{
     height: 88.8vh !important;
@@ -96,6 +116,7 @@
     top: 30vh;
     left: 25vw;
     display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: #ffffff;
     /* margin: auto; */
@@ -145,7 +166,7 @@
     /* left: 5%; */
     /* right: 5%; */
     width: 100%;
-    height: 100%;
+    height: 70%;
   }
   
   .Box h2 {
@@ -259,5 +280,11 @@
       font-size: 7vw;
       left: 12vw;
   }
+  }
+
+  @media only screen and (max-width:400px){
+    .submit-log{
+      font-size: 15px;
+    }
   }
   
