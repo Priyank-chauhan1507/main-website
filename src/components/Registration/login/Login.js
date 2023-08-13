@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import Loader from "../../Loader/Loader";
 // import setAuthToken from "../../User/setAuthToken";
-import Regback from "../../../assests/reg-backi.webp";
+import Regback from "../../../assests/Landing-page-2-1.webp";
 import logo from "../../../assests/reg-logo.svg";
 import "./Login.scss";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";

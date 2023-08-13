@@ -1,5 +1,5 @@
 import React from 'react'
-import Homebg from "../../assests/Landing-page.webp"
+import Homebg from "../../assests/Landing-page-1.webp"
 import thomso from "../../assests/thomso.webp"
 import singers from "../../assests/singers.webp"
 import singersmob from "../../assests/singersmob.webp"

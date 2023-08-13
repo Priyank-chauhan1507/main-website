@@ -1,6 +1,6 @@
 import React from "react";
 import "./EmailVerify.css";
-import logbg1 from "../../../assests/Regback.webp";
+import logbg1 from "../../../assests/Landing-page-2-1.webp";
 import logbg2 from "../../../assests/reg-logo.svg"
 import { Link } from "react-router-dom";
 

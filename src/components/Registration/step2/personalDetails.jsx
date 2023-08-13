@@ -6,7 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import axios from "axios";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Input } from "antd";
-import backdrop from "../../../assests/Landing-page-2.webp";
+import backdrop from "../../../assests/Landing-page-2-1.webp";
 import logo from "../../../assests/reg-logo.svg";
 import backdropmob from '../../../assests/RegbackMobile.webp'
 const gender_choice = ["Male", "Female", "Others"].map((state) => ({

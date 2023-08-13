@@ -1,6 +1,6 @@
 import logo from "../../../assests/reg-logo.svg";
 import "./resetPassword.scss";
-import Regback from "../../../assests/Regback.webp"
+import Regback from "../../../assests/Landing-page-2-1.webp"
 import Regback1 from "../../../assests/RegbackMobile.webp"
 import { Input, message } from "antd";
 import axios from "axios";
