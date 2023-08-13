@@ -45,7 +45,7 @@ export default function VerifyEmail() {
         setLoading(false);
       }
       setLoading(false);
-      navigate("/emailverified");
+      navigate("/regcompleted");
     } catch (err) {
       message.error("Invalid OTP");
       setLoading(false);
