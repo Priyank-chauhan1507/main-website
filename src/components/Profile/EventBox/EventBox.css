@@ -41,7 +41,18 @@ letter-spacing: -0.48px;
     line-height: 16px; /* 100% */
     letter-spacing: -0.32px;
 }
-
+.drop3{
+    position: absolute;
+    top: 12vh;
+    right: 1vw;
+    height: auto;
+    z-index: 7;
+    display: flex;
+    padding: 0 10px 30px 10px;
+    justify-content: space-evenly;
+    width: 70vw;
+    background-color: #282828;
+}
 @media only screen and (max-width: 350px)
 {
     .EventBox-Text{

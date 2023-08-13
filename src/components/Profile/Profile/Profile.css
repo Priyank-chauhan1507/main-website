@@ -122,3 +122,30 @@
 .paymentmobpage{
   display: none;
 }
+.event-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  margin:auto;
+
+  gap: 30px;
+}
+
+.event-box button{
+  width: 180px;
+  color: #333;
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 100% */
+letter-spacing: -0.32px;
+display: inline-flex;
+padding: 9px 8px;
+align-items: flex-start;
+justify-content: center;
+gap: 10px;
+background: #FFF;
+}
