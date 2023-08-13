@@ -12,9 +12,9 @@ import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
 import pic from "../../../assests/profilepic.png";
-import icon1 from "../../../assests/icon1.png";
+import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/events.svg";
-import icon3 from "../../../assests/payment.svg";
+import icon3 from "../../../assests/pay_black.png";
 import line from "../../../assests/line1.svg";
 import paymentcenterpic from "../../../assests/paymentpic.webp";
 
@@ -83,20 +83,20 @@ const Profile = ({ userDetails }) => {
             )}
             {userDetails?.is_iitr_alumn ? (
               <div className={
-                locator.pathname === "/paymentbox" ? "lsp-c2 c2-text" : "lsp-c2 c2-text"
+                locator.pathname === "/payment" ? "lsp-c2 c2-text" : "lsp-c2 c2-text"
               }>
                 <img src={icon3} alt="icon3" />
                 <Link
-                  to="/paymentbox"
+                  to="/payment"
                   className={
-                    locator.pathname === "/paymentbox" ? "c1-text" : "c2-text"
+                    locator.pathname === "/payment" ? "c1-text" : "c2-text"
                   }
                 >
                   Payment
                 </Link>
               </div>
             ) : (
-              <div className="lsp-c3">
+              <div className="lsp-c1">
                 <img src={icon3} alt="icon3" />
                 <Link
                   to="/payment"
