@@ -4,13 +4,12 @@ import axios from "axios";
 import Select from "react-select";
 import Creatable from "react-select/creatable";
 import { Link, useNavigate } from "react-router-dom";
-import backImg from "../../../assests/Landing-page-2.webp";
+import backImg from "../../../assests/Landing-page-2-1.webp";
 import logo from "../../../assests/reg-logo.svg";
 import backdropmob from "../../../assests/RegbackMobile.webp";
 import CircularProgress from "@mui/material/CircularProgress";
 import colleges from "./College";
-import PersonalDetails from "../step2/PersonalDetails"
-
+import PersonalDetails from "../step2/PersonalDetails";
 const states = [
   "Andaman and Nicobar Islands",
   "Andhra Pradesh",

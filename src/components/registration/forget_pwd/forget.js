@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import "./forget.scss";
-import welcomebckbg from "../../../assests/Landing-page-2.webp";
+import welcomebckbg from "../../../assests/Landing-page-2-1.webp";
 import axios from "axios";
 import SimpleReactValidator from "simple-react-validator";
 import { message } from "antd";

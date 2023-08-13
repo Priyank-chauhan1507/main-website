@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./RegPage.css";
 import { useState } from "react";
-import logbg1 from "../../../assests/RegBack.svg";
+import logbg1 from "../../../assests/Landing-page-2-1.webp";
 import logo from "../../../assests/reg-logo.svg"
 import { message } from "antd";
 import OtpInput from "react-otp-input";
