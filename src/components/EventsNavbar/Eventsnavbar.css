@@ -10,6 +10,10 @@
     width: 100vw;
 }
 
+.event-nav-left{
+    width:90px;
+}
+
 .event-nav-right {
     display: flex;
     gap: 3vw;
