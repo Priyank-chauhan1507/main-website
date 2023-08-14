@@ -119,19 +119,20 @@ const EventMainPage = ({ events }) => {
               </span>
               <div className="events-left-event1">
                 <h1>{eventdata[id]?.name}</h1>
-                <span>({eventdata[id]?.solo_team})</span>
+                {eventdata[id]?.solo_team != null && (<span>({eventdata[id]?.solo_team})</span>)}
               </div>
               <p className="events-left-event2">{eventdata[id]?.description}</p>
               <div className="events-left-event3">
                 <span>Note:</span>
                 <p>{eventdata[id]?.note}</p>
               </div>
-              <div className="events-left-event4">
+              {eventdata[id]?.is_price == true &&
+              (<div className="events-left-event4">
                 <span>
                   Prize <br /> Worth:
                 </span>
                 <h1>{eventdata[id]?.price}</h1>
-              </div>
+              </div>)}
               <div className="events-left-event5">
                 <button
                   className="events-left-event5-btn1"
