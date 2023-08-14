@@ -16,7 +16,7 @@ const LeftSideProfile = ({ userDetails }) => {
         <div className="lsp-pic">
           <img className="lsp-img1" src={pic} alt="profilepic" />
           <span className="lsp-text1">
-            {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
+            <span>{userDetails?.name}</span> <span>{userDetails?.is_ca ? "(CA)" : ""}</span>
           </span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
         </div>

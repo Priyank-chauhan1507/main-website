@@ -14,7 +14,7 @@ import CollegeDetails from "./components/Registration/step1/collegeDetails";
 import RegPage from "./components/Registration/RegPage/RegPage";
 import Profilenavbar from "./components/Navbar/Profilenavbar";
 import Profile from "./components/Profile/Profile/Profile";
-import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";
+import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";  
 import EventMainPage from "./components/EventsPage/EventMainPage";
 import EventBox from "./components/Profile/EventBox/EventBox";
 import Paymentbox from "./components/Profile/PaymentBox/Paymentbox";
