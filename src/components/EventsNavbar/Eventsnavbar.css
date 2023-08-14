@@ -29,14 +29,13 @@
     font-family: Comic Sans MS;
     font-size: 20px;
     font-style: normal;
+    cursor: default;
     font-weight: 700;
     line-height: normal;
     text-decoration: none;
     padding: 8px;
 }
-.event-nav-right-compo:hover{
-    text-decoration: underline #F7B900 4px;
-}
+
 .event-regi-btn {
     color: #000;
     text-align: center;
@@ -92,7 +91,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: default;
     margin-left: 40px;
+
 }
 
 .col-yellow {
