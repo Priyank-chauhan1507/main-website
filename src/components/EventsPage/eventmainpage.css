@@ -210,6 +210,95 @@
   letter-spacing: 0.4px;
 }
 
+.events-left-event6 {
+  color: #FFF;
+  font-family: Comic Neue;
+  font-size: 33.486px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.67px;
+  margin-top: 15%;
+  padding-bottom: 2%;
+}
+
+.events-left-event7 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.events-left-event7 input {
+  display: flex;
+  width: 425.499px;
+  height: 37.848px;
+  padding: 11.259px 18.765px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.382px;
+  border-radius: 5.592px;
+  border: 1.398px solid #505050;
+  background: #FFF;
+  box-shadow: 1.3980079889297485px 2.796015977859497px 0px 0px #505050;
+  flex-shrink: 0;
+  color: #505050;
+  font-family: Comic Neue;
+  font-size: 16.057px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15.012px;
+  /* 93.493% */
+  flex: 1 0 0;
+}
+
+.events-left-event8 {
+  display: flex;
+  width: 149px;
+  height: 42px;
+  padding: 6.261px 47.403px;
+  justify-content: center;
+  align-items: center;
+  gap: 8.944px;
+  flex-shrink: 0;
+  border-radius: 7.155px;
+  border: 1.789px solid #111;
+  background: rgba(247, 185, 0, 0.60);
+  box-shadow: 1.7887980937957764px 3.5775961875915527px 0px 0px #111;
+  color: #FFF;
+  font-family: Sunny Sunday;
+  font-size: 25.043px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.events-left-event9 {
+  display: flex;
+  margin-bottom: 2%;
+  gap: 3%;
+}
+
+.events-left-event9 span {
+  color: #FFF;
+  font-family: Comic Sans MS;
+  font-size: 18.35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.35px;
+  /* 100% */
+  letter-spacing: -0.367px;
+}
+
+.events-left-event9 div {
+  gap: 20px;
+  display: flex;
+}
+.events-left-event9 input {
+  border-radius: 10vh;
+  width: 18.35px;
+  height: 18.35px;
+  flex-shrink: 0;}
+
 .bg-events {
   position: absolute;
   height: 90vh;
@@ -279,15 +368,18 @@
     /* 18px */
     letter-spacing: -0.24px;
   }
-  .events-left-event3{
+
+  .events-left-event3 {
     display: none;
   }
-  .events-left-event5{
+
+  .events-left-event5 {
     margin: 30px 0;
   }
+
   .events-left-event5 {
     gap: 15px;
-}
+  }
 }
 
 .event-photo1 {

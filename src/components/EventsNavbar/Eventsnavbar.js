@@ -5,7 +5,7 @@ import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 
-function Navbar({ color, disable }) {
+function Navbar({ color, disable, setregister, register }) {
   const [display1, setdisplay] = useState("none");
   const navigate = useNavigate();
   const handleLogout = () => {
@@ -14,11 +14,13 @@ function Navbar({ color, disable }) {
     localStorage.removeItem("user_id");
   };
 
-  const onHandleClick = (e) =>{
-    navigate(`/events/${e}`)
-    setdisplay("none")
-  }
-
+  const onHandleClick = (e) => {
+    navigate(`/events/${e}`);
+    setdisplay("none");
+    if (register) {
+      setregister(true);
+    }
+  };
 
   return (
     <div style={{ background: color }} className="nav-comp">
@@ -72,12 +74,54 @@ function Navbar({ color, disable }) {
                     <div className="col">Mimicry</div>
                     <div className="col">Monologue</div>
                     <div className="col col-yellow">Music</div>
-                    <div className="col" onClick={(e) => onHandleClick(2)}>Sargam (Solo)</div>
-                    <div className="col" onClick={(e) => onHandleClick(3)}>Sargam (Duet)</div>
-                    <div className="col" onClick={(e) => onHandleClick(1)}>Sargam (Team)</div>
-                    <div className="col" onClick={(e) => onHandleClick(4)} >Battle Of Bands</div>
-                    <div className="col" onClick={(e) => onHandleClick(5)} >Gully War</div>
-                    <div className="col" onClick={(e) => onHandleClick(6)} >War of DJ'S</div>
+                    <div
+                      className="col"
+                      onClick={(e) => {
+                        onHandleClick(2);
+                      }}
+                    >
+                      Sargam (Solo)
+                    </div>
+                    <div
+                      className="col"
+                      onClick={(e) => {
+                        onHandleClick(3);
+                      }}
+                    >
+                      Sargam (Duet)
+                    </div>
+                    <div
+                      className="col"
+                      onClick={(e) => {
+                        onHandleClick(1);
+                      }}
+                    >
+                      Sargam (Team)
+                    </div>
+                    <div
+                      className="col"
+                      onClick={(e) => {
+                        onHandleClick(4);
+                      }}
+                    >
+                      Battle Of Bands
+                    </div>
+                    <div
+                      className="col"
+                      onClick={(e) => {
+                        onHandleClick(5);
+                      }}
+                    >
+                      Gully War
+                    </div>
+                    <div
+                      className="col"
+                      onClick={(e) => {
+                        onHandleClick(6);
+                      }}
+                    >
+                      War of DJ'S
+                    </div>
                   </div>
                   <div className="drop-row">
                     <div className="col col-yellow">Gaming</div>
