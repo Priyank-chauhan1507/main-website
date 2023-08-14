@@ -94,16 +94,16 @@ export default function VerifyEmail() {
               renderSeparator={<span style={{ width: "8px" }}></span>}
               inputType={true}
               renderInput={(props) => <input {...props} />}
-            //   inputStyle={{
-            //     border: "1px solid black",
-            //     borderRadius: "8px",
-            //     width: "54px",
-            //     height: "54px",
-            //     fontSize: "12px",
-            //     color: "#000",
-            //     fontWeight: "400",
-            //     caretColor: "blue",
-            //   }}
+              inputStyle={{
+                border: "1px solid black",
+                borderRadius: "8px",
+                width: "54px",
+                height: "54px",
+                fontSize: "20px",
+                color: "#000",
+                fontWeight: "400",
+                caretColor: "blue",
+              }}
             />
           </div>
           {IsCorrectOtp === false && <div>Incorrect OTP</div>}
