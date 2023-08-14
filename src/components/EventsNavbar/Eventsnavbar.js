@@ -142,7 +142,7 @@ function Navbar({ color, disable }) {
                     {" "}
                     <div className="col col-yellow">MUN</div>
                     <div className="col">IITR-MUN</div>
-                    <div className="col">LITFest</div>
+                    <div className="col col-yellow">LITFest</div>
                     <div className="col">Hunger Games</div>
                     <div className="col">Sumo Wrestling</div>
                     <div className="col">Air Rifle Shooting</div>
