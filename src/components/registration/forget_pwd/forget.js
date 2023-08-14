@@ -7,7 +7,7 @@ import { message } from "antd";
 import logo from "../../../assests/reg-logo.svg";
 import mobilewp from "../../../assests/RegbackMobile.webp";
 
-function Forget() {
+function forget() {
   const [active, setActive] = useState(false);
   const validator = new SimpleReactValidator();
   const [email, setEmail] = useState();
@@ -96,4 +96,4 @@ function Forget() {
   );
 }
 
-export default Forget;
+export default forget;
