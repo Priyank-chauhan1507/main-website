@@ -47,7 +47,7 @@ function App(props) {
           <Route exact={true} path="/navbar" element={<Profilenavbar />} />
           <Route exact={true} path="/profile" element={<Profile />} />
           <Route exact={true} path="/eventsnavbar" element={<Eventsnavbar />} />
-          <Route exact={true} path="/events" element={<EventMainPage />} />
+          <Route exact={true} path="/events/:id" element={<EventMainPage />} />
 
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />

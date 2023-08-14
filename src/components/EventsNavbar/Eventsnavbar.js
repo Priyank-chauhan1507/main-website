@@ -13,6 +13,13 @@ function Navbar({ color, disable }) {
     localStorage.removeItem("token");
     localStorage.removeItem("user_id");
   };
+
+  const onHandleClick = (e) =>{
+    navigate(`/events/${e}`)
+    setdisplay("none")
+  }
+
+
   return (
     <div style={{ background: color }} className="nav-comp">
       <MobEventnavbar />
@@ -65,12 +72,12 @@ function Navbar({ color, disable }) {
                     <div className="col">Mimicry</div>
                     <div className="col">Monologue</div>
                     <div className="col col-yellow">Music</div>
-                    <div className="col">Sargam (Solo)</div>
-                    <div className="col">Sargam (Duet)</div>
-                    <div className="col">Sargam (Team)</div>
-                    <div className="col">Battle Of Bands</div>
-                    <div className="col">Gully War</div>
-                    <div className="col">War of DJ'S</div>
+                    <div className="col" onClick={(e) => onHandleClick(2)}>Sargam (Solo)</div>
+                    <div className="col" onClick={(e) => onHandleClick(3)}>Sargam (Duet)</div>
+                    <div className="col" onClick={(e) => onHandleClick(1)}>Sargam (Team)</div>
+                    <div className="col" onClick={(e) => onHandleClick(4)} >Battle Of Bands</div>
+                    <div className="col" onClick={(e) => onHandleClick(5)} >Gully War</div>
+                    <div className="col" onClick={(e) => onHandleClick(6)} >War of DJ'S</div>
                   </div>
                   <div className="drop-row">
                     <div className="col col-yellow">Gaming</div>

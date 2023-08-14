@@ -15,13 +15,46 @@ import bgmobile from "../../assests/bgmobile.webp";
 import bg from "../../assests/eventback.webp";
 import photo from "../../assests/events.png";
 import photo1 from "../../assests/street_soccer_1.png";
+import { useParams } from "react-router-dom";
+
 const EventMainPage = ({ events }) => {
+
+  const id = useParams()?.id;
+  // console.log(id, "id");
   const { dispatch } = Store;
   const [data, setData] = useState();
   const [category, setCategory] = useState();
-  const [eventdata, setEventData] = useState();
+  const [eventdata, setEventData] = useState({});
   const [categoryId, setCategoryId] = useState("");
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    loadUserData();
+  }, []);
+
+  const loadUserData = async () => {
+    try {
+      axios
+        .get(`/apiV1/event`)
+        .then((res) => {
+          setEventData(res.data);
+          localStorage.setItem("user_id", res.data?.user_id);
+          console.log("data", res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+          if (err?.response?.status == 401) {
+            if (localStorage.getItem("token")) {
+              localStorage.removeItem("token");
+              localStorage.removeItem("user_id");
+              window.location.pathname = "/";
+            }
+          }
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const getData = (category) => {
     if (category == "") {
@@ -48,6 +81,7 @@ const EventMainPage = ({ events }) => {
         });
     }
   };
+
   const getCategory = () => {
     axios.get(`/apiV1/category?status=true`).then((response) => {
       setCategory(response.data);
@@ -58,6 +92,7 @@ const EventMainPage = ({ events }) => {
     getData(categoryId);
     getCategory();
   }, []);
+
 
   const changeCategory = (category) => {
     setCategoryId(category);
@@ -78,33 +113,28 @@ const EventMainPage = ({ events }) => {
       <div className="events_back">
         <div className="events-left">
           <span className="events-left-event">
-            Events {">"} Choreo {">"} Footloose
+            Events {">"} {eventdata[id]?.category?.name} {">"} {eventdata[id]?.name}
           </span>
           <div className="events-left-event1">
-            <h1>Footloose</h1>
-            <span>Solo/team</span>
+            <h1>{eventdata[id]?.name}</h1>
+            <span>({eventdata[id]?.solo_team})</span>
           </div>
           <p className="events-left-event2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam est
-            nullam pretium euismod nulla maecenas egestas. Orci viverra felis,
-            suscipit non mollis odio duis. Eget ornare eget elit ut in enim
-            sapien ac. Facilisis aliquet duis ornare vitae venenatis eget in
-            elit a.
+          {eventdata[id]?.description}
           </p>
           <div className="events-left-event3">
             <span>Note:</span>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam est
-              nullam pretium euismod nulla maecenas egestas.
+            {eventdata[id]?.note}
             </p>
           </div>
           <div className="events-left-event4">
             <span>Prize <br/> Worth:</span>
-            <h1>25K</h1>
+            <h1>{eventdata[id]?.price}</h1>
           </div>
           <div className="events-left-event5">
             <button className="events-left-event5-btn1">REGISTER</button>
-            <button className="events-left-event5-btn2">RULEBOOK</button>
+            <a className="events-left-event5-btn2" href={`${eventdata[id]?.rulebook}`} target="_blank">RULEBOOK</a>
           </div>
         </div>
         <div className="events-right">

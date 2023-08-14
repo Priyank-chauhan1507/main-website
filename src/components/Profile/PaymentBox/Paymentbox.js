@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../Profile/Profile.css";
-import LeftSideProfile from "../LeftSideProfile/Leftsideprofile";
+import LeftSideProfile from "../LeftSideProfile/leftsideprofile";
 import "../LeftSideProfile/leftsideprofile.css";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
