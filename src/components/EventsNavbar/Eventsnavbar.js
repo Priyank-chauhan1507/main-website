@@ -546,8 +546,8 @@ function Navbar({ color, disable, setregister, register }) {
                       Silent DJ
                     </div>
                     <div className="col">Nightlife Cafe</div>
-                    <div className="col col-yellow">Movie Screening</div>
-                    <div className="col">New Events</div>
+                    <div className="col ">Movie Screening</div>
+                    <div className="col col-yellow">New Events</div>
                     <div className="col">Sneaker Design*</div>
                     <div className="col">Mimicry*</div>
                     <div className="col">Monologue*</div>

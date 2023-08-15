@@ -106,109 +106,113 @@ const EventMainPage = ({ events }) => {
   const [register, setregister] = useState(true);
   return (
     <>
-      <img src={bgmobile} alt="" className="bgmobile" />
-      <Navbar2 setregister={setregister} register="event" />
-      <img src={bg} alt="" className="bg-events" />
-      <div className="events_back">
-        <div className="events-left">
-          {register ? (
-            <>
-              <span className="events-left-event01">
-                Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
-                {eventdata[id]?.name}
-              </span>
-              <div className="events-left-event1">
-                <h1>{eventdata[id]?.name}</h1>
-                {eventdata[id]?.solo_team != null && (
-                  <span>({eventdata[id]?.solo_team})</span>
+      <div>
+        <img src={bgmobile} alt="" className="bgmobile" />
+        <Navbar2 setregister={setregister} register="event" />
+        <img src={bg} alt="" className="bg-events" />
+        <div className="events_back">
+          <div className="events-left">
+            {register ? (
+              <>
+                <span className="events-left-event01">
+                  Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
+                  {eventdata[id]?.name}
+                </span>
+                <div className="events-left-event1">
+                  <h1>{eventdata[id]?.name}</h1>
+                  {eventdata[id]?.solo_team != null && (
+                    <span>({eventdata[id]?.solo_team})</span>
+                  )}
+                </div>
+                <p className="events-left-event2">
+                  {eventdata[id]?.description}
+                </p>
+                <div className="events-left-event3">
+                  <span>Note:</span>
+                  <p>{eventdata[id]?.note}</p>
+                </div>
+                {eventdata[id]?.is_price == true && (
+                  <div className="events-left-event4">
+                    <span>
+                      Prize <br /> Worth:
+                    </span>
+                    <h1>{eventdata[id]?.price}</h1>
+                  </div>
                 )}
-              </div>
-              <p className="events-left-event2">{eventdata[id]?.description}</p>
-              <div className="events-left-event3">
-                <span>Note:</span>
-                <p>{eventdata[id]?.note}</p>
-              </div>
-              {eventdata[id]?.is_price == true && (
-                <div className="events-left-event4">
-                  <span>
-                    Prize <br /> Worth:
-                  </span>
-                  <h1>{eventdata[id]?.price}</h1>
+                <div className="events-left-event5">
+                  <button
+                    className="events-left-event5-btn1"
+                    onClick={() => {
+                      (eventdata[id]?.solo_team === "duet" ||
+                        eventdata[id]?.solo_team === "team") &&
+                        setregister(false);
+                    }}
+                  >
+                    REGISTER
+                  </button>
+                  <a
+                    className="events-left-event5-btn2"
+                    href={`${eventdata[id]?.rulebook}`}
+                    target="_blank"
+                  >
+                    RULEBOOK
+                  </a>
                 </div>
-              )}
-              <div className="events-left-event5">
-                <button
-                  className="events-left-event5-btn1"
+              </>
+            ) : id === "1" || id === "33" ? (
+              <div className="events-left1">
+                <img
+                  src={cross}
                   onClick={() => {
-                    (eventdata[id]?.solo_team === "duet" ||
-                      eventdata[id]?.solo_team === "team") &&
-                      setregister(false);
+                    setregister(true);
                   }}
-                >
-                  REGISTER
-                </button>
-                <a
-                  className="events-left-event5-btn2"
-                  href={`${eventdata[id]?.rulebook}`}
-                  target="_blank"
-                >
-                  RULEBOOK
-                </a>
+                  className="event-cross"
+                />
+                <h1 className="events-left-event6">Registration</h1>
+                <form className="events-left-event7">
+                  <div className="events-left-event9">
+                    {(eventdata[id]?.sub_event).split(",").map((el) => {
+                      return (
+                        <>
+                          <div>
+                            <span>{el}</span>
+                            <input type="checkbox" name={el} id={el} />
+                          </div>
+                        </>
+                      );
+                    })}
+                  </div>
+                  <input type="text" placeholder="Team Leader’s Name" />
+                  <input type="text" placeholder="Team Name" />
+                </form>
+                <button className="events-left-event8">Register</button>
               </div>
-            </>
-          ) : id === "1" || id === "33" ? (
-            <div className="events-left1">
-              <img
-                src={cross}
-                onClick={() => {
-                  setregister(true);
-                }}
-                className="event-cross"
-              />
-              <h1 className="events-left-event6">Registration</h1>
-              <form className="events-left-event7">
-                <div className="events-left-event9">
-                  {(eventdata[id]?.sub_event).split(",").map((el) => {
-                    return (
-                      <>
-                        <div>
-                          <span>{el}</span>
-                          <input type="checkbox" name={el} id={el} />
-                        </div>
-                      </>
-                    );
-                  })}
-                </div>
-                <input type="text" placeholder="Team Leader’s Name" />
-                <input type="text" placeholder="Team Name" />
-              </form>
-              <button className="events-left-event8">Register</button>
-            </div>
-          ) : (
-            <div className="events-left2">
-              <img
-                src={cross}
-                onClick={() => {
-                  setregister(true);
-                }}
-                className="event-cross"
-              />
-              <h1 className="events-left-event6">Registration</h1>
-              <form className="events-left-event7">
-                <input type="text" placeholder="Team Leader’s Name" />
-                <input type="text" placeholder="Team Name" />
-              </form>
-              <button className="events-left-event8">Register</button>
-            </div>
-          )}
-        </div>
-        <div className="events-right">
-          <span className="events-left-event">
-            Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
-            {eventdata[id]?.name}
-          </span>
-          <img src={photo} className="event-photo" alt="" />
-          <img src={photo1} className="event-photo1" alt="" />
+            ) : (
+              <div className="events-left2">
+                <img
+                  src={cross}
+                  onClick={() => {
+                    setregister(true);
+                  }}
+                  className="event-cross"
+                />
+                <h1 className="events-left-event6">Registration</h1>
+                <form className="events-left-event7">
+                  <input type="text" placeholder="Team Leader’s Name" />
+                  <input type="text" placeholder="Team Name" />
+                </form>
+                <button className="events-left-event8">Register</button>
+              </div>
+            )}
+          </div>
+          <div className="events-right">
+            <span className="events-left-event">
+              Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
+              {eventdata[id]?.name}
+            </span>
+            <img src={photo} className="event-photo" alt="" />
+            <img src={photo1} className="event-photo1" alt="" />
+          </div>
         </div>
       </div>
     </>
