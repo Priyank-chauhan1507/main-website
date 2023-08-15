@@ -229,6 +229,8 @@
 
     100% {
         right: 0vw;
-        backdrop-filter: blur(7px);
+        background: url(../../assests/bgmobile.webp);
+        background-size: cover;
+        background-position:center center;
     }
 }

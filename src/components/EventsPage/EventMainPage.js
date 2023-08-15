@@ -17,6 +17,9 @@ import photo from "../../assests/events.png";
 import photo1 from "../../assests/street_soccer_1.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { message } from "antd";
+import cross from "../../assests/cross.png";
+
+
 
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
@@ -177,31 +180,38 @@ const EventMainPage = ({ events }) => {
 
   return (
     <>
-      <img src={bgmobile} alt="" className="bgmobile" />
-      <Navbar2 setregister={setregister} register="event" />
-      <img src={bg} alt="" className="bg-events" />
-      <div className="events_back">
-        <div className="events-left">
-          {register ? (
-            <>
-              <span className="events-left-event">
-                Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
-                {eventdata[id]?.name}
-              </span>
-              <div className="events-left-event1">
-                <h1>{eventdata[id]?.name}</h1>
-                {eventdata[id]?.solo_team != null && (<span>({eventdata[id]?.solo_team})</span>)}
-              </div>
-              <p className="events-left-event2">{eventdata[id]?.description}</p>
-              <div className="events-left-event3">
-                <span>Note:</span>
-                <p>{eventdata[id]?.note}</p>
-              </div>
-              {eventdata[id]?.is_price == true &&
-              (<div className="events-left-event4">
-                <span>
-                  Prize <br /> Worth:
+      <div>
+        <img src={bgmobile} alt="" className="bgmobile" />
+        <Navbar2 setregister={setregister} register="event" />
+        <img src={bg} alt="" className="bg-events" />
+        <div className="events_back">
+          <div className="events-left">
+            {register ? (
+              <>
+                <span className="events-left-event01">
+                  Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
+                  {eventdata[id]?.name}
                 </span>
+
+                <div className="events-left-event1">
+                  <h1>{eventdata[id]?.name}</h1>
+                  {eventdata[id]?.solo_team != null && (
+                    <span>({eventdata[id]?.solo_team})</span>
+                  )}
+                </div>
+                <p className="events-left-event2">
+                  {eventdata[id]?.description}
+                </p>
+                <div className="events-left-event3">
+                  <span>Note:</span>
+                  <p>{eventdata[id]?.note}</p>
+                </div>
+                {eventdata[id]?.is_price == true && (
+                  <div className="events-left-event4">
+                    <span>
+                      Prize <br /> Worth:
+                    </span>
+
                 <h1>{eventdata[id]?.price}</h1>
               </div>)}
 
@@ -286,6 +296,7 @@ const EventMainPage = ({ events }) => {
         <div className="events-right">
           <img src={photo} className="event-photo" alt="" />
           <img src={photo1} className="event-photo1" alt="" />
+        </div>
         </div>
       </div>
     </>
