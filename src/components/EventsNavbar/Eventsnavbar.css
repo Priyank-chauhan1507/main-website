@@ -230,6 +230,7 @@
     100% {
         right: 0vw;
         background: url(../../assests/bgmobile.webp);
-        
+        background-size: cover;
+        background-position:center center;
     }
 }

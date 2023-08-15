@@ -391,7 +391,7 @@
   }
 
   .events-left-event5 {
-    margin: 16px 0;
+    margin: 10px 0;
   }
 
   .events-left-event5 {
@@ -492,6 +492,7 @@
     line-height: 150%;
     /* 18px */
     letter-spacing: -0.24px;
+    margin: 5px 0;
   }
 
   .events-left-event4 {
