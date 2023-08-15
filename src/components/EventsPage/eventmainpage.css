@@ -337,17 +337,21 @@
     flex-direction: column-reverse;
     align-items: center;
     width: 100vw;
-    height: 82vh;
+    height: 78vh;
     position: fixed;
-    margin-top: 5vh;
+    margin-top: 0vh;
   }
 
   .events-left {
     width: 100vw;
+    height: 55%;
   }
 
   .events-right {
     width: 80vw;
+    height: 50%;
+    justify-content: flex-start;
+
   }
 
   .event-photo {
@@ -387,7 +391,7 @@
   }
 
   .events-left-event5 {
-    margin: 30px 0;
+    margin: 16px 0;
   }
 
   .events-left-event5 {
@@ -463,8 +467,58 @@
     width: 100%;
     margin: 3vh 0;
   }
+
   .events-left-event1 {
-    margin: 20px 0;
+    margin: 30px 0 0 0;
+  }
+
+  .events-left-event1 h1 {
+    color: #FFF;
+    font-family: Rowdies;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 40px */
+    letter-spacing: -0.8px;
+  }
+
+  .events-left-event2 {
+    color: #FFF;
+    font-family: Comic Sans MS;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 18px */
+    letter-spacing: -0.24px;
+  }
+
+  .events-left-event4 {
+ 
+    margin: 4px 0;
+  }
+
+  .events-left-event4 h1 {
+    color: #FFF;
+    font-family: Rowdies;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    /* 110% */
+    letter-spacing: -0.8px;
+  }
+
+  .events-left-event4 span {
+    color: #FFF;
+    font-family: Comic Sans MS;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 125% */
+    letter-spacing: -0.32px;
   }
 }
 
