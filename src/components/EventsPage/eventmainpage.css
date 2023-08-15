@@ -45,7 +45,8 @@
   margin-right: 2px;
 }
 
-.events-left-event {
+
+.events-left-event01 {
   color: #FFF;
   font-family: Comic Sans MS;
   font-size: 12px;
@@ -251,11 +252,18 @@
   flex: 1 0 0;
 }
 
+.events-left-event6 {
+  padding-bottom: 30px;
+}
+
 .events-left-event8 {
   display: flex;
   width: 149px;
   height: 42px;
   padding: 6.261px 47.403px;
+
+  margin-top: 40px;
+
   justify-content: center;
   align-items: center;
   gap: 8.944px;
@@ -293,11 +301,14 @@
   gap: 20px;
   display: flex;
 }
+
 .events-left-event9 input {
   border-radius: 10vh;
   width: 18.35px;
   height: 18.35px;
-  flex-shrink: 0;}
+  flex-shrink: 0;
+}
+
 
 .bg-events {
   position: absolute;
@@ -310,6 +321,7 @@
   /* border: 1px solid rgba(255, 255, 255, 0.60); */
 
 }
+
 
 .nav-events {
   height: 3px;
@@ -325,8 +337,9 @@
     flex-direction: column-reverse;
     align-items: center;
     width: 100vw;
-    height: 83vh;
+    height: 82vh;
     position: fixed;
+    margin-top: 5vh;
   }
 
   .events-left {
@@ -380,6 +393,89 @@
   .events-left-event5 {
     gap: 15px;
   }
+
+  .events-left-event9 span {
+    font-size: 4vw;
+    width: 330px;
+  }
+
+  .events-left-event9 div {
+    flex-direction: row-reverse;
+    width: 66%;
+  }
+
+  .events-left-event9 {
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 10px;
+  }
+
+  .events-left1 {
+    margin-bottom: 1.5vh;
+  }
+
+  .events-left2 {
+    margin-bottom: 16vh;
+  }
+
+  .events-left1 input {
+    width: 88vw;
+  }
+
+  .events-left2 input {
+    width: 88vw;
+  }
+
+  .events-left-event6 {
+    padding-bottom: 20px;
+  }
+
+  .events-left-event6 {
+    margin-top: 3%;
+  }
+
+  .event-cross {
+    position: relative;
+    top: 5.5vh !important;
+    left: 80vw !important;
+    width: 6vw;
+  }
+
+  .events-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events-left-event01 {
+    display: none !important;
+  }
+
+  .events-left-event {
+    display: block !important;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    /* 133.333% */
+    letter-spacing: -0.24px;
+    width: 100%;
+    margin: 3vh 0;
+  }
+  .events-left-event1 {
+    margin: 20px 0;
+  }
+}
+
+.events-left-event {
+  display: none;
+}
+
+.event-cross {
+  position: relative;
+  top: 14vh;
+  left: 436px;
 }
 
 .event-photo1 {
