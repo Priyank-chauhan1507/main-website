@@ -337,14 +337,15 @@
     flex-direction: column-reverse;
     align-items: center;
     width: 100vw;
-    height: 78vh;
+    height: 90vh;
     position: fixed;
-    margin-top: 0vh;
+    margin-top: -2vh;
   }
 
   .events-left {
     width: 100vw;
     height: 55%;
+    gap: 11px;
   }
 
   .events-right {
@@ -469,7 +470,7 @@
   }
 
   .events-left-event1 {
-    margin: 30px 0 0 0;
+    margin: 0px 0 0 0;
   }
 
   .events-left-event1 h1 {
@@ -492,11 +493,11 @@
     line-height: 150%;
     /* 18px */
     letter-spacing: -0.24px;
-    margin: 5px 0;
+    margin: 0px 0;
   }
 
   .events-left-event4 {
- 
+
     margin: 0px 0;
   }
 
