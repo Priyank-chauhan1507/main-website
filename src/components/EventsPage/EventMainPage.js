@@ -15,17 +15,65 @@ import bgmobile from "../../assests/bgmobile.webp";
 import bg from "../../assests/eventback.webp";
 import photo from "../../assests/events.png";
 import photo1 from "../../assests/street_soccer_1.png";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { message } from "antd";
 
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
+  const navigate = useNavigate();
   // console.log(id, "id");
   const { dispatch } = Store;
-  const [data, setData] = useState();
-  const [category, setCategory] = useState();
+  // const [data, setData] = useState();
+  // const [category, setCategory] = useState();
+  // const [categoryId, setCategoryId] = useState("");
+  // const [search, setSearch] = useState("");
   const [eventdata, setEventData] = useState({});
-  const [categoryId, setCategoryId] = useState("");
-  const [search, setSearch] = useState("");
+  const [register, setregister] = useState(true);
+  const [registerData, setregisterData] = useState({
+    team_leader_name:"",
+    team_name: "",
+    sub_event_name:"",
+});
+
+  console.log(registerData.sub_event_name, "sfsfd");
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if(!localStorage.getItem('token')){
+      navigate("/login");
+    }else{
+      const eventuser = {
+        event: eventdata[id]?.id,
+        participant: localStorage.getItem('id'),
+        team_leader_name: registerData.team_leader_name,
+        team_name: registerData.team_name,
+        sub_event_name: registerData.sub_event_name
+      };
+      axios
+        .post("/apiV1/registerevent", eventuser)
+        .then((res) => {
+          if (res.status == 201) {
+            console.log(res.data, "api data");
+            message.success(`🎉You are registerd successfully for ${eventdata[id]?.name}`)
+            setregister(true)
+            // if (button == "Register") {
+            //   setButton("Registered");
+            // }
+            // if (this.props.data.is_submission) {
+            //   this.setState({ button: "Submit" });
+            // } else {
+            //   this.setState({ button: "Not Now" });
+            // }
+            // fetchEvent();
+            // this.fetchData();
+            // history.push("/pevents");
+          }
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+        });
+    }
+
+  };
 
   useEffect(() => {
     loadUserData();
@@ -55,55 +103,78 @@ const EventMainPage = ({ events }) => {
     }
   };
 
-  const getData = (category) => {
-    if (category == "") {
-      category = 0;
+  const handleChange = (e) =>{
+    setregisterData({ ...registerData, [e.target.name]: e.target.value });
+  }
+
+  const onChangeSubEvent = (e) =>{
+    const { value, checked } = e.target;
+    console.log(value, " sadasd ", checked);
+    if(checked){
+      // setUser({ ...user, gender: gender?.value });
+      setregisterData({...registerData, sub_event_name: value});
     }
-    if (events[category]) {
-      setData(events[category]);
-    } else {
-      axios
-        .get(
-          `/apiV1/event?id=&category=${
-            category === 0 ? "" : category
-          }&status=true&is_zonal=`
-        )
-        .then((response) => {
-          setData(response.data);
-          dispatch({
-            type: "SET_EVENTS",
-            payload: {
-              ...events,
-              [category]: response.data,
-            },
-          });
-        });
+  }
+
+  const handleClick = (e) =>{
+    if(eventdata[id]?.solo_team === "duet" || eventdata[id]?.solo_team === "team"){
+      setregister(false);
+    }else{
+      onSubmit(e);
     }
-  };
+  }
 
-  const getCategory = () => {
-    axios.get(`/apiV1/category?status=true`).then((response) => {
-      setCategory(response.data);
-      // console.log("data",response.data);
-    });
-  };
-  useEffect(() => {
-    getData(categoryId);
-    getCategory();
-    setregister(true);
-  }, []);
 
-  const changeCategory = (category) => {
-    setCategoryId(category);
-    getData(category);
-  };
 
-  const checkSearch = (pName) => {
-    const regExp = new RegExp(escapeRegex(search), "i");
-    return regExp.test(pName);
-  };
-  console.log(eventdata[id]);
-  const [register, setregister] = useState(true);
+  // const getData = (category) => {
+  //   if (category == "") {
+  //     category = 0;
+  //   }
+  //   if (events[category]) {
+  //     setData(events[category]);
+  //   } else {
+  //     axios
+  //       .get(
+  //         `/apiV1/event?id=&category=${
+  //           category === 0 ? "" : category
+  //         }&status=true&is_zonal=`
+  //       )
+  //       .then((response) => {
+  //         setData(response.data);
+  //         dispatch({
+  //           type: "SET_EVENTS",
+  //           payload: {
+  //             ...events,
+  //             [category]: response.data,
+  //           },
+  //         });
+  //       });
+  //   }
+  // };
+
+  // const getCategory = () => {
+  //   axios.get(`/apiV1/category?status=true`).then((response) => {
+  //     setCategory(response.data);
+  //     // console.log("data",response.data);
+  //   });
+  // };
+  // useEffect(() => {
+  //   getData(categoryId);
+  //   getCategory();
+  //   setregister(true);
+  // }, []);
+
+  // const changeCategory = (category) => {
+  //   setCategoryId(category);
+  //   getData(category);
+  // };
+
+  // const checkSearch = (pName) => {
+  //   const regExp = new RegExp(escapeRegex(search), "i");
+  //   return regExp.test(pName);
+  // };
+  // console.log(eventdata[id]);
+
   return (
     <>
       <img src={bgmobile} alt="" className="bgmobile" />
@@ -133,14 +204,29 @@ const EventMainPage = ({ events }) => {
                 </span>
                 <h1>{eventdata[id]?.price}</h1>
               </div>)}
+
+              {(eventdata[id]?.solo_team) === "Solo" && eventdata[id]?.sub_event && (eventdata[id]?.sub_event).split(",").map((el, index) => {
+                    return (
+                      <>
+                        <div key={index}>
+                          <input
+                          type="checkbox"
+                          id={el}
+                          value = {el}
+                          onChange={onChangeSubEvent}
+                          checked={el === registerData.sub_event_name}
+                          // required
+                          />
+                          <label htmlFor={el} style={{color:"white"}}>{el}</label>
+                        </div>
+                      </>
+                    );
+                  })}
+
               <div className="events-left-event5">
                 <button
                   className="events-left-event5-btn1"
-                  onClick={() => {
-                    (eventdata[id]?.solo_team === "duet" ||
-                      eventdata[id]?.solo_team === "team") &&
-                      setregister(false);
-                  }}
+                  onClick = {(e) => handleClick(e)}
                 >
                   REGISTER
                 </button>
@@ -153,37 +239,49 @@ const EventMainPage = ({ events }) => {
                 </a>
               </div>
             </>
-          ) : id === "1" || id === "33" ? (
+          ) : (
             <>
               <h1 className="events-left-event6">Registration</h1>
-              <form className="events-left-event7">
+              <form className="events-left-event7" onSubmit={(e) => onSubmit(e)}>
                 <div className="events-left-event9">
-                  {(eventdata[id]?.sub_event).split(",").map((el) => {
+                  {eventdata[id]?.sub_event && (eventdata[id]?.sub_event).split(",").map((el, index) => {
                     return (
                       <>
-                        <div>
-                          <span>{el}</span>
-                          <input type="checkbox" name={el} id={el} />
+                        <div key={index}>
+                          <input
+                          type="checkbox"
+                          id={el}
+                          value = {el}
+                          onChange={onChangeSubEvent}
+                          checked={el === registerData.sub_event_name}
+                          // required
+                          />
+                          <label htmlFor={el} style={{color:"white"}}>{el}</label>
                         </div>
                       </>
                     );
                   })}
                 </div>
-                <input type="text" placeholder="Team Leader’s Name" />
-                <input type="text" placeholder="Team Name" />
+                <input
+                type="text"
+                placeholder="Team Leader’s Name"
+                name = 'team_leader_name'
+                value = {registerData.team_leader_name}
+                onChange={(e) => handleChange(e)}
+                required
+                />
+                <input
+                type="text"
+                placeholder="Team Name"
+                name = 'team_name'
+                value = {registerData.team_name}
+                onChange={(e) => handleChange(e)}
+                required
+                />
+              <button className="events-left-event8" type='submit'>Register</button>
               </form>
-              <button className="events-left-event8">Register</button>
             </>
-          ) : (
-            <>
-              <h1 className="events-left-event6">Registration</h1>
-              <form className="events-left-event7">
-                <input type="text" placeholder="Team Leader’s Name" />
-                <input type="text" placeholder="Team Name" />
-              </form>
-              <button className="events-left-event8">Register</button>
-            </>
-          )}
+            )}
         </div>
         <div className="events-right">
           <img src={photo} className="event-photo" alt="" />

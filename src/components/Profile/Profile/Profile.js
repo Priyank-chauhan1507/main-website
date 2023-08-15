@@ -31,6 +31,7 @@ const Profile = ({ userDetails }) => {
         .then((res) => {
           setuser(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
+          localStorage.setItem("id", res.data?.id);
           console.log("data", res.data);
         })
         .catch((err) => {
