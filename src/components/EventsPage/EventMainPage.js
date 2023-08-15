@@ -215,7 +215,7 @@ const EventMainPage = ({ events }) => {
                 <h1>{eventdata[id]?.price}</h1>
               </div>)}
 
-              {(eventdata[id]?.solo_team) === "Solo" && eventdata[id]?.sub_event && (eventdata[id]?.sub_event).split(",").map((el, index) => {
+              {(eventdata[id]?.solo_team) === "solo" && eventdata[id]?.sub_event && (eventdata[id]?.sub_event).split(",").map((el, index) => {
                     return (
                       <>
                         <div key={index}>

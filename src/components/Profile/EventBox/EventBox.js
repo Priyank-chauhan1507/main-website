@@ -16,16 +16,37 @@ import icon2 from "../../../assests/event_black.png";
 import icon3 from "../../../assests/payment.svg";
 import line from "../../../assests/line1.svg";
 import eventcenterpic from "../../../assests/eventpic.webp";
+import axios from "axios";
 
 const EventBox = ({ userDetails }) => {
   const navigate = useNavigate();
   const [display1, setdisplay] = useState(false);
   const [disable, setdisable] = useState("notdisable");
+  const [events, setEvents] = useState();
+
+  useEffect(() => {
+    getEvents();
+  }, []);
+
+  const getEvents = async () => {
+    const res = axios
+      .get(`/apiV1/registerusereventdetailed?participant_id=${localStorage.getItem('id')}`)
+      .then((res) => {
+        console.log(res.data);
+        setEvents(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+
   useEffect(() => {
     if (!userDetails?.id) {
       // navigate.push("/login");
     }
   }, []);
+  
   const locator = useLocation();
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
