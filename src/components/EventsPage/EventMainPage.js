@@ -16,7 +16,7 @@ import bg from "../../assests/eventback.webp";
 import photo from "../../assests/events.png";
 import photo1 from "../../assests/street_soccer_1.png";
 import { useParams } from "react-router-dom";
-
+import cross from "../../assests/cross.png";
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
   // console.log(id, "id");
@@ -113,26 +113,29 @@ const EventMainPage = ({ events }) => {
         <div className="events-left">
           {register ? (
             <>
-              <span className="events-left-event">
+              <span className="events-left-event01">
                 Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
                 {eventdata[id]?.name}
               </span>
               <div className="events-left-event1">
                 <h1>{eventdata[id]?.name}</h1>
-                {eventdata[id]?.solo_team != null && (<span>({eventdata[id]?.solo_team})</span>)}
+                {eventdata[id]?.solo_team != null && (
+                  <span>({eventdata[id]?.solo_team})</span>
+                )}
               </div>
               <p className="events-left-event2">{eventdata[id]?.description}</p>
               <div className="events-left-event3">
                 <span>Note:</span>
                 <p>{eventdata[id]?.note}</p>
               </div>
-              {eventdata[id]?.is_price == true &&
-              (<div className="events-left-event4">
-                <span>
-                  Prize <br /> Worth:
-                </span>
-                <h1>{eventdata[id]?.price}</h1>
-              </div>)}
+              {eventdata[id]?.is_price == true && (
+                <div className="events-left-event4">
+                  <span>
+                    Prize <br /> Worth:
+                  </span>
+                  <h1>{eventdata[id]?.price}</h1>
+                </div>
+              )}
               <div className="events-left-event5">
                 <button
                   className="events-left-event5-btn1"
@@ -154,7 +157,14 @@ const EventMainPage = ({ events }) => {
               </div>
             </>
           ) : id === "1" || id === "33" ? (
-            <>
+            <div className="events-left1">
+              <img
+                src={cross}
+                onClick={() => {
+                  setregister(true);
+                }}
+                className="event-cross"
+              />
               <h1 className="events-left-event6">Registration</h1>
               <form className="events-left-event7">
                 <div className="events-left-event9">
@@ -173,19 +183,30 @@ const EventMainPage = ({ events }) => {
                 <input type="text" placeholder="Team Name" />
               </form>
               <button className="events-left-event8">Register</button>
-            </>
+            </div>
           ) : (
-            <>
+            <div className="events-left2">
+              <img
+                src={cross}
+                onClick={() => {
+                  setregister(true);
+                }}
+                className="event-cross"
+              />
               <h1 className="events-left-event6">Registration</h1>
               <form className="events-left-event7">
                 <input type="text" placeholder="Team Leader’s Name" />
                 <input type="text" placeholder="Team Name" />
               </form>
               <button className="events-left-event8">Register</button>
-            </>
+            </div>
           )}
         </div>
         <div className="events-right">
+          <span className="events-left-event">
+            Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
+            {eventdata[id]?.name}
+          </span>
           <img src={photo} className="event-photo" alt="" />
           <img src={photo1} className="event-photo1" alt="" />
         </div>
