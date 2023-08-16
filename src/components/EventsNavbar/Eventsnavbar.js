@@ -72,7 +72,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(7);
+                        onHandleClick(4);
                       }}
                     >
                       Abhivyakti
@@ -84,7 +84,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(2);
+                        onHandleClick(11);
                       }}
                     >
                       Sargam (Solo)
@@ -92,7 +92,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(3);
+                        onHandleClick(2);
                       }}
                     >
                       Sargam (Duet)
@@ -108,7 +108,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(4);
+                        onHandleClick(3);
                       }}
                     >
                       Battle Of Bands
@@ -116,7 +116,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(5);
+                        onHandleClick(10);
                       }}
                     >
                       Gully War
@@ -124,7 +124,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(6);
+                        onHandleClick(9);
                       }}
                     >
                       War of DJ'S
@@ -135,7 +135,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(51);
+                        onHandleClick(54);
                       }}
                     >
                       Apocalypse
@@ -151,7 +151,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(56);
+                        onHandleClick(29);
                       }}
                     >
                       Snooker's Elite
@@ -160,7 +160,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(38);
+                        onHandleClick(36);
                       }}
                     >
                       Food Fiesta
@@ -169,7 +169,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(33);
+                        onHandleClick(76);
                       }}
                     >
                       Footloose (Solo)
@@ -177,7 +177,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(31);
+                        onHandleClick(77);
                       }}
                     >
                       Footloose (Duet)
@@ -185,7 +185,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(32);
+                        onHandleClick(75);
                       }}
                     >
                       Footloose (Team)
@@ -193,7 +193,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(48);
+                        onHandleClick(55);
                       }}
                     >
                       Step up (Solo)
@@ -201,7 +201,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(45);
+                        onHandleClick(41);
                       }}
                     >
                       Step up (Team)
@@ -212,7 +212,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(74);
+                        onHandleClick(29);
                       }}
                     >
                       Campus Princess
@@ -239,7 +239,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(18);
+                        onHandleClick(17);
                       }}
                     >
                       Thomso's Got Talent(Team)
@@ -247,7 +247,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(21);
+                        onHandleClick(20);
                       }}
                     >
                       Open MIC
@@ -255,7 +255,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(68);
+                        onHandleClick(71);
                       }}
                     >
                       The Dank Knight
@@ -264,7 +264,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(15);
+                        onHandleClick(14);
                       }}
                     >
                       16 Frames
@@ -272,7 +272,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(16);
+                        onHandleClick(15);
                       }}
                     >
                       Box Office
@@ -284,7 +284,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(62);
+                        onHandleClick(64);
                       }}
                     >
                       Art Talkies
@@ -292,7 +292,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(63);
+                        onHandleClick(58);
                       }}
                     >
                       Naqaab
@@ -300,7 +300,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(64);
+                        onHandleClick(65);
                       }}
                     >
                       Paint Fiesta
@@ -308,7 +308,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(65);
+                        onHandleClick(59);
                       }}
                     >
                       Costume Design
@@ -316,7 +316,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(66);
+                        onHandleClick(60);
                       }}
                     >
                       Relay Rangoli
@@ -324,7 +324,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(67);
+                        onHandleClick(72);
                       }}
                     >
                       Live Sketching
@@ -334,7 +334,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(57);
+                        onHandleClick(73);
                       }}
                     >
                       Seiger
@@ -342,7 +342,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(58);
+                        onHandleClick(51);
                       }}
                     >
                       Treasure Hunt
@@ -350,7 +350,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(60);
+                        onHandleClick(56);
                       }}
                     >
                       Street Soccer
@@ -358,7 +358,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(61);
+                        onHandleClick(57);
                       }}
                     >
                       Scavenger Hunt
@@ -369,7 +369,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(17);
+                        onHandleClick(22);
                       }}
                     >
                       Literati
@@ -377,7 +377,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(20);
+                        onHandleClick(18);
                       }}
                     >
                       Pictionary
@@ -385,7 +385,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(22);
+                        onHandleClick(19);
                       }}
                     >
                       Spin a Yarn
@@ -393,7 +393,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(25);
+                        onHandleClick(34);
                       }}
                     >
                       Big Ideas
@@ -401,7 +401,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(28);
+                        onHandleClick(33);
                       }}
                     >
                       Desi Twist
@@ -409,7 +409,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(29);
+                        onHandleClick(32);
                       }}
                     >
                       Nerdy-Bate
@@ -417,7 +417,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(30);
+                        onHandleClick(27);
                       }}
                     >
                       Slam Poetry
@@ -442,7 +442,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(26);
+                        onHandleClick(23);
                       }}
                     >
                       Mark Sense
@@ -450,7 +450,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(27);
+                        onHandleClick(26);
                       }}
                     >
                       A(d)esign
@@ -462,7 +462,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(35);
+                        onHandleClick(28);
                       }}
                     >
                       IITR-MUN
@@ -471,7 +471,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(42);
+                        onHandleClick(38);
                       }}
                     >
                       Hunger Games
@@ -479,7 +479,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(43);
+                        onHandleClick(39);
                       }}
                     >
                       Sumo Wrestling
@@ -487,7 +487,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(44);
+                        onHandleClick(40);
                       }}
                     >
                       Air Rifle Shooting
@@ -495,7 +495,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(49);
+                        onHandleClick(46);
                       }}
                     >
                       Caricature
@@ -503,7 +503,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(50);
+                        onHandleClick(47);
                       }}
                     >
                       Body Zorbing
@@ -511,7 +511,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(52);
+                        onHandleClick(48);
                       }}
                     >
                       Human Foosball
@@ -519,7 +519,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(54);
+                        onHandleClick(49);
                       }}
                     >
                       The Boulevard Games
@@ -527,7 +527,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(55);
+                        onHandleClick(50);
                       }}
                     >
                       Tattoo Artist
@@ -540,7 +540,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col"
                       onClick={(e) => {
-                        onHandleClick(11);
+                        onHandleClick(12);
                       }}
                     >
                       Silent DJ
