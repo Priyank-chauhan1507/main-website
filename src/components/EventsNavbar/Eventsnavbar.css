@@ -73,7 +73,7 @@
     top: 9vh;
     right: 10vw;
     height: auto;
-    z-index: 7;
+    z-index: 11;
     display: flex;
     padding: 0 10px 30px 10px;
     justify-content: space-evenly;
