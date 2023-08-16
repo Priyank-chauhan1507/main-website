@@ -19,8 +19,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { message } from "antd";
 import cross from "../../assests/cross.png";
 
-
-
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
   const navigate = useNavigate();
@@ -33,31 +31,34 @@ const EventMainPage = ({ events }) => {
   const [eventdata, setEventData] = useState({});
   const [register, setregister] = useState(true);
   const [registerData, setregisterData] = useState({
-    team_leader_name:"",
+    team_leader_name: "",
     team_name: "",
-    sub_event_name:"",
-});
-
+    sub_event_name: "",
+  });
+  const [loading, setLoading] = useState(false);
   console.log(registerData.sub_event_name, "sfsfd");
   const onSubmit = (e) => {
     e.preventDefault();
-    if(!localStorage.getItem('token')){
+    if (!localStorage.getItem("token")) {
       navigate("/login");
-    }else{
+    } else {
+      setLoading(true)
       const eventuser = {
         event: eventdata[id]?.id,
-        participant: localStorage.getItem('id'),
+        participant: localStorage.getItem("id"),
         team_leader_name: registerData.team_leader_name,
         team_name: registerData.team_name,
-        sub_event_name: registerData.sub_event_name
+        sub_event_name: registerData.sub_event_name,
       };
       axios
         .post("/apiV1/registerevent", eventuser)
         .then((res) => {
           if (res.status == 201) {
             console.log(res.data, "api data");
-            message.success(`🎉You are registerd successfully for ${eventdata[id]?.name}`)
-            setregister(true)
+            message.success(
+              `🎉You are registerd successfully for ${eventdata[id]?.name}`
+            );
+            setregister(true);
             // if (button == "Register") {
             //   setButton("Registered");
             // }
@@ -70,12 +71,12 @@ const EventMainPage = ({ events }) => {
             // this.fetchData();
             // history.push("/pevents");
           }
+          setLoading(false);
         })
         .catch((err) => {
           console.log(err.response.data);
         });
     }
-
   };
 
   useEffect(() => {
@@ -106,29 +107,29 @@ const EventMainPage = ({ events }) => {
     }
   };
 
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     setregisterData({ ...registerData, [e.target.name]: e.target.value });
-  }
+  };
 
-  const onChangeSubEvent = (e) =>{
+  const onChangeSubEvent = (e) => {
     const { value, checked } = e.target;
     console.log(value, " sadasd ", checked);
-    if(checked){
+    if (checked) {
       // setUser({ ...user, gender: gender?.value });
-      setregisterData({...registerData, sub_event_name: value});
+      setregisterData({ ...registerData, sub_event_name: value });
     }
-  }
+  };
 
-  const handleClick = (e) =>{
-    if(eventdata[id]?.solo_team === "duet" || eventdata[id]?.solo_team === "team"){
+  const handleClick = (e) => {
+    if (
+      eventdata[id]?.solo_team === "duet" ||
+      eventdata[id]?.solo_team === "team"
+    ) {
       setregister(false);
-    }else{
+    } else {
       onSubmit(e);
     }
-  }
-
-
-
+  };
   // const getData = (category) => {
   //   if (category == "") {
   //     category = 0;
@@ -212,91 +213,103 @@ const EventMainPage = ({ events }) => {
                       Prize <br /> Worth:
                     </span>
 
-                <h1>{eventdata[id]?.price}</h1>
-              </div>)}
-
-              {(eventdata[id]?.solo_team) === "solo" && eventdata[id]?.sub_event && (eventdata[id]?.sub_event).split(",").map((el, index) => {
+                    <h1>{eventdata[id]?.price}</h1>
+                  </div>
+                )}
+                {eventdata[id]?.solo_team === "solo" &&
+                  eventdata[id]?.sub_event &&
+                  (eventdata[id]?.sub_event).split(",").map((el, index) => {
                     return (
                       <>
                         <div key={index}>
                           <input
-                          type="checkbox"
-                          id={el}
-                          value = {el}
-                          onChange={onChangeSubEvent}
-                          checked={el === registerData.sub_event_name}
-                          // required
+                            type="checkbox"
+                            id={el}
+                            value={el}
+                            onChange={onChangeSubEvent}
+                            checked={el === registerData.sub_event_name}
+                            // required
                           />
-                          <label htmlFor={el} style={{color:"white"}}>{el}</label>
+                          <label htmlFor={el} style={{ color: "white" }}>
+                            {el}
+                          </label>
                         </div>
                       </>
                     );
                   })}
 
-              <div className="events-left-event5">
-                <button
-                  className="events-left-event5-btn1"
-                  onClick = {(e) => handleClick(e)}
-                >
-                  REGISTER
-                </button>
-                <a
-                  className="events-left-event5-btn2"
-                  href={`${eventdata[id]?.rulebook}`}
-                  target="_blank"
-                >
-                  RULEBOOK
-                </a>
-              </div>
-            </>
-          ) : (
-            <>
-              <h1 className="events-left-event6">Registration</h1>
-              <form className="events-left-event7" onSubmit={(e) => onSubmit(e)}>
-                <div className="events-left-event9">
-                  {eventdata[id]?.sub_event && (eventdata[id]?.sub_event).split(",").map((el, index) => {
-                    return (
-                      <>
-                        <div key={index}>
-                          <input
-                          type="checkbox"
-                          id={el}
-                          value = {el}
-                          onChange={onChangeSubEvent}
-                          checked={el === registerData.sub_event_name}
-                          // required
-                          />
-                          <label htmlFor={el} style={{color:"white"}}>{el}</label>
-                        </div>
-                      </>
-                    );
-                  })}
+                <div className="events-left-event5">
+                  <button
+                    className="events-left-event5-btn1"
+                    onClick={(e) => handleClick(e)}
+                  >
+                    {loading?(<>REGISTERING...</>):(<>REGISTER</>)}
+                  </button>
+                  <a
+                    className="events-left-event5-btn2"
+                    href={`${eventdata[id]?.rulebook}`}
+                    target="_blank"
+                  >
+                    RULEBOOK
+                  </a>
                 </div>
-                <input
-                type="text"
-                placeholder="Team Leader’s Name"
-                name = 'team_leader_name'
-                value = {registerData.team_leader_name}
-                onChange={(e) => handleChange(e)}
-                required
-                />
-                <input
-                type="text"
-                placeholder="Team Name"
-                name = 'team_name'
-                value = {registerData.team_name}
-                onChange={(e) => handleChange(e)}
-                required
-                />
-              <button className="events-left-event8" type='submit'>Register</button>
-              </form>
-            </>
+              </>
+            ) : (
+              <>
+                <h1 className="events-left-event6">Registration</h1>
+                <form
+                  className="events-left-event7"
+                  onSubmit={(e) => onSubmit(e)}
+                >
+                  <div className="events-left-event9">
+                    {eventdata[id]?.sub_event &&
+                      (eventdata[id]?.sub_event).split(",").map((el, index) => {
+                        return (
+                          <>
+                            <div key={index}>
+                              <input
+                                type="checkbox"
+                                id={el}
+                                value={el}
+                                onChange={onChangeSubEvent}
+                                checked={el === registerData.sub_event_name}
+                                // required
+                              />
+                              <label htmlFor={el} style={{ color: "white" }}>
+                                {el}
+                              </label>
+                            </div>
+                          </>
+                        );
+                      })}
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Team Leader’s Name"
+                    name="team_leader_name"
+                    value={registerData.team_leader_name}
+                    onChange={(e) => handleChange(e)}
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Team Name"
+                    name="team_name"
+                    value={registerData.team_name}
+                    onChange={(e) => handleChange(e)}
+                    required
+                  />
+                  <button className="events-left-event8" type="submit">
+                  {loading?(<>REGISTERING...</>):(<>REGISTER</>)}
+                  </button>
+                </form>
+              </>
             )}
-        </div>
-        <div className="events-right">
-          <img src={photo} className="event-photo" alt="" />
-          <img src={photo1} className="event-photo1" alt="" />
-        </div>
+          </div>
+          <div className="events-right">
+            <img src={photo} className="event-photo" alt="" />
+            <img src={photo1} className="event-photo1" alt="" />
+          </div>
         </div>
       </div>
     </>

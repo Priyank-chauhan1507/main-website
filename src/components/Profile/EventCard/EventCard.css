@@ -1,0 +1,96 @@
+.eventcard {
+    height: 31vh;
+    width: 24vh;
+    background: url(../../../assests/footloose.png);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5.31px;
+    border: 0.664px solid #F9F9F9;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+}
+
+.eventcard1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    align-items: center;
+}
+
+.eventcard1 h2 {
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13.275px;
+    /* 100% */
+    letter-spacing: -0.266px;
+}
+
+.eventcard hr {
+    width: 91.877px;
+    height: 0.332px;
+    margin-left: 15px;
+}
+
+.eventcard p {
+    color: #FFF;
+    font-family: Comic Sans MS;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 11.948px */
+    margin: 0 15px 10px;
+    letter-spacing: -0.159px;
+}
+
+.eventcards {
+    display: flex;
+    gap: 30px;
+    margin: 4vh 0;
+}
+
+.eventcard-nav {
+    display: flex;
+    color: #FFF;
+    font-family: Comic Neue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    width: 100%;
+    align-items: center;
+    gap: 3%;
+    /* 125% */
+}
+
+.eventcard-body {
+    margin: 9vh 0;
+    width: 100%;
+}
+.eventcard-nav button{
+    color: #333;
+font-family: Comic Neue;
+
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 100% */
+letter-spacing: -0.32px;
+margin-left: auto;
+margin-right: 50px;
+display: inline-flex;
+padding: 10px 20px;
+align-items: center;
+justify-content: center;
+border-radius: 8px;
+background: #F7B900;
+}
