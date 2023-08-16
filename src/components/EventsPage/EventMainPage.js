@@ -22,12 +22,7 @@ import cross from "../../assests/cross.png";
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
   const navigate = useNavigate();
-  // console.log(id, "id");
   const { dispatch } = Store;
-  // const [data, setData] = useState();
-  // const [category, setCategory] = useState();
-  // const [categoryId, setCategoryId] = useState("");
-  // const [search, setSearch] = useState("");
   const [eventdata, setEventData] = useState({});
   const [register, setregister] = useState(true);
   const [registerData, setregisterData] = useState({
@@ -36,7 +31,8 @@ const EventMainPage = ({ events }) => {
     sub_event_name: "",
   });
   const [loading, setLoading] = useState(false);
-  console.log(registerData.sub_event_name, "sfsfd");
+  // console.log(registerData.sub_event_name, "sfsfd");
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (!localStorage.getItem("token")) {
@@ -44,7 +40,7 @@ const EventMainPage = ({ events }) => {
     } else {
       setLoading(true)
       const eventuser = {
-        event: eventdata[id]?.id,
+        event: eventdata[0]?.id,
         participant: localStorage.getItem("id"),
         team_leader_name: registerData.team_leader_name,
         team_name: registerData.team_name,
@@ -54,9 +50,9 @@ const EventMainPage = ({ events }) => {
         .post("/apiV1/registerevent", eventuser)
         .then((res) => {
           if (res.status == 201) {
-            console.log(res.data, "api data");
+
             message.success(
-              `🎉You are registerd successfully for ${eventdata[id]?.name}`
+              `🎉You are registerd successfully for ${eventdata[0]?.name}`
             );
             setregister(true);
             // if (button == "Register") {
@@ -81,16 +77,22 @@ const EventMainPage = ({ events }) => {
 
   useEffect(() => {
     loadUserData();
-  }, []);
+  }, [id]);
 
   const loadUserData = async () => {
     try {
       axios
         .get(`/apiV1/event`)
         .then((res) => {
-          setEventData(res.data);
+        let selectedItem = res.data?.filter(function (el) {
+            // console.log(el.itemId,"data//",index)
+            return el.id == id
+        });
+        // console.log(selectedObj,"dnifidfn");
+        setEventData(selectedItem)
+          // setEventData(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
-          console.log("data", res.data);
+          // console.log("data", res.data);
         })
         .catch((err) => {
           console.log(err);
@@ -106,6 +108,7 @@ const EventMainPage = ({ events }) => {
       console.log(error);
     }
   };
+  console.log(eventdata, "sdfdsfs");
 
   const handleChange = (e) => {
     setregisterData({ ...registerData, [e.target.name]: e.target.value });
@@ -113,7 +116,7 @@ const EventMainPage = ({ events }) => {
 
   const onChangeSubEvent = (e) => {
     const { value, checked } = e.target;
-    console.log(value, " sadasd ", checked);
+    // console.log(value, " sadasd ", checked);
     if (checked) {
       // setUser({ ...user, gender: gender?.value });
       setregisterData({ ...registerData, sub_event_name: value });
@@ -122,8 +125,8 @@ const EventMainPage = ({ events }) => {
 
   const handleClick = (e) => {
     if (
-      eventdata[id]?.solo_team === "duet" ||
-      eventdata[id]?.solo_team === "team"
+      eventdata[0]?.solo_team === "duet" ||
+      eventdata[0]?.solo_team === "team"
     ) {
       setregister(false);
     } else {
@@ -177,7 +180,7 @@ const EventMainPage = ({ events }) => {
   //   const regExp = new RegExp(escapeRegex(search), "i");
   //   return regExp.test(pName);
   // };
-  // console.log(eventdata[id]);
+  // console.log(eventdata);
 
   return (
     <>
@@ -190,35 +193,35 @@ const EventMainPage = ({ events }) => {
             {register ? (
               <>
                 <span className="events-left-event01">
-                  Events {">"} {eventdata[id]?.category?.name} {">"}{" "}
-                  {eventdata[id]?.name}
+                  Events {">"} {eventdata[0]?.category?.name} {">"}{" "}
+                  {eventdata[0]?.name}
                 </span>
 
                 <div className="events-left-event1">
-                  <h1>{eventdata[id]?.name}</h1>
-                  {eventdata[id]?.solo_team != null && (
-                    <span>({eventdata[id]?.solo_team})</span>
+                  <h1>{eventdata[0]?.name}</h1>
+                  {eventdata[0]?.solo_team != null && (
+                    <span>({eventdata[0]?.solo_team})</span>
                   )}
                 </div>
                 <p className="events-left-event2">
-                  {eventdata[id]?.description}
+                  {eventdata[0]?.description}
                 </p>
                 <div className="events-left-event3">
                   <span>Note:</span>
-                  <p>{eventdata[id]?.note}</p>
+                  <p>{eventdata[0]?.note}</p>
                 </div>
-                {eventdata[id]?.is_price == true && (
+                {eventdata[0]?.is_price == true && (
                   <div className="events-left-event4">
                     <span>
                       Prize <br /> Worth:
                     </span>
 
-                    <h1>{eventdata[id]?.price}</h1>
+                    <h1>{eventdata[0]?.price}</h1>
                   </div>
                 )}
-                {eventdata[id]?.solo_team === "solo" &&
-                  eventdata[id]?.sub_event &&
-                  (eventdata[id]?.sub_event).split(",").map((el, index) => {
+                {eventdata[0]?.solo_team === "solo" &&
+                  eventdata[0]?.sub_event &&
+                  (eventdata[0]?.sub_event).split(",").map((el, index) => {
                     return (
                       <>
                         <div key={index}>
@@ -247,7 +250,7 @@ const EventMainPage = ({ events }) => {
                   </button>
                   <a
                     className="events-left-event5-btn2"
-                    href={`${eventdata[id]?.rulebook}`}
+                    href={`${eventdata[0]?.rulebook}`}
                     target="_blank"
                   >
                     RULEBOOK
@@ -262,8 +265,8 @@ const EventMainPage = ({ events }) => {
                   onSubmit={(e) => onSubmit(e)}
                 >
                   <div className="events-left-event9">
-                    {eventdata[id]?.sub_event &&
-                      (eventdata[id]?.sub_event).split(",").map((el, index) => {
+                    {eventdata[0]?.sub_event &&
+                      (eventdata[0]?.sub_event).split(",").map((el, index) => {
                         return (
                           <>
                             <div key={index}>

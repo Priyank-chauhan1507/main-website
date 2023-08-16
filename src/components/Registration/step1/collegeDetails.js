@@ -8,10 +8,10 @@ import backImg from "../../../assests/Landing-page-2-1.webp";
 import logo from "../../../assests/reg-logo.svg";
 import backdropmob from "../../../assests/RegbackMobile.webp";
 import CircularProgress from "@mui/material/CircularProgress";
-import colleges from "./College";
+import colleges from "./college";
 
 import PersonalDetails from "../step2/personalDetails";
-const states = [
+const states = [ 
   "Andaman and Nicobar Islands",
   "Andhra Pradesh",
   "Arunachal Pradesh",
