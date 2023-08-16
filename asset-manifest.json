@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe55d916.css",
-    "main.js": "/static/js/main.7496f8a0.js",
+    "main.css": "/static/css/main.90e8e831.css",
+    "main.js": "/static/js/main.13977e38.js",
     "static/media/singers.webp": "/static/media/singers.71de47b1b6f7a50a7e55.webp",
     "static/media/singersmob.webp": "/static/media/singersmob.1d206f8c3464ea00dde0.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
@@ -16,6 +16,7 @@
     "static/media/Landing-page-1.webp": "/static/media/Landing-page-1.0fbb94ef89a40b96def0.webp",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/thomso.webp": "/static/media/thomso.95fa23ea77b895417f22.webp",
+    "static/media/footloose.png": "/static/media/footloose.03e1813f0f65580b1122.png",
     "static/media/image1evt.svg": "/static/media/image1evt.b4321236f14b276c55f6cb2a18190534.svg",
     "static/media/landingpage.webp": "/static/media/landingpage.abeeff57cfa4493d7c17.webp",
     "static/media/reg-logo.svg": "/static/media/reg-logo.7ff1b44e2c10de2dbb38076a1e4fbf12.svg",
@@ -38,11 +39,11 @@
     "static/media/imgnav.webp": "/static/media/imgnav.5d1202175c519a72086b.webp",
     "static/media/Cross.webp": "/static/media/Cross.26babf1c5e5e188b6e81.webp",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
-    "main.fe55d916.css.map": "/static/css/main.fe55d916.css.map",
-    "main.7496f8a0.js.map": "/static/js/main.7496f8a0.js.map"
+    "main.90e8e831.css.map": "/static/css/main.90e8e831.css.map",
+    "main.13977e38.js.map": "/static/js/main.13977e38.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe55d916.css",
-    "static/js/main.7496f8a0.js"
+    "static/css/main.90e8e831.css",
+    "static/js/main.13977e38.js"
   ]
 }
