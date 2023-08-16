@@ -15,7 +15,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(4);
+            onHandleClick(9);
           }}
         >
           Abhivyakti
@@ -27,7 +27,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(11);
+            onHandleClick(7);
           }}
         >
           Sargam (Solo)
@@ -35,7 +35,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(2);
+            onHandleClick(5);
           }}
         >
           Sargam (Duet)
@@ -43,7 +43,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(1);
+            onHandleClick(3);
           }}
         >
           Sargam (Team)
@@ -51,7 +51,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(3);
+            onHandleClick(6);
           }}
         >
           Battle Of Bands
@@ -59,7 +59,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(10);
+            onHandleClick(7);
           }}
         >
           Gully War
@@ -67,7 +67,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(9);
+            onHandleClick(8);
           }}
         >
           War of DJ'S
@@ -78,7 +78,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(54);
+            onHandleClick(46);
           }}
         >
           Apocalypse
@@ -86,7 +86,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(53);
+            onHandleClick(48);
           }}
         >
           Queen's Gambit
@@ -94,7 +94,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(29);
+            onHandleClick(51);
           }}
         >
           Snooker's Elite
@@ -103,7 +103,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(36);
+            onHandleClick(35);
           }}
         >
           Food Fiesta
@@ -144,7 +144,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(41);
+            onHandleClick(42);
           }}
         >
           Step up (Team)
@@ -163,7 +163,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(76);
+            onHandleClick(31);
           }}
         >
           Mr & Ms Thomso
@@ -174,7 +174,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(19);
+            onHandleClick(17);
           }}
         >
           Thomso's Got Talent(Solo)
@@ -182,7 +182,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(17);
+            onHandleClick(18);
           }}
         >
           Thomso's Got Talent(Team)
@@ -198,7 +198,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(71);
+            onHandleClick(62);
           }}
         >
           The Dank Knight
@@ -227,7 +227,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(64);
+            onHandleClick(56);
           }}
         >
           Art Talkies
@@ -235,7 +235,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(58);
+            onHandleClick(57);
           }}
         >
           Naqaab
@@ -243,7 +243,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(65);
+            onHandleClick(58);
           }}
         >
           Paint Fiesta
@@ -267,7 +267,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(72);
+            onHandleClick(61);
           }}
         >
           Live Sketching
@@ -277,7 +277,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(73);
+            onHandleClick(52);
           }}
         >
           Seiger
@@ -285,7 +285,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(51);
+            onHandleClick(53);
           }}
         >
           Treasure Hunt
@@ -293,7 +293,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(56);
+            onHandleClick(54);
           }}
         >
           Street Soccer
@@ -301,7 +301,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(57);
+            onHandleClick(55);
           }}
         >
           Scavenger Hunt
@@ -312,7 +312,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(22);
+            onHandleClick(16);
           }}
         >
           Literati
@@ -320,7 +320,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(18);
+            onHandleClick(19);
           }}
         >
           Pictionary
@@ -328,7 +328,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(19);
+            onHandleClick(21);
           }}
         >
           Spin a Yarn
@@ -336,7 +336,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(34);
+            onHandleClick(24);
           }}
         >
           Big Ideas
@@ -344,7 +344,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(33);
+            onHandleClick(27);
           }}
         >
           Desi Twist
@@ -352,7 +352,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(32);
+            onHandleClick(28);
           }}
         >
           Nerdy-Bate
@@ -360,7 +360,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(27);
+            onHandleClick(30);
           }}
         >
           Slam Poetry
@@ -369,7 +369,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(23);
+            onHandleClick(22);
           }}
         >
           Auction Frenzy
@@ -377,7 +377,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(24);
+            onHandleClick(23);
           }}
         >
           Corporata
@@ -385,7 +385,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(23);
+            onHandleClick(25);
           }}
         >
           Mark Sense
@@ -405,7 +405,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(28);
+            onHandleClick(32);
           }}
         >
           IITR-MUN
@@ -414,7 +414,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(38);
+            onHandleClick(39);
           }}
         >
           Hunger Games
@@ -422,7 +422,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(39);
+            onHandleClick(40);
           }}
         >
           Sumo Wrestling
@@ -430,7 +430,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(40);
+            onHandleClick(41);
           }}
         >
           Air Rifle Shooting
@@ -438,7 +438,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(46);
+            onHandleClick(44);
           }}
         >
           Caricature
@@ -446,7 +446,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(47);
+            onHandleClick(45);
           }}
         >
           Body Zorbing
@@ -454,7 +454,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(48);
+            onHandleClick(47);
           }}
         >
           Human Foosball
@@ -483,7 +483,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(12);
+            onHandleClick(1);
           }}
         >
           Silent DJ
@@ -497,7 +497,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(72);
+            onHandleClick(73);
           }}
         >
           Thomsography*

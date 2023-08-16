@@ -19,14 +19,13 @@ import eventcenterpic from "../../../assests/eventpic.webp";
 import axios from "axios";
 import EventCard from "../EventCard/EventCard";
 import EventTable from "./EventTable";
-
 const EventBox = ({ userDetails }) => {
   const navigate = useNavigate();
   const [display1, setdisplay] = useState(false);
   const [display2, setdisplay2] = useState(false);
   const [disable, setdisable] = useState("notdisable");
   const [events, setEvents] = useState([]);
-
+  const [filter, setFilter] = useState("solo")
   useEffect(() => {
     getEvents();
   }, []);
@@ -164,12 +163,12 @@ const EventBox = ({ userDetails }) => {
               {events ? (
                 <div className="eventcard-body">
                   <div className="eventcard-nav">
-                    <span style={{ color: "rgba(255, 255, 255, 0.40)" }}>
+                    <span style={{ color: "rgba(255, 255, 255, 0.40)", cursor:"default"}}>
                       Participate
                     </span>
-                    <span>Solo</span>
-                    <span>Duet</span>
-                    <span>Team</span>
+                    <span onClick={() => {setFilter("solo")}}>Solo</span>
+                    <span onClick={() => {setFilter("duet")}}>Duet</span>
+                    <span onClick={() => {setFilter("team")}}>Team</span>
                     <button
                       onClick={() => {
                         setdisplay2(!display2);
@@ -181,11 +180,11 @@ const EventBox = ({ userDetails }) => {
                   </div>
                   {display2 ? (
                     <>
-                      <EventTable/>
+                      <EventTable />
                     </>
                   ) : (
                     <div className="eventcards">
-                      {events.map((el) => {
+                      {events.filter((el)=>{return el.event__solo_team===filter}).map((el) => {
                         return <EventCard data={el} />;
                       })}
                     </div>
@@ -216,7 +215,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(4);
+                            onHandleClick(9);
                           }}
                         >
                           Abhivyakti
@@ -228,7 +227,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(11);
+                            onHandleClick(7);
                           }}
                         >
                           Sargam (Solo)
@@ -236,7 +235,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(2);
+                            onHandleClick(5);
                           }}
                         >
                           Sargam (Duet)
@@ -244,7 +243,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(1);
+                            onHandleClick(3);
                           }}
                         >
                           Sargam (Team)
@@ -252,7 +251,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(3);
+                            onHandleClick(6);
                           }}
                         >
                           Battle Of Bands
@@ -260,7 +259,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(10);
+                            onHandleClick(7);
                           }}
                         >
                           Gully War
@@ -268,7 +267,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(9);
+                            onHandleClick(8);
                           }}
                         >
                           War of DJ'S
@@ -279,7 +278,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(54);
+                            onHandleClick(46);
                           }}
                         >
                           Apocalypse
@@ -287,7 +286,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(53);
+                            onHandleClick(48);
                           }}
                         >
                           Queen's Gambit
@@ -295,7 +294,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(29);
+                            onHandleClick(51);
                           }}
                         >
                           Snooker's Elite
@@ -304,7 +303,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(36);
+                            onHandleClick(35);
                           }}
                         >
                           Food Fiesta
@@ -345,7 +344,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(41);
+                            onHandleClick(42);
                           }}
                         >
                           Step up (Team)
@@ -364,7 +363,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(76);
+                            onHandleClick(31);
                           }}
                         >
                           Mr & Ms Thomso
@@ -375,7 +374,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(19);
+                            onHandleClick(17);
                           }}
                         >
                           Thomso's Got Talent(Solo)
@@ -383,7 +382,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(17);
+                            onHandleClick(18);
                           }}
                         >
                           Thomso's Got Talent(Team)
@@ -399,7 +398,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(71);
+                            onHandleClick(62);
                           }}
                         >
                           The Dank Knight
@@ -428,7 +427,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(64);
+                            onHandleClick(56);
                           }}
                         >
                           Art Talkies
@@ -436,7 +435,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(58);
+                            onHandleClick(57);
                           }}
                         >
                           Naqaab
@@ -444,7 +443,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(65);
+                            onHandleClick(58);
                           }}
                         >
                           Paint Fiesta
@@ -468,7 +467,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(72);
+                            onHandleClick(61);
                           }}
                         >
                           Live Sketching
@@ -478,7 +477,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(73);
+                            onHandleClick(52);
                           }}
                         >
                           Seiger
@@ -486,7 +485,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(51);
+                            onHandleClick(53);
                           }}
                         >
                           Treasure Hunt
@@ -494,7 +493,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(56);
+                            onHandleClick(54);
                           }}
                         >
                           Street Soccer
@@ -502,7 +501,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(57);
+                            onHandleClick(55);
                           }}
                         >
                           Scavenger Hunt
@@ -513,7 +512,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(22);
+                            onHandleClick(16);
                           }}
                         >
                           Literati
@@ -521,7 +520,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(18);
+                            onHandleClick(19);
                           }}
                         >
                           Pictionary
@@ -529,7 +528,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(19);
+                            onHandleClick(21);
                           }}
                         >
                           Spin a Yarn
@@ -537,7 +536,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(34);
+                            onHandleClick(24);
                           }}
                         >
                           Big Ideas
@@ -545,7 +544,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(33);
+                            onHandleClick(27);
                           }}
                         >
                           Desi Twist
@@ -553,7 +552,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(32);
+                            onHandleClick(28);
                           }}
                         >
                           Nerdy-Bate
@@ -561,7 +560,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(27);
+                            onHandleClick(30);
                           }}
                         >
                           Slam Poetry
@@ -572,7 +571,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(23);
+                            onHandleClick(22);
                           }}
                         >
                           Auction Frenzy
@@ -580,7 +579,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(24);
+                            onHandleClick(23);
                           }}
                         >
                           Corporata
@@ -588,7 +587,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(23);
+                            onHandleClick(25);
                           }}
                         >
                           Mark Sense
@@ -608,7 +607,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(28);
+                            onHandleClick(32);
                           }}
                         >
                           IITR-MUN
@@ -617,7 +616,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(38);
+                            onHandleClick(39);
                           }}
                         >
                           Hunger Games
@@ -625,7 +624,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(39);
+                            onHandleClick(40);
                           }}
                         >
                           Sumo Wrestling
@@ -633,7 +632,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(40);
+                            onHandleClick(41);
                           }}
                         >
                           Air Rifle Shooting
@@ -641,7 +640,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(46);
+                            onHandleClick(44);
                           }}
                         >
                           Caricature
@@ -649,7 +648,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(47);
+                            onHandleClick(45);
                           }}
                         >
                           Body Zorbing
@@ -657,7 +656,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(48);
+                            onHandleClick(47);
                           }}
                         >
                           Human Foosball
@@ -688,7 +687,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(12);
+                            onHandleClick(1);
                           }}
                         >
                           Silent DJ
@@ -702,7 +701,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(72);
+                            onHandleClick(73);
                           }}
                         >
                           Thomsography*
