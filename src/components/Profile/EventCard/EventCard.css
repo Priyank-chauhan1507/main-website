@@ -1,5 +1,5 @@
 .eventcard {
-    height: 31vh;
+    height: 30vh;
     width: 24vh;
     background: url(../../../assests/footloose.png);
     background-size: cover;
@@ -26,7 +26,7 @@
     leading-trim: both;
     text-edge: cap;
     font-family: Comic Neue;
-    font-size: 18px;
+    font-size: .8vw;
     font-style: normal;
     font-weight: 700;
     line-height: 13.275px;
@@ -43,19 +43,20 @@
 .eventcard p {
     color: #FFF;
     font-family: Comic Sans MS;
-    font-size: 9px;
+    font-size: .5vw;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
     /* 11.948px */
-    margin: 0 15px 10px;
+    margin: 0 .8vw 1vh;
     letter-spacing: -0.159px;
 }
 
 .eventcards {
     display: flex;
-    gap: 30px;
+    gap: 3vw;
     margin: 4vh 0;
+    flex-wrap: wrap;
 }
 
 .eventcard-nav {
@@ -72,25 +73,45 @@
     /* 125% */
 }
 
+.eventcard-nav span {
+    cursor: pointer;
+}
+
 .eventcard-body {
     margin: 9vh 0;
     width: 100%;
 }
-.eventcard-nav button{
-    color: #333;
-font-family: Comic Neue;
 
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 16px; /* 100% */
-letter-spacing: -0.32px;
-margin-left: auto;
-margin-right: 50px;
-display: inline-flex;
-padding: 10px 20px;
-align-items: center;
-justify-content: center;
-border-radius: 8px;
-background: #F7B900;
+.eventcard-nav button {
+    color: #333;
+    font-family: Comic Neue;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 100% */
+    letter-spacing: -0.32px;
+    margin-left: auto;
+    margin-right: 50px;
+    display: inline-flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #F7B900;
+}
+
+.events-team-name {
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Comic Neue;
+    font-size: .7vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13.275px;
+    /* 110.628% */
+    margin: 0 15px 6px;
+    letter-spacing: -0.24px;
 }

@@ -18,11 +18,15 @@ import photo1 from "../../assests/street_soccer_1.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { message } from "antd";
 import cross from "../../assests/cross.png";
+import loader from "../../assests/loader.gif";
+import Loader from "../Loader/Loader";
 
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
   const navigate = useNavigate();
   const { dispatch } = Store;
+  const [events1, setEvents1] = useState([]);
+  const [filter, setfilter] = useState([]);
   const [eventdata, setEventData] = useState({});
   const [register, setregister] = useState(true);
   const [registerData, setregisterData] = useState({
@@ -33,12 +37,32 @@ const EventMainPage = ({ events }) => {
   const [loading, setLoading] = useState(false);
   // console.log(registerData.sub_event_name, "sfsfd");
 
+  useEffect(() => {
+    getEvents();
+  }, []);
+
+  const getEvents = async () => {
+    axios
+      .get(
+        `/apiV1/registerusereventdetailed?participant_id=${localStorage.getItem(
+          "id"
+        )}`
+      )
+      .then((res) => {
+        // console.log(res.data);
+        setEvents1(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      
+  };
   const onSubmit = (e) => {
     e.preventDefault();
     if (!localStorage.getItem("token")) {
       navigate("/login");
     } else {
-      setLoading(true)
+      setLoading(true);
       const eventuser = {
         event: eventdata[0]?.id,
         participant: localStorage.getItem("id"),
@@ -50,7 +74,6 @@ const EventMainPage = ({ events }) => {
         .post("/apiV1/registerevent", eventuser)
         .then((res) => {
           if (res.status == 201) {
-
             message.success(
               `🎉You are registerd successfully for ${eventdata[0]?.name}`
             );
@@ -84,15 +107,15 @@ const EventMainPage = ({ events }) => {
       axios
         .get(`/apiV1/event`)
         .then((res) => {
-        let selectedItem = res.data?.filter(function (el) {
+          let selectedItem = res.data?.filter(function (el) {
             // console.log(el.itemId,"data//",index)
-            return el.id == id
-        });
-        // console.log(selectedObj,"dnifidfn");
-        setEventData(selectedItem)
+            return el.id == id;
+          });
+          // console.log(selectedObj,"dnifidfn");
+          setEventData(selectedItem);
           // setEventData(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
-          // console.log("data", res.data);
+          console.log("data", res.data);
         })
         .catch((err) => {
           console.log(err);
@@ -246,7 +269,14 @@ const EventMainPage = ({ events }) => {
                     className="events-left-event5-btn1"
                     onClick={(e) => handleClick(e)}
                   >
-                    {loading?(<>REGISTERING...</>):(<>REGISTER</>)}
+                    {loading ? (
+                      <>
+                        <Loader />
+                        <>REGISTER</>
+                      </>
+                    ) : (
+                      <>REGISTER</>
+                    )}
                   </button>
                   <a
                     className="events-left-event5-btn2"
@@ -303,7 +333,14 @@ const EventMainPage = ({ events }) => {
                     required
                   />
                   <button className="events-left-event8" type="submit">
-                  {loading?(<>REGISTERING...</>):(<>REGISTER</>)}
+                    {loading ? (
+                      <>
+                        <Loader />
+                        <>REGISTER</>
+                      </>
+                    ) : (
+                      <>REGISTER</>
+                    )}
                   </button>
                 </form>
               </>
