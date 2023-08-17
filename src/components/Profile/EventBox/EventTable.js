@@ -27,7 +27,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(7);
+            onHandleClick(4);
           }}
         >
           Sargam (Solo)
@@ -136,7 +136,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(55);
+            onHandleClick(42);
           }}
         >
           Step up (Solo)
@@ -144,7 +144,7 @@ function EventTable() {
         <div
           className="col"
           onClick={(e) => {
-            onHandleClick(42);
+            onHandleClick(43);
           }}
         >
           Step up (Team)
