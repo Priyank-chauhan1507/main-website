@@ -10,7 +10,7 @@ function MobEventnavbar() {
     {
       par: "Music",
       child: [
-        { event:"Sargam (Solo)",href:7},
+        { event:"Sargam (Solo)",href:4},
         { event:"Sargam (Duet)",href:5},
         { event:"Sargam (Team)",href:3},
         { event:"Battle Of Bands",href:6},
@@ -36,8 +36,8 @@ function MobEventnavbar() {
        { event: "Footloose (Solo)",href:76 },
         { event:"Footloose (Duet)",href: 77},
         { event:"Footloose (Team)",href:75 },
-       { event: "Step up (Solo)",href:55},
-       { event: "Step up (team)",href: 42},
+       { event: "Step up (Solo)",href:42},
+       { event: "Step up (team)",href: 43},
       ],
     },
     {
