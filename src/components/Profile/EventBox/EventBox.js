@@ -25,7 +25,7 @@ const EventBox = ({ userDetails }) => {
   const [display2, setdisplay2] = useState(false);
   const [disable, setdisable] = useState("notdisable");
   const [events, setEvents] = useState([]);
-  const [filter, setFilter] = useState("solo")
+  const [filter, setFilter] = useState("solo");
   useEffect(() => {
     getEvents();
   }, []);
@@ -163,12 +163,35 @@ const EventBox = ({ userDetails }) => {
               {events ? (
                 <div className="eventcard-body">
                   <div className="eventcard-nav">
-                    <span style={{ color: "rgba(255, 255, 255, 0.40)", cursor:"default"}}>
+                    <span
+                      style={{
+                        color: "rgba(255, 255, 255, 0.40)",
+                        cursor: "default",
+                      }}
+                    >
                       Participate
                     </span>
-                    <span onClick={() => {setFilter("solo")}}>Solo</span>
-                    <span onClick={() => {setFilter("duet")}}>Duet</span>
-                    <span onClick={() => {setFilter("team")}}>Team</span>
+                    <span
+                      onClick={() => {
+                        setFilter("solo");
+                      }}
+                    >
+                      Solo
+                    </span>
+                    <span
+                      onClick={() => {
+                        setFilter("duet");
+                      }}
+                    >
+                      Duet
+                    </span>
+                    <span
+                      onClick={() => {
+                        setFilter("team");
+                      }}
+                    >
+                      Team
+                    </span>
                     <button
                       onClick={() => {
                         setdisplay2(!display2);
@@ -184,9 +207,13 @@ const EventBox = ({ userDetails }) => {
                     </>
                   ) : (
                     <div className="eventcards">
-                      {events.filter((el)=>{return el.event__solo_team===filter}).map((el) => {
-                        return <EventCard data={el} />;
-                      })}
+                      {events
+                        .filter((el) => {
+                          return el.event__solo_team === filter;
+                        })
+                        .map((el) => {
+                          return <EventCard data={el} />;
+                        })}
                     </div>
                   )}
                 </div>
@@ -227,7 +254,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(7);
+                            onHandleClick(4);
                           }}
                         >
                           Sargam (Solo)
@@ -336,7 +363,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(55);
+                            onHandleClick(42);
                           }}
                         >
                           Step up (Solo)
@@ -344,7 +371,7 @@ const EventBox = ({ userDetails }) => {
                         <div
                           className="col"
                           onClick={(e) => {
-                            onHandleClick(42);
+                            onHandleClick(43);
                           }}
                         >
                           Step up (Team)
