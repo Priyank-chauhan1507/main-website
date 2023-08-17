@@ -36,6 +36,16 @@
     padding: 8px;
 }
 
+.event-nav-right-compo:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.colhover:hover {
+    cursor: pointer !important;
+    text-decoration: underline;
+}
+
 .event-regi-btn {
     color: #000;
     text-align: center;

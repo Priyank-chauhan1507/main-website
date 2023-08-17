@@ -77,12 +77,12 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Abhivyakti
                     </div>
-                    <div className="col">Nukkad Natak</div>
-                    <div className="col">Mimicry</div>
-                    <div className="col">Monologue</div>
+                    <div className="col colhover">Nukkad Natak</div>
+                    <div className="col colhover">Mimicry</div>
+                    <div className="col colhover">Monologue</div>
                     <div className="col col-yellow">Music</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(4);
                       }}
@@ -90,7 +90,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Sargam (Solo)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(5);
                       }}
@@ -98,7 +98,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Sargam (Duet)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(3);
                       }}
@@ -106,7 +106,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Sargam (Team)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(6);
                       }}
@@ -114,7 +114,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Battle Of Bands
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(7);
                       }}
@@ -122,7 +122,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Gully War
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(8);
                       }}
@@ -133,7 +133,7 @@ function Navbar({ color, disable, setregister, register }) {
                   <div className="drop-row">
                     <div className="col col-yellow">Gaming</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(46);
                       }}
@@ -141,7 +141,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Apocalypse
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(48);
                       }}
@@ -149,7 +149,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Queen's Gambit
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(51);
                       }}
@@ -158,7 +158,7 @@ function Navbar({ color, disable, setregister, register }) {
                     </div>
                     <div className="col col-yellow">Culinary</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(35);
                       }}
@@ -167,7 +167,7 @@ function Navbar({ color, disable, setregister, register }) {
                     </div>
                     <div className="col col-yellow">Choreo</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(76);
                       }}
@@ -175,7 +175,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Footloose (Solo)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(77);
                       }}
@@ -183,7 +183,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Footloose (Duet)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(75);
                       }}
@@ -191,7 +191,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Footloose (Team)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(42);
                       }}
@@ -199,7 +199,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Step up (Solo)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(43);
                       }}
@@ -210,7 +210,7 @@ function Navbar({ color, disable, setregister, register }) {
                   <div className="drop-row">
                     <div className="col col-yellow">Fashion</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(29);
                       }}
@@ -218,18 +218,18 @@ function Navbar({ color, disable, setregister, register }) {
                       Campus Princess
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(31);
                       }}
                     >
                       Mr & Ms Thomso
                     </div>
-                    <div className="col">Vogue</div>
-                    <div className="col">Cosplay</div>
+                    <div className="col colhover">Vogue</div>
+                    <div className="col colhover">Cosplay</div>
                     <div className="col col-yellow">Entertainment</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(17);
                       }}
@@ -237,7 +237,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Thomso's Got Talent(Solo)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(18);
                       }}
@@ -245,7 +245,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Thomso's Got Talent(Team)
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(20);
                       }}
@@ -253,7 +253,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Open MIC
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(62);
                       }}
@@ -262,7 +262,7 @@ function Navbar({ color, disable, setregister, register }) {
                     </div>
                     <div className="col col-yellow">Cinematic</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(14);
                       }}
@@ -270,7 +270,7 @@ function Navbar({ color, disable, setregister, register }) {
                       16 Frames
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(15);
                       }}
@@ -282,7 +282,7 @@ function Navbar({ color, disable, setregister, register }) {
                     {" "}
                     <div className="col col-yellow">Da Vinci's Gala</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(56);
                       }}
@@ -290,7 +290,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Art Talkies
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(57);
                       }}
@@ -298,7 +298,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Naqaab
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(58);
                       }}
@@ -306,7 +306,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Paint Fiesta
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(59);
                       }}
@@ -314,7 +314,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Costume Design
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(60);
                       }}
@@ -322,17 +322,17 @@ function Navbar({ color, disable, setregister, register }) {
                       Relay Rangoli
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(61);
                       }}
                     >
                       Live Sketching
                     </div>
-                    <div className="col">Sneaker Design</div>
+                    <div className="col colhover">Sneaker Design</div>
                     <div className="col col-yellow">Adventure</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(52);
                       }}
@@ -340,7 +340,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Seiger
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(53);
                       }}
@@ -348,7 +348,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Treasure Hunt
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(54);
                       }}
@@ -356,7 +356,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Street Soccer
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(55);
                       }}
@@ -367,7 +367,7 @@ function Navbar({ color, disable, setregister, register }) {
                   <div className="drop-row">
                     <div className="col col-yellow">LITFest</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(16);
                       }}
@@ -375,7 +375,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Literati
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(19);
                       }}
@@ -383,7 +383,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Pictionary
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(21);
                       }}
@@ -391,7 +391,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Spin a Yarn
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(24);
                       }}
@@ -399,7 +399,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Big Ideas
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(27);
                       }}
@@ -407,7 +407,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Desi Twist
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(28);
                       }}
@@ -415,7 +415,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Nerdy-Bate
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(30);
                       }}
@@ -424,7 +424,7 @@ function Navbar({ color, disable, setregister, register }) {
                     </div>
                     <div className="col col-yellow">Marketing and Finance</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(22);
                       }}
@@ -432,7 +432,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Auction Frenzy
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(23);
                       }}
@@ -440,7 +440,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Corporata
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(25);
                       }}
@@ -448,7 +448,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Mark Sense
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(26);
                       }}
@@ -460,7 +460,7 @@ function Navbar({ color, disable, setregister, register }) {
                     {" "}
                     <div className="col col-yellow">MUN</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(32);
                       }}
@@ -469,7 +469,7 @@ function Navbar({ color, disable, setregister, register }) {
                     </div>
                     <div className="col col-yellow">LITFest</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(39);
                       }}
@@ -477,7 +477,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Hunger Games
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(40);
                       }}
@@ -485,7 +485,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Sumo Wrestling
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(41);
                       }}
@@ -493,7 +493,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Air Rifle Shooting
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(44);
                       }}
@@ -501,7 +501,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Caricature
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(45);
                       }}
@@ -509,7 +509,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Body Zorbing
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(47);
                       }}
@@ -517,7 +517,7 @@ function Navbar({ color, disable, setregister, register }) {
                       Human Foosball
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(49);
                       }}
@@ -525,7 +525,7 @@ function Navbar({ color, disable, setregister, register }) {
                       The Boulevard Games
                     </div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(50);
                       }}
@@ -538,28 +538,28 @@ function Navbar({ color, disable, setregister, register }) {
                   <div className="drop-row">
                     <div className="col col-yellow">Night Life</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(1);
                       }}
                     >
                       Silent DJ
                     </div>
-                    <div className="col">Nightlife Cafe</div>
-                    <div className="col ">Movie Screening</div>
+                    <div className="col colhover">Nightlife Cafe</div>
+                    <div className="col colhover ">Movie Screening</div>
                     <div className="col col-yellow">New Events</div>
-                    <div className="col">Sneaker Design*</div>
-                    <div className="col">Mimicry*</div>
-                    <div className="col">Monologue*</div>
+                    <div className="col colhover">Sneaker Design*</div>
+                    <div className="col colhover">Mimicry*</div>
+                    <div className="col colhover">Monologue*</div>
                     <div
-                      className="col"
+                      className="col colhover"
                       onClick={(e) => {
                         onHandleClick(73);
                       }}
                     >
                       Thomsography*
                     </div>
-                    <div className="col">Vlogging*</div>
+                    <div className="col colhover">Vlogging*</div>
                   </div>
                 </div>
               </>
