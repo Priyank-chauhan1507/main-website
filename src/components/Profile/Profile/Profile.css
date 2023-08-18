@@ -52,7 +52,7 @@
   }
 
   .boxborder {
-    height: 100vh;
+    height: auto;
   }
 
   .boxborder::-webkit-scrollbar {
@@ -74,7 +74,7 @@
   }
 
   .pro-back-img2 {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -115,9 +115,18 @@
 
 .mobpaymentcenterimg{
   margin-top: 17vh;
+  padding-bottom:2vh;
     display: flex;
+    height:30vh;
     justify-content: center;
 }
+
+ @media only screen and (max-width: 350px){ 
+  .mobpaymentcenterimg{
+    width:88vw !important;
+    height:30vh;
+  }
+} 
 
 .paymentmobpage{
   display: none;

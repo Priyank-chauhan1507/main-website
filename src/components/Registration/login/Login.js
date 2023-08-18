@@ -165,7 +165,7 @@ const Login = (props) => {
                 )}
                 <div id="niche">
                   <div id="bottom">Don't have an account?</div>
-                  <Link to="/collegedetails">
+                  <Link to="/register">
                     <div id="register"> Register Now!</div>
                   </Link>
                 </div>
