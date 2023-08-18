@@ -4,6 +4,7 @@ import "./Eventsnavbar.css";
 import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
+import img_profile from "../../assests/img_profile.svg"
 
 function Navbar({ color, disable, setregister, register }) {
   const [display1, setdisplay] = useState("none");
@@ -606,13 +607,7 @@ function Navbar({ color, disable, setregister, register }) {
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
-              <button
-                onClick={handleLogout}
-                className="event-regi-btn"
-                id="registernow"
-              >
-                LOG OUT
-              </button>
+            <img src={img_profile} onClick={()=>{navigate("/profile")}} id="img_profile" />
             </>
           ) : (
             <>

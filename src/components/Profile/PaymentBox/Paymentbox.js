@@ -106,7 +106,9 @@ const Profile = ({ userDetails }) => {
                   Payment
                 </Link>
               </div>
+              
             )}
+            
           </div>
         </div>
         <div className="c-line1">
