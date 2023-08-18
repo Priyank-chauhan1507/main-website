@@ -17,7 +17,7 @@ import photo from "../../assests/events.png";
 import photo1 from "../../assests/street_soccer_1.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { message } from "antd";
-import cross from "../../assests/cross.webp";
+// import Cross from "../../assests/cross.webp";
 import loader from "../../assests/loader.gif";
 import Loader from "../Loader/Loader";
 import cross_img from "../../assests/cross.webp";
