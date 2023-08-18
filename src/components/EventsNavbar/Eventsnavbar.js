@@ -234,7 +234,7 @@ function Navbar({ color, disable, setregister, register }) {
                         onHandleClick(17);
                       }}
                     >
-                      Thomso's Got Talent(Solo)
+                      Thomso's  Got<div>Talent (Solo)</div> 
                     </div>
                     <div
                       className="col colhover"
@@ -242,7 +242,7 @@ function Navbar({ color, disable, setregister, register }) {
                         onHandleClick(18);
                       }}
                     >
-                      Thomso's Got Talent(Team)
+                      Thomso's  Got<div> Talent (Team)</div>
                     </div>
                     <div
                       className="col colhover"
@@ -422,7 +422,7 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Slam Poetry
                     </div>
-                    <div className="col col-yellow">Marketing and Finance</div>
+                    <div className="col col-yellow">Marketing and <div> Finance</div></div>
                     <div
                       className="col colhover"
                       onClick={(e) => {
@@ -522,7 +522,7 @@ function Navbar({ color, disable, setregister, register }) {
                         onHandleClick(49);
                       }}
                     >
-                      The Boulevard Games
+                      The Boulevard <div>Games</div>
                     </div>
                     <div
                       className="col colhover"
