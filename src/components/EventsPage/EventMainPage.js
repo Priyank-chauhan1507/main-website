@@ -17,10 +17,10 @@ import photo from "../../assests/events.png";
 import photo1 from "../../assests/street_soccer_1.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { message } from "antd";
-import cross from "../../assests/cross.png";
+import cross from "../../assests/cross.webp";
 import loader from "../../assests/loader.gif";
 import Loader from "../Loader/Loader";
-import cross_img from "../../assests/Cross.webp"
+import cross_img from "../../assests/Cross.webp";
 
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
@@ -56,7 +56,6 @@ const EventMainPage = ({ events }) => {
       .catch((err) => {
         console.log(err);
       });
-      
   };
   const onSubmit = (e) => {
     e.preventDefault();
@@ -230,11 +229,12 @@ const EventMainPage = ({ events }) => {
                 <p className="events-left-event2">
                   {eventdata[0]?.description}
                 </p>
-                  {eventdata[0]?.note != null && (
-                <div className="events-left-event3">
-                  <span>Note:</span>
-                  <p>{eventdata[0]?.note}</p>
-                </div>)}
+                {eventdata[0]?.note != null && (
+                  <div className="events-left-event3">
+                    <span>Note:</span>
+                    <p>{eventdata[0]?.note}</p>
+                  </div>
+                )}
                 {eventdata[0]?.is_price == true && (
                   <div className="events-left-event4">
                     <span>
@@ -282,18 +282,27 @@ const EventMainPage = ({ events }) => {
                     )}
                   </button>
                   {eventdata[0]?.rulebook != null && (
-                  <a
-                    className="events-left-event5-btn2"
-                    href={`${eventdata[0]?.rulebook}`}
-                    target="_blank"
-                  >
-                    RULEBOOK
-                  </a>)}
+                    <a
+                      className="events-left-event5-btn2"
+                      href={`${eventdata[0]?.rulebook}`}
+                      target="_blank"
+                    >
+                      RULEBOOK
+                    </a>
+                  )}
                 </div>
               </>
             ) : (
               <>
-                <h1 className="events-left-event6">Registration</h1><img src={cross_img} alt="" onclick={()=>{navigate("/pevents")}} id="cross_img_event"/>
+                <h1 className="events-left-event6">Registration</h1>
+                <img
+                  src={cross_img}
+                  alt=""
+                  onclick={() => {
+                    navigate("/pevents");
+                  }}
+                  id="cross_img_event"
+                />
                 <form
                   className="events-left-event7"
                   onSubmit={(e) => onSubmit(e)}
@@ -351,8 +360,16 @@ const EventMainPage = ({ events }) => {
             )}
           </div>
           <div className="events-right">
-            <img src={eventdata[0]?.image===null ? photo : eventdata[0]?.image} className="event-photo" alt="" />
-            <img src={eventdata[0]?.image===null ? photo : eventdata[0]?.image} className="event-photo1" alt="" />
+            <img
+              src={eventdata[0]?.image === null ? photo : eventdata[0]?.image}
+              className="event-photo"
+              alt=""
+            />
+            <img
+              src={eventdata[0]?.image === null ? photo : eventdata[0]?.image}
+              className="event-photo1"
+              alt=""
+            />
           </div>
         </div>
       </div>

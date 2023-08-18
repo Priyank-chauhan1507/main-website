@@ -491,9 +491,10 @@
   }
 
   .event-cross {
-    position: relative;
-    top: 5.5vh !important;
-    left: 80vw !important;
+    position: absolute;
+    top: 45.5vh !important;
+    left: 78vw !important;
+
     width: 6vw;
   }
 
@@ -586,9 +587,10 @@
 }
 
 .event-cross {
-  position: relative;
-  top: 14vh;
-  left: 436px;
+  position: absolute;
+  top: 17vh;
+  left: 27vw;
+  width: 50px;
 }
 
 .event-photo1 {

@@ -172,7 +172,7 @@
         align-items: center;
         animation: slide .5s ease-in forwards;
         padding-bottom: 20px;
-        min-height: 100vh;
+        min-height: 108vh;
     }
 
     .slidebar1 h1 {
