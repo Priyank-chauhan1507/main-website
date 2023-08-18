@@ -19,6 +19,7 @@ const NewNewProfileMobile = ({data}) => {
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
   const [userDetails, setuserDetails] = useState({})
+  const [opencollege,setOpencollege] = useState(false);
 
   useEffect(() => {
     setuserDetails(data)
@@ -40,6 +41,9 @@ const NewNewProfileMobile = ({data}) => {
         // setLoading(false);
         console.log(error);
       });
+  };
+  const OpenCollege = () => {
+    setOpencollege(!opencollege);
   };
 
   const changeHandler = async (e) => {
@@ -161,25 +165,25 @@ const NewNewProfileMobile = ({data}) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">College</span>
-                <span className="main-prof-box-detail-row-text-col">
+                <span className={!opencollege ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenCollege}>
                   {userDetails?.college}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">City</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.city}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">State</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.state}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Degree</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.branch}
                 </span>
               </div>
@@ -188,7 +192,7 @@ const NewNewProfileMobile = ({data}) => {
                   <span className="main-prof-box-detail-row-text">
                     Graduation Year
                   </span>
-                  <span className="main-prof-box-detail-row-text">
+                  <span className="main-prof-box-detail-row-text-col">
                     {" "}
                     {userDetails?.graduation_year}
                   </span>
@@ -196,7 +200,7 @@ const NewNewProfileMobile = ({data}) => {
               ) : (
                 <div className="main-prof-box-detail-row">
                   <span className="main-prof-box-detail-row-text">Year</span>
-                  <span className="main-prof-box-detail-row-text">
+                  <span className="main-prof-box-detail-row-text-col">
                     {" "}
                     {userDetails?.year}
                   </span>
@@ -211,19 +215,19 @@ const NewNewProfileMobile = ({data}) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Email</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.email}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Contact</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.contact}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Gender</span>
-                <span className="main-prof-box-detail-row-text">
+                <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.gender}
                 </span>
               </div>

@@ -116,6 +116,7 @@
         width: 100vw;
         margin-top: 0vh;
         height: auto;
+        /* overflow-y: scroll; */
     }
 
     .main-box-center-event-payment{
@@ -130,7 +131,7 @@
     }
 
     .main-prof-box-head-text1 {
-        width: 80vw;
+        width: 65vw;
         font-family: "Oxanium";
         font-style: normal;
         font-weight: 400;
@@ -140,13 +141,16 @@
         line-height: 30px;
         color: rgba(255, 255, 255, 0.63);
     }
+    .main-prof-box-head-text{
+        width:22vw;
+    }
 
     .flex-2-title {
         font-family: "Oxanium";
         font-style: normal;
         font-weight: 400;
         border-bottom: 2px solid white;
-        width: 80vw;
+        width: 65vw;
         height: 5vh;
         font-size: 24px;
         line-height: 30px;

@@ -43,7 +43,7 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
       setLoading({ loading: true });
     }
 
-    if (user.password != user.confirmpassword) return;
+    if (user.password !== user.confirmpassword) return;
 
     try {
       const userresponse = {
