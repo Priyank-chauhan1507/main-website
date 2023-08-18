@@ -467,15 +467,15 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       IITR-MUN
                     </div>
-                    <div className="col col-yellow">LITFest</div>
-                    <div
+                    <div className="col col-yellow">Carnival</div>
+                    {/* <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(39);
                       }}
                     >
                       Hunger Games
-                    </div>
+                    </div> */}
                     <div
                       className="col colhover"
                       onClick={(e) => {
@@ -492,14 +492,14 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Air Rifle Shooting
                     </div>
-                    <div
+                    {/* <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(44);
                       }}
                     >
                       Caricature
-                    </div>
+                    </div> */}
                     <div
                       className="col colhover"
                       onClick={(e) => {
@@ -532,8 +532,8 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Tattoo Artist
                     </div>
-                    <div className="col col-yellow">Cultural Workshops</div>
-                    <div className="col col-yellow1">Technical Workshops</div>
+                    {/* <div className="col col-yellow">Cultural Workshops</div> */}
+                    {/* <div className="col col-yellow1">Technical Workshops</div> */}
                   </div>
                   <div className="drop-row">
                     <div className="col col-yellow">Night Life</div>

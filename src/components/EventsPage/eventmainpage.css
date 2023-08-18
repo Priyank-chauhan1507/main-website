@@ -186,6 +186,7 @@
   border-radius: 8px;
   background: #FFF;
   letter-spacing: 0.4px;
+  cursor: pointer;
 }
 
 .events-left-event5-btn2 {
@@ -209,6 +210,7 @@
   /* 24px */
   background: transparent;
   letter-spacing: 0.4px;
+  cursor: pointer;
 }
 
 .events-left-event6 {
@@ -261,7 +263,7 @@
   width: 149px;
   height: 42px;
   padding: 6.261px 47.403px;
-
+  cursor: pointer;
   margin-top: 40px;
 
   justify-content: center;
