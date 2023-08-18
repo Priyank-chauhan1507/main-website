@@ -23,7 +23,13 @@
   position: relative;
   z-index: 3;
   overflow-y:auto;
+
 }
+
+.events_back::-webkit-scrollbar {
+  display: none;
+}
+
 
 .events-left {
   width: 60vw;
@@ -34,7 +40,7 @@
 }
 
 .events-right {
-  width: 40vw;
+  width: 35vw;
   display: flex;
   align-items: center;
   justify-content: flex-end;
