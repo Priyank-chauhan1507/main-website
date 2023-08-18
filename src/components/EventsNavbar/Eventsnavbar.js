@@ -227,7 +227,11 @@ function Navbar({ color, disable, setregister, register }) {
                         onHandleClick(28);
                       }}
                     >
-                      Nerdy-Bate
+
+                     
+
+                      Thomso's  Got Talent (Solo)
+
                     </div>
                     <div
                       className="col colhover"
@@ -235,7 +239,11 @@ function Navbar({ color, disable, setregister, register }) {
                         onHandleClick(30);
                       }}
                     >
-                      Slam Poetry
+  
+
+                  
+                      Thomso's  Got Talent (Team)
+
                     </div>
                   </div>
                   <div className="drop-row">
@@ -433,11 +441,15 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Abhivyakti
                     </div>
+
                     <div className="col colhover">Nukkad Natak</div>
                     <div className="col colhover">Mimicry</div>
                     <div className="col colhover">Monologue</div>
 
                     <div className="col col-yellow">Marketing and Finance</div>
+
+                    <div className="col col-yellow">Marketing and  Finance</div>
+
                     <div
                       className="col colhover"
                       onClick={(e) => {
@@ -530,7 +542,11 @@ function Navbar({ color, disable, setregister, register }) {
                         onHandleClick(15);
                       }}
                     >
+
                       Box Office
+
+                   
+
                     </div>
                     <div
                       className="col colhover"

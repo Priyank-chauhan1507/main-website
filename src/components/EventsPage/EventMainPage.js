@@ -268,6 +268,7 @@ const EventMainPage = ({ events }) => {
                 <div className="events-left-event5">
                   <button
                     className="events-left-event5-btn1"
+                    id="newchangesinbutton"
                     onClick={(e) => handleClick(e)}
                   >
                     {loading ? (

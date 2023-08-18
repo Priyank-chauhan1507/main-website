@@ -93,7 +93,6 @@
 
 .drop-row .col {
     color: #fff;
-    text-align: justify;
     leading-trim: both;
     text-edge: cap;
     font-family: Comic Sans MS;
@@ -101,9 +100,13 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    cursor: default;
+    cursor: pointer;
     margin-left: 40px;
 
+}
+
+.col:hover{
+    text-decoration: underline;
 }
 
 .col-yellow {

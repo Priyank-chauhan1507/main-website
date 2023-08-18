@@ -101,9 +101,10 @@
     justify-content: center;
     align-items: center;
     border: 0.5px solid rgba(255, 255, 255, 0.5);
-    margin-left: 24px;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw; 
     margin-top: 7px;
-    width: 88vw;
+    width: 84vw;
 }
 
 
@@ -115,8 +116,13 @@
         width: 100vw;
         margin-top: 0vh;
         height: auto;
+        /* overflow-y: scroll; */
     }
 
+    .main-box-center-event-payment{
+        display:none;
+      }    
+      
     .main-prof-box-detail-row {
         display: flex;
         gap: 15vw;
@@ -125,7 +131,7 @@
     }
 
     .main-prof-box-head-text1 {
-        width: 80vw;
+        width: 65vw;
         font-family: "Oxanium";
         font-style: normal;
         font-weight: 400;
@@ -135,13 +141,16 @@
         line-height: 30px;
         color: rgba(255, 255, 255, 0.63);
     }
+    .main-prof-box-head-text{
+        width:22vw;
+    }
 
     .flex-2-title {
         font-family: "Oxanium";
         font-style: normal;
         font-weight: 400;
         border-bottom: 2px solid white;
-        width: 80vw;
+        width: 65vw;
         height: 5vh;
         font-size: 24px;
         line-height: 30px;
@@ -204,4 +213,57 @@
 
 .paymentmobpage{
     display: none;
+  }
+
+
+  @media only screen and (max-width: 360px) {
+
+    .nav-active {
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 4vw;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+    
+        color: #FFFFFF;
+    
+    }
+    
+    .nav-passive {
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 4vw;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+    
+        color: rgba(255, 255, 255, 0.5);
+    
+    }
+    
+    .nav-passive {
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 4vw;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+    
+        color: rgba(255, 255, 255, 0.5);
+    
+    }
+
   }

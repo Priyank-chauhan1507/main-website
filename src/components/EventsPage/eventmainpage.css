@@ -22,7 +22,14 @@
   height: 80vh;
   position: relative;
   z-index: 3;
+  overflow-y:auto;
+
 }
+
+.events_back::-webkit-scrollbar {
+  display: none;
+}
+
 
 .events-left {
   width: 60vw;
@@ -33,7 +40,7 @@
 }
 
 .events-right {
-  width: 40vw;
+  width: 35vw;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -188,6 +195,9 @@
   letter-spacing: 0.4px;
   cursor: pointer;
 }
+#newchangesinbutton{
+padding: 15px 30px !important;
+}
 
 .events-left-event5-btn2 {
   display: inline-flex;
@@ -211,6 +221,7 @@
   background: transparent;
   letter-spacing: 0.4px;
   cursor: pointer;
+  text-decoration:none;
 }
 
 .events-left-event6 {
@@ -334,6 +345,14 @@
   background: #F7B900;
 }
 
+@media (max-width:1500px){
+  .events-left-event1 h1{
+    font-size:3.3vw;
+  }
+}
+
+
+
 @media (max-width:600px) {
   .events_back {
     flex-direction: column-reverse;
@@ -344,17 +363,29 @@
     margin-top: -2vh;
   }
 
+  #newchangesinbutton{
+    padding :15px 21px !important
+  }
+  
+  
+
+  .events-left-event5-btn2{
+    padding : 15px 21px !important;
+  }
+
   .events-left {
     width: 100vw;
     height: 55%;
     gap: 11px;
+    /* overflow-y:auto; */
+    overflow-x:hidden;
   }
 
   .events-right {
     width: 80vw;
     height: 50%;
     justify-content: flex-start;
-
+    margin-top:5vh;
   }
 
   .event-photo {
@@ -365,7 +396,7 @@
 
   .events-left-event5-btn2,
   .events-left-event5-btn2 {
-    height: 40px !important;
+    /* height: 40px !important; */
   }
 
   .event-photo {
@@ -496,6 +527,7 @@
     /* 18px */
     letter-spacing: -0.24px;
     margin: 0px 0;
+    width:90vw;
   }
 
   .events-left-event4 {
@@ -554,5 +586,16 @@
 
   .bg-events {
     display: none;
+  }
+}
+@media screen and (max-width:700px){
+  .events-left-event1 h1 {
+    color: #FFF;
+    font-family: Rowdies;
+    font-size: 5.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 33.333% */
   }
 }

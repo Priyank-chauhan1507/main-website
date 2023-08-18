@@ -14,12 +14,14 @@
   margin-left: 23px;
 }
 .lsp-img1 {
-  height: 15vh;
-  width: 7vw;
+  height: 15vmin;
+  width: 15vmin;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 63px;
+  max-width: 170px;
+  max-height: 170px;
 }
 
 .lsp-text1 {
@@ -124,4 +126,44 @@ letter-spacing: -0.32px;
   height: 7vh;
   flex-direction: column;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1246px) {
+  .lsp-text2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .nnp-content {
+    gap: 2vw;
+  }
+
+  .lsp-pic {
+    padding-left: 1.5vw;
+  }
+
+  .lsp-text1 {
+    text-align: center;
+  }
+
+  .lsp-c1 {
+    margin-left: 2vw;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .lsp-text1 {
+    text-align: center;
+  }
+  .lsp-pic {
+    padding-left: 2vw;
+  }
+}
+
+@media only screen and (max-height: 840px) {
+  .lsp-centre {
+    /* gap: 2vh; */
+  }
 }
