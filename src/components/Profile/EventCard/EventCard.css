@@ -61,6 +61,10 @@
     flex-wrap: wrap;
 }
 
+.eventcards::-webkit-scrollbar {
+    display: none;
+  }
+
 .eventcard-nav {
     display: flex;
     color: #FFF;
