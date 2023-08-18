@@ -575,5 +575,15 @@ padding: 15px 30px !important;
   .bg-events {
     display: none;
   }
-  
+}
+@media screen and (max-width:700px){
+  .events-left-event1 h1 {
+    color: #FFF;
+    font-family: Rowdies;
+    font-size: 5.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 33.333% */
+  }
 }

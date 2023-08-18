@@ -170,9 +170,9 @@ const CollegeDetails = () => {
             <img src={logo} alt="" className="th-logo" />
           </Link>
         </div>
-        <div className="logButton">
+        {/* <div className="logButton">
           <button onClick={() => navigate('/login')} className="registerNow">LOG IN</button>
-        </div>
+        </div> */}
       </div>
       <img className="bkimg" src={backImg} />
       <img src={backdropmob} alt="" className="backdropmob" />
