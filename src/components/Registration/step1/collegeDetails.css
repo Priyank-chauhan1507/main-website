@@ -378,4 +378,14 @@ letter-spacing: 1.2px;
 
 .css-13cymwt-control{
 width:auto;
+border:none!important;
+min-height:0px !important;
+}
+
+@media (min-width:930px){
+
+#enter-college-reg{
+  width:53.5vw !important;
+}
+
 }
