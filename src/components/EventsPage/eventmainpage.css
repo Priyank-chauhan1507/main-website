@@ -221,6 +221,7 @@ padding: 15px 30px !important;
   background: transparent;
   letter-spacing: 0.4px;
   cursor: pointer;
+  text-decoration:none;
 }
 
 .events-left-event6 {
@@ -344,6 +345,14 @@ padding: 15px 30px !important;
   background: #F7B900;
 }
 
+@media (max-width:1500px){
+  .events-left-event1 h1{
+    font-size:3.3vw;
+  }
+}
+
+
+
 @media (max-width:600px) {
   .events_back {
     flex-direction: column-reverse;
@@ -352,6 +361,16 @@ padding: 15px 30px !important;
     height: 90vh;
     position: fixed;
     margin-top: -2vh;
+  }
+
+  #newchangesinbutton{
+    padding :15px 21px !important
+  }
+  
+  
+
+  .events-left-event5-btn2{
+    padding : 15px 21px !important;
   }
 
   .events-left {
@@ -377,7 +396,7 @@ padding: 15px 30px !important;
 
   .events-left-event5-btn2,
   .events-left-event5-btn2 {
-    height: 40px !important;
+    /* height: 40px !important; */
   }
 
   .event-photo {

@@ -100,9 +100,13 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    cursor: default;
+    cursor: pointer;
     margin-left: 40px;
 
+}
+
+.col:hover{
+    text-decoration: underline;
 }
 
 .col-yellow {
