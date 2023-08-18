@@ -1,7 +1,7 @@
 import React , { useState } from 'react'
 import "./MedianavStyle.css"
 import logo from "../../assests/logo.svg";
-import Cross from "../../assests/Cross.webp";
+import Cross from "../../assests/cross.webp";
 import { Link, useNavigate } from "react-router-dom";
 import imgnav from "../../assests/imgnav.webp";
 import logo1 from "../../assests/Logo23.svg";

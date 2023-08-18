@@ -22,7 +22,7 @@
   height: 80vh;
   position: relative;
   z-index: 3;
-  overflow-y:hidden;
+  overflow-y: hidden;
 
 }
 
@@ -200,8 +200,9 @@
   letter-spacing: 0.4px;
   cursor: pointer;
 }
-#newchangesinbutton{
-padding: 15px 30px !important;
+
+#newchangesinbutton {
+  padding: 15px 30px !important;
 }
 
 .events-left-event5-btn2 {
@@ -226,7 +227,7 @@ padding: 15px 30px !important;
   background: transparent;
   letter-spacing: 0.4px;
   cursor: pointer;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .events-left-event6 {
@@ -350,6 +351,7 @@ padding: 15px 30px !important;
   background: #F7B900;
 }
 
+
 #cross_img_event{
   width:10px;
   background-color:white;
@@ -358,6 +360,10 @@ padding: 15px 30px !important;
 @media (max-width:1500px){
   .events-left-event1 h1{
     font-size:3.3vw;
+
+@media (max-width:1500px) {
+  .events-left-event1 h1 {
+    font-size: 3.3vw;
   }
 }
 
@@ -373,14 +379,14 @@ padding: 15px 30px !important;
     margin-top: -2vh;
   }
 
-  #newchangesinbutton{
-    padding :15px 21px !important
+  #newchangesinbutton {
+    padding: 15px 21px !important
   }
-  
-  
 
-  .events-left-event5-btn2{
-    padding : 15px 21px !important;
+
+
+  .events-left-event5-btn2 {
+    padding: 15px 21px !important;
   }
 
   .events-left {
@@ -388,14 +394,14 @@ padding: 15px 30px !important;
     height: 55%;
     gap: 11px;
     /* overflow-y:auto; */
-    overflow-x:hidden;
+    overflow-x: hidden;
   }
 
   .events-right {
     width: 80vw;
     height: 50%;
     justify-content: flex-start;
-    margin-top:5vh;
+    margin-top: 5vh;
   }
 
   .event-photo {
@@ -537,7 +543,7 @@ padding: 15px 30px !important;
     /* 18px */
     letter-spacing: -0.24px;
     margin: 0px 0;
-    width:90vw;
+    width: 90vw;
   }
 
   .events-left-event4 {
@@ -555,9 +561,11 @@ padding: 15px 30px !important;
     /* 110% */
     letter-spacing: -0.8px;
   }
-  .events-left-event7 input{
+
+  .events-left-event7 input {
     width: 341.499px;
   }
+
   .events-left-event4 span {
     color: #FFF;
     font-family: Comic Sans MS;
@@ -568,6 +576,7 @@ padding: 15px 30px !important;
     /* 125% */
     letter-spacing: -0.32px;
   }
+
 }
 
 .events-left-event {
@@ -597,8 +606,34 @@ padding: 15px 30px !important;
   .bg-events {
     display: none;
   }
+
+  .eventcard-nav {
+    display: flex !important;
+    color: #FFF !important;
+    font-family: Comic Neue !important;
+    font-size: 22px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+    height: 10vh !important;
+    justify-content: center !important;
+    width: 100% !important;
+    align-items: center !important;
+    gap: 18% !important;
+  }
+
+  .eventcards {
+    display: flex !important;
+    gap: 6vw !important;
+    overflow-y: auto !important;
+    justify-content: center !important;
+    margin: 3vh 0 !important;
+    height: 68vh !important; ;
+    flex-wrap: wrap !important;
+  }
 }
-@media screen and (max-width:600px){
+
+@media screen and (max-width:600px) {
   .events-left-event1 h1 {
     color: #FFF;
     font-family: Rowdies;

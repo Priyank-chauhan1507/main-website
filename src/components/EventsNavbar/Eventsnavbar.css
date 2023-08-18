@@ -10,8 +10,8 @@
     width: 100vw;
 }
 
-.event-nav-left{
-    width:90px;
+.event-nav-left {
+    width: 90px;
 }
 
 .event-nav-right {
@@ -67,7 +67,7 @@
     align-items: center;
     gap: 10px;
     /* margin-right: 4vw; */
-    padding:5px 8px;
+    padding: 5px 8px;
 }
 
 
@@ -105,7 +105,7 @@
 
 }
 
-.col:hover{
+.col:hover {
     text-decoration: underline;
 }
 
@@ -163,7 +163,7 @@
 
     .slidebar1 {
         position: absolute;
-        top: 10vh;
+        top: 0vh;
         right: 0vw;
         width: 100vw;
         z-index: 6;
@@ -172,10 +172,26 @@
         align-items: center;
         animation: slide .5s ease-in forwards;
         padding-bottom: 20px;
+        min-height: 100vh;
     }
 
     .slidebar1 h1 {
-        color: #F7B900;
+
+        color: #FFF;
+        text-align: justify;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Rowdies;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 30px 0;
+    }
+
+    .slidebar1 h4 {
+
+        color: #FFF;
         text-align: justify;
         leading-trim: both;
         text-edge: cap;
@@ -185,6 +201,20 @@
         font-weight: 700;
         line-height: normal;
         margin: 30px 0;
+        margin-top: 13vh;
+    }
+
+    .slidebar1 h3 {
+
+        color: #FFF;
+        text-align: justify;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Rowdies;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
     .slidebar1 span {
@@ -198,6 +228,7 @@
         font-weight: 700;
         line-height: normal;
         margin: 20px 0;
+        transition: .3s ease-in;
     }
 
     .slidebar1 h3 {
@@ -235,6 +266,15 @@
     display: none;
 }
 
+.inner_mob_nav {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    z-index: 8;
+    justify-content: space-between;
+}
+
 @keyframes slide {
     0% {
         right: -100vw;
@@ -244,6 +284,50 @@
         right: 0vw;
         background: url(../../assests/bgmobile.webp);
         background-size: cover;
-        background-position:center center;
+        background-position: center center;
     }
+}
+
+.slidebar1 h5 {
+    color: #FFF;
+    text-align: justify;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Rowdies;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 30px 0;
+}
+
+.mob-reg {
+    margin-top: auto;
+    margin-bottom: 40px;
+    display: inline-flex;
+    padding: 8px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: rgba(255, 0, 0, 0.66);
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Comic Sans MS;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: 0.4px;
+}
+a{
+    text-decoration: none;
+}
+.logo3{
+    height: 50px;
+    width: 50px;
 }

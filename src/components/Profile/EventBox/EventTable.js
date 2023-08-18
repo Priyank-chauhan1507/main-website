@@ -100,7 +100,6 @@ function EventTable() {
         >
           Live Sketching
         </div>
-        <div className="col colhover">Sneaker Design</div>
         {/* <div className="nav-events"/> */}
       </div>
       <div className="drop-row">
@@ -170,7 +169,7 @@ function EventTable() {
             onHandleClick(28);
           }}
         >
-          Nerdy-Bate
+          Slam Poetry
         </div>
         <div
           className="col colhover"
@@ -178,7 +177,7 @@ function EventTable() {
             onHandleClick(30);
           }}
         >
-          Slam Poetry
+          Nerdy Bait
         </div>
       </div>
       <div className="drop-row">
@@ -280,14 +279,14 @@ function EventTable() {
         >
           Human Foosball
         </div>
-        <div
-          className="col colhover"
-          onClick={(e) => {
-            onHandleClick(49);
-          }}
-        >
-          The Boulevard Games
-        </div>
+        {/* <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(49);
+                      }}
+                    >
+                      The Boulevard Games
+                    </div> */}
         <div
           className="col colhover"
           onClick={(e) => {
@@ -376,11 +375,15 @@ function EventTable() {
         >
           Abhivyakti
         </div>
+
         <div className="col colhover">Nukkad Natak</div>
-        <div className="col colhover">Mimicry</div>
-        <div className="col colhover">Monologue</div>
+        {/* <div className="col colhover">Mimicry</div>
+                    <div className="col colhover">Monologue</div> */}
+
+        {/* <div className="col col-yellow">Marketing and Finance</div> */}
 
         <div className="col col-yellow">Marketing and Finance</div>
+
         <div
           className="col colhover"
           onClick={(e) => {
@@ -412,6 +415,23 @@ function EventTable() {
           }}
         >
           A(d)esign
+        </div>
+        <div className="col col-yellow">Quizzing</div>
+        <div
+          className="col colhover"
+          onClick={(e) => {
+            onHandleClick(12);
+          }}
+        >
+          Quriosity
+        </div>
+        <div
+          className="col colhover"
+          onClick={(e) => {
+            onHandleClick(13);
+          }}
+        >
+          Telly sporcle
         </div>
       </div>
       <div className="drop-row">
@@ -475,18 +495,14 @@ function EventTable() {
         >
           Box Office
         </div>
-        <div
-          className="col colhover"
-          onClick={(e) => {
-            onHandleClick(73);
-          }}
-        >
-          Thomsography*
-        </div>
+
         {/* <div className="col col-yellow">Cultural Workshops</div> */}
         {/* <div className="col col-yellow1">Technical Workshops</div> */}
       </div>
       <div className="drop-row">
+        <div className="col col-yellow">Online</div>
+        <div className="col colhover">Bgmi</div>
+        <div className="col colhover">Quizardry</div>
         <div className="col col-yellow">Night Life</div>
         <div
           className="col colhover"
@@ -497,12 +513,19 @@ function EventTable() {
           Silent DJ
         </div>
         <div className="col colhover">Nightlife Cafe</div>
-        <div className="col colhover ">Movie Screening</div>
+        <div className="col colhover ">Karaoke</div>
         <div className="col col-yellow">New Events</div>
         <div className="col colhover">Sneaker Design*</div>
         <div className="col colhover">Mimicry*</div>
         <div className="col colhover">Monologue*</div>
-
+        <div
+          className="col colhover"
+          onClick={(e) => {
+            onHandleClick(73);
+          }}
+        >
+          Thomsography*
+        </div>
         <div className="col colhover">Vlogging*</div>
       </div>
     </div>
