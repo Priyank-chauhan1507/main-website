@@ -545,7 +545,9 @@ padding: 15px 30px !important;
     /* 110% */
     letter-spacing: -0.8px;
   }
-
+  .events-left-event7 input{
+    width: 341.499px;
+  }
   .events-left-event4 span {
     color: #FFF;
     font-family: Comic Sans MS;
@@ -570,6 +572,7 @@ padding: 15px 30px !important;
 
 .event-photo1 {
   display: none;
+  margin-top: 40px;
 }
 
 @media screen and (max-width:768px) {
