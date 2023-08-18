@@ -67,104 +67,6 @@ function Navbar({ color, disable, setregister, register }) {
                   }}
                 >
                   <div className="drop-row">
-                    {/* <div className="nav-events"/> */}
-                    <div className="col col-yellow">Dramatics</div>
-                    <div
-                      className="col"
-                      onClick={(e) => {
-                        onHandleClick(9);
-                      }}
-                    >
-                      Abhivyakti
-                    </div>
-                    <div className="col colhover">Nukkad Natak</div>
-                    <div className="col colhover">Mimicry</div>
-                    <div className="col colhover">Monologue</div>
-                    <div className="col col-yellow">Music</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(4);
-                      }}
-                    >
-                      Sargam (Solo)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(5);
-                      }}
-                    >
-                      Sargam (Duet)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(3);
-                      }}
-                    >
-                      Sargam (Team)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(6);
-                      }}
-                    >
-                      Battle Of Bands
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(7);
-                      }}
-                    >
-                      Gully War
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(8);
-                      }}
-                    >
-                      War of DJ'S
-                    </div>
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Gaming</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(46);
-                      }}
-                    >
-                      Apocalypse
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(48);
-                      }}
-                    >
-                      Queen's Gambit
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(51);
-                      }}
-                    >
-                      Snooker's Elite
-                    </div>
-                    <div className="col col-yellow">Culinary</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(35);
-                      }}
-                    >
-                      Food Fiesta
-                    </div>
                     <div className="col col-yellow">Choreo</div>
                     <div
                       className="col colhover"
@@ -206,80 +108,6 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Step up (Team)
                     </div>
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Fashion</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(29);
-                      }}
-                    >
-                      Campus Princess
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(31);
-                      }}
-                    >
-                      Mr & Ms Thomso
-                    </div>
-                    <div className="col colhover">Vogue</div>
-                    <div className="col colhover">Cosplay</div>
-                    <div className="col col-yellow">Entertainment</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(17);
-                      }}
-                    >
-                      Thomso's Got Talent(Solo)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(18);
-                      }}
-                    >
-                      Thomso's Got Talent(Team)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(20);
-                      }}
-                    >
-                      Open MIC
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(62);
-                      }}
-                    >
-                      The Dank Knight
-                    </div>
-                    <div className="col col-yellow">Cinematic</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(14);
-                      }}
-                    >
-                      16 Frames
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(15);
-                      }}
-                    >
-                      Box Office
-                    </div>
-                  </div>
-                  <div className="drop-row">
-                    {" "}
                     <div className="col col-yellow">Da Vinci's Gala</div>
                     <div
                       className="col colhover"
@@ -330,41 +158,28 @@ function Navbar({ color, disable, setregister, register }) {
                       Live Sketching
                     </div>
                     <div className="col colhover">Sneaker Design</div>
-                    <div className="col col-yellow">Adventure</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(52);
-                      }}
-                    >
-                      Seiger
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(53);
-                      }}
-                    >
-                      Treasure Hunt
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(54);
-                      }}
-                    >
-                      Street Soccer
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(55);
-                      }}
-                    >
-                      Scavenger Hunt
-                    </div>
+                    {/* <div className="nav-events"/> */}
                   </div>
                   <div className="drop-row">
+                    <div className="col col-yellow">Fashion</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(29);
+                      }}
+                    >
+                      Campus Princess
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(31);
+                      }}
+                    >
+                      Mr & Ms Thomso
+                    </div>
+                    <div className="col colhover">Vogue</div>
+                    <div className="col colhover">Cosplay</div>
                     <div className="col col-yellow">LITFest</div>
                     <div
                       className="col colhover"
@@ -422,50 +237,56 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Slam Poetry
                     </div>
-                    <div className="col col-yellow">Marketing and Finance</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(22);
-                      }}
-                    >
-                      Auction Frenzy
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(23);
-                      }}
-                    >
-                      Corporata
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(25);
-                      }}
-                    >
-                      Mark Sense
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(26);
-                      }}
-                    >
-                      A(d)esign
-                    </div>
                   </div>
                   <div className="drop-row">
-                    {" "}
-                    <div className="col col-yellow">MUN</div>
+                    <div className="col col-yellow">Music</div>
                     <div
                       className="col colhover"
                       onClick={(e) => {
-                        onHandleClick(32);
+                        onHandleClick(4);
                       }}
                     >
-                      IITR-MUN
+                      Sargam (Solo)
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(5);
+                      }}
+                    >
+                      Sargam (Duet)
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(3);
+                      }}
+                    >
+                      Sargam (Team)
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(6);
+                      }}
+                    >
+                      Battle Of Bands
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(7);
+                      }}
+                    >
+                      Gully War
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(8);
+                      }}
+                    >
+                      War of DJ'S
                     </div>
                     <div className="col col-yellow">Carnival</div>
                     {/* <div
@@ -532,6 +353,193 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Tattoo Artist
                     </div>
+                  </div>
+                  <div className="drop-row">
+                    <div className="col col-yellow">Entertainment</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(17);
+                      }}
+                    >
+                      Thomso's Got Talent(Solo)
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(18);
+                      }}
+                    >
+                      Thomso's Got Talent(Team)
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(20);
+                      }}
+                    >
+                      Open MIC
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(62);
+                      }}
+                    >
+                      The Dank Knight
+                    </div>
+
+                    <div className="col col-yellow">Adventure</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(52);
+                      }}
+                    >
+                      Seiger
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(53);
+                      }}
+                    >
+                      Treasure Hunt
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(54);
+                      }}
+                    >
+                      Street Soccer
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(55);
+                      }}
+                    >
+                      Scavenger Hunt
+                    </div>
+                  </div>
+                  <div className="drop-row">
+                    <div className="col col-yellow">Dramatics</div>
+                    <div
+                      className="col"
+                      onClick={(e) => {
+                        onHandleClick(9);
+                      }}
+                    >
+                      Abhivyakti
+                    </div>
+                    <div className="col colhover">Nukkad Natak</div>
+                    <div className="col colhover">Mimicry</div>
+                    <div className="col colhover">Monologue</div>
+
+                    <div className="col col-yellow">Marketing and Finance</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(22);
+                      }}
+                    >
+                      Auction Frenzy
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(23);
+                      }}
+                    >
+                      Corporata
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(25);
+                      }}
+                    >
+                      Mark Sense
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(26);
+                      }}
+                    >
+                      A(d)esign
+                    </div>
+                  </div>
+                  <div className="drop-row">
+                    <div className="col col-yellow">Gaming</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(46);
+                      }}
+                    >
+                      Apocalypse
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(48);
+                      }}
+                    >
+                      Queen's Gambit
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(51);
+                      }}
+                    >
+                      Snooker's Elite
+                    </div>
+                    <div className="col col-yellow">Culinary</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(35);
+                      }}
+                    >
+                      Food Fiesta
+                    </div>
+                    <div className="col col-yellow">MUN</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(32);
+                      }}
+                    >
+                      IITR-MUN
+                    </div>
+                    <div className="col col-yellow">Cinematic</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(14);
+                      }}
+                    >
+                      16 Frames
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(15);
+                      }}
+                    >
+                      Box Office
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(73);
+                      }}
+                    >
+                      Thomsography*
+                    </div>
                     {/* <div className="col col-yellow">Cultural Workshops</div> */}
                     {/* <div className="col col-yellow1">Technical Workshops</div> */}
                   </div>
@@ -551,14 +559,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div className="col colhover">Sneaker Design*</div>
                     <div className="col colhover">Mimicry*</div>
                     <div className="col colhover">Monologue*</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(73);
-                      }}
-                    >
-                      Thomsography*
-                    </div>
+
                     <div className="col colhover">Vlogging*</div>
                   </div>
                 </div>
