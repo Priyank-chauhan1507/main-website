@@ -63,7 +63,7 @@
 
 .eventcards::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .eventcard-nav {
     display: flex;
@@ -120,4 +120,18 @@
     /* 110.628% */
     margin: 0 15px 6px;
     letter-spacing: -0.24px;
+}
+
+@media screen and (max-width:768px) {
+    .events-team-name {
+        font-size: 1.7vw !important;
+    }
+
+    .eventcard p {
+        font-size: 2vw;
+    }
+    
+    .eventcard h2 {
+        font-size: 4vw;
+    }
 }
