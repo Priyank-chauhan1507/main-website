@@ -101,9 +101,10 @@
     justify-content: center;
     align-items: center;
     border: 0.5px solid rgba(255, 255, 255, 0.5);
-    margin-left: 24px;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw; 
     margin-top: 7px;
-    width: 88vw;
+    width: 84vw;
 }
 
 
@@ -208,4 +209,57 @@
 
 .paymentmobpage{
     display: none;
+  }
+
+
+  @media only screen and (max-width: 360px) {
+
+    .nav-active {
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 4vw;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+    
+        color: #FFFFFF;
+    
+    }
+    
+    .nav-passive {
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 4vw;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+    
+        color: rgba(255, 255, 255, 0.5);
+    
+    }
+    
+    .nav-passive {
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 4vw;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+    
+        color: rgba(255, 255, 255, 0.5);
+    
+    }
+
   }
