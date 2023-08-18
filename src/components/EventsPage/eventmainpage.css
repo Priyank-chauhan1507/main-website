@@ -351,6 +351,18 @@
   background: #F7B900;
 }
 
+
+#cross_img_event{
+  width:10px;
+  background-color:white;
+}
+
+@media (max-width:1500px){
+  .events-left-event1 h1{
+    font-size:3.3vw;
+  }
+}
+
 @media (max-width:1500px) {
   .events-left-event1 h1 {
     font-size: 3.3vw;

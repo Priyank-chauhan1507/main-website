@@ -4,6 +4,7 @@ import "./Eventsnavbar.css";
 import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
+import img_profile from "../../assests/img_profile.svg"
 
 function Navbar({ color, disable, setregister, register }) {
   const [display1, setdisplay] = useState("none");
@@ -177,8 +178,22 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Mr & Ms Thomso
                     </div>
-                    <div className="col colhover">Vogue</div>
-                    <div className="col colhover">Cosplay</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(78);
+                      }}
+                    >
+                      Vogue
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(63);
+                      }}
+                    >
+                      Coscon
+                    </div>
                     <div className="col col-yellow">LITFest</div>
                     <div
                       className="col colhover"
@@ -223,7 +238,7 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col colhover"
                       onClick={(e) => {
-                        onHandleClick(28);
+                        onHandleClick(30);
                       }}
                     >
                       Slam Poetry
@@ -231,10 +246,10 @@ function Navbar({ color, disable, setregister, register }) {
                     <div
                       className="col colhover"
                       onClick={(e) => {
-                        onHandleClick(30);
+                        onHandleClick(28);
                       }}
                     >
-                      Nerdy Bait
+                      Nerdy Bate
                     </div>
                   </div>
                   <div className="drop-row">
@@ -433,7 +448,14 @@ function Navbar({ color, disable, setregister, register }) {
                       Abhivyakti
                     </div>
 
-                    <div className="col colhover">Nukkad Natak</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(79);
+                      }}
+                    >
+                      Nukkad Natak
+                    </div>
                     {/* <div className="col colhover">Mimicry</div>
                     <div className="col colhover">Monologue</div> */}
 
@@ -558,8 +580,22 @@ function Navbar({ color, disable, setregister, register }) {
                   </div>
                   <div className="drop-row">
                     <div className="col col-yellow">Online</div>
-                    <div className="col colhover">Bgmi</div>
-                    <div className="col colhover">Quizardry</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(80);
+                      }}
+                    >
+                      Bgmi
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(81);
+                      }}
+                    >
+                      Quizardry
+                    </div>
                     <div className="col col-yellow">Night Life</div>
                     <div
                       className="col colhover"
@@ -569,12 +605,47 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Silent DJ
                     </div>
-                    <div className="col colhover">Nightlife Cafe</div>
-                    <div className="col colhover ">Karaoke</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(82);
+                      }}
+                    >
+                      Nightlife Cafe
+                    </div>
+                    <div
+                      className="col colhover "
+                      onClick={(e) => {
+                        onHandleClick(83);
+                      }}
+                    >
+                      Karaoke
+                    </div>
                     <div className="col col-yellow">New Events</div>
-                    <div className="col colhover">Sneaker Design*</div>
-                    <div className="col colhover">Mimicry*</div>
-                    <div className="col colhover">Monologue*</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(84);
+                      }}
+                    >
+                      Sneaker Design*
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(85);
+                      }}
+                    >
+                      Mimicry*
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(86);
+                      }}
+                    >
+                      Monologue*
+                    </div>
                     <div
                       className="col colhover"
                       onClick={(e) => {
@@ -583,7 +654,14 @@ function Navbar({ color, disable, setregister, register }) {
                     >
                       Thomsography*
                     </div>
-                    <div className="col colhover">Vlogging*</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(87);
+                      }}
+                    >
+                      Vlogging*
+                    </div>
                   </div>
                 </div>
               </>
@@ -606,13 +684,7 @@ function Navbar({ color, disable, setregister, register }) {
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
-              <button
-                onClick={handleLogout}
-                className="event-regi-btn"
-                id="registernow"
-              >
-                LOG OUT
-              </button>
+            <img src={img_profile} onClick={()=>{navigate("/profile")}} id="img_profile" />
             </>
           ) : (
             <>

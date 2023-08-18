@@ -185,6 +185,13 @@ const MainProfileBox = ({data}) => {
                 </Link>
               </div>
             )}
+             <button
+            className="main-logout-btn"
+            onClick={() => setLogout(!logout)}
+          >
+            <img src={log} alt="log" />
+            <span>Logout</span>
+          </button>
           </div>
         </div>
       </div>
@@ -267,13 +274,6 @@ const MainProfileBox = ({data}) => {
               </div>
             </div>
           </div>
-          <button
-            className="main-logout-btn"
-            onClick={() => setLogout(!logout)}
-          >
-            <img src={log} alt="log" />
-            <span>Logout</span>
-          </button>
         </div>
         <div className="c-line">
           <img className="c-line1-img" src={line} alt="line" />
