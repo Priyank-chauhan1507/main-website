@@ -11,11 +11,14 @@ import axios from "axios";
 import { fetchUser } from "../../User/UserActions";
 import Loader from "../../Loader/Loader";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import log from "../../../assests/logout-logo.svg";
+import cs1 from "../../../assests/CautionSign1.svg";
 
 
 const NewNewProfileMobile = ({data}) => {
   const Locator = useLocation();
   const locator = useLocation();
+  const [logout, setLogout] = useState(0);
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
   const [userDetails, setuserDetails] = useState({})
@@ -45,6 +48,15 @@ const NewNewProfileMobile = ({data}) => {
   const OpenCollege = () => {
     setOpencollege(!opencollege);
   };
+
+  function handleLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("Userobj");
+    setLogout(!logout);
+    window.location.pathname = "/";
+  }
+
 
   const changeHandler = async (e) => {
     // console.log(files);
@@ -275,7 +287,43 @@ const NewNewProfileMobile = ({data}) => {
                 </button>
               )}
               {file && <div style={{ color: "white" }}>{file.name}</div>}
+            </div>        
+            <button
+            className="main-logout-btn"
+            onClick={() => setLogout(!logout)}
+          >
+            <img src={log} alt="log" />
+            <span>Logout</span>
+          </button>
+          <div className={!logout ? "none" : ""} id="logout">
+        <div className="l_body">
+          <div className="logout_body">
+            <div className="redpic">
+              <img src={cs1} alt="redpic" />
             </div>
+            <div className="textt">
+              <div className="fText">Are You Sure?</div>
+              <div className="sText">
+                Do you really want to leave and logout?
+              </div>
+            </div>
+            <div className="btns">
+              <button className="btn1">
+                <span
+                  onClick={() => {
+                    setLogout(!logout);
+                  }}
+                >
+                  Cancel
+                </span>
+              </button>
+              <button className="btn2" onClick={handleLogout}>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
           </div>
         </div>
       </div>

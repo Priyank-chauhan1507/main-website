@@ -20,6 +20,7 @@ import { message } from "antd";
 import cross from "../../assests/cross.png";
 import loader from "../../assests/loader.gif";
 import Loader from "../Loader/Loader";
+import cross_img from "../../assests/Cross.webp"
 
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
@@ -292,7 +293,7 @@ const EventMainPage = ({ events }) => {
               </>
             ) : (
               <>
-                <h1 className="events-left-event6">Registration</h1>
+                <h1 className="events-left-event6">Registration</h1><img src={cross_img} alt="" onclick={()=>{navigate("/pevents")}} id="cross_img_event"/>
                 <form
                   className="events-left-event7"
                   onSubmit={(e) => onSubmit(e)}

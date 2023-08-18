@@ -240,7 +240,8 @@ line-height: normal;
   align-items: center;
   letter-spacing: -0.02em;
   color: #333333;
-  background: #FFC414;
+  background: rgb(255, 53, 53);
+  margin-left:10px;
 }
 .c-line {
   margin-top: 7vh;
