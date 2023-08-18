@@ -593,7 +593,7 @@ padding: 15px 30px !important;
     display: none;
   }
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:600px){
   .events-left-event1 h1 {
     color: #FFF;
     font-family: Rowdies;
