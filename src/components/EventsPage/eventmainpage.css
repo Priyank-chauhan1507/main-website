@@ -33,7 +33,7 @@
 }
 
 .events-right {
-  width: 37vw;
+  width: 40vw;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -79,7 +79,7 @@
   color: #FFF;
   margin-top: 8px;
   font-family: Comic Sans MS;
-  font-size: 5vw;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
@@ -334,13 +334,6 @@
   background: #F7B900;
 }
 
-@media (max-width:800px){
-.event-photo{
-  height: 34vh;
-  margin-top:8vh;
-}
-}
- 
 @media (max-width:600px) {
   .events_back {
     flex-direction: column-reverse;
@@ -355,8 +348,6 @@
     width: 100vw;
     height: 55%;
     gap: 11px;
-    overflow-y:auto;
-    overflow-x:hidden;
   }
 
   .events-right {
@@ -385,7 +376,6 @@
     display: block !important;
     width: 80vw;
     height: 30vh;
-    margin-top: 5vh;
   }
 
   .events-left-event2 {
@@ -488,7 +478,7 @@
   .events-left-event1 h1 {
     color: #FFF;
     font-family: Rowdies;
-    font-size: 10.5vw;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
