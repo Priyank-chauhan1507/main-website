@@ -52,7 +52,7 @@
   }
 
   .boxborder {
-    height: 100vh;
+    height: auto;
   }
 
   .boxborder::-webkit-scrollbar {

@@ -117,6 +117,10 @@
         height: auto;
     }
 
+    .main-box-center-event-payment{
+        display:none;
+      }    
+      
     .main-prof-box-detail-row {
         display: flex;
         gap: 15vw;
