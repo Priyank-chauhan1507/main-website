@@ -17,7 +17,7 @@ import photo from "../../assests/events.png";
 import photo1 from "../../assests/street_soccer_1.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { message } from "antd";
-import cross from "../../assests/cross.png";
+import cross from "../../assests/cross.webp";
 import loader from "../../assests/loader.gif";
 import Loader from "../Loader/Loader";
 
@@ -292,6 +292,7 @@ const EventMainPage = ({ events }) => {
               </>
             ) : (
               <>
+              <img src={cross} className="event-cross" onClick={()=>{setregister(!register)}} alt="" />
                 <h1 className="events-left-event6">Registration</h1>
                 <form
                   className="events-left-event7"
