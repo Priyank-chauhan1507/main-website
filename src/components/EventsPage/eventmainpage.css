@@ -189,6 +189,9 @@
   letter-spacing: 0.4px;
   cursor: pointer;
 }
+#newchangesinbutton{
+padding: 15px 30px !important;
+}
 
 .events-left-event5-btn2 {
   display: inline-flex;
