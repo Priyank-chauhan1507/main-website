@@ -354,6 +354,16 @@ padding: 15px 30px !important;
     margin-top: -2vh;
   }
 
+  #newchangesinbutton{
+    padding :15px 21px !important
+  }
+  
+  
+
+  .events-left-event5-btn2{
+    padding : 15px 21px !important;
+  }
+
   .events-left {
     width: 100vw;
     height: 55%;
@@ -377,7 +387,7 @@ padding: 15px 30px !important;
 
   .events-left-event5-btn2,
   .events-left-event5-btn2 {
-    height: 40px !important;
+    /* height: 40px !important; */
   }
 
   .event-photo {
@@ -565,4 +575,5 @@ padding: 15px 30px !important;
   .bg-events {
     display: none;
   }
+  
 }
