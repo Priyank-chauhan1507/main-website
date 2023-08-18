@@ -22,6 +22,7 @@
   height: 80vh;
   position: relative;
   z-index: 3;
+  overflow-y:auto;
 }
 
 .events-left {
@@ -348,13 +349,15 @@
     width: 100vw;
     height: 55%;
     gap: 11px;
+    /* overflow-y:auto; */
+    overflow-x:hidden;
   }
 
   .events-right {
     width: 80vw;
     height: 50%;
     justify-content: flex-start;
-
+    margin-top:5vh;
   }
 
   .event-photo {
@@ -496,6 +499,7 @@
     /* 18px */
     letter-spacing: -0.24px;
     margin: 0px 0;
+    width:90vw;
   }
 
   .events-left-event4 {

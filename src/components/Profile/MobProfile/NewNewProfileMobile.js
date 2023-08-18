@@ -142,7 +142,7 @@ const NewNewProfileMobile = ({data}) => {
         <div className="mpb-line1" />
       </div>
       <div className={
-                  locator.pathname === "/paymentbox" || locator.pathname === "/eventbox" ? "paymentmobpage lsp-pic-1" : "lsp-pic-1"
+                  locator.pathname === "/payment" || locator.pathname === "/pevents" ? "paymentmobpage lsp-pic-1" : "lsp-pic-1"
                 }>
         <img className="lsp-img11" src={pic} alt="profilepic" />
         <div className="mob-lt1">
@@ -153,7 +153,7 @@ const NewNewProfileMobile = ({data}) => {
       <div className={
                   locator.pathname === "/paymentbox" || locator.pathname === "/eventbox" ? "paymentmobpage main-prof-box" : "main-prof-box"
                 }>
-        <div className="main-prof-box-flex-1">
+        <div className={ locator.pathname === "/payment" || locator.pathname === "/pevents" ? "main-box-center-event-payment" : "main-prof-box-flex-1"}>
           <div className="main-prof-detail-1">
             <div className="main-prof-box-head-div">
               <h1 className="main-prof-box-head-text1">College Details</h1>
