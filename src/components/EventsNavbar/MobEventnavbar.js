@@ -3,7 +3,7 @@ import logo from "../../assests/logo.svg";
 import logo1 from "../../assests/logo2.png";
 import bgmobile from "../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
-import cross from "../../assests/Cross.webp";
+import cross from "../../assests/cross.webp";
 function MobEventnavbar() {
   const navigate = useNavigate();
   const [event, setevent] = useState(false);
@@ -29,9 +29,7 @@ function MobEventnavbar() {
       par: "Dramatics",
       child: [
         { event: "Abhivyakti", href: 9 },
-        { event: "Nukkad Natak", href: null },
-        { event: "Mimicry", href: null },
-        { event: "Monologue", href: null },
+        { event: "Nukkad Natak", href: 79 },
       ],
     },
     {
@@ -61,8 +59,8 @@ function MobEventnavbar() {
       child: [
         { event: "Campus Princess", href: 29 },
         { event: "Mr & Ms Thomso", href: 31 },
-        { event: "Vogue", href: null },
-        { event: "Cosplay", href: null },
+        { event: "Vogue", href: 78 },
+        { event: "Coscon", href: 63 },
       ],
     },
     {
@@ -90,7 +88,6 @@ function MobEventnavbar() {
         { event: "Costume Design", href: 59 },
         { event: "Relay Rangoli", href: 60 },
         { event: "Live Sketching", href: 61 },
-        { event: "Sneaker Design", href: null },
       ],
     },
     {
@@ -128,42 +125,39 @@ function MobEventnavbar() {
       child: [{ event: "IITR-MUN", href: 32 }],
     },
     {
-      par: "LITFest",
+      par: "Carnival",
       child: [
-        { event: "Hunger Games", href: 39 },
         { event: "Sumo Wrestling", href: 40 },
         { event: "Air Rifle Shooting", href: 41 },
         { event: "Caricature", href: 44 },
         { event: "Body Zorbing", href: 45 },
         { event: "Human Foosball", href: 47 },
-        { event: "The Boulevard Games", href: 49 },
         { event: "Tattoo Artist", href: 50 },
       ],
-    },
-    {
-      par: "Cultural Workshops",
-      child: [],
-    },
-    {
-      par: "Technical Workshops",
-      child: [],
     },
     {
       par: "Night Life",
       child: [
         { event: "Silent DJ", href: 1 },
-        { event: "Nightlife Cafe", href: null },
-        { event: "Movie Screening", href: null },
+        { event: "Nightlife Cafe", href: 82 },
+        { event: "Karaoke", href: 83 },
       ],
     },
     {
       par: "New Events",
       child: [
-        { event: "Sneaker Design*", href: null },
-        { event: "Mimicry*", href: null },
-        { event: "Monologue*", href: null },
-        { event: "Thomsography*", href: null },
-        { event: "Vlogging*", href: null },
+        { event: "Sneaker Design*", href: 84 },
+        { event: "Mimicry*", href: 85 },
+        { event: "Monologue*", href: 86 },
+        { event: "Thomsography*", href: 73 },
+        { event: "Vlogging*", href: 87 },
+      ],
+    },
+    {
+      par: "Online",
+      child: [
+        { event: "Bgmi*", href: 80 },
+        { event: "Quizardry*", href: 81 },
       ],
     },
   ];
@@ -258,7 +252,7 @@ function MobEventnavbar() {
           <a href="https://ca.thomso.in/" target="blank">
             <h5>CA Portal</h5>
           </a>
-          <a href="https://ca.thomso.in/" target="blank">
+          <a href="https://zonals.thomso.in/" target="blank">
             <h5>Zonals</h5>
           </a>
           {localStorage.getItem("token") && (
