@@ -229,10 +229,11 @@ const EventMainPage = ({ events }) => {
                 <p className="events-left-event2">
                   {eventdata[0]?.description}
                 </p>
+                  {eventdata[0]?.note != null && (
                 <div className="events-left-event3">
                   <span>Note:</span>
                   <p>{eventdata[0]?.note}</p>
-                </div>
+                </div>)}
                 {eventdata[0]?.is_price == true && (
                   <div className="events-left-event4">
                     <span>
@@ -278,13 +279,14 @@ const EventMainPage = ({ events }) => {
                       <>REGISTER</>
                     )}
                   </button>
+                  {eventdata[0]?.rulebook != null && (
                   <a
                     className="events-left-event5-btn2"
                     href={`${eventdata[0]?.rulebook}`}
                     target="_blank"
                   >
                     RULEBOOK
-                  </a>
+                  </a>)}
                 </div>
               </>
             ) : (
@@ -347,8 +349,8 @@ const EventMainPage = ({ events }) => {
             )}
           </div>
           <div className="events-right">
-            <img src={photo} className="event-photo" alt="" />
-            <img src={photo1} className="event-photo1" alt="" />
+            <img src={eventdata[0]?.image===null ? photo : eventdata[0]?.image} className="event-photo" alt="" />
+            <img src={eventdata[0]?.image===null ? photo : eventdata[0]?.image} className="event-photo1" alt="" />
           </div>
         </div>
       </div>
