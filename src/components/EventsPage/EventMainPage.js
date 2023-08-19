@@ -94,7 +94,9 @@ const EventMainPage = ({ events }) => {
             message.success(
               `🎉You are registerd successfully for ${eventdata[0]?.name}`
             );
+            
             setregister(true);
+            getEvents();
             // if (button == "Register") {
             //   setButton("Registered");
             // }
@@ -118,7 +120,7 @@ const EventMainPage = ({ events }) => {
 
   useEffect(() => {
     loadUserData();
-  }, []);
+  }, [id]);
 
   const loadUserData = async () => {
     try {
