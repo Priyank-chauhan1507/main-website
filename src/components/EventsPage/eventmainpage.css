@@ -240,6 +240,7 @@
   letter-spacing: 0.67px;
   margin-top: 15%;
   padding-bottom: 2%;
+  gap: 24vw;
 }
 
 .events-left-event7 {
@@ -374,6 +375,11 @@
     font-size: 3.3vw;
   }
 }
+@media (max-width:1200px) {
+  .events-left-event6{
+    gap: 15vw;
+  }
+}
 
 
 
@@ -500,8 +506,8 @@
 
   .event-cross {
     position: absolute;
-    top: 45.5vh !important;
-    left: 78vw !important;
+    /* top: 45.5vh !important; */
+    /* left: 78vw !important; */
     cursor: pointer;
     width: 6vw;
   }
