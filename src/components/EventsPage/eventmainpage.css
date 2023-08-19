@@ -273,6 +273,8 @@
 
 .events-left-event6 {
   padding-bottom: 30px;
+  display: flex;
+  gap: 219.499px;
 }
 
 .events-left-event8 {
@@ -353,7 +355,8 @@
 
 
 #cross_img_event{
-  width:10px;
+  height: 22px;
+  margin-top: 5px;
   background-color:white;
 }
 
@@ -484,6 +487,8 @@
 
   .events-left-event6 {
     padding-bottom: 20px;
+    display: flex;
+    gap: 139.499px;
   }
 
   .events-left-event6 {

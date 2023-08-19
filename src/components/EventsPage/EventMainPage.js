@@ -294,15 +294,15 @@ const EventMainPage = ({ events }) => {
               </>
             ) : (
               <>
-                <h1 className="events-left-event6">Registration</h1>
-                <img
+                <h1 className="events-left-event6">Registration                 <img
                   src={cross_img}
                   alt=""
                   onclick={() => {
                     navigate("/pevents");
                   }}
                   id="cross_img_event"
-                />
+                /></h1>
+
                 <form
                   className="events-left-event7"
                   onSubmit={(e) => onSubmit(e)}
