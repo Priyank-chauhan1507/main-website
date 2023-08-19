@@ -110,7 +110,7 @@ const MainProfileBox = ({data}) => {
   const changeHandler1 = async (file) => {
     const userId = userDetails?.user_id;
     let formData = new FormData();
-    formData.append("college_id", file);
+    formData.append("profile_pic", file);
     setprofilepic(true);
 
     if (file.size > 5e6) {
@@ -166,7 +166,7 @@ const MainProfileBox = ({data}) => {
                 >
                 <img className="lsp-img1" src={pic} alt="profilepic" /> 
                 <div className="lsp-text0">
-                Upload Profile 
+                {profilepic?"profile uploaded":"Upload Profile"}
                 </div>
             </FileUploader>
             </div>
