@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 .eventcard1 {
@@ -132,14 +132,21 @@
 
 @media screen and (max-width:768px) {
     .events-team-name {
-        font-size: 1.7vw !important;
+        font-size: 13px !important;
+        line-height: 13px !important;
+        padding-bottom: 10px !important;
     }
 
     .eventcard p {
-        font-size: 2vw;
+        font-size: 10px !important;
+        margin-left: 13px !important;
+        padding-right: 3px !important;
     }
     
     .eventcard h2 {
-        font-size: 4vw;
+        font-size: 20px;
+
+        line-height: 20px !important;
+
     }
 }
