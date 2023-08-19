@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../Profile/Profile.css";
 import "../LeftSideProfile/leftsideprofile.css";
+import log from "../../../assests/logout-logo.svg";
+import cs1 from "../../../assests/CautionSign1.svg";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
@@ -22,6 +24,7 @@ import EventCard from "../EventCard/EventCard";
 import EventTable from "./EventTable";
 const EventBox = () => {
   const navigate = useNavigate();
+  const [logout, setLogout] = useState(0);
   const [display1, setdisplay] = useState(false);
   const [display2, setdisplay2] = useState(false);
   const [disable, setdisable] = useState("notdisable");
@@ -46,6 +49,15 @@ const EventBox = () => {
         console.log(err);
       });
   };
+
+  function handleLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("Userobj");
+    setLogout(!logout);
+    window.location.pathname = "/";
+  }
+
 
   const getEvents = async () => {
     const res = axios
@@ -175,8 +187,44 @@ const EventBox = () => {
                       </Link>
                     </div>
                   )}
+                               <button
+            className="main-logout-btn"
+            onClick={() => setLogout(!logout)}
+          >
+            <img src={log} alt="log" />
+            <span>Logout</span>
+          </button>
                 </div>
               </div>
+              <div className={!logout ? "none" : ""} id="logout">
+        <div className="l_body">
+          <div className="logout_body">
+            <div className="redpic">
+              <img src={cs1} alt="redpic" />
+            </div>
+            <div className="textt">
+              <div className="fText">Are You Sure?</div>
+              <div className="sText">
+                Do you really want to leave and logout?
+              </div>
+            </div>
+            <div className="btns">
+              <button className="btn1">
+                <span
+                  onClick={() => {
+                    setLogout(!logout);
+                  }}
+                >
+                  Cancel
+                </span>
+              </button>
+              <button className="btn2" onClick={handleLogout}>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
               <div className="c-line1">
                 <img className="c-line1-img" src={line} alt="line" />
               </div>

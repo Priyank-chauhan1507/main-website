@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../Profile/Profile.css";
 import "../LeftSideProfile/leftsideprofile.css";
+import log from "../../../assests/logout-logo.svg";
+import cs1 from "../../../assests/CautionSign1.svg";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
@@ -21,6 +23,7 @@ import paymentcenterpic from "../../../assests/paymentpic.webp";
 
 const Profile = () => {
   const navigate = useNavigate();
+  const [logout, setLogout] = useState(0);
   const [userDetails, setuserDetails] = useState({});
 
   useEffect(() => {
@@ -37,6 +40,15 @@ const Profile = () => {
         console.log(err);
       });
   };
+
+  function handleLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("Userobj");
+    setLogout(!logout);
+    window.location.pathname = "/";
+  }
+
   const Locator = useLocation();
   useEffect(() => {
     if (!userDetails?.id) {
@@ -72,7 +84,7 @@ const Profile = () => {
             {userDetails?.username}
             {userDetails?.thomso_id}
           </div> */}
-                <div className="lsp-centre event-space">
+                <div className="lsp-centre event-space payment-profile">
                   <div
                     className={
                       locator.pathname === "/profile"
@@ -146,6 +158,13 @@ const Profile = () => {
                       </Link>
                     </div>
                   )}
+                                                 <button
+            className="main-logout-btn"
+            onClick={() => setLogout(!logout)}
+          >
+            <img src={log} alt="log" />
+            <span>Logout</span>
+          </button>
                 </div>
               </div>
               <div className="c-line1">
