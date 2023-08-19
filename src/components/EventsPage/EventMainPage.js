@@ -20,7 +20,7 @@ import { message } from "antd";
 // import Cross from "../../assests/cross.webp";
 import loader from "../../assests/loader.gif";
 import Loader from "../Loader/Loader";
-import cross_img from "../../assests/cross.webp";
+import cross_img from "../../assests/Cross.webp";
 
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
