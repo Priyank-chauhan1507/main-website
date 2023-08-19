@@ -28,6 +28,7 @@ const MainProfileBox = ({data}) => {
   const [logout, setLogout] = useState(0);
   const [file, setFile] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [profilepic,setprofilepic]=useState(false);
   const [loading, setLoading] = useState(false);
   const [opencollege,setOpencollege] = useState(false);
   const [openbranch,setOpenbranch] = useState(false);
@@ -106,6 +107,38 @@ const MainProfileBox = ({data}) => {
     }
   };
 
+  const changeHandler1 = async (file) => {
+    const userId = userDetails?.user_id;
+    let formData = new FormData();
+    formData.append("profile_pic", file);
+    setprofilepic(true);
+
+    if (file.size > 5e6) {
+      alert("size is too large");
+      return false;
+    } else {
+      alert("file successfully selected");
+    }
+    const response = await axios.put(
+      `/apiV1/registeruser/${userId}`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    if (response.status == 200) {
+      setprofilepic(file);
+      fetchUser();
+      setLoading(false);
+    } else {
+      setLoading(false);
+      alert("something went wrong while uploading, please reupload");
+      setprofilepic(null);
+    }
+  };
+
   function handleLogout() {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
@@ -124,12 +157,23 @@ const MainProfileBox = ({data}) => {
     <>
       <div className="lsp-background">
         <div className="lsp-box">
-          <div className="lsp-pic">
-            <img className="lsp-img1" src={pic} alt="profilepic" />        
+          <div className="lsp-pic">  
+            <div>
+            <FileUploader 
+                  type="file"
+                  types={fileTypes}
+                  handleChange={changeHandler1}
+                >
+                <img className="lsp-img1" src={pic} alt="profilepic" /> 
+                <div className="lsp-text0">
+                {profilepic?"profile uploaded":"Upload Profile"}
+                </div>
+            </FileUploader>
+            </div>
             <span className="lsp-text1">
               {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
             </span>
-            <span className="lsp-text2">Thomso ID:{userDetails?.thomso_id}</span>
+            <span className="lsp-text2">Thomso ID : {userDetails?.thomso_id}</span>
           </div>
           <div>
             {userDetails?.username}
