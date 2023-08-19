@@ -1,8 +1,8 @@
 import React from 'react'
 import Homebg from "../../assests/Landing-page-1.webp"
 import thomso from "../../assests/thomso.webp"
-import singers from "../../assests/singers.webp"
-import singersmob from "../../assests/singersmob.webp"
+import singers from "../../assests/newsinger.webp"
+import singersmob from "../../assests/newsingermob.webp"
 import "./Home.scss"
 import Navbar from '../EventsNavbar/Eventsnavbar'
 import Footer from '../Navbar/WebNavbarNew'

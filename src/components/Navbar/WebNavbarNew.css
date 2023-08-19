@@ -7,9 +7,10 @@
     align-items: center;
     width: 100vw;
 height: 328px;
-margin-top:-20rem;
+margin-top:0rem;
 z-index: 1000;
 overflow: hidden;
+background-color: black;
 }
 
 .webNavbarMain::-webkit-scrollbar{
