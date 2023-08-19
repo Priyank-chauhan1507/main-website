@@ -127,7 +127,7 @@ const MainProfileBox = ({data}) => {
             <span className="lsp-text1">
               {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
             </span>
-            <span className="lsp-text2">Thomso ID:{userDetails?.thomso_id}</span>
+            <span className="lsp-text2">Thomso ID : {userDetails?.thomso_id}</span>
           </div>
           <div>
             {userDetails?.username}

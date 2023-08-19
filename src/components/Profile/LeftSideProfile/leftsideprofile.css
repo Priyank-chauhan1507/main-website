@@ -27,7 +27,7 @@
 
 .lsp-text1 {
   color: white;
-  font-family: "Oxanium";
+  font-family: Comic Neue;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -39,10 +39,10 @@
 
 .lsp-text2 {
   color: white;
-  font-family: "Oxanium";
+  font-family: Comic Neue;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 16px;
   display: flex;
   align-items: center;
@@ -60,7 +60,8 @@
 
 .lsp-box {
   margin-top: 10vh;
-  /* margin-left: 5vw; */
+  margin-left: 2vw;
+  margin-right:-1vw;
   /* background-color: black; */
   display: flex;
   flex-direction: column;
@@ -127,6 +128,7 @@ letter-spacing: -0.32px;
   height: 7vh;
   flex-direction: column;
   justify-content: center;
+  margin-top:0vh;
 }
 
 .payment-profile{
