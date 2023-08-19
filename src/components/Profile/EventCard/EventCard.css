@@ -54,7 +54,7 @@
 
 .eventcards {
     display: flex;
-    gap: 3vw;
+    gap: 2vw;
     overflow-y: auto;
     margin: 3vh 0;
     height: 68vh;
@@ -85,7 +85,7 @@
 
 .eventcard-body {
     margin: 9vh 0;
-    width: 100%;
+    width: 75%;
 }
 
 .eventcard-nav button {
