@@ -1,9 +1,14 @@
+.footer{
+  display: none;
+}
+
 @media screen and (max-width: 800px) and (min-width: 260px) {
     .footer {
       /* background-image: url(../../assests/snn1.webp); */
       background: #000000;
       color: #ffffff;
       font-family: Comic Sans MS;
+      display: block;
     }
   
     .div1 {

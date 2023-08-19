@@ -85,6 +85,7 @@ console.log(eventdata, "ddddddd")
       if(exit) {
         message.info(`You are already registered for ${eventdata[0]?.name}`);
         setLoading(false);
+        navigate('/pevents')
        }
         else{
        axios
@@ -94,7 +95,7 @@ console.log(eventdata, "ddddddd")
             message.success(
               `🎉You are registerd successfully for ${eventdata[0]?.name}`
             );
-            
+            navigate('/pevents');
             setregister(true);
             getEvents();
             // if (button == "Register") {
