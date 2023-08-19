@@ -125,7 +125,7 @@
 @media only screen and (max-width: 350px) {
   .mobpaymentcenterimg {
     width: 88vw !important;
-    height: 30vh;
+    /* height: 30vh; */
   }
 }
 
