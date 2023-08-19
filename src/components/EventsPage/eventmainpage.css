@@ -260,7 +260,7 @@
   border-radius: 5.592px;
   border: 1.398px solid #505050;
   background: #FFF;
-  box-shadow: 1.3980079889297485px 2.796015977859497px 0px 0px #505050;
+  /* box-shadow: 1.3980079889297485px 2.796015977859497px 0px 0px #505050; */
   flex-shrink: 0;
   color: #505050;
   font-family: Comic Neue;
@@ -306,6 +306,8 @@
   display: flex;
   margin-bottom: 2%;
   gap: 3%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .events-left-event9 span {
@@ -469,7 +471,7 @@
 
   .events-left-event9 div {
     flex-direction: row-reverse;
-    width: 66%;
+    width: 69%;
   }
 
   .events-left-event9 {
@@ -497,7 +499,7 @@
   .events-left-event6 {
     padding-bottom: 20px;
     display: flex;
-    gap: 139.499px;
+    gap: 27vw;
   }
 
   .events-left-event6 {
@@ -510,6 +512,8 @@
     /* left: 78vw !important; */
     cursor: pointer;
     width: 6vw;
+    margin-left:-8vw;
+    margin-top:-0.5vh;
   }
 
   .events-right {
@@ -580,7 +584,7 @@
   }
 
   .events-left-event7 input {
-    width: 341.499px;
+    width: 77vw;
   }
 
   .events-left-event4 span {

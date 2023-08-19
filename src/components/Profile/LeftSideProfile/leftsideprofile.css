@@ -25,6 +25,15 @@
   border-radius:100px;
 }
 
+.lsp-text0{
+  color:white;
+  font-size:12px;
+  font-family:Comic Neue;
+  margin-top:15px;
+  display: flex;
+  justify-content: center;
+}
+
 .lsp-text1 {
   color: white;
   font-family: Comic Neue;
