@@ -23,6 +23,9 @@ const NewNewProfileMobile = ({data}) => {
   const [file, setFile] = useState(null);
   const [userDetails, setuserDetails] = useState({})
   const [opencollege,setOpencollege] = useState(false);
+  const [openbranch,setOpenbranch] = useState(false);
+  const [openstate,setOpenstate] = useState(false);
+  const [openemail,setOpenemail] = useState(false);
 
   useEffect(() => {
     setuserDetails(data)
@@ -47,6 +50,15 @@ const NewNewProfileMobile = ({data}) => {
   };
   const OpenCollege = () => {
     setOpencollege(!opencollege);
+  };
+  const OpenBranch = () => {
+    setOpenbranch(!openbranch);
+  };
+  const OpenState = () => {
+    setOpenstate(!openstate);
+  };
+  const OpenEmail = () => {
+    setOpenemail(!openemail);
   };
 
   function handleLogout() {
@@ -189,13 +201,13 @@ const NewNewProfileMobile = ({data}) => {
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">State</span>
-                <span className="main-prof-box-detail-row-text-col">
+                <span className={!openstate ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenState}>
                   {userDetails?.state}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Degree</span>
-                <span className="main-prof-box-detail-row-text-col">
+                <span className={!openbranch ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenBranch}>
                   {userDetails?.branch}
                 </span>
               </div>
@@ -227,7 +239,7 @@ const NewNewProfileMobile = ({data}) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Email</span>
-                <span className="main-prof-box-detail-row-text-col">
+                <span className={!openemail ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenEmail}>
                   {userDetails?.email}
                 </span>
               </div>
