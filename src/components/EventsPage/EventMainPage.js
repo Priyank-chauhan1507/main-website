@@ -294,13 +294,13 @@ const EventMainPage = ({ events }) => {
               </>
             ) : (
               <>
-                <h1 className="events-left-event6">Registration </h1>
-                <img
+                <h1 className="events-left-event6">Registration                 <img
                   src={cross_img}
                   alt=""
                   onClick={() => setregister(!register)}
                   className="event-cross"
-                />
+                /> </h1>
+
 
                 <form
                   className="events-left-event7"

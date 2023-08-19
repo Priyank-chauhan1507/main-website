@@ -274,7 +274,7 @@
 .events-left-event6 {
   padding-bottom: 30px;
   display: flex;
-  gap: 219.499px;
+  gap: 390px;
 }
 
 .events-left-event8 {
@@ -595,9 +595,7 @@
 }
 
 .event-cross {
-  position: absolute;
-  top: 17vh;
-  left: 27vw;
+  position: relative;
   cursor: pointer;
   width: 50px;
 }

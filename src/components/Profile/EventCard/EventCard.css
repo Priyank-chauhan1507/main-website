@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 
 .eventcard1 {

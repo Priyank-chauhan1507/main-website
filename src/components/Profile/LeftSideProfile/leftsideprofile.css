@@ -19,9 +19,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 63px;
+  margin-top: 36px;
   max-width: 170px;
   max-height: 170px;
+  border-radius:63px;
 }
 
 .lsp-text1 {
@@ -126,6 +127,10 @@ letter-spacing: -0.32px;
   height: 7vh;
   flex-direction: column;
   justify-content: center;
+}
+
+.payment-profile{
+  /* padding-top:70px!important; */
 }
 
 @media only screen and (max-width: 1246px) {
