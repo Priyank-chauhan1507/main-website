@@ -216,7 +216,7 @@ function MobEventnavbar() {
               setevent(!event);
             }}
           >
-            Event
+            Events
           </h1>
           {event &&
             events.map((el) => {
