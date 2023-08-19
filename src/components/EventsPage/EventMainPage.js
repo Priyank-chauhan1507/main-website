@@ -34,15 +34,14 @@ const EventMainPage = ({ events }) => {
   const [registerData, setregisterData] = useState({
     team_leader_name: "",
     team_name: "",
-    sub_event_name: "",
+    sub_event: "",
   });
   const [loading, setLoading] = useState(false);
-  // console.log(registerData.sub_event_name, "sfsfd");
 
   useEffect(() => {
     getEvents();
   }, []);
-console.log(eventdata, "ddddddd")
+
   const getEvents = async () => {
     axios
       .get(
@@ -70,13 +69,13 @@ console.log(eventdata, "ddddddd")
         participant: localStorage.getItem("id"),
         team_leader_name: registerData.team_leader_name,
         team_name: registerData.team_name,
-        sub_event_name: registerData.sub_event_name,
+        sub_event: registerData.sub_event,
       };
 
-       console.log(events1);
+      //  console.log(events1);
        for(let num=0;num<events1.length;num++){
           if(events1[num].event== eventuser.event){
-           
+
            exit=true;
             setExist(true);
             break;
@@ -94,7 +93,7 @@ console.log(eventdata, "ddddddd")
             message.success(
               `🎉You are registerd successfully for ${eventdata[0]?.name}`
             );
-            
+
             setregister(true);
             getEvents();
             // if (button == "Register") {
@@ -128,14 +127,14 @@ console.log(eventdata, "ddddddd")
         .get(`/apiV1/event`)
         .then((res) => {
           let selectedItem = res.data?.filter(function (el) {
-            // console.log(el.itemId,"data//",index)
+
             return el.id == id;
           });
-          // console.log(selectedObj,"dnifidfn");
+
           setEventData(selectedItem);
           // setEventData(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
-          
+
         })
         .catch((err) => {
           console.log(err);
@@ -151,7 +150,7 @@ console.log(eventdata, "ddddddd")
       console.log(error);
     }
   };
-  console.log(eventdata, "sdfdsfs");
+ 
 
   const handleChange = (e) => {
     setregisterData({ ...registerData, [e.target.name]: e.target.value });
@@ -162,7 +161,7 @@ console.log(eventdata, "ddddddd")
     // console.log(value, " sadasd ", checked);
     if (checked) {
       // setUser({ ...user, gender: gender?.value });
-      setregisterData({ ...registerData, sub_event_name: value });
+      setregisterData({ ...registerData, sub_event: value });
     }
   };
 
@@ -275,7 +274,7 @@ console.log(eventdata, "ddddddd")
                             id={el}
                             value={el}
                             onChange={onChangeSubEvent}
-                            checked={el === registerData.sub_event_name}
+                            checked={el === registerData.sub_event}
                             // required
                           />
                           <label htmlFor={el} style={{ color: "white" }}>
@@ -337,7 +336,7 @@ console.log(eventdata, "ddddddd")
                                 id={el}
                                 value={el}
                                 onChange={onChangeSubEvent}
-                                checked={el === registerData.sub_event_name}
+                                checked={el === registerData.sub_event}
                                 // required
                               />
                               <label htmlFor={el} style={{ color: "white" }}>
