@@ -11,7 +11,7 @@ import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
-import pic from "../../../assests/profilepic.png";
+import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/pay_black.png";

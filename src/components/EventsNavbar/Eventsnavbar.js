@@ -4,7 +4,7 @@ import "./Eventsnavbar.css";
 import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
-import img_profile from "../../assests/img_profile.svg"
+import img_profile from "../../assests/profile1.png.jpg";
 
 function Navbar({ color, disable, setregister, register }) {
   const [display1, setdisplay] = useState("none");

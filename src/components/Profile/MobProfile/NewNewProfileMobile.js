@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./NewNewProfileMobileView.css";
 import { useState } from "react";
-import pic from "../../../assests/propic.svg";
+import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
