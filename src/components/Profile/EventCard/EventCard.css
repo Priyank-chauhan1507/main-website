@@ -1,7 +1,7 @@
 .eventcard {
     height: 30vh;
     width: 24vh;
-    background: url(../../../assests/footloose.png);
+    /* background: url(../../../assests/footloose.png); */
     background-size: cover;
     background-position: center center;
     border-radius: 5.31px;

@@ -5,6 +5,7 @@ import singers from "../../assests/singers.webp"
 import singersmob from "../../assests/singersmob.webp"
 import "./Home.scss"
 import Navbar from '../EventsNavbar/Eventsnavbar'
+import Footer from '../Navbar/WebNavbarNew'
 import {Link, useNavigate} from "react-router-dom"
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
       </Link>)}
         <img src={singers} alt="" className='singers'/>
         <img src={singersmob} alt="" className='singersmob'/>
+        <Footer />
     </div>
   )
 }
