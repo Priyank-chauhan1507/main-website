@@ -303,6 +303,9 @@ const EventMainPage = ({ events }) => {
                   id="cross_img_event"
                 /></h1>
 
+                  onClick={()=>setregister(!register)}
+                  className="event-cross"
+                />
                 <form
                   className="events-left-event7"
                   onSubmit={(e) => onSubmit(e)}
