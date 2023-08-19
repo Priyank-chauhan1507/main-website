@@ -84,6 +84,7 @@ const EventMainPage = ({ events }) => {
       if(exit) {
         message.info(`You are already registered for ${eventdata[0]?.name}`);
         setLoading(false);
+        navigate('/pevents')
        }
         else{
        axios
@@ -93,6 +94,7 @@ const EventMainPage = ({ events }) => {
             message.success(
               `🎉You are registerd successfully for ${eventdata[0]?.name}`
             );
+            navigate('/pevents');
 
             setregister(true);
             getEvents();
@@ -150,7 +152,7 @@ const EventMainPage = ({ events }) => {
       console.log(error);
     }
   };
- 
+
 
   const handleChange = (e) => {
     setregisterData({ ...registerData, [e.target.name]: e.target.value });
