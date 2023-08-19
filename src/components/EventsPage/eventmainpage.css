@@ -502,7 +502,7 @@
     position: absolute;
     top: 45.5vh !important;
     left: 78vw !important;
-
+    cursor: pointer;
     width: 6vw;
   }
 
@@ -598,6 +598,7 @@
   position: absolute;
   top: 17vh;
   left: 27vw;
+  cursor: pointer;
   width: 50px;
 }
 

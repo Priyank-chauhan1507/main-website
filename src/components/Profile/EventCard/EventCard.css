@@ -123,7 +123,10 @@
 }
 
 .event-type-select{
-    text-decoration:underline;
+    
+    background: white;
+    color: black;
+    padding: 5px 8px;
 }
 
 
