@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import "../Profile/Profile.css";
 import "../LeftSideProfile/leftsideprofile.css";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { connect } from "react-redux";
 import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Back from "../../../assests/profile1.webp";
@@ -17,8 +18,25 @@ import icon3 from "../../../assests/pay_black.png";
 import line from "../../../assests/line1.svg";
 import paymentcenterpic from "../../../assests/paymentpic.webp";
 
-const Profile = ({ userDetails }) => {
+const Profile = () => {
   const navigate = useNavigate();
+  const [userDetails, setuserDetails] = useState({});
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const ress = axios
+      .get(`/apiV1/current_user_participant`)
+      .then((ress) => {
+        setuserDetails(ress.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
     if (!userDetails?.id) {
       // navigate.push("/login");
@@ -47,10 +65,10 @@ const Profile = ({ userDetails }) => {
             </span>
             <span className="lsp-text2">Thomso ID:{userDetails?.thomso_id}</span>
           </div>
-          <div>
+          {/* <div>
             {userDetails?.username}
             {userDetails?.thomso_id}
-          </div>
+          </div> */}
           <div className="lsp-centre">
             <div                   className={
                     locator.pathname === "/profile" ? "lsp-c1 c1-text" : "lsp-c2 c2-text"
