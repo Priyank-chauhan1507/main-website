@@ -7,7 +7,13 @@
     align-items: center;
     width: 100vw;
 height: 328px;
-margin-top:-340px;
+margin-top:-20rem;
+z-index: 1000;
+overflow: hidden;
+}
+
+.webNavbarMain::-webkit-scrollbar{
+    display: none;
 }
 
 .webNavbarLeft{

@@ -10,7 +10,7 @@ import youtube from "../../assests/youtube.svg"
 const WebNavbarNew = () => {
   return (
     <>
-    <img src={background} alt="background" style={{width:"100vw",height:"340px"}}/>
+    <img src={background} alt="background" style={{width:"100vw",height:"340px",zIndex:"100",overflowY:'hidden'}}/>
 <div className='webNavbarMain'>
     <div className='webNavbarLeft'>
         <div className='webNavbarLeft1'>Contact us</div>
