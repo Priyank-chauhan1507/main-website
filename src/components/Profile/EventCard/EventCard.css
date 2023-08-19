@@ -122,6 +122,11 @@
     letter-spacing: -0.24px;
 }
 
+.event-type-select{
+    text-decoration:underline;
+}
+
+
 @media screen and (max-width:768px) {
     .events-team-name {
         font-size: 1.7vw !important;

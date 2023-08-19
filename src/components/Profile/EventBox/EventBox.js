@@ -191,6 +191,9 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("solo");
                       }}
+                      className={
+                        filter === "solo" ? "event-type-select" : ""
+                      } 
                     >
                       Solo
                     </span>
@@ -198,6 +201,9 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("duet");
                       }}
+                      className={
+                        filter === "duet" ? "event-type-select" : ""
+                      } 
                     >
                       Duet
                     </span>
@@ -205,6 +211,9 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("team");
                       }}
+                      className={
+                        filter === "team" ? "event-type-select" : ""
+                      } 
                     >
                       Team
                     </span>
@@ -785,17 +794,23 @@ const EventBox = () => {
               {events ? (
                 <>
                   <div className="eventcard-nav">
-                    <span
+                    <span 
                       onClick={() => {
                         setFilter("solo");
                       }}
+                      className={
+                        filter === "solo" ? "event-type-select" : ""
+                      } 
                     >
                       Solo
                     </span>
-                    <span
+                    <span 
                       onClick={() => {
                         setFilter("duet");
                       }}
+                      className={
+                        filter === "duet" ? "event-type-select" : ""
+                      } 
                     >
                       Duet
                     </span>
@@ -803,6 +818,9 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("team");
                       }}
+                      className={
+                        filter === "team" ? "event-type-select" : ""
+                      } 
                     >
                       Team
                     </span>
