@@ -298,10 +298,8 @@ const EventMainPage = ({ events }) => {
                 <img
                   src={cross_img}
                   alt=""
-                  onclick={() => {
-                    navigate("/pevents");
-                  }}
-                  id="cross_img_event"
+                  onClick={()=>setregister(!register)}
+                  className="event-cross"
                 />
                 <form
                   className="events-left-event7"
