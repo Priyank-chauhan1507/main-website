@@ -15,21 +15,33 @@ const WebNavbarNew = () => {
     <div className='webNavbarLeft'>
         <div className='webNavbarLeft1'>Contact us</div>
         <div className='webNavbarLeft2'>
-            <div>Dhwaj Gupta</div>
-            <div>7339748149</div>
+            <div>Pramod</div>
+            <div>9694627622</div>
         </div>
         <div className='webNavbarLeft3'>
-        <div>Dhwaj Gupta</div>
-            <div>7339748149</div>
+        <div>Jolly</div>
+            <div> 7081537653</div>
         </div>
     </div>
     <div className='webNavbarMiddle'>
         <div className='webNavbarMiddle1'><img src={logo} alt="logo"/></div>
         <div className='webNavbarMiddle2'>
+            <a href="https://www.facebook.com/thomsoiitroorkee">
           <img src={facebook} alt="facebook" style={{cursor:"pointer"}}/>
+
+            </a>
+          <a href="https://www.instagram.com/thomso.iitr/">
           <img src={insta} alt="insta" style={{cursor:"pointer"}}/>
+
+          </a>
+          <a href="https://twitter.com/Thomso_IITR">
           <img src={x} alt="x" style={{cursor:"pointer"}}/>
+
+          </a>
+          <a href="https://www.youtube.com/@iitrthomso">
           <img src={youtube} alt="youtube" style={{cursor:"pointer"}}/>
+
+          </a>
         </div>
     </div>
     <div className='webNavbarRight'>
