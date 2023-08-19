@@ -303,7 +303,7 @@ const MainProfileBox = ({data}) => {
             </div>
           ) : (
             <div className="upload-doc-container">
-              <p className="mpb-text">Upload document to verify</p>
+              <p className="mpb-text">Documents Verified</p>
               {file ? (
                 <div className="after-upload-container">
                   {file.name}
