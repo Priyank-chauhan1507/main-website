@@ -1,0 +1,84 @@
+.webNavbarMain{
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    align-items: center;
+    width: 100vw;
+height: 328px;
+margin-top:-340px;
+}
+
+.webNavbarLeft{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.webNavbarLeft1{
+    padding-bottom: 20px;
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 75% */
+letter-spacing: -0.64px;
+}
+
+.webNavbarLeft2,
+.webNavbarLeft3{
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.webNavbarRight{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.webNavbarRight1{
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 75% */
+letter-spacing: -0.64px;
+}
+
+.webNavbarRight2{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    
+}
+
+.webNavbarMiddle{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    align-items: center;
+}
+
+
+.webNavbarMiddle2{
+    display: flex;
+    gap:20px;
+   
+}

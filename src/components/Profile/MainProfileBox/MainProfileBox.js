@@ -12,13 +12,13 @@ import "../LeftSideProfile/leftsideprofile.css";
 import "../Profile/Profile.css";
 import axios from "axios";
 // import { Button } from "@mui/material";
-import { CgClose } from "react-icons/cg";
+import { CgClose, CgGenderMale } from "react-icons/cg";
 import DeleteModule from "./DeleteModule";
 import Loader from "../../Loader/Loader";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { fetchUser } from "../../User/UserActions";
 import { useLocation, Link } from "react-router-dom";
-import pic from "../../../assests/profilepic.png";
+import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/icon1.png";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
@@ -123,7 +123,7 @@ const MainProfileBox = ({data}) => {
       <div className="lsp-background">
         <div className="lsp-box">
           <div className="lsp-pic">
-            <img className="lsp-img1" src={pic} alt="profilepic" />
+            <img className="lsp-img1" src={pic} alt="profilepic" />        
             <span className="lsp-text1">
               {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
             </span>
@@ -303,7 +303,7 @@ const MainProfileBox = ({data}) => {
             </div>
           ) : (
             <div className="upload-doc-container">
-              <p className="mpb-text">Upload document to verify</p>
+              <p className="mpb-text">Documents Verified</p>
               {file ? (
                 <div className="after-upload-container">
                   {file.name}

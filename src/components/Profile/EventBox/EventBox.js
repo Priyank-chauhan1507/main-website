@@ -10,9 +10,10 @@ import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
-import pic from "../../../assests/profilepic.png";
+import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/event_black.png";
+import icon21 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
 import line from "../../../assests/line1.svg";
 import eventcenterpic from "../../../assests/eventpic.webp";
@@ -72,6 +73,8 @@ const EventBox = () => {
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
   };
+  const Locator = useLocation();
+  
   return (
     <>
       <div className="nnp-container">
@@ -97,7 +100,8 @@ const EventBox = () => {
                   {userDetails?.username}
                   {userDetails?.thomso_id}
                 </div> */}
-                <div className="lsp-centre">
+
+                <div className="lsp-centre event-space">
                   <div
                     className={
                       locator.pathname === "/profile"
@@ -191,6 +195,7 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("solo");
                       }}
+                      className={filter === "solo" ? "event-type-select" : ""}
                     >
                       Solo
                     </span>
@@ -198,6 +203,7 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("duet");
                       }}
+                      className={filter === "duet" ? "event-type-select" : ""}
                     >
                       Duet
                     </span>
@@ -205,6 +211,7 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("team");
                       }}
+                      className={filter === "team" ? "event-type-select" : ""}
                     >
                       Team
                     </span>
@@ -780,8 +787,69 @@ const EventBox = () => {
             </div>
           </div>
           <div className="nnp-mobile">
-            <NewNewProfileMobile />
             <div className="mobpaymentcenterimg">
+              <div className="mpb-mobileview">
+                <div className="mv-top">
+                  <div className="mv-top-1">
+                    <img src={icon1} alt="profile" className="img--1" />
+                    <Link
+                      to="/profile"
+                      className={
+                        Locator.pathname === "/profile"
+                          ? "nav-active"
+                          : "nav-passive"
+                      }
+                    >
+                      Profile
+                    </Link>
+                  </div>
+                  {userDetails?.is_iitr_alumn ? null : (
+                    <div className="mv-top-2">
+                      <img src={icon21} alt="Events" className="img--1" />
+                      <Link
+                        to="/pevents"
+                        className={
+                          Locator.pathname === "/pevents"
+                            ? "nav-active"
+                            : "nav-passive"
+                        }
+                      >
+                        Events
+                      </Link>
+                    </div>
+                  )}
+                  {userDetails?.is_iitr_alumn ? (
+                    <div className="mv-top-2">
+                      <img src={icon3} alt="payment" className="img--1" />
+                      <Link
+                        to="/payment-alumn"
+                        className={
+                          Locator.pathname === "/payment-alumn"
+                            ? "nav-active"
+                            : "nav-passive"
+                        }
+                      >
+                        Payment
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className="mv-top-2">
+                      <img src={icon3} alt="payment" className="img--1" />
+                      <Link
+                        to="/payment"
+                        className={
+                          Locator.pathname === "/payment"
+                            ? "nav-active"
+                            : "nav-passive"
+                        }
+                      >
+                        Payment
+                      </Link>
+                    </div>
+                  )}
+                </div>
+                <div className="mpb-line1" />
+              </div>
               {events ? (
                 <>
                   <div className="eventcard-nav">
@@ -789,6 +857,7 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("solo");
                       }}
+                      className={filter === "solo" ? "event-type-select" : ""}
                     >
                       Solo
                     </span>
@@ -796,6 +865,7 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("duet");
                       }}
+                      className={filter === "duet" ? "event-type-select" : ""}
                     >
                       Duet
                     </span>
@@ -803,6 +873,7 @@ const EventBox = () => {
                       onClick={() => {
                         setFilter("team");
                       }}
+                      className={filter === "team" ? "event-type-select" : ""}
                     >
                       Team
                     </span>

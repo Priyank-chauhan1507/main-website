@@ -273,6 +273,8 @@
 
 .events-left-event6 {
   padding-bottom: 30px;
+  display: flex;
+  gap: 219.499px;
 }
 
 .events-left-event8 {
@@ -353,8 +355,12 @@
 
 
 #cross_img_event{
-  width:10px;
+  height: 22px;
+  margin-top: 5px;
   background-color:white;
+  width:50px;
+  height: 50px;
+
 }
 
 @media (max-width:1500px){
@@ -484,6 +490,8 @@
 
   .events-left-event6 {
     padding-bottom: 20px;
+    display: flex;
+    gap: 139.499px;
   }
 
   .events-left-event6 {
@@ -494,7 +502,7 @@
     position: absolute;
     top: 45.5vh !important;
     left: 78vw !important;
-
+    cursor: pointer;
     width: 6vw;
   }
 
@@ -590,6 +598,7 @@
   position: absolute;
   top: 17vh;
   left: 27vw;
+  cursor: pointer;
   width: 50px;
 }
 

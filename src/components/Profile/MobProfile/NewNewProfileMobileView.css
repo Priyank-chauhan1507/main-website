@@ -22,7 +22,9 @@
     color: #FFFFFF;
 
 }
-
+.new-mob-profile::-webkit-scrollbar{
+    display: none !important;
+}
 .nav-passive {
     font-family: 'Oxanium';
     font-style: normal;
@@ -207,7 +209,8 @@
 
     .lsp-img11 {
         margin-left: 35px;
-        width: 18vw;
+        width: 15vw;
+        height: 15vw;
     }
 }
 

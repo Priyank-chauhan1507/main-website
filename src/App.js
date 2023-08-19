@@ -19,6 +19,7 @@ import EventMainPage from "./components/EventsPage/EventMainPage";
 import EventBox from "./components/Profile/EventBox/EventBox";
 import Paymentbox from "./components/Profile/PaymentBox/Paymentbox";
 import EventCard from "./components/Profile/EventCard/EventCard";
+import WebNavbarNew from "./components/Navbar/WebNavbarNew";
 
 function App(props) {
   useEffect(() => {
@@ -53,6 +54,7 @@ function App(props) {
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />
           <Route exact={true} path="/card" element={<EventCard/>} />
+          <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
         </Routes>
       </Router>
     </>

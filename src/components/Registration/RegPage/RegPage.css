@@ -212,7 +212,8 @@
         opacity: 0;
         height: 100vh;
         width: 100vw;
-
+        position: relative;
+        z-index: -1;
     }
     .inputBoxes input{
         width: 14px;

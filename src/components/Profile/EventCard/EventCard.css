@@ -54,7 +54,7 @@
 
 .eventcards {
     display: flex;
-    gap: 3vw;
+    gap: 2vw;
     overflow-y: auto;
     margin: 3vh 0;
     height: 68vh;
@@ -85,7 +85,7 @@
 
 .eventcard-body {
     margin: 9vh 0;
-    width: 100%;
+    width: 75%;
 }
 
 .eventcard-nav button {
@@ -121,6 +121,14 @@
     margin: 0 15px 6px;
     letter-spacing: -0.24px;
 }
+
+.event-type-select{
+    
+    background: white;
+    color: black;
+    padding: 5px 8px;
+}
+
 
 @media screen and (max-width:768px) {
     .events-team-name {
