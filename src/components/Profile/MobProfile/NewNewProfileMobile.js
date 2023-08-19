@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./NewNewProfileMobileView.css";
 import { useState } from "react";
 import pic from "../../../assests/propic.svg";
@@ -14,22 +14,21 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import log from "../../../assests/logout-logo.svg";
 import cs1 from "../../../assests/CautionSign1.svg";
 
-
-const NewNewProfileMobile = ({data}) => {
+const NewNewProfileMobile = ({ data }) => {
   const Locator = useLocation();
   const locator = useLocation();
   const [logout, setLogout] = useState(0);
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
-  const [userDetails, setuserDetails] = useState({})
-  const [opencollege,setOpencollege] = useState(false);
-  const [openbranch,setOpenbranch] = useState(false);
-  const [openstate,setOpenstate] = useState(false);
-  const [openemail,setOpenemail] = useState(false);
+  const [userDetails, setuserDetails] = useState({});
+  const [opencollege, setOpencollege] = useState(false);
+  const [openbranch, setOpenbranch] = useState(false);
+  const [openstate, setOpenstate] = useState(false);
+  const [openemail, setOpenemail] = useState(false);
 
   useEffect(() => {
-    setuserDetails(data)
-  }, [data])
+    setuserDetails(data);
+  }, [data]);
 
   const deleteUserImage = () => {
     const obj = {
@@ -68,7 +67,6 @@ const NewNewProfileMobile = ({data}) => {
     setLogout(!logout);
     window.location.pathname = "/";
   }
-
 
   const changeHandler = async (e) => {
     // console.log(files);
@@ -111,7 +109,7 @@ const NewNewProfileMobile = ({data}) => {
   };
 
   return (
-    <div>
+    <div className="new-mob-profile" style={{ height: "81vh", overflowY: "auto", overflowX: "hidden" }}>
       {loading && <Loader />}
       <div className="mpb-mobileview">
         <div className="mv-top">
@@ -169,19 +167,33 @@ const NewNewProfileMobile = ({data}) => {
         </div>
         <div className="mpb-line1" />
       </div>
-      <div className={
-                  locator.pathname === "/payment" || locator.pathname === "/pevents" ? "paymentmobpage lsp-pic-1" : "lsp-pic-1"
-                }>
+      <div
+        className={
+          locator.pathname === "/payment" || locator.pathname === "/pevents"
+            ? "paymentmobpage lsp-pic-1"
+            : "lsp-pic-1"
+        }
+      >
         <img className="lsp-img11" src={pic} alt="profilepic" />
         <div className="mob-lt1">
           <span className="lsp-text1">{userDetails?.name}</span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
         </div>
       </div>
-      <div className={
-                  locator.pathname === "/paymentbox" || locator.pathname === "/eventbox" ? "paymentmobpage main-prof-box" : "main-prof-box"
-                }>
-        <div className={ locator.pathname === "/payment" || locator.pathname === "/pevents" ? "main-box-center-event-payment" : "main-prof-box-flex-1"}>
+      <div
+        className={
+          locator.pathname === "/paymentbox" || locator.pathname === "/eventbox"
+            ? "paymentmobpage main-prof-box"
+            : "main-prof-box"
+        }
+      >
+        <div
+          className={
+            locator.pathname === "/payment" || locator.pathname === "/pevents"
+              ? "main-box-center-event-payment"
+              : "main-prof-box-flex-1"
+          }
+        >
           <div className="main-prof-detail-1">
             <div className="main-prof-box-head-div">
               <h1 className="main-prof-box-head-text1">College Details</h1>
@@ -189,7 +201,14 @@ const NewNewProfileMobile = ({data}) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">College</span>
-                <span className={!opencollege ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenCollege}>
+                <span
+                  className={
+                    !opencollege
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenCollege}
+                >
                   {userDetails?.college}
                 </span>
               </div>
@@ -201,13 +220,27 @@ const NewNewProfileMobile = ({data}) => {
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">State</span>
-                <span className={!openstate ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenState}>
+                <span
+                  className={
+                    !openstate
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenState}
+                >
                   {userDetails?.state}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Degree</span>
-                <span className={!openbranch ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenBranch}>
+                <span
+                  className={
+                    !openbranch
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenBranch}
+                >
                   {userDetails?.branch}
                 </span>
               </div>
@@ -239,7 +272,14 @@ const NewNewProfileMobile = ({data}) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Email</span>
-                <span className={!openemail ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenEmail}>
+                <span
+                  className={
+                    !openemail
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenEmail}
+                >
                   {userDetails?.email}
                 </span>
               </div>
@@ -299,43 +339,43 @@ const NewNewProfileMobile = ({data}) => {
                 </button>
               )}
               {file && <div style={{ color: "white" }}>{file.name}</div>}
-            </div>        
-            <button
-            className="main-logout-btn"
-            onClick={() => setLogout(!logout)}
-          >
-            <img src={log} alt="log" />
-            <span>Logout</span>
-          </button>
-          <div className={!logout ? "none" : ""} id="logout">
-        <div className="l_body">
-          <div className="logout_body">
-            <div className="redpic">
-              <img src={cs1} alt="redpic" />
             </div>
-            <div className="textt">
-              <div className="fText">Are You Sure?</div>
-              <div className="sText">
-                Do you really want to leave and logout?
+            <button
+              className="main-logout-btn"
+              onClick={() => setLogout(!logout)}
+            >
+              <img src={log} alt="log" />
+              <span>Logout</span>
+            </button>
+            <div className={!logout ? "none" : ""} id="logout">
+              <div className="l_body">
+                <div className="logout_body">
+                  <div className="redpic">
+                    <img src={cs1} alt="redpic" />
+                  </div>
+                  <div className="textt">
+                    <div className="fText">Are You Sure?</div>
+                    <div className="sText">
+                      Do you really want to leave and logout?
+                    </div>
+                  </div>
+                  <div className="btns">
+                    <button className="btn1">
+                      <span
+                        onClick={() => {
+                          setLogout(!logout);
+                        }}
+                      >
+                        Cancel
+                      </span>
+                    </button>
+                    <button className="btn2" onClick={handleLogout}>
+                      <span>Logout</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="btns">
-              <button className="btn1">
-                <span
-                  onClick={() => {
-                    setLogout(!logout);
-                  }}
-                >
-                  Cancel
-                </span>
-              </button>
-              <button className="btn2" onClick={handleLogout}>
-                <span>Logout</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
           </div>
         </div>
       </div>

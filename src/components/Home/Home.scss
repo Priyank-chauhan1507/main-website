@@ -48,12 +48,15 @@
   }
   .singersmob{
     display: none ;
+    width: 87vw;
+    height: 73vh;
+    margin: auto;
   }
 }
 @media (max-width: 800px) {
   .home{
     min-height: 100vh !important;
-    width: 105vw;
+    width: 100vw;
   }
   .register{
     width: 150px !important;

@@ -22,7 +22,9 @@
     color: #FFFFFF;
 
 }
-
+.new-mob-profile::-webkit-scrollbar{
+    display: none !important;
+}
 .nav-passive {
     font-family: 'Oxanium';
     font-style: normal;
