@@ -103,7 +103,10 @@
     flex-direction: row;
   }
 }
-
+.event-space{
+  padding-top: 100px !important;
+ 
+}
 .leftPos {
   z-index: 3;
   height: 110vh;
@@ -116,12 +119,15 @@
 .mobpaymentcenterimg {
   padding-bottom: 1vh;
   display: flex;
-  height: 76vh;
+  height: 81vh;
   overflow-y: scroll;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
-
+.mobpaymentcenterimg::-webkit-scrollbar{
+  display: none !important;
+}
 @media only screen and (max-width: 350px) {
   .mobpaymentcenterimg {
     width: 88vw !important;
