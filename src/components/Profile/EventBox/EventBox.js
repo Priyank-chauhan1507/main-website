@@ -27,7 +27,7 @@ const EventBox = () => {
   const [disable, setdisable] = useState("notdisable");
   const [events, setEvents] = useState([]);
   const [userDetails, setuserDetails] = useState({});
-  const [filter, setFilter] = useState("solo");
+  // const [filter, setFilter] = useState("solo");
   useEffect(() => {
     getEvents();
   }, []);
@@ -74,7 +74,7 @@ const EventBox = () => {
     navigate(`/events/${e}`);
   };
   const Locator = useLocation();
-  
+
   return (
     <>
       <div className="nnp-container">
@@ -185,13 +185,12 @@ const EventBox = () => {
                   <div className="eventcard-nav">
                     <span
                       style={{
-                        color: "rgba(255, 255, 255, 0.40)",
                         cursor: "default",
                       }}
                     >
                       Participate
                     </span>
-                    <span
+                    {/* <span
                       onClick={() => {
                         setFilter("solo");
                       }}
@@ -214,7 +213,7 @@ const EventBox = () => {
                       className={filter === "team" ? "event-type-select" : ""}
                     >
                       Team
-                    </span>
+                    </span> */}
                     <button
                       onClick={() => {
                         setdisplay2(!display2);
@@ -230,13 +229,9 @@ const EventBox = () => {
                     </>
                   ) : (
                     <div className="eventcards">
-                      {events
-                        .filter((el) => {
-                          return el.event__solo_team === filter;
-                        })
-                        .map((el) => {
-                          return <EventCard data={el} />;
-                        })}
+                      {events.map((el) => {
+                        return <EventCard data={el} />;
+                      })}
                     </div>
                   )}
                 </div>
@@ -854,6 +849,13 @@ const EventBox = () => {
                 <>
                   <div className="eventcard-nav">
                     <span
+                      style={{
+                        cursor: "default",
+                      }}
+                    >
+                      Participate
+                    </span>
+                    {/* <span
                       onClick={() => {
                         setFilter("solo");
                       }}
@@ -875,17 +877,13 @@ const EventBox = () => {
                       }}
                       className={filter === "team" ? "event-type-select" : ""}
                     >
-                      Team
-                    </span>
+                      Team */}
+                    {/* </span> */}
                   </div>
                   <div className="eventcards">
-                    {events
-                      .filter((el) => {
-                        return el.event__solo_team === filter;
-                      })
-                      .map((el) => {
-                        return <EventCard data={el} />;
-                      })}
+                    {events.map((el) => {
+                      return <EventCard data={el} />;
+                    })}
                   </div>
                 </>
               ) : (
