@@ -74,6 +74,7 @@ line-height: normal;
     flex-direction: column;
     gap:50px;
     align-items: center;
+    padding-left: 5rem;
 }
 
 
@@ -81,4 +82,9 @@ line-height: normal;
     display: flex;
     gap:20px;
    
+}
+
+.webNavbarMiddle2 a img{
+    height:30px;
+    width:30px;
 }
