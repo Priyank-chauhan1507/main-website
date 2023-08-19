@@ -27,6 +27,7 @@ const EventMainPage = ({ events }) => {
   const navigate = useNavigate();
   const { dispatch } = Store;
   const [events1, setEvents1] = useState([]);
+  const [exist,setExist]=useState(false);
   const [filter, setfilter] = useState([]);
   const [eventdata, setEventData] = useState({});
   const [register, setregister] = useState(true);
@@ -57,7 +58,8 @@ const EventMainPage = ({ events }) => {
         console.log(err);
       });
   };
-  const onSubmit = (e) => {
+  const onSubmit =  (e) => {
+    let exit=false;
     e.preventDefault();
     if (!localStorage.getItem("token")) {
       navigate("/login");
@@ -70,7 +72,22 @@ const EventMainPage = ({ events }) => {
         team_name: registerData.team_name,
         sub_event_name: registerData.sub_event_name,
       };
-      axios
+
+       console.log(events1);
+       for(let num=0;num<events1.length;num++){
+          if(events1[num].event== eventuser.event){
+           
+           exit=true;
+            setExist(true);
+            break;
+          };
+       };
+      if(exit) {
+        message.info(`You are already registered for ${eventdata[0]?.name}`);
+        setLoading(false);
+       }
+        else{
+       axios
         .post("/apiV1/registerevent", eventuser)
         .then((res) => {
           if (res.status == 201) {
@@ -95,12 +112,13 @@ const EventMainPage = ({ events }) => {
         .catch((err) => {
           console.log(err.response.data);
         });
+      };
     }
   };
 
   useEffect(() => {
     loadUserData();
-  }, [id]);
+  }, []);
 
   const loadUserData = async () => {
     try {
@@ -115,7 +133,7 @@ const EventMainPage = ({ events }) => {
           setEventData(selectedItem);
           // setEventData(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
-          console.log("data", res.data);
+          
         })
         .catch((err) => {
           console.log(err);
@@ -298,7 +316,7 @@ const EventMainPage = ({ events }) => {
                 <img
                   src={cross_img}
                   alt=""
-                  onclick={() => {
+                  onClick={() => {
                     navigate("/pevents");
                   }}
                   id="cross_img_event"
