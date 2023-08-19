@@ -35,6 +35,7 @@ const MainProfileBox = ({data}) => {
   const [openemail,setOpenemail] = useState(false);
   const locator = useLocation();
   const [userDetails, setuserDetails] = useState({})
+  const [docup,setDocup] = useState(false);
 
   useEffect(() => {
     setuserDetails(data)
@@ -117,6 +118,7 @@ const MainProfileBox = ({data}) => {
     setFile(null);
     setShowModal(false);
   }
+  
 
   return (
     <>
@@ -303,7 +305,8 @@ const MainProfileBox = ({data}) => {
             </div>
           ) : (
             <div className="upload-doc-container">
-              <p className="mpb-text">Documents Verified</p>
+              {file ? (<p className="mpb-text">Document Uploaded</p>):(<p className="mpb-text">Upload document to verify</p>)}
+              {/* <p className="mpb-text">Document Uploaded</p> */}
               {file ? (
                 <div className="after-upload-container">
                   {file.name}
