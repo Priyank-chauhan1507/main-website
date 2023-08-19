@@ -3,7 +3,7 @@ import logo from "../../assests/logo.svg";
 import logo1 from "../../assests/logo2.png";
 import bgmobile from "../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
-import cross from "../../assests/cross.webp";
+import cross from "../../assests/Cross.webp";
 function MobEventnavbar() {
   const navigate = useNavigate();
   const [event, setevent] = useState(false);
