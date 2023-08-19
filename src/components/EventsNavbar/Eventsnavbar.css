@@ -113,8 +113,11 @@
     color: #F7B900 !important;
     margin-top: 25px !important;
     margin-bottom: 10px;
+    cursor: default !important;
 }
-
+.col-yellow:hover{
+    text-decoration: none !important;
+}
 .col-yellow1 {
     color: #F7B900 !important;
 
@@ -133,6 +136,10 @@
 .mainnav {
     width: 100%;
     display: contents;
+}
+
+#img_profile{
+    cursor: pointer;
 }
 
 @media (max-width:600px) {
