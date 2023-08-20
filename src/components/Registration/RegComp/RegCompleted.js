@@ -31,7 +31,7 @@ const RegisComp = () => {
                 <br />
                 <br />
                 <p>
-                  Voila! Your Registration for Campus Ambassador Program is
+                  Voila! Your Registration for Thomso '23 IIT Roorkee is
                   successfully completed.
                 </p>
               </div>

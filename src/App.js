@@ -21,6 +21,7 @@ import Paymentbox from "./components/Profile/PaymentBox/Paymentbox";
 import EventCard from "./components/Profile/EventCard/EventCard";
 import WebNavbarNew from "./components/Navbar/WebNavbarNew";
 import Mobfooter from "./components/Footer/Mobfooter"
+import Eventsmobpage from "./components/EventsMobPage/Eventsmobpage";
 
 function App(props) {
   useEffect(() => {
@@ -57,6 +58,7 @@ function App(props) {
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
+          <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
 
         </Routes>
       </Router>

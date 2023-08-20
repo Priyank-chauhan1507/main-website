@@ -38,7 +38,7 @@ const EventCard = ({ data }) => {
                   />
                 </div>
                 <div id="text_1_card_ec">
-                  <div id="text_1_card_ec_1">{datas?.name}</div>
+                  <div id="text_1_card_ec_1">{datas?.name}({datas?.solo_team})</div>
                   <div id="text_1_card_ec_2">{datas?.category?.name}</div>
                 </div>
               </div>
