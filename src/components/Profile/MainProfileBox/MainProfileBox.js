@@ -24,24 +24,32 @@ import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
 const fileTypes = ["JPG", "PNG", "GIF"];
 
-const MainProfileBox = ({data}) => {
+const MainProfileBox = ({ data }) => {
   const [logout, setLogout] = useState(0);
   const [file, setFile] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [profilepic,setprofilepic]=useState(false);
+  const [profilepic, setprofilepic] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [opencollege,setOpencollege] = useState(false);
-  const [openbranch,setOpenbranch] = useState(false);
-  const [openstate,setOpenstate] = useState(false);
-  const [openemail,setOpenemail] = useState(false);
+  const [opencollege, setOpencollege] = useState(false);
+  const [openbranch, setOpenbranch] = useState(false);
+  const [openstate, setOpenstate] = useState(false);
+  const [openemail, setOpenemail] = useState(false);
   const locator = useLocation();
-  const [userDetails, setuserDetails] = useState({})
-  const [docup,setDocup] = useState(false);
+  const [userDetails, setuserDetails] = useState({});
+  const [docup, setDocup] = useState(false);
+  const [user, setuser] = useState({});
 
   useEffect(() => {
-    setuserDetails(data)
-  }, [data])
+    setuserDetails(data);
+  }, [data]);
 
+  // const cadeta = () => {
+  //   ca_id = userDetails?.referred_by_id;
+  //   const response = axios.get(`/apiV1/registerca/${localStorage.getItem(ca_id)}`);
+  //   const { data } = response;
+  //     console.log(data);
+  //     setuser(data);
+  // }
 
   console.log(userDetails, "profiledetails");
   const deleteUserImage = () => {
@@ -151,33 +159,35 @@ const MainProfileBox = ({data}) => {
     setFile(null);
     setShowModal(false);
   }
-  
 
   return (
     <>
       <div className="lsp-background">
         <div className="lsp-box">
-          <div className="lsp-pic">  
+          <div className="lsp-pic">
             <div>
-            <FileUploader 
-                  type="file"
-                  types={fileTypes}
-                  handleChange={changeHandler1}
-                >
-                <img className="lsp-img1" src={pic} alt="profilepic" /> 
+              <FileUploader
+                type="file"
+                types={fileTypes}
+                handleChange={changeHandler1}
+              >
+                <img className="lsp-img1" src={pic} alt="profilepic" />
                 <div className="lsp-text0">
-                {profilepic?"profile uploaded":"Upload Profile"}
+                  {profilepic ? "profile uploaded" : "Upload Profile"}
                 </div>
-            </FileUploader>
+              </FileUploader>
             </div>
             <span className="lsp-text1">
               {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
             </span>
-            <span className="lsp-text2">Thomso ID : {userDetails?.thomso_id}</span>
+            <span className="lsp-text2">
+              Thomso ID : {userDetails?.thomso_id}
+            </span>
           </div>
           <div>
             {userDetails?.username}
             {userDetails?.thomso_id}
+            {/* {userDetails?.is_ca && `${userDetails?.ca_id}`} */}
           </div>
           <div className="lsp-centre">
             <div className="lsp-c1">
@@ -210,9 +220,7 @@ const MainProfileBox = ({data}) => {
                 <Link
                   to="/payment-alumn"
                   className={
-                    locator.pathname === "/paymentbox"
-                      ? "c1-text"
-                      : "c2-text"
+                    locator.pathname === "/paymentbox" ? "c1-text" : "c2-text"
                   }
                 >
                   Payment
@@ -231,19 +239,19 @@ const MainProfileBox = ({data}) => {
                 </Link>
               </div>
             )}
-             <button
-            className="main-logout-btn"
-            onClick={() => setLogout(!logout)}
-          >
-            <img src={log} alt="log" />
-            <span>Logout</span>
-          </button>
+            <button
+              className="main-logout-btn"
+              onClick={() => setLogout(!logout)}
+            >
+              <img src={log} alt="log" />
+              <span>Logout</span>
+            </button>
           </div>
         </div>
       </div>
       <div className="c-line1">
-          <img className="c-line1-img" src={line} alt="line" />
-        </div>
+        <img className="c-line1-img" src={line} alt="line" />
+      </div>
       {loading && <Loader />}
       <div className="main-prof-box">
         <div className="main-prof-box-flex-1">
@@ -254,7 +262,14 @@ const MainProfileBox = ({data}) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">College</span>
-                <span className={!opencollege ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenCollege}>
+                <span
+                  className={
+                    !opencollege
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenCollege}
+                >
                   {userDetails?.college}
                 </span>
               </div>
@@ -266,13 +281,27 @@ const MainProfileBox = ({data}) => {
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">State</span>
-                <span className={!openstate ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenState}>
+                <span
+                  className={
+                    !openstate
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenState}
+                >
                   {userDetails?.state}
                 </span>
               </div>
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Branch</span>
-                <span className={!openbranch ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenBranch}>
+                <span
+                  className={
+                    !openbranch
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenBranch}
+                >
                   {userDetails?.branch}
                 </span>
               </div>
@@ -302,7 +331,14 @@ const MainProfileBox = ({data}) => {
             <div className="main-prof-box-details-div">
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Email</span>
-                <span className={!openemail ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenEmail}>
+                <span
+                  className={
+                    !openemail
+                      ? "main-prof-box-detail-row-text-col"
+                      : "main-prof-box-detail-row-text-col-2"
+                  }
+                  onClick={OpenEmail}
+                >
                   {userDetails?.email}
                 </span>
               </div>
@@ -319,31 +355,41 @@ const MainProfileBox = ({data}) => {
                 </span>
               </div>
             </div>
+            {userDetails?.is_ca===true && (
             <div className="main-prof-detail-2">
-            <div className="main-prof-box-head-div">
-              <h1 className="main-prof-box-head-text">CA Referral</h1>
-            </div>
-            <div className="main-prof-box-details-div">
-              <div className="main-prof-box-detail-row">
-                <span className="main-prof-box-detail-row-text">CA-Referral-ID</span>
-                <span className={!openemail ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenEmail}>
-                  Referral-ID
-                </span>
+              <div className="main-prof-box-head-div">
+                <h1 className="main-prof-box-head-text">CA Referral</h1>
               </div>
-              <div className="main-prof-box-detail-row">
-                <span className="main-prof-box-detail-row-text">Name</span>
-                <span className="main-prof-box-detail-row-text-col">
-                  CA
-                </span>
+              <div className="main-prof-box-details-div">
+                <div className="main-prof-box-detail-row">
+                  <span className="main-prof-box-detail-row-text">
+                    CA-Referral-ID
+                  </span>
+                  <span
+                    className={
+                      !openemail
+                        ? "main-prof-box-detail-row-text-col"
+                        : "main-prof-box-detail-row-text-col-2"
+                    }
+                    onClick={OpenEmail}
+                  >
+                    {userDetails?.referred_by_id}
+                  </span>
+                </div>
+                <div className="main-prof-box-detail-row">
+                  <span className="main-prof-box-detail-row-text">Name</span>
+                  <span className="main-prof-box-detail-row-text-col">CA</span>
+                </div>
+                <div className="main-prof-box-detail-row">
+                  <span className="main-prof-box-detail-row-text">
+                    Phone number
+                  </span>
+                  <span className="main-prof-box-detail-row-text-col">
+                    1234
+                  </span>
+                </div>
               </div>
-              <div className="main-prof-box-detail-row">
-                <span className="main-prof-box-detail-row-text">Phone number</span>
-                <span className="main-prof-box-detail-row-text-col">
-                  1234
-                </span>
-              </div>
-            </div>
-          </div>
+            </div>)}
           </div>
         </div>
         <div className="c-line">
@@ -374,7 +420,11 @@ const MainProfileBox = ({data}) => {
             </div>
           ) : (
             <div className="upload-doc-container">
-              {file ? (<p className="mpb-text">Document Uploaded</p>):(<p className="mpb-text">Upload document to verify</p>)}
+              {file ? (
+                <p className="mpb-text">Document Uploaded</p>
+              ) : (
+                <p className="mpb-text">Upload document to verify</p>
+              )}
               {/* <p className="mpb-text">Document Uploaded</p> */}
               {file ? (
                 <div className="after-upload-container">
