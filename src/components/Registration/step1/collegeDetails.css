@@ -382,6 +382,22 @@ border:none!important;
 min-height:0px !important;
 }
 
+#check-login{
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+  margin-bottom: -10px;
+}
+
+#check-login-1{
+  color:black;
+}
+
+#check-login-2{
+  color:#FFC414;
+}
+
+
 @media (min-width:930px){
 
 #enter-college-reg{

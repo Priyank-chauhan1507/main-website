@@ -319,6 +319,31 @@ const MainProfileBox = ({data}) => {
                 </span>
               </div>
             </div>
+            <div className="main-prof-detail-2">
+            <div className="main-prof-box-head-div">
+              <h1 className="main-prof-box-head-text">CA Referral</h1>
+            </div>
+            <div className="main-prof-box-details-div">
+              <div className="main-prof-box-detail-row">
+                <span className="main-prof-box-detail-row-text">CA-Referral-ID</span>
+                <span className={!openemail ? "main-prof-box-detail-row-text-col" : "main-prof-box-detail-row-text-col-2"} onClick={OpenEmail}>
+                  Referral-ID
+                </span>
+              </div>
+              <div className="main-prof-box-detail-row">
+                <span className="main-prof-box-detail-row-text">Name</span>
+                <span className="main-prof-box-detail-row-text-col">
+                  CA
+                </span>
+              </div>
+              <div className="main-prof-box-detail-row">
+                <span className="main-prof-box-detail-row-text">Phone number</span>
+                <span className="main-prof-box-detail-row-text-col">
+                  1234
+                </span>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
         <div className="c-line">
