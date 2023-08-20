@@ -28,11 +28,12 @@ function EventCard({ data }) {
         )}
       </div>
       <hr />
-      {data?.event__solo_team === "solo" ? (
+      {(data?.event__solo_team === "Solo" || data?.event__solo_team === "solo") ? (
         <p>{data?.event__note}</p>
       ) : (
         <>
-          <span className="events-team-name">Subevent - {data?.sub_event}</span>
+        {data?.sub_event && 
+          (<span className="events-team-name">Subevent - {data?.sub_event}</span>)}
           <span className="events-team-name">Team Name - {data?.team_name}</span>
           <span className="events-team-name">Team Coordinator Name -{data?.team_leader_name}</span>
         </>
