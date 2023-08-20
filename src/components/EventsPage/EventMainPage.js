@@ -232,7 +232,7 @@ const EventMainPage = ({ events }) => {
         <img src={bgmobile} alt="" className="bgmobile" />
         <Navbar2 setregister={setregister} register="event" />
         <img src={bg} alt="" className="bg-events" />
-        <div className="events_back">
+        <div className={register ? "events_back" : "events_back1"}>
           <div className="events-left">
             {register ? (
               <>
@@ -432,6 +432,7 @@ const EventMainPage = ({ events }) => {
               </>
             )}
           </div>
+          {register && (
           <div className="events-right">
             <img
               src={eventdata[0]?.image === null ? photo : eventdata[0]?.image}
@@ -443,7 +444,7 @@ const EventMainPage = ({ events }) => {
               className="event-photo1"
               alt=""
             />
-          </div>
+          </div>)}
         </div>
       </div>
     </>
