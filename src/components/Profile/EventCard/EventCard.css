@@ -129,6 +129,18 @@
     padding: 5px 8px;
 }
 
+@media only screen and (max-width: 800px)
+{
+    .eventcard-nav-part{
+        display: none;
+    }
+    .eventcard-nav{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
 
 @media screen and (max-width:768px) {
     .events-team-name {

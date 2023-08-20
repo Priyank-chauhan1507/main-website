@@ -238,6 +238,7 @@ const EventBox = () => {
                     >
                       Participate
                     </span>
+                    
                     {/* <span
                       onClick={() => {
                         setFilter("solo");
@@ -897,12 +898,14 @@ const EventBox = () => {
                 <>
                   <div className="eventcard-nav">
                     <span
+                    className="eventcard-nav-part"
                       style={{
                         cursor: "default",
                       }}
                     >
                       Participate
                     </span>
+                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/eventslist')}>Add an Event</button>
                     {/* <span
                       onClick={() => {
                         setFilter("solo");
