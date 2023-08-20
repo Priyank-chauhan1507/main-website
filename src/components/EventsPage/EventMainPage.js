@@ -74,7 +74,7 @@ const EventMainPage = ({ events }) => {
 
       //  console.log(events1);
        for(let num=0;num<events1.length;num++){
-          if(events1[num].event== eventuser.event){
+          if(events1[num].event== eventuser.event && events1[num].sub_event==eventuser.sub_event){
 
            exit=true;
             setExist(true);
@@ -82,7 +82,7 @@ const EventMainPage = ({ events }) => {
           };
        };
       if(exit) {
-        message.info(`You are already registered for ${eventdata[0]?.name}`);
+        message.info(`You are already registered for ${eventdata[0]?.name} ${eventuser.sub_event}`);
         setLoading(false);
         navigate('/pevents')
        }
@@ -92,7 +92,7 @@ const EventMainPage = ({ events }) => {
         .then((res) => {
           if (res.status == 201) {
             message.success(
-              `🎉You are registerd successfully for ${eventdata[0]?.name}`
+              `🎉You are registerd successfully for ${eventdata[0]?.name} ${eventuser.sub_event}`
             );
             navigate('/pevents');
 
