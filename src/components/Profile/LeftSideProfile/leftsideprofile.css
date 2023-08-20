@@ -78,9 +78,15 @@
   justify-content: flex-start;
   align-items: center;
   width: 15vw;
-  height: 80vh;
-  gap: 7vh;
+  height: 75vh;
+    gap: 7vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
+}
+
+.lsp-box::-webkit-scrollbar{
+  display: none !important;
 }
 
 .c1-text {

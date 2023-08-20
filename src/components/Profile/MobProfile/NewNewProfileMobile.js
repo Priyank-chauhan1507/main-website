@@ -213,7 +213,6 @@ const NewNewProfileMobile = ({ data }) => {
         }
       >
         <div id="profile_mob_cover">
-          <img className="lsp-img11" src={pic} alt="profilepic" />
           <p id="mob_upload_pic">
             {" "}
             <FileUploader
@@ -221,6 +220,7 @@ const NewNewProfileMobile = ({ data }) => {
               types={fileTypes}
               handleChange={changeHandler1}
             >
+          <img className="lsp-img11" src={pic} alt="profilepic" />
               <div className="lsp-text0">
                 {profilepic ? "profile uploaded" : "Upload Profile"}
               </div>
@@ -230,6 +230,10 @@ const NewNewProfileMobile = ({ data }) => {
         <div className="mob-lt1">
           <span className="lsp-text1">{userDetails?.name}{userDetails?.is_ca ? "(CA)" : ""}</span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
+          {userDetails?.is_ca &&
+            (<span className="lsp-text2">
+              CA ID : {userDetails?.ca_thomso_id}
+            </span>)}
         </div>
       </div>
       <div
@@ -348,7 +352,8 @@ const NewNewProfileMobile = ({ data }) => {
                 </span>
               </div>
             </div>
-            {/* <div className="main-prof-box-flex-2">
+            {userDetails?.is_ca===false && (
+            <div className="main-prof-box-flex-2">
               <div className="flex-2-title">CA-Referral</div>
               <div className="main-prof-box-details-div">
                 <div className="main-prof-box-detail-row ca-ref-box">
@@ -356,23 +361,23 @@ const NewNewProfileMobile = ({ data }) => {
                     CA-Referral
                   </span>
                   <span className="main-prof-box-detail-row-text-col">
-                    1234
+                  {userDetails?.ca_thomso_id}
                   </span>
                 </div>
                 <div className="main-prof-box-detail-row">
                   <span className="main-prof-box-detail-row-text">Name</span>
-                  <span className="main-prof-box-detail-row-text-col">CA</span>
+                  <span className="main-prof-box-detail-row-text-col">{userDetails?.ca_name}</span>
                 </div>
                 <div className="main-prof-box-detail-row">
                   <span className="main-prof-box-detail-row-text">
                     Phone Number
                   </span>
                   <span className="main-prof-box-detail-row-text-col">
-                    1234
+                  {userDetails?.ca_contact}
                   </span>
                 </div>
               </div>
-            </div> */}
+            </div> )}
             <div className="main-prof-box-flex-2">
               <div className="flex-2-title">College ID</div>
               <div className="upload-doc-container">

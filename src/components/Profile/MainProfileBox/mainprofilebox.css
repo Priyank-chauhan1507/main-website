@@ -145,6 +145,7 @@ line-height: normal;
   width: 24vw;
   height: 28vh;
   gap: 1vh;
+  cursor: pointer;
 }
 
 .drag-1 {
@@ -193,6 +194,7 @@ line-height: normal;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .drag-3 {
   font-family: "Lato";
@@ -204,6 +206,7 @@ line-height: normal;
   align-items: center;
   letter-spacing: -0.02em;
   color: #333333;
+  cursor: pointer;
 }
 .delete-3 {
   font-family: "Lato";
@@ -218,6 +221,7 @@ line-height: normal;
 }
 .drag-3-input {
   display: none;
+  cursor: pointer;
 }
 
 .main-logout-btn {

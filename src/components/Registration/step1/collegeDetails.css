@@ -235,6 +235,7 @@ letter-spacing: 1.2px;
     letter-spacing: 0em;
     border: 1.52px solid #505050;
     box-shadow: 1.5px 3px 0px 0px #505050;
+    cursor: pointer;
   }
   
   .college-button-clear {
@@ -261,6 +262,21 @@ letter-spacing: 1.2px;
 
   .widthController{
     width: 40vw;
+  }
+
+  #check-login{
+    display: none;
+    justify-content: center;
+    margin-top:20px;
+    margin-bottom: -10px;
+  }
+  
+  #check-login-1{
+    color:black;
+  }
+  
+  #check-login-2{
+    color:#FFC414;
   }
 
 
@@ -368,6 +384,9 @@ letter-spacing: 1.2px;
     margin-top: 10vh;
    
     }
+    #check-login{
+      display: flex;
+    }
   }
 /* @media only screen and (min-width:930px){
 
@@ -382,20 +401,7 @@ border:none!important;
 min-height:0px !important;
 }
 
-#check-login{
-  display: flex;
-  justify-content: center;
-  margin-top:20px;
-  margin-bottom: -10px;
-}
 
-#check-login-1{
-  color:black;
-}
-
-#check-login-2{
-  color:#FFC414;
-}
 
 
 @media (min-width:930px){

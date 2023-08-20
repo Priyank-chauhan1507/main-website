@@ -10,6 +10,7 @@ import { FileUploader } from "react-drag-drop-files";
 import "./LogoutModel.css";
 import "../LeftSideProfile/leftsideprofile.css";
 import "../Profile/Profile.css";
+import { message } from "antd";
 import axios from "axios";
 // import { Button } from "@mui/material";
 import { CgClose, CgGenderMale } from "react-icons/cg";
@@ -57,7 +58,7 @@ const MainProfileBox = ({ data }) => {
       user_id: userDetails.user_id,
     };
     axios
-      .post("/apiV1/delete_user_image", obj)
+      .delete("/apiV1/delete_user_image", obj)
       .then((res) => {
         fetchUser(res.data);
         // setLoading(false);
@@ -89,11 +90,13 @@ const MainProfileBox = ({ data }) => {
     formData.append("college_id", file);
     setLoading(true);
 
-    if (file.size > 5e6) {
-      alert("size is too large");
+    if (file.size > 2048000) {
+      message.warning("size is too large. Size must be less than 2MB");
+      setFile(null);
+      setLoading(false);
       return false;
     } else {
-      alert("file successfully selected");
+      message.success("file successfully selected");
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -104,13 +107,13 @@ const MainProfileBox = ({ data }) => {
         },
       }
     );
-    if (response.status == 200) {
+    if (response.status === 200) {
       setFile(file);
       fetchUser();
       setLoading(false);
     } else {
       setLoading(false);
-      alert("something went wrong while uploading, please reupload");
+      message.error("something went wrong while uploading, please reupload");
       setFile(null);
     }
   };
@@ -118,14 +121,15 @@ const MainProfileBox = ({ data }) => {
   const changeHandler1 = async (file) => {
     const userId = userDetails?.user_id;
     let formData = new FormData();
-    formData.append("profile_pic", file);
+    formData.append("avatar", file);
     setprofilepic(true);
 
-    if (file.size > 5e6) {
-      alert("size is too large");
+    if (file.size > 512000) {
+      message.warning("size is too large.Size must be less than 500KB");
+      setprofilepic(null);
       return false;
     } else {
-      alert("file successfully selected");
+      message.success("file successfully selected");
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -142,7 +146,7 @@ const MainProfileBox = ({ data }) => {
       setLoading(false);
     } else {
       setLoading(false);
-      alert("something went wrong while uploading, please reupload");
+      message.error("something went wrong while uploading, please reupload");
       setprofilepic(null);
     }
   };
@@ -170,6 +174,7 @@ const MainProfileBox = ({ data }) => {
                 type="file"
                 types={fileTypes}
                 handleChange={changeHandler1}
+                accept="image/jpeg, image/png"
               >
                 <img className="lsp-img1" src={pic} alt="profilepic" />
                 <div className="lsp-text0">
@@ -183,11 +188,15 @@ const MainProfileBox = ({ data }) => {
             <span className="lsp-text2">
               Thomso ID : {userDetails?.thomso_id}
             </span>
+            {userDetails?.is_ca &&
+            (<span className="lsp-text2">
+              CA ID : {userDetails?.ca_thomso_id}
+            </span>)}
           </div>
           <div>
             {userDetails?.username}
             {userDetails?.thomso_id}
-            {/* {userDetails?.is_ca && `${userDetails?.ca_id}`} */}
+            {/* {userDetails?.is_ca && {userDetails}} */}
           </div>
           <div className="lsp-centre">
             <div className="lsp-c1">
@@ -355,7 +364,7 @@ const MainProfileBox = ({ data }) => {
                 </span>
               </div>
             </div>
-            {/* {userDetails?.is_ca===true && (
+            {userDetails?.is_ca===false && (
             <div className="main-prof-detail-2">
               <div className="main-prof-box-head-div">
                 <h1 className="main-prof-box-head-text">CA Referral</h1>
@@ -373,23 +382,23 @@ const MainProfileBox = ({ data }) => {
                     }
                     onClick={OpenEmail}
                   >
-                    {userDetails?.referred_by_id}
+                    {userDetails?.ca_thomso_id}
                   </span>
                 </div>
                 <div className="main-prof-box-detail-row">
                   <span className="main-prof-box-detail-row-text">Name</span>
-                  <span className="main-prof-box-detail-row-text-col">CA</span>
+                  <span className="main-prof-box-detail-row-text-col">{userDetails?.ca_name}</span>
                 </div>
                 <div className="main-prof-box-detail-row">
                   <span className="main-prof-box-detail-row-text">
                     Phone number
                   </span>
                   <span className="main-prof-box-detail-row-text-col">
-                    1234
+                    {userDetails?.ca_contact}
                   </span>
                 </div>
               </div>
-            </div>)} */}
+            </div>)}
           </div>
         </div>
         <div className="c-line">
