@@ -30,6 +30,7 @@ const EventMainPage = ({ events }) => {
   const [exist, setExist] = useState(false);
   const [filter, setfilter] = useState([]);
   const [eventdata, setEventData] = useState({});
+  const [check, setcheck] = useState(true)
   const [register, setregister] = useState(true);
   const [active, setActive] = useState(false);
   const [activet, setActivet] = useState(false);
@@ -274,6 +275,8 @@ const EventMainPage = ({ events }) => {
                             type="checkbox"
                             id={el}
                             value={el}
+                            // onClick={()=>{setcheck(false)}}
+                            // required = {check}
                             onChange={onChangeSubEvent}
                             checked={el === registerData.sub_event}
                             onClick={() => setActive(true)}
@@ -367,6 +370,7 @@ const EventMainPage = ({ events }) => {
                               <input
                                 type="checkbox"
                                 id={el}
+                                // required={check}
                                 value={el}
                                 onChange={onChangeSubEvent}
                                 checked={el === registerData.sub_event}
