@@ -4,7 +4,7 @@ import { RiHeart2Fill, RiHeart2Line } from "react-icons/ri";
 function EventCard({ data }) {
   const [like, setlike] = useState(false);
   return (
-    <div className="eventcard" style={{background:`url(${data?.event__image})`,    backgroundSize: "cover",backgroundPosition:"center center"}}>
+    <div className="eventcard" style={{background:`url(${data?.event__image})`, backgroundSize: "cover",backgroundPosition:"center center"}}>
       <div className="eventcard1">
         <h2>{data?.event__name}</h2>
         {like ? (
@@ -32,6 +32,7 @@ function EventCard({ data }) {
         <p>{data?.event__note}</p>
       ) : (
         <>
+          <span className="events-team-name">Subevent - {data?.sub_event}</span>
           <span className="events-team-name">Team Name - {data?.team_name}</span>
           <span className="events-team-name">Team Coordinator Name -{data?.team_leader_name}</span>
         </>
