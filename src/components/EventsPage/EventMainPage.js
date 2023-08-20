@@ -27,11 +27,13 @@ const EventMainPage = ({ events }) => {
   const navigate = useNavigate();
   const { dispatch } = Store;
   const [events1, setEvents1] = useState([]);
-  const [exist,setExist]=useState(false);
+  const [exist, setExist] = useState(false);
   const [filter, setfilter] = useState([]);
   const [eventdata, setEventData] = useState({});
   const [check, setcheck] = useState(true)
   const [register, setregister] = useState(true);
+  const [active, setActive] = useState(false);
+  const [activet, setActivet] = useState(false);
   const [registerData, setregisterData] = useState({
     team_leader_name: "",
     team_name: "",
@@ -58,8 +60,8 @@ const EventMainPage = ({ events }) => {
         console.log(err);
       });
   };
-  const onSubmit =  (e) => {
-    let exit=false;
+  const onSubmit = (e) => {
+    let exit = false;
     e.preventDefault();
     if (!localStorage.getItem("token")) {
       navigate("/login");
@@ -74,16 +76,15 @@ const EventMainPage = ({ events }) => {
       };
 
       //  console.log(events1);
-       for(let num=0;num<events1.length;num++){
-          if(events1[num].event== eventuser.event){
-
-           exit=true;
-            setExist(true);
-            break;
-          };
-       };
-      if(exit) {
-        message.info(`You are already registered for ${eventdata[0]?.name}`);
+      for (let num = 0; num < events1.length; num++) {
+        if (events1[num].event == eventuser.event && events1[num].sub_event==eventuser.sub_event) {
+          exit = true;
+          setExist(true);
+          break;
+        }
+      }
+      if (exit) {
+        message.info(`You are already registered for ${eventdata[0]?.name} ${eventuser.sub_event}`);
         setLoading(false);
         navigate('/pevents')
        }
@@ -93,30 +94,30 @@ const EventMainPage = ({ events }) => {
         .then((res) => {
           if (res.status == 201) {
             message.success(
-              `🎉You are registerd successfully for ${eventdata[0]?.name}`
+              `🎉You are registerd successfully for ${eventdata[0]?.name} ${eventuser.sub_event}`
             );
             navigate('/pevents');
 
-            setregister(true);
-            getEvents();
-            // if (button == "Register") {
-            //   setButton("Registered");
-            // }
-            // if (this.props.data.is_submission) {
-            //   this.setState({ button: "Submit" });
-            // } else {
-            //   this.setState({ button: "Not Now" });
-            // }
-            // fetchEvent();
-            // this.fetchData();
-            // history.push("/pevents");
-          }
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.log(err.response.data);
-        });
-      };
+              setregister(true);
+              getEvents();
+              // if (button == "Register") {
+              //   setButton("Registered");
+              // }
+              // if (this.props.data.is_submission) {
+              //   this.setState({ button: "Submit" });
+              // } else {
+              //   this.setState({ button: "Not Now" });
+              // }
+              // fetchEvent();
+              // this.fetchData();
+              // history.push("/pevents");
+            }
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.log(err.response.data);
+          });
+      }
     }
   };
 
@@ -130,14 +131,12 @@ const EventMainPage = ({ events }) => {
         .get(`/apiV1/event`)
         .then((res) => {
           let selectedItem = res.data?.filter(function (el) {
-
             return el.id == id;
           });
 
           setEventData(selectedItem);
           // setEventData(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
-
         })
         .catch((err) => {
           console.log(err);
@@ -154,7 +153,6 @@ const EventMainPage = ({ events }) => {
     }
   };
 
-
   const handleChange = (e) => {
     setregisterData({ ...registerData, [e.target.name]: e.target.value });
   };
@@ -165,6 +163,7 @@ const EventMainPage = ({ events }) => {
     if (checked) {
       // setUser({ ...user, gender: gender?.value });
       setregisterData({ ...registerData, sub_event: value });
+      setActive(true);
     }
   };
 
@@ -280,6 +279,8 @@ const EventMainPage = ({ events }) => {
                             required = {check}
                             onChange={onChangeSubEvent}
                             checked={el === registerData.sub_event}
+                            onClick={() => setActive(true)}
+                            
                             // required
                           />
                           <label htmlFor={el} style={{ color: "white" }}>
@@ -291,20 +292,41 @@ const EventMainPage = ({ events }) => {
                   })}
 
                 <div className="events-left-event5">
-                  <button
-                    className="events-left-event5-btn1"
-                    id="newchangesinbutton"
-                    onClick={(e) => handleClick(e)}
-                  >
-                    {loading ? (
-                      <>
-                        <Loader />
+                  {eventdata[0]?.solo_team === "solo" &&
+                  eventdata[0]?.sub_event &&
+                  active === false ? (
+                    <button
+                      className="events-left-event5-btn1"
+                      id="newchangesinbutton"
+                      onClick={() =>
+                        message.warning("Please select a sub-event!")
+                      }
+                    >
+                      {loading ? (
+                        <>
+                          <Loader />
+                          <>REGISTER</>
+                        </>
+                      ) : (
                         <>REGISTER</>
-                      </>
-                    ) : (
-                      <>REGISTER</>
-                    )}
-                  </button>
+                      )}
+                    </button>
+                  ) : (
+                    <button
+                      className="events-left-event5-btn1"
+                      id="newchangesinbutton"
+                      onClick={(e) => handleClick(e)}
+                    >
+                      {loading ? (
+                        <>
+                          <Loader />
+                          <>REGISTER</>
+                        </>
+                      ) : (
+                        <>REGISTER</>
+                      )}
+                    </button>
+                  )}
                   {eventdata[0]?.rulebook != null && (
                     <a
                       className="events-left-event5-btn2"
@@ -318,17 +340,26 @@ const EventMainPage = ({ events }) => {
               </>
             ) : (
               <>
-                <h1 className="events-left-event6">Registration                 <img
-                  src={cross_img}
-                  alt=""
-                  onClick={() => setregister(!register)}
-                  className="event-cross"
-                /> </h1>
-
+                <h1 className="events-left-event6">
+                  Registration{" "}
+                  <img
+                    src={cross_img}
+                    alt=""
+                    onClick={() => setregister(!register)}
+                    className="event-cross"
+                  />{" "}
+                </h1>
 
                 <form
                   className="events-left-event7"
-                  onSubmit={(e) => onSubmit(e)}
+                  onSubmit={(e) => {
+                    if(activet===true){
+                      onSubmit(e);
+                    }else{
+                      setregister(false);
+                    }
+                  }
+                  }
                 >
                   <div className="events-left-event9">
                     {eventdata[0]?.sub_event &&
@@ -344,6 +375,7 @@ const EventMainPage = ({ events }) => {
                                 value={el}
                                 onChange={onChangeSubEvent}
                                 checked={el === registerData.sub_event}
+                                onClick={() => setActivet(true)}
                                 // required
                               />
                               <label htmlFor={el} style={{ color: "white" }}>
@@ -370,16 +402,33 @@ const EventMainPage = ({ events }) => {
                     onChange={(e) => handleChange(e)}
                     required
                   />
-                  <button className="events-left-event8" type="submit">
-                    {loading ? (
-                      <>
-                        <Loader />
+                  {((eventdata[0]?.solo_team != "Solo") &&
+                  eventdata[0]?.sub_event &&
+                  activet === false) ? (
+                    <button className="events-left-event8" type="submit" onClick={() =>
+                      message.warning("Please select a sub-event!")
+                    }>
+                      {loading ? (
+                        <>
+                          <Loader />
+                          <>REGISTER</>
+                        </>
+                      ) : (
                         <>REGISTER</>
-                      </>
-                    ) : (
-                      <>REGISTER</>
-                    )}
-                  </button>
+                      )}
+                    </button>
+                  ) : (
+                    <button className="events-left-event8" type="submit">
+                      {loading ? (
+                        <>
+                          <Loader />
+                          <>REGISTER</>
+                        </>
+                      ) : (
+                        <>REGISTER</>
+                      )}
+                    </button>
+                  )}
                 </form>
               </>
             )}
