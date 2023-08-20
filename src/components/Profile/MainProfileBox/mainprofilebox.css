@@ -18,6 +18,12 @@
 div.main-prof-box-flex-1::-webkit-scrollbar {
   width:0px;
 }
+.lsp-img1{
+  cursor: pointer;
+}
+.lsp-text0{
+  cursor: pointer;
+}
 .main-prof-box-head-text {
   font-family: "Oxanium";
   font-style: normal;
