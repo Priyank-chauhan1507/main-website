@@ -37,7 +37,7 @@
   gap: 5%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .events-left::-webkit-scrollbar {
@@ -383,7 +383,11 @@
   }
 }
 
-
+@media (min-width:601px) {
+  .events-left{
+    overflow-y: scroll;
+  }
+}
 
 @media (max-width:600px) {
   .events_back {
@@ -393,6 +397,12 @@
     height: 90vh;
     position: fixed;
     margin-top: -2vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .bg-events {
+    display: none;
   }
 
   #newchangesinbutton {
@@ -407,10 +417,11 @@
 
   .events-left {
     width: 100vw;
-    height: 55%;
+    /* height: 55%; */
     gap: 11px;
     /* overflow-y:auto; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* overflow-y:  auto !important; */
   }
 
   .events-right {
@@ -624,9 +635,7 @@
     display: none;
   }
 
-  .bg-events {
-    display: none;
-  }
+  
 
   .eventcard-nav {
     display: flex !important;
