@@ -353,11 +353,9 @@ const EventMainPage = ({ events }) => {
                 <form
                   className="events-left-event7"
                   onSubmit={(e) => {
-                    if(activet===true){
-                      onSubmit(e);
-                    }else{
-                      setregister(false);
-                    }
+                    {eventdata[0]?.sub_event && activet && onSubmit(e)}
+                    {!eventdata[0]?.sub_event && onSubmit(e)}
+
                   }
                   }
                 >
@@ -401,7 +399,7 @@ const EventMainPage = ({ events }) => {
                     onChange={(e) => handleChange(e)}
                     required
                   />
-                  {((eventdata[0]?.solo_team != "Solo") &&
+                  {((eventdata[0]?.solo_team != "Solo" && eventdata[0]?.solo_team != "solo") &&
                   eventdata[0]?.sub_event &&
                   activet === false) ? (
                     <button className="events-left-event8" type="submit" onClick={() =>
