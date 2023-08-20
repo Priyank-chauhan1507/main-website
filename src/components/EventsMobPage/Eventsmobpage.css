@@ -19,7 +19,7 @@
 }
 .events-mob-page-list-img{
     position: fixed;
-    top: 10vh;
+    top: 0vh;
     height: 100vh;
     width: 100vw;
     z-index: 1;
@@ -30,6 +30,7 @@
     font-family: 'Rowdies';
     z-index: 10;
     font-weight: 700;
+    font-size: 25px;
 }
 
 .events-mob-page-list-span{
@@ -47,4 +48,10 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
+}
+
+@media only screen and (min-width:601px){
+    .events-mob-page-list{
+        display: none;
+    }
 }
