@@ -13,10 +13,13 @@ import Loader from "../../Loader/Loader";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import log from "../../../assests/logout-logo.svg";
 import cs1 from "../../../assests/CautionSign1.svg";
+import { FileUploader } from "react-drag-drop-files";
+const fileTypes = ["JPG", "PNG", "GIF"];
 
 const NewNewProfileMobile = ({ data }) => {
   const Locator = useLocation();
   const locator = useLocation();
+  const [profilepic,setprofilepic]=useState(0);
   const [logout, setLogout] = useState(0);
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
@@ -108,6 +111,38 @@ const NewNewProfileMobile = ({ data }) => {
     }
   };
 
+  const changeHandler1 = async (file) => {
+    const userId = userDetails?.user_id;
+    let formData = new FormData();
+    formData.append("profile_pic", file);
+    setprofilepic(true);
+
+    if (file.size > 5e6) {
+      alert("size is too large");
+      return false;
+    } else {
+      alert("file successfully selected");
+    }
+    const response = await axios.put(
+      `/apiV1/registeruser/${userId}`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    if (response.status == 200) {
+      setprofilepic(file);
+      fetchUser();
+      setLoading(false);
+    } else {
+      setLoading(false);
+      alert("something went wrong while uploading, please reupload");
+      setprofilepic(null);
+    }
+  };
+
   return (
     <div className="new-mob-profile" style={{ height: "81vh", overflowY: "auto", overflowX: "hidden" }}>
       {loading && <Loader />}
@@ -174,7 +209,18 @@ const NewNewProfileMobile = ({ data }) => {
             : "lsp-pic-1"
         }
       >
+        <div id="profile_mob_cover">
         <img className="lsp-img11" src={pic} alt="profilepic" />
+        <p id="mob_upload_pic">            <FileUploader 
+                  type="file"
+                  types={fileTypes}
+                  handleChange={changeHandler1}
+                >
+                <div className="lsp-text0">
+                {profilepic?"profile uploaded":"Upload Profile"}
+                </div>
+            </FileUploader></p>
+        </div>
         <div className="mob-lt1">
           <span className="lsp-text1">{userDetails?.name}</span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
@@ -295,7 +341,31 @@ const NewNewProfileMobile = ({ data }) => {
                   {userDetails?.gender}
                 </span>
               </div>
+
             </div>
+            <div className="main-prof-box-flex-2">
+              <div className="flex-2-title">CA-Referral</div>
+              <div className="main-prof-box-details-div">
+              <div className="main-prof-box-detail-row ca-ref-box">
+                <span className="main-prof-box-detail-row-text">CA-Referral</span>
+                <span className="main-prof-box-detail-row-text-col">
+                  1234
+                </span>
+              </div>
+              <div className="main-prof-box-detail-row">
+                <span className="main-prof-box-detail-row-text">Name</span>
+                <span className="main-prof-box-detail-row-text-col">
+                  CA
+                </span>
+              </div>
+              <div className="main-prof-box-detail-row">
+                <span className="main-prof-box-detail-row-text">Phone Number</span>
+                <span className="main-prof-box-detail-row-text-col">
+                  1234
+                </span>
+              </div>
+              </div>
+              </div>
             <div className="main-prof-box-flex-2">
               <div className="flex-2-title">College ID</div>
               <div className="upload-doc-container">

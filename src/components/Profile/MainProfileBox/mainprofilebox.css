@@ -1,6 +1,6 @@
 .main-prof-box {
   width: 65vw;
-  height: 80vh;
+  height: 75vh;
   margin-top: 10vh;
   display: flex;
   flex-direction: row;
@@ -278,5 +278,8 @@ line-height: normal;
 @media only screen and (max-width: 768px){
   .main-prof-box-detail-row-text-col{
     width:45vw;
+  }
+  .main-logout-btn{
+    margin-left:0px !important;
   }
 }

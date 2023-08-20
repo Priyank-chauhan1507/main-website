@@ -320,7 +320,6 @@ const CollegeDetails = () => {
               </div>
             </div>
           </div>
-
           <div className="college-buttons">
             <button
               onClick ={nextStep}
@@ -338,6 +337,7 @@ const CollegeDetails = () => {
               Clear
             </button>
           </div>
+          <div id="check-login"><div id="check-login-1">Already Registered ? &nbsp; </div> <Link to='/login'id="check-login-2"> Login </Link></div>
         </div>
       </div> </>) :(<PersonalDetails  college={user.college} state={user.state} district={user.district} degree ={user.degree} year ={user.year} />)};
 

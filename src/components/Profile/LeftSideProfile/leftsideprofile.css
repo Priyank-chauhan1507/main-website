@@ -29,7 +29,7 @@
   color:white;
   font-size:12px;
   font-family:Comic Neue;
-  margin-top:15px;
+  margin-top:9px;
   display: flex;
   justify-content: center;
 }
@@ -64,7 +64,7 @@
   align-items: center;
   margin-bottom: 10px;
   margin-top: 10px;
-  gap: 20px;
+  gap: 15px;
 }
 
 .lsp-box {
@@ -175,6 +175,9 @@ letter-spacing: -0.32px;
   }
   .lsp-pic {
     padding-left: 2vw;
+  }
+  .lsp-text0{
+    margin-left:-2vw;
   }
 }
 
