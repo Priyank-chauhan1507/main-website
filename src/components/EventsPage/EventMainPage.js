@@ -275,8 +275,8 @@ const EventMainPage = ({ events }) => {
                             type="checkbox"
                             id={el}
                             value={el}
-                            onClick={()=>{setcheck(false)}}
-                            required = {check}
+                            // onClick={()=>{setcheck(false)}}
+                            // required = {check}
                             onChange={onChangeSubEvent}
                             checked={el === registerData.sub_event}
                             onClick={() => setActive(true)}
@@ -370,8 +370,7 @@ const EventMainPage = ({ events }) => {
                               <input
                                 type="checkbox"
                                 id={el}
-                                onClick={()=>{setcheck(false)}}
-                                required={check}
+                                // required={check}
                                 value={el}
                                 onChange={onChangeSubEvent}
                                 checked={el === registerData.sub_event}
