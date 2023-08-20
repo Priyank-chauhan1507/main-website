@@ -17,8 +17,8 @@ const WebNavbarNew = () => {
         <div className="webNavbarLeft">
           <div className="webNavbarLeft1">Contact us</div>
           <div className="webNavbarLeft2">
-            <div>Pramod</div>
-            <div>9694627622</div>
+            <div>Kartikey</div>
+            <div>9205915692</div>
           </div>
           <div className="webNavbarLeft3">
             <div>Jolly</div>
