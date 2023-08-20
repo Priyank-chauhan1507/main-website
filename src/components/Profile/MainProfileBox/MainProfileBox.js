@@ -355,7 +355,7 @@ const MainProfileBox = ({ data }) => {
                 </span>
               </div>
             </div>
-            {userDetails?.is_ca===true && (
+            {/* {userDetails?.is_ca===true && (
             <div className="main-prof-detail-2">
               <div className="main-prof-box-head-div">
                 <h1 className="main-prof-box-head-text">CA Referral</h1>
@@ -389,7 +389,7 @@ const MainProfileBox = ({ data }) => {
                   </span>
                 </div>
               </div>
-            </div>)}
+            </div>)} */}
           </div>
         </div>
         <div className="c-line">

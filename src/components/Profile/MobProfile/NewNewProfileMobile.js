@@ -19,7 +19,7 @@ const fileTypes = ["JPG", "PNG", "GIF"];
 const NewNewProfileMobile = ({ data }) => {
   const Locator = useLocation();
   const locator = useLocation();
-  const [profilepic,setprofilepic]=useState(0);
+  const [profilepic, setprofilepic] = useState(0);
   const [logout, setLogout] = useState(0);
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
@@ -144,7 +144,10 @@ const NewNewProfileMobile = ({ data }) => {
   };
 
   return (
-    <div className="new-mob-profile" style={{ height: "81vh", overflowY: "auto", overflowX: "hidden" }}>
+    <div
+      className="new-mob-profile"
+      style={{ height: "81vh", overflowY: "auto", overflowX: "hidden" }}
+    >
       {loading && <Loader />}
       <div className="mpb-mobileview">
         <div className="mv-top">
@@ -210,19 +213,22 @@ const NewNewProfileMobile = ({ data }) => {
         }
       >
         <div id="profile_mob_cover">
-        <img className="lsp-img11" src={pic} alt="profilepic" />
-        <p id="mob_upload_pic">            <FileUploader 
-                  type="file"
-                  types={fileTypes}
-                  handleChange={changeHandler1}
-                >
-                <div className="lsp-text0">
-                {profilepic?"profile uploaded":"Upload Profile"}
-                </div>
-            </FileUploader></p>
+          <img className="lsp-img11" src={pic} alt="profilepic" />
+          <p id="mob_upload_pic">
+            {" "}
+            <FileUploader
+              type="file"
+              types={fileTypes}
+              handleChange={changeHandler1}
+            >
+              <div className="lsp-text0">
+                {profilepic ? "profile uploaded" : "Upload Profile"}
+              </div>
+            </FileUploader>
+          </p>
         </div>
         <div className="mob-lt1">
-          <span className="lsp-text1">{userDetails?.name}</span>
+          <span className="lsp-text1">{userDetails?.name}{userDetails?.is_ca ? "(CA)" : ""}</span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
         </div>
       </div>
@@ -341,31 +347,32 @@ const NewNewProfileMobile = ({ data }) => {
                   {userDetails?.gender}
                 </span>
               </div>
-
             </div>
-            <div className="main-prof-box-flex-2">
+            {/* <div className="main-prof-box-flex-2">
               <div className="flex-2-title">CA-Referral</div>
               <div className="main-prof-box-details-div">
-              <div className="main-prof-box-detail-row ca-ref-box">
-                <span className="main-prof-box-detail-row-text">CA-Referral</span>
-                <span className="main-prof-box-detail-row-text-col">
-                  1234
-                </span>
+                <div className="main-prof-box-detail-row ca-ref-box">
+                  <span className="main-prof-box-detail-row-text">
+                    CA-Referral
+                  </span>
+                  <span className="main-prof-box-detail-row-text-col">
+                    1234
+                  </span>
+                </div>
+                <div className="main-prof-box-detail-row">
+                  <span className="main-prof-box-detail-row-text">Name</span>
+                  <span className="main-prof-box-detail-row-text-col">CA</span>
+                </div>
+                <div className="main-prof-box-detail-row">
+                  <span className="main-prof-box-detail-row-text">
+                    Phone Number
+                  </span>
+                  <span className="main-prof-box-detail-row-text-col">
+                    1234
+                  </span>
+                </div>
               </div>
-              <div className="main-prof-box-detail-row">
-                <span className="main-prof-box-detail-row-text">Name</span>
-                <span className="main-prof-box-detail-row-text-col">
-                  CA
-                </span>
-              </div>
-              <div className="main-prof-box-detail-row">
-                <span className="main-prof-box-detail-row-text">Phone Number</span>
-                <span className="main-prof-box-detail-row-text-col">
-                  1234
-                </span>
-              </div>
-              </div>
-              </div>
+            </div> */}
             <div className="main-prof-box-flex-2">
               <div className="flex-2-title">College ID</div>
               <div className="upload-doc-container">
