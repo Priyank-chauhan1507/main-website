@@ -10,9 +10,11 @@
     padding: 5vh 0;
     overflow-y: scroll;
     /* top: 10vh; */
+    z-index: 2;
 }
 .events-mob-page-list-main{
-    overflow-y: hidden;
+    overflow-y: scroll;
+    height: 100vh;
 }
 .events-mob-page-list-nav{
     overflow-y: hidden;
