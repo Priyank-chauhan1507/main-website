@@ -20,7 +20,7 @@ const Login = (props) => {
   const [user, setUser] = useState({
     email: "",
     password: "",
-    type: "ca",
+    type: "participant",
   });
 
   const [active, setActive] = useState(false);
