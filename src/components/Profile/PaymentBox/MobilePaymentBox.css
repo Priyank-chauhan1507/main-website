@@ -1,0 +1,398 @@
+.body {
+  background-color: black;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100vw;
+  color: white;
+
+}
+
+.head {
+  padding-top: 32.M37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10vw;
+}
+
+.img1 {
+  color: white;
+  height: 17px;
+}
+
+.a {
+  display: flex;
+  gap: 3vw;
+
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.M02em;
+
+  color: rgba(255, 255, 255, 0.M5);
+}
+
+.line1 {
+  border: 1px solid rgba(255, 255, 255, 0.M5);
+}
+
+.mid1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  margin-top: 110px;
+  gap: 7vh;
+}
+
+.b {
+  display: flex;
+  gap: 3vw;
+
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.M02em;
+
+  color: white;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+.MPaycontainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5px;
+  color: white;
+  margin-left: 15px;
+}
+
+.MPayleft {
+  /* margin-left: -100px; */
+  margin-top: 45px;
+
+}
+
+.Mpayheading {
+  font-family: 'Oxanium', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+
+}
+
+.MamountBox {
+  margin-top: 24px;
+  padding-top: 29px;
+  /* padding-left: 25px; */
+  padding-right: 26px;
+  padding-bottom: 18px;
+  max-width: 358px;
+  /* height: 209px; */
+  border: 0.5px solid rgba(255, 255, 255, 0.M6);
+}
+
+.MPayAmount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MPayAmount p {
+  font-family: 'Oxanium', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+
+.MPayline1 {
+  margin-top: 4px;
+  border-bottom: 1px solid white;
+  max-width: 303px;
+  height: 0px;
+}
+
+.MTotalAmount {
+  margin-top: 17px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.MPayTaxes {
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  padding-left: 4px;
+}
+
+.MPaylarge {
+  font-family: 'Oxanium', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.MPayAccommodation {
+  font-family: 'Oxanium', cursive;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 303px;
+}
+
+.MPayevent {
+  margin-top: 40px;
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 19px;
+  max-width: 418px;
+}
+
+.MyesNo {
+  display: flex;
+  gap: 15px;
+  margin-top: 26px;
+}
+
+.Myesbtn {
+  padding: 8px 24px;
+  width: 72px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+
+.Mnobtn {
+  padding: 8px 24px;
+  width: 72px;
+  height: 36px;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+
+.MPayNowBtn {
+  margin-top: 105px;
+  padding: 8px 24px;
+  width: 120px;
+  height: 36px;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.M02em;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.MPayNowBtnActive {
+  margin-top: 105px;
+  padding: 8px 24px;
+  width: 120px;
+  height: 36px;
+  border: none;
+  background: #FFFFFF;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.M02em;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.MPayRight {
+  /* margin-left: 100px; */
+  margin-top: 55px;
+  margin-right: 8px;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.MPayimg {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 55px;
+}
+
+.MpayRightHeader {
+  margin-top: -15px;
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.M02em;
+  color: #FFFFFF;
+}
+
+.MPayevntnm {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.MPayevntnm {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  letter-spacing: -0.M02em;
+  color: #FFFFFF;
+}
+
+.MPayTeamNm input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 320px;
+  height: 40px;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+}
+
+.MPayTeamNm input::placeholder {
+  color: white;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.MPayline2 {
+  border-bottom: 1px solid white;
+  max-width: 320px;
+  height: 0px;
+}
+
+.MpayheadContainer {
+  margin-top: 30px !important;
+  width: 320px;
+  height: 40px;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.Mpayheader {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.M02em;
+  color: #333333;
+  padding-top: 12px;
+  padding-left: 15px;
+  padding-bottom: 13px;
+}
+
+.MpaylistContainer {
+  margin-top: -18px;
+  width: 320px;
+  max-height: 95px !important;
+  overflow-y: scroll;
+  border: 1.5px solid white;
+  background: radial-gradient(100% 672.75% at 100% 100%,
+      rgba(255, 255, 255, 0.M05) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  /* backdrop-filter: blur(8px); */
+}
+
+.MpaylistContainer ul {
+  padding-left: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.M02em;
+  color: #ffffff;
+  list-style: none;
+}
+
+.MpaylistContainer ul li {
+  padding: 5px 0px 4px 20px;
+}
+
+.MpaylistContainer ul li:hover {
+  background-color: black;
+}
+
+.Mpayarrow {
+  color: white;
+  position: relative;
+  top: -28px;
+  right: -280px;
+}
+
+.MpayDetailScroll {
+  /* overflow-y: scroll; */
+  margin-top: 40px;
+  /* height: 53vh; */
+  padding-top: 15px;
+  padding-right: 10px;
+}
+
+.Mpaymentsuccess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
