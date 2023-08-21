@@ -44,6 +44,10 @@ const MainProfileBox = ({ data }) => {
     setuserDetails(data);
   }, [data]);
 
+  useEffect(() => {
+    fetchUser();
+  })
+
   // const cadeta = () => {
   //   ca_id = userDetails?.referred_by_id;
   //   const response = axios.get(`/apiV1/registerca/${localStorage.getItem(ca_id)}`);
@@ -57,8 +61,16 @@ const MainProfileBox = ({ data }) => {
     const obj = {
       user_id: userDetails.user_id,
     };
+    let formData = new FormData();
+    formData.append("college_id", "");
+
     axios
-      .delete("/apiV1/delete_user_image", obj)
+      .put(`/apiV1/registeruser/${obj.user_id}`,formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
       .then((res) => {
         fetchUser(res.data);
         // setLoading(false);
@@ -119,10 +131,12 @@ const MainProfileBox = ({ data }) => {
   };
 
   const changeHandler1 = async (file) => {
+    // setprofilepic(false);
     const userId = userDetails?.user_id;
     let formData = new FormData();
-    formData.append("avatar", file);
-    setprofilepic(true);
+    formData.append("avtar", file);
+    console.log(formData);
+    // setprofilepic(true);
 
     if (file.size > 512000) {
       message.warning("size is too large.Size must be less than 500KB");
@@ -130,6 +144,7 @@ const MainProfileBox = ({ data }) => {
       return false;
     } else {
       message.success("file successfully selected");
+      setprofilepic(true);
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -141,7 +156,7 @@ const MainProfileBox = ({ data }) => {
       }
     );
     if (response.status == 200) {
-      setprofilepic(file);
+      // setprofilepic(true);
       fetchUser();
       setLoading(false);
     } else {
@@ -176,7 +191,8 @@ const MainProfileBox = ({ data }) => {
                 handleChange={changeHandler1}
                 accept="image/jpeg, image/png"
               >
-                <img className="lsp-img1" src={pic} alt="profilepic" />
+                {profilepic ? (<img className="lsp-img1" src={userDetails?.avtar} alt="profilepic" />):(
+                <img className="lsp-img1" src={pic} alt="profilepic" />)}
                 <div className="lsp-text0">
                   {profilepic ? "profile uploaded" : "Upload Profile"}
                 </div>
