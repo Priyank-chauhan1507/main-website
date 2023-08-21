@@ -191,8 +191,7 @@ const MainProfileBox = ({ data }) => {
                 handleChange={changeHandler1}
                 accept="image/jpeg, image/png"
               >
-                {profilepic ? (<img className="lsp-img1" src={userDetails?.avtar} alt="profilepic" />):(
-                <img className="lsp-img1" src={pic} alt="profilepic" />)}
+                <img className="lsp-img1" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
                 <div className="lsp-text0">
                   {profilepic ? "profile uploaded" : "Upload Profile"}
                 </div>
