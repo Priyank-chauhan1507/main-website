@@ -28,6 +28,7 @@ const PaymentSuccess = () => {
           fontSize: "16px",
           lineHeight: "22px",
         }}
+         
       >
         <span
           style={{ marginTop: "10px", fontSize: "18px", fontWeight: "600" }}
