@@ -79,3 +79,17 @@
   }
 
 }
+
+#homebs2{
+  display: none;
+}
+@media only screen and (max-width:800px){
+  #homebg1{
+display: none;
+}
+
+#homebs2{
+  display: block;
+}
+
+}
