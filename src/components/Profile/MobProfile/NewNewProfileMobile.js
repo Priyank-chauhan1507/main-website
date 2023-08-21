@@ -220,7 +220,7 @@ const NewNewProfileMobile = ({ data }) => {
               types={fileTypes}
               handleChange={changeHandler1}
             >
-          <img className="lsp-img11" src={pic} alt="profilepic" />
+          <img className="lsp-img11" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
               <div className="lsp-text0">
                 {profilepic ? "profile uploaded" : "Upload Profile"}
               </div>
