@@ -55,6 +55,12 @@ letter-spacing: -0.48px;
 }
 
 
+@media only screen and (max-width: 800px)
+{
+    .eventcard-nav-part{
+        display: none;
+    }
+}
 @media only screen and (max-width: 350px)
 {
     .EventBox-Text{

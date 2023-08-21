@@ -1,0 +1,59 @@
+.events-mob-page-list{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    height: auto;
+    width: 100vw;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+    overflow-y: scroll;
+    /* top: 10vh; */
+    z-index: 2;
+}
+.events-mob-page-list-main{
+    overflow-y: scroll;
+    height: 100vh;
+}
+.events-mob-page-list-nav{
+    overflow-y: hidden;
+}
+.events-mob-page-list-img{
+    position: fixed;
+    top: 0vh;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.events-mob-page-list-h1{
+    color: #ffffff;
+    font-family: 'Rowdies';
+    z-index: 10;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.events-mob-page-list-span{
+    color: #F7B900;
+    z-index: 10;
+    cursor: pointer;
+    font-family: 'Comic Sans MS';
+    font-weight: 700;
+    font-size: 20px;
+}
+.events-mob-page-list-h3{
+    color: #ffffff;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@media only screen and (min-width:601px){
+    .events-mob-page-list{
+        display: none;
+    }
+}

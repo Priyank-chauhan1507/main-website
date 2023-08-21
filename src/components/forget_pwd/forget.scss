@@ -31,7 +31,7 @@ body {
     width: fit-content;
     /* height: 46.5vh !important; */
     height: auto;
-    width: 30vw !important;
+    // width: 30vw !important;
     border: 2px solid #000000;
     border-radius: 5px;
     box-shadow: 12px 12px 0px 0px #00000066;
@@ -200,7 +200,7 @@ body {
     }
 
     #mobilewp {
-      display: block;
+      display: none;
     }
 
     .email {

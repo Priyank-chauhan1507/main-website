@@ -7,6 +7,13 @@
     width: 100vw;
 }
 
+.lsp-img1{
+    cursor: pointer;
+  }
+  .lsp-text0{
+    cursor: pointer;
+  }
+
 .nav-active {
     font-family: 'Oxanium';
     font-style: normal;
@@ -125,6 +132,12 @@
         display:none;
       }    
       
+    
+
+    .ca-ref-box{
+        margin-top:2vh;
+    }  
+
     .main-prof-box-detail-row {
         display: flex;
         gap: 15vw;
@@ -187,9 +200,9 @@
         flex-direction: row;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-end;
+        align-items: flex-start;
         margin-top: 35px;
-        gap: 35px;
+        gap: 8px;
     }
 
     .mob-lt1 {
@@ -208,10 +221,26 @@
     }
 
     .lsp-img11 {
-        margin-left: 35px;
+        /* margin-left: 35px; */
         width: 15vw;
         height: 15vw;
+        border-radius:100px;
     }
+
+    #profile_mob_cover{
+
+    }
+
+    #mob_upload_pic{
+        color: white;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        margin-left:9vw;
+        font-size:12px;
+    }
+
+
 }
 
 .paymentmobpage{

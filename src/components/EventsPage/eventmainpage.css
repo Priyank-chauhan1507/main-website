@@ -25,8 +25,20 @@
   overflow-y: hidden;
 
 }
+.events_back1 {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  z-index: 3;
+  overflow-y: hidden;
+
+}
 
 .events_back::-webkit-scrollbar {
+  display: none;
+}
+.events_back1::-webkit-scrollbar {
   display: none;
 }
 
@@ -37,7 +49,7 @@
   gap: 5%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .events-left::-webkit-scrollbar {
@@ -260,7 +272,7 @@
   border-radius: 5.592px;
   border: 1.398px solid #505050;
   background: #FFF;
-  box-shadow: 1.3980079889297485px 2.796015977859497px 0px 0px #505050;
+  /* box-shadow: 1.3980079889297485px 2.796015977859497px 0px 0px #505050; */
   flex-shrink: 0;
   color: #505050;
   font-family: Comic Neue;
@@ -306,6 +318,8 @@
   display: flex;
   margin-bottom: 2%;
   gap: 3%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .events-left-event9 span {
@@ -381,7 +395,11 @@
   }
 }
 
-
+@media (min-width:601px) {
+  .events-left{
+    overflow-y: scroll;
+  }
+}
 
 @media (max-width:600px) {
   .events_back {
@@ -391,6 +409,22 @@
     height: 90vh;
     position: fixed;
     margin-top: -2vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  .events_back1 {
+    /* flex-direction: column-reverse; */
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    position: fixed;
+    margin-top: -2vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .bg-events {
+    display: none;
   }
 
   #newchangesinbutton {
@@ -405,10 +439,11 @@
 
   .events-left {
     width: 100vw;
-    height: 55%;
+    /* height: 55%; */
     gap: 11px;
     /* overflow-y:auto; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* overflow-y:  auto !important; */
   }
 
   .events-right {
@@ -469,7 +504,7 @@
 
   .events-left-event9 div {
     flex-direction: row-reverse;
-    width: 66%;
+    width: 69%;
   }
 
   .events-left-event9 {
@@ -497,7 +532,7 @@
   .events-left-event6 {
     padding-bottom: 20px;
     display: flex;
-    gap: 139.499px;
+    gap: 27vw;
   }
 
   .events-left-event6 {
@@ -510,6 +545,8 @@
     /* left: 78vw !important; */
     cursor: pointer;
     width: 6vw;
+    margin-left:-8vw;
+    margin-top:-0.5vh;
   }
 
   .events-right {
@@ -580,7 +617,7 @@
   }
 
   .events-left-event7 input {
-    width: 341.499px;
+    width: 77vw;
   }
 
   .events-left-event4 span {
@@ -620,9 +657,7 @@
     display: none;
   }
 
-  .bg-events {
-    display: none;
-  }
+  
 
   .eventcard-nav {
     display: flex !important;
