@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Checkmark } from "react-checkmark";
+// import { Checkmark } from "react-checkmark";
 import Button from "@mui/material/Button";
 
 const PaymentSuccess = () => {
@@ -15,7 +15,7 @@ const PaymentSuccess = () => {
         alignItems: "center",
       }}
     >
-      <Checkmark size={100} />
+      {/* <Checkmark size={100} /> */}
       <br />
       <h1 className="text-center th-green">Payment Success</h1>
       <b style={{ marginTop: "10px", textAlign: "center" }}>
