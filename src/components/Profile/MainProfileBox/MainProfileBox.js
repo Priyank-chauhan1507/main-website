@@ -193,7 +193,7 @@ const MainProfileBox = ({ data }) => {
               >
                 <img className="lsp-img1" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
                 <div className="lsp-text0">
-                  {profilepic ? "profile uploaded" : "Upload Profile"}
+                  {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
                 </div>
               </FileUploader>
             </div>
