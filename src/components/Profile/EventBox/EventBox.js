@@ -110,6 +110,10 @@ const EventBox = () => {
                   <span className="lsp-text2">
                     Thomso ID:{userDetails?.thomso_id}
                   </span>
+                  {userDetails?.is_ca &&
+            (<span className="lsp-text2">
+              CA ID : {userDetails?.ca_thomso_id}
+            </span>)}
                 </div>
                 {/* <div>
                   {userDetails?.username}
