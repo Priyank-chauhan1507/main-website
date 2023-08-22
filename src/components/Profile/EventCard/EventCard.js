@@ -3,6 +3,8 @@ import "./EventCard.css";
 import { RiHeart2Fill, RiHeart2Line } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
+import DeleteModule from "../MainProfileBox/DeleteModule";
+
 function EventCard({ data ,getEvents}) {
   const [like, setlike] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -14,20 +16,6 @@ function EventCard({ data ,getEvents}) {
       setLoading(false);;
       getEvents();
     });
-  // const getEvents = async () => {
-  //   axios
-  //     .get(
-  //       `/apiV1/registerusereventdetailed?participant_id=${localStorage.getItem(
-  //         "id"
-  //       )}`
-  //     )
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       setEvents1(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
   };
   return (
     <>
