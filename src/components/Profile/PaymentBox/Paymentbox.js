@@ -400,7 +400,7 @@ const PaymentBox = (
                 style={{ justifyContent: "center", alignItem: "center" }}
               >
                 <>
-                  {paymentstatus ? (
+                  {/* {paymentstatus ? (
                     <PaymentSuccess />
                   ) : (
                     <>
@@ -483,7 +483,7 @@ const PaymentBox = (
                         ) : (
                           <button className="PayNowBtn">Pay Now</button>
                         )}
-                      </div>
+                      </div> */}
 
                       {/* <div className="PayRight">
                         <p
@@ -646,8 +646,8 @@ const PaymentBox = (
                         </div>
                       </div> */}
                     </>
-                  )}
-                </>
+                  {/* )} */}
+                {/* </> */}
               </div>
             </div>
           </div>
@@ -720,7 +720,7 @@ const PaymentBox = (
                 </div>
                 <div className="mpb-line1" />
               </div>
-              {paymentstatus ? (
+              {/* {paymentstatus ? (
                 <PaymentSuccess />
               ) : (
                 <>
@@ -794,9 +794,9 @@ const PaymentBox = (
                             No
                           </button>
                         </div>
-                      </div>
+                      </div> */}
 
-                      <div className="MPayRight">
+                      {/* <div className="MPayRight"> */}
                         {/* <p
                         className="MPayevent"
                         style={{ marginTop: "-12px", maxWidth: "450px" }}
@@ -923,7 +923,7 @@ const PaymentBox = (
                             </div>
                           ))}
 */}
-                        <div className="MPayline2"></div>
+                        {/* <div className="MPayline2"></div> */}
 
                         {/* <div className="MpayheadContainer">
                         <div className="Mpayheader" onClick={toggling}>
@@ -952,7 +952,7 @@ const PaymentBox = (
                           </div>
                         )}
                       </div> */}
-                      </div>
+                      {/* </div>
                       {checkPayNow() == true ? (
                         <button className="MPayNowBtnActive" onClick={paynow}>
                           {loading ? (
@@ -967,7 +967,7 @@ const PaymentBox = (
                     </div>
                   </div>{" "}
                 </>
-              )}
+              )} */}
             </div>
           </div>
         </div>
