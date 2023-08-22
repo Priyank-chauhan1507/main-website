@@ -296,7 +296,7 @@ const PaymentBox = (
             <div className="nnp-content">
               <div className="lsp-box">
                 <div className="lsp-pic">
-                  <img className="lsp-img1" src={pic} alt="profilepic" />
+                  <img className="lsp-img1" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
                   <span className="lsp-text1">
                     {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
                   </span>
