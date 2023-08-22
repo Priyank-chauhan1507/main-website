@@ -2,7 +2,7 @@ import React from "react";
 import del1 from "../../../assests/bin1.svg";
 import "./LogoutModel.css";
 
-const DeleteModule = ({ handleDelete, handleCancel }) => {
+const DeleteModule = ({ handleDelete, setmodule }) => {
   return (
     <div className="l_body">
       <div className="logout_body">
@@ -17,7 +17,7 @@ const DeleteModule = ({ handleDelete, handleCancel }) => {
           </div>
         </div>
         <div className="btns">
-          <button className="btn1" onClick={handleCancel}>
+          <button className="btn1" onClick={()=>setmodule(false)}>
             <a>Cancel</a>
           </button>
           <button className="btn2" onClick={handleDelete}>
