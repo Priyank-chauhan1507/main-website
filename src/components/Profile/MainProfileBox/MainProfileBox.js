@@ -109,6 +109,7 @@ const MainProfileBox = ({ data }) => {
       return false;
     } else {
       message.success("file successfully selected");
+      // window.location.reload(false);
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -123,6 +124,8 @@ const MainProfileBox = ({ data }) => {
       setFile(file);
       fetchUser();
       setLoading(false);
+      window.location.reload(false);
+      // window.location.reload(true);
     } else {
       setLoading(false);
       message.error("something went wrong while uploading, please reupload");
@@ -145,6 +148,7 @@ const MainProfileBox = ({ data }) => {
     } else {
       message.success("file successfully selected");
       setprofilepic(true);
+      // window.location.reload(false);
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -159,6 +163,7 @@ const MainProfileBox = ({ data }) => {
       // setprofilepic(true);
       fetchUser();
       setLoading(false);
+      window.location.reload(false);
     } else {
       setLoading(false);
       message.error("something went wrong while uploading, please reupload");

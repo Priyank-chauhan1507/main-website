@@ -141,6 +141,7 @@ const NewNewProfileMobile = ({ data }) => {
       // setprofilepic(true);
       fetchUser();
       setLoading(false);
+      window.location.reload(false);
     } else {
       setLoading(false);
       message.error("something went wrong while uploading, please reupload");
