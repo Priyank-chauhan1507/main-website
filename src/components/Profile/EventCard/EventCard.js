@@ -7,16 +7,18 @@ import DeleteModule from "../MainProfileBox/DeleteModule";
 import Loader from "../../Loader/Loader";
 import InnerCard from "./InnerCard";
 
-function EventCard({ data, getEvents }) {
+function EventCard({ data, getEvents, getData, }) {
   const [like, setlike] = useState(false);
   const [loading, setLoading] = useState(false);
   const [module, setmodule] = useState(false);
   const handleDelete = async () => {
     setLoading(true);
     await axios.delete(`/apiV1/registerevent/${data.id}`).then((res) => {});
-    getEvents();
+    await getEvents();
+    await getData();
     setLoading(false);
     setmodule(false);
+    window.location.reload(false)
   };
   return (
     <>
