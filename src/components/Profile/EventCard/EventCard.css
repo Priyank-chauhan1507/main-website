@@ -22,6 +22,12 @@
     margin: 0 15px;
     align-items: center;
 }
+.card-delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
 
 .eventcard1 h2 {
     color: #FFF;
@@ -125,19 +131,19 @@
     letter-spacing: -0.24px;
 }
 
-.event-type-select{
-    
+.event-type-select {
+
     background: white;
     color: black;
     padding: 5px 8px;
 }
 
-@media only screen and (max-width: 800px)
-{
-    .eventcard-nav-part{
+@media only screen and (max-width: 800px) {
+    .eventcard-nav-part {
         display: none;
     }
-    .eventcard-nav{
+
+    .eventcard-nav {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
@@ -157,7 +163,7 @@
         margin-left: 13px !important;
         padding-right: 3px !important;
     }
-    
+
     .eventcard h2 {
         font-size: 20px;
 

@@ -279,7 +279,7 @@ const EventBox = () => {
                   ) : (
                     <div className="eventcards">
                       {events.map((el) => {
-                        return <EventCard data={el} />;
+                        return <EventCard data={el} getEvents={getEvents} />;
                       })}
                     </div>
                   )}
@@ -933,7 +933,7 @@ const EventBox = () => {
                   </div>
                   <div className="eventcards">
                     {events.map((el) => {
-                      return <EventCard data={el} />;
+                      return <EventCard data={el} getEvents={getEvents}/>;
                     })}
                   </div>
                 </>
