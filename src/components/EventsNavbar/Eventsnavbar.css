@@ -145,7 +145,7 @@
     border-radius:20px;
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
     .mainnav {
         display: none;
     }

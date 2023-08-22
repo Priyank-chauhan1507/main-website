@@ -59,13 +59,15 @@ function MobEventnavbar() {
           <h4
             onClick={() => {
               navigate("/");
+              window.location.reload(false);
             }}
           >
             Home
           </h4>
           <h1
             onClick={() => {
-              navigate('/eventslist')
+              navigate('/eventslist');
+              window.location.reload(false);
             }}
           >
             Events
@@ -101,16 +103,17 @@ function MobEventnavbar() {
                 </>
               );
             })} */}
-          <a href="https://ca.thomso.in/" target="blank">
+          <a href="https://ca.thomso.in/" target="_blank">
             <h5>CA Portal</h5>
           </a>
-          <a href="https://zonals.thomso.in/" target="blank">
+          <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
                 navigate("/profile");
+                window.location.reload(false);
               }}
             >
               Profile
