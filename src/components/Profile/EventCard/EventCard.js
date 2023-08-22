@@ -13,7 +13,7 @@ function EventCard({ data ,getEvents}) {
   const handleDelete = async () => {
     setLoading(true);
     axios.delete(`/apiV1/registerevent/${data.id}`).then((res) => {
-      setLoading(false);;
+      setLoading(false);
       getEvents();
     });
   };
