@@ -15,7 +15,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import log from "../../../assests/logout-logo.svg";
 import cs1 from "../../../assests/CautionSign1.svg";
 import { FileUploader } from "react-drag-drop-files";
-const fileTypes = ["JPG", "PNG", "GIF"];
+const fileTypes = ["JPG", "PNG", "GIF", "JPEG"];
 
 const NewNewProfileMobile = ({ data }) => {
   const Locator = useLocation();
@@ -72,20 +72,22 @@ const NewNewProfileMobile = ({ data }) => {
     window.location.pathname = "/";
   }
 
-  const changeHandler = async (e) => {
+  const changeHandler = async (file) => {
     // console.log(files);
     const userId = userDetails?.user_id;
-    const file = e?.target?.files?.[0];
+    // const file = e?.target?.files?.[0];
 
     let formData = new FormData();
     formData.append("college_id", file);
     setLoading(true);
 
-    if (file.size > 5e6) {
-      alert("size is too large");
+    if (file.size > 819200) {
+      message.warning("size is too large. Size must be less than 800KB");
+      setFile(null);
+      setLoading(false);
       return false;
     } else {
-      alert("file successfully selected");
+      message.success("file successfully selected");
     }
     try {
       const response = await axios.put(
@@ -99,11 +101,11 @@ const NewNewProfileMobile = ({ data }) => {
       );
       if (response.status == 200) {
         setFile(file);
-        // fetchUsers();
+        fetchUser();
         setLoading(false);
       } else {
         setLoading(false);
-        alert("something went wrong while uploading, please reupload");
+        message.error("something went wrong while uploading, please reupload");
         setFile(null);
       }
     } catch (err) {
@@ -115,7 +117,7 @@ const NewNewProfileMobile = ({ data }) => {
   const changeHandler1 = async (file) => {
     const userId = userDetails?.user_id;
     let formData = new FormData();
-    formData.append("profile_pic", file);
+    formData.append("avtar", file);
     // setprofilepic(true);
 
     if (file.size > 512000) {
@@ -226,7 +228,7 @@ const NewNewProfileMobile = ({ data }) => {
             >
           <img className="lsp-img11" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
               <div className="lsp-text0">
-                {profilepic ? "profile uploaded" : "Upload Profile"}
+                {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
               </div>
             </FileUploader>
           </p>
@@ -385,7 +387,11 @@ const NewNewProfileMobile = ({ data }) => {
             <div className="main-prof-box-flex-2">
               <div className="flex-2-title">College ID</div>
               <div className="upload-doc-container">
+              {file ? (
+                <p className="mpb-text">Document Uploaded</p>
+              ) : (
                 <p className="mpb-text">Upload document to verify</p>
+              )}
               </div>
               {userDetails?.college_id ? (
                 <div style={{ paddingTop: "10px", paddingRight: "50px" }}>

@@ -102,8 +102,8 @@ const MainProfileBox = ({ data }) => {
     formData.append("college_id", file);
     setLoading(true);
 
-    if (file.size > 2048000) {
-      message.warning("size is too large. Size must be less than 2MB");
+    if (file.size > 819200) {
+      message.warning("size is too large. Size must be less than 800KB");
       setFile(null);
       setLoading(false);
       return false;
@@ -189,7 +189,7 @@ const MainProfileBox = ({ data }) => {
                 type="file"
                 types={fileTypes}
                 handleChange={changeHandler1}
-                accept="image/jpeg, image/png"
+                accept="image/jpeg, image/png, image/jpg"
               >
                 <img className="lsp-img1" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
                 <div className="lsp-text0">
