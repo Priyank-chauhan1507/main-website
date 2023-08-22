@@ -397,9 +397,10 @@ const PaymentBox = (
 
               <div
                 className="Paycontainer"
-                style={{ justifyContent: "center", alignItem: "center" }}
+                style={{ display:"flex" ,justifyContent: "center", alignItems: "center" }}
               >
                 <>
+                <img src={paymentcenterpic} alt="" />
                   {/* {paymentstatus ? (
                     <PaymentSuccess />
                   ) : (
@@ -720,6 +721,15 @@ const PaymentBox = (
                 </div>
                 <div className="mpb-line1" />
               </div>
+              <img style={{width:"50vw",height:"50vh",marginLeft:"20vw",marginTop:"14vh"}} src={paymentcenterpic} alt="" />
+              {/* <div
+                className="MPaycontainer"
+                style={{ display:"flex" ,justifyContent: "center", alignItems: "center" }}
+              >
+                <>
+                <img src={paymentcenterpic} alt="" />
+                </>
+                </div> */}
               {/* {paymentstatus ? (
                 <PaymentSuccess />
               ) : (
