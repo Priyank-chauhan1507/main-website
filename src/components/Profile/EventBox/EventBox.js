@@ -27,10 +27,27 @@ const EventBox = () => {
   const [logout, setLogout] = useState(0);
   const [display1, setdisplay] = useState(false);
   const [display2, setdisplay2] = useState(false);
+  const [clicked, setclicked] = useState("")
   const [disable, setdisable] = useState("notdisable");
   const [events, setEvents] = useState([]);
   const [userDetails, setuserDetails] = useState({});
   // const [filter, setFilter] = useState("solo");
+  const getEvents = async () => {
+    const res = axios
+      .get(
+        `/apiV1/registerusereventdetailed?participant_id=${localStorage.getItem(
+          "id"
+        )}`
+      )
+      .then((res) => {
+        console.log(res.data);
+        setEvents(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
     getEvents();
   }, []);
@@ -59,21 +76,7 @@ const EventBox = () => {
   }
 
 
-  const getEvents = async () => {
-    const res = axios
-      .get(
-        `/apiV1/registerusereventdetailed?participant_id=${localStorage.getItem(
-          "id"
-        )}`
-      )
-      .then((res) => {
-        console.log(res.data);
-        setEvents(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+ 
 
   useEffect(() => {
     if (!userDetails?.id) {
@@ -279,7 +282,7 @@ const EventBox = () => {
                   ) : (
                     <div className="eventcards">
                       {events.map((el) => {
-                        return <EventCard data={el} getEvents={getEvents} />;
+                        return <EventCard data={el} getEvents={getEvents} getData={getData} setclicked={setclicked}/>;
                       })}
                     </div>
                   )}
@@ -933,7 +936,7 @@ const EventBox = () => {
                   </div>
                   <div className="eventcards">
                     {events.map((el) => {
-                      return <EventCard data={el} getEvents={getEvents}/>;
+                      return <EventCard data={el} getEvents={getEvents} getData={getData} setclicked={setclicked}/>;
                     })}
                   </div>
                 </>
