@@ -6,6 +6,7 @@ import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
 import { connect } from "react-redux";
+import { message } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import { fetchUser } from "../../User/UserActions";
@@ -115,13 +116,15 @@ const NewNewProfileMobile = ({ data }) => {
     const userId = userDetails?.user_id;
     let formData = new FormData();
     formData.append("profile_pic", file);
-    setprofilepic(true);
+    // setprofilepic(true);
 
-    if (file.size > 5e6) {
-      alert("size is too large");
+    if (file.size > 512000) {
+      message.warning("size is too large.Size must be less than 500KB");
+      setprofilepic(null);
       return false;
     } else {
-      alert("file successfully selected");
+      message.success("file successfully selected");
+      setprofilepic(true);
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -133,12 +136,12 @@ const NewNewProfileMobile = ({ data }) => {
       }
     );
     if (response.status == 200) {
-      setprofilepic(file);
+      // setprofilepic(true);
       fetchUser();
       setLoading(false);
     } else {
       setLoading(false);
-      alert("something went wrong while uploading, please reupload");
+      message.error("something went wrong while uploading, please reupload");
       setprofilepic(null);
     }
   };
@@ -219,6 +222,7 @@ const NewNewProfileMobile = ({ data }) => {
               type="file"
               types={fileTypes}
               handleChange={changeHandler1}
+              accept="image/jpeg, image/png"
             >
           <img className="lsp-img11" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
               <div className="lsp-text0">

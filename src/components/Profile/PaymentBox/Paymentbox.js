@@ -286,7 +286,7 @@ const PaymentBox = (
         <img src={Back} className="pro-back-img" alt="" />
         <img src={Back1} className="pro-back-img2" alt="" />
         <div className="nnp-head">
-          <Navbar color="transparent" />
+          <Navbar color="transparent" data={userDetails}/>
           {/* <div className="nnp-mobhead">
             <EventMobileNav />
           </div> */}
