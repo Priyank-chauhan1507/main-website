@@ -670,14 +670,14 @@ function Navbar({ color, disable, setregister, register }) {
           <a
             className="event-nav-right-compo"
             href="https://ca.thomso.in/"
-            target="blank"
+            target="_blank"
           >
             CA Portal
           </a>
           <a
             className="event-nav-right-compo"
             href="https://zonals.thomso.in/"
-            target="blank"
+            target="_blank"
           >
             Zonals
           </a>
