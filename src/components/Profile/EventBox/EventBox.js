@@ -93,7 +93,7 @@ const EventBox = () => {
         <img src={Back} className="pro-back-img" alt="" />
         <img src={Back1} className="pro-back-img2" alt="" />
         <div className="nnp-head">
-          <Navbar color="transparent" disable={disable} />
+          <Navbar color="transparent" disable={disable} data={userDetails}/>
         </div>
         <div className="boxborder">
           <div className="nnp-laphead">

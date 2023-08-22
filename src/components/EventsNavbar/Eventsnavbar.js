@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import logo from "../../assests/logo.svg";
 import "./Eventsnavbar.css";
 import MobEventnavbar from "./MobEventnavbar";
@@ -6,14 +6,19 @@ import MobEventnavbar from "./MobEventnavbar";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../assests/profile1.png.jpg";
 
-function Navbar({ color, disable, setregister, register }) {
+function Navbar({ color, disable, setregister, register, data }) {
   const [display1, setdisplay] = useState("none");
+  const [userDetails, setuserDetails] = useState({});
   const navigate = useNavigate();
   const handleLogout = () => {
     navigate("/");
     localStorage.removeItem("token");
     localStorage.removeItem("user_id");
   };
+
+  useEffect(() => {
+    setuserDetails(data);
+  }, [data]);
 
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
@@ -684,7 +689,7 @@ function Navbar({ color, disable, setregister, register }) {
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
-            <img src={img_profile} onClick={()=>{navigate("/profile")}} id="img_profile" />
+            <img src={userDetails?.avtar ? userDetails?.avtar : img_profile} onClick={()=>{navigate("/profile")}} id="img_profile" />
             </>
           ) : (
             <>
