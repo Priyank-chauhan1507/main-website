@@ -57,25 +57,18 @@ const MainProfileBox = ({ data }) => {
   // }
 
   console.log(userDetails, "profiledetails");
+
   const deleteUserImage = () => {
     const obj = {
       user_id: userDetails.user_id,
     };
-    let formData = new FormData();
-    formData.append("college_id", "");
-
     axios
-      .put(`/apiV1/registeruser/${obj.user_id}`,formData,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      })
+      .post("/apiV1/delete_user_image", obj)
       .then((res) => {
-        fetchUser(res.data);
+        fetchUser();
         // setLoading(false);
         // setShowModal(false);
-        // window.location.reload();
+        window.location.reload(false);
       })
       .catch((error) => {
         // setLoading(false);
@@ -103,12 +96,12 @@ const MainProfileBox = ({ data }) => {
     setLoading(true);
 
     if (file.size > 819200) {
-      message.warning("size is too large. Size must be less than 800KB");
+      message.warning("Size is too large. Size must be less than 800KB");
       setFile(null);
       setLoading(false);
       return false;
     } else {
-      message.success("file successfully selected");
+      message.success("File successfully selected");
       // window.location.reload(false);
     }
     const response = await axios.put(
@@ -128,7 +121,7 @@ const MainProfileBox = ({ data }) => {
       // window.location.reload(true);
     } else {
       setLoading(false);
-      message.error("something went wrong while uploading, please reupload");
+      message.error("Something went wrong while uploading, please reupload");
       setFile(null);
     }
   };
@@ -142,11 +135,11 @@ const MainProfileBox = ({ data }) => {
     // setprofilepic(true);
 
     if (file.size > 512000) {
-      message.warning("size is too large.Size must be less than 500KB");
+      message.warning("Size is too large.Size must be less than 500KB");
       setprofilepic(null);
       return false;
     } else {
-      message.success("file successfully selected");
+      message.success("File successfully selected");
       setprofilepic(true);
       // window.location.reload(false);
     }
@@ -166,7 +159,7 @@ const MainProfileBox = ({ data }) => {
       window.location.reload(false);
     } else {
       setLoading(false);
-      message.error("something went wrong while uploading, please reupload");
+      message.error("Something went wrong while uploading, please reupload");
       setprofilepic(null);
     }
   };

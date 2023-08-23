@@ -41,16 +41,17 @@ const NewNewProfileMobile = ({ data }) => {
     axios
       .post("/apiV1/delete_user_image", obj)
       .then((res) => {
-        // fetchUsers();
+        fetchUser();
         // setLoading(false);
         // setShowModal(false);
-        // window.location.reload();
+        window.location.reload(false);
       })
       .catch((error) => {
         // setLoading(false);
         console.log(error);
       });
   };
+
   const OpenCollege = () => {
     setOpencollege(!opencollege);
   };
@@ -73,44 +74,39 @@ const NewNewProfileMobile = ({ data }) => {
   }
 
   const changeHandler = async (file) => {
-    // console.log(files);
     const userId = userDetails?.user_id;
-    // const file = e?.target?.files?.[0];
-
     let formData = new FormData();
     formData.append("college_id", file);
     setLoading(true);
 
     if (file.size > 819200) {
-      message.warning("size is too large. Size must be less than 800KB");
+      message.warning("Size is too large. Size must be less than 800KB");
       setFile(null);
       setLoading(false);
       return false;
     } else {
-      message.success("file successfully selected");
+      message.success("File successfully selected");
+      // window.location.reload(false);
     }
-    try {
-      const response = await axios.put(
-        `/apiV1/registeruser/${userId}`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      if (response.status == 200) {
-        setFile(file);
-        fetchUser();
-        setLoading(false);
-      } else {
-        setLoading(false);
-        message.error("something went wrong while uploading, please reupload");
-        setFile(null);
+    const response = await axios.put(
+      `/apiV1/registeruser/${userId}`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       }
-    } catch (err) {
-      console.log(err);
+    );
+    if (response.status === 200) {
+      setFile(file);
+      fetchUser();
       setLoading(false);
+      window.location.reload(false);
+      // window.location.reload(true);
+    } else {
+      setLoading(false);
+      message.error("something went wrong while uploading, please reupload");
+      setFile(null);
     }
   };
 
@@ -388,7 +384,7 @@ const NewNewProfileMobile = ({ data }) => {
             <div className="main-prof-box-flex-2">
               <div className="flex-2-title">College ID</div>
               <div className="upload-doc-container">
-              {file ? (
+              {userDetails?.college_id ? (
                 <p className="mpb-text">Document Uploaded</p>
               ) : (
                 <p className="mpb-text">Upload document to verify</p>
@@ -419,17 +415,19 @@ const NewNewProfileMobile = ({ data }) => {
                   </div>
                 </div>
               ) : (
+                <FileUploader
+                  type="file"
+                  types={fileTypes}
+                  className="drag-3-input"
+                  handleChange={changeHandler}
+                >
                 <button className="drag-but">
                   <label className="drag-3-box">
                     <span className="drag-3">Browse File</span>
-                    <input
-                      type="file"
-                      accept=".png, .jpg, .jpeg"
-                      className="drag-3-input"
-                      onChange={changeHandler}
-                    ></input>
+                    
                   </label>
                 </button>
+                </FileUploader>
               )}
               {file && <div style={{ color: "white" }}>{file.name}</div>}
             </div>
