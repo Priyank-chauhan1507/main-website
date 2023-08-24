@@ -467,7 +467,7 @@ const EventBox = () => {
                         <div
                           className="col colhover"
                           onClick={(e) => {
-                            onHandleClick(28);
+                            onHandleClick(30);
                           }}
                         >
                           Slam Poetry
@@ -475,7 +475,7 @@ const EventBox = () => {
                         <div
                           className="col colhover"
                           onClick={(e) => {
-                            onHandleClick(30);
+                            onHandleClick(28);
                           }}
                         >
                           Nerdy Bait
