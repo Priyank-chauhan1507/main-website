@@ -16,13 +16,13 @@ const WebNavbarNew = () => {
       <div className="webNavbarMain">
         <div className="webNavbarLeft">
           <div className="webNavbarLeft1">Contact us</div>
-          <div className="webNavbarLeft2">
-            <div>Kartikey</div>
-            <div>9205915692</div>
-          </div>
           <div className="webNavbarLeft3">
             <div>Jolly</div>
             <div> 7081537653</div>
+          </div>
+          <div className="webNavbarLeft2">
+            <div>Kartikey</div>
+            <div>9205915692</div>
           </div>
         </div>
         <div className="webNavbarMiddle">
