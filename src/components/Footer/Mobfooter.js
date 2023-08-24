@@ -40,17 +40,18 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="phone connect para3">
-            <a href="tel:+919205915692">
-              <img src={Phone} alt="Call" />
-              <span>9205915692 (Kartikey)</span>
-            </a>
-          </div>
+          
 
           <div className="phone connect para4">
             <a href="tel:+917081537653">
               <img src={Phone} alt="Call" />
               <span>7081537653 (Jolly)</span>
+            </a>
+          </div>
+          <div className="phone connect para3">
+            <a href="tel:+919205915692">
+              <img src={Phone} alt="Call" />
+              <span>9205915692 (Kartikey)</span>
             </a>
           </div>
         </div>
