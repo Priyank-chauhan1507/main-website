@@ -5,10 +5,13 @@ import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../assests/profile1.png.jpg";
+import axios from "axios";
 
 function Navbar({ color, disable, setregister, register, data }) {
   const [display1, setdisplay] = useState("none");
   const [userDetails, setuserDetails] = useState({});
+  const [user, setuser] = useState({})
+
   const navigate = useNavigate();
   const handleLogout = () => {
     navigate("/");
@@ -17,8 +20,8 @@ function Navbar({ color, disable, setregister, register, data }) {
   };
 
   useEffect(() => {
-    setuserDetails(data);
-  }, [data]);
+    setuserDetails(user);
+  }, [user]);
 
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
@@ -27,7 +30,34 @@ function Navbar({ color, disable, setregister, register, data }) {
       setregister(true);
     }
   };
+  useEffect(() => {
+    loadUserData();
+  }, []);
 
+  const loadUserData = async () => {
+    try {
+      axios
+        .get(`/apiV1/current_user_participant`)
+        .then((res) => {
+          setuser(res.data);
+          localStorage.setItem("user_id", res.data?.user_id);
+          localStorage.setItem("id", res.data?.id);
+          console.log("data", res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+          if (err?.response?.status == 401) {
+            if (localStorage.getItem("token")) {
+              localStorage.removeItem("token");
+              localStorage.removeItem("user_id");
+              window.location.pathname = "/";
+            }
+          }
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div style={{ background: color }} className="nav-comp">
       <MobEventnavbar />
