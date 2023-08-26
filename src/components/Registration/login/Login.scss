@@ -1,270 +1,278 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.login-fullpage{
-    overflow-y: hidden;
-    height: 100vh;
-    width: 100vw;
+.login-fullpage {
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 .logo-log {
-    width: 100px;
-    margin: 16px 34px;
-    cursor: pointer;
-  }
+  width: 100px;
+  margin: 16px 34px;
+  cursor: pointer;
+}
 
 .regbg {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    // overflow-x: hidden;
-    z-index: -100;
-  }
-
-
-  #box{
-    margin-top:12vh;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border: 2px solid black;
-    filter: drop-shadow(12px 12px 0px rgba(0, 0, 0, 0.40));
-    height: fit-content;
-    width: fit-content;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  // overflow-x: hidden;
+  z-index: -100;
 }
 
-#center{
-    display: inline-block;
-    padding-left: 6.5vw;
-    padding-right: 6.5vw;
+#box {
+  margin-top: 12vh;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid black;
+  filter: drop-shadow(12px 12px 0px rgba(0, 0, 0, 0.4));
+  height: fit-content;
+  width: fit-content;
 }
 
-#center form{
-    width: 25vw;
+#center {
+  display: inline-block;
+  padding-left: 6.5vw;
+  padding-right: 6.5vw;
 }
 
-#login{
-    color: rgb(237,215,41);
-    text-align: center;
-    /* leading-trim: both;
+#center form {
+  width: 25vw;
+}
+
+#login {
+  color: rgb(237, 215, 41);
+  text-align: center;
+  /* leading-trim: both;
     text-edge: cap; */
-    font-family: Comic Sans MS;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%; /* 32px */
-    letter-spacing: 0.64px;
-    margin-top: 8vh;
+  font-family: Comic Sans MS;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 32px */
+  letter-spacing: 0.64px;
+  margin-top: 8vh;
 }
 
-
-#email1{
-    padding-left: 2vh;
-    display: block;
-    margin-top: 6vh;
-    border-radius: 5.96px;
-    border: 1.49px solid #505050;
-    background: #FFF;
-    box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
-    color: #505050;
-    font-family: Comic Sans MS;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 100% */
-    /* height: 5vh;
+#email1 {
+  padding-left: 2vh;
+  display: block;
+  margin-top: 6vh;
+  border-radius: 5.96px;
+  border: 1.49px solid #505050;
+  background: #fff;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
+  color: #505050;
+  font-family: Comic Sans MS;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 100% */
+  /* height: 5vh;
     width: 19vw; */
-    width: 100%;
-    height: 5vh;
-    outline: none;
+  width: 100%;
+  height: 5vh;
+  outline: none;
 }
-#email1:hover{
-    cursor: pointer;
-    box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #000000;
+#email1:hover {
+  cursor: pointer;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #000000;
 }
 
-#password1:hover{
-    cursor: pointer;
-    box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #000000;
+#password1:hover {
+  cursor: pointer;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #000000;
 }
-#password1{
-    padding-left: 2vh;
-    display: block;
-    cursor: pointer;
-    margin-top: 5vh;
-    border-radius: 5.96px;
-    border: 1.49px solid #505050;
-    background: #FFF;
-    box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
-    color: #505050;
-    font-family: Comic Sans MS;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 100% */
-    width: 100%;
-    height: 5vh;
-    outline: none;
-    /* height: 5vh;
+#password1 {
+  padding-left: 2vh;
+  display: block;
+  cursor: pointer;
+  margin-top: 5vh;
+  border-radius: 5.96px;
+  border: 1.49px solid #505050;
+  background: #fff;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
+  color: #505050;
+  font-family: Comic Sans MS;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 100% */
+  width: 100%;
+  height: 5vh;
+  outline: none;
+  /* height: 5vh;
     width: 19vw; */
-
-
 }
-
-#bg{
-    display: flex;
-    justify-content: center;
-    
-    height:91vh;
-    overflow-y:hidden;
-  
-}
-
-#log_bg1{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // padding-bottom: 9.6vh;
-}
-
-#log{
-    border-radius: 6.074px;
-    border: 1.518px solid #505050;
-    background: rgb(237,215,41);
-    box-shadow: 1.518475890159607px 3.036951780319214px 0px 0px #505050;
-    color: #fff;
-    font-family: Comic Sans MS;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 100% */
-    margin-top: 3.5vh;
-    /* height: 5vh;
+.login-pass {
+  padding-left: 2vh;
+  display: flex;
+  cursor: pointer;
+  margin-top: 5vh;
+  border-radius: 5.96px;
+  border: 1.49px solid #505050;
+  background: #fff;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
+  color: #505050;
+  font-family: Comic Sans MS;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 100% */
+  width: 100%;
+  height: 5vh;
+  outline: none;
+  /* height: 5vh;
     width: 19vw; */
-    display: block;
-    width: 100%;
-    height: 5vh;
-    cursor: pointer;
 }
-#log:hover{
-    background:rgb(237,215,41);
+#bg {
+  display: flex;
+  justify-content: center;
+
+  height: 91vh;
+  overflow-y: hidden;
 }
 
-#forget{
-    display: flex;
-    flex-direction: row-reverse;
-    color: #555;
-    text-align: right;
-    /* leading-trim: both;
+#log_bg1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding-bottom: 9.6vh;
+}
+
+#log {
+  border-radius: 6.074px;
+  border: 1.518px solid #505050;
+  background: rgb(237, 215, 41);
+  box-shadow: 1.518475890159607px 3.036951780319214px 0px 0px #505050;
+  color: #fff;
+  font-family: Comic Sans MS;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  margin-top: 3.5vh;
+  /* height: 5vh;
+    width: 19vw; */
+  display: block;
+  width: 100%;
+  height: 5vh;
+  cursor: pointer;
+}
+#log:hover {
+  background: rgb(237, 215, 41);
+}
+
+#forget {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #555;
+  text-align: right;
+  /* leading-trim: both;
     text-edge: cap; */
-    font-family: Comic Neue;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px; /* 125% */
-    margin-top: 2vh;
-    text-decoration: none;
+  font-family: Comic Neue;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+  margin-top: 2vh;
+  text-decoration: none;
 }
-#forget:hover{
-    cursor: pointer;
-}
-
-#niche{
-    height: 8vh;
-    text-align: center;
+#forget:hover {
+  cursor: pointer;
 }
 
-#bottom{
-    display: inline-block;
-    color: #555;
-    text-align: center;
-    /* leading-trim: both;
+#niche {
+  height: 8vh;
+  text-align: center;
+}
+
+#bottom {
+  display: inline-block;
+  color: #555;
+  text-align: center;
+  /* leading-trim: both;
     text-edge: cap; */
-    font-family: Comic Neue;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px; /* 125% */
-    margin-top: 2vh;
-    margin-right: 0.5vw;
-
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+  margin-top: 2vh;
+  margin-right: 0.5vw;
 }
 
-#register{
-    display: inline-block;
-    color: rgb(237,215,41);
-    /* leading-trim: both;
+#register {
+  display: inline-block;
+  color: rgb(237, 215, 41);
+  /* leading-trim: both;
     text-edge: cap; */
-    font-family: Comic Neue;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px;
-    margin-bottom: 10vh;
-    cursor: pointer;
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 10vh;
+  cursor: pointer;
 }
 
 .text-danger {
-    margin-top: 10px;
-    color: rgb(238, 44, 44);
-  }
-
-  
-
+  margin-top: 10px;
+  color: rgb(238, 44, 44);
+}
 
 @media only screen and (max-width: 800px) {
-    #center{
-     display: inline-block;
-     padding-left: 5.5vw !important;
-     padding-right: 10.5vw !important;
-    }
-    .logo-log{
-        width: 60px;
-    }
+  #center {
+    display: inline-block;
+    padding-left: 5.5vw !important;
+    padding-right: 10.5vw !important;
+  }
+  .logo-log {
+    width: 60px;
+  }
 
-    .regbg{
-        display: none;
-    
-    }
+  .regbg {
+    display: none;
+  }
 
-    .login-fullpage{
-        background-color: #000000;
-    }
+  .login-fullpage {
+    background-color: #000000;
+  }
 }
 
-@media (max-width:1050px) {
-    #center form{
-        width: 280px;
-      
-    }
+@media (max-width: 1050px) {
+  #center form {
+    width: 280px;
+  }
 }
 
-@media (max-width:500px) {
-    #center form{
-        width: 260px;
-      
-    }
+@media (max-width: 500px) {
+  #center form {
+    width: 260px;
+  }
 }
 
-@media (max-width:350px) {
-    #center form{
-        width: 230px;
-    }
+@media (max-width: 350px) {
+  #center form {
+    width: 230px;
+  }
 
-    #box{
-        width: 90vw;
-    }
+  #box {
+    width: 90vw;
+  }
 }
-@media (max-width:300px) {
-    #center form{
-        width: 140px;
-    }
+@media (max-width: 300px) {
+  #center form {
+    width: 140px;
+  }
 }
 
-@media (max-width:1080px) {
-    // #log_bg1{
-    //     // padding-bottom: 15vh;
-    // }
+@media (max-width: 1080px) {
+  // #log_bg1{
+  //     // padding-bottom: 15vh;
+  // }
 }

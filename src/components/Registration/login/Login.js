@@ -114,7 +114,7 @@ const Login = (props) => {
                   {validator.message("email", user.email, "required|email", {
                     className: "text-danger",
                   })}
-                  <input
+                  <Input.Password
                     type="password"
                     name="password"
                     iconRender={(visible) =>
@@ -125,7 +125,8 @@ const Login = (props) => {
                       )
                     }
                     placeholder="Password *"
-                    id="password1"
+                    id="password"
+                    className="login-pass"
                     value={user.password}
                     required
                     onChange={(e) => onInputChange(e)}
