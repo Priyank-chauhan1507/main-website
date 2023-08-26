@@ -43,6 +43,26 @@
     letter-spacing: 1.6px;
     cursor: pointer;
   }
+  .Explore {
+    width: 250px;
+    position: relative;
+    display: none;
+    margin: 1vh auto;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 2px solid #000;
+    background: #FFD001;
+    color: #000;
+    font-family: Bangers;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 32px */
+    letter-spacing: 1.6px;
+    cursor: pointer;
+  }
   .singers{
     position: relative;
     margin: 0vh 10vw;
@@ -60,6 +80,12 @@
     width: 100vw;
   }
   .register{
+    width: 150px !important;
+    font-size: 20px !important;
+    margin: 3vh auto !important;
+    border-radius: 8.181px !important;
+  }
+  .Explore{
     width: 150px !important;
     font-size: 20px !important;
     margin: 3vh auto !important;
@@ -90,6 +116,9 @@ display: none;
 
 #homebs2{
   display: block;
+}
+.Explore{
+  display: inline-flex !important;
 }
 
 }
