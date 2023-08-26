@@ -8,10 +8,10 @@ import axios from "axios";
 import "./Home.scss"
 import Navbar from '../EventsNavbar/Eventsnavbar'
 import Footer from '../Navbar/WebNavbarNew'
-import {Link, useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Home() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [user, setuser] = useState({})
   useEffect(() => {
     loadUserData();
@@ -42,18 +42,32 @@ function Home() {
   };
   return (
     <div className='home'>
-        <img src={Homebg} id="homebg1" className='homebg' alt="" />
-        <img src={Homebgmob} id="homebg2" className='homebg' alt="" />
-        <Navbar color="transparent" data={user}/>
-        <img src={thomso} alt="" className='thomso'/>
-        {localStorage.getItem('token') ? ( <Link style={{margin:"0 auto"}} to='/profile'>
-      <button className='register'>PROFILE</button>
-      </Link>) : (<Link  style={{margin:"0 auto"}} to='/register'>
-      <button className='register'>REGISTER NOW!</button>
-      </Link>)}
-        <img src={singers} alt="" className='singers'/>
-        <img src={singersmob} alt="" className='singersmob'/>
-        <Footer />
+
+      <img src={Homebg} id="homebg1" className='homebg' alt="" />
+      <img src={Homebgmob} id="homebg2" className='homebg' alt="" />
+
+      <Navbar color="transparent" data={user} />
+
+      <img src={thomso} alt="" className='thomso' />
+      
+      {localStorage.getItem('token') ?
+       (<div  style={{ margin: "0 auto" }}><Link to='/profile'>
+        <button className='register'>PROFILE</button>
+      </Link></div>) 
+      :
+       (<div style={{ margin: "0 auto",display:"flex",gap:"3vw" }}>
+        <Link to='/register'>
+        <button className='register'>REGISTER NOW!</button>
+      </Link>
+        <Link to='/eventslist'>
+        <button className='Explore'>Explore Events</button>
+      </Link>
+      </div>)}
+
+      <img src={singers} alt="" className='singers' />
+      <img src={singersmob} alt="" className='singersmob' />
+
+      <Footer />
     </div>
   )
 }
