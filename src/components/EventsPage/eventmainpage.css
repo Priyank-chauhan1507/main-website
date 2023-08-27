@@ -411,6 +411,7 @@
     margin-top: -2vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    padding-bottom: 50px;
   }
   .events_back1 {
     /* flex-direction: column-reverse; */
