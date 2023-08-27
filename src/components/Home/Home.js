@@ -51,8 +51,11 @@ function Home() {
       <img src={thomso} alt="" className='thomso' />
       
       {localStorage.getItem('token') ?
-       (<div  style={{ margin: "0 auto" }}><Link to='/profile'>
+       (<div  style={{ margin: "0 auto",display:"flex",gap:"3vw" }}><Link to='/profile'>
         <button className='register'>PROFILE</button>
+      </Link>
+      <Link to='/eventslist'>
+        <button className='Explore'>Explore Events</button>
       </Link></div>) 
       :
        (<div style={{ margin: "0 auto",display:"flex",gap:"3vw" }}>

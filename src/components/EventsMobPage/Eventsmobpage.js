@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './Eventsmobpage.css'
 import back from '../../assests/bgmobile.webp'
 import Navbar from '../EventsNavbar/MobEventnavbar';
+import {RiArrowDropDownLine} from 'react-icons/ri'
+import {RiArrowDropUpLine} from 'react-icons/ri'
 
 const Eventsmobpage = () => {
 
@@ -158,6 +160,7 @@ const Eventsmobpage = () => {
       const navigate = useNavigate();
       const [event, setevent] = useState(false);
       const [show, setshow] = useState(false);
+      const [drop, setDrop] = useState(false);
   const [show1, setshow1] = useState({ check: false, first: "" });
   localStorage.setItem("show", show);
   const onHandleClick = (e) => {
@@ -181,12 +184,13 @@ const Eventsmobpage = () => {
                   <span
                   className='events-mob-page-list-span'
                     onClick={() => {
+                      setDrop(!drop);
                       show1.check === false
                         ? setshow1({ check: true, first: child[0]?.event })
                         : setshow1({ check: false, first: "" });
                     }}
                   >
-                    {par}
+                    {par}{drop==false ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
                   </span>
                   {show1?.check &&
                     show1?.first === child[0]?.event &&
