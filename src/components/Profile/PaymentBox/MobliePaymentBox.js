@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { BiRupee } from "react-icons/bi";
 import payment from "./pay.svg";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import PaymentSuccess from "./PaymentSuccess";
 import "./MobilePaymentBox.css";
@@ -56,7 +56,7 @@ const MobliePaymentBox = ({
   is_payment = false,
 }) => {
   const Locator = useLocation();
-  const history = useHistory();
+  // const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);

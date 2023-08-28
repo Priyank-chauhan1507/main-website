@@ -7,7 +7,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import AllDropdown from "./AllDropdown";
 import { escapeRegex } from "./helper";
-import Navbar2 from "../Navbar/Navbar2";
+import Navbar2 from "../../EventsNavbar/MobEventnavbar";
 
 const EventMainPageMob = ({
   data,
