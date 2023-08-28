@@ -29,6 +29,7 @@
 
     color: black;
     background: white;
+    padding: 2px;
 
 }
 .new-mob-profile::-webkit-scrollbar{
@@ -265,7 +266,8 @@
         align-items: center;
         letter-spacing: -0.02em;
     
-        color: #FFFFFF;
+        color: #000000;
+        padding: 2px;
     
     }
     
@@ -299,6 +301,10 @@
     
         color: rgba(255, 255, 255, 0.5);
     
+    }
+
+    .mv-top{
+        gap: 15px;
     }
 
   }
