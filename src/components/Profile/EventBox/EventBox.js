@@ -285,9 +285,13 @@ const EventBox = () => {
                     </>
                   ) : (
                     <div className="eventcards">
-                      {events.map((el) => {
+                      {
+                      events.length!==0 ?
+                      (events.map((el) => {
                         return <EventCard data={el} getEvents={getEvents} getData={getData} setclicked={setclicked}/>;
-                      })}
+                      }))
+                      :( <img src={eventcenterpic} className="eventbgpic1" alt="" />)
+                      }
                     </div>
                   )}
                 </div>
@@ -1014,9 +1018,13 @@ const EventBox = () => {
                     {/* </span> */}
                   </div>
                   <div className="eventcards">
-                    {events.map((el) => {
-                      return <EventCard data={el} getEvents={getEvents} getData={getData} setclicked={setclicked}/>;
-                    })}
+                  {
+                      events.length!==0 ?
+                      (events.map((el) => {
+                        return <EventCard data={el} getEvents={getEvents} getData={getData} setclicked={setclicked}/>;
+                      }))
+                      :( <img src={eventcenterpic} className="eventbgpic1" alt="" />)
+                      }
                   </div>
                 </>
               ) : (
