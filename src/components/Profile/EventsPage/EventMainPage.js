@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import { escapeRegex } from "./helper";
 import { ImCross } from "react-icons/im";
 import Navbar2 from "../../EventsNavbar/Eventsnavbar";
+import eventsback2 from "../../../assests/eventback2.webp"
 
 const EventMainPage = ({ events }) => {
   const { dispatch } = Store;
@@ -71,7 +72,13 @@ const EventMainPage = ({ events }) => {
   return (
     <>
       <div className="EMP-container" id="event-page">
-        <Navbar2/>
+        <div className="eventsNav">
+        <Navbar2 color="transparent"/>
+
+        </div>
+        <div className="eventsBack">
+<img src={eventsback2} alt="events_back"/>
+        </div>
         <div className="EMP-hero">
           <EventSideMenu
             activeCategory={categoryId}
