@@ -1,0 +1,21 @@
+.event-mob-page-container {
+  background-color: black;
+  color: white;
+}
+.all-dropdown-flex {
+  display: flex;
+  flex-direction: column;
+}
+.all-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 60vh;
+  overflow-y: scroll;
+  background-color: white;
+  color: black;
+  position: absolute;
+  z-index: 2;
+  margin-top: 54px;
+  width: 148px;
+}

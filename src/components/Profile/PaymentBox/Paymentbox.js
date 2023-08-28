@@ -666,21 +666,20 @@ const PaymentBox = (
               <div className="mpb-mobileview">
                 <div className="mv-top">
                   <div className="mv-top-1">
-                    <img src={icon1} alt="profile" className="img--1" />
                     <Link
                       to="/profile"
                       className={
                         Locator.pathname === "/profile"
                           ? "nav-active"
                           : "nav-passive"
-                      }
+                        }
                     >
+                        <img src={icon1} alt="profile" className="img--1" />
                       Profile
                     </Link>
                   </div>
                   {userDetails?.is_iitr_alumn ? null : (
                     <div className="mv-top-2">
-                      <img src={icon2} alt="Events" className="img--1" />
                       <Link
                         to="/pevents"
                         className={
@@ -689,6 +688,7 @@ const PaymentBox = (
                             : "nav-passive"
                         }
                       >
+                      <img src={icon2} alt="Events" className="img--1" />
                         Events
                       </Link>
                     </div>
