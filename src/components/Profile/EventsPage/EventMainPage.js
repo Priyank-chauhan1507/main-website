@@ -6,11 +6,11 @@ import EventCard from "./EventCard";
 import { AiOutlineSearch } from "react-icons/ai";
 import axios from "axios";
 import EventMainPageMob from "./EventMainPageMob";
-import { Store } from "../../Config/Store";
+import { Store } from "../../../Config/Store";
 import { connect } from "react-redux";
 import { escapeRegex } from "./helper";
 import { ImCross } from "react-icons/im";
-import Navbar2 from "../Navbar/Navbar2";
+import Navbar2 from "../../EventsNavbar/Eventsnavbar";
 
 const EventMainPage = ({ events }) => {
   const { dispatch } = Store;

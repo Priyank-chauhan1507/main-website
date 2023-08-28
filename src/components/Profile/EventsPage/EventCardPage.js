@@ -3,17 +3,17 @@ import { NavLink } from "react-router-dom";
 import "./eventcardpage.css";
 // import logo from "./images/logo.svg"
 // import img from "./images/StreetSoccer.svg"
-import "animate.css";
+// import "animate.css";
 import { AiFillCaretDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import axios from "axios";
-import { fetchEvents } from "../User/UserActions";
+import { fetchEvents } from "../../User/UserActions";
 import default_image from "./images/default_event.png";
 import { IoIosArrowForward } from "react-icons/io";
 import i1 from "../EventsPage/images/image1evt.svg";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import AniButton from "../AnimatedButton/AniButton";
 
 const options = ["Participate", "Attend"];
@@ -25,7 +25,7 @@ const EventCardPage = ({
   userEvents,
   fetchEvent,
 }) => {
-  const history = useHistory();
+  // const history = useHistory();
   console.log(data);
   const reloadKarde = () => {
     // window.location.reload();
@@ -72,7 +72,7 @@ const EventCardPage = ({
           // }
           fetchEvent();
           // this.fetchData();
-          history.push("/pevents");
+          // history.push("/pevents");
         }
       })
       .catch((err) => {

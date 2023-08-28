@@ -23,6 +23,7 @@ import WebNavbarNew from "./components/Navbar/WebNavbarNew";
 import Mobfooter from "./components/Footer/Mobfooter"
 import Eventsmobpage from "./components/EventsMobPage/Eventsmobpage";
 import PaymentSuccess from "./components/Profile/PaymentBox/PaymentSuccess";
+import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 function App(props) {
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -60,6 +61,7 @@ function App(props) {
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
           <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
+          <Route exact={true} path="/eventsmain" element={<EventsMain />} />
           
         </Routes>
       </Router>

@@ -39,7 +39,7 @@ const team_event_details = [
 ];
 const Payment = ({ userDetails }) => {
   const [events, setEvents] = useState();
-  const navigate = useHistory();
+  // const navigate = useHistory();
   const id = userDetails?.id;
 
   useEffect(() => {
