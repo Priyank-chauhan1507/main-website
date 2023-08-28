@@ -18,6 +18,7 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
     let navigate = useNavigate();
   const [active, setActive] = useState(false);
   const [confirm_err, setConfirm_err] = useState(false);
+  const [confirm_err_p, setConfirm_err_p] = useState(false);
   const [mobile_check, setMobile_check] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -98,6 +99,15 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
       // setActive(false);
     }
   };
+  const confirm_p = (confirm) => {
+    if (confirm.length >= 8) {
+      setConfirm_err_p(false);
+      // setActive(true);
+    } else {
+      setConfirm_err_p(true);
+      // setActive(false);
+    }
+  };
 
   const clearInput = () => {
     setUser({
@@ -133,6 +143,7 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
       user.gender &&
       user.contact &&
       user.password &&
+      user.password.length >= 8 &&
       user.confirmpassword &&
       user.password === user.confirmpassword &&
       user.contact.length === 10 &&
@@ -273,8 +284,13 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
                   name="password"
                   value={user.password}
                   required
-                  onChange={(e) => onInputChange(e)}
+                  onChange={(e) => {
+                    onInputChange(e);
+                    confirm_p(e.target.value);}}
                 />
+                {confirm_err_p && (
+                  <div className="text-danger">Password's length must be minimum of 8</div>
+                )}
               </div>
               <div>
                 <Input.Password
