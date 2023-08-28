@@ -709,15 +709,15 @@ const PaymentBox = (
                     </div>
                   ) : (
                     <div className="mv-top-2">
-                      <img src={icon31} alt="payment" className="img--1" />
                       <Link
                         to="/payment"
                         className={
                           Locator.pathname === "/payment"
-                            ? "nav-active"
-                            : "nav-passive"
+                          ? "nav-active"
+                          : "nav-passive"
                         }
                       >
+                        <img src={icon31} alt="payment" className="img--1" />
                         Payment
                       </Link>
                     </div>

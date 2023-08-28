@@ -153,14 +153,14 @@ const NewNewProfileMobile = ({ data }) => {
       {loading && <Loader />}
       <div className="mpb-mobileview">
         <div className="mv-top">
-          <div className="mv-top-1">
-            <img src={icon1} alt="profile" className="img--1" />
+          <div className="mv-top-2">
             <Link
               to="/profile"
               className={
                 Locator.pathname === "/profile" ? "nav-active" : "nav-passive"
               }
             >
+              <img src={icon1} alt="profile" className="img--1" />
               Profile
             </Link>
           </div>
@@ -184,8 +184,8 @@ const NewNewProfileMobile = ({ data }) => {
                 to="/payment-alumn"
                 className={
                   Locator.pathname === "/payment-alumn"
-                    ? "nav-active"
-                    : "nav-passive"
+                  ? "nav-active"
+                  : "nav-passive"
                 }
               >
                 Payment
