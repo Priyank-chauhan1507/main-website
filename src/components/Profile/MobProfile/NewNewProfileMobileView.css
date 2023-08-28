@@ -19,14 +19,16 @@
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 30px;
     /* identical to box height, or 125% */
 
     display: flex;
+    gap:15px;
     align-items: center;
     letter-spacing: -0.02em;
 
-    color: #FFFFFF;
+    color: black;
+    background: white;
 
 }
 .new-mob-profile::-webkit-scrollbar{
@@ -77,6 +79,7 @@
 .img--1 {
     color: white;
     height: 17px;
+    mix-blend-mode: difference;
 }
 
 .mv-top-1 {

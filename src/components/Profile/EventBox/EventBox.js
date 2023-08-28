@@ -931,15 +931,15 @@ const EventBox = () => {
                   </div>
                   {userDetails?.is_iitr_alumn ? null : (
                     <div className="mv-top-2">
-                      <img src={icon21} alt="Events" className="img--1" />
                       <Link
                         to="/pevents"
                         className={
                           Locator.pathname === "/pevents"
-                            ? "nav-active"
-                            : "nav-passive"
+                          ? "nav-active"
+                          : "nav-passive"
                         }
                       >
+                        <img src={icon21} alt="Events" className="img--1" />
                         Events
                       </Link>
                     </div>
