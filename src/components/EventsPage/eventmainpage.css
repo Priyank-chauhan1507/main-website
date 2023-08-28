@@ -406,7 +406,7 @@
     flex-direction: column-reverse;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     position: absolute;
     margin-top: -2vh;
     overflow-y: scroll;
