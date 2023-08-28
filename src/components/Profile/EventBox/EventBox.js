@@ -917,15 +917,15 @@ const EventBox = () => {
               <div className="mpb-mobileview">
                 <div className="mv-top">
                   <div className="mv-top-1">
-                    <img src={icon1} alt="profile" className="img--1" />
                     <Link
                       to="/profile"
                       className={
                         Locator.pathname === "/profile"
-                          ? "nav-active"
-                          : "nav-passive"
+                        ? "nav-active"
+                        : "nav-passive"
                       }
                     >
+                      <img src={icon1} alt="profile" className="img--1" />
                       Profile
                     </Link>
                   </div>
@@ -946,29 +946,29 @@ const EventBox = () => {
                   )}
                   {userDetails?.is_iitr_alumn ? (
                     <div className="mv-top-2">
-                      <img src={icon3} alt="payment" className="img--1" />
                       <Link
                         to="/payment-alumn"
                         className={
                           Locator.pathname === "/payment-alumn"
-                            ? "nav-active"
-                            : "nav-passive"
+                          ? "nav-active"
+                          : "nav-passive"
                         }
                       >
+                        <img src={icon3} alt="payment" className="img--1" />
                         Payment
                       </Link>
                     </div>
                   ) : (
                     <div className="mv-top-2">
-                      <img src={icon3} alt="payment" className="img--1" />
                       <Link
                         to="/payment"
                         className={
                           Locator.pathname === "/payment"
-                            ? "nav-active"
-                            : "nav-passive"
+                          ? "nav-active"
+                          : "nav-passive"
                         }
                       >
+                        <img src={icon3} alt="payment" className="img--1" />
                         Payment
                       </Link>
                     </div>

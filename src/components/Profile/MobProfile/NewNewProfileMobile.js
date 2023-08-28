@@ -166,13 +166,13 @@ const NewNewProfileMobile = ({ data }) => {
           </div>
           {userDetails?.is_iitr_alumn ? null : (
             <div className="mv-top-2">
-              <img src={icon2} alt="Events" className="img--1" />
               <Link
                 to="/pevents"
                 className={
                   Locator.pathname === "/pevents" ? "nav-active" : "nav-passive"
                 }
               >
+                <img src={icon2} alt="Events" className="img--1" />
                 Events
               </Link>
             </div>
@@ -193,13 +193,13 @@ const NewNewProfileMobile = ({ data }) => {
             </div>
           ) : (
             <div className="mv-top-2">
-              <img src={icon3} alt="payment" className="img--1" />
               <Link
                 to="/payment"
                 className={
                   Locator.pathname === "/payment" ? "nav-active" : "nav-passive"
                 }
               >
+                <img src={icon3} alt="payment" className="img--1" />
                 Payment
               </Link>
             </div>
