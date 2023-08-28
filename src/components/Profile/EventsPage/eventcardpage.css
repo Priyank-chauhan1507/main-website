@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Oxanium&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Oxanium&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.EPcontainer {
+  background: url("./images/bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  overflow: hidden;
+  position: fixed;
+  /* top: 100vh; */
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100000;
+  /* animation: goTotop;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1; */
+}
+@keyframes goTotop {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+.EPtop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.EPimg {
+  width: 80px;
+  height: 48px;
+  margin-top: 12px;
+  margin-left: 100px;
+}
+
+.EPback {
+  color: white;
+  margin-top: 25px;
+  margin-right: 80px;
+}
+
+.EPbottom {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 100px; */
+}
+
+.EPleft {
+  margin-top: 20px;
+  display: flex;
+  margin-left: 100px;
+  color: white;
+  flex-direction: column;
+}
+
+.EPleft h1 {
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.EPleft h2 {
+  margin-bottom: 28px;
+  font-family: "Oxanium", cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.EPleft p {
+  max-width: 560px;
+  /* margin-bottom: 26px; */
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.EPNote {
+  margin-top: 26px;
+  display: flex;
+  column-gap: 2px;
+  margin-bottom: 48px;
+}
+
+.EPNote p:nth-child(1) {
+  margin-top: -21px;
+  margin-right: 5px;
+  font-weight: 600;
+  font-size: 16px !important;
+}
+
+.EPevtimg {
+  border: 2px solid transparent;
+
+  border-image-source: radial-gradient(
+      115.98% 168.03% at -3.2% 0%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border-image-slice: 1;
+  z-index: 5;
+  position: relative;
+  right: 27px;
+  top: 27px;
+  /* backdrop-filter: blur(42px); */
+  transition-duration: 500ms;
+}
+.EPevtimg:hover{
+  border-image-source: radial-gradient(
+      115.98% 168.03% at -3.2% 0%,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+.ep-img-img {
+  position: relative;
+  left: 27px;
+  bottom: 27px;
+  height: 560px;
+  width: 680px;
+}
+.EPevtimg img {
+  width: 44vw;
+}
+.header-logo-cross-div {
+  width: 83%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+  margin-left: 94px;
+  margin-top: 30px;
+}
+@media only screen and (max-width:768px){
+  .header-logo-cross-div{
+    margin-left: 24px;
+  }
+}
+.EPprice {
+  font-family: "Oxanium", cursive;
+  font-style: normal;
+  line-height: 100%;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.EPprice p:nth-child(1) {
+  font-family: "Oxanium", cursive;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  padding-top: 10vh;
+  padding-bottom: 8px;
+}
+
+.EPprice p:nth-child(2) {
+  font-family: "Oxanium", cursive;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.EPbtns {
+  display: flex;
+  /* flex-direction: column; */
+  max-width: 300px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.EPrulebook {
+  background: radial-gradient(
+    100% 672.75% at 100% 100%,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 2px solid transparent;
+
+  border-image-source: radial-gradient(
+      115.98% 168.03% at -3.2% 0%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border-image-slice: 1;
+  /* backdrop-filter: blur(8px); */
+  width: 112px;
+  height: 40px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  justify-content: center;
+  transition-duration: 500ms;
+}
+.EPrulebook:hover{
+  border-image-source: radial-gradient(
+      115.98% 168.03% at -3.2% 0%,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.EPheadContainer {
+  width: 143.96px;
+  height: 40px;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.EPheader {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #333333;
+  padding-top: 12px;
+  padding-left: 15px;
+  padding-bottom: 13px;
+}
+
+.EPlistContainer {
+  margin-top: -16px;
+  width: 144px;
+  height: 80px;
+  border: 1.5px solid white;
+  background: radial-gradient(
+    100% 672.75% at 100% 100%,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  /* backdrop-filter: blur(8px); */
+}
+
+.EPlistContainer ul {
+  padding-left: 0px;
+  padding-top: 9px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  list-style: none;
+}
+
+.EPlistContainer ul li {
+  padding: 8px 0px 5px 22px;
+}
+
+.EPlistContainer ul li:hover {
+  background-color: black;
+}
+
+.EParrow {
+  color: white;
+  position: relative;
+  top: -27px;
+  left: 110px;
+}
+.EPbox {
+  border: 2px solid white;
+  width: 45vw;
+  height: 70vh;
+  position: absolute;
+  top: 200px;
+  right: 118px;
+  z-index: 1;
+}
+.mian-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.x-hoge {
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+.EPbtn2 {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  gap: 16px;
+  letter-spacing: -0.02em;
+  color: #333333;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  width: 150px;
+  cursor: pointer;
+  height: 40px;
+}
+#head1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1vh;
+}
+
+.tag1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .EPcontainer {
+    overflow-y: scroll;
+  }
+  .EPbottom {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .EPevtimg {
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    position: relative;
+    left: 25px;
+    margin-bottom: 10px;
+  }
+
+  .EPevtimg img {
+    width: 75vw;
+    height: auto;
+  }
+
+  .EPleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12vw;
+    /* margin */
+  }
+
+  .EPleft h1 {
+    font-family: "Oxanium";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    width: 70vw;
+    margin-top: 3vh;
+  }
+
+  .EPleft h2 {
+    margin-bottom: 28px;
+    font-family: "Oxanium", cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+  }
+
+  .ecp_tm {
+    width: 70vw;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px !important;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+  }
+
+  .EPNote p:nth-child(1) {
+    display: none;
+  }
+
+  .ecp_p {
+    display: none !important;
+  }
+
+  .EPprice p:nth-child(1) {
+    font-family: "Oxanium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    width: 7vw;
+    margin-right: 22px;
+    padding-bottom: 50px;
+  }
+
+  .vl {
+    margin-top: 40px;
+    height: 45px;
+    border: 0.1px solid #ffffff;
+    margin-left: -10px;
+    margin-right: -8px;
+    /* transform: rotate(90deg); */
+  }
+
+  .ecp_te {
+    font-family: "Oxanium" !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 48px !important;
+    line-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    letter-spacing: -0.02em !important;
+    color: #ffffff;
+    margin-top: 65px;
+  }
+
+  .ecp_price {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+    /* align-items: center; */
+    height: 10vh;
+  }
+
+  .ecp_upte {
+    color: white !important;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    font-size: 20px;
+  }
+  .ecp_icon {
+    color: white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+  }
+  .ecp_box {
+    display: flex;
+    flex-direction: row;
+    margin-left: 13vw;
+    margin-top: 2vh;
+  }
+  .ecp_note {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vh;
+    margin-right: 10px;
+  }
+
+  .ecp_note1 {
+    color: white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: -0.02em;
+  }
+  .EPbtns {
+    max-width: 70vw;
+  }
+
+  .EPrulebook {
+    width: 30vw;
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+
+  .EPheadContainer {
+    width: 25vw;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

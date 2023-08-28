@@ -46,6 +46,11 @@
   display: none;
 }
 
+.eventbgpic1{
+  margin:auto;
+  width:20vw;
+}
+
 @media only screen and (max-width: 768px) {
   .nnp-content {
     display: none;
@@ -102,6 +107,12 @@
     display: flex;
     flex-direction: row;
   }
+
+  .eventbgpic1{
+    margin:auto;
+    width:50vw;
+  }
+  
 }
 .event-space{
   padding-top: 100px !important;
