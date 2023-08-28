@@ -145,7 +145,7 @@
     border-radius:20px;
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
     .mainnav {
         display: none;
     }
@@ -313,7 +313,7 @@
 
 .mob-reg {
     margin-top: auto;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     display: inline-flex;
     padding: 8px 30px;
     justify-content: center;

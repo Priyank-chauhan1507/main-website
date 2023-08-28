@@ -44,6 +44,10 @@ const MainProfileBox = ({ data }) => {
     setuserDetails(data);
   }, [data]);
 
+  useEffect(() => {
+    fetchUser();
+  })
+
   // const cadeta = () => {
   //   ca_id = userDetails?.referred_by_id;
   //   const response = axios.get(`/apiV1/registerca/${localStorage.getItem(ca_id)}`);
@@ -53,17 +57,18 @@ const MainProfileBox = ({ data }) => {
   // }
 
   console.log(userDetails, "profiledetails");
+
   const deleteUserImage = () => {
     const obj = {
       user_id: userDetails.user_id,
     };
     axios
-      .delete("/apiV1/delete_user_image", obj)
+      .post("/apiV1/delete_user_image", obj)
       .then((res) => {
-        fetchUser(res.data);
+        fetchUser();
         // setLoading(false);
         // setShowModal(false);
-        // window.location.reload();
+        window.location.reload(false);
       })
       .catch((error) => {
         // setLoading(false);
@@ -90,13 +95,14 @@ const MainProfileBox = ({ data }) => {
     formData.append("college_id", file);
     setLoading(true);
 
-    if (file.size > 2048000) {
-      message.warning("size is too large. Size must be less than 2MB");
+    if (file.size > 819200) {
+      message.warning("Size is too large. Size must be less than 800KB");
       setFile(null);
       setLoading(false);
       return false;
     } else {
-      message.success("file successfully selected");
+      message.success("File successfully selected");
+      // window.location.reload(false);
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -111,25 +117,31 @@ const MainProfileBox = ({ data }) => {
       setFile(file);
       fetchUser();
       setLoading(false);
+      window.location.reload(false);
+      // window.location.reload(true);
     } else {
       setLoading(false);
-      message.error("something went wrong while uploading, please reupload");
+      message.error("Something went wrong while uploading, please reupload");
       setFile(null);
     }
   };
 
   const changeHandler1 = async (file) => {
+    // setprofilepic(false);
     const userId = userDetails?.user_id;
     let formData = new FormData();
-    formData.append("avatar", file);
-    setprofilepic(true);
+    formData.append("avtar", file);
+    console.log(formData);
+    // setprofilepic(true);
 
     if (file.size > 512000) {
-      message.warning("size is too large.Size must be less than 500KB");
+      message.warning("Size is too large.Size must be less than 500KB");
       setprofilepic(null);
       return false;
     } else {
-      message.success("file successfully selected");
+      message.success("File successfully selected");
+      setprofilepic(true);
+      // window.location.reload(false);
     }
     const response = await axios.put(
       `/apiV1/registeruser/${userId}`,
@@ -141,12 +153,13 @@ const MainProfileBox = ({ data }) => {
       }
     );
     if (response.status == 200) {
-      setprofilepic(file);
+      // setprofilepic(true);
       fetchUser();
       setLoading(false);
+      window.location.reload(false);
     } else {
       setLoading(false);
-      message.error("something went wrong while uploading, please reupload");
+      message.error("Something went wrong while uploading, please reupload");
       setprofilepic(null);
     }
   };
@@ -174,11 +187,11 @@ const MainProfileBox = ({ data }) => {
                 type="file"
                 types={fileTypes}
                 handleChange={changeHandler1}
-                accept="image/jpeg, image/png"
+                accept="image/jpeg, image/png, image/jpg"
               >
-                <img className="lsp-img1" src={pic} alt="profilepic" />
+                <img className="lsp-img1" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
                 <div className="lsp-text0">
-                  {profilepic ? "profile uploaded" : "Upload Profile"}
+                  {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
                 </div>
               </FileUploader>
             </div>

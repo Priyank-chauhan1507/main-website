@@ -402,8 +402,10 @@ const EventMainPage = ({ events }) => {
                   {((eventdata[0]?.solo_team != "Solo" && eventdata[0]?.solo_team != "solo") &&
                   eventdata[0]?.sub_event &&
                   activet === false) ? (
-                    <button className="events-left-event8" type="submit" onClick={() =>
-                      message.warning("Please select a sub-event!")
+                    <button className="events-left-event8" type="submit" onClick={() =>{
+                      message.warning("Please select a sub-event!");
+                      // window.location.reload(true);
+                    }
                     }>
                       {loading ? (
                         <>

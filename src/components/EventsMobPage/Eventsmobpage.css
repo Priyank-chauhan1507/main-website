@@ -7,7 +7,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    padding: 5vh 0;
+    padding: 4vh 0 100px;
     overflow-y: scroll;
     /* top: 10vh; */
     z-index: 2;
@@ -52,7 +52,7 @@
     font-weight: 400;
 }
 
-@media only screen and (min-width:601px){
+@media only screen and (min-width:769px){
     .events-mob-page-list{
         display: none;
     }

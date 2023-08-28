@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import logo from "../../assests/logo.svg";
 import "./Eventsnavbar.css";
 import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../assests/profile1.png.jpg";
+import axios from "axios";
 
-function Navbar({ color, disable, setregister, register }) {
+function Navbar({ color, disable, setregister, register, data }) {
   const [display1, setdisplay] = useState("none");
+  const [userDetails, setuserDetails] = useState({});
+  const [user, setuser] = useState({})
+
   const navigate = useNavigate();
   const handleLogout = () => {
     navigate("/");
     localStorage.removeItem("token");
     localStorage.removeItem("user_id");
   };
+
+  useEffect(() => {
+    setuserDetails(user);
+  }, [user]);
 
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
@@ -22,7 +30,34 @@ function Navbar({ color, disable, setregister, register }) {
       setregister(true);
     }
   };
+  useEffect(() => {
+    loadUserData();
+  }, []);
 
+  const loadUserData = async () => {
+    try {
+      axios
+        .get(`/apiV1/current_user_participant`)
+        .then((res) => {
+          setuser(res.data);
+          localStorage.setItem("user_id", res.data?.user_id);
+          localStorage.setItem("id", res.data?.id);
+          console.log("data", res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+          if (err?.response?.status == 401) {
+            if (localStorage.getItem("token")) {
+              localStorage.removeItem("token");
+              localStorage.removeItem("user_id");
+              window.location.pathname = "/";
+            }
+          }
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div style={{ background: color }} className="nav-comp">
       <MobEventnavbar />
@@ -670,21 +705,21 @@ function Navbar({ color, disable, setregister, register }) {
           <a
             className="event-nav-right-compo"
             href="https://ca.thomso.in/"
-            target="blank"
+            target="_blank"
           >
             CA Portal
           </a>
           <a
             className="event-nav-right-compo"
             href="https://zonals.thomso.in/"
-            target="blank"
+            target="_blank"
           >
             Zonals
           </a>
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
-            <img src={img_profile} onClick={()=>{navigate("/profile")}} id="img_profile" />
+            <img src={userDetails?.avtar ? userDetails?.avtar : img_profile} onClick={()=>{navigate("/profile")}} id="img_profile" />
             </>
           ) : (
             <>
