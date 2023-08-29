@@ -1,0 +1,67 @@
+.id_card_main_div{
+    background-color: white;   
+    height:100vh;
+    position: absolute;
+    z-index:-5;
+}
+
+.id_card_div{
+    height:80vh;
+    width:54.5vh;
+}
+
+.id_card_bg1{
+    height:80vh;
+    width:auto;
+    position: absolute;
+    z-index:-2;
+}
+
+.id_card_bg_white_1{
+
+}
+
+.contain1_id{
+    display: flex;
+    z-index:-1;
+    background-image: url(../../../assests/id_card_white_bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 17vh;
+    margin-left: 2vh;
+    height: 46vh;
+    width:50.5vh;
+    padding:3vh;
+    position: absolute;
+}
+
+.left_id{
+    /* margin-left:0.5vh; */
+    margin-right:2vh;
+}
+
+.right_id{
+    display: flex;
+    flex-direction: column;
+    width:20vh;
+}
+
+.profile_id_pic{
+    /* width:20vh; */
+}
+
+.profile_pic_image{
+    width: 14vh;
+    height: 18vh;
+}
+
+.qr_image{
+    width: 14vh;
+    height: 14vh;    
+    margin-top:5.7vh;
+}
+
+.contain2_id{
+    display:flex;
+    gap:4vh;
+}
