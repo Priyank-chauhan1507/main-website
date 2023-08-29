@@ -1,5 +1,5 @@
 .EMP-container {
-  background: url("../Sponsors/images/bg.svg");
+  /* background: url("../Sponsors/images/bg.svg"); */
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,7 +13,23 @@
   gap: 30px;
   margin-left: 40px;
   /* margin-right: 40px; */
+  margin-top: 3vh;
+    position: absolute;
 }
+
+.eventsBack{
+  width: 100vw;
+  position: fixed;
+  margin-top: -11vh;
+}
+
+.eventsNav{
+  background-color: transparent !important;
+  background: transparent !important;
+  position: relative;
+  z-index: 100000;
+}
+
 .Event-MObile-View{
   display: none;
 }

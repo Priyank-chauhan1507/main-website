@@ -22,7 +22,7 @@ import icon31 from "../../../assests/payment.svg";
 import line from "../../../assests/line1.svg";
 import paymentcenterpic from "../../../assests/paymentpic.webp";
 import PaymentSuccess from "./PaymentSuccess";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import payment from "./pay.svg";
 import { AiFillCaretDown } from "react-icons/ai";
