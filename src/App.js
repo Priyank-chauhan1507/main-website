@@ -23,6 +23,8 @@ import WebNavbarNew from "./components/Navbar/WebNavbarNew";
 import Mobfooter from "./components/Footer/Mobfooter"
 import Eventsmobpage from "./components/EventsMobPage/Eventsmobpage";
 import PaymentSuccess from "./components/Profile/PaymentBox/PaymentSuccess";
+import Idcard from "./components/Profile/ID_card/Idcard";
+
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 function App(props) {
   useEffect(() => {
@@ -60,9 +62,10 @@ function App(props) {
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
           <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
+          <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />   
+          <Route exact={true} path="/id_card" element={<Idcard />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/eventsmain" element={<EventsMain />} />
-          
         </Routes>
       </Router>
     </>
