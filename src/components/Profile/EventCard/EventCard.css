@@ -75,7 +75,7 @@
     gap: 2vw;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    margin: 3vh 0;
+    margin: 0 0 2vh !important;;
     height: 68vh;
     flex-wrap: wrap;
 }
@@ -194,15 +194,19 @@
     }
 
     .eventcard p {
-        font-size: 9px !important;
+        font-size: 13px !important;
         margin-left: 13px !important;
         padding-right: 3px !important;
     }
 
     .eventcard h2 {
-        font-size: 12px;
+        font-size: 16px;
 
         line-height: 20px !important;
 
+    }
+    .eventcard{
+        width: 80vw;
+        height: 40vh;
     }
 }
