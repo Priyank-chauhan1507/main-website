@@ -13,6 +13,11 @@
   justify-content: center;
   align-items: center;
 }
+.edit-name{
+  width: 216px;
+  height: 30px;
+  font-size: 1rem;
+}
 .btn1 {
   cursor: pointer;
   color: white;
@@ -118,6 +123,22 @@
   letter-spacing: -0.02em;
   color: #ffffff;
 }
+.btn3 {
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #00f11e;
+  border: none;
+  outline: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #ffffff;}
 
 @media only screen and (max-width: 500px) {
   .logout_body {

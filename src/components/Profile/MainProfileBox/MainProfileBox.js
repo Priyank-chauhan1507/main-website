@@ -23,6 +23,9 @@ import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/icon1.png";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
+import ProfileNameEditModel from "./ProfileNameEditModel";
+import ProfileContactEditModel from "./ProfileContactEditModel";
+import { BiEdit } from "react-icons/bi";
 const fileTypes = ["JPG", "PNG", "GIF"];
 
 const MainProfileBox = ({ data }) => {
@@ -39,14 +42,15 @@ const MainProfileBox = ({ data }) => {
   const [userDetails, setuserDetails] = useState({});
   const [docup, setDocup] = useState(false);
   const [user, setuser] = useState({});
-
+  const [display1, setdisplay1] = useState(false);
+  const [display2, setdisplay2] = useState(false);
   useEffect(() => {
     setuserDetails(data);
   }, [data]);
 
   useEffect(() => {
     fetchUser();
-  })
+  });
 
   // const cadeta = () => {
   //   ca_id = userDetails?.referred_by_id;
@@ -189,22 +193,35 @@ const MainProfileBox = ({ data }) => {
                 handleChange={changeHandler1}
                 accept="image/jpeg, image/png, image/jpg"
               >
-                <img className="lsp-img1" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
+                <img
+                  className="lsp-img1"
+                  src={userDetails?.avtar ? userDetails?.avtar : pic}
+                  alt="profilepic"
+                />
                 <div className="lsp-text0">
                   {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
                 </div>
               </FileUploader>
             </div>
             <span className="lsp-text1">
+              {display1 && <ProfileNameEditModel />}
               {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
+              <BiEdit
+                size={20}
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setdisplay1(true);
+                }}
+              />
             </span>
             <span className="lsp-text2">
               Thomso ID : {userDetails?.thomso_id}
             </span>
-            {userDetails?.is_ca &&
-            (<span className="lsp-text2">
-              CA ID : {userDetails?.ca_thomso_id}
-            </span>)}
+            {userDetails?.is_ca && (
+              <span className="lsp-text2">
+                CA ID : {userDetails?.ca_thomso_id}
+              </span>
+            )}
           </div>
           <div>
             {userDetails?.username}
@@ -369,7 +386,16 @@ const MainProfileBox = ({ data }) => {
                 <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.contact}
                 </span>
+                <BiEdit
+                  color="white"
+                  size={20}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setdisplay2(true);
+                  }}
+                />
               </div>
+              {display2 && <ProfileContactEditModel />}
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Gender</span>
                 <span className="main-prof-box-detail-row-text-col">
@@ -377,41 +403,44 @@ const MainProfileBox = ({ data }) => {
                 </span>
               </div>
             </div>
-            {userDetails?.is_ca===false && (
-            <div className="main-prof-detail-2">
-              <div className="main-prof-box-head-div">
-                <h1 className="main-prof-box-head-text">CA Referral</h1>
+            {userDetails?.is_ca === false && (
+              <div className="main-prof-detail-2">
+                <div className="main-prof-box-head-div">
+                  <h1 className="main-prof-box-head-text">CA Referral</h1>
+                </div>
+                <div className="main-prof-box-details-div">
+                  <div className="main-prof-box-detail-row">
+                    <span className="main-prof-box-detail-row-text">
+                      CA-Referral-ID
+                    </span>
+                    <span
+                      className={
+                        !openemail
+                          ? "main-prof-box-detail-row-text-col"
+                          : "main-prof-box-detail-row-text-col-2"
+                      }
+                      onClick={OpenEmail}
+                    >
+                      {userDetails?.ca_thomso_id}
+                    </span>
+                  </div>
+                  <div className="main-prof-box-detail-row">
+                    <span className="main-prof-box-detail-row-text">Name</span>
+                    <span className="main-prof-box-detail-row-text-col">
+                      {userDetails?.ca_name}
+                    </span>
+                  </div>
+                  <div className="main-prof-box-detail-row">
+                    <span className="main-prof-box-detail-row-text">
+                      Phone number
+                    </span>
+                    <span className="main-prof-box-detail-row-text-col">
+                      {userDetails?.ca_contact}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div className="main-prof-box-details-div">
-                <div className="main-prof-box-detail-row">
-                  <span className="main-prof-box-detail-row-text">
-                    CA-Referral-ID
-                  </span>
-                  <span
-                    className={
-                      !openemail
-                        ? "main-prof-box-detail-row-text-col"
-                        : "main-prof-box-detail-row-text-col-2"
-                    }
-                    onClick={OpenEmail}
-                  >
-                    {userDetails?.ca_thomso_id}
-                  </span>
-                </div>
-                <div className="main-prof-box-detail-row">
-                  <span className="main-prof-box-detail-row-text">Name</span>
-                  <span className="main-prof-box-detail-row-text-col">{userDetails?.ca_name}</span>
-                </div>
-                <div className="main-prof-box-detail-row">
-                  <span className="main-prof-box-detail-row-text">
-                    Phone number
-                  </span>
-                  <span className="main-prof-box-detail-row-text-col">
-                    {userDetails?.ca_contact}
-                  </span>
-                </div>
-              </div>
-            </div>)}
+            )}
           </div>
         </div>
         <div className="c-line">
