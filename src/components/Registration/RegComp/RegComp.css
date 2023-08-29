@@ -179,6 +179,10 @@
     display: flex;
     justify-content: center;
   }
+  .Box h3 {
+    font-family: Comic Sans MS;
+    margin-top: 1rem;
+  }
   
   .Box p {
     width: 70%;

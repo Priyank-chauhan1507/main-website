@@ -34,6 +34,7 @@ const RegisComp = () => {
                   Voila! Your Registration for Thomso '23 IIT Roorkee is
                   successfully completed.
                 </p>
+                <h3>To add your events, login now</h3>
               </div>
               <button className="submit-log" onClick={() => navigate('/login')} type="submit">Login Now</button>
             </div>

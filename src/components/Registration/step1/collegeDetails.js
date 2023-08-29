@@ -312,7 +312,7 @@ const CollegeDetails = () => {
                 <input
                   className="input-field"
                   type="text"
-                  placeholder="Year *"
+                  placeholder="Year of study *"
                   name="year"
                   value={user.year}
                   required
