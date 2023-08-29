@@ -1,37 +1,42 @@
 #card_icc {
   cursor: pointer;
   box-sizing: border-box;
-  background: radial-gradient(
-    111.43% 111.43% at 0% 0%,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
+  background: radial-gradient(111.43% 111.43% at 0% 0%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 100%);
   /* backdrop-filter: blur(42px); */
   width: 250px;
   margin-bottom: 24px;
   border: 1.5px solid transparent;
-  border-image-source: radial-gradient(
-    115.98% 168.03% at -3.2% 0%,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 100%
-  );
+  border-image-source: radial-gradient(115.98% 168.03% at -3.2% 0%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 100%);
   border-image-slice: 1;
   transition-duration: 500ms;
 }
-#card_icc:hover{
-  border-image-source: radial-gradient(
-    115.98% 168.03% at -3.2% 0%,
-    rgba(255, 255, 255, 0.6) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+
+#card_icc:hover {
+  border-image-source: radial-gradient(115.98% 168.03% at -3.2% 0%,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
 }
 
 #img_1__card_ec {
-  width: 226px;
-  height: 200px;
-  margin: 12px;
-  object-fit: cover;
-  margin-bottom: 16px !important;
+  height: 30vh;
+  width: 24vh;
+  /* background: url(../../../assests/footloose.png); */
+  background-size: cover;
+  background-position: center center;
+  border-radius: 5.31px;
+  border: 0.664px solid #F9F9F9;
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  z-index: -1;
+  bottom: -17px;
+  left: -13px;
 }
 
 #text_1_card_ec_1 {
@@ -67,25 +72,28 @@
   margin-bottom: 12px;
   margin-left: 12px;
 }
-.none{
+
+.none {
   display: none;
 }
-@media screen and (max-width:768px){
-  #card_icc{
+
+@media screen and (max-width:768px) {
+  #card_icc {
     width: 300px;
   }
+
   /* /* #img_1__card_ec{ */
-    /* width: 74vw;
+  /* width: 74vw;
   } */
   #img_1__card_ec {
-    width: 275px;
-    height: auto;
-    margin: 10px;
-    margin-bottom: 10px !important;
+    width: 80vw;
+    bottom: -11px;
+    left: -11px;
+    height: 80vw;
   }
 }
 
-.paynow{
+.paynow {
   width: 100%;
   height: 44px;
   font-family: "Poppins", sans-serif;

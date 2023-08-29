@@ -50,6 +50,16 @@ const EventMainPageMob = ({
       <div className="ECD-container">
         {!search ? (
           <div className="ECD-searchbar-div">
+            <h1 className="eventmain-headline">EVENTS</h1>
+            <div>
+              <span
+               style={{ marginLeft: "50px" }}
+                className={!search ? "ECD-searchbar-text" : "none"}
+                onClick={() => onSearch()}
+              >
+                <AiOutlineSearch size={"24px"} />
+              </span>
+            </div>
             <div className="all-dropdown-flex">
               <div
                 className="ECD-searchbar"
@@ -63,7 +73,10 @@ const EventMainPageMob = ({
                         item.id === activeCategory ? item.name : ""
                       )}
                 </span>
-                <span className="ECD-searchbar-text">
+                <span
+                  className="ECD-searchbar-text"
+                 
+                >
                   <IoIosArrowDown />
                 </span>
               </div>
@@ -74,14 +87,6 @@ const EventMainPageMob = ({
                   activeCategory={activeCategory}
                 />
               </div>
-            </div>
-            <div>
-              <span
-                className={!search ? "ECD-searchbar-text" : "none"}
-                onClick={() => onSearch()}
-              >
-                <AiOutlineSearch size={"24px"} />
-              </span>
             </div>
           </div>
         ) : (

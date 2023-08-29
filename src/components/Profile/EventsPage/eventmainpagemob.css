@@ -4,6 +4,7 @@
 }
 .all-dropdown-flex {
   display: flex;
+  height: 4vh;
   flex-direction: column;
 }
 .all-dropdown {
