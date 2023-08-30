@@ -15,6 +15,9 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import log from "../../../assests/logout-logo.svg";
 import cs1 from "../../../assests/CautionSign1.svg";
 import { FileUploader } from "react-drag-drop-files";
+import ProfileNameEditModel from "../MainProfileBox/ProfileNameEditModel";
+import { BiEdit } from "react-icons/bi";
+import ProfileContactEditModel from "../MainProfileBox/ProfileContactEditModel";
 const fileTypes = ["JPG", "PNG", "GIF", "JPEG"];
 
 const NewNewProfileMobile = ({ data }) => {
@@ -29,6 +32,8 @@ const NewNewProfileMobile = ({ data }) => {
   const [openbranch, setOpenbranch] = useState(false);
   const [openstate, setOpenstate] = useState(false);
   const [openemail, setOpenemail] = useState(false);
+  const [display1, setdisplay1] = useState(false);
+  const [display2, setdisplay2] = useState(false);
 
   useEffect(() => {
     setuserDetails(data);
@@ -184,8 +189,8 @@ const NewNewProfileMobile = ({ data }) => {
                 to="/payment-alumn"
                 className={
                   Locator.pathname === "/payment-alumn"
-                  ? "nav-active"
-                  : "nav-passive"
+                    ? "nav-active"
+                    : "nav-passive"
                 }
               >
                 Payment
@@ -223,7 +228,11 @@ const NewNewProfileMobile = ({ data }) => {
               handleChange={changeHandler1}
               accept="image/jpeg, image/png"
             >
-          <img className="lsp-img11" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
+              <img
+                className="lsp-img11"
+                src={userDetails?.avtar ? userDetails?.avtar : pic}
+                alt="profilepic"
+              />
               <div className="lsp-text0">
                 {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
               </div>
@@ -231,12 +240,24 @@ const NewNewProfileMobile = ({ data }) => {
           </p>
         </div>
         <div className="mob-lt1">
-          <span className="lsp-text1">{userDetails?.name}{userDetails?.is_ca ? "(CA)" : ""}</span>
+          {display1 && <ProfileNameEditModel />}
+          <span className="lsp-text1">
+            {userDetails?.name}
+            {userDetails?.is_ca ? "(CA)" : ""}
+            <BiEdit
+              size={20}
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                setdisplay1(true);
+              }}
+            />
+          </span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
-          {userDetails?.is_ca &&
-            (<span className="lsp-text2">
+          {userDetails?.is_ca && (
+            <span className="lsp-text2">
               CA ID : {userDetails?.ca_thomso_id}
-            </span>)}
+            </span>
+          )}
         </div>
       </div>
       <div
@@ -347,7 +368,16 @@ const NewNewProfileMobile = ({ data }) => {
                 <span className="main-prof-box-detail-row-text-col">
                   {userDetails?.contact}
                 </span>
+                <BiEdit
+                  color="white"
+                  size={20}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setdisplay2(true);
+                  }}
+                />
               </div>
+              {display2 && <ProfileContactEditModel />}
               <div className="main-prof-box-detail-row">
                 <span className="main-prof-box-detail-row-text">Gender</span>
                 <span className="main-prof-box-detail-row-text-col">
@@ -355,40 +385,43 @@ const NewNewProfileMobile = ({ data }) => {
                 </span>
               </div>
             </div>
-            {userDetails?.is_ca===false && (
-            <div className="main-prof-box-flex-2">
-              <div className="flex-2-title">CA-Referral</div>
-              <div className="main-prof-box-details-div">
-                <div className="main-prof-box-detail-row ca-ref-box">
-                  <span className="main-prof-box-detail-row-text">
-                    CA-Referral
-                  </span>
-                  <span className="main-prof-box-detail-row-text-col">
-                  {userDetails?.ca_thomso_id}
-                  </span>
-                </div>
-                <div className="main-prof-box-detail-row">
-                  <span className="main-prof-box-detail-row-text">Name</span>
-                  <span className="main-prof-box-detail-row-text-col">{userDetails?.ca_name}</span>
-                </div>
-                <div className="main-prof-box-detail-row">
-                  <span className="main-prof-box-detail-row-text">
-                    Phone Number
-                  </span>
-                  <span className="main-prof-box-detail-row-text-col">
-                  {userDetails?.ca_contact}
-                  </span>
+            {userDetails?.is_ca === false && (
+              <div className="main-prof-box-flex-2">
+                <div className="flex-2-title">CA-Referral</div>
+                <div className="main-prof-box-details-div">
+                  <div className="main-prof-box-detail-row ca-ref-box">
+                    <span className="main-prof-box-detail-row-text">
+                      CA-Referral
+                    </span>
+                    <span className="main-prof-box-detail-row-text-col">
+                      {userDetails?.ca_thomso_id}
+                    </span>
+                  </div>
+                  <div className="main-prof-box-detail-row">
+                    <span className="main-prof-box-detail-row-text">Name</span>
+                    <span className="main-prof-box-detail-row-text-col">
+                      {userDetails?.ca_name}
+                    </span>
+                  </div>
+                  <div className="main-prof-box-detail-row">
+                    <span className="main-prof-box-detail-row-text">
+                      Phone Number
+                    </span>
+                    <span className="main-prof-box-detail-row-text-col">
+                      {userDetails?.ca_contact}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div> )}
+            )}
             <div className="main-prof-box-flex-2">
               <div className="flex-2-title">College ID</div>
               <div className="upload-doc-container">
-              {userDetails?.college_id ? (
-                <p className="mpb-text">Document Uploaded</p>
-              ) : (
-                <p className="mpb-text">Upload document to verify</p>
-              )}
+                {userDetails?.college_id ? (
+                  <p className="mpb-text">Document Uploaded</p>
+                ) : (
+                  <p className="mpb-text">Upload document to verify</p>
+                )}
               </div>
               {userDetails?.college_id ? (
                 <div style={{ paddingTop: "10px", paddingRight: "50px" }}>
@@ -421,12 +454,11 @@ const NewNewProfileMobile = ({ data }) => {
                   className="drag-3-input"
                   handleChange={changeHandler}
                 >
-                <button className="drag-but">
-                  <label className="drag-3-box">
-                    <span className="drag-3">Browse File</span>
-                    
-                  </label>
-                </button>
+                  <button className="drag-but">
+                    <label className="drag-3-box">
+                      <span className="drag-3">Browse File</span>
+                    </label>
+                  </button>
                 </FileUploader>
               )}
               {file && <div style={{ color: "white" }}>{file.name}</div>}
