@@ -30,7 +30,7 @@ import ReactGA from "react-ga4";
 // require('dotenv').config()
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
-ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+ReactGA.initialize("G-FG974BLVDN");
 
 function App(props) {
   useEffect(() => {
