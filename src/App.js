@@ -14,7 +14,7 @@ import CollegeDetails from "./components/Registration/step1/collegeDetails";
 import RegPage from "./components/Registration/RegPage/RegPage";
 import Profilenavbar from "./components/Navbar/Profilenavbar";
 import Profile from "./components/Profile/Profile/Profile";
-import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";  
+import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";
 import EventMainPage from "./components/EventsPage/EventMainPage";
 import EventBox from "./components/Profile/EventBox/EventBox";
 import Paymentbox from "./components/Profile/PaymentBox/Paymentbox";
@@ -24,17 +24,24 @@ import Mobfooter from "./components/Footer/Mobfooter"
 import Eventsmobpage from "./components/EventsMobPage/Eventsmobpage";
 import PaymentSuccess from "./components/Profile/PaymentBox/PaymentSuccess";
 import Idcard from "./components/Profile/ID_card/Idcard";
-
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
+import ReactGA from "react-ga4";
+// require('dotenv').config()
+
+// console.log(process.env.REACT_APP_TRACKING_ID);
+ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+
 function App(props) {
   useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("user_id");
     if (token) {
       props?.userDetails && props?.fetchUsers({ id: userId });
     }
   }, []);
+
   return (
     <>
       <Router>
@@ -63,7 +70,7 @@ function App(props) {
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
           <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
-          <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />   
+          <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/id_card" element={<Idcard />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/eventsmain" element={<EventsMain />} />

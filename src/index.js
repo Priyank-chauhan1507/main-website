@@ -6,6 +6,7 @@ import axios from "axios";
 import { Store } from "./Config/Store";
 import { Provider } from "react-redux";
 import { createBrowserHistory } from "history";
+
 const history = createBrowserHistory();
 axios.defaults.baseURL = "https://api1.thomso.in";
 axios.defaults.headers.common.Authorization = `${
@@ -15,10 +16,14 @@ axios.defaults.headers.common.Authorization = `${
 }`;
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
+
 ReactDOM.render(
   <Provider store={Store}>
     <App history={history} />
   </Provider>,
   document.getElementById("root")
 );
+
+
+
 

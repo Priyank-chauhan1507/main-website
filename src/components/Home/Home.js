@@ -9,6 +9,7 @@ import "./Home.scss"
 import Navbar from '../EventsNavbar/Eventsnavbar'
 import Footer from '../Navbar/WebNavbarNew'
 import { Link, useNavigate } from "react-router-dom"
+import { customEvent } from '../../utils/analyticsHelper';
 
 function Home() {
   const navigate = useNavigate();
@@ -49,18 +50,18 @@ function Home() {
       <Navbar color="transparent" data={user} />
 
       <img src={thomso} alt="" className='thomso' />
-      
+
       {localStorage.getItem('token') ?
        (<div  style={{ margin: "0 auto",display:"flex",gap:"3vw" }}><Link to='/profile'>
         <button className='register'>PROFILE</button>
       </Link>
       <Link to='/eventslist'>
-        <button className='Explore'>Explore Events</button>
-      </Link></div>) 
+        <button className='Explore' onClick={() => customEvent("Explore Events Btn","user","From Home page to events", 1)}>Explore Events</button>
+      </Link></div>)
       :
        (<div style={{ margin: "0 auto",display:"flex",gap:"3vw" }}>
         <Link to='/register'>
-        <button className='register'>REGISTER NOW!</button>
+        <button className='register' onClick={() => customEvent("REGISTER NOW! Btn","user","From Home page to registeration", 1)}>REGISTER NOW!</button>
       </Link>
         <Link to='/eventslist'>
         <button className='Explore'>Explore Events</button>
