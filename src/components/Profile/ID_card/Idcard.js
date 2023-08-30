@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { useLocation, Link } from "react-router-dom";
 import pic from "../../../assests/propic.svg";
 import icon1 from "../../../assests/profile.svg";
@@ -8,12 +8,42 @@ import id_card_bg from "../../../assests/Id_card_bg.webp";
 import id_card_bg_white from "../../../assests/id_card_white_bg.webp";
 import profileimg from "../../../assests/profile1.webp";
 import qrcode from "../../../assests/profile1.webp";
+import axios from "axios";
 import "./Idcard.css"
 import { connect } from "react-redux";
 
 const Idcard = ({ userDetails }) => {
   const locator = useLocation();
   console.log(userDetails);
+  const [user, setuser] = useState({})
+//   const [userDetails, setuserDetails] = useState({});
+
+
+//   useEffect(() => {
+//     setuserDetails(user);
+//   }, [user]);
+
+  
+  useEffect(() => {
+    loadUserData();
+  }, []);
+
+  const loadUserData = async () => {
+    try {
+      axios
+        .get(`/apiV1/current_user_participant`)
+        .then((res) => {
+          setuser(res.data);
+          localStorage.setItem("user_id", res.data?.user_id);
+          localStorage.setItem("id", res.data?.id);
+          console.log("data", res.data);
+        })
+    }catch (error) {
+        console.log(error);
+      }
+}
+console.log(userDetails)
+
   return (
     <div className="id_card_main_div">
         <div className="id_card_div">
@@ -29,14 +59,14 @@ const Idcard = ({ userDetails }) => {
             </div>
             <div className="right_id">
                 <div className="thomso_card_id">
-                Thomso ID : {userDetails.id}
+                Thomso ID : {user.thomso_id}
                 </div>
                 <div className="id_card_name">
                     <div>
                     Name : 
                     </div>
                     <div>
-                    {userDetails.name}name1
+                    {user.name}
                     </div>
                 </div>
                 <div className="contain2_id">
@@ -45,14 +75,14 @@ const Idcard = ({ userDetails }) => {
                             Contact
                         </div>
                         <div>
-                    12345678{userDetails.contact}
+                    {user.contact}
                     </div>
                     </div>
                     <div className="id_ca_id">
                     <div>
                         CA-ID :
                     </div>
-                     12345678{userDetails.CAid}
+                     {user.ca_thomso_id}
                     </div>
                 </div>
                 <div className="id_college">
@@ -60,7 +90,7 @@ const Idcard = ({ userDetails }) => {
                         College
                     </div>
                     <div>
-                        IIT Roorkee {userDetails.college}
+                        {user.college}
                     </div>
                 </div>
                 <div className="id_ca_referral">
@@ -68,11 +98,11 @@ const Idcard = ({ userDetails }) => {
                         CA-Referral and Name
                     </div>
                     <div>
-                        12345678{userDetails.CA_Referral}
+                       {user.referred_by_id}
                     </div>
                 </div>
                 <div className="id_accomodation">
-                        Accomodation:{userDetails.isAccomodation?"Yes":"No"}
+                        Accomodation:{user.accommodation?"Yes":"No"}
                 </div>
             </div>
         </div>
