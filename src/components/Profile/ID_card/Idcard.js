@@ -98,7 +98,7 @@ console.log(userDetails)
                         CA-Referral and Name
                     </div>
                     <div>
-                       {user.referred_by_id}
+                       {user.ca_thomso_id} and {user.ca_name}
                     </div>
                 </div>
                 <div className="id_accomodation">
