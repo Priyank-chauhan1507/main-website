@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8e162f00.css",
-    "main.js": "/static/js/main.7ddef615.js",
+    "main.css": "/static/css/main.20aa006d.css",
+    "main.js": "/static/js/main.49e30ca7.js",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
     "static/media/Landing-page-2-1.webp": "/static/media/Landing-page-2-1.a3d9992c858b965fed61.webp",
@@ -18,6 +18,7 @@
     "static/media/Landing-page-1.webp": "/static/media/Landing-page-1.0fbb94ef89a40b96def0.webp",
     "static/media/back.webp": "/static/media/back.5993852469394dc9eb3a.webp",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
+    "static/media/BGMUN.webp": "/static/media/BGMUN.96c91b99d86e9eefe101.webp",
     "static/media/loader.gif": "/static/media/loader.90672f1deffccbcdf4f1.gif",
     "static/media/thomso.webp": "/static/media/thomso.95fa23ea77b895417f22.webp",
     "static/media/image1evt.svg": "/static/media/image1evt.b4321236f14b276c55f6cb2a18190534.svg",
@@ -25,6 +26,7 @@
     "static/media/idback.webp": "/static/media/idback.61a74a9da611a4a2c530.webp",
     "static/media/reg-logo.svg": "/static/media/reg-logo.7ff1b44e2c10de2dbb38076a1e4fbf12.svg",
     "static/media/propic.svg": "/static/media/propic.39d1147898dd7f65cb0cd55d48ebe1ce.svg",
+    "static/media/MUN-Top.webp": "/static/media/MUN-Top.09e1c67df91811380808.webp",
     "static/media/default_event.png": "/static/media/default_event.5e41c2c91152988c4289.png",
     "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
     "static/media/profile1.png.jpg": "/static/media/profile1.png.da7e7064ed2b96e76c47.jpg",
@@ -51,11 +53,11 @@
     "static/media/profile.svg": "/static/media/profile.a0cd79691c7d2da42c0493e6ad98e630.svg",
     "static/media/imgnav.webp": "/static/media/imgnav.5d1202175c519a72086b.webp",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
-    "main.8e162f00.css.map": "/static/css/main.8e162f00.css.map",
-    "main.7ddef615.js.map": "/static/js/main.7ddef615.js.map"
+    "main.20aa006d.css.map": "/static/css/main.20aa006d.css.map",
+    "main.49e30ca7.js.map": "/static/js/main.49e30ca7.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e162f00.css",
-    "static/js/main.7ddef615.js"
+    "static/css/main.20aa006d.css",
+    "static/js/main.49e30ca7.js"
   ]
 }
