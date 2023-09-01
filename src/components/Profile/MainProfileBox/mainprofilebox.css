@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
 }
+
 .main-prof-box-flex-1 {
   display: flex;
   flex-direction: column;
@@ -15,15 +16,19 @@
   overflow-x: hidden;
   padding-bottom: 5vh;
 }
+
 div.main-prof-box-flex-1::-webkit-scrollbar {
-  width:0px;
+  width: 0px;
 }
-.lsp-img1{
+
+.lsp-img1 {
   cursor: pointer;
 }
-.lsp-text0{
+
+.lsp-text0 {
   cursor: pointer;
 }
+
 .main-prof-box-head-text {
   font-family: "Oxanium";
   font-style: normal;
@@ -35,18 +40,18 @@ div.main-prof-box-flex-1::-webkit-scrollbar {
   line-height: 30px;
   color: rgba(255, 255, 255, 0.63);
   color: #FFF;
-font-family: Comic Neue;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Comic Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .main-prof-box-details-div {
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  
+
 }
 
 .main-prof-box-detail-row-text {
@@ -59,19 +64,22 @@ line-height: normal;
   color: #ffffff;
   width: 40px;
 }
+
 .main-prof-box-detail-row-text-col {
   color: #FFF;
   font-family: Comic Neue;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 125% */
+  line-height: 20px;
+  /* 125% */
   /* width: 45vw; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main-prof-box-detail-row-text-col-2{
+
+.main-prof-box-detail-row-text-col-2 {
   color: #FFF;
   font-family: Comic Neue;
   font-size: 16px;
@@ -79,6 +87,7 @@ line-height: normal;
   font-weight: 400;
   width: 53vw;
 }
+
 .main-prof-detail-1 {
   display: flex;
   flex-direction: column;
@@ -92,6 +101,7 @@ line-height: normal;
   gap: 4vh;
   justify-content: flex-start;
 }
+
 .main-prof-box-detail-row {
   display: flex;
   gap: 3vw;
@@ -103,6 +113,7 @@ line-height: normal;
   margin-top: 7vh;
   margin-left: 5vw;
 }
+
 .none {
   display: none;
 }
@@ -118,11 +129,11 @@ line-height: normal;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.63);
   color: #FFF;
-font-family: Comic Neue;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Comic Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .mpb-text {
@@ -134,11 +145,11 @@ line-height: normal;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 5vh;
   color: #FFF;
-font-family: Comic Neue;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Comic Neue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .mpb-drop {
@@ -182,6 +193,7 @@ line-height: normal;
   cursor: pointer;
   border: none;
 }
+
 .delete-but {
   display: flex;
   flex-direction: row;
@@ -195,6 +207,7 @@ line-height: normal;
   border: none;
   color: white !important;
 }
+
 .drag-3-box {
   display: flex;
   flex-direction: column;
@@ -202,6 +215,7 @@ line-height: normal;
   align-items: center;
   cursor: pointer;
 }
+
 .drag-3 {
   font-family: "Lato";
   font-style: normal;
@@ -214,6 +228,7 @@ line-height: normal;
   color: #333333;
   cursor: pointer;
 }
+
 .delete-3 {
   font-family: "Lato";
   font-style: normal;
@@ -225,6 +240,7 @@ line-height: normal;
   letter-spacing: -0.02em;
   color: #ffffff;
 }
+
 .drag-3-input {
   display: none;
   cursor: pointer;
@@ -251,19 +267,21 @@ line-height: normal;
   letter-spacing: -0.02em;
   color: white;
   background: rgb(255, 53, 53);
-  margin-left:10px;
-  margin-top:0vh;
+  margin-left: 10px;
+  margin-top: 0vh;
 }
+
 .c-line {
   margin-top: 7vh;
   /* margin-left: 7vw; */
 }
+
 .c-line1 {
   margin-top: 16vh;
   margin-left: 0px;
 }
 
-.c-line img{
+.c-line img {
   width: 2px;
 }
 
@@ -285,11 +303,30 @@ line-height: normal;
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 768px){
-  .main-prof-box-detail-row-text-col{
-    width:45vw;
+@media only screen and (max-width: 768px) {
+  .main-prof-box-detail-row-text-col {
+    width: 45vw;
   }
-  .main-logout-btn{
-    margin-left:0px !important;
+
+  .main-logout-btn {
+    margin-left: 0px !important;
   }
+}
+
+.ca-refferal {
+  position: absolute;
+  bottom: 2vh;
+  right: 2vh;
+  z-index: 2;
+  color: white !important;
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.ca-refferal h1 {
+  font-size: 16px;
 }
