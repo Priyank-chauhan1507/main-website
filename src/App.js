@@ -29,6 +29,7 @@ import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
+import Footer1 from "./components/MUN/Footer/Footer";
 import ReactGA from "react-ga4";
 // require('dotenv').config()
 
@@ -80,6 +81,7 @@ function App(props) {
           <Route exact={true} path="/eventsmain" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
           <Route exact={true} path="/MUN" element={<Home1/>} />
+          <Route exact={true} path="/munfooter" element={<Footer1/>} />
         </Routes>
       </Router>
     </>
