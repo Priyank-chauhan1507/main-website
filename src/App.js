@@ -27,7 +27,8 @@ import Idcard from "./components/Profile/ID_card/Idcard";
 import IdcardBox from "./components/Profile/ID_card/idcardBox";
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
-import Home1 from "./components/Home/Home";
+// import Home1 from "./components/Home/Home";
+import Home1 from "./components/MUN/Home/Home";
 import ReactGA from "react-ga4";
 // require('dotenv').config()
 
