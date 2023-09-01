@@ -56,7 +56,7 @@ const Login = (props) => {
               // props.fetchEvents();
               // localStorage.setItem("token", res.data?.access);
               // setAuthToken(localStorage.getItem("token"));
-              navigate(`/pevents`);
+              navigate(`/profile`);
               // console.log(res);
             }
             setLoading(false);
