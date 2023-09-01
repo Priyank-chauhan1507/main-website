@@ -30,7 +30,9 @@ import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNam
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
 import Footer1 from "./components/MUN/Footer/Footer";
+// import Footer1 from "./components/MUN/Judges/Judges";
 import ReactGA from "react-ga4";
+import Judges from "./components/MUN/Judges/Judges";
 // require('dotenv').config()
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
@@ -82,6 +84,7 @@ function App(props) {
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
           <Route exact={true} path="/MUN" element={<Home1/>} />
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
+          <Route exact={true} path="/judges" element={<Judges/>} />
         </Routes>
       </Router>
     </>
