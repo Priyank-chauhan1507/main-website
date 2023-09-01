@@ -51,7 +51,7 @@ console.log(userDetails)
         <div className="contain1_id">
             <div className="left_id">
                 <div className="profile_id_pic">
-                <img src={profileimg} className="profile_pic_image" alt="" />
+                <img src={user.avtar} className="profile_pic_image" alt="" />
                 </div>
                 <div className="id_qr">
                 <img src={qrcode} className="qr_image" alt="" />
@@ -65,7 +65,7 @@ console.log(userDetails)
                     <div>
                     Name : 
                     </div>
-                    <div>
+                    <div className="dataSize">
                     {user.name}
                     </div>
                 </div>
@@ -74,7 +74,7 @@ console.log(userDetails)
                         <div>
                             Contact
                         </div>
-                        <div>
+                        <div className="dataSize">
                     {user.contact}
                     </div>
                     </div>
@@ -82,14 +82,17 @@ console.log(userDetails)
                     <div>
                         CA-ID :
                     </div>
+                    <div className="dataSize"> 
                      {user.ca_thomso_id}
+
+                    </div>
                     </div>
                 </div>
                 <div className="id_college">
                     <div>
                         College
                     </div>
-                    <div>
+                    <div className="dataSize">
                         {user.college}
                     </div>
                 </div>
@@ -97,12 +100,16 @@ console.log(userDetails)
                     <div>
                         CA-Referral and Name
                     </div>
-                    <div>
+                    <div className="dataSize">
                        {user.ca_thomso_id} and {user.ca_name}
                     </div>
                 </div>
                 <div className="id_accomodation">
-                        Accomodation:{user.accommodation?"Yes":"No"}
+                  <div>
+                        Accomodation:
+
+                  </div>
+                        <div className="dataSize"> {user.accommodation?"Yes":"No"}</div>
                 </div>
             </div>
         </div>
