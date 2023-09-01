@@ -18,6 +18,7 @@ import { FileUploader } from "react-drag-drop-files";
 import ProfileNameEditModel from "../MainProfileBox/ProfileNameEditModel";
 import { BiEdit } from "react-icons/bi";
 import ProfileContactEditModel from "../MainProfileBox/ProfileContactEditModel";
+import ReferralModule from "../MainProfileBox/Referral";
 const fileTypes = ["JPG", "PNG", "GIF", "JPEG"];
 
 const NewNewProfileMobile = ({ data }) => {
@@ -34,6 +35,7 @@ const NewNewProfileMobile = ({ data }) => {
   const [openemail, setOpenemail] = useState(false);
   const [display1, setdisplay1] = useState(false);
   const [display2, setdisplay2] = useState(false);
+  const [display3, setdisplay3] = useState(false);
 
   useEffect(() => {
     setuserDetails(data);
@@ -394,7 +396,19 @@ const NewNewProfileMobile = ({ data }) => {
                       CA-Referral
                     </span>
                     <span className="main-prof-box-detail-row-text-col">
+                      {display3 && <ReferralModule />}
                       {userDetails?.ca_thomso_id}
+                      {userDetails?.ca_thomso_id === null && (
+                        <>
+                          <BiEdit
+                            size={20}
+                            style={{ cursor: "pointer" }}
+                            onClick={() => {
+                              setdisplay3(true);
+                            }}
+                          />
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="main-prof-box-detail-row">
