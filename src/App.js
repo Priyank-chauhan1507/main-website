@@ -24,6 +24,7 @@ import Mobfooter from "./components/Footer/Mobfooter"
 import Eventsmobpage from "./components/EventsMobPage/Eventsmobpage";
 import PaymentSuccess from "./components/Profile/PaymentBox/PaymentSuccess";
 import Idcard from "./components/Profile/ID_card/Idcard";
+import IdcardBox from "./components/Profile/ID_card/idcardBox";
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
 import ReactGA from "react-ga4";
@@ -72,6 +73,7 @@ function App(props) {
           <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/id_card" element={<Idcard />} />
+          <Route exact={true} path="/id_card_box" element={<IdcardBox />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/eventsmain" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />

@@ -59,7 +59,7 @@ console.log(userDetails)
             </div>
             <div className="right_id">
                 <div className="thomso_card_id">
-                Thomso ID : {user.thomso_id}
+                {user.thomso_id}
                 </div>
                 <div className="id_card_name">
                     <div>
