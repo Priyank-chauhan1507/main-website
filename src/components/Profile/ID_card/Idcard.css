@@ -17,6 +17,16 @@
     z-index:-2;
 }
 
+.thomso_card_id{
+    font-family: 'Comic Sans MS';
+    font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+color: #000;
+
+}
+
 .id_card_bg_white_1{
 
 }
@@ -44,7 +54,19 @@
     display: flex;
     flex-direction: column;
     /* width:20vh; */
-    font-size: 2.2vh;
+    font-size: 2.4vh;
+    color: #1E1E1E;
+font-family: Comic Sans MS;
+}
+
+.id_accomodation{
+    display: flex;
+    align-items: center;
+    /* gap:10px; */
+}
+
+.dataSize{
+    font-size: 1.85vh;
 }
 
 .profile_id_pic{
