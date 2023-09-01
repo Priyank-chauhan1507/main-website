@@ -26,6 +26,7 @@ import icon3 from "../../../assests/payment.svg";
 import ProfileNameEditModel from "./ProfileNameEditModel";
 import ProfileContactEditModel from "./ProfileContactEditModel";
 import { BiEdit } from "react-icons/bi";
+import ReferralModule from "./Referral";
 const fileTypes = ["JPG", "PNG", "GIF"];
 
 const MainProfileBox = ({ data }) => {
@@ -44,6 +45,7 @@ const MainProfileBox = ({ data }) => {
   const [user, setuser] = useState({});
   const [display1, setdisplay1] = useState(false);
   const [display2, setdisplay2] = useState(false);
+  const [display3, setdisplay3] = useState(false);
   useEffect(() => {
     setuserDetails(data);
   }, [data]);
@@ -421,7 +423,19 @@ const MainProfileBox = ({ data }) => {
                       }
                       onClick={OpenEmail}
                     >
+                      {display3 && <ReferralModule />}
                       {userDetails?.ca_thomso_id}
+                      {userDetails?.ca_thomso_id === null && (
+                        <>
+                          <BiEdit
+                            size={20}
+                            style={{ cursor: "pointer" }}
+                            onClick={() => {
+                              setdisplay3(true);
+                            }}
+                          />
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="main-prof-box-detail-row">
