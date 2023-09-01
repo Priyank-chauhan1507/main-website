@@ -1,8 +1,8 @@
 .id_card_main_div{
-    background-color: white;   
-    height:100vh;
-    position: absolute;
-    z-index:-5;
+    /* background-color: white;    */
+    height:90vh;
+    /* position: absolute;
+    z-index:-5; */
 }
 
 .id_card_div{
