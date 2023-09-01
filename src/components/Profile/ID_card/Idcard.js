@@ -4,10 +4,10 @@ import pic from "../../../assests/propic.svg";
 import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
-import id_card_bg from "../../../assests/Id_card_bg.webp";
+import id_card_bg from "../../../assests/idback.webp";
 import id_card_bg_white from "../../../assests/id_card_white_bg.webp";
 import profileimg from "../../../assests/profile1.webp";
-import qrcode from "../../../assests/profile1.webp";
+import qrcode from "../../../assests/qr.webp";
 import axios from "axios";
 import "./Idcard.css"
 import { connect } from "react-redux";
