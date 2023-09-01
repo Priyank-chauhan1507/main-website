@@ -64,23 +64,26 @@ const Idcard = ({ userDetails }) => {
                 <div>Contact</div>
                 <div className="dataSize">{user.contact}</div>
               </div>
-              {userDetails?.is_ca &&
-              <div className="id_ca_id">
+              {/* {" "} */}
+              {user.is_ca === true &&
+              (<div className="id_ca_id">
                 <div>CA-ID :</div>
                 <div className="dataSize">{user.ca_thomso_id}</div>
-              </div>}
+              </div>)
+              }
             </div>
             <div className="id_college">
               <div>College</div>
               <div className="dataSize">{user.college}</div>
             </div>
-            {userDetails?.is_ca === false &&
-            <div className="id_ca_referral">
+            {/* {" "} */}
+            {user?.is_ca === false &&
+            (<div className="id_ca_referral">
               <div>CA-Referral and Name</div>
               <div className="dataSize">
                 {user.ca_thomso_id} and {user.ca_name}
               </div>
-            </div>}
+            </div>)}
             <div className="id_accomodation">
               <div>Accomodation:</div>
               <div className="dataSize">
