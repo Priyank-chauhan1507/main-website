@@ -58,10 +58,34 @@
     line-height: 162.2%; /* 25.952px */
     padding-right: 5vw;
     padding-top: 0.2vh;
+    display: flex;
+    align-items: center;
     /* display: flex;
     flex-direction: row; */
 
 }
 .content1{
     font-size: 2vw;
+}
+@media only screen and (max-width: 768px){
+    .containerbox{
+        flex-direction: column;
+        /* align-items: center; */
+        padding-left:4vw ;
+    }
+    .container{
+        width: 80vw;
+    }
+    .cont{
+        font-size: 8vw;
+    }
+    .content1{
+        font-size: 5vw;
+    }
+    .content2{
+        font-size: 3vw;
+    }
+    .img1{
+        width: 4vw;
+    }
 }
