@@ -27,7 +27,7 @@ import Idcard from "./components/Profile/ID_card/Idcard";
 import IdcardBox from "./components/Profile/ID_card/idcardBox";
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
-import Home from "./components/Home/Home";
+import Home1 from "./components/Home/Home";
 import ReactGA from "react-ga4";
 // require('dotenv').config()
 
@@ -78,7 +78,7 @@ function App(props) {
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/eventsmain" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
-          <Route exact={true} path="/MUN" element={<Home />} />
+          <Route exact={true} path="/MUN" element={<Home1/>} />
         </Routes>
       </Router>
     </>
