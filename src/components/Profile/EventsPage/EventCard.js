@@ -50,7 +50,7 @@ const EventCard = ({ data }) => {
                   <div id="text_1_card_ec_2">{datas?.category?.name}</div>
                 </div>
               </div> */}
-              <div className="eventcard" onClick={() => onHandleClick(index)}>
+              <div className="eventcard" onClick={() => onHandleClick(datas?.id)}>
                 <img
                   src={datas?.image == null ? default_image : datas?.image}
                   alt="image"
