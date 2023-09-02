@@ -21,7 +21,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Home() {
   const [open, setOpen] = useState("");
-  const classes = useStyles();
+  // const classes = useStyles();
     return (
     <div className="MUN-bg">
       <img src={BG} className="MUN-Bg" alt="" />
@@ -209,13 +209,13 @@ function Home() {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography className={classes.textField}>
+                  <Typography className="textField">
                     <span className="numberr">01 </span> Where can I register
                     for Thomso?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography className={classes.answer}>
+                  <Typography className="answer">
                     Registration can be done at -{" "}
                     <a
                       style={{ color: "none" }}
@@ -236,13 +236,13 @@ function Home() {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography className={classes.textField}>
+                  <Typography className="textField">
                     <span className="numberr">02 </span> What are the agendas of
                     the IITR MUN 2022?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography className={classes.answer}>
+                  <Typography className="answer">
                     There are three committees this year
                     <br /> o -UNSC Analysing the China Taiwan military standoff
                     <br />o -Harry Porter committee (order of the phoenix)
@@ -268,13 +268,13 @@ function Home() {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography className={classes.textField}>
+                  <Typography className="textField">
                     <span className="numberr">03 </span> What will be included
                     in the registration fees?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography className={classes.answer}>
+                  <Typography className="answer">
                     <p>Registration fee is Rs.2799+taxes.</p>
                     It will include accommodation(compulsory for girls) for
                     three days, breakfast and lunch, goodies, participation in
@@ -296,13 +296,13 @@ function Home() {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography className={classes.textField}>
+                  <Typography className="textField">
                     <span className="numberr">04 </span> How do I get the
                     details/rulebook for any particular event?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography className={classes.answer}>
+                  <Typography className="answer">
                     Details can be found at -{" "}
                     <a
                       style={{ color: "none" }}
@@ -323,7 +323,7 @@ function Home() {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography className={classes.textField}>
+                  <Typography className="textField">
                     <span className="numberr" style={{ fontFamily: "Nofex" }}>
                       05{" "}
                     </span>{" "}
@@ -331,7 +331,7 @@ function Home() {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography className={classes.answer}>
+                  <Typography className="answer">
                     IITR MUN is a two days conference and will be held from 14
                     October to 15 October
                     <a
@@ -350,7 +350,7 @@ function Home() {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography className={classes.textField}>
+                  <Typography className="textField">
                     <span className="numberr" style={{ fontFamily: "Nofex" }}>
                       06{" "}
                     </span>{" "}
@@ -358,7 +358,7 @@ function Home() {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography className={classes.answer}>
+                  <Typography className="answer">
                     The prize worth is 80k
                     <a
                       style={{ color: "none" }}
