@@ -3,9 +3,13 @@ import './Page2.css'
 import lock5 from "../../../assests/lock5.svg"
 import Rect1 from "../../../assests/Rect1.webp"
 import Rect2 from "../../../assests/Rect2.webp"
+import Navbar from "../../EventsNavbar/Eventsnavbar"
+import Footer from "../../Navbar/WebNavbarNew"
 
 function Page2() {
   return (
+    <div className="page-2-merch">
+    <Navbar />
     <div className='shirt-container'>
         <div className="shirt-container1">
             <div className="big-box1">
@@ -57,6 +61,8 @@ function Page2() {
                 <div className="con1">ADD TO BAG</div>
                 </div>
         </div>
+    </div>
+    <Footer />
     </div>
   )
 }
