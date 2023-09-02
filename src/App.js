@@ -34,6 +34,7 @@ import Footer1 from "./components/MUN/Footer/Footer";
 import ReactGA from "react-ga4";
 import Judges from "./components/MUN/Judges/Judges";
 import Page1 from "./components/Merch_page/Page1/Page1";
+import Page2 from "./components/Merch_page/Page2/Page2";
 // require('dotenv').config()
 import Page3 from "./components/Merch_page/Page3/Page3";
 
@@ -89,6 +90,7 @@ function App(props) {
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
           <Route exact={true} path="/merch_page1" element={<Page1/>} />
+          <Route exact={true} path="/merch_page2" element={<Page2/>} />
           <Route exact={true} path="/merch_page3" element={<Page3/>} />
         </Routes>
       </Router>
