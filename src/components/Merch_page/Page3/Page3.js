@@ -1,10 +1,14 @@
 import React from 'react'
 import productImg from '../../../assests/productimg.svg'
 import './Page3.css'
+import Navbar from "../../EventsNavbar/Eventsnavbar"
+import Footer from "../../Navbar/WebNavbarNew"
 
 function Page3() {
   return (
     <>
+    <div className='merchPage3'>
+    <Navbar />
     <div className="main_body">
         <div className="heading_cart">
             <h1>YOUR CART</h1>
@@ -65,6 +69,8 @@ function Page3() {
             </div>
         </div>
 
+    </div>
+    <Footer />
     </div>
     </>
   )
