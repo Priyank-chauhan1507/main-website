@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue&display=swap');
+.main_body{
+    width:100vw;
+    border: solid;
+    border-color: black;
+    background-color: white;
+}
+.heading_cart{
+    display:flex;
+    justify-content: center;
+    font-family: 'Bangers', cursive;
+}
+.cart_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:10vw;
+    margin-right: 10vw;
+}
+.title_cart{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    /* padding:3px; */
+    font-family: Comic Neue;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+.product_title{
+    font-weight: bolder;
+}
+.other_title{
+    display: flex;
+    flex-direction: row;
+    gap:10vw;
+    /* padding:3px; */
+}
+.cart_status{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:5vh 0 5vh 0;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: grey;   
+}
+.product_status{
+    display:flex;
+    flex-direction: row;
+    gap:3vw;
+}
+.prod_name h3{
+    font-family: 'Bangers', cursive;
+    font-weight: lighter;
+    font-size: 1.8vw;
+    /* padding-bottom: -1vh; */
+}
+.prod_size{
+    font-family: comic Neue;
+    font-style: italic;
+}
+.prod_discription{
+    display:flex;
+    flex-direction:column;
+    font-size: 1vw;
+    gap:3vh;
+}
+.prod_button1{
+    font-family: 'Bangers', cursive;
+    font-size: 1.5vw;
+    padding:2px 4px 2px 4px;
+}
+.product_discription{
+    display: flex;
+    flex-direction: row;
+    gap:11vw;
+}
+.cart_footer{
+    /* width:100vw; */
+    display:flex;
+    flex-direction: column;
+    justify-content:unset;
+    align-items: end;
+    padding-bottom: 5vw;
+}
+.subtotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.subTotal{
+    font-family: comic neue;
+    /* font-weight: lighter; */
+}
+.value ,.price_value h3,.total_price h3{
+    font-family:'Bangers', cursive ;
+    font-weight: lighter;
+}
+.final_fare{
+    /* width:18vw; */
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+.tax_disclaimer{
+    display: flex;
+    justify-content: unset;
+    align-items: end;
+    font-family: comic neue;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+}
+.footer_button{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap:2vw;
+}
+.prod_button2,.prod_button3{
+    font-family:'Bangers', cursive ;
+    font-size: 1.5vw;
+    padding: 5px 8px 5px 8px;
+    word-spacing: 5px;
+    /* border-radius: 2px; */
+}
+.prod_button3{
+    background-color: #FF4E00;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+}
+@media screen and (max-width: 1300px){
+    .product_discription{
+    display: flex;
+    flex-direction: row;
+    gap:11.5vw;
+    }
+}

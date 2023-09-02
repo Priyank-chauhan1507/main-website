@@ -35,6 +35,8 @@ import ReactGA from "react-ga4";
 import Judges from "./components/MUN/Judges/Judges";
 import Page1 from "./components/Merch_page/Page1/Page1";
 // require('dotenv').config()
+import Page3 from "./components/Merch_page/Page3/Page3";
+
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 ReactGA.initialize("G-FG974BLVDN");
@@ -87,6 +89,7 @@ function App(props) {
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
           <Route exact={true} path="/merch_page1" element={<Page1/>} />
+          <Route exact={true} path="/merch_page3" element={<Page3/>} />
         </Routes>
       </Router>
     </>
