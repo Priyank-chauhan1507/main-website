@@ -1,0 +1,119 @@
+.mun-reg-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16vh;
+  background-color: black;
+  min-height: 150vh;
+  max-height: auto;
+}
+
+.u-part {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.cross {
+  font-size: 4vh;
+  width: 98vw;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  flex-direction: row-reverse;
+  margin-top: 2vh;
+  cursor: pointer;
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text1 {
+  font-family:"Oxanium";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.h-line {
+  width: 10vw;
+  border: 0.5px solid #ffffff;
+}
+
+.prefer-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+.prefer-box1 {
+  margin: 10px;
+  background: linear-gradient(
+    2.26deg,
+    rgba(17, 17, 17, 0.3312) 36.17%,
+    rgba(40, 129, 235, 0.1748) 118.24%
+  );
+  border: 0.4px solid #2881eb;
+  border-radius: 13px;
+  gap: 1vw;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 1vw;
+  padding: 2vh;
+}
+
+.prefer-text {
+  font-family: "Oxanium";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+/* .select1{
+    border: 1px solid grey;
+    width: 20vw;
+} */
+
+select {
+  background-color: black;
+  color: #cfbaba;
+  width: 20vw;
+  cursor: pointer;
+  height: 3vh;
+}
+
+.reg-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh 0;
+}
+
+.reg-btn {
+  display: flex;
+  border: 2px solid transparent;
+  border-image-source: linear-gradient(
+      85.54deg,
+      #56bf24 21.04%,
+      rgba(255, 255, 255, 0) 149.02%
+    ),
+    linear-gradient(85.54deg, #ffffff -27.54%, rgba(255, 255, 255, 0) 149.02%) !important;
+  border-image-slice: 1;
+  width: 25vw;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: black;
+  color: #ffffff;
+  font-size: 3vh;
+}
