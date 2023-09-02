@@ -33,6 +33,7 @@ import Footer1 from "./components/MUN/Footer/Footer";
 // import Footer1 from "./components/MUN/Judges/Judges";
 import ReactGA from "react-ga4";
 import Judges from "./components/MUN/Judges/Judges";
+import Page1 from "./components/Merch_page/Page1/Page1";
 // require('dotenv').config()
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
@@ -85,6 +86,7 @@ function App(props) {
           <Route exact={true} path="/MUN" element={<Home1/>} />
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
+          <Route exact={true} path="/merch_page1" element={<Page1/>} />
         </Routes>
       </Router>
     </>
