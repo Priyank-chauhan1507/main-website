@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.801f11e3.css",
-    "main.js": "/static/js/main.d5c992ca.js",
+    "main.css": "/static/css/main.b60756c1.css",
+    "main.js": "/static/js/main.a86ff30d.js",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
     "static/media/Landing-page-2-1.webp": "/static/media/Landing-page-2-1.a3d9992c858b965fed61.webp",
@@ -46,10 +46,12 @@
     "static/media/payment.svg": "/static/media/payment.95ea01daa16241652e9f64e22edaf598.svg",
     "static/media/Events.svg": "/static/media/Events.aaf278a02d68a5f17d9bc765debbe2ff.svg",
     "static/media/qr.webp": "/static/media/qr.31e27bde9983d8e175ea.webp",
+    "static/media/lock5.svg": "/static/media/lock5.02dc4c196aed1c1cd3b1407ed64e609a.svg",
     "static/media/mailimg.svg": "/static/media/mailimg.adc074b48e54299a35f208bf69a3a8f1.svg",
     "static/media/id_card_white_bg.webp": "/static/media/id_card_white_bg.b626de92aa7c47dca735.webp",
     "static/media/youtube.svg": "/static/media/youtube.66dd69542335b520df485dce0f206d82.svg",
     "static/media/facebook.svg": "/static/media/facebook.b0f35328fad63ace2403a98549b0770e.svg",
+    "static/media/Rect1.webp": "/static/media/Rect1.6d1e62513f6ad708a3f6.webp",
     "static/media/line1.svg": "/static/media/line1.2d44fb88fdc6691f77c0da9149c63918.svg",
     "static/media/logout-logo.svg": "/static/media/logout-logo.dcc4bafe58165b8fbbfeec7868251fbb.svg",
     "static/media/events.svg": "/static/media/events.77a5156103986e7ccddd2b1de9dd55a8.svg",
@@ -57,11 +59,12 @@
     "static/media/imgnav.webp": "/static/media/imgnav.5d1202175c519a72086b.webp",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
-    "main.801f11e3.css.map": "/static/css/main.801f11e3.css.map",
-    "main.d5c992ca.js.map": "/static/js/main.d5c992ca.js.map"
+    "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
+    "main.b60756c1.css.map": "/static/css/main.b60756c1.css.map",
+    "main.a86ff30d.js.map": "/static/js/main.a86ff30d.js.map"
   },
   "entrypoints": [
-    "static/css/main.801f11e3.css",
-    "static/js/main.d5c992ca.js"
+    "static/css/main.b60756c1.css",
+    "static/js/main.a86ff30d.js"
   ]
 }
