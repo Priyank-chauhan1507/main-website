@@ -78,7 +78,9 @@
     align-items: center;
     width: 80vw;
   }
-
+  .ESM-Conatiner-list::-webkit-scrollbar{
+    display: none !important;
+  }
   .all-container {
     display: flex;
     flex-direction: row;
@@ -163,9 +165,11 @@
   flex-wrap: wrap;
   column-gap: 10px;
   /* max-height: 100vh; */
-  padding-bottom: 200px;
-  justify-content: space-evenly;
+  padding-bottom: 100px;
+  justify-content: flex-start;
   gap: 30px 24px;
+  height: 74vh;
+  overflow-y: auto;
 }
 
 .eventmain-headline {
