@@ -2,8 +2,16 @@
     margin: 0;
     padding: 0;
 }
+.merchPage1{
+    width: 100vw !important;
+    overflow-x: hidden !important;
+}
 .merch_Page1{
 background: white;
+/* margin-top: ; */
+padding-bottom: 40px;
+width: 100vw !important;
+overflow-x: hidden !important;
 }
 .home_merchpage{
     display: flex;
@@ -11,7 +19,7 @@ background: white;
     padding: 0;
     margin: 0;
 }
-.ellipse img{
+.ell-img{
     width:29vw;
 }
 .ellipse{
@@ -73,14 +81,14 @@ padding-left: 20vw;
 .product hr{
 display: none;
 }
-.product img{
+.product-merch{
     width: 24vw;
 }
 .product text{
     width: 2vw;
 }
 @media screen and (max-width:1200px) {
-    .ellipse img{
+    .ell-img{
         width:35vw;
 
     }
@@ -89,14 +97,14 @@ display: none;
         width: 30vw;
     }
 }
-@media screen and (max-width:650px){
+@media screen and (max-width:768px){
 .home_merchpage{
     display: block;
 }
 .product{
     display: block;
 }
-.product img{
+.product-merch{
     width: 60vw;
 }
 .home_text{
