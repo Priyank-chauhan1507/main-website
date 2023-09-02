@@ -63,6 +63,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Home() {
   const [open, setOpen] = useState("");
+  // const classes = useStyles();
+    return (
   const classes = useStyles();
 
   return (
@@ -224,6 +226,24 @@ function Home() {
                   onClick={() => setOpen("harry")}
                   style={{ marginTop: "-35px" }}
                 >
+                  <Typography className="textField">
+                    <span className="numberr">01 </span> Where can I register
+                    for Thomso?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className="answer">
+                    Registration can be done at -{" "}
+                    <a
+                      style={{ color: "none" }}
+                      href="https://thomso.in/register"
+                      target="_blank"
+                    >
+                      https://thomso.in/register
+                    </a>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
                   <span>More Info</span>
                   <AiOutlineArrowRight />
                 </div>
@@ -258,6 +278,29 @@ function Home() {
                   href="https://thomso.in/register"
                   target="_blank"
                 >
+                  <Typography className="textField">
+                    <span className="numberr">02 </span> What are the agendas of
+                    the IITR MUN 2022?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className="answer">
+                    There are three committees this year
+                    <br /> o -UNSC Analysing the China Taiwan military standoff
+                    <br />o -Harry Porter committee (order of the phoenix)
+                    Classified
+                    <br />o -AIPPM- Deliberating on the electoral reforms in
+                    India with special emphasis on "One Nation One Election."
+                    <a
+                      style={{ color: "none" }}
+                      href="https://thomso.in/events"
+                      target="_blank"
+                    >
+                      https://thomso.in/events
+                    </a>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
                   https://thomso.in/register
                 </a>
               </Typography>
@@ -288,6 +331,112 @@ function Home() {
                   href="https://thomso.in/events"
                   target="_blank"
                 >
+                  <Typography className="textField">
+                    <span className="numberr">03 </span> What will be included
+                    in the registration fees?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className="answer">
+                    <p>Registration fee is Rs.2799+taxes.</p>
+                    It will include accommodation(compulsory for girls) for
+                    three days, breakfast and lunch, goodies, participation in
+                    all events and pronites.
+                    <p style={{ margin: "6px" }}></p>
+                    <p>What about dinner?</p>
+                    At the time of dinner, pronites will be going on but
+                    participants could avail the facilities of stalls and
+                    canteens.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                style={{ backgroundColor: "transparent", color: "white" }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography className="textField">
+                    <span className="numberr">04 </span> How do I get the
+                    details/rulebook for any particular event?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className="answer">
+                    Details can be found at -{" "}
+                    <a
+                      style={{ color: "none" }}
+                      href="https://thomso.in/events"
+                      target="_blank"
+                    >
+                      https://thomso.in/events
+                    </a>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                style={{ backgroundColor: "transparent", color: "#F6F6F6" }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography className="textField">
+                    <span className="numberr" style={{ fontFamily: "Nofex" }}>
+                      05{" "}
+                    </span>{" "}
+                    What are the dates of IITR MUN?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className="answer">
+                    IITR MUN is a two days conference and will be held from 14
+                    October to 15 October
+                    <a
+                      style={{ color: "none" }}
+                      href="https://thomso.in/events"
+                      target="_blank"
+                    ></a>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                style={{ backgroundColor: "transparent", color: "#F6F6F6" }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography className="textField">
+                    <span className="numberr" style={{ fontFamily: "Nofex" }}>
+                      06{" "}
+                    </span>{" "}
+                    What is the prize worth of the event?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className="answer">
+                    The prize worth is 80k
+                    <a
+                      style={{ color: "none" }}
+                      href="https://thomso.in/events"
+                      target="_blank"
+                    ></a>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+            </div>
+
+
+
+
                   https://thomso.in/events
                 </a>
               </Typography>
