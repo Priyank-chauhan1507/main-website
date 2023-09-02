@@ -8,7 +8,7 @@
     justify-content: center;
     flex-direction: column;
     width: 70vw;
-    /* border:2px solid white; */
+    border:2px solid white;
     gap: 15vh;
     margin: 0 auto;
     padding: 5vh 10vw 25vh 10vw;
