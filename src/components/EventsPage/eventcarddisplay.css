@@ -146,6 +146,7 @@ width: 215px;
     padding-bottom: 200px;
     justify-content: space-evenly;
     gap: 0px 24px;
+    padding-left: 1vw;
 }
 
 @media screen and (max-width: 768px) {
