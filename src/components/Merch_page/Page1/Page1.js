@@ -2,9 +2,14 @@ import React from 'react'
 import './Page1.css'
 import ellipse from '../../../assests/Ellipse 129.png'
 import product from '../../../assests/Group 37501.png'
+import Navbar from "../../EventsNavbar/Eventsnavbar"
+import Footer from "../../Navbar/WebNavbarNew"
 
 function Page1() {
   return (
+    <>
+    <div className='merchPage1'>
+    <Navbar />
     <div className='merch_Page1'>
       <div className="home_merchpage">
         <div className="home_text">
@@ -17,7 +22,7 @@ function Page1() {
             </div>
         </div>
         <div className="ellipse">
-            <img src={ellipse} alt="..." />
+            <img className='ell-img' src={ellipse} alt="..." />
         </div>
     </div>
     <div className="products_hr">
@@ -30,7 +35,7 @@ function Page1() {
     <div className="product">
         <div className="product1">
             <div>
-                <img src={product} alt="..." />
+                <img className='product-merch' src={product} alt="..." />
             </div>
                 <div className="text">
                 <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -43,7 +48,7 @@ function Page1() {
             <hr />
         <div className="product2">
                 <div>
-                    <img src={product} alt="..." />
+                    <img className='product-merch' src={product} alt="..." />
                 </div>
                     <div className="text">
                     <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -56,7 +61,7 @@ function Page1() {
                 <hr />
         <div className="product3">
             <div>
-                <img src={product} alt="..." />
+                <img className='product-merch' src={product} alt="..." />
             </div>
             <div className="text">
                 <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -69,7 +74,7 @@ function Page1() {
                 <hr />
         <div className="product4">
             <div>
-                <img src={product} alt="..." />
+                <img className='product-merch' src={product} alt="..." />
             </div>
             <div className="text">
                 <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -82,7 +87,7 @@ function Page1() {
             <hr />
         <div className="product5">
             <div>
-                <img src={product} alt="..." />
+                <img className='product-merch' src={product} alt="..." />
             </div>
             <div className="text">
                 <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -95,7 +100,7 @@ function Page1() {
             <hr />
         <div className="product6">
             <div>
-                <img src={product} alt="..." />
+                <img className='product-merch' src={product} alt="..." />
             </div>
             <div className="text">
                 <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -108,7 +113,7 @@ function Page1() {
             <hr />
         <div className="product7">
             <div>
-                <img src={product} alt="..." />
+                <img className='product-merch' src={product} alt="..." />
             </div>
             <div className="text">
                 <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -121,7 +126,7 @@ function Page1() {
             <hr />
         <div className="product8">
             <div>
-                <img src={product} alt="..." />
+                <img className='product-merch' src={product} alt="..." />
             </div>
             <div className="text">
                 <p className="product_name">THOMSO UNISEX TSHIRT</p>
@@ -135,6 +140,9 @@ function Page1() {
     </div>
     
     </div>
+    <Footer />
+    </div>
+    </>
   )
 }
 
