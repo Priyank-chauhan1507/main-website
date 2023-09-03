@@ -50,7 +50,10 @@ const EventCard = ({ data }) => {
                   <div id="text_1_card_ec_2">{datas?.category?.name}</div>
                 </div>
               </div> */}
-              <div className="eventcard" onClick={() => onHandleClick(datas?.id)}>
+              <div
+                className="eventcard"
+                onClick={() => onHandleClick(datas?.id)}
+              >
                 <img
                   src={datas?.image == null ? default_image : datas?.image}
                   alt="image"
@@ -71,7 +74,7 @@ const EventCard = ({ data }) => {
                     ) : (
                       <h2>{datas?.name}</h2>
                     )}
-                    {like ? (
+                    {/* {like ? (
                       <>
                         <RiHeart2Fill
                           onClick={() => {
@@ -89,10 +92,10 @@ const EventCard = ({ data }) => {
                           color="white"
                         />
                       </>
-                    )}
+                    )} */}
                   </div>
                   <hr />
-                  <p>{datas?.description.slice(0,100)}....</p>
+                  <p>{datas?.description.slice(0, 100)}....</p>
                 </div>
                 {/* </div> */}
               </div>
