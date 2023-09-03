@@ -4,6 +4,7 @@ import MUNTop from "../../../assests/MUN-Top.webp";
 import BG from "../../../assests/BGMUN.webp";
 import Navbar from "../../../components/EventsNavbar/Eventsnavbar";
 import Judges from '../Judges/Judges'
+import FAQ from '../FAQ/FAQ'
 import Footer from '../Footer/Footer'
 
 
@@ -21,6 +22,7 @@ function Home() {
           </button>
         </div>
         <Judges />
+        <FAQ />
         <Footer />
     </div>
   )
