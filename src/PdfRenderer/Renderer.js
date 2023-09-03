@@ -1,130 +1,151 @@
 import React, { useState, useEffect } from "react";
-import { Document,Font, Page,Image, Text, View, StyleSheet } from '@react-pdf/renderer';
-
-import { useLocation, Link } from "react-router-dom";
-// import pic from "../../../assests/propic.svg";
-// import icon1 from "../../../assests/profile.svg";
-// import icon2 from "../../../assests/events.svg";
-// import icon3 from "../../../assests/payment.svg";
-import id_card_bg from "../assests/events.png";
-// import id_card_bg_white from "../../../assests/id_card_white_bg.webp";
-// import profileimg from "../../../assests/profile1.webp";
-import qrcode from "../assests/qr.webp";
+import {
+  Document,
+  Font,
+  Page,
+  Image,
+  Text,
+  View,
+  StyleSheet,
+} from "@react-pdf/renderer";
+import id_logo from "./ID_Logo.png";
+import qr from "./qr.png";
+import CS_normal from "./COMIC.TTF";
+import CS_bold from "./design.graffiti.comicsansmsgras.ttf";
 import axios from "axios";
 
-import { connect } from "react-redux";
-
-
+Font.register({
+  family: "Comic Sans MS",
+  fonts: [
+    {
+      src: CS_normal,
+    },
+    {
+      src: CS_bold,
+      fontWeight: "bold",
+    },
+  ],
+});
 // Font.register({
-//   family: "Comic Neue",
-//   src: "url(https://fonts.gstatic.com/s/comicneue/v8/4UaHrEJDsxBrF37olUeD96rp5w.woff2) format('woff2')",
+//   family: "Comic Sans MS",
+//   src: CS_normal,
 // });
 
 const styles = StyleSheet.create({
-    page: {
-    
-    },
-    section: {
-      margin: 10,
-      padding: 10,
-      flexGrow: 1
-    },
-    pageBackground: {
-      position: 'absolute',
-      minWidth: '100%',
-      minHeight: '100%',
-      display: 'block',
-      height: '100%',
-      width: '100%',
-    },
-    id_card_main_div:{
-      height:'90vh',
-    },
-    id_card_div:{
-      height:'80vh',
-      width:'54.5vh',
-    },
-    id_card_bg1:{
-      height:'80vh',
-      width:'auto',
-      position: 'absolute',
-      zIndex: -2,
-    },
-    thomso_card_id:{
-      // fontFamily: 'Comic Neue',
-    fontSize: '20px',
-fontStyle: 'normal',
-fontWeight: 700,
-lineHeight: 'normal',
-color: '#000',
-    },
-
-    contain1_id:{
-      display: 'flex',
-      zIndex:-1,
-      backgroundImage: 'url(../assests/dashedbg.webp)',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      marginTop: '17vh',
-      marginLeft: '2vh',
-        height: '46vh',
-      width:'50.5vh',
-      padding:'3vh',
-      position: 'absolute',
-    },
-    left_id:{
-      /* margin-left:0.5vh; */
-      marginRight:'2vh'
+  id_page: {
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  id_container: {
+    height: "400px",
+    width: "272px",
+    backgroundColor: "#6BDFF8",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    color: "black",
+    fontFamily: "Comic Sans MS",
+  },
+  id_logo: {
+    marginTop: "17px",
+    height: "50px",
+    width: "103px",
+  },
+  id_border1: {
+    marginVertical: "17px",
+    height: "232px",
+    width: "264px",
+    borderRadius: "3px",
+    padding: "3px",
+    backgroundColor: "white",
+  },
+  id_border2: {
+    height: "100%",
+    width: "100%",
+    border: "1px dashed black",
+    padding: "5px",
+  },
+  id_box: {
+    height: "100%",
+    width: "100%",
+    border: "1px solid black",
+    padding: "6px",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 
-  right_id:{
-    display: 'flex',
-    flexDirection: 'column',
-    /* width:20vh; */
-    fontSize: '1.6vh',
-    gap:'1.3vh',
-    color: '#1E1E1E',
+  id_box_left: {
+    height: "100%",
+    width: "35%",
+    display: "flex",
+    justifyContent: "space-between",
+  },
 
-},
+  id_box_right: {
+    height: "100%",
+    width: "60%",
+    display: "flex",
+  },
 
-id_accomodation:{
-  display: 'flex',
-  alignItems: 'center',
-  gap:'3px'
-},
+  id_box_image: {
+    height: "50%",
+    width: "100%",
+    border: "1px solid black",
+    padding: "1px",
+  },
 
-dataSize:{
-  fontSize: '1.8vh'
-},
-profile_pic_image:{
-  width: '14vh',
-  height: '18vh'
-},
+  id_box_qr: {
+    height: "40%",
+    width: "100%",
+    border: "2px solid black",
+    padding: "2px",
+  },
 
-qr_image:{
-  width: '14vh',
-  height: '14vh',  
-  marginTop:'5.7vh',
-},
+  id_box_id: {
+    fontSize: "14px",
+    fontWeight: "bold",
+    marginBottom: "2px",
+    // fontFamily: "",
+  },
 
-contain2_id:{
-  display:'flex',
-  gap:'4vh',
-},
+  id_box_text1: {
+    fontSize: "8px",
+    marginTop: "1vh",
+  },
 
+  id_box_text2: {
+    fontSize: "9px",
+    fontWeight: "bold",
+    marginTop: "2px",
+  },
 
-  });
+  id_box_textB: {
+    fontSize: "9px",
+    fontWeight: "bold",
+    marginTop: "1vh",
+  },
 
-  const Renderer = () =>  {
-   
-  // const locator = useLocation();
-  // console.log(userDetails);
+  id_box_text_split: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
+  id_bottom: {
+    height: "41px",
+    width: "100%",
+    bottom: "0px",
+    backgroundColor: "#F7B401",
+  },
+});
+
+const Renderer = () => {
   const [user, setuser] = useState({});
-  //   const [userDetails, setuserDetails] = useState({});
 
-  //   useEffect(() => {
-  //     setuserDetails(user);
-  //   }, [user]);
 
   useEffect(() => {
     loadUserData();
@@ -134,28 +155,76 @@ contain2_id:{
     try {
       axios.get(`/apiV1/current_user_participant`).then((res) => {
         setuser(res.data);
-        localStorage.setItem("user_id", res.data?.user_id);
-        localStorage.setItem("id", res.data?.id);
-        console.log("data", res.data);
+        // console.log("data", res.data);
       });
     } catch (error) {
       console.log(error);
     }
   };
-  // console.log(userDetails);
+  console.log(user, "ddddd");
   return (
     <Document>
-    <Page size="A4" style={styles.page}>
-    <Image  src={id_card_bg} style={styles.pageBackground} />
+      <Page size="A4" style={styles.id_page}>
+        <View style={styles.id_container}>
+          <Image src={id_logo} style={styles.id_logo} />
 
-        
-    
-     
-    </Page>
-  </Document>
+          <View style={styles.id_border1}>
+            <View style={styles.id_border2}>
+              <View style={styles.id_box}>
+                <View style={styles.id_box_left}>
+                  <Image
+                    src={
+                      user?.avtar
+                    }
+                    style={styles.id_box_image}
+                  />
+                  <Image src={qr} style={styles.id_box_qr} />
+                </View>
 
-  )
+                <View style={styles.id_box_right}>
+                  <Text style={styles.id_box_id}>{user?.thomso_id}</Text>
+
+                  <Text style={styles.id_box_text1}>Name</Text>
+                  <Text style={styles.id_box_text2}>{user?.name}</Text>
+
+                  <View style={styles.id_box_text_split}>
+                    <View>
+                      <Text style={styles.id_box_text1}>Contact</Text>
+                      <Text style={styles.id_box_text2}>{user?.contact}</Text>
+                    </View>
+                    {user?.is_ca &&
+                      <View>
+                      <Text style={styles.id_box_text1}>CA ID</Text>
+                      <Text style={styles.id_box_text2}>ThCA-2300138</Text>
+                    </View>
+                    }
+
+                  </View>
+
+                  <Text style={styles.id_box_text1}>College</Text>
+                  <Text style={styles.id_box_text2}>
+                    Indian Institute of Technology, Roorkee
+                  </Text>
+
+                  <Text style={styles.id_box_text1}>CA Referral & Name</Text>
+                  {user?.referred_by_id ? (
+                  <Text style={styles.id_box_text2}>
+                  {user?.ca_thomso_id} ({user?.ca_name})
+                  </Text>
+                ) : (<Text style={styles.id_box_text2}>None</Text>)}
+
+                  <Text style={styles.id_box_textB}>Accommodation - {user?.accommodation ? "Yes" : "No"}</Text>
+                  {/* <Text style={styles.id_box_text2}>None</Text> */}
+                </View>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.id_bottom}></View>
+        </View>
+      </Page>
+    </Document>
+  );
 };
 
 export default Renderer;
-
