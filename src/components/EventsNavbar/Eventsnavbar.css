@@ -115,9 +115,11 @@
     margin-bottom: 10px;
     cursor: default !important;
 }
-.col-yellow:hover{
+
+.col-yellow:hover {
     text-decoration: none !important;
 }
+
 .col-yellow1 {
     color: #F7B900 !important;
 
@@ -138,11 +140,11 @@
     display: contents;
 }
 
-#img_profile{
+#img_profile {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    border-radius:20px;
+    border-radius: 20px;
 }
 
 @media (max-width:768px) {
@@ -167,23 +169,12 @@
     }
 
     .logo2 {
-        width: 40px;
-        height: 30px;
+        /* width: 40px;
+        height: 30px; */
+        height: 50px;
+        width: 50px;
     }
 
-    .slidebar1 {
-        position: absolute;
-        top: 0vh;
-        right: 0vw;
-        width: 100vw;
-        z-index: 20;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        animation: slide .5s ease-in forwards;
-        padding-bottom: 20px;
-        min-height: 108vh;
-    }
 
     .slidebar1 h1 {
 
@@ -298,6 +289,48 @@
     }
 }
 
+@keyframes slide1 {
+    0% {
+        right: 0vw;
+        background: url(../../assests/bgmobile.webp);
+    }
+
+    100% {
+        right: -100vw;
+        background: url(../../assests/bgmobile.webp);
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.slidebar1 {
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    width: 100vw;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slide .6s forwards;
+    padding-bottom: 20px;
+    min-height: 108vh;
+}
+
+.slidebar2 {
+    position: absolute;
+    top: 0vh;
+    right: -100vw;
+    width: 100vw;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slide1 .6s;
+    padding-bottom: 20px;
+    min-height: 108vh;
+}
+
 .slidebar1 h5 {
     color: #FFF;
     text-align: justify;
@@ -334,10 +367,12 @@
     /* 24px */
     letter-spacing: 0.4px;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.logo3{
-    height: 50px;
-    width: 50px;
+
+.logo3 {
+    width: 40px;
+    height: 30px;
 }

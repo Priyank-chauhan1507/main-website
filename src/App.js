@@ -31,8 +31,15 @@ import PdfDownload from "./PdfRenderer/PdfDownload"
 import Pdf from "./PdfRenderer/Renderer"
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
+import Footer1 from "./components/MUN/Footer/Footer";
+// import Footer1 from "./components/MUN/Judges/Judges";
 import ReactGA from "react-ga4";
+import Judges from "./components/MUN/Judges/Judges";
+import Page1 from "./components/Merch_page/Page1/Page1";
+import Page2 from "./components/Merch_page/Page2/Page2";
 // require('dotenv').config()
+import Page3 from "./components/Merch_page/Page3/Page3";
+
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 ReactGA.initialize("G-FG974BLVDN");
@@ -85,6 +92,11 @@ function App(props) {
           <Route exact={true} path="/eventsmain" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
           <Route exact={true} path="/MUN" element={<Home1/>} />
+          <Route exact={true} path="/munfooter" element={<Footer1/>} />
+          <Route exact={true} path="/judges" element={<Judges/>} />
+          <Route exact={true} path="/merch_page1" element={<Page1/>} />
+          <Route exact={true} path="/merch_page2" element={<Page2/>} />
+          <Route exact={true} path="/merch_page3" element={<Page3/>} />
         </Routes>
       </Router>
     </>

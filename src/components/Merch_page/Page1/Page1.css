@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.merchPage1{
+    width: 100vw !important;
+    overflow-x: hidden !important;
+}
+.merch_Page1{
+background: white;
+/* margin-top: ; */
+padding-bottom: 40px;
+width: 100vw !important;
+overflow-x: hidden !important;
+}
+.home_merchpage{
+    display: flex;
+    background-color: #535353;
+    padding: 0;
+    margin: 0;
+}
+.ell-img{
+    width:29vw;
+}
+.ellipse{
+padding-left: 20vw;
+}
+.text1 p{
+    font-size: 1.5vw;
+}
+.home_text{
+
+    width: 40vw;
+    padding: 1.8vw;
+    color: white;
+    padding-left: 10vw;
+}
+.home_heading{
+    font-size: 1.7vw;
+}
+.home_para{
+    color: #FFFFFF;
+    margin-top: 5vw;
+    font-size: 1vw;
+}
+.products_hr{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.products_hr hr{
+    width: 100%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.text1{
+    padding-left: 9vw;
+    margin: 1vw;
+
+}
+.price{
+    display: inline-flex;
+    padding-left: 1vw;
+}
+.price2{
+    margin-left: 1vw;
+    color: #686868;
+}
+.text{
+    font-weight: bold;
+}
+.product_name{
+    padding: 1vw;
+}
+.product{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.product hr{
+display: none;
+}
+.product-merch{
+    width: 24vw;
+}
+.product text{
+    width: 2vw;
+}
+@media screen and (max-width:1200px) {
+    .ell-img{
+        width:35vw;
+
+    }
+    .home_para{
+        font-size: 1.2vw;
+        width: 30vw;
+    }
+}
+@media screen and (max-width:768px){
+.home_merchpage{
+    display: block;
+}
+.product{
+    display: block;
+}
+.product-merch{
+    width: 60vw;
+}
+.home_text{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.home_heading{
+    font-size: 2vw;
+    text-align: center;
+    padding-bottom: 3vw;
+
+}
+.home_para{
+    width: 70%;
+    font-size: 2.2vw;
+    line-height: 2.8vw;
+    text-align: center;
+    margin: 0 auto;
+}
+/* .home_para p{
+    width: 20vw;
+} */
+.ellipse{
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+}
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.product1,.product2,.product3,.product4,.product5,.product6,.product7,.product8{
+    padding: 5vw;
+}
+.product hr{
+    display: block;
+    color: black;
+    width: 100%;
+}
+.home_heading h1{
+    line-height: 6vw;
+}
+.text1 p{
+    font-size: 3vw;
+}
+}

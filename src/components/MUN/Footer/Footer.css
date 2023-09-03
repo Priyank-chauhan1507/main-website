@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Numans&display=swap');
+
+.container{
+    background-color: rgba(0, 8, 21, 0.50);
+    color: aliceblue;
+    width: 75vw;
+    /* height: 20vh; */
+    /* border: 2px solid white; */
+    /* position: absolute */
+    padding: 3vh 3vw;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: 1px 7px 30px 59px rgba(0, 0, 0, 0.07);
+}
+.cont{
+    color: var(--Surface-main, #FFF);
+    font-family: Roboto;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+.containerbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container1{
+    color: #FFF;
+    /* text-align: right; */
+    font-family: Roboto;
+    /* font-size: 28px; */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 162.2%; /* 45.416px */
+    display: flex;
+    flex-direction: column;
+    padding-top: 6vh;
+    gap: 1vh;
+}
+.img1{
+
+    color: white;
+    width: 1vw;
+
+}
+.content2{
+    color: rgba(255, 255, 255, 0.63);
+    font-family: Numans;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%; /* 25.952px */
+    padding-right: 5vw;
+    padding-top: 0.2vh;
+    display: flex;
+    align-items: center;
+    /* display: flex;
+    flex-direction: row; */
+
+}
+.content1{
+    font-size: 2vw;
+}
+@media only screen and (max-width: 768px){
+    .containerbox{
+        flex-direction: column;
+        /* align-items: center; */
+        padding-left:4vw ;
+    }
+    .container{
+        width: 80vw;
+    }
+    .cont{
+        font-size: 8vw;
+    }
+    .content1{
+        font-size: 5vw;
+    }
+    .content2{
+        font-size: 3vw;
+    }
+    .img1{
+        width: 4vw;
+    }
+}

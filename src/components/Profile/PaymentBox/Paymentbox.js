@@ -656,6 +656,35 @@ const PaymentBox = (
               </div>
             </div>
           </div>
+          <div className={!logout ? "none" : ""} id="logout">
+        <div className="l_body">
+          <div className="logout_body">
+            <div className="redpic">
+              <img src={cs1} alt="redpic" />
+            </div>
+            <div className="textt">
+              <div className="fText">Are You Sure?</div>
+              <div className="sText">
+                Do you really want to leave and logout?
+              </div>
+            </div>
+            <div className="btns">
+              <button className="btn1">
+                <span
+                  onClick={() => {
+                    setLogout(!logout);
+                  }}
+                >
+                  Cancel
+                </span>
+              </button>
+              <button className="btn2" onClick={handleLogout}>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
           <div className="nnp-mobile">
             <div
               className="mobpaymentcenterimg"

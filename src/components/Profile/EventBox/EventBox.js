@@ -916,6 +916,35 @@ const EventBox = () => {
               )}
             </div>
           </div>
+          <div className={!logout ? "none" : ""} id="logout">
+        <div className="l_body">
+          <div className="logout_body">
+            <div className="redpic">
+              <img src={cs1} alt="redpic" />
+            </div>
+            <div className="textt">
+              <div className="fText">Are You Sure?</div>
+              <div className="sText">
+                Do you really want to leave and logout?
+              </div>
+            </div>
+            <div className="btns">
+              <button className="btn1">
+                <span
+                  onClick={() => {
+                    setLogout(!logout);
+                  }}
+                >
+                  Cancel
+                </span>
+              </button>
+              <button className="btn2" onClick={handleLogout}>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
           <div className="nnp-mobile">
             <div className="mobpaymentcenterimg">
               <div className="mpb-mobileview">
@@ -991,7 +1020,7 @@ const EventBox = () => {
                     >
                       Participate
                     </span>
-                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/eventslist')}>Add an Event</button>
+                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/eventsmain')}>Add an Event</button>
                     {/* <span
                       onClick={() => {
                         setFilter("solo");
