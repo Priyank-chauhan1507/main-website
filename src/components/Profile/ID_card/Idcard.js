@@ -8,6 +8,7 @@ import id_card_bg from "../../../assests/idback.webp";
 import id_card_bg_white from "../../../assests/id_card_white_bg.webp";
 import profileimg from "../../../assests/profile1.webp";
 import qrcode from "../../../assests/qr.webp";
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import axios from "axios";
 import "./Idcard.css";
 import { connect } from "react-redux";
