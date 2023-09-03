@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1241529d.css",
-    "main.js": "/static/js/main.ca21efee.js",
+    "main.css": "/static/css/main.16948d6d.css",
+    "main.js": "/static/js/main.08e1cd9d.js",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
     "static/media/Landing-page-2-1.webp": "/static/media/Landing-page-2-1.a3d9992c858b965fed61.webp",
@@ -29,6 +29,7 @@
     "static/media/idback.webp": "/static/media/idback.61a74a9da611a4a2c530.webp",
     "static/media/qr.png": "/static/media/qr.22aba290a6fe3844c00f.png",
     "static/media/reg-logo.svg": "/static/media/reg-logo.7ff1b44e2c10de2dbb38076a1e4fbf12.svg",
+    "static/media/PrizesWorth.png": "/static/media/PrizesWorth.f94c424d9fc4a5bdc0d8.png",
     "static/media/propic.svg": "/static/media/propic.39d1147898dd7f65cb0cd55d48ebe1ce.svg",
     "static/media/MUN-Top.webp": "/static/media/MUN-Top.09e1c67df91811380808.webp",
     "static/media/default_event.png": "/static/media/default_event.5e41c2c91152988c4289.png",
@@ -64,11 +65,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.1241529d.css.map": "/static/css/main.1241529d.css.map",
-    "main.ca21efee.js.map": "/static/js/main.ca21efee.js.map"
+    "main.16948d6d.css.map": "/static/css/main.16948d6d.css.map",
+    "main.08e1cd9d.js.map": "/static/js/main.08e1cd9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1241529d.css",
-    "static/js/main.ca21efee.js"
+    "static/css/main.16948d6d.css",
+    "static/js/main.08e1cd9d.js"
   ]
 }
