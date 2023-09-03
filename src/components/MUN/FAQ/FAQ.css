@@ -1,0 +1,86 @@
+body{
+    /* background-color: white; */
+}
+
+.MUN_FAQ_main_div{
+    background-color:transparent !important;
+    color:white;
+}
+
+.mun_faq_heading{
+    display: flex;
+    justify-content: center;
+    color:#FDD52E;
+    font-family: Bangers;
+    font-size: 5rem;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    gap:10px;
+    margin-left:10vw;
+  }
+
+  .accordion_1{
+    position: absolute;
+    right: 12vw;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    padding-top:10px;
+    display: none;
+    overflow: hidden;
+  }
+
+  .panel p{
+    width:65vw;
+  }
+
+  .plus_btn_mun{
+
+  }
+
+  .minus_btn_mun{
+    display:none;
+  }
+
+  .left_num_faq{
+    font-family: Comic neue;
+    font-size:2rem;
+  }
+
+
+  .right_mun_faq_head{
+    margin-top:1vh;
+  }
+
+  .right_mun_faq_head1{
+    display: flex;
+  }
+
+  .mun_faq_cutline{
+    border:1px solid #373D41;
+    width:82vw;
+    margin:auto;
+  }
+
+  @media only screen and (max-width:768px){
+    .accordion_1{
+        right: 2vw;
+    }
+    .panel p{
+        width:55vw;
+      }
+    .right_mun_faq_head{
+        width:50vw;
+    }
+  }
