@@ -92,7 +92,7 @@ const EventCard = ({ data }) => {
                     )}
                   </div>
                   <hr />
-                  <p>{datas?.note}</p>
+                  <p>{datas?.description.slice(0,100)}....</p>
                 </div>
                 {/* </div> */}
               </div>
