@@ -2,6 +2,7 @@ import React from 'react'
 import "./Home.css"
 import MUNTop from "../../../assests/MUN-Top.webp";
 import BG from "../../../assests/BGMUN.webp";
+import BG_mob from "../../../assests/mun_mob.webp";
 import Navbar from "../../../components/EventsNavbar/Eventsnavbar";
 import Judges from '../Judges/Judges'
 import FAQ from '../FAQ/FAQ'
@@ -12,9 +13,10 @@ function Home() {
   return (
     <div className="MUN-bg">
       <img src={BG} className="MUN-Bg" alt="" />
+      <img src={BG_mob} className="MUN-Bg mun_mob_bg" alt="" />
       <Navbar color="transparent"/>
         <div className="top-MUN-img">
-          <img src={MUNTop} alt="" />
+          <img src={MUNTop} alt="" className='iitr_mun'/>
         </div>
         <div className="registerNowBtn">
           <button className="registerNowBtnClick">
