@@ -44,7 +44,7 @@
     leading-trim: both;
     text-edge: cap;
     font-family: Comic Neue;
-    font-size: .8vw;
+    font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: 13.275px;
@@ -61,7 +61,7 @@
 .eventcard p {
     color: #FFF;
     font-family: Comic Sans MS;
-    font-size: .5vw;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
