@@ -32,3 +32,41 @@
     background-color: #fff;
     margin-top: 20vh;
 }
+.prizesWorth
+{
+    border-radius: 14px;
+    background: rgba(8, 48, 114, 0.40);
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%; /* 32.44px */
+    letter-spacing: 1px;
+    width: 50vw;
+    margin: auto;
+    margin-top: 33vh;
+    padding: 1.5vh 2vw;
+    padding-bottom: 2.5vh;
+}
+.prizesWorth1
+{
+    width: 25vw;
+    display: block;
+    margin-bottom: 5vh;
+}
+.prizesWorthDiv
+{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width:768px){
+    .prizesWorth{
+        width: 75vw;
+    }
+    .prizesWorth1{
+        width: 60vw;
+    }
+}
