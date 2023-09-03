@@ -4,7 +4,9 @@ body{
 
 .MUN_FAQ_main_div{
     background-color:transparent !important;
+    width: 75vw;
     color:white;
+    margin: 0 auto;
 }
 
 .mun_faq_heading{
@@ -18,7 +20,7 @@ body{
 .accordion {
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 75vw;
     border: none;
     text-align: left;
     outline: none;
@@ -26,7 +28,7 @@ body{
     transition: 0.4s;
     display: flex;
     gap:10px;
-    margin-left:10vw;
+    /* margin-left:10vw; */
   }
 
   .accordion_1{
@@ -69,7 +71,7 @@ body{
 
   .mun_faq_cutline{
     border:1px solid #373D41;
-    width:82vw;
+    width:75vw;
     margin:auto;
   }
 
