@@ -6,6 +6,10 @@
     z-index: -1;
     width: 100vw;
 }
+.topImgMUN
+{
+    width: 56vw;
+}
 .top-MUN-img
 {
     display: flex;
@@ -46,7 +50,7 @@
     letter-spacing: 1px;
     width: 50vw;
     margin: auto;
-    margin-top: 33vh;
+    margin-top: 30vh;
     padding: 1.5vh 2vw;
     padding-bottom: 2.5vh;
 }
@@ -61,12 +65,74 @@
     display: flex;
     justify-content: center;
 }
-
+.MUNjuDges
+{
+    margin-top: 35vh;
+}
+.MUNCommitee
+{
+    margin-top: 28vh;
+}
+.MUNFooter
+{
+    margin-top: 10vh;
+}
 @media only screen and (max-width:768px){
     .prizesWorth{
         width: 75vw;
     }
     .prizesWorth1{
         width: 60vw;
+    }
+}
+@media only screen and (max-width:1000px)
+{
+    .topImgMUN
+{
+    width: 40vw;
+}
+}
+@media only screen and (max-width:1450px)
+{
+    .prizesWorth
+    {
+        margin-top: 25vh;
+    }
+}
+@media only screen and (max-width:1400px)
+{
+    .prizesWorth
+    {
+        margin-top: 20vh;
+    }
+}
+@media only screen and (max-width:1300px)
+{
+    .prizesWorth
+    {
+        margin-top: 15vh;
+    }
+}
+@media only screen and (max-width:1200px)
+{
+    .prizesWorth
+    {
+        margin-top: 10vh;
+    }
+}
+@media only screen and (max-width:1100px)
+{
+    
+    .registerNowBtnClick
+    {
+        margin-top: 13vh;
+    }
+}
+@media only screen and (max-width:850px)
+{
+    
+    .prizesWorth
+    {
+        margin-top: 4vh;
     }
 }
