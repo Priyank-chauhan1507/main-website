@@ -22,7 +22,7 @@ function Home() {
         </div>
         <div className="registerNowBtn">
           <button className="registerNowBtnClick">
-            Registser Now
+            Register Now
           </button>
         </div>
         <div className="prizesWorth">
