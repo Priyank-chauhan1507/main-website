@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FAQ.css";
 import img1 from "../../../assests/Cross.webp";
+import FAQ1 from "../../../assests/FAQS.png";
 import {
   AiOutlineMinus,
   AiFillPlusCircle,
@@ -16,6 +17,9 @@ function FAQ() {
   });
   return (
     <div className="MUN_FAQ_main_div">
+      <div className="FAQdiv">
+        <img src={FAQ1} className="FAQimg" alt="" />
+      </div>
       <div className="accordion">
         <div className="left_num_faq">01</div>
         <div className="right_mun_faq_head">

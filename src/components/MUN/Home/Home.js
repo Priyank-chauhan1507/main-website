@@ -7,6 +7,7 @@ import Navbar from "../../../components/EventsNavbar/Eventsnavbar";
 import Judges from '../Judges/Judges'
 import FAQ from '../FAQ/FAQ'
 import Footer from '../Footer/Footer'
+import Commitee from '../Commitee/Commitee'
 import Prizes from "../../../assests/PrizesWorth.png";
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
       <img src={BG_mob} className="MUN-Bg mun_mob_bg" alt="" />
       <Navbar color="transparent"/>
         <div className="top-MUN-img">
+          <img src={MUNTop} alt="" className="topImgMUN"/>
           <img src={MUNTop} alt="" className='iitr_mun'/>
         </div>
         <div className="registerNowBtn">
@@ -29,9 +31,16 @@ function Home() {
           </div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit
         </div>
+        <div className="MUNCommitee">
+        <Commitee/>
+        </div>
+        <div className="MUNjuDges">
         <Judges />
+        </div>
         <FAQ />
+        <div className="MUNFooter">
         <Footer />
+        </div>
     </div>
   )
 }

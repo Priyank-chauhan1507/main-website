@@ -33,6 +33,7 @@ import Pdf from "./PdfRenderer/Renderer"
 import Home1 from "./components/MUN/Home/Home";
 import FAQ from "./components/MUN/FAQ/FAQ";
 import Footer1 from "./components/MUN/Footer/Footer";
+import Commitee from "./components/MUN/Commitee/Commitee";
 // import Footer1 from "./components/MUN/Judges/Judges";
 import ReactGA from "react-ga4";
 import Judges from "./components/MUN/Judges/Judges";
@@ -95,6 +96,7 @@ function App(props) {
           <Route exact={true} path="/MUN" element={<Home1/>} />
           <Route exact={true} path="/MUN_FAQ" element={<FAQ/>} />
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
+          <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
           <Route exact={true} path="/merch_page1" element={<Page1/>} />
           <Route exact={true} path="/merch_page2" element={<Page2/>} />
