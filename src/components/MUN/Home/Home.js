@@ -17,8 +17,8 @@ function Home() {
       <img src={BG_mob} className="MUN-Bg mun_mob_bg" alt="" />
       <Navbar color="transparent"/>
         <div className="top-MUN-img">
-          <img src={MUNTop} alt="" className="topImgMUN"/>
-          <img src={MUNTop} alt="" className='iitr_mun'/>
+          <img src={MUNTop} alt="" className="topImgMUN iitr_mun"/>
+          {/* <img src={MUNTop} alt="" className='iitr_mun'/> */}
         </div>
         <div className="registerNowBtn">
           <button className="registerNowBtnClick">

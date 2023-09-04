@@ -1,23 +1,19 @@
-.MUN-bg {
-    /* background-color: black; */
-}
-
 .MUN-Bg {
     position: absolute;
     z-index: -1;
     width: 100vw;
+    height: 525vh;
 }
 .topImgMUN
 {
     width: 56vw;
 }
-.top-MUN-img
-{
+
 
 .top-MUN-img {
     display: flex;
     justify-content: center;
-    margin-top: 19vh;
+    margin-top: 14vh;
 }
 
 .registerNowBtn {
@@ -83,10 +79,10 @@
     margin-top: 10vh;
 }
 @media only screen and (max-width:768px){
-    .prizesWorth{
 
 .mun_mob_bg {
     display: none;
+}
 }
 
 @media only screen and (max-width:768px) {
