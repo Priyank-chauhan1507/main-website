@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.17787e17.css",
-    "main.js": "/static/js/main.b08f7dce.js",
+    "main.css": "/static/css/main.48100592.css",
+    "main.js": "/static/js/main.146bd9e9.js",
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
@@ -17,9 +17,12 @@
     "static/media/bg.jpg": "/static/media/bg.b9c023b1978d5f11ddc0.jpg",
     "static/media/street_soccer_1.png": "/static/media/street_soccer_1.7124988626bb82958e98.png",
     "static/media/Landing-page-1.webp": "/static/media/Landing-page-1.0fbb94ef89a40b96def0.webp",
+    "static/media/MUNImg3.png": "/static/media/MUNImg3.c0a7bcda5245a2167511.png",
+    "static/media/MUNImg2.png": "/static/media/MUNImg2.932e80656b50c34fe191.png",
     "static/media/back.webp": "/static/media/back.5993852469394dc9eb3a.webp",
     "static/media/design.graffiti.comicsansmsgras.ttf": "/static/media/design.graffiti.comicsansmsgras.92557e6ed016730cc765.ttf",
     "static/media/ID_Logo.png": "/static/media/ID_Logo.4c7afb1a960497df4304.png",
+    "static/media/MUNImg1.png": "/static/media/MUNImg1.febdbabe79a9e0aef483.png",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/BGMUN.webp": "/static/media/BGMUN.96c91b99d86e9eefe101.webp",
     "static/media/loader.gif": "/static/media/loader.90672f1deffccbcdf4f1.gif",
@@ -36,7 +39,9 @@
     "static/media/default_event.png": "/static/media/default_event.5e41c2c91152988c4289.png",
     "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
     "static/media/profile1.png.jpg": "/static/media/profile1.png.da7e7064ed2b96e76c47.jpg",
+    "static/media/COMMITTEE.png": "/static/media/COMMITTEE.489a2b2fa40ad348c8b0.png",
     "static/media/hero1.webp": "/static/media/hero1.d30444af71136ae65b4e.webp",
+    "static/media/FAQS.png": "/static/media/FAQS.04690bc99b0c7c08f713.png",
     "static/media/pay.svg": "/static/media/pay.1cc47b09e520356f23c74b99e352a2d4.svg",
     "static/media/Cross.webp": "/static/media/Cross.5ee0ebb078621a76a565.webp",
     "static/media/eventpic.webp": "/static/media/eventpic.15b58a132d7073862500.webp",
@@ -66,11 +71,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.17787e17.css.map": "/static/css/main.17787e17.css.map",
-    "main.b08f7dce.js.map": "/static/js/main.b08f7dce.js.map"
+    "main.48100592.css.map": "/static/css/main.48100592.css.map",
+    "main.146bd9e9.js.map": "/static/js/main.146bd9e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.17787e17.css",
-    "static/js/main.b08f7dce.js"
+    "static/css/main.48100592.css",
+    "static/js/main.146bd9e9.js"
   ]
 }
