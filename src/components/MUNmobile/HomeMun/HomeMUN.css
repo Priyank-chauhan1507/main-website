@@ -1,0 +1,112 @@
+.HomeMUN-bg
+{
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+}
+.top-HomeMUN
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+.top-HomeMUN-img
+{
+    width: 50vw;
+}
+.registerMUNNowBtn
+{
+    display: flex;
+    justify-content: center;
+}
+.registerMUNNowBtnClick
+{
+    /* width: 20vw; */
+    border-radius: 16px;
+    color: #000;
+    font-family: Bangers;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 32px */
+    letter-spacing: 1.6px;
+    padding: 1vh 2.5vw;
+    background-color: #fff;
+    margin-top: 22vw;
+}
+.prizesMUNWorth {
+    border-radius: 14px;
+    background: rgba(8, 48, 114, 0.40);
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%;
+    /* 32.44px */
+    letter-spacing: 1px;
+    width: 50vw;
+    margin: auto;
+    margin-top: 30vh;
+    padding: 1.5vh 2vw;
+    padding-bottom: 2.5vh;
+}
+
+.prizesMUNWorth1 {
+    width: 25vw;
+    display: block;
+    margin-bottom: 5vh;
+}
+
+.prizesMUNWorthDiv {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@media only screen and (max-width:550px)
+{
+    .prizesMUNWorth
+    {
+        margin-top: 20vh;
+    }
+}
+@media only screen and (max-width:550px)
+{
+    .prizesMUNWorth
+    {
+        margin-top: 10vh;
+    }           
+}
+@media only screen and (max-width:400px)
+{
+    .top-HomeMUN
+{
+    margin-top: 5vh;
+}
+}
+@media only screen and (max-width:768px)
+{
+    .FAQimg
+    {
+        width: 15vw;
+    }
+}
+@media only screen and (max-width:600px)
+{
+    .FAQimg
+    {
+        width: 20vw;
+    }
+}
+@media only screen and (max-width:450px)
+{
+    .FAQimg
+    {
+        width: 25vw;
+    }
+}
