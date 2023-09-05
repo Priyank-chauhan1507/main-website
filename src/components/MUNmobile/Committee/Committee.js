@@ -1,5 +1,8 @@
 import React, {useState ,useEffect} from 'react'
 import Carousel from 'react-spring-3d-carousel';
+// import mun1 from "../../../assests/MUNImg1.png";
+import mun2 from "../../../assests/parmob.png";
+import mun3 from "../../../assests/flagmob.png";
 // import { v4 as uuidv4 } from "uuid";
 // import { config } from "react-spring";
 import Committee from "../../../assests/CommitteeMUN.png";
@@ -30,7 +33,7 @@ const App = () => {
         </div>
         <button className="carouselcontentbtn">
             <p className="carouselcontentpara">More Info</p> 
-            <img src={Arrow} className="" alt="" />
+            <img src={Arrow} className="infoarrow" alt="" />
         </button>
 
         </div>
@@ -41,17 +44,17 @@ const App = () => {
       key: 2,
       content: 
       <div className="carouselcontent">
-        <img src={UNGA} className='carouselcontentimg' alt="" />
+        <img src={mun2} className='carouselcontentimg' alt="" />
         <div className="MUNcarousel">
 
         <div className="carouselcontenttext">
-            UNITED NATIONS <br />
-            GENERAL ASSEMBLY <br />
-            (UNGA)
+             ALL INDIA POLITICAL<br />
+            PARTY MEET <br />
+            (AIPPM)
         </div>
         <button className="carouselcontentbtn">
             <p className="carouselcontentpara">More Info</p> 
-            <img src={Arrow} className="" alt="" />
+            <img src={Arrow} className="infoarrow" alt="" />
         </button>
 
         </div>
@@ -62,17 +65,16 @@ const App = () => {
       key: 3,
       content: 
       <div className="carouselcontent">
-        <img src={UNGA} className='carouselcontentimg' alt="" />
+        <img src={mun3} className='carouselcontentimg' alt="" />
         <div className="MUNcarousel">
 
         <div className="carouselcontenttext">
-            UNITED NATIONS <br />
-            GENERAL ASSEMBLY <br />
-            (UNGA)
+            INDIAN WAR CABINET <br />
+            (HISTORIC COMMITTEE) 
         </div>
         <button className="carouselcontentbtn">
             <p className="carouselcontentpara">More Info</p> 
-            <img src={Arrow} className="" alt="" />
+            <img src={Arrow} className="infoarrow" alt="" />
         </button>
 
         </div>
