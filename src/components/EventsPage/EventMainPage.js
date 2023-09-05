@@ -100,17 +100,6 @@ const EventMainPage = ({ events }) => {
 
               setregister(true);
               getEvents();
-              // if (button == "Register") {
-              //   setButton("Registered");
-              // }
-              // if (this.props.data.is_submission) {
-              //   this.setState({ button: "Submit" });
-              // } else {
-              //   this.setState({ button: "Not Now" });
-              // }
-              // fetchEvent();
-              // this.fetchData();
-              // history.push("/pevents");
             }
             setLoading(false);
           })
@@ -170,61 +159,15 @@ const EventMainPage = ({ events }) => {
   const handleClick = (e) => {
     if (
       eventdata[0]?.solo_team === "duet" ||
-      eventdata[0]?.solo_team === "team"
+      eventdata[0]?.solo_team === "team" || 
+      eventdata[0]?.solo_team === "Duet" ||
+      eventdata[0]?.solo_team === "Team"
     ) {
       setregister(false);
     } else {
       onSubmit(e);
     }
   };
-  // const getData = (category) => {
-  //   if (category == "") {
-  //     category = 0;
-  //   }
-  //   if (events[category]) {
-  //     setData(events[category]);
-  //   } else {
-  //     axios
-  //       .get(
-  //         `/apiV1/event?id=&category=${
-  //           category === 0 ? "" : category
-  //         }&status=true&is_zonal=`
-  //       )
-  //       .then((response) => {
-  //         setData(response.data);
-  //         dispatch({
-  //           type: "SET_EVENTS",
-  //           payload: {
-  //             ...events,
-  //             [category]: response.data,
-  //           },
-  //         });
-  //       });
-  //   }
-  // };
-
-  // const getCategory = () => {
-  //   axios.get(`/apiV1/category?status=true`).then((response) => {
-  //     setCategory(response.data);
-  //     // console.log("data",response.data);
-  //   });
-  // };
-  // useEffect(() => {
-  //   getData(categoryId);
-  //   getCategory();
-  //   setregister(true);
-  // }, []);
-
-  // const changeCategory = (category) => {
-  //   setCategoryId(category);
-  //   getData(category);
-  // };
-
-  // const checkSearch = (pName) => {
-  //   const regExp = new RegExp(escapeRegex(search), "i");
-  //   return regExp.test(pName);
-  // };
-  // console.log(eventdata);
 
   return (
     <>
@@ -265,7 +208,7 @@ const EventMainPage = ({ events }) => {
                     <h1>{eventdata[0]?.price}</h1>
                   </div>
                 )}
-                {eventdata[0]?.solo_team === "solo" &&
+                {(eventdata[0]?.solo_team === "solo" || eventdata[0]?.solo_team === "Solo") &&
                   eventdata[0]?.sub_event &&
                   (eventdata[0]?.sub_event).split(",").map((el, index) => {
                     return (
@@ -292,7 +235,7 @@ const EventMainPage = ({ events }) => {
                   })}
 
                 <div className="events-left-event5">
-                  {eventdata[0]?.solo_team === "solo" &&
+                  {(eventdata[0]?.solo_team === "solo" || eventdata[0]?.solo_team === "Solo") &&
                   eventdata[0]?.sub_event &&
                   active === false ? (
                     <button
