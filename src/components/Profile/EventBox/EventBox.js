@@ -270,7 +270,8 @@ const EventBox = () => {
                     >
                       Team
                     </span> */}
-                    <button
+                    {/* <div className="addEventButton-Profile">  */}
+                    <button 
                       onClick={() => {
                         setdisplay2(!display2);
                         setdisable("disable");
@@ -278,6 +279,7 @@ const EventBox = () => {
                     >
                       + Add Event
                     </button>
+                    {/* </div> */}
                   </div>
                   {display2 ? (
                     <>
