@@ -1,0 +1,103 @@
+.ContactUsMUN
+{
+    border-radius: 25px;
+    background: rgba(0, 8, 21, 0.50);
+    box-shadow: 1px 7px 30px 59px rgba(0, 0, 0, 0.07);
+    padding-bottom: 16vh;
+}
+.MUN-bottom
+{
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.heading-contact
+{
+    display: flex;
+    justify-content: center;
+    color: var(--Surface-main, #FFF);
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 32.5px */
+    letter-spacing: 1.25px;
+    margin-bottom: 7vh;
+    padding-top: 4vh;
+}
+.detailsContact
+{
+    margin-left: 7vw;
+}
+.NameContact
+{
+    color: #FFF;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 18.218px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 162.2%; /* 29.55px */
+}
+.phoneContact
+{
+    color: rgba(255, 255, 255, 0.63);
+    font-family: Numans;
+    font-size: 10.41px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%; /* 16.886px */
+    display: flex;
+    align-items: center;
+}
+.contact1MUN
+{
+    margin-bottom: 5vh;
+}
+.phoneContact
+{
+    margin-top: 1vh;
+}
+.LogoMUN
+{
+    margin-top: 10vh;
+}
+.directionsHeading
+{
+    color: #FFF;
+    font-family: Comic Neue;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 75% */
+    letter-spacing: -0.64px;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+}
+.directionElements
+{
+    color: #FFF;
+    font-family: Comic Neue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.directionElement
+{
+    padding-top: 1.8vh;
+}
+@media only screen and (max-width:350px)
+{
+    .directionsHeading
+    {
+        font-size: 30px;
+    }   
+}
+.socialmediaMUN
+{
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin-top: 10vh;
+}
