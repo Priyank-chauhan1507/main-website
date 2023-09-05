@@ -3,8 +3,10 @@ import BG from "../../../assests/MUNmobileBG.webp";
 import MUNTop from "../../../assests/IITRMUN.png";
 import Navbar from "../../../components/EventsNavbar/MobEventnavbar";
 import Contact from "../../../components/MUNmobile/ContactUs/ContactUs";
-import Committee from "../../../components/MUNmobile/Committee/Committee";
+import Comittee from "../../../components/MUNmobile/Committee/Committee";
+import Executive from "../../../assests/Executive.png";
 import Prizes from "../../../assests/PrizesWorth.png";
+import Committee from "../../../assests/COMMITTEE.png";
 import "./HomeMUN.css"
 import FAQ from '../../MUN/FAQ/FAQ';
 
@@ -27,11 +29,22 @@ function HomeMUN() {
           </div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit
         </div>
+        <div className="CommitteeHead">
+          <img src={Committee} alt="" />
+        </div>
+        <div className="CommitteeHead">
+          <img src={Executive} alt="" />
+        </div>
+        <div className="committeeMobile">
+        <Comittee/>
+        </div>
+        
+        
+        
         <FAQ/>
         <Contact/>
 
 
-<Committee/>
 
     </div>
   )
