@@ -13,8 +13,8 @@ import Prizes from "../../../assests/PrizesWorth.png";
 function Home() {
   return (
     <div className="MUN-bg">
-      <img src={BG} className="MUN-Bg" alt="" />
-      <img src={BG_mob} className="MUN-Bg mun_mob_bg" alt="" />
+      {/* <img src={BG} className="MUN-Bg" alt="" /> */}
+      {/* <img src={BG_mob} className="MUN-Bg mun_mob_bg" alt="" /> */}
       <Navbar color="transparent"/>
         <div className="top-MUN-img">
           <img src={MUNTop} alt="" className="topImgMUN iitr_mun"/>
