@@ -3,8 +3,9 @@ import BG from "../../../assests/MUNmobileBG.webp";
 import MUNTop from "../../../assests/IITRMUN.png";
 import Navbar from "../../../components/EventsNavbar/MobEventnavbar";
 import Contact from "../../../components/MUNmobile/ContactUs/ContactUs";
-import Comittee from "../../../components/MUNmobile/Committee/Committee";
+import Executives from "../Executive/Executive";
 import Executive from "../../../assests/Executive.png";
+import Comittee from "../Committee/Committee";
 import Prizes from "../../../assests/PrizesWorth.png";
 import Committee from "../../../assests/COMMITTEE.png";
 import "./HomeMUN.css"
@@ -32,11 +33,12 @@ function HomeMUN() {
         <div className="CommitteeHead">
           <img src={Committee} alt="" />
         </div>
+        <Comittee/>
         <div className="CommitteeHead">
           <img src={Executive} alt="" />
         </div>
-        <div className="committeeMobile">
-        <Comittee/>
+        <div className="ExecutiveMobile">
+        <Executives/>
         </div>
         
         

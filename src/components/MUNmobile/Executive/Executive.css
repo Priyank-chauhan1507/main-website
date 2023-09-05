@@ -1,0 +1,33 @@
+.CarouselCommittee
+{
+    height: 110vh;
+    width: 100vw;
+}
+@media only screen and (max-width:650px)
+{
+    .CarouselCommittee
+{
+    height: 100vh;
+}
+}
+@media only screen and (max-width:500px)
+{
+    .CarouselCommittee
+{
+    height: 80vh;
+}
+}
+@media only screen and (max-width:450px)
+{
+    .CarouselCommittee
+{
+    height: 65vh;
+}
+}
+@media only screen and (max-width:350px)
+{
+    .CarouselCommittee
+{
+    height: 51vh;
+}
+}
