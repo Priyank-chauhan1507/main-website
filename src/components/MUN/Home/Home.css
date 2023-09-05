@@ -1,8 +1,10 @@
-.MUN-Bg {
-    position: absolute;
+.MUN-bg {
+    background: url("../../../assests/BGMUN.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
     z-index: -1;
-    width: 100vw;
-    height: 525vh;
+    /* width: auto; */
 }
 .topImgMUN
 {
@@ -78,6 +80,11 @@
 {
     margin-top: 10vh;
 }
+
+.mun_mob_bg{
+    display: none;
+}
+
 @media only screen and (max-width:768px){
 
 .mun_mob_bg {
