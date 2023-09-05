@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.48100592.css",
-    "main.js": "/static/js/main.f4914fc9.js",
+    "main.css": "/static/css/main.b492c061.css",
+    "main.js": "/static/js/main.c0359e68.js",
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
@@ -15,7 +15,9 @@
     "static/media/bgmobile.webp": "/static/media/bgmobile.9cec63dbb9098095c10c.webp",
     "static/media/newsingermob.webp": "/static/media/newsingermob.22082dc446787622f983.webp",
     "static/media/bg.jpg": "/static/media/bg.b9c023b1978d5f11ddc0.jpg",
+    "static/media/IITRMUN.png": "/static/media/IITRMUN.6e40f1aae4933d84d827.png",
     "static/media/street_soccer_1.png": "/static/media/street_soccer_1.7124988626bb82958e98.png",
+    "static/media/MUNmobileBG.webp": "/static/media/MUNmobileBG.5c74349865e47807dafb.webp",
     "static/media/Landing-page-1.webp": "/static/media/Landing-page-1.0fbb94ef89a40b96def0.webp",
     "static/media/MUNImg3.png": "/static/media/MUNImg3.c0a7bcda5245a2167511.png",
     "static/media/MUNImg2.png": "/static/media/MUNImg2.932e80656b50c34fe191.png",
@@ -23,6 +25,7 @@
     "static/media/design.graffiti.comicsansmsgras.ttf": "/static/media/design.graffiti.comicsansmsgras.92557e6ed016730cc765.ttf",
     "static/media/ID_Logo.png": "/static/media/ID_Logo.4c7afb1a960497df4304.png",
     "static/media/MUNImg1.png": "/static/media/MUNImg1.febdbabe79a9e0aef483.png",
+    "static/media/LOGOMUN.svg": "/static/media/LOGOMUN.b1bd40a0e1008f30352aae3a81f99c65.svg",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/BGMUN.webp": "/static/media/BGMUN.96c91b99d86e9eefe101.webp",
     "static/media/loader.gif": "/static/media/loader.90672f1deffccbcdf4f1.gif",
@@ -47,8 +50,10 @@
     "static/media/eventpic.webp": "/static/media/eventpic.15b58a132d7073862500.webp",
     "static/media/paymentpic.webp": "/static/media/paymentpic.b25fa82724bea521695b.webp",
     "static/media/instagram.svg": "/static/media/instagram.58c95fb2834d78f23301fcde529399f6.svg",
+    "static/media/igMUN.svg": "/static/media/igMUN.2784cb504664d1f1df6d1148be513f9a.svg",
     "static/media/bin1.svg": "/static/media/bin1.e9d44f69eea8e38040941fd969119b82.svg",
     "static/media/x.svg": "/static/media/x.d2cade43ef8e410d2f5b5edaeffb0ee1.svg",
+    "static/media/XMUN.svg": "/static/media/XMUN.cb057e9f478b4975aaeb6a7b88a14d42.svg",
     "index.html": "/index.html",
     "static/media/dashedbg.webp": "/static/media/dashedbg.724379e2100eb9a853ad.webp",
     "static/media/CautionSign1.svg": "/static/media/CautionSign1.7b3fb9f9ce014a2c80da97585619df9a.svg",
@@ -59,8 +64,10 @@
     "static/media/qr.webp": "/static/media/qr.31e27bde9983d8e175ea.webp",
     "static/media/lock5.svg": "/static/media/lock5.02dc4c196aed1c1cd3b1407ed64e609a.svg",
     "static/media/mailimg.svg": "/static/media/mailimg.adc074b48e54299a35f208bf69a3a8f1.svg",
+    "static/media/ytMUN.svg": "/static/media/ytMUN.d216b02a2312c19976437e7ac425ec3c.svg",
     "static/media/id_card_white_bg.webp": "/static/media/id_card_white_bg.b626de92aa7c47dca735.webp",
     "static/media/youtube.svg": "/static/media/youtube.66dd69542335b520df485dce0f206d82.svg",
+    "static/media/fbMUN.svg": "/static/media/fbMUN.b01d42692a65dd67ee71c27760076e8b.svg",
     "static/media/facebook.svg": "/static/media/facebook.b0f35328fad63ace2403a98549b0770e.svg",
     "static/media/Rect1.webp": "/static/media/Rect1.6d1e62513f6ad708a3f6.webp",
     "static/media/line1.svg": "/static/media/line1.2d44fb88fdc6691f77c0da9149c63918.svg",
@@ -71,11 +78,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.48100592.css.map": "/static/css/main.48100592.css.map",
-    "main.f4914fc9.js.map": "/static/js/main.f4914fc9.js.map"
+    "main.b492c061.css.map": "/static/css/main.b492c061.css.map",
+    "main.c0359e68.js.map": "/static/js/main.c0359e68.js.map"
   },
   "entrypoints": [
-    "static/css/main.48100592.css",
-    "static/js/main.f4914fc9.js"
+    "static/css/main.b492c061.css",
+    "static/js/main.c0359e68.js"
   ]
 }
