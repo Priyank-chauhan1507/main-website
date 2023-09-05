@@ -317,7 +317,7 @@ const EventBox = () => {
                       className="drop"
                     >
                          <div className="drop-row">
-                    <div className="col col-yellow">Choreo</div>
+                    <div className="col col-yellow">Choreo(Dance)</div>
                     <div
                       className="col colhover"
                       onClick={(e) => {

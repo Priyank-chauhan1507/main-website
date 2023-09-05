@@ -250,7 +250,7 @@ const EventMainPage = ({ events }) => {
                 <p className="events-left-event2">
                   {eventdata[0]?.description}
                 </p>
-                {eventdata[0]?.note != null && (
+                {(eventdata[0]?.note != "" && eventdata[0]?.is_price == true) && (
                   <div className="events-left-event3">
                     <span>Note:</span>
                     <p>{eventdata[0]?.note}</p>
