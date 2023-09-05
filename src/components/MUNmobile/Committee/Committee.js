@@ -3,6 +3,10 @@ import Carousel from 'react-spring-3d-carousel';
 // import { v4 as uuidv4 } from "uuid";
 // import { config } from "react-spring";
 import Committee from "../../../assests/CommitteeMUN.png";
+import UNGA from "../../../assests/UNGAmob.png";
+import Arrow from "../../../assests/ArrowMUN.png";
+// import UNGA from "../../../assests/UNGAmob.png";
+// import UNGA from "../../../assests/UNGAmob.png";
 
 import "./Committee.css"
 // import "./App.css"
@@ -14,15 +18,66 @@ const App = () => {
   const slides = [
     {
       key: 1,
-      content: <img src={Committee} alt="1" />
+      content: 
+      <div className="carouselcontent">
+        <img src={UNGA} className='carouselcontentimg' alt="" />
+        <div className="MUNcarousel">
+
+        <div className="carouselcontenttext">
+            UNITED NATIONS <br />
+            GENERAL ASSEMBLY <br />
+            (UNGA)
+        </div>
+        <button className="carouselcontentbtn">
+            <p className="carouselcontentpara">More Info</p> 
+            <img src={Arrow} className="" alt="" />
+        </button>
+
+        </div>
+
+      </div> 
     },
     {
       key: 2,
-      content: <img src={Committee} alt="2" />
+      content: 
+      <div className="carouselcontent">
+        <img src={UNGA} className='carouselcontentimg' alt="" />
+        <div className="MUNcarousel">
+
+        <div className="carouselcontenttext">
+            UNITED NATIONS <br />
+            GENERAL ASSEMBLY <br />
+            (UNGA)
+        </div>
+        <button className="carouselcontentbtn">
+            <p className="carouselcontentpara">More Info</p> 
+            <img src={Arrow} className="" alt="" />
+        </button>
+
+        </div>
+
+      </div>
     },
     {
       key: 3,
-      content: <img src={Committee} alt="3" />
+      content: 
+      <div className="carouselcontent">
+        <img src={UNGA} className='carouselcontentimg' alt="" />
+        <div className="MUNcarousel">
+
+        <div className="carouselcontenttext">
+            UNITED NATIONS <br />
+            GENERAL ASSEMBLY <br />
+            (UNGA)
+        </div>
+        <button className="carouselcontentbtn">
+            <p className="carouselcontentpara">More Info</p> 
+            <img src={Arrow} className="" alt="" />
+        </button>
+
+        </div>
+
+      </div>
     }
   ]; 
 

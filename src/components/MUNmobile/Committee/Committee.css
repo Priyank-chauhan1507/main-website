@@ -31,3 +31,59 @@
     height: 51vh;
 }
 }
+.carouselcontent
+{
+    position: relative;
+}
+.carouselcontenttext
+{
+    position: absolute;
+    bottom: 25vh;
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Bangers;
+    font-size: 21.738px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%; /* 35.259px */
+}
+.carouselcontentbtn
+{
+    position: absolute;
+    bottom: 5vh;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14.024px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: transparent;
+    width: 130px;
+    border-radius: 3.506px;
+    border: 1.402px solid #F7F7F7;
+    display: flex;
+    justify-content: center;
+    padding: 2vh 2vw;
+
+}
+.carouselcontentpara
+{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.carouselcontentimg
+{
+    width: 35vw;
+}
+.MUNcarousel
+{
+    display: flex;
+    justify-content: center;
+}
+.carouselcontentarrow
+{
+    display: inline-block;
+}
