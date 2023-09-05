@@ -36,7 +36,7 @@ import FAQ from "./components/MUN/FAQ/FAQ";
 import Footer1 from "./components/MUN/Footer/Footer";
 import Commitee from "./components/MUN/Commitee/Commitee";
 // import Footer1 from "./components/MUN/Judges/Judges";
-import ReactGA from "react-ga4";
+import ReactGA4 from 'react-ga4';
 import Judges from "./components/MUN/Judges/Judges";
 import Page1 from "./components/Merch_page/Page1/Page1";
 import Page2 from "./components/Merch_page/Page2/Page2";
@@ -45,11 +45,11 @@ import Page3 from "./components/Merch_page/Page3/Page3";
 
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
-ReactGA.initialize("G-FG974BLVDN");
+ReactGA4.initialize("G-FG974BLVDN");
 
 function App(props) {
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
+    ReactGA4.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("user_id");
     if (token) {
