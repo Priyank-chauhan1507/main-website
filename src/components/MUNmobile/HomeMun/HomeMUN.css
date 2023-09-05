@@ -65,7 +65,14 @@
     justify-content: center;
 }
 
-
+.CommitteeHead
+{
+    display: flex;
+    justify-content: center;
+}
+.CommitteeHead img{
+    width: 40vw;
+}
 
 
 @media only screen and (max-width:550px)
@@ -109,4 +116,9 @@
     {
         width: 25vw;
     }
+}
+.committeeMobile
+{
+    display: flex;
+    justify-content: center;
 }

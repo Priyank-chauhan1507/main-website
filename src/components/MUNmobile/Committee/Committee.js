@@ -1,55 +1,83 @@
-// import React, { Component } from "react";
-// import Slider from "react-slick-slider";
-// import "./Committee.css";
-// import Prizes from "../../../assests/PrizesWorth.png";
+import React, {useState ,useEffect} from 'react'
+import Carousel from 'react-spring-3d-carousel';
+// import { v4 as uuidv4 } from "uuid";
+// import { config } from "react-spring";
+import Committee from "../../../assests/CommitteeMUN.png";
 
-// function Committee() {
-     
-//         const settings = {
-//             className: "center",
-//             centerMode: true,
-//             infinite: true,
-//             centerPadding: "60px",
-//             slidesToShow: 3,
-//             speed: 500
-//           };
-//   return (
-//     <div className="container">
-//         <link
-//           rel="stylesheet"
-//           type="text/css"
-//           charset="UTF-8"
-//           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-//         />
-//         <link
-//           rel="stylesheet"
-//           type="text/css"
-//           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-//         />
-//         <h2>Center Mode</h2>
-//         <Slider {...settings}>
-//           <div>
-//             <h3>1</h3>
-//           </div>
-//           <div>
-//             <h3>2</h3>
-//           </div>
-//           <div>
-//             <h3>3</h3>
-//           </div>
-//           <div>
-//             <h3>4</h3>
-//           </div>
-//           <div>
-//             <h3>5</h3>
-//           </div>
-//           <div>
-//             <h3>6</h3>
-//           </div>
-//         </Slider>
-//       </div>
-//   )
-// }
+import "./Committee.css"
+// import "./App.css"
+
+const App = () => {
+
+ 
+
+  const slides = [
+    {
+      key: 1,
+      content: <img src={Committee} alt="1" />
+    },
+    {
+      key: 2,
+      content: <img src={Committee} alt="2" />
+    },
+    {
+      key: 3,
+      content: <img src={Committee} alt="3" />
+    }
+  ]; 
+
+  const table = slides.map((element, index) => {
+    return { ...element, onClick: () => setGoToSlide(index) };
+  });
+
+  const [offsetRadius, setOffsetRadius] = useState(2);
+  const [showArrows, setShowArrows] = useState(false);
+  const [goToSlide, setGoToSlide] = useState(null);
+  // const [time, setTime] = useState(1);
+  const [cards] = useState(table);
+
+  var id = 0;
+
+  useEffect(() => {
+    setOffsetRadius(2);
+    setShowArrows(false);
+  }, [2, false]);
+
+  
+//  setInterval(() => {
+//     setTime(time+1);
+//  }, 3000);
+
+//  useEffect(() => {
+//   setGoToSlide(time)
+//   if(time === 10){
+//     setTime(1)
+//   }
+// }, [time]);
+ 
 
 
-// export default Committee
+// console.log(time);
+
+  return (
+    <div>
+      <div className="CarouselCommittee" 
+    //   style={{height: "50vh", width: "30vw"}}
+      >
+      <Carousel
+      style={{height: "60vh"}}
+
+        slides={cards}
+        goToSlide={goToSlide}
+        goToSlideDelay={20000000000}
+        offsetRadius={offsetRadius}
+        // showNavigation={showArrows}
+        // animationConfig={config.gentle   }
+      />
+      </div>
+    </div>
+  )
+}
+
+export default App
+
