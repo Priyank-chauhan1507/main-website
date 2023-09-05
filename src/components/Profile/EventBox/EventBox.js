@@ -417,7 +417,7 @@ const EventBox = () => {
                         onHandleClick(29);
                       }}
                     >
-                      Campus Princess
+                      Campus Diva
                     </div>
                     <div
                       className="col colhover"
@@ -868,7 +868,7 @@ const EventBox = () => {
                         onHandleClick(83);
                       }}
                     >
-                      Karaoke
+                      Thomso Karaoke
                     </div>
                     <div className="col col-yellow">New Events</div>
                     <div
@@ -877,7 +877,15 @@ const EventBox = () => {
                         onHandleClick(84);
                       }}
                     >
-                      Sneaker Design*
+                      Sneaker Design(Duet)*
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(88);
+                      }}
+                    >
+                      Sneaker Design(Solo)*
                     </div>
                     <div
                       className="col colhover"
