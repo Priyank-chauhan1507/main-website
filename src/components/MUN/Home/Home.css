@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400&display=swap');
 .MUN-bg {
     background: url("../../../assests/BGMUN.webp");
     background-size: cover;
@@ -67,6 +69,14 @@
 .prizesWorthDiv {
     display: flex;
     justify-content: center;
+    color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 162.2%; /* 32.44px */
+letter-spacing: 1px;
 }
 .MUNjuDges
 {
