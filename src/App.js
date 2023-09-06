@@ -42,7 +42,9 @@ import Page1 from "./components/Merch_page/Page1/Page1";
 import Page2 from "./components/Merch_page/Page2/Page2";
 // require('dotenv').config()
 import Page3 from "./components/Merch_page/Page3/Page3";
-
+import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopage1";
+import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopage2";
+import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 ReactGA4.initialize("G-FG974BLVDN");
@@ -103,6 +105,9 @@ function App(props) {
           <Route exact={true} path="/merch_page1" element={<Page1/>} />
           <Route exact={true} path="/merch_page2" element={<Page2/>} />
           <Route exact={true} path="/merch_page3" element={<Page3/>} />
+          <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
+          <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
+          <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
         </Routes>
       </Router>
     </>
