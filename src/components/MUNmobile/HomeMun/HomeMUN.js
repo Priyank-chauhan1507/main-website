@@ -21,7 +21,7 @@ function HomeMUN() {
       </div>
       <div className="registerMUNNowBtn">
           <button className="registerMUNNowBtnClick">
-            Registser Now
+            Register Now
           </button>
       </div>  
       <div className="prizesMUNWorth">
@@ -30,11 +30,11 @@ function HomeMUN() {
           </div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit
         </div>
-        <div className="CommitteeHead">
+        <div className="CommitteeHead" id="committeeHead1">
           <img src={Committee} alt="" />
         </div>
         <Comittee/>
-        <div className="CommitteeHead">
+        <div className="CommitteeHead" id="committeeHead2">
           <img src={Executive} alt="" />
         </div>
         <div className="ExecutiveMobile">

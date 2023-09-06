@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+  import React, { useState } from "react";
 import "./FAQ.css";
 import img1 from "../../../assests/Cross.webp";
 import FAQ1 from "../../../assests/FAQS.png";

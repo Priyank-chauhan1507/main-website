@@ -38,26 +38,45 @@
 .carouselcontenttext
 {
     position: absolute;
-    bottom:15vh;
+    bottom:33vh;
     text-align: center;
     color: #FFF;
     text-align: center;
     font-family: Bangers;
-    font-size: 4vw;
+    font-size: 5vw;
     font-style: normal;
     font-weight: 400;
     line-height: 162.2%; /* 35.259px */
 }
+@media only screen and (max-width:650px)
+{
+    .carouselcontenttext{
+         bottom:25vh;
+        /* font-size:3vw; */
+    }
+    /* .carouselcontentbtn{
+        height:5vh !important;
+    } */
+}
 @media only screen and (max-width:500px)
 {
     .carouselcontenttext{
-         bottom:20vw;
-       /* padding-bottom:5px; */
-        font-size:3vw;
-        /* margin:auto !important; */
+         bottom:21vh;
+        /* font-size:3vw; */
+    }
+    /* .carouselcontentbtn{
+        height:5vh !important;
+    } */
+}
+@media only screen and (max-width:410px)
+{
+    .carouselcontenttext{
+         bottom:15vh;
+        /* font-size:3vw; */
     }
     .carouselcontentbtn{
         height:5vh !important;
+        bottom:6vh !important;
     }
 }
 @media only screen and (max-width:330px){
@@ -68,7 +87,7 @@
 .carouselcontentbtn
 {
     position: absolute;
-    bottom: 5vh;
+    bottom: 11vh;
     color: #FFF;
     text-align: center;
     font-family: Roboto;
@@ -94,7 +113,7 @@
 }
 .carouselcontentimg
 {
-    width: 35vw;
+    width: 52vw;
 }
 .MUNcarousel
 {

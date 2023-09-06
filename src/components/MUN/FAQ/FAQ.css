@@ -8,7 +8,8 @@ body {
 }
 .FAQimg
 {
-  width: 7vw;
+  width: 18vw;
+  margin-bottom:5vh;
 }
 .MUN_FAQ_main_div {
   background-color: transparent !important;
@@ -16,6 +17,7 @@ body {
   color: white;
   margin: 0 auto;
   margin-top: 20vh;
+  margin-bottom:17vh;
 }
 
 .mun_faq_heading {
