@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.31a69d1e.css",
-    "main.js": "/static/js/main.3c20b9ea.js",
+    "main.css": "/static/css/main.b835ec80.css",
+    "main.js": "/static/js/main.18864605.js",
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
@@ -9,6 +9,7 @@
     "static/media/CommitteeMUN.png": "/static/media/CommitteeMUN.4679133e9f4fe67fcce3.png",
     "static/media/Historicnew.png": "/static/media/Historicnew.1f33d104a3d8a28d022e.png",
     "static/media/Regback.webp": "/static/media/Regback.b51727b6557a74fd24b8.webp",
+    "static/media/thomso-unscreen.gif": "/static/media/thomso-unscreen.d40db52c4efc91750d1a.gif",
     "static/media/Logo23.svg": "/static/media/Logo23.b79f41ef88b393084cf09fa5e57a1e8f.svg",
     "static/media/newsinger.webp": "/static/media/newsinger.6f14ea4bd320a70f037c.webp",
     "static/media/mobback.webp": "/static/media/mobback.15297418dfd14c4915a5.webp",
@@ -18,6 +19,7 @@
     "static/media/AIPPMnew.png": "/static/media/AIPPMnew.1eceb14527aceb712109.png",
     "static/media/newsingermob.webp": "/static/media/newsingermob.22082dc446787622f983.webp",
     "static/media/bg.jpg": "/static/media/bg.b9c023b1978d5f11ddc0.jpg",
+    "static/media/below-thomso.webp": "/static/media/below-thomso.c02a8a0d3de52907e375.webp",
     "static/media/IITRMUN.png": "/static/media/IITRMUN.6e40f1aae4933d84d827.png",
     "static/media/UNGAnew.png": "/static/media/UNGAnew.5c797f4a847eb935aa0c.png",
     "static/media/street_soccer_1.png": "/static/media/street_soccer_1.7124988626bb82958e98.png",
@@ -89,11 +91,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.31a69d1e.css.map": "/static/css/main.31a69d1e.css.map",
-    "main.3c20b9ea.js.map": "/static/js/main.3c20b9ea.js.map"
+    "main.b835ec80.css.map": "/static/css/main.b835ec80.css.map",
+    "main.18864605.js.map": "/static/js/main.18864605.js.map"
   },
   "entrypoints": [
-    "static/css/main.31a69d1e.css",
-    "static/js/main.3c20b9ea.js"
+    "static/css/main.b835ec80.css",
+    "static/js/main.18864605.js"
   ]
 }
