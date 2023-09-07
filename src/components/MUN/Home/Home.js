@@ -9,10 +9,11 @@ import FAQ from '../FAQ/FAQ'
 import Footer from '../Footer/Footer'
 import Commitee from '../Commitee/Commitee'
 import Prizes from "../../../assests/PrizesWorth.png";
+import MUNmob from  "../../../components/MUNmobile/HomeMun/HomeMUN";
 
 function Home() {
   return (
-    <div className="MUN-bg">
+    <>    <div className="MUN-bg">
       {/* <img src={BG} className="MUN-Bg" alt="" /> */}
       {/* <img src={BG_mob} className="MUN-Bg mun_mob_bg" alt="" /> */}
       <Navbar color="transparent"/>
@@ -42,6 +43,10 @@ function Home() {
         <Footer />
         </div>
     </div>
+    <div className='MUN-mob'>
+      <MUNmob />
+    </div>
+    </>
   )
 }
 
