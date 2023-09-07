@@ -813,7 +813,7 @@ const EventBox = () => {
                         onHandleClick(14);
                       }}
                     >
-                      16 Frames
+                      24 Frames
                     </div>
                     <div
                       className="col colhover"
