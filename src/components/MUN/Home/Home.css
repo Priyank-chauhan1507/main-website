@@ -94,11 +94,20 @@ letter-spacing: 1px;
 .mun_mob_bg{
     display: none;
 }
+.MUN-mob{
+    display: none;
+}
 
 @media only screen and (max-width:768px){
 
 .mun_mob_bg {
     display: none;
+}
+.MUN-bg{
+    display: none;
+}
+.MUN-mob{
+    display: block;
 }
 }
 

@@ -11,7 +11,7 @@ function ContactUs() {
   return (
     <div className="MUN-bottom">
 
-      <div className="ContactUsMUN">
+      {/* <div className="ContactUsMUN">
         <div className="heading-contact">
             CONTACT US
         </div>
@@ -44,7 +44,7 @@ function ContactUs() {
             </div>
             
         </div>
-      </div>
+      </div> */}
 
         <img src={Logo} className="LogoMUN" alt="" />
 
