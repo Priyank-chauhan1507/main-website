@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.b164522e.css",
-    "main.js": "/static/js/main.1cbfa6fc.js",
+    "main.css": "/static/css/main.ac249051.css",
+    "main.js": "/static/js/main.1392bd9a.js",
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
     "static/media/Landing-page-2-1.webp": "/static/media/Landing-page-2-1.a3d9992c858b965fed61.webp",
     "static/media/CommitteeMUN.png": "/static/media/CommitteeMUN.4679133e9f4fe67fcce3.png",
+    "static/media/Historicnew.png": "/static/media/Historicnew.1f33d104a3d8a28d022e.png",
     "static/media/Regback.webp": "/static/media/Regback.b51727b6557a74fd24b8.webp",
     "static/media/Logo23.svg": "/static/media/Logo23.b79f41ef88b393084cf09fa5e57a1e8f.svg",
     "static/media/newsinger.webp": "/static/media/newsinger.6f14ea4bd320a70f037c.webp",
@@ -14,21 +15,20 @@
     "static/media/profile1.webp": "/static/media/profile1.2c7b357f93c6a77ea494.webp",
     "static/media/events.png": "/static/media/events.48b2d778b6652a361cb4.png",
     "static/media/bgmobile.webp": "/static/media/bgmobile.9cec63dbb9098095c10c.webp",
+    "static/media/AIPPMnew.png": "/static/media/AIPPMnew.1eceb14527aceb712109.png",
     "static/media/newsingermob.webp": "/static/media/newsingermob.22082dc446787622f983.webp",
     "static/media/bg.jpg": "/static/media/bg.b9c023b1978d5f11ddc0.jpg",
     "static/media/IITRMUN.png": "/static/media/IITRMUN.6e40f1aae4933d84d827.png",
+    "static/media/UNGAnew.png": "/static/media/UNGAnew.5c797f4a847eb935aa0c.png",
     "static/media/street_soccer_1.png": "/static/media/street_soccer_1.7124988626bb82958e98.png",
     "static/media/MUNmobileBG.webp": "/static/media/MUNmobileBG.5c74349865e47807dafb.webp",
     "static/media/Landing-page-1.webp": "/static/media/Landing-page-1.0fbb94ef89a40b96def0.webp",
-    "static/media/MUNImg3.png": "/static/media/MUNImg3.c0a7bcda5245a2167511.png",
-    "static/media/MUNImg2.png": "/static/media/MUNImg2.932e80656b50c34fe191.png",
     "static/media/back.webp": "/static/media/back.5993852469394dc9eb3a.webp",
     "static/media/design.graffiti.comicsansmsgras.ttf": "/static/media/design.graffiti.comicsansmsgras.92557e6ed016730cc765.ttf",
     "static/media/parmob.png": "/static/media/parmob.9a9058b94c6bad55ad5f.png",
     "static/media/flagmob.png": "/static/media/flagmob.e88ff8c53e1f5814ca74.png",
     "static/media/UNGAmob.png": "/static/media/UNGAmob.e58f3079f47ecb2829d4.png",
     "static/media/ID_Logo.png": "/static/media/ID_Logo.4c7afb1a960497df4304.png",
-    "static/media/MUNImg1.png": "/static/media/MUNImg1.febdbabe79a9e0aef483.png",
     "static/media/LOGOMUN.svg": "/static/media/LOGOMUN.b1bd40a0e1008f30352aae3a81f99c65.svg",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/BGMUN.webp": "/static/media/BGMUN.96c91b99d86e9eefe101.webp",
@@ -89,11 +89,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.b164522e.css.map": "/static/css/main.b164522e.css.map",
-    "main.1cbfa6fc.js.map": "/static/js/main.1cbfa6fc.js.map"
+    "main.ac249051.css.map": "/static/css/main.ac249051.css.map",
+    "main.1392bd9a.js.map": "/static/js/main.1392bd9a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b164522e.css",
-    "static/js/main.1cbfa6fc.js"
+    "static/css/main.ac249051.css",
+    "static/js/main.1392bd9a.js"
   ]
 }
