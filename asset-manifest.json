@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a364e88c.css",
-    "main.js": "/static/js/main.297636a2.js",
+    "main.css": "/static/css/main.2499d1dc.css",
+    "main.js": "/static/js/main.55b75a92.js",
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
@@ -32,30 +32,24 @@
     "static/media/LOGOMUN.svg": "/static/media/LOGOMUN.b1bd40a0e1008f30352aae3a81f99c65.svg",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/BGMUN.webp": "/static/media/BGMUN.96c91b99d86e9eefe101.webp",
-    "static/media/muninfopage3img.webp": "/static/media/muninfopage3img.87bf61adf95e6489abc1.webp",
     "static/media/loader.gif": "/static/media/loader.90672f1deffccbcdf4f1.gif",
     "static/media/thomso.webp": "/static/media/thomso.95fa23ea77b895417f22.webp",
-    "static/media/munbg.webp": "/static/media/munbg.e54b108886babe3f5462.webp",
     "static/media/COMIC.TTF": "/static/media/COMIC.cf3d8690bffa563fb10b.TTF",
     "static/media/image1evt.svg": "/static/media/image1evt.b4321236f14b276c55f6cb2a18190534.svg",
     "static/media/landingpage.webp": "/static/media/landingpage.abeeff57cfa4493d7c17.webp",
     "static/media/idback.webp": "/static/media/idback.61a74a9da611a4a2c530.webp",
     "static/media/qr.png": "/static/media/qr.22aba290a6fe3844c00f.png",
-    "static/media/MUNmobilebg.png": "/static/media/MUNmobilebg.4bdcff3db89d7cf8d6b0.png",
     "static/media/reg-logo.svg": "/static/media/reg-logo.7ff1b44e2c10de2dbb38076a1e4fbf12.svg",
     "static/media/PrizesWorth.png": "/static/media/PrizesWorth.f94c424d9fc4a5bdc0d8.png",
     "static/media/propic.svg": "/static/media/propic.39d1147898dd7f65cb0cd55d48ebe1ce.svg",
     "static/media/MUN-Top.webp": "/static/media/MUN-Top.09e1c67df91811380808.webp",
     "static/media/default_event.png": "/static/media/default_event.5e41c2c91152988c4289.png",
     "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
-    "static/media/muninfopage1.webp": "/static/media/muninfopage1.ba98233eb1f144f09c46.webp",
     "static/media/Executive.png": "/static/media/Executive.bd7c22ec08aa7137244a.png",
     "static/media/profile1.png.jpg": "/static/media/profile1.png.da7e7064ed2b96e76c47.jpg",
     "static/media/COMMITTEE.png": "/static/media/COMMITTEE.489a2b2fa40ad348c8b0.png",
-    "static/media/munmobileinfobg.webp": "/static/media/munmobileinfobg.f0e962321435d8d2558d.webp",
     "static/media/hero1.webp": "/static/media/hero1.d30444af71136ae65b4e.webp",
     "static/media/FAQS.png": "/static/media/FAQS.04690bc99b0c7c08f713.png",
-    "static/media/muninfopage2img.webp": "/static/media/muninfopage2img.90568b849d77faa25d7f.webp",
     "static/media/pay.svg": "/static/media/pay.1cc47b09e520356f23c74b99e352a2d4.svg",
     "static/media/Cross.webp": "/static/media/Cross.5ee0ebb078621a76a565.webp",
     "static/media/eventpic.webp": "/static/media/eventpic.15b58a132d7073862500.webp",
@@ -89,11 +83,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.a364e88c.css.map": "/static/css/main.a364e88c.css.map",
-    "main.297636a2.js.map": "/static/js/main.297636a2.js.map"
+    "main.2499d1dc.css.map": "/static/css/main.2499d1dc.css.map",
+    "main.55b75a92.js.map": "/static/js/main.55b75a92.js.map"
   },
   "entrypoints": [
-    "static/css/main.a364e88c.css",
-    "static/js/main.297636a2.js"
+    "static/css/main.2499d1dc.css",
+    "static/js/main.55b75a92.js"
   ]
 }
