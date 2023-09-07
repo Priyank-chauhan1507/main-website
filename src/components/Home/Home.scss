@@ -21,7 +21,33 @@
   }
   .thomso {
     position: relative;
-    margin: 11vh 30vw;
+    margin: 11vh 30vw 0vh 30vw;
+  }
+  .b-thomso {
+    position: relative;
+    // width: 36vw;
+    margin: 0vh 32vw 0vh 32vw;
+  }
+  .home-text-para{
+    width: 30vw;
+    color: #fff;
+    z-index: 1;
+    width: 60vw;
+    margin: 0vh auto;
+    margin-bottom: 11vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    font-family: 'Comic Sans MS';
+  }
+  .blue-thomso{
+    color: #1499ba;
+  }
+  .yellow-thomso{
+    color: #F7B900;
   }
   .register {
     width: 250px;
@@ -78,7 +104,7 @@
     margin: auto;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .home{
     min-height: 100vh !important;
     width: 100vw;
@@ -100,6 +126,10 @@
     width: 80vw !important;
     margin: .5vh auto !important;
   }
+  .b-thomso{
+    width: 75vw !important;
+    margin: .5vh auto !important;
+  }
   .singers{
     display: none !important;
   }
@@ -114,7 +144,7 @@
 #homebs2{
   display: none;
 }
-@media only screen and (max-width:800px){
+@media only screen and (max-width:768px){
   #homebg1{
 display: none;
 }
