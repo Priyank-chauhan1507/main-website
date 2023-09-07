@@ -3,8 +3,44 @@
     position: absolute;
     z-index: -10;
     width: 100vw;
-    /* height: 527vh; */
+    height: 780vh;
 }
+@media only screen and (max-width:650px)
+{
+    .HomeMUN-bg
+{
+    height: 750vh;
+}
+}
+@media only screen and (max-width:550px)
+{
+    .HomeMUN-bg
+{
+    height: 720vh;
+}
+}
+@media only screen and (max-width:501px)
+{
+    .HomeMUN-bg
+{
+    height: 680vh;
+}
+}
+@media only screen and (max-width:450px)
+{
+    .HomeMUN-bg
+{
+    height: 642vh;
+}
+}
+@media only screen and (max-width:350px)
+{
+    .HomeMUN-bg
+{
+    height: 610vh;
+}
+}
+
 .top-HomeMUN
 {
     display: flex;
@@ -74,7 +110,14 @@
 .CommitteeHead img{
     width: 40vw;
 }
-
+#committeeHead1 img{
+    margin-top:15vh;
+    margin-bottom: -2vh;
+}
+#committeeHead2 img{
+    margin-top:15vh;
+    width:55vw;
+}
 
 @media only screen and (max-width:550px)
 {
