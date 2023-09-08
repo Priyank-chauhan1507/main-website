@@ -39,7 +39,7 @@ function FAQ() {
                   setPlus({ ...plus, ["1st"]: true });
                 }}
               />
-              <div class="panel">
+              <div className="panel">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -71,7 +71,7 @@ function FAQ() {
                   setPlus({ ...plus, ["2nd"]: true });
                 }}
               />
-              <div class="panel">
+              <div className="panel">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
