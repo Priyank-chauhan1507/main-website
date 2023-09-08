@@ -3,41 +3,47 @@
     position: absolute;
     z-index: -10;
     width: 100vw;
-    height: 780vh;
-}
-@media only screen and (max-width:650px)
-{
-    .HomeMUN-bg
-{
-    height: 750vh;
-}
-}
-@media only screen and (max-width:550px)
-{
-    .HomeMUN-bg
-{
     height: 720vh;
 }
-}
-@media only screen and (max-width:501px)
+@media only screen and (max-width:650px)
 {
     .HomeMUN-bg
 {
     height: 680vh;
 }
 }
+@media only screen and (max-width:550px)
+{
+    .HomeMUN-bg
+{
+    height: 660vh;
+}
+}
+@media only screen and (max-width:501px)
+{
+    .HomeMUN-bg
+{
+    height: 620vh;
+}
+}
 @media only screen and (max-width:450px)
 {
     .HomeMUN-bg
 {
-    height: 642vh;
+    height: 600vh;
 }
+}
+@media only screen and (max-width:400px){
+    .HomeMUN-bg
+    {
+        height: 560vh;
+    }
 }
 @media only screen and (max-width:350px)
 {
     .HomeMUN-bg
 {
-    height: 610vh;
+    height: 520vh;
 }
 }
 
