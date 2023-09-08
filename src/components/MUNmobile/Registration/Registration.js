@@ -361,9 +361,9 @@ const UNGA=[
         setUser({ ...user, UNGA: UNGA?.value });
       };
       return (
-        <div>
+        <div className='mun-mob-registeration'>
           <div className="bgImg">
-            <img src={BGimg} className='MobileBG' alt=''/>
+            {/* <img src={BGimg} className='MobileBG' alt=''/> */}
             <img src={BgMunReg} className='BGMunreg' alt=''/>
             </div>
             <Navbar  color="transparent"/>
@@ -373,10 +373,10 @@ const UNGA=[
                 <div className="IRMUNtext">
 
                 <div className="Portfoliotext1">
-                    IRMUN/
+                    IRMUN /
                 </div>
                 <div className="Portfoliotext2">
-                    PORTFOLIO
+                     PORTFOLIO
                 </div>
                 </div>
                 <div className="DelegateApp">
@@ -397,9 +397,7 @@ const UNGA=[
                 <div className="Portfoliosubhead">
                   <div>
                 Select a committee
-                <Select styles={{
-                  backgroundColor:"rgb(48, 77, 127)"
-                }}
+                <Select 
                   className="Portfolio_options"
                   placeholder="Select Portfolio 1"
                   value={user.selectedOption}
