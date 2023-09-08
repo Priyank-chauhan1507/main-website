@@ -2,7 +2,9 @@
 import Carousel from 'react-spring-3d-carousel';
 // import { v4 as uuidv4 } from "uuid";
 // import { config } from "react-spring";
-import Committee from "../../../assests/CommitteeMUN.png";
+import judge1 from "../../../assests/AIPPMjudgeresize.webp";
+import judge2 from '../../../assests/Aishnit-yadav-Unga-judge.webp'
+import judge3 from '../../../assests/Raunak-Historic-judge.webp'
 
 import "./Executive.css"
 // import "./App.css"
@@ -14,15 +16,28 @@ const App = () => {
   const slides = [
     {
       key: 1,
-      content: <img src={Committee} alt="1" />
+      content: <div className="judge1div">
+        <img src={judge1} className="judge1-img"alt="1" />
+        <div className='judge1-discription'>RAUNAK UPMANYU</div> 
+        <div className='judge1-discription'>CHAIR OF HISTORIC COMMITEE</div>
+
+      </div> 
     },
     {
       key: 2,
-      content: <img src={Committee} alt="2" />
+      content: <div className="judge2div">
+        <img src={judge2} className="judge2-img" alt="2" />
+        <div className='judge1-discription'>AISHNIT YADAV</div> 
+        <div className='judge1-discription'>CHAIR OF UNGA</div>
+      </div>
     },
     {
       key: 3,
-      content: <img src={Committee} alt="3" />
+      content: <div className="judge3div">
+        <img src={judge3} className="judge3-img"alt="3" />
+        <div className='judge1-discription'>NAMAN JAIN</div> 
+        <div className='judge1-discription'>CHAIR OF AIPPM</div>
+      </div>
     }
   ]; 
 
