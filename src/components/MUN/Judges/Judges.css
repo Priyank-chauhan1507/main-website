@@ -45,6 +45,7 @@
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    /* width:52vh; */
     
 }
 .judges-cont-2{
@@ -83,7 +84,7 @@
 }
 .judges-cont-1,.judges-cont-2,.judges-cont-3{
 width: 15vw;
-height: 42vh;
+height: 52vh;
 }
 
 @media only screen and (max-width: 768px){
