@@ -400,9 +400,9 @@ const UNGA=[
         setUser({ ...user, [e.target.name]: e.target.value });
       };
       return (
-        <div>
+        <div className='mun-mob-registeration'>
           <div className="bgImg">
-            <img src={BGimg} className='MobileBG' alt=''/>
+            {/* <img src={BGimg} className='MobileBG' alt=''/> */}
             <img src={BgMunReg} className='BGMunreg' alt=''/>
             </div>
             <Navbar  color="transparent"/>
@@ -412,10 +412,10 @@ const UNGA=[
                 <div className="IRMUNtext">
 
                 <div className="Portfoliotext1">
-                    IRMUN/
+                    IRMUN /
                 </div>
                 <div className="Portfoliotext2">
-                    PORTFOLIO
+                     PORTFOLIO
                 </div>
                 </div>
                 <div className="DelegateApp">
@@ -438,7 +438,7 @@ const UNGA=[
                 Select a committee
                 <Select styles={{
                   backgroundColor:"rgb(48, 77, 127)"
-                }}
+                }}/>
                 <Select
                   name='committee1'
                   className="Portfolio_options"
@@ -507,13 +507,13 @@ const UNGA=[
                   value={user.committee2}
                   onChange={handleChange1}
                   required
-                  // styles={customStyles}
+                  // styles={customStyles}  
                   options={UNGA}
-                />
+                  />
+              )
+                }
                 </div>
                 <div>
-                  options={Portfolio}
-                />)}
                 {user.committee1 === "UNITED NATIONS GENERAL ASSEMBLY (UNGA)" &&
                 (<Select
                   name='committee2'
