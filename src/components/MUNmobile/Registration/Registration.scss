@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 .bgImg{
     // position: relative;
 }
@@ -11,7 +12,22 @@
     height: 100vh;
     z-index: -1;
 }
-.IRMUNtext{
+
+body{
+    // background-image: linear-gradient(#0C1D39, #114293E3);
+    // height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    // padding: 30px 5vw;
+}
+
+// .munmobnav {
+//     // margin: 30px 5vw 0;
+//     // padding: 50px 5vw;
+
+// }
+.IRMUNtext
+{
     display: flex;
     position: relative;
     margin-top: 3vh;
@@ -25,6 +41,12 @@ font-style: normal;
 font-weight: 400;
 line-height: 162.2%; /* 22.708px */
 }
+.portfolio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 10vw 0 10vw;
+}
 .Portfoliotext2
 {
     color: rgba(255, 255, 255, 0.60);
@@ -35,30 +57,121 @@ font-weight: 400;
 line-height: 162.2%;
 }
 .Portfolio1{
-    display: none;
+    width:30vw;
+}
+
+.RegistrationMain
+{
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+//   z-index: 999;
+}
+.DelegateApp
+{
+text-align: center;
+margin-top: 2vh;
+}
+.DelegateApp1
+{
+color: #FFF;
+text-align: center;
+font-family: Bangers;
+font-size: 31px;
+font-style: normal;
+font-weight: 400;
+line-height: 162.2%;
+margin-top: -2vh;
+}
+.DelegateApp2
+{
+    color: #FFF;
+    text-align: center;
+    font-family: Bangers;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%;
+}
+.Portfoliohead
+{
+    color: #FDD52E;
+    text-align: center;
+    font-family: Bangers;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%;
+    text-align: center;
+    margin-top: 2vh;
+}
+.Portfoliosubhead
+{
+    color: #53D0EB;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16.676px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    line-height: 162.2%;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap:3vh;
+    // background-color: #304d7f;
+}
+.Portfolio_options{
+    background-color: #304d7f;
+}
+.sub-button{
+    display: flex;
+    justify-content: center;
+    margin-top:4vh;
+}
+.subbutton{
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 600;
+    font-weight: 1.5vh;
 }
 // .RegistrationMain{
 
 // }
 @media screen and (max-width:768px){
-body{
-    // background-image: linear-gradient(#0C1D39, #114293E3);
-    height: 100vh;
+.mun-mob-registeration{
+    background: url(../../../assests/MUNmobilebg.png);
+    background-size: cover;
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // b-fit: cover;
+    // height: 200vh;
     width: 100vw;
-    overflow-y: auto;
+    overflow-y: scroll;
+    padding-bottom: 5vh;
     // padding: 30px 5vw;
 }
 .MobileBG{
     display:block;
+    // width:100vw;
+    // height: 197vh;
 }
 .BGMunreg{
     display: none;
 }
 .Portfolio1{
     display: block;
+    width:90vw;
 }
 
-
+.portfolio{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    margin:0 0 0 0;
+    gap:5vh;
+    margin-top: 2vh;
+}
 
 .MobileBG {
     position: absolute;
@@ -95,6 +208,19 @@ h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
+.Portfoliohead{
+    text-align: left;
+}
+.Portfoliosubhead{
+    gap:7vh;
+}
+.DelegateApp1{
+    margin-top: 3vh;
+}
+.sub-button{
+    margin-top: 10vh;
+    // margin-bottom: 10vh;
+}
 }
 
 @media screen and (max-width:350px) {
@@ -110,6 +236,7 @@ h3 {
         font-size:medium;
     }
 }
+
 .RegistrationMain
 {
   width: 90vw;
@@ -165,3 +292,4 @@ line-height: 162.2%;
     line-height: 162.2%;
     margin-top: 1vh;
 }
+

@@ -22,9 +22,13 @@ export default function Moreinfopage1() {
         <div className="info_box3">
             <div className="info_content">
             <div className="info_text">
-                <h2 className="info_heading">INDIAN WAR CABINET(HISTORIC COMMITTEE)</h2>
-                <p className="muninfo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit</p>
-                <p className="mobilemuninfo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec.</p>
+                <h2 className="info_heading">INDIAN WAR CABINET (HISTORIC COMMITTEE)</h2>
+                <p className="muninfo-text">The Indian War Cabinet is a committee within the context of Model United Nations (MUN) simulations. It replicates the decision-making process of India's highest leadership during times of crisis and conflict. Delegates assume the roles of top government officials, including the Prime Minister and Defence Minister, and work together to strategise, plan, and respond to simulated national security and defence challenges. This committee tests delegates' crisis management skills, diplomacy, and their ability to protect their nation's interests in a dynamic and fast-paced environment.
+                <br />
+                AGENDA: “Bangladesh liberation War 1971”</p>
+                <p className="mobilemuninfo-text">The Indian War Cabinet is a committee within the context of Model United Nations (MUN) simulations. It replicates the decision-making process of India's highest leadership during times of crisis and conflict. Delegates assume the roles of top government officials, including the Prime Minister and Defence Minister, and work together to strategise, plan, and respond to simulated national security and defence challenges. This committee tests delegates' crisis management skills, diplomacy, and their ability to protect their nation's interests in a dynamic and fast-paced environment.
+                <br />
+                AGENDA: “Bangladesh liberation War 1971”</p>
                 <div className="portfolio_button">
                 <button className='info_button'>PORTFOLIO MATRIX</button>
                 </div>
@@ -34,7 +38,7 @@ export default function Moreinfopage1() {
                 <div className="mun-infoPageimg3">
                 <img  src={InfoPage1Img} className="infoPage3img" alt="infoPage3img"/>
                 </div>
-                <h3>INDIAN WAR CABINET(HISTORIC COMMITTEE)</h3>
+                <h3>INDIAN WAR CABINET (HISTORIC COMMITTEE)</h3>
             </div>
         </div>
         </div>

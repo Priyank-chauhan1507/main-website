@@ -15,7 +15,7 @@
 .Bg-image{
     position:absolute;
     width: 100vw;
-    height: 100vh;
+    height: 105vh;
     
 }
 .Mob-Bg-image{
@@ -67,7 +67,7 @@
     font-weight: 400;
     line-height: 162.2%; /* 32.44px */
     letter-spacing: 1px;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     padding: 0 0 5vh 0;
 }
 .mobilemuninfo-text{
@@ -86,7 +86,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0vh;
+    margin-top: -15vh;
     /* width:40vw; */
 }
 .infoPage3img{
@@ -108,9 +108,23 @@ font-style: normal;
 font-weight: 400;
 line-height: 162.2%; 
 }
+
 @media screen and (max-width: 930px){
     .muninfo-text{
         font-size: 2vw;
+    }
+    .info_img3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0vh;
+        /* width:40vw; */
+    }
+    .Bg-image{
+        position:absolute;
+        width: 100vw;
+        height: 110vh;
+        
     }
 }
 @media screen and (max-width: 768px){
@@ -153,7 +167,7 @@ line-height: 162.2%;
         display: block;
         position:absolute;
         width: 100vw;
-        height: 100vh;
+        height: 120vh;
     }
     .info_heading{
         display:none
@@ -171,9 +185,30 @@ line-height: 162.2%;
         color: #0D1E3B;
         line-height: 162.2%;
     }
+    .info_img3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0vh;
+        /* width:40vw; */
+    }
 }
 @media screen and (max-width: 600px){
     .mobilemuninfo-text{
         font-size: 2.5vh;
+    }
+    .Mob-Bg-image{
+        display: block;
+        position:absolute;
+        width: 100vw;
+        height: 130vh;
+    }
+}
+@media screen and (max-width: 390px){
+    .Mob-Bg-image{
+        display: block;
+        position:absolute;
+        width: 100vw;
+        height: 140vh;
     }
 }
