@@ -94,7 +94,7 @@ body {
 
 @media only screen and (max-width:768px) {
   .accordion_1 {
-    right: 2vw;
+    right: 13vw;
   }
 
   .panel p {
@@ -108,7 +108,7 @@ body {
     width: 100%;
   }
   .right_mun_faq_head {
-    width: 100%;
+    width: 70%;
   }
   .panel {
     padding: 0;

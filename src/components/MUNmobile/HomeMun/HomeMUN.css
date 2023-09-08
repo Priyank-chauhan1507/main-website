@@ -3,15 +3,41 @@
     position: absolute;
     z-index: -10;
     width: 100vw;
-    height: 720vh;
+    height: 780vh;
+}
+@media only screen and (max-height:1000px)
+{
+    .HomeMUN-bg
+{
+    height: 480vh;
+}
+}
+@media only screen and (max-height:850px)
+{
+    .HomeMUN-bg
+{
+    height: 480vh;
+}
+}
+@media only screen and (max-height:750px){
+     height: 720vh;
 }
 @media only screen and (max-width:650px)
 {
     .HomeMUN-bg
 {
-    height: 680vh;
+    height: 518vh;
 }
 }
+
+@media only screen and (max-height:601px)
+{
+    .HomeMUN-bg
+{
+    height: 607vh;
+}
+}
+
 @media only screen and (max-width:550px)
 {
     .HomeMUN-bg
@@ -33,6 +59,7 @@
     height: 600vh;
 }
 }
+
 @media only screen and (max-width:400px){
     .HomeMUN-bg
     {
@@ -40,6 +67,7 @@
     }
 }
 @media only screen and (max-width:350px)
+
 {
     .HomeMUN-bg
 {
