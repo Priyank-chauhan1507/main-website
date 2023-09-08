@@ -499,7 +499,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     }}
                     name="first_preference"
                     className="Portfolio_options"
-                    placeholder="Select Committee 1"
+                    placeholder="None"
                     // value={user.first_preference}
                     onChange={handleChange1}
                     required
@@ -526,7 +526,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                   <Select
                     name="first_preference_choice_one"
                     className="Portfolio_options1"
-                    placeholder="Preference 1"
+                    placeholder=""
                     // value={user.first_preference_choice_one}
                     onChange={handleChange11}
                     required
@@ -547,7 +547,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                   <Select
                     name="first_preference_choice_two"
                     className="Portfolio_options"
-                    placeholder="Preference 2"
+                    placeholder=""
                     // value={user.first_preference_choice_two}
                     onChange={handleChange12}
                     required
@@ -567,7 +567,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                   <Select
                     name="first_preference_choice_three"
                     className="Portfolio_options"
-                    placeholder="Preference 3"
+                    placeholder=""
                     // value={user.first_preference_choice_three}
                     onChange={handleChange13}
                     required
@@ -587,12 +587,14 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
             <div className="Portfolio1">
               <div className="Portfoliohead">PORTFOLIO 2</div>
               <div className="Portfoliosubhead">
-                <div>
+                <div className="gap_set">
+                 <div>
+
                   Select a committee
                   <Select
                     name="second_preference"
                     className="Portfolio_options"
-                    placeholder="Select Committee 2"
+                    placeholder="None"
                     // value={user.second_preference}
                     onChange={handleChange2}
                     required
@@ -611,13 +613,14 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     }
                     isSearchable={false}
                   />
+                 </div>
                   {choice2 && 
                   (<><div>
                   Preference 1
                   <Select
                     name="second_preference_choice_one"
                     className="Portfolio_options1"
-                    placeholder="Preference 1"
+                    placeholder=""
                     // value={user.second_preference_choice_one}
                     onChange={handleChange21}
                     required
@@ -637,7 +640,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                   <Select
                     name="second_preference_choice_two"
                     className="Portfolio_options"
-                    placeholder="Preference 2"
+                    placeholder=""
                     // value={user.second_preference_choice_two}
                     onChange={handleChange22}
                     required
@@ -657,7 +660,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                   <Select
                     name="second_preference_choice_three"
                     className="Portfolio_options"
-                    placeholder="Preference 3"
+                    placeholder=""
                     // value={user.second_preference_choice_three}
                     onChange={handleChange23}
                     required

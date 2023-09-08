@@ -38,7 +38,7 @@ line-height: 162.2%; /* 22.708px */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin:0 10vw 0 10vw;
+    margin:0 16vw;
 }
 .Portfoliotext2
 {
@@ -50,7 +50,7 @@ font-weight: 400;
 line-height: 162.2%;
 }
 .Portfolio1{
-    width:30vw;
+    width:25vw;
 }
 
 .RegistrationMain
@@ -111,11 +111,18 @@ margin-top: -2vh;
     margin-top: 1vh;
     display: flex;
     flex-direction: column;
-    // gap:3vh;
+    gap:1vh;
     // background-color: #304d7f;
+}
+
+.gap_set{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
 .Portfolio_options{
     background-color: #304d7f;
+    font-family: 'Roboto',sans-serif;
 }
 .sub-button{
     display: flex;
@@ -147,7 +154,7 @@ margin-top: -2vh;
 .MobileBG{
     display:block;
     // width:100vw;
-    // height: 197vh;
+    height: 155vh;
 }
 .BGMunreg{
     display: none;
@@ -203,9 +210,13 @@ h3 {
 }
 .Portfoliohead{
     text-align: left;
+    margin-bottom: 1.5vh;
 }
 .Portfoliosubhead{
-    gap:7vh;
+    gap:3.5vh;
+}
+.gap_set{
+    gap:3.5vh;
 }
 .DelegateApp1{
     margin-top: 3vh;
@@ -220,6 +231,9 @@ h3 {
     .submitbtn {
         padding: 5px 18px;
         font-size:medium;
+    }
+    .MobileBG{
+        height: 160vh;
     }
 }
 
