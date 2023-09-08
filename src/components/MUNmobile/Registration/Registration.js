@@ -5,6 +5,7 @@ import Navbar from '../../EventsNavbar/Eventsnavbar';
 import BGimg from '../../../assests/MUNmobilebg.png';
 import Select from "react-select";
 import BgMunReg from "../../../assests/bgmunreg.webp";
+import { Button } from 'antd';
 
 
 const Portfolio = [ 
@@ -387,14 +388,18 @@ const UNGA=[
                     </div>
                 </div>
             </div>
-                </div>  
+                </div>
+                <div className="portfolio">
             <div className="Portfolio1">
                 <div className="Portfoliohead">
                     PORTFOLIO 1
                 </div>
                 <div className="Portfoliosubhead">
+                  <div>
                 Select a committee
-                <Select
+                <Select styles={{
+                  backgroundColor:"rgb(48, 77, 127)"
+                }}
                   className="Portfolio_options"
                   placeholder="Select Portfolio 1"
                   value={user.selectedOption}
@@ -403,6 +408,8 @@ const UNGA=[
                   // styles={customStyles}
                   options={Portfolio}
                 />
+                </div>
+                <div>
                 Preference 1
                 <Select
                   className="Portfolio_options1"
@@ -413,6 +420,8 @@ const UNGA=[
                   // styles={customStyles}
                   options={UNGA}
                 />
+                </div>
+                <div>
                 Preference 2
                 <Select
                   className="Portfolio_options"
@@ -423,6 +432,8 @@ const UNGA=[
                   // styles={customStyles}
                   options={AIPPM}
                 />
+                </div>
+                <div>
                 Preference 3
                 <Select
                   className="Portfolio_options"
@@ -433,6 +444,7 @@ const UNGA=[
                   // styles={customStyles}
                   options={Historic}
                 />
+                </div>
               
                 </div>
             </div>
@@ -441,6 +453,7 @@ const UNGA=[
                     PORTFOLIO 2
                 </div>
                 <div className="Portfoliosubhead">
+                  <div>
                 Select a committee
                 <Select
                   className="Portfolio_options"
@@ -451,6 +464,8 @@ const UNGA=[
                   // styles={customStyles}
                   options={UNGA}
                 />
+                </div>
+                <div>
                 Preference 1
                 <Select
                   className="Portfolio_options1"
@@ -461,6 +476,8 @@ const UNGA=[
                   // styles={customStyles}
                   options={Portfolio}
                 />
+                </div>
+                <div>
                 Preference 2
                 <Select
                   className="Portfolio_options"
@@ -471,6 +488,8 @@ const UNGA=[
                   // styles={customStyles}
                   options={AIPPM}
                 />
+                </div>
+                <div>
                 Preference 3
                 <Select
                   className="Portfolio_options"
@@ -481,9 +500,14 @@ const UNGA=[
                   // styles={customStyles}
                   options={Historic}
                 />
+                </div>
               
                 </div>
             </div>
+            </div>
+            <div className="sub-button">
+              <Button className="subbutton">Submit</Button>
+              </div>  
 
             {/* <div className='btn-div'>
                 <button className='submitbtn' type='submit' value='Submit'>SUBMIT</button>
