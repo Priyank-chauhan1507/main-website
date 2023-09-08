@@ -16,6 +16,30 @@ const Portfolio = [
     value: Portfolio,
     label: Portfolio,
   }));
+
+const Portfolio1 = [ 
+    "ALL INDIA POLITICAL PARTY MEET (AIPPM)",
+    "INDIAN WAR CABINET (HISTORIC COMMITTEE)"
+  ].map((Portfolio1) => ({
+    value: Portfolio,
+    label: Portfolio,
+  }));
+
+const Portfolio2 = [ 
+    "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
+    "INDIAN WAR CABINET (HISTORIC COMMITTEE)"
+  ].map((Portfolio2) => ({
+    value: Portfolio,
+    label: Portfolio,
+  }));
+
+  const Portfolio3 = [ 
+    "ALL INDIA POLITICAL PARTY MEET (AIPPM)",
+    "INDIAN WAR CABINET (HISTORIC COMMITTEE)"
+  ].map((Portfolio3) => ({
+    value: Portfolio,
+    label: Portfolio,
+  }));
 const UNGA=[
     "Afghanistan",
     "Albania",
@@ -347,18 +371,33 @@ const UNGA=[
     label: Historic,
   }));
   export default function MUNmobileregistration() {
+    const[choice1,Setchoice1] = useState(false);
+    const[choice2,Setchoice2] = useState(false);
+    const[choice3,Setchoice3] = useState(false);
       const [user, setUser] = useState({
-        UNGA: "",
-        
+        committee1: "",
+        pref1: "",
+        pref2: "",
+        pref3: "",
+        committee2: "",
+        preff1: "",
+        preff2: "",
+        preff3: "",
       });
       const clearInput = () => {
         setUser({
-          UNGA: "",
-         
+          committee1: "",
+          pref1: "",
+          pref2: "",
+          pref3: "",
+          committee2: "",
+          preff1: "",
+          preff2: "",
+          preff3: "",
         });
       };
-      const handleChange1 = (state) => {
-        setUser({ ...user, UNGA: UNGA?.value });
+      const handleChange1 = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.value });
       };
       return (
         <div>
@@ -400,9 +439,11 @@ const UNGA=[
                 <Select styles={{
                   backgroundColor:"rgb(48, 77, 127)"
                 }}
+                <Select
+                  name='committee1'
                   className="Portfolio_options"
-                  placeholder="Select Portfolio 1"
-                  value={user.selectedOption}
+                  placeholder="Select Committee 1"
+                  value={user.committee1}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
@@ -412,9 +453,10 @@ const UNGA=[
                 <div>
                 Preference 1
                 <Select
+                name='pref1'
                   className="Portfolio_options1"
                   placeholder="Preference 1"
-                  value={user.selectedOption}
+                  value={user.pref1}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
@@ -424,9 +466,10 @@ const UNGA=[
                 <div>
                 Preference 2
                 <Select
+                name='pref2'
                   className="Portfolio_options"
                   placeholder="Preference 2"
-                  value={user.selectedOption}
+                  value={user.pref2}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
@@ -436,9 +479,10 @@ const UNGA=[
                 <div>
                 Preference 3
                 <Select
+                name='pref3'
                   className="Portfolio_options"
                   placeholder="Preference 3"
-                  value={user.selectedOption}
+                  value={user.pref3}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
@@ -455,10 +499,12 @@ const UNGA=[
                 <div className="Portfoliosubhead">
                   <div>
                 Select a committee
-                <Select
+                {user.committee1 === "" &&
+                (<Select
+                name='committee2'
                   className="Portfolio_options"
-                  placeholder="Select Portfolio 2"
-                  value={user.selectedOption}
+                  placeholder="Select Committee 2"
+                  value={user.committee2}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
@@ -466,11 +512,48 @@ const UNGA=[
                 />
                 </div>
                 <div>
+                  options={Portfolio}
+                />)}
+                {user.committee1 === "UNITED NATIONS GENERAL ASSEMBLY (UNGA)" &&
+                (<Select
+                  name='committee2'
+                  className="Portfolio_options"
+                  placeholder="Select Committee 2"
+                  value={user.committee2}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={Portfolio1}
+                />)}
+                {user.committee1 === "ALL INDIA POLITICAL PARTY MEET (AIPPM)" &&
+                (<Select
+                  name='committee2'
+                  className="Portfolio_options"
+                  placeholder="Select Committee 2"
+                  value={user.committee2}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={Portfolio2}
+                />)}
+                {user.committee1 === "INDIAN WAR CABINET (HISTORIC COMMITTEE)" &&
+                (<Select
+                  name='committee2'
+                  className="Portfolio_options"
+                  placeholder="Select Committee 2"
+                  value={user.committee2}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={Portfolio3}
+                />)}
+                
                 Preference 1
                 <Select
+                name='preff1'
                   className="Portfolio_options1"
                   placeholder="Preference 1"
-                  value={user.selectedOption}
+                  value={user.preff1}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
@@ -480,9 +563,10 @@ const UNGA=[
                 <div>
                 Preference 2
                 <Select
+                name='preff1'
                   className="Portfolio_options"
                   placeholder="Preference 2"
-                  value={user.selectedOption}
+                  value={user.preff2}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
@@ -492,9 +576,10 @@ const UNGA=[
                 <div>
                 Preference 3
                 <Select
+                name='preff1'
                   className="Portfolio_options"
                   placeholder="Preference 3"
-                  value={user.selectedOption}
+                  value={user.preff3}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
