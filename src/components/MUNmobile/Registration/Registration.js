@@ -1,8 +1,10 @@
 import React,{useState, useEffect} from 'react';
 import "./Registration.scss";
-import Navbar from '../../EventsNavbar/MobEventnavbar';
+// import Navbar from '../../EventsNavbar/MobEventnavbar';
+import Navbar from '../../EventsNavbar/Eventsnavbar';
 import BGimg from '../../../assests/MUNmobilebg.png';
 import Select from "react-select";
+import BgMunReg from "../../../assests/bgmunreg.webp";
 
 
 const p1 = [ 
@@ -163,8 +165,11 @@ const UNGA=[
       };
       return (
         <div>
+          <div className="bgImg">
             <img src={BGimg} className='MobileBG' alt=''/>
-            <Navbar />
+            <img src={BgMunReg} className='BGMunreg' alt=''/>
+            </div>
+            <Navbar  color="transparent"/>
             <div className="RegistrationMain">
               <div className="RegSmall">
             <div className="IRMUNmob">
