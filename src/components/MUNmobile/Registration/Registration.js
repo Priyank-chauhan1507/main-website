@@ -176,6 +176,7 @@ const UNGA = [
   value: UNGA,
   label: UNGA,
 }));
+
 const AIPPM = [
   "Amit Shah",
   "Jyotiraditya Scindia",
