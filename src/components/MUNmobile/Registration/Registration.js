@@ -489,7 +489,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
             <div className="Portfolio1">
               <div className="Portfoliohead">PORTFOLIO 1</div>
               <div className="Portfoliosubhead">
-                <div>
+                <div className="selectcommittee">
                   Select a committee
                   <Select
                     styles={{
