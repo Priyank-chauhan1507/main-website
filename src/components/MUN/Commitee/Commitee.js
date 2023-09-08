@@ -4,7 +4,8 @@ import UNGA from "../../../assests/UNGAnew.png";
 import AIPPM from "../../../assests/AIPPMnew.png";
 import Historic from "../../../assests/Historicnew.png";
 import ArrowMUN from "../../../assests/ArrowMUN.png";
-import "./Commitee.css"
+import "./Commitee.css";
+import { Link, useNavigate } from "react-router-dom";
 
 function Commitee() {
   return (
@@ -16,29 +17,32 @@ function Commitee() {
       <div className="CommitteeBoxs">        
       <div className="CommitteeBox">
         <img src={UNGA} className="CommitteeBoxImg1" alt="" />
+        <Link to="/muninfo_page1" >
         <button className="CommitteeBoxBtn">
           <div className="CommitteeBoxBtnText">More Info</div>  
           <img src={ArrowMUN} alt="" />
-
         </button>
+        </Link>
       </div>
       <div className="CommitteeBox">
         <img src={AIPPM} className="CommitteeBoxImg2" alt="" />
+        <Link to="/muninfo_page2" >
         <button className="CommitteeBoxBtn">
           <div className="CommitteeBoxBtnText">More Info</div>  
           <img src={ArrowMUN} alt="" />
-
         </button>
+        </Link>
       </div>
       <div className="CommitteeBox">
         <img src={Historic} className="CommitteeBoxImg3" alt="" />
+        <Link to="/muninfo_page3" >
         <button className="CommitteeBoxBtn">
           <div className="CommitteeBoxBtnText">More Info</div>  
           <img src={ArrowMUN} alt="" />
-
         </button>
+        </Link>
       </div>
-      </div>
+    </div>  
     </div>
   )
 }

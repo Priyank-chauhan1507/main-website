@@ -23,8 +23,12 @@ export default function Moreinfopage1() {
             <div className="info_content">
             <div className="info_text">
                 <h2 className="info_heading">ALL INDIA POLITICAL PARTY MEET ( AIPPM)</h2>
-                <p className="muninfo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit</p>
-                <p className="mobilemuninfo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec.</p>
+                <p className="muninfo-text">AIPPM is a simulated event that brings together delegates from various Indian political parties to discuss and debate key national and international issues. Modelled after the real-life political landscape of India, AIPPM provides a platform for participants to engage in lively debates, negotiations, and policy-making, aiming to find common ground and develop effective solutions to address the country's most pressing concerns.
+                <br />
+                AGENDA: “Deliberation over the ongoing ethnic clashes in Manipur”</p>
+                <p className="mobilemuninfo-text">AIPPM is a simulated event that brings together delegates from various Indian political parties to discuss and debate key national and international issues. Modelled after the real-life political landscape of India, AIPPM provides a platform for participants to engage in lively debates, negotiations, and policy-making, aiming to find common ground and develop effective solutions to address the country's most pressing concerns.
+                <br />
+                AGENDA: “Deliberation over the ongoing ethnic clashes in Manipur”</p>
                 <div className="portfolio_button">
                 <button className='info_button'>PORTFOLIO MATRIX</button>
                 </div>

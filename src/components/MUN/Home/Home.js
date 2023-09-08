@@ -14,7 +14,7 @@ import MUNmob from  "../../../components/MUNmobile/HomeMun/HomeMUN";
 function Home() {
   return (
     <>    <div className="MUN-bg">
-      {/* <img src={BG} className="MUN-Bg" alt="" /> */}
+      <img src={BG} className="MUN-Bg" alt="" />
       {/* <img src={BG_mob} className="MUN-Bg mun_mob_bg" alt="" /> */}
       <Navbar color="transparent"/>
         <div className="top-MUN-img">

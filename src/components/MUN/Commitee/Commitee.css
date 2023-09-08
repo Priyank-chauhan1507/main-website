@@ -61,4 +61,10 @@
   font-weight: 400;
   line-height: normal;
   align-items: center;
+  right: 5vw;
+}
+@media screen and (max-width:1000px) {
+  .CommitteeBoxBtnText{
+    font-size: 1.5vw;
+  }
 }
