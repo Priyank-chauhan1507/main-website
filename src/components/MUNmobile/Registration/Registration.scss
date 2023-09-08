@@ -8,6 +8,15 @@
 // .bgImg{
 //     // position: relative;
 // }
+.mun-register{
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.mun-register::-webkit-scrollbar{
+    display: none;
+}
 
 .MobileBG{
     display: none;
