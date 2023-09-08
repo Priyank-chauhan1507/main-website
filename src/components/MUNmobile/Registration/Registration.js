@@ -22,7 +22,7 @@ const Portfolio = [
 const Portfolio1 = [
   "ALL INDIA POLITICAL PARTY MEET (AIPPM)",
   "INDIAN WAR CABINET (HISTORIC COMMITTEE)",
-].map((Portfolio1) => ({
+].map((Portfolio) => ({
   value: Portfolio,
   label: Portfolio,
 }));
@@ -30,15 +30,15 @@ const Portfolio1 = [
 const Portfolio2 = [
   "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
   "INDIAN WAR CABINET (HISTORIC COMMITTEE)",
-].map((Portfolio2) => ({
+].map((Portfolio) => ({
   value: Portfolio,
   label: Portfolio,
 }));
 
 const Portfolio3 = [
+  "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
   "ALL INDIA POLITICAL PARTY MEET (AIPPM)",
-  "INDIAN WAR CABINET (HISTORIC COMMITTEE)",
-].map((Portfolio3) => ({
+].map((Portfolio) => ({
   value: Portfolio,
   label: Portfolio,
 }));
@@ -373,8 +373,8 @@ const Historic = [
   label: Historic,
 }));
 export default function MUNmobileregistration({ userDetails, fetchMuns }) {
-  // const [choice1, Setchoice1] = useState(false);
-  // const [choice2, Setchoice2] = useState(false);
+  const [choice1, Setchoice1] = useState(false);
+  const [choice2, Setchoice2] = useState(false);
   // const [choice3, Setchoice3] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -395,6 +395,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
 
   const handleChange1 = (first_preference) => {
     setUser({ ...user, first_preference: first_preference?.value });
+    Setchoice1(true);
   };
   const handleChange11 = (first_preference_choice_one) => {
     setUser({
@@ -416,6 +417,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
   };
   const handleChange2 = (second_preference) => {
     setUser({ ...user, second_preference: second_preference?.value });
+    Setchoice2(true);
   };
   const handleChange21 = (second_preference_choice_one) => {
     setUser({
@@ -489,7 +491,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
             <div className="Portfolio1">
               <div className="Portfoliohead">PORTFOLIO 1</div>
               <div className="Portfoliosubhead">
-                <div>
+                <div className="selectcommittee">
                   Select a committee
                   <Select
                     styles={{
@@ -498,7 +500,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     name="first_preference"
                     className="Portfolio_options"
                     placeholder="Select Committee 1"
-                    value={user.first_preference}
+                    // value={user.first_preference}
                     onChange={handleChange1}
                     required
                     // styles={customStyles}
@@ -517,17 +519,26 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     isSearchable={false}
                   />
                 </div>
-                <div>
+                {choice1 && 
+                (
+                <><div>
                   Preference 1
                   <Select
                     name="first_preference_choice_one"
                     className="Portfolio_options1"
                     placeholder="Preference 1"
-                    value={user.first_preference_choice_one}
+                    // value={user.first_preference_choice_one}
                     onChange={handleChange11}
                     required
                     // styles={customStyles}
-                    options={UNGA}
+                    options={
+                      user.first_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.first_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM : Historic
+                    }
                     isSearchable={false}
                   />
                 </div>
@@ -537,11 +548,17 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     name="first_preference_choice_two"
                     className="Portfolio_options"
                     placeholder="Preference 2"
-                    value={user.first_preference_choice_two}
+                    // value={user.first_preference_choice_two}
                     onChange={handleChange12}
                     required
                     // styles={customStyles}
-                    options={AIPPM}
+                    options={user.first_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.first_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
                     isSearchable={false}
                   />
                 </div>
@@ -551,14 +568,20 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     name="first_preference_choice_three"
                     className="Portfolio_options"
                     placeholder="Preference 3"
-                    value={user.first_preference_choice_three}
+                    // value={user.first_preference_choice_three}
                     onChange={handleChange13}
                     required
                     // styles={customStyles}
-                    options={Historic}
+                    options={user.first_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.first_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
                     isSearchable={false}
                   />
-                </div>
+                </div></>)}
               </div>
             </div>
             <div className="Portfolio1">
@@ -570,7 +593,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     name="second_preference"
                     className="Portfolio_options"
                     placeholder="Select Committee 2"
-                    value={user.second_preference}
+                    // value={user.second_preference}
                     onChange={handleChange2}
                     required
                     // styles={customStyles}
@@ -588,16 +611,24 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     }
                     isSearchable={false}
                   />
+                  {choice2 && 
+                  (<><div>
                   Preference 1
                   <Select
                     name="second_preference_choice_one"
                     className="Portfolio_options1"
                     placeholder="Preference 1"
-                    value={user.second_preference_choice_one}
+                    // value={user.second_preference_choice_one}
                     onChange={handleChange21}
                     required
                     // styles={customStyles}
-                    options={Portfolio}
+                    options={user.second_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.second_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
                     isSearchable={false}
                   />
                 </div>
@@ -607,11 +638,17 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     name="second_preference_choice_two"
                     className="Portfolio_options"
                     placeholder="Preference 2"
-                    value={user.second_preference_choice_two}
+                    // value={user.second_preference_choice_two}
                     onChange={handleChange22}
                     required
                     // styles={customStyles}
-                    options={AIPPM}
+                    options={user.second_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.second_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
                     isSearchable={false}
                   />
                 </div>
@@ -621,12 +658,19 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     name="second_preference_choice_three"
                     className="Portfolio_options"
                     placeholder="Preference 3"
-                    value={user.second_preference_choice_three}
+                    // value={user.second_preference_choice_three}
                     onChange={handleChange23}
                     required
-                    options={Historic}
+                    options={user.second_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.second_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
                     isSearchable={false}
                   />
+                </div></>)}
                 </div>
               </div>
             </div>
