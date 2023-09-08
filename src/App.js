@@ -47,6 +47,7 @@ import Page3 from "./components/Merch_page/Page3/Page3";
 import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopage1";
 import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopage2";
 import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
+import Sponsers from "./components/Sponsers/Sponsers"
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 ReactGA4.initialize("G-FG974BLVDN");
@@ -111,6 +112,7 @@ function App(props) {
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
+          <Route exact={true} path="/sponsers" element={<Sponsers/>} />
         </Routes>
       </Router>
     </>
