@@ -7,13 +7,13 @@ import Select from "react-select";
 import BgMunReg from "../../../assests/bgmunreg.webp";
 
 
-const p1 = [ 
+const Portfolio = [ 
     "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
     "ALL INDIA POLITICAL PARTY MEET (AIPPM)",
     "INDIAN WAR CABINET (HISTORIC COMMITTEE)"
-  ].map((p1) => ({
-    value: p1,
-    label: p1,
+  ].map((Portfolio) => ({
+    value: Portfolio,
+    label: Portfolio,
   }));
 const UNGA=[
     "Afghanistan",
@@ -149,6 +149,202 @@ const UNGA=[
     value: UNGA,
     label: UNGA,
   }));  
+  const AIPPM=[
+    "Amit Shah",
+    "Jyotiraditya Scindia",
+    "Nitin Gadkari",
+    "Ravi Shankar Prasad",
+    "Dr Harsh Vardhan",
+    "Vasundhara Raje",
+    "RAMESH BIDHURI",
+    "MAHENDRA NATH PANDEY",
+    "KRISHAN PAL",
+    "VIRENDRA KUMAR",
+    "DHARMENDRA PRADHAN",
+    "DR. RAMESH POKHRIYAL",
+    "YOGI ADITYA NATH",
+    "MEENAKSHI LEKHI",
+    "Kiren Rijiju",
+    "Syed Shahnawaz Hussain",
+    "Piyush Goyal",
+    "Mukhtar Abbas Naqvi",
+    "Ashwini Vaishnav",
+    "Shivraj Singh Chauhan",
+    "Sudhanshu Trivedi",
+    "Anandiben M Patel",
+    "Anju Bala",
+    "Subramanyam Jaishankar",
+    "Manoharlal Khattar",
+    "Anurag Singh Thakur",
+    "Manoj Tiwari",
+    "Kirron Kher",
+    "Mansukh Mandaviya",
+    "Rajnath Singh",
+    "Narayana Swamy Abbaiah",
+    "Rajendra Agrawal",
+    "S.S. Ahluwalia",
+    "Guharam Ajgalley",
+    "Mangal Suresh Angadi",
+    "Bache Gowda B.N.",
+    "Prof. S.P. Singh Baghel",
+    "Sanjay Kumar Bandi",
+    "John Barla",
+    "Sudarshan Bhagat",
+    "Bhagirath Choudhary",
+    "Sachin Pilot",
+    "Salman Khurshid",
+    "Dr Manmohan Singh",
+    "Mallikarjun Kharge",
+    "Sonia Gandhi",
+    "Rahul Gandhi",
+    "Ambika Soni",
+    "GAURAV GOGOI",
+    "Dr Shashi Tharoor",
+    "Meira Kumar",
+    " P. Bhattacharya",
+    "G.C. Chandrashekhar",
+    "P. Chidambaram",
+    "Neeraj Dangi",
+    "Manish Tewari",
+    "Kamal Nath",
+    "Manish Tewari",
+    "KTS Tulsi",
+    "Shaktisinh Gohil",
+    "Arvind Kejriwal",
+    "Satyendar Jain",
+    "Sanjay Singh",
+    "Gopal Rai",
+    "RAGHAV CHADHA",
+    "Sanjay Singh",
+    "Atishi",
+    "Bhagwant Mann",
+    "Tejashvi Yadav",
+    "Misa Bharti",
+    "Rabri Devi",
+    "Manoj Jha",
+    "Akhilesh Yadav",
+    "AZAM KHAN",
+    "UMAR ALI KHAN",
+    "Ram Gopal Yadav",
+    "Nitish Kumar",
+    "Sharad Pawar",
+    "Ajit Pawar",
+    "Praful Patel",
+    "Kumari Mayawati",
+    "Satish Mishra",
+    "Sangeeta Azad",
+    "Girish Chandra",
+    "Sanjay Raut",
+    "Uddhav Thackeray",
+    "Vinayak Raut",
+    "MAMTA BANERJEE",
+    "Derek O'Brien",
+    "Asaddudin Owaisi",
+    "Imtiaz Jaleel",
+    "Pashupati Kumar Paras",
+    "Lok Janshakti Party",
+    "Sitaram Yechury",
+    "Brinda Karat",
+    "Pinaki Mishra",
+    "Bhartruhari Mahtab",
+    "Yogendra Yadav",
+    "N K Premachandran",
+    "Captain Amarinder Singh",
+    "Chirag Paswan",
+    "Raj Thackeray",
+    "Agatha Sangma",
+    "K R Reddy",
+    "Dayanidhi Maran",
+    "Kanimozhi Karunanidhi",
+    "Anupriya Patel",
+    "Harsimrat Kaur Badal",
+    "JaganMohan Reddy",
+    "Naba Kumar Sarania",
+    "Ranjan Gogoi",
+    "Sumalatha Ambareesh",
+    "naveen Patnaik",
+    "K. Chandrashekar Rao",
+    "Jagan Mohan Reddy",
+    "Pinarayi Vijayan",
+    "M. K. Stalin",
+    "H. D. Kumaraswamy",
+    "N. Chandrababu Naidu",
+    "Pawan Kalyan",
+    "K. J. George",
+    "Akhilesh Yadav",
+    "Sharad Pawar",
+    "Arvind Kejriwal",
+    "K. J. Alphons",
+    "Farooq Abdullah",
+    "Raghav Chadha",
+    "H. D. Deve Gowda",
+    "N. Rangasamy",
+    "Mehbooba Mufti",
+    "H. Vasanthakumar",
+    "M. M. Hassan",
+    "Jai Ram Thakur",
+    "Nitish Kumar",
+    "Jagadish Shettar",
+    "P. T. R. Palanivel Rajan",
+    "P. K. Kunhalikutty",
+    "K. K. Shailaja",
+    "T. R. Baalu",
+    "K. Muraleedharan",
+    "N. K. Premachandran",
+    ].map((AIPPM) => ({
+    value: AIPPM,
+    label: AIPPM,
+  }));
+  const Historic=[
+    "Indira Gandhi",
+    "Sanjay Gandhi",
+    "S. Swaran Singh",
+    "Jagjivan Ram",
+    "Kodardas Kalidas Shah",
+    "Raj Bahadur",
+    "Chidambaram Subramaniam",
+    "Yashwantrao Chavan",
+    "Hemavati Nandan Bahuguna",
+    "Nandini Satpathy",
+    "DP Chatopadhyay",
+    "Mohan Dhariya",
+    "KC Pant",
+    "Ram Niwas Mirdha",
+    "KR Ganesh",
+    "General Manoj Mukund Naravane",
+    "General Bipin Rawat (Late)",
+    "General Vipin Rawat (Late)",
+    "Lieutenant General Ranbir Singh",
+    "General Dalbir Singh Suhag (Retired)",
+    "Lieutenant General KJS Dhillon",
+    "Lieutenant General Abhay Krishna",
+    "Lieutenant General Anil Chauhan",
+    "Lieutenant General Nav K Khanduri",
+    "Lieutenant General Pradeep Chandran Nair",
+    "Admiral Sunil Lanba (Retired)",
+    "Admiral Robin Dhowan (Retired)",
+    "Admiral R. Hari Kumar (Retired)",
+    "Admiral D. K. Joshi (Retired)",
+    "Admiral Karambir Singh",
+    "Admiral Sureesh Mehta (Retired)",
+    "Admiral Vishnu Bhagwat (Retired)",
+    "Admiral L. Ramdas (Retired)",
+    "Admiral S. Lanba (Retired)",
+    "Admiral K. R. Nair (Retired)",
+    "Air Chief Marshal Rakesh Kumar Singh Bhadauria",
+    "Air Chief Marshal Birender Singh Dhanoa (Retired)",
+    "Air Marshal RKS Bhadauria (Retired)",
+    "Air Marshal Arjan Singh (Late)",
+    "Air Marshal N. A. K. Browne (Retired)",
+    "Air Marshal B. S. Dhanoa (Retired)",
+    "Air Marshal R. K. S. Bhadauria",
+    "Air Marshal HS Arora",
+    "Air Marshal VR Chaudhari",
+    "Air Marshal Rajesh Kumar (Retired)",
+    ].map((Historic) => ({
+    value: Historic,
+    label: Historic,
+  }));
   export default function MUNmobileregistration() {
       const [user, setUser] = useState({
         UNGA: "",
@@ -199,13 +395,91 @@ const UNGA=[
                 <div className="Portfoliosubhead">
                 Select a committee
                 <Select
-                  className="UNGA_options"
-                  placeholder="Select"
+                  className="Portfolio_options"
+                  placeholder="Select Portfolio 1"
+                  value={user.selectedOption}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={Portfolio}
+                />
+                Preference 1
+                <Select
+                  className="Portfolio_options1"
+                  placeholder="Preference 1"
                   value={user.selectedOption}
                   onChange={handleChange1}
                   required
                   // styles={customStyles}
                   options={UNGA}
+                />
+                Preference 2
+                <Select
+                  className="Portfolio_options"
+                  placeholder="Preference 2"
+                  value={user.selectedOption}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={AIPPM}
+                />
+                Preference 3
+                <Select
+                  className="Portfolio_options"
+                  placeholder="Preference 3"
+                  value={user.selectedOption}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={Historic}
+                />
+              
+                </div>
+            </div>
+            <div className="Portfolio1">
+                <div className="Portfoliohead">
+                    PORTFOLIO 2
+                </div>
+                <div className="Portfoliosubhead">
+                Select a committee
+                <Select
+                  className="Portfolio_options"
+                  placeholder="Select Portfolio 2"
+                  value={user.selectedOption}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={UNGA}
+                />
+                Preference 1
+                <Select
+                  className="Portfolio_options1"
+                  placeholder="Preference 1"
+                  value={user.selectedOption}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={Portfolio}
+                />
+                Preference 2
+                <Select
+                  className="Portfolio_options"
+                  placeholder="Preference 2"
+                  value={user.selectedOption}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={AIPPM}
+                />
+                Preference 3
+                <Select
+                  className="Portfolio_options"
+                  placeholder="Preference 3"
+                  value={user.selectedOption}
+                  onChange={handleChange1}
+                  required
+                  // styles={customStyles}
+                  options={Historic}
                 />
               
                 </div>
