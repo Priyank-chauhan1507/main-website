@@ -14,6 +14,7 @@
     position: absolute;
     z-index:-1;
     width:100vw;
+    height: 100%;
 }
 
 .topImgMUN
@@ -171,7 +172,7 @@ letter-spacing: 1px;
         margin-top: 13vh;
     }
 }
-@media only screen and (max-width:850px)
+@media only screen and (max-width:768px)
 {
     
     .prizesWorth
@@ -179,9 +180,9 @@ letter-spacing: 1px;
         margin-top: 4vh;
     }
 
-    .MUN-Bg {
+    /* .MUN-Bg {
         display: none !important;
-    }
+    } */
 
     .mun_mob_bg {
         display: block !important;

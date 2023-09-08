@@ -4,6 +4,23 @@
     width: 100vw;
     margin-top:10vh;
 }
+.judge1-img{
+    height:58vh;
+    border-radius: 10px;
+}
+.judge2-img{
+    height:58vh;
+    border-radius: 10px;
+}
+.judge3-img{
+    height:58vh;
+    border-radius: 10px;
+}
+.judge1-discription{
+    color: #ffffff;
+    text-align: center;
+}
+
 @media only screen and (max-width:650px)
 {
     .CarouselCommittee
@@ -24,11 +41,35 @@
 {
     height: 65vh;
 }
+.judge1-img{
+    height:48vh;
+    border-radius: 10px;
+}
+.judge2-img{
+    height:48vh;
+    border-radius: 10px;
+}
+.judge3-img{
+    height:48vh;
+    border-radius: 10px;
+}
 }
 @media only screen and (max-width:350px)
 {
     .CarouselCommittee
 {
     height: 51vh;
+}
+.judge1-img{
+    height:40vh;
+    border-radius: 10px;
+}
+.judge2-img{
+    height:40vh;
+    border-radius: 10px;
+}
+.judge3-img{
+    height:40vh;
+    border-radius: 10px;
 }
 }

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios"
 import "./Registration.scss";
 // import Navbar from '../../EventsNavbar/MobEventnavbar';
 import Navbar from "../../EventsNavbar/Eventsnavbar";
 import BGimg from "../../../assests/MUNmobilebg.png";
 import Select from "react-select";
 import BgMunReg from "../../../assests/bgmunreg.webp";
-import { Button } from 'antd';
+import { Button } from "antd";
+import CircularProgress from "@mui/material/CircularProgress";
+import { fetchMun } from "../../User/UserActions";
 
 const Portfolio = [
   "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
@@ -19,7 +22,7 @@ const Portfolio = [
 const Portfolio1 = [
   "ALL INDIA POLITICAL PARTY MEET (AIPPM)",
   "INDIAN WAR CABINET (HISTORIC COMMITTEE)",
-].map((Portfolio1) => ({
+].map((Portfolio) => ({
   value: Portfolio,
   label: Portfolio,
 }));
@@ -27,15 +30,15 @@ const Portfolio1 = [
 const Portfolio2 = [
   "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
   "INDIAN WAR CABINET (HISTORIC COMMITTEE)",
-].map((Portfolio2) => ({
+].map((Portfolio) => ({
   value: Portfolio,
   label: Portfolio,
 }));
 
 const Portfolio3 = [
+  "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
   "ALL INDIA POLITICAL PARTY MEET (AIPPM)",
-  "INDIAN WAR CABINET (HISTORIC COMMITTEE)",
-].map((Portfolio3) => ({
+].map((Portfolio) => ({
   value: Portfolio,
   label: Portfolio,
 }));
@@ -369,10 +372,14 @@ const Historic = [
   value: Historic,
   label: Historic,
 }));
-export default function MUNmobileregistration() {
+export default function MUNmobileregistration({ userDetails, fetchMuns }) {
   const [choice1, Setchoice1] = useState(false);
   const [choice2, Setchoice2] = useState(false);
-  const [choice3, Setchoice3] = useState(false);
+  // const [choice3, Setchoice3] = useState(false);
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const [user, setUser] = useState({
     first_preference: "",
     second_preference: "",
@@ -383,29 +390,90 @@ export default function MUNmobileregistration() {
     second_preference_choice_two: "",
     second_preference_choice_three: "",
   });
-  // const clearInput = () => {
-  //   setUser({
-  //     committee1: "",
-  //     pref1: "",
-  //     pref2: "",
-  //     pref3: "",
-  //     committee2: "",
-  //     preff1: "",
-  //     preff2: "",
-  //     preff3: "",
-  //   });
-  // };
-  const handleChange1 = (e) => {
-    setUser({ ...user, [e.target.name]: [e.target.value] });
+
+  console.log(userDetails);
+
+  const handleChange1 = (first_preference) => {
+    setUser({ ...user, first_preference: first_preference?.value });
+    Setchoice1(true);
   };
+  const handleChange11 = (first_preference_choice_one) => {
+    setUser({
+      ...user,
+      first_preference_choice_one: first_preference_choice_one?.value,
+    });
+  };
+  const handleChange12 = (first_preference_choice_two) => {
+    setUser({
+      ...user,
+      first_preference_choice_two: first_preference_choice_two?.value,
+    });
+  };
+  const handleChange13 = (first_preference_choice_three) => {
+    setUser({
+      ...user,
+      first_preference_choice_three: first_preference_choice_three?.value,
+    });
+  };
+  const handleChange2 = (second_preference) => {
+    setUser({ ...user, second_preference: second_preference?.value });
+    Setchoice2(true);
+  };
+  const handleChange21 = (second_preference_choice_one) => {
+    setUser({
+      ...user,
+      second_preference_choice_one: second_preference_choice_one?.value,
+    });
+  };
+  const handleChange22 = (second_preference_choice_two) => {
+    setUser({
+      ...user,
+      second_preference_choice_two: second_preference_choice_two?.value,
+    });
+  };
+  const handleChange23 = (second_preference_choice_three) => {
+    setUser({
+      ...user,
+      second_preference_choice_three: second_preference_choice_three?.value,
+    });
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const userresponse = {
+        // participant: userDetails?.id,
+        first_preference: user.first_preference,
+        second_preference: user.second_preference,
+        first_preference_choice_one: user.first_preference_choice_one,
+        first_preference_choice_two: user.first_preference_choice_two,
+        first_preference_choice_three: user.first_preference_choice_three,
+        second_preference_choice_one: user.second_preference_choice_one,
+        second_preference_choice_two: user.second_preference_choice_two,
+        second_preference_choice_three: user.second_preference_choice_three,
+      };
+      const response = await axios.post("/apiV1/mun", userresponse);
+      const { data } = response;
+      setLoading(false);
+      setSuccess(true);
+      fetchMuns();
+      //   navigate("/verifyemail");
+    } catch (err) {
+      setLoading(false);
+      setError(true);
+    }
+  };
+
   return (
-    <div>
+    <div className="mun-register">
       <div className="bgImg">
         <img src={BGimg} className="MobileBG" alt="" />
         <img src={BgMunReg} className="BGMunreg" alt="" />
       </div>
       <Navbar color="transparent" />
       <div className="RegistrationMain">
+        {/* <form onSubmit={(e) => onSubmit(e)}> */}
         <div className="RegSmall">
           <div className="IRMUNmob">
             <div className="IRMUNtext">
@@ -418,170 +486,214 @@ export default function MUNmobileregistration() {
               </div>
               <div className="DelegateApp2">PORTFOLIO SELECTION</div>
             </div>
-                </div>
-                <div className="portfolio">
+          </div>
+          <div className="portfolio">
             <div className="Portfolio1">
-                <div className="Portfoliohead">
-                    PORTFOLIO 1
+              <div className="Portfoliohead">PORTFOLIO 1</div>
+              <div className="Portfoliosubhead">
+                <div className="selectcommittee">
+                  Select a committee
+                  <Select
+                    styles={{
+                      backgroundColor: "rgb(48, 77, 127)",
+                    }}
+                    name="first_preference"
+                    className="Portfolio_options"
+                    placeholder="Select Committee 1"
+                    // value={user.first_preference}
+                    onChange={handleChange1}
+                    required
+                    // styles={customStyles}
+                    options={
+                      user.second_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? Portfolio1
+                        : user.second_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? Portfolio2
+                        : user.second_preference ===
+                          "INDIAN WAR CABINET (HISTORIC COMMITTEE)"
+                        ? Portfolio3
+                        : Portfolio
+                    }
+                    isSearchable={false}
+                  />
                 </div>
-                <div className="Portfoliosubhead">
-                  <div>
-                Select a committee
-                <Select styles={{
-                  backgroundColor:"rgb(48, 77, 127)"
-                }}
-                  name='committee1'
-                  className="Portfolio_options"
-                  placeholder="Select Committee 1"
-                  value={user.committee1}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={Portfolio}
-                />
+                {choice1 && 
+                (
+                <><div>
+                  Preference 1
+                  <Select
+                    name="first_preference_choice_one"
+                    className="Portfolio_options1"
+                    placeholder="Preference 1"
+                    // value={user.first_preference_choice_one}
+                    onChange={handleChange11}
+                    required
+                    // styles={customStyles}
+                    options={
+                      user.first_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.first_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM : Historic
+                    }
+                    isSearchable={false}
+                  />
                 </div>
                 <div>
-                Preference 1
-                <Select
-                name='pref1'
-                  className="Portfolio_options1"
-                  placeholder="Preference 1"
-                  value={user.pref1}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={UNGA}
-                />
+                  Preference 2
+                  <Select
+                    name="first_preference_choice_two"
+                    className="Portfolio_options"
+                    placeholder="Preference 2"
+                    // value={user.first_preference_choice_two}
+                    onChange={handleChange12}
+                    required
+                    // styles={customStyles}
+                    options={user.first_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.first_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
+                    isSearchable={false}
+                  />
                 </div>
                 <div>
-                Preference 2
-                <Select
-                name='pref2'
-                  className="Portfolio_options"
-                  placeholder="Preference 2"
-                  value={user.pref2}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={AIPPM}
-                />
-                </div>
-                <div>
-                Preference 3
-                <Select
-                name='pref3'
-                  className="Portfolio_options"
-                  placeholder="Preference 3"
-                  value={user.pref3}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={Historic}
-                />
-                </div>
-              
-                </div>
+                  Preference 3
+                  <Select
+                    name="first_preference_choice_three"
+                    className="Portfolio_options"
+                    placeholder="Preference 3"
+                    // value={user.first_preference_choice_three}
+                    onChange={handleChange13}
+                    required
+                    // styles={customStyles}
+                    options={user.first_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.first_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
+                    isSearchable={false}
+                  />
+                </div></>)}
+              </div>
             </div>
             <div className="Portfolio1">
-                <div className="Portfoliohead">
-                    PORTFOLIO 2
-                </div>
-                <div className="Portfoliosubhead">
-                  <div>
-                Select a committee
-                {user.committee1 === "" &&
-                (<Select
-                name='committee2'
-                  className="Portfolio_options"
-                  placeholder="Select Committee 2"
-                  value={user.committee2}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={UNGA}
-                />)}
-                {user.committee1 === "UNITED NATIONS GENERAL ASSEMBLY (UNGA)" &&
-                (<Select
-                  name='committee2'
-                  className="Portfolio_options"
-                  placeholder="Select Committee 2"
-                  value={user.committee2}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={Portfolio1}
-                />)}
-                {user.committee1 === "ALL INDIA POLITICAL PARTY MEET (AIPPM)" &&
-                (<Select
-                  name='committee2'
-                  className="Portfolio_options"
-                  placeholder="Select Committee 2"
-                  value={user.committee2}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={Portfolio2}
-                />)}
-                {user.committee1 === "INDIAN WAR CABINET (HISTORIC COMMITTEE)" &&
-                (<Select
-                  name='committee2'
-                  className="Portfolio_options"
-                  placeholder="Select Committee 2"
-                  value={user.committee2}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={Portfolio3}
-                />)}
-                
-                Preference 1
-                <Select
-                name='preff1'
-                  className="Portfolio_options1"
-                  placeholder="Preference 1"
-                  value={user.preff1}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={Portfolio}
-                />
+              <div className="Portfoliohead">PORTFOLIO 2</div>
+              <div className="Portfoliosubhead">
+                <div>
+                  Select a committee
+                  <Select
+                    name="second_preference"
+                    className="Portfolio_options"
+                    placeholder="Select Committee 2"
+                    // value={user.second_preference}
+                    onChange={handleChange2}
+                    required
+                    // styles={customStyles}
+                    options={
+                      user.first_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? Portfolio1
+                        : user.first_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? Portfolio2
+                        : user.first_preference ===
+                          "INDIAN WAR CABINET (HISTORIC COMMITTEE)"
+                        ? Portfolio3
+                        : Portfolio
+                    }
+                    isSearchable={false}
+                  />
+                  {choice2 && 
+                  (<><div>
+                  Preference 1
+                  <Select
+                    name="second_preference_choice_one"
+                    className="Portfolio_options1"
+                    placeholder="Preference 1"
+                    // value={user.second_preference_choice_one}
+                    onChange={handleChange21}
+                    required
+                    // styles={customStyles}
+                    options={user.second_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.second_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
+                    isSearchable={false}
+                  />
                 </div>
                 <div>
-                Preference 2
-                <Select
-                name='preff1'
-                  className="Portfolio_options"
-                  placeholder="Preference 2"
-                  value={user.preff2}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={AIPPM}
-                />
+                  Preference 2
+                  <Select
+                    name="second_preference_choice_two"
+                    className="Portfolio_options"
+                    placeholder="Preference 2"
+                    // value={user.second_preference_choice_two}
+                    onChange={handleChange22}
+                    required
+                    // styles={customStyles}
+                    options={user.second_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.second_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
+                    isSearchable={false}
+                  />
                 </div>
                 <div>
-                Preference 3
-                <Select
-                name='preff1'
-                  className="Portfolio_options"
-                  placeholder="Preference 3"
-                  value={user.preff3}
-                  onChange={handleChange1}
-                  required
-                  // styles={customStyles}
-                  options={Historic}
-                />
+                  Preference 3
+                  <Select
+                    name="second_preference_choice_three"
+                    className="Portfolio_options"
+                    placeholder="Preference 3"
+                    // value={user.second_preference_choice_three}
+                    onChange={handleChange23}
+                    required
+                    options={user.second_preference ===
+                      "UNITED NATIONS GENERAL ASSEMBLY (UNGA)"
+                        ? UNGA
+                        : user.second_preference ===
+                          "ALL INDIA POLITICAL PARTY MEET (AIPPM)"
+                        ? AIPPM
+                        : Historic}
+                    isSearchable={false}
+                  />
+                </div></>)}
                 </div>
-              
-                </div>
+              </div>
             </div>
-            </div>
-            <div className="sub-button">
-              <Button className="subbutton">Submit</Button>
-              </div>  
+          </div>
+          <div className="sub-button">
+            <Button onSubmit={onSubmit} className="subbutton">
+              Submit
+            </Button>
           </div>
         </div>
-
       </div>
+      {success && (
+        <div className="text-success reg-now">
+          🎉 You are Registered Successsully for MUN
+        </div>
+      )}
+      {error && (
+        <div className="text-danger reg-now">
+          😓 Something went wrong please try again
+        </div>
+      )}
+
+      {/* </form> */}
+    </div>
   );
 }
