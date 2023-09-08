@@ -5,35 +5,42 @@
     width: 100vw;
     height: 780vh;
 }
-@media only screen and (max-width:650px)
+@media only screen and (max-height:1000px)
 {
     .HomeMUN-bg
 {
-    height: 750vh;
+    height: 480vh;
 }
 }
-@media only screen and (max-width:550px)
+@media only screen and (max-height:850px)
 {
     .HomeMUN-bg
 {
-    height: 720vh;
+    height: 480vh;
 }
 }
-@media only screen and (max-width:501px)
+@media only screen and (max-height:750px)
 {
     .HomeMUN-bg
 {
-    height: 680vh;
+    height: 518vh;
 }
 }
-@media only screen and (max-width:450px)
+@media only screen and (max-height:601px)
+{
+    .HomeMUN-bg
+{
+    height: 607vh;
+}
+}
+@media only screen and (max-height:550px)
 {
     .HomeMUN-bg
 {
     height: 642vh;
 }
 }
-@media only screen and (max-width:350px)
+@media only screen and (max-height:450px)
 {
     .HomeMUN-bg
 {
