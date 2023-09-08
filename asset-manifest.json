@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.f999ff3d.css",
-    "main.js": "/static/js/main.74f50af1.js",
+    "main.css": "/static/css/main.aaffe927.css",
+    "main.js": "/static/js/main.cfa357df.js",
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/eventback2.webp": "/static/media/eventback2.7bc89df549ae88406a96.webp",
     "static/media/eventback.webp": "/static/media/eventback.2f38a9cbf2069961e71f.webp",
     "static/media/Landing-page-2-1.webp": "/static/media/Landing-page-2-1.a3d9992c858b965fed61.webp",
     "static/media/CommitteeMUN.png": "/static/media/CommitteeMUN.4679133e9f4fe67fcce3.png",
     "static/media/Historicnew.png": "/static/media/Historicnew.1f33d104a3d8a28d022e.png",
+    "static/media/bgmunreg.webp": "/static/media/bgmunreg.e53cd90f1e42583ae97e.webp",
     "static/media/Regback.webp": "/static/media/Regback.b51727b6557a74fd24b8.webp",
     "static/media/thomso-unscreen.gif": "/static/media/thomso-unscreen.d40db52c4efc91750d1a.gif",
     "static/media/Logo23.svg": "/static/media/Logo23.b79f41ef88b393084cf09fa5e57a1e8f.svg",
@@ -91,11 +92,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.f999ff3d.css.map": "/static/css/main.f999ff3d.css.map",
-    "main.74f50af1.js.map": "/static/js/main.74f50af1.js.map"
+    "main.aaffe927.css.map": "/static/css/main.aaffe927.css.map",
+    "main.cfa357df.js.map": "/static/js/main.cfa357df.js.map"
   },
   "entrypoints": [
-    "static/css/main.f999ff3d.css",
-    "static/js/main.74f50af1.js"
+    "static/css/main.aaffe927.css",
+    "static/js/main.cfa357df.js"
   ]
 }
