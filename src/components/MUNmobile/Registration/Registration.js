@@ -9,6 +9,7 @@ import BgMunReg from "../../../assests/bgmunreg.webp";
 import { Button } from "antd";
 import CircularProgress from "@mui/material/CircularProgress";
 import { fetchMun } from "../../User/UserActions";
+import {message} from "antd"
 
 const Portfolio = [
   "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
@@ -474,7 +475,8 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
       </div>
       <Navbar color="transparent" />
       <div className="RegistrationMain">
-        {/* <form onSubmit={(e) => onSubmit(e)}> */}
+        <form onSubmit={(e) => onSubmit(e)}>
+          {/* <> */}
         <div className="RegSmall">
           <div className="IRMUNmob">
             <div className="IRMUNtext">
@@ -685,19 +687,15 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
             </Button>
           </div>
         </div>
+      {/* </> */}
+      </form>
       </div>
       {success && (
-        <div className="text-success reg-now">
-          🎉 You are Registered Successsully for MUN
-        </div>
+        message.success("🎉 You are Registered Successsully for MUN")
       )}
       {error && (
-        <div className="text-danger reg-now">
-          😓 Something went wrong please try again
-        </div>
+        message.error("😓 Something went wrong please try again")
       )}
-
-      {/* </form> */}
     </div>
   );
 }
