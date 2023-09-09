@@ -251,7 +251,7 @@ const MainProfileBox = ({ data }) => {
                     locator.pathname === "/eventbox" ? "c1-text" : "c2-text"
                   }
                 >
-                  Events
+                  My Events
                 </Link>
               </div>
             )}

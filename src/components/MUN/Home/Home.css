@@ -48,6 +48,7 @@
     padding: 1vh 2.5vw;
     background-color: #fff;
     margin-top: 10vw;
+    cursor: pointer;
 }
 
 .prizesWorth {

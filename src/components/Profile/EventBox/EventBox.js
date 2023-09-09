@@ -155,7 +155,7 @@ const EventBox = () => {
                             : "c2-text"
                         }
                       >
-                        Events
+                        My Events
                       </Link>
                     </div>
                   )}
