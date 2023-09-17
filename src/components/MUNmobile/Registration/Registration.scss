@@ -26,6 +26,8 @@
 
 .mun-register{
     width: 100vw;
+    min-height: 100vh;
+    height: auto;
     overflow-x: hidden;
 }
     // padding: 30px 5vw;
@@ -66,6 +68,23 @@ line-height: 162.2%;
 }
 .Portfolio1{
     width:25vw;
+}
+.select-field-mun{
+    box-sizing: border-box;
+    /* width: 25.1vw; */
+    // padding: 12px 20px;
+    // border-radius: 6px;
+    // border: 1.5px solid #505050;
+    // color: #505050;
+    background-color: #ffffff;
+    // box-shadow: 1.5px 3px 0px 0px #505050;
+    font-family: Comic Sans MS;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0em;
+    text-align: left;
+    height: 40px;
 }
 
 .RegistrationMain
