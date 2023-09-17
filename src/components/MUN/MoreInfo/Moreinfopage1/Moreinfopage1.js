@@ -4,8 +4,12 @@ import InfoPage1Img from '../../../../assests/muninfopage1.webp';
 import './Moreinfopage1.css';
 import Navbar from "../../../../components/EventsNavbar/Eventsnavbar";
 import MobMoreInfo from "../../../../assests/munmobileinfobg.webp";
+import {useNavigate} from "react-router-dom"
+
 
 export default function Moreinfopage1() {
+
+    const navigate = useNavigate();
   return (
     <>
     <div className="muninfo_main">
@@ -30,7 +34,7 @@ export default function Moreinfopage1() {
                 <br />
                 AGENDA: “Deliberation over unlawful occupation of territory and forced governance with special emphasis on Israel Palestine conflict.”</p>
                 <div className="portfolio_button">
-                <button className='info_button'>PORTFOLIO MATRIX</button>
+                <button className='info_button' onClick={()=>window.open("https://docs.google.com/spreadsheets/d/1f_1kJOrr7MSdctuNRdjqVQKhARYkzlbpZeokivqnreA/edit?pli=1#gid=0","_blank")}>PORTFOLIO MATRIX</button>
                 </div>
             </div>
             </div>
