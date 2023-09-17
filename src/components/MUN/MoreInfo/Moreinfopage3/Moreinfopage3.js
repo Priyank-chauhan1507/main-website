@@ -30,7 +30,7 @@ export default function Moreinfopage1() {
                 <br />
                 AGENDA: “Bangladesh liberation War 1971”</p>
                 <div className="portfolio_button">
-                <button className='info_button'>PORTFOLIO MATRIX</button>
+                <button className='info_button' onClick={()=>window.open("https://docs.google.com/spreadsheets/d/1f_1kJOrr7MSdctuNRdjqVQKhARYkzlbpZeokivqnreA/edit?pli=1#gid=1599587531","_blank")}>PORTFOLIO MATRIX</button>
                 </div>
             </div>
             </div>
