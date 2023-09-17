@@ -12,6 +12,30 @@
     height: 480vh;
 }
 } */
+
+
+/* @media only screen and (max-height:750px){
+     height: 720vh;
+} */
+
+
+
+
+/* @media only screen and (max-width:550px)
+{
+    .HomeMUN-bg
+{
+    height: 660vh;
+}
+} */
+
+@media only screen and (max-width:768px)
+{
+    .FAQimg
+    {
+        width: 15vw;
+    }
+}
 @media only screen and (max-height:740px)
 {
     .HomeMUN-bg
@@ -19,30 +43,60 @@
     height: 759vh;
 }
 }
-/* @media only screen and (max-height:750px){
-     height: 720vh;
-} */
-@media only screen and (max-width:650px)
+@media only screen and (max-width:700px)
 {
     .HomeMUN-bg
 {
-    height: 518vh;
+    height: 730vh;
 }
 }
 
+@media only screen and (max-width:680px)
+{
+    .HomeMUN-bg
+    {
+        height: 723vh;
+    }
+}
+
+@media only screen and (max-width:640px)
+{
+    .HomeMUN-bg
+    {
+        height: 4500px;
+    }
+}
 @media only screen and (max-height:601px)
 {
     .HomeMUN-bg
-{
-    height: 607vh;
+    {
+        height: 607vh;
+    }
 }
+@media only screen and (max-width:600px)
+{
+    .HomeMUN-bg
+{
+    height: 707vh;
+}
+.FAQimg
+    {
+        width: 20vw;
+    }
 }
 
 @media only screen and (max-width:550px)
 {
+    .prizesMUNWorth
+    {
+        margin-top: 20vh;
+    }
+}
+@media only screen and (max-width:549px)
+{
     .HomeMUN-bg
 {
-    height: 660vh;
+    height: 688vh;
 }
 }
 @media only screen and (max-width:501px)
@@ -52,26 +106,51 @@
     height: 620vh;
 }
 }
+@media only screen and (max-width:500px)
+{
+    .HomeMUN-bg
+{
+    height: 645vh;
+}
+}
 @media only screen and (max-width:450px)
 {
     .HomeMUN-bg
 {
     height: 600vh;
 }
+.FAQimg
+{
+    width: 25vw;
 }
+}
+
 
 @media only screen and (max-width:400px){
     .HomeMUN-bg
     {
-        height: 560vh;
+        height: 585vh;
     }
+    .top-HomeMUN
+{
+    margin-top: 5vh;
 }
+}
+
 @media only screen and (max-width:350px)
 
 {
     .HomeMUN-bg
 {
-    height: 520vh;
+    height: 540vh;
+}
+}
+@media only screen and (max-width:349px)
+
+{
+    .HomeMUN-bg
+{
+    height: 552vh;
 }
 }
 
@@ -149,52 +228,32 @@
     margin-bottom: -2vh;
 }
 #committeeHead2 img{
-    margin-top:15vh;
+    margin-top:9vh;
     width:55vw;
 }
 
-@media only screen and (max-width:550px)
+
+/* @media only screen and (max-width:680px)
 {
-    .prizesMUNWorth
-    {
-        margin-top: 20vh;
-    }
+    .HomeMUN-bg
+{
+    height: 743vh;
 }
-@media only screen and (max-width:550px)
+} */
+
+
+
+/* @media only screen and (max-width:550px)
 {
     .prizesMUNWorth
     {
         margin-top: 10vh;
     }           
-}
-@media only screen and (max-width:400px)
-{
-    .top-HomeMUN
-{
-    margin-top: 5vh;
-}
-}
-@media only screen and (max-width:768px)
-{
-    .FAQimg
-    {
-        width: 15vw;
-    }
-}
-@media only screen and (max-width:600px)
-{
-    .FAQimg
-    {
-        width: 20vw;
-    }
-}
-@media only screen and (max-width:450px)
-{
-    .FAQimg
-    {
-        width: 25vw;
-    }
-}
+} */
+
+
+
+
 .ExecutiveMobile
 {
     display: flex;
