@@ -180,7 +180,7 @@ const NewNewProfileMobile = ({ data }) => {
                 }
               >
                 <img src={icon2} alt="Events" className="img--1" />
-                Events
+                Eventsx
               </Link>
             </div>
           )}

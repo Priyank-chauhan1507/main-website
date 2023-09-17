@@ -101,7 +101,7 @@ function App(props) {
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
           <Route exact={true} path="/MUN" element={<Home1/>} />
           <Route exact={true} path="/MUNmobile" element={<Home2/>} />
-          <Route exact={true} path="/MUNmobileregistration" element={<Home2Reg/>} />
+          <Route exact={true} path="/MUNregister" element={<Home2Reg/>} />
           <Route exact={true} path="/MUN_FAQ" element={<FAQ/>} />
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/muncommitee" element={<Commitee/>} />
