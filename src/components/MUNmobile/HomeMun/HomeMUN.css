@@ -124,35 +124,38 @@
     width: 25vw;
 }
 }
-
-
-@media only screen and (max-width:400px){
+@media only screen and (max-width:400px)
+{
     .HomeMUN-bg
-    {
-        height: 585vh;
-    }
-    .top-HomeMUN
+{
+    height: 620vh;
+}
+.top-HomeMUN
 {
     margin-top: 5vh;
 }
+
 }
+
+
+
 
 @media only screen and (max-width:350px)
 
 {
     .HomeMUN-bg
 {
-    height: 540vh;
+    height: 580vh;
 }
 }
-@media only screen and (max-width:349px)
+/* @media only screen and (max-width:349px)
 
 {
     .HomeMUN-bg
 {
     height: 552vh;
 }
-}
+} */
 
 .top-HomeMUN
 {
