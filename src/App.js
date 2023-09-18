@@ -18,6 +18,7 @@ import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";
 import EventMainPage from "./components/EventsPage/EventMainPage";
 import EventBox from "./components/Profile/EventBox/EventBox";
 import Paymentbox from "./components/Profile/PaymentBox/Paymentbox";
+import NewPaymentbox from "./components/Profile/PaymentBox/NewPaymentBox";
 import EventCard from "./components/Profile/EventCard/EventCard";
 import WebNavbarNew from "./components/Navbar/WebNavbarNew";
 import Mobfooter from "./components/Footer/Mobfooter"
@@ -86,6 +87,7 @@ function App(props) {
 
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />
+          <Route exact={true} path="/newpayment" element={<NewPaymentbox />} />
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />

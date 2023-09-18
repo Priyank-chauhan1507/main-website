@@ -451,3 +451,52 @@ utton{
   align-items: center;
   width: 100%;
 }
+
+.pay-table{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50vh;
+  overflow-y: scroll;
+  width: 65vw;
+  overflow-x: hidden;
+  /* padding: 20px; */
+}
+
+.pay-table::-webkit-scrollbar{
+  display: none;
+}
+
+.par-head{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 60vw;
+  height: 5vh;
+  /* gap: 10vw; */
+}
+
+.pay-tr-head{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 60vw;
+  height: 5vh;
+  gap: 10vw;
+}
+
+.pay-tr{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 60vw;
+  height: 5vh;
+  gap: 10vw;
+}
+
+.pay-th{
+  display: flex;
+  justify-content: flex-start;
+  width: 8vw;
+  
+}
