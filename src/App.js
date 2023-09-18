@@ -97,7 +97,7 @@ function App(props) {
 
           <Route exact={true} path="/id_card_box" element={<IdcardBox />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
-          <Route exact={true} path="/eventsmain" element={<EventsMain />} />
+          <Route exact={true} path="/events" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
           <Route exact={true} path="/MUN" element={<Home1/>} />
           <Route exact={true} path="/MUNmobile" element={<Home2/>} />
