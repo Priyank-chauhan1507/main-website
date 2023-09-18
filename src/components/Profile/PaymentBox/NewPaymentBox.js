@@ -118,7 +118,7 @@ const NewPaymentBox = (
   const [paymentLive, setPaymentLive] = useState(false);
   const [paying, setPaying] = useState(false);
   const [addpar, setAddpar] = useState(false);
-  const [submitid,setSubmitid] = useState(false);
+  const [submitid, setSubmitid] = useState(false);
 
   let team_pay = [];
 
@@ -465,19 +465,19 @@ const NewPaymentBox = (
                                         <input
                                           type="checkbox"
                                           checked
-                                          // onChange={}
+                                        // onChange={}
                                         />
                                       </td>
                                     ) : (
                                       <td className="pay-th">
                                         <input
                                           type="checkbox"
-                                          // checked
-                                          // onChange={}
+                                        // checked
+                                        // onChange={}
                                         />
                                       </td>
                                     )}
-                                    <td><MdDelete style={{cursor:"pointer"}} color="white" size="20px" /></td>
+                                    <td><MdDelete style={{ cursor: "pointer" }} color="white" size="20px" /></td>
                                   </tr>
                                   {team_pay.map((data) => {
                                     return (
@@ -490,15 +490,15 @@ const NewPaymentBox = (
                                             <input
                                               type="checkbox"
                                               checked
-                                              // onChange={}
+                                            // onChange={}
                                             />
                                           </td>
                                         ) : (
                                           <td className="pay-th">
                                             <input
                                               type="checkbox"
-                                              // checked
-                                              // onChange={}
+                                            // checked
+                                            // onChange={}
                                             />
                                           </td>
                                         )}
@@ -783,7 +783,7 @@ const NewPaymentBox = (
           </div>
           <div className={!logout ? "none" : ""} id="logout">
             <div className="l_body">
-              <div className="logout_body">
+              <div className="logout_body" style={{ position: "relative" }}>
                 <div className="redpic">
                   <img src={cs1} alt="redpic" />
                 </div>
@@ -813,25 +813,45 @@ const NewPaymentBox = (
 
           <div className={addpar ? "" : "none"} id="logout">
             <div className="l_body">
-              <div className="logout_body">
+              <div className="logout_body" style={{ position: "relative" }}>
                 {submitid ? (
                   <div className="add-acco">
-                  <h1>Does he want accomodation?</h1>
-                  <input type="checkbox"/>
-                </div>
+                    <h1 className="dacc">Does he want accomodation?</h1>
+                    <input type="checkbox" />
+                    <div className="fle-ro22" >
+                      {/* <input className="add-par-id" type="text" name="parid" placeholder="thomso id *" /> */}
+
+                      <button onClick={() => {
+                        setAddpar(!addpar);
+                        setSubmitid(false);
+                      }} className="clear-par-1" style={{fontSize: "16px" }}>Clear</button>
+
+                      <button onClick={() => setSubmitid(true)} className="submit-par-1" style={{ fontSize: "16px" }} >Submit</button>
+                    </div>
+
+                  </div>
+
                 ) : (
+
                   <div className="add-par">
-                  <h1>Add Participants</h1>
-                  <input className="add-par-id" type="text"  name="parid" placeholder="thomso id *" />
-                </div>
-                  
+                    <h1 className="add-parti" style={{ fontSize: "20px" }}>Add Participants</h1>
+                    {/* <div className="fle-ro"></div> */}
+                    <input className="add-par-id" type="text" name="parid" placeholder="thomso id *" />
+                    <div className="fle-ro2" >
+                      {/* <input className="add-par-id" type="text" name="parid" placeholder="thomso id *" /> */}
+
+                      <button onClick={() => {
+                        setAddpar(!addpar);
+                        setSubmitid(false);
+                      }} className="clear-par" style={{ padding: "6px", fontSize: "16px" }}>Clear</button>
+
+                      <button onClick={() => setSubmitid(true)} className="submit-par" style={{ padding: "6px", fontSize: "16px" }} >Submit</button>
+                    </div>
+
+                  </div>
+
                 )}
-                
-                <button onClick={()=> {
-                  setAddpar(!addpar);
-                  setSubmitid(false);
-                }} className="clear-par">Clear</button>
-                <button onClick={() => setSubmitid(true)} className="submit-par">Submit</button>
+
               </div>
             </div>
           </div>
