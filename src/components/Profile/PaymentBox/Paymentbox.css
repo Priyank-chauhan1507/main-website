@@ -482,7 +482,7 @@ utton{
   align-items: center;
   width: 60vw;
   height: 5vh;
-  gap: 10vw;
+  gap: 6vw;
 }
 
 .pay-tr{
@@ -491,12 +491,11 @@ utton{
   align-items: center;
   width: 60vw;
   height: 5vh;
-  gap: 10vw;
+  gap: 6vw;
 }
 
 .pay-th{
   display: flex;
   justify-content: flex-start;
   width: 8vw;
-  
 }

@@ -476,7 +476,7 @@ const NewPaymentBox = (
                                         />
                                       </td>
                                     )}
-                                    <td><MdDelete color="white" size="20px" /></td>
+                                    <td><MdDelete style={{cursor:"pointer"}} color="white" size="20px" /></td>
                                   </tr>
                                   {team_pay.map((data) => {
                                     return (
