@@ -118,6 +118,7 @@ const NewPaymentBox = (
   const [paymentLive, setPaymentLive] = useState(false);
   const [paying, setPaying] = useState(false);
   const [addpar, setAddpar] = useState(false);
+  const [submitid,setSubmitid] = useState(false);
 
   let team_pay = [];
 
@@ -813,16 +814,24 @@ const NewPaymentBox = (
           <div className={addpar ? "" : "none"} id="logout">
             <div className="l_body">
               <div className="logout_body">
-                <div className="add-par">
-                  <h1>Add Participants</h1>
-                  <input className="add-par-id" type="text"  name="parid" placeholder="thomso id *" />
-                </div>
-                <div className="add-acco">
+                {submitid ? (
+                  <div className="add-acco">
                   <h1>Does he want accomodation?</h1>
                   <input type="checkbox"/>
                 </div>
-                <button onClick={()=> setAddpar(!addpar)} className="clear-par">Clear</button>
-                <button className="submit-par">Submit</button>
+                ) : (
+                  <div className="add-par">
+                  <h1>Add Participants</h1>
+                  <input className="add-par-id" type="text"  name="parid" placeholder="thomso id *" />
+                </div>
+                  
+                )}
+                
+                <button onClick={()=> {
+                  setAddpar(!addpar);
+                  setSubmitid(false);
+                }} className="clear-par">Clear</button>
+                <button onClick={() => setSubmitid(true)} className="submit-par">Submit</button>
               </div>
             </div>
           </div>
