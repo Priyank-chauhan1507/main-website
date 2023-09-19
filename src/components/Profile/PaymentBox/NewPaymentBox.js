@@ -54,6 +54,14 @@ const NewPaymentBox = (
       .get(`/apiV1/current_user_participant`)
       .then((ress) => {
         setuserDetails(ress.data);
+        if(paymentData.length == 0){
+          var temp = paymentData
+          temp.push({ "id": ress.data?.thomso_id, "acco": acco1.toString() })
+          setPaymentData(temp)
+          var temp1 = paymentData1
+          temp1.push({ "id": ress.data?.thomso_id, "acco": acco1.toString() , "gender": ress.data?.gender})
+          setPaymentData1(temp1)
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -69,30 +77,6 @@ const NewPaymentBox = (
   }
 
   const Locator = useLocation();
-  // useEffect(() => {
-  //   if (!userDetails?.id) {
-  //     // navigate.push("/login");
-  //   }
-  // }, []);
-  const options = [
-    "Footloose",
-    "Sargam",
-    "Silent DJ",
-    "Campus Clicks",
-    "Blunder's Pride",
-    "Street Soccre",
-    "Photography",
-    "Body Zorbing",
-  ];
-  const options2 = [
-    "Nine Muses (Western Group Dance Comp.)",
-    "Nritya (Folk and Classical Group Dance Comp.)",
-  ];
-  const options3 = [
-    "Swaranjali: Indian Choir CompetitionA",
-    "Euphony: Instrumentalist CompetitionA",
-    "Ensemble: A capella CompetitionA",
-  ];
 
   const ON = {
     background: "white",
@@ -109,7 +93,7 @@ const NewPaymentBox = (
   const [isOpen3, setIsOpen3] = useState(false);
   const [loading, setLoading] = useState(false);
   const [eventArray, seteventArray] = useState([]);
-  const [acco, setacco] = useState(is_female ? true : null);
+  const [acco, setacco] = useState(userDetails?.gender == "Female" ? true : null);
   const [teamevent, setTeamEvent] = useState(null);
   const [selectedOption, setSelectedOption] = useState("Select Event");
   const [selectedOption2, setSelectedOption2] = useState("Select Event");
@@ -123,103 +107,48 @@ const NewPaymentBox = (
   const [submitid, setSubmitid] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [male, setMale] = useState("");
+  const [paymentData, setPaymentData] = useState([]);
+  const [paymentData1, setPaymentData1] = useState([]);
+  const [acco1, setAcco1] = useState("true");
 
-  let team_pay = [];
 
-  const [mystyle, setMystyle] = useState({
-    display: "none",
-  });
-  const [mystyle1, setMystyle1] = useState({
-    display: "block",
-  });
+  console.log(paymentData1, "paymentData1");
+  console.log(paymentData, "paymentData");
 
   const [style1, setStyle1] = useState({
     background: "transparent",
     color: "white",
   });
   const [style2, setStyle2] = useState(is_female ? ON : OFF);
-  const [style3, setStyle3] = useState({
-    background: "transparent",
-    color: "white",
-  });
-  const [style4, setStyle4] = useState({
-    background: "transparent",
-    color: "white",
-  });
 
-  const [showTeamInput, setShowTeamInput] = useState({
-    display: "none",
-  });
+  const handleDataNo = () => {
+    var temp = paymentData
+    temp.push({ "id": inputValue, "acco": "false" })
+    setPaymentData(temp)
+    var temp1 = paymentData1
+    temp1.push({ "id": inputValue, "acco": "false" , "gender": "Male"})
+    setPaymentData1(temp1)
+  }
 
-  // const a = []
-
-  const onCrossClick = (index) => {
-    const a = [...eventArray];
-    a.splice(index, 1);
-    seteventArray(a);
-  };
-
-  const onOptionClicked = (value) => {
-    console.log(value);
-    setSelectedOption(value);
-    setIsOpen(false);
-    setShowTeamInput({ display: "block" });
-    if (eventArray.includes(value)) {
-      alert("Event already added");
-    } else {
-      seteventArray([...eventArray, value]);
-    }
-  };
-
-  const onOptionClicked2 = (value, index) => {
-    let a = [...eventArray];
-    a[index]["sub_event_name"] = value;
-    seteventArray(a);
-    setSelectedOption2(value);
-    setIsOpen2(false);
-  };
-
-  const onOptionClicked3 = (value, index) => {
-    let a = [...eventArray];
-    a[index]["sub_event_name"] = value;
-    seteventArray(a);
-    setSelectedOption3(value);
-    setIsOpen3(false);
-  };
-
-  console.log(eventArray);
-
-  const performTeamEvent = () => {
-    setTeamEvent(true);
-    setMystyle({ display: "block" });
-    setMystyle1({ display: "none" });
-    setStyle4({ background: "white", color: "black" });
-    setStyle3({ background: "transparent", color: "white" });
-    // checkPayNow();
-  };
-
-  const notPerformTeamEvent = () => {
-    setTeamEvent(false);
-    setMystyle({ display: "none" });
-    setMystyle1({ display: "block" });
-    setStyle3({ background: "white", color: "black" });
-    setStyle4({ background: "transparent", color: "white" });
-    // checkPayNow();
-  };
-
-  // function deleteEvent(eventName) {
-  //   let index = eventArray.indexOf(eventName)
-  //   seteventArray((oldArray) => oldArray.splice(index,1))
-  // }
+  const handleDataYes = () => {
+    var temp = paymentData
+    temp.push({ "id": inputValue, "acco": "true" })
+    setPaymentData(temp)
+    var temp1 = paymentData1
+    temp1.push({ "id": inputValue, "acco": "true", "gender": "Male"})
+    setPaymentData1(temp1)
+  }
 
   const noAccommdation = () => {
     setacco(false);
+    console.log(acco1, "accoNO")
     setStyle1({ background: "white", color: "black" });
     setStyle2({ background: "transparent", color: "white" });
   };
 
   const Accommdation = () => {
     setacco(true);
+    console.log(acco1, "accoYES")
     setStyle2({ background: "white", color: "black" });
     setStyle1({ background: "transparent", color: "white" });
   };
@@ -228,36 +157,6 @@ const NewPaymentBox = (
     let a = [...eventArray];
     a[index]["team_name"] = value;
     seteventArray(a);
-  };
-
-  const paynow = () => {
-    setLoading(true);
-    setPaying(true);
-    // let event_team = [];
-    // for (let i = 0; i < eventArray.length; i++) {
-    //   event_team.push({
-    //     event: eventArray[i]?.event,
-    //     team_name: eventArray[i]?.team_name,
-    //     sub_event_name: eventArray[i]?.sub_event_name,
-    //   });
-    // }
-    let obj = {
-      participant_id: participant_id,
-      acco: acco,
-      // event_team: event_team,
-    };
-    console.log(obj);
-    // axios
-    //   .post("apiV1/participant_payment", obj)
-    //   .then((res) => {
-    //     setLoading(false);
-    //     window.location.href = res?.data?.link;
-    //   })
-    //   .then((err) => {
-    //     setLoading(false);
-    //     alert("Something went wrong");
-    //     console.log(err);
-    //   });
   };
 
   const checkPayNow = () => {
@@ -312,15 +211,23 @@ const NewPaymentBox = (
         obj1
       );
       const u = response.data;
-      console.log("data", response.data);
-      // console.log("gender",u.gender);
+      // console.log("data", u);
       setLoading(false);
-      if (response.data.gender == "Male" || response.data.gender == "Female") {
-        message.success("Thomso ID found");
-      } else {
-        message.error("Thomso ID not found");
+      if (u.status == "true" && u.gender == "Female") {
+        var temp = paymentData
+        temp.push({ "id": input, "acco": "true" })
+        setPaymentData(temp)
+        var temp1 = paymentData1
+        temp1.push({ "id": input, "acco": "true", "gender": u.gender})
+        setPaymentData1(temp1)
+        setGenderr(u.gender);
+        setAddpar(!addpar)
       }
-      if (u.gender == "Male") {
+
+      if(u.status == "false"){
+        message.error("Invalid Thomso id");
+      }
+      if (u.status == "true" && u.gender == "Male") {
         setMale("Male");
         setGenderr("Male");
       }
@@ -331,6 +238,7 @@ const NewPaymentBox = (
       // return false;
     }
   }
+
 
   const [genderr, setGenderr] = useState("Female");
   const [paracco, setParacco] = useState(false);
@@ -344,6 +252,7 @@ const NewPaymentBox = (
   //   };
   // });
 
+
   const handleCheckboxChange = (event) => {
     // Update the state based on the checkbox's checked property
     setIsChecked(event.target.checked);
@@ -352,21 +261,25 @@ const NewPaymentBox = (
     }
   };
 
-  async function pardata(input) {
+  const paynow = () => {
+    setPaying(true);
+  };
+
+  async function makePayment() {
     setLoading(true);
-    let obj = [
-      {
-        "id": input,
-        "acco": `${paracco ? "True" : "False"}`,
-      },
-    ];
+
     try {
       const response = await axios.post(
         `https://api1.thomso.in/apiV1/participant_payment`,
-        obj
+        paymentData
       );
       const u = response.data;
       console.log("data", response.data);
+      if(response.data.status == "true"){
+        window.open(`${response.data.payment_url}`,"_blank")
+      }else{
+        message.error(`${response.data.error}`)
+      }
       setLoading(false);
     } catch (error) {
       console.error("Error:", error);
@@ -530,67 +443,26 @@ const NewPaymentBox = (
                               <hr />
                               <tbody className="pay-body-data">
                                 <>
-                                  <tr className="pay-tr">
-                                    <td className="pay-th">1.</td>
-                                    <td className="pay-th">
-                                      {userDetails?.thomso_id}
-                                    </td>
-                                    <td className="pay-th">
-                                      {userDetails?.gender}
-                                    </td>
-                                    {acco ? (
-                                      <td className="pay-th">
-                                        <input
-                                          type="checkbox"
-                                          checked
-                                          // onChange={}
-                                        />
-                                      </td>
-                                    ) : (
-                                      <td className="pay-th">
-                                        <input
-                                          type="checkbox"
-                                          // checked
-                                          // onChange={}
-                                        />
-                                      </td>
-                                    )}
-                                    {/* <td><MdDelete style={{ cursor: "pointer" }} color="white" size="20px" /></td> */}
-                                    <td>
-                                      <MdDelete
-                                        style={{ cursor: "pointer" }}
-                                        color="white"
-                                        size="20px"
-                                      />
-                                    </td>
-                                  </tr>
-                                  {team_pay.map((data) => {
+                                  {paymentData1.map((data, index) => {
                                     return (
                                       <tr className="pay-tr">
-                                        <td className="pay-th">{data?.id}.</td>
-                                        <td className="pay-th">
-                                          {data?.thomsoid}
-                                        </td>
+                                        <td className="pay-th">{index + 1}.</td>
+                                        <td className="pay-th">{data?.id}</td>
                                         <td className="pay-th">
                                           {data?.gender}
                                         </td>
-                                        {acco ? (
-                                          <td className="pay-th">
-                                            <input
-                                              type="checkbox"
-                                              checked
-                                              // onChange={}
+
+                                        <td className="pay-th">{data?.acco == "true" ? "YES" : "NO"}</td>
+                                        <td style={{width:"20px"}} className="pay-th">
+                                            <MdDelete
+                                              style={{
+                                                cursor: "pointer",
+                                                size: "20px",
+                                              }}
+                                              color="white"
+                                              size="20px"
                                             />
-                                          </td>
-                                        ) : (
-                                          <td className="pay-th">
-                                            <input
-                                              type="checkbox"
-                                              // checked
-                                              // onChange={}
-                                            />
-                                          </td>
-                                        )}
+                                        </td>
                                       </tr>
                                     );
                                   })}
@@ -621,7 +493,7 @@ const NewPaymentBox = (
                               <div className="total-pay-3">
                                 <button
                                   className="total-pay-3-btn"
-                                  type="submit"
+                                  onClick={makePayment}
                                 >
                                   Pay Now
                                 </button>
@@ -690,7 +562,10 @@ const NewPaymentBox = (
                               <button
                                 className="yesbtn"
                                 disabled={is_female}
-                                onClick={Accommdation}
+                                onClick={ () => {
+                                  Accommdation()
+                                  setAcco1("true")
+                                }}
                                 style={style2}
                               >
                                 Yes
@@ -698,7 +573,10 @@ const NewPaymentBox = (
                               <button
                                 className="nobtn"
                                 disabled={is_female}
-                                onClick={noAccommdation}
+                                onClick={ () => {
+                                  noAccommdation()
+                                  setAcco1("false")
+                                }}
                                 style={style1}
                               >
                                 No
@@ -757,6 +635,7 @@ const NewPaymentBox = (
             </div>
           </div>
 
+{/* ------------------Add participant modal-------------- */}
           <div className={addpar ? "" : "none"} id="logout">
             <div className="l_body">
               <div className="logout_body" style={{ position: "relative" }}>
@@ -764,35 +643,34 @@ const NewPaymentBox = (
                   <div className="add-acco">
                     <div className="does-he">
                       <h1 className="dacc">Does he want accomodation?</h1>
-                      <input
-                        type="checkbox"
-                        checked={isChecked}
-                        onChange={handleCheckboxChange}
-                      />
                     </div>
                     <div className="fle-ro2">
                       <button
                         onClick={() => {
-                          setAddpar(!addpar);
                           setSubmitid(false);
                           clearthomsoid();
+                          handleDataNo()
                           setMale(false);
+                          setAddpar(!addpar);
+                          setGenderr("Female")
                         }}
                         className="clear-par"
                         style={{ fontSize: "16px", padding: "6px" }}
                       >
-                        Clear
+                        NO
                       </button>
 
                       <button
                         onClick={() => {
-                          // setSubmitid(true);
-                          pardata(inputValue);
+                          setAddpar(!addpar);
+                          handleDataYes()
+                          setGenderr("Female")
+                          clearthomsoid();
                         }}
                         className="submit-par"
                         style={{ fontSize: "16px", padding: "6px" }}
                       >
-                        Submit
+                        YES
                       </button>
                     </div>
                   </div>
@@ -837,6 +715,8 @@ const NewPaymentBox = (
               </div>
             </div>
           </div>
+
+{/* ----------------------------------------------- */}
 
           <div className="nnp-mobile">
             <div
@@ -929,89 +809,42 @@ const NewPaymentBox = (
                           <hr />
                           <tbody className="pay-body-data">
                             <>
-                              <tr className="pay-tr">
-                                {/* <td className="pay-th">1.</td> */}
-                                <td className="pay-th">
-                                  {userDetails?.thomso_id}
-                                </td>
-                                <td className="pay-th">
-                                  {userDetails?.gender}
-                                </td>
-                                {acco ? (
-                                  <td className="pay-th pay-del">
-                                    <>
-                                    <input
-                                      type="checkbox"
-                                      checked
-                                      // onChange={}
-                                    />
-                                    <MdDelete
-                                    style={{ cursor: "pointer" }}
-                                    color="white"
-                                    size="20px"
-                                  />
-                                    </>
-                                  </td>
-                                ) : (
-                                  <td className="pay-th pay-del">
-                                    <>
-                                    <input
-                                      type="checkbox"
-                                      // checked
-                                      // onChange={}
-                                    />
-                                    <MdDelete
-                                    style={{ cursor: "pointer",size:"20px" }}
-                                    color="white"
-                                    size="20px"
-                                  />
-                                    </>
-                                  </td>
-                                )}
-                                {/* <td>
-                                  <MdDelete
-                                    style={{ cursor: "pointer" }}
-                                    color="white"
-                                    size="20px"
-                                  />
-                                </td> */}
-                              </tr>
-                              {team_pay.map((data) => {
+                              {paymentData1.map((data) => {
                                 return (
                                   <tr className="pay-tr">
                                     {/* <td className="pay-th">{data?.id}.</td> */}
-                                    <td className="pay-th">{data?.thomsoid}</td>
+                                    <td className="pay-th">{data?.id}</td>
                                     <td className="pay-th">{data?.gender}</td>
-                                    {acco ? (
-                                      <td className="pay-th">
-                                        <input
-                                          type="checkbox"
-                                          checked
-                                          // onChange={}
-                                        />
+                                    <td className="pay-th" style={{gap:"10px"}}>
+                                      <>
+                                      {data?.acco == "true" ? "YES" : "NO"}
+                                      <MdDelete
+                                              style={{
+                                                cursor: "pointer",
+                                                size: "10px",
+                                              }}
+                                              color="white"
+                                              size="20px"
+                                            />
+                                            </>
                                       </td>
-                                    ) : (
-                                      <td className="pay-th">
-                                        <>
-                                        <input
-                                          type="checkbox"
-                                          // checked
-                                          // onChange={}
-                                        />
-                                        <MdDelete
-                                    style={{ cursor: "pointer",size:"20px" }}
-                                    color="white"
-                                    size="20px"
-                                  />
-                                    </>
-                                      </td>
-                                    )}
+                                        {/* <td style={{width:"20px"}} className="pay-th">
+                                            <MdDelete
+                                              style={{
+                                                cursor: "pointer",
+                                                size: "20px",
+                                              }}
+                                              color="white"
+                                              size="20px"
+                                            />
+                                        </td> */}
                                   </tr>
                                 );
                               })}
                             </>
                           </tbody>
                         </table>
+
                         <div
                           onClick={() => setAddpar(!addpar)}
                           className="add-participant"
@@ -1024,16 +857,16 @@ const NewPaymentBox = (
                         </div>
                         <div className="total-pay">
                           <div className="total-pay-up">
-                          <div className="total-pay-1">
-                            <h1 className="total-pay-1-h1">TOTAL</h1>
-                            <h2 className="total-pay-1-h2">
-                              No. of Participants
-                            </h2>
-                          </div>
-                          <div className="total-pay-2">
-                            <p className="total-pay-1-p1">₹ 2799</p>
-                            <p className="total-pay-1-p2">1</p>
-                          </div>
+                            <div className="total-pay-1">
+                              <h1 className="total-pay-1-h1">TOTAL</h1>
+                              <h2 className="total-pay-1-h2">
+                                No. of Participants
+                              </h2>
+                            </div>
+                            <div className="total-pay-2">
+                              <p className="total-pay-1-p1">₹ 2799</p>
+                              <p className="total-pay-1-p2">1</p>
+                            </div>
                           </div>
 
                           <div className="total-pay-3">
@@ -1120,7 +953,7 @@ const NewPaymentBox = (
                             </div>
                             {checkPayNow() == true ? (
                               <button
-                              style={{marginTop:"20px"}}
+                                style={{ marginTop: "20px" }}
                                 className="PayNowBtnActive"
                                 onClick={paynow}
                               >
@@ -1131,7 +964,12 @@ const NewPaymentBox = (
                                 )}
                               </button>
                             ) : (
-                              <button style={{marginTop:"20px"}} className="PayNowBtn">Pay Now</button>
+                              <button
+                                style={{ marginTop: "20px" }}
+                                className="PayNowBtn"
+                              >
+                                Pay Now
+                              </button>
                             )}
                           </div>
                         </div>
