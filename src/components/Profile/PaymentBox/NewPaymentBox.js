@@ -458,8 +458,12 @@ const NewPaymentBox = (
                                 <>
                                   <tr className="pay-tr">
                                     <td className="pay-th">1.</td>
-                                    <td className="pay-th">{userDetails?.thomso_id}</td>
-                                    <td className="pay-th">{userDetails?.gender}</td>
+                                    <td className="pay-th">
+                                      {userDetails?.thomso_id}
+                                    </td>
+                                    <td className="pay-th">
+                                      {userDetails?.gender}
+                                    </td>
                                     {acco ? (
                                       <td className="pay-th">
                                         <input
@@ -478,13 +482,24 @@ const NewPaymentBox = (
                                       </td>
                                     )}
                                     <td><MdDelete style={{ cursor: "pointer" }} color="white" size="20px" /></td>
+                                    <td>
+                                      <MdDelete
+                                        style={{ cursor: "pointer" }}
+                                        color="white"
+                                        size="20px"
+                                      />
+                                    </td>
                                   </tr>
                                   {team_pay.map((data) => {
                                     return (
                                       <tr className="pay-tr">
                                         <td className="pay-th">{data?.id}.</td>
-                                        <td className="pay-th">{data?.thomsoid}</td>
-                                        <td className="pay-th">{data?.gender}</td>
+                                        <td className="pay-th">
+                                          {data?.thomsoid}
+                                        </td>
+                                        <td className="pay-th">
+                                          {data?.gender}
+                                        </td>
                                         {acco ? (
                                           <td className="pay-th">
                                             <input
@@ -517,6 +532,19 @@ const NewPaymentBox = (
                               }}
                             >
                               + Add Participant
+                            </div>
+                            <div className="total-pay">
+                              <div className="total-pay-1">
+                                <h1 className="total-pay-1-h1">TOTAL</h1>
+                                <h2 className="total-pay-1-h2">No. of Participants</h2>
+                              </div>
+                              <div className="total-pay-2">
+                                <p className="total-pay-1-p1">₹ 2799</p>
+                                <p className="total-pay-1-p2">1</p>
+                              </div>
+                              <div className="total-pay-3">
+                                <button className="total-pay-3-btn" type="submit">Pay Now</button>
+                              </div>
                             </div>
                           </div>
                         </>
@@ -615,169 +643,7 @@ const NewPaymentBox = (
                     </>
                   )}
 
-                  {/* <div className="PayRight">
-                        <p
-                          className="Payevent"
-                          style={{ marginTop: "-12px", maxWidth: "450px" }}
-                        >
-                          Are you going to perform in Footloose, Sargam, Vogue,
-                          Nukkad Natak, Abhivyakti, Battle of Bands as a team?
-                        </p>
-                        <div className="yesNo">
-                          <button
-                            className="yesbtn"
-                            style={style4}
-                            onClick={performTeamEvent}
-                          >
-                            Yes
-                          </button>
-                          <button
-                            className="nobtn"
-                            style={style3}
-                            onClick={notPerformTeamEvent}
-                          >
-                            No
-                          </button>
-                        </div>
-
-                        <div className="Payimg" style={mystyle1}>
-                          <img src={payment} alt="1" />
-                        </div>
-
-                        <div className="payDetailScroll" style={mystyle}>
-                          <div className="payRightHeader"> Team Details</div>
-
-                          {eventArray &&
-                            eventArray.map((eventName, index) => (
-                              <div className="payDis2" key={index}>
-                                <div key={index}>
-                                  <div className="Payevntnm">
-                                    <p>{eventName?.event__name}</p>
-                                    <p onClick={() => onCrossClick(index)}>
-                                      <IoMdClose size="1.5rem" />
-                                    </p>
-                                  </div>
-
-                                  {eventName?.event == 8 && (
-                                    <div style={{ height: "135px" }}>
-                                      <div className="payheadContainer">
-                                        <div
-                                          className="payheader"
-                                          onClick={toggling2}
-                                        >
-                                          {selectedOption2 || "Select Subevent"}
-                                        </div>
-                                        <span className="payarrow">
-                                          <AiFillCaretDown
-                                            style={{ color: "black" }}
-                                          />
-                                        </span>
-                                        {isOpen2 && (
-                                          <div className="paylistContainer">
-                                            <ul>
-                                              {options2.map((option) => (
-                                                <li
-                                                  onClick={() => {
-                                                    onOptionClicked2(
-                                                      option,
-                                                      index
-                                                    );
-                                                  }}
-                                                  key={Math.random()}
-                                                >
-                                                  {option}
-                                                </li>
-                                              ))}
-                                            </ul>
-                                          </div>
-                                        )}
-                                      </div>
-                                    </div>
-                                  )}
-
-                                  {eventName?.event == 12 && (
-                                    <div style={{ height: "160px" }}>
-                                      <div className="payheadContainer">
-                                        <div
-                                          className="payheader"
-                                          onClick={toggling3}
-                                        >
-                                          {selectedOption3 || "Select Subevent"}
-                                        </div>
-                                        <span className="payarrow">
-                                          <AiFillCaretDown
-                                            style={{ color: "black" }}
-                                          />
-                                        </span>
-                                        {isOpen3 && (
-                                          <div className="paylistContainer">
-                                            <ul>
-                                              {options3.map((option) => (
-                                                <li
-                                                  onClick={() => {
-                                                    onOptionClicked3(
-                                                      option,
-                                                      index
-                                                    );
-                                                  }}
-                                                  key={Math.random()}
-                                                >
-                                                  {option}
-                                                </li>
-                                              ))}
-                                            </ul>
-                                          </div>
-                                        )}
-                                      </div>
-                                    </div>
-                                  )}
-                                  <div class=" PayTeamNm">
-                                    <input
-                                      onChange={(e) =>
-                                        onChangeInput(index, e.target.value)
-                                      }
-                                      type="text"
-                                      placeholder="Enter team name"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-
-                          <div className="Payline2"></div>
-
-                          <div className="payheadContainer">
-                            <div className="payheader" onClick={toggling}>
-                              {"Select Event"}
-                            </div>
-                            <span className="payarrow">
-                              <AiFillCaretDown style={{ color: "black" }} />
-                            </span>
-                            {isOpen && (
-                              <div className="paylistContainer">
-                                <ul>
-                                  {Object.keys(events).map((option) => {
-                                    console.log(option);
-                                    return (
-                                      <li
-                                        onClick={() => {
-                                          onOptionClicked(events[option]);
-                                        }}
-                                        key={Math.random()}
-                                      >
-                                        {events[option]?.event__name}
-                                      </li>
-                                    );
-                                  })}
-                                </ul>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div> */}
                 </>
-                {/* )} */}
-                {/* </> */}
               </div>
             </div>
           </div>
@@ -829,8 +695,12 @@ const NewPaymentBox = (
                       <button onClick={() => setSubmitid(true)} className="submit-par-1" style={{ fontSize: "16px" }} >Submit</button>
                     </div>
 
+                  {/* </div> */}
+                  <div className="fle-ro22" >
+                    <h1>Does he want accomodation?</h1>
+                    <input type="checkbox" />
                   </div>
-
+                  </div>
                 ) : (
 
                   <div className="add-par">
@@ -852,6 +722,32 @@ const NewPaymentBox = (
 
                 )}
 
+                    {/* <h1>Add Participants</h1>
+                    <input
+                      className="add-par-id"
+                      type="text"
+                      name="parid"
+                      placeholder="thomso id *"
+                    /> */}
+                  {/* </div> */}
+                {/* )} */}
+                
+
+                {/* <button
+                  onClick={() => {
+                    setAddpar(!addpar);
+                    setSubmitid(false);
+                  }}
+                  className="clear-par"
+                >
+                  Clear
+                </button>
+                <button
+                  onClick={() => setSubmitid(true)}
+                  className="submit-par"
+                >
+                  Submit
+                </button> */}
               </div>
             </div>
           </div>
@@ -925,18 +821,120 @@ const NewPaymentBox = (
                 </div>
                 <div className="mpb-line1" />
               </div>
-              {/* <img style={{width:"50vw",height:"50vh",marginLeft:"20vw",marginTop:"14vh"}} src={paymentcenterpic} alt="" /> */}
-              {/* <div
-                className="MPaycontainer"
-                style={{ display:"flex" ,justifyContent: "center", alignItems: "center" }}
-              >
-                <>
-                <img src={paymentcenterpic} alt="" />
-                </>
-                </div> */}
               {paymentstatus ? (
                 <PaymentSuccess />
               ) : (
+                <>
+                {paying ? (
+                        <>
+                          <div
+                            className="Payleft1"
+                            style={{ marginRight: "auto", marginTop: "0" }}
+                          >
+                            <table className="pay-table">
+                              <thead className="par-head">
+                                <tr className="pay-tr-head">
+                                  {/* <th className="pay-th">Sr. No.</th> */}
+                                  <th className="pay-th">Thomso ID</th>
+                                  <th className="pay-th">Gender</th>
+                                  <th className="pay-th">Accomodation</th>
+                                </tr>
+                              </thead>
+                              <hr />
+                              <tbody className="pay-body-data">
+                                <>
+                                  <tr className="pay-tr">
+                                    {/* <td className="pay-th">1.</td> */}
+                                    <td className="pay-th">
+                                      {userDetails?.thomso_id}
+                                    </td>
+                                    <td className="pay-th">
+                                      {userDetails?.gender}
+                                    </td>
+                                    {acco ? (
+                                      <td className="pay-th">
+                                        <input
+                                          type="checkbox"
+                                          checked
+                                          // onChange={}
+                                        />
+                                      </td>
+                                    ) : (
+                                      <td className="pay-th">
+                                        <input
+                                          type="checkbox"
+                                          // checked
+                                          // onChange={}
+                                        />
+                                      </td>
+                                    )}
+                                    <td>
+                                      <MdDelete
+                                        style={{ cursor: "pointer" }}
+                                        color="white"
+                                        size="20px"
+                                      />
+                                    </td>
+                                  </tr>
+                                  {team_pay.map((data) => {
+                                    return (
+                                      <tr className="pay-tr">
+                                        {/* <td className="pay-th">{data?.id}.</td> */}
+                                        <td className="pay-th">
+                                          {data?.thomsoid}
+                                        </td>
+                                        <td className="pay-th">
+                                          {data?.gender}
+                                        </td>
+                                        {acco ? (
+                                          <td className="pay-th">
+                                            <input
+                                              type="checkbox"
+                                              checked
+                                              // onChange={}
+                                            />
+                                          </td>
+                                        ) : (
+                                          <td className="pay-th">
+                                            <input
+                                              type="checkbox"
+                                              // checked
+                                              // onChange={}
+                                            />
+                                          </td>
+                                        )}
+                                      </tr>
+                                    );
+                                  })}
+                                </>
+                              </tbody>
+                            </table>
+                            <div
+                              onClick={() => setAddpar(!addpar)}
+                              className="add-participant"
+                              style={{
+                                color: "Selective-Yellow",
+                                cursor: "pointer",
+                              }}
+                            >
+                              + Add Participant
+                            </div>
+                            <div className="total-pay">
+                              <div className="total-pay-1">
+                                <h1 className="total-pay-1-h1">TOTAL</h1>
+                                <h2 className="total-pay-1-h2">No. of Participants</h2>
+                              </div>
+                              <div className="total-pay-2">
+                                <p className="total-pay-1-p1">₹ 2799</p>
+                                <p className="total-pay-1-p2">1</p>
+                              </div>
+                              <div className="total-pay-3">
+                                <button className="total-pay-3-btn" type="submit">Pay Now</button>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      ) : (
                 <>
                   <div className="main_boxx">
                     <div className="MPaycontainer">
@@ -971,7 +969,7 @@ const NewPaymentBox = (
                             <p>
                               <span className="MPaylarge">
                                 ₹{" "}
-                                {acco == true || acco == null ? "2799" : "2399"}
+                                {acco == true || acco == null ? "2799" : "2299"}
                               </span>
                               <span className="MPayTaxes"> + Taxes</span>
                             </p>
@@ -1008,184 +1006,27 @@ const NewPaymentBox = (
                             No
                           </button>
                         </div>
+                        {checkPayNow() == true ? (
+                              <button
+                                className="PayNowBtnActive"
+                                onClick={paynow}
+                              >
+                                {loading ? (
+                                  <CircularProgress color="inherit" size={20} />
+                                ) : (
+                                  "Pay Now"
+                                )}
+                              </button>
+                            ) : (
+                              <button className="PayNowBtn">Pay Now</button>
+                            )}
                       </div>
                     </div>
                   </div>
+                </>)}
                 </>
               )}
 
-              {/* <div className="MPayRight"> */}
-              {/* <p
-                        className="MPayevent"
-                        style={{ marginTop: "-12px", maxWidth: "450px" }}
-                      >
-                        Are you going to perform in Footloose, Sargam, Vogue,
-                        Nukkad Natak, Abhivyakti, Battle of Bands as a team?
-                      </p>
-                      <div className="MyesNo">
-                        <button
-                          className="Myesbtn"
-                          style={style4}
-                          onClick={performTeamEvent}
-                        >
-                          Yes
-                        </button>
-                        <button
-                          className="Mnobtn"
-                          style={style3}
-                          onClick={notPerformTeamEvent}
-                        >
-                          No
-                        </button>
-                      </div>
-
-                      <div className="MpayDetailScroll" style={mystyle}> 
-                        <div className="MpayRightHeader"> Team Details</div>
-
-                        {eventArray &&
-                          eventArray.map((eventName, index) => (
-                            <div className="MpayDis2" key={index}>
-                              <div key={index}>
-                                <div className="MPayevntnm">
-                                  <p>{eventName?.event__name}</p>
-                                  <p onClick={() => onCrossClick(index)}>
-                                    <IoMdClose size="1.5rem" />
-                                  </p>
-                                </div>
-
-                                {eventName?.event == 8 && (
-                                  <div style={{ height: "135px" }}>
-                                    <div className="MpayheadContainer">
-                                      <div
-                                        className="Mpayheader"
-                                        onClick={toggling2}
-                                      >
-                                        {selectedOption2 || "Select Subevent"}
-                                      </div>
-                                      <span className="Mpayarrow">
-                                        <AiFillCaretDown
-                                          style={{ color: "black" }}
-                                        />
-                                      </span>
-                                      {isOpen2 && (
-                                        <div className="MpaylistContainer">
-                                          <ul>
-                                            {options2.map((option) => (
-                                              <li
-                                                onClick={() => {
-                                                  onOptionClicked2(
-                                                    option,
-                                                    index
-                                                  );
-                                                }}
-                                                key={Math.random()}
-                                              >
-                                                {option}
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        </div>
-                                      )}
-                                    </div>
-                                  </div>
-                                )}
-
-                                {eventName?.event == 12 && (
-                                  <div style={{ height: "160px" }}>
-                                    <div className="MpayheadContainer">
-                                      <div
-                                        className="Mpayheader"
-                                        onClick={toggling3}
-                                      >
-                                        {selectedOption3 || "Select Subevent"}
-                                      </div>
-                                      <span className="Mpayarrow">
-                                        <AiFillCaretDown
-                                          style={{ color: "black" }}
-                                        />
-                                      </span>
-                                      {isOpen3 && (
-                                        <div className="MpaylistContainer">
-                                          <ul>
-                                            {options3.map((option) => (
-                                              <li
-                                                onClick={() => {
-                                                  onOptionClicked3(
-                                                    option,
-                                                    index
-                                                  );
-                                                }}
-                                                key={Math.random()}
-                                              >
-                                                {option}
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        </div>
-                                      )}
-                                    </div>
-                                  </div>
-                                )}
-                                
-                                <div className="MPayTeamNm">
-                                  <input
-                                    // className="PayInputDetail"
-                                    onChange={(e) =>
-                                      onChangeInput(index, e.target.value)
-                                    }
-                                    type="text"
-                                    placeholder="Enter team name"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-*/}
-              {/* <div className="MPayline2"></div> */}
-
-              {/* <div className="MpayheadContainer">
-                        <div className="Mpayheader" onClick={toggling}>
-                          {"Select Event"}
-                        </div>
-                        <span className="Mpayarrow">
-                          <AiFillCaretDown style={{ color: "black" }} />
-                        </span>
-                        {isOpen && (
-                          <div className="MpaylistContainer">
-                            <ul>
-                              {Object.keys(events).map((option) => {
-                                console.log(option);
-                                return (
-                                  <li
-                                    onClick={() => {
-                                      onOptionClicked(events[option]);
-                                    }}
-                                    key={Math.random()}
-                                  >
-                                    {events[option]?.event__name}
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                          </div>
-                        )}
-                      </div> */}
-              {/* </div>
-                      {checkPayNow() == true ? (
-                        <button className="MPayNowBtnActive" onClick={paynow}>
-                          {loading ? (
-                            <CircularProgress color="inherit" size={20} />
-                          ) : (
-                            "Pay Now"
-                          )}
-                        </button>
-                      ) : (
-                        <button className="MPayNowBtn">Pay Now</button>
-                      )}
-                    </div>
-                  </div>{" "}
-                </>
-              )} */}
             </div>
           </div>
         </div>
