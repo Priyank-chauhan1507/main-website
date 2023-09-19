@@ -12,7 +12,7 @@ const WebNavbarNew = () => {
   return (
     <>
       {/* <img src={background} alt="background" style={{width:"100vw",height:"340px",zIndex:"100",overflowY:'hidden'}}/> */}
-      <Footer className='mob-foot'/>
+      <Footer className='mob-foot' />
       <div className="webNavbarMain">
         <div className="webNavbarLeft">
           <div className="webNavbarLeft1">Contact us</div>
@@ -57,7 +57,12 @@ const WebNavbarNew = () => {
             <div>Roorkee, 247543</div>
           </div>
         </div>
+
       </div>
+      <a href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link" target="_blank">
+      <div className="TNC" style={{color:"white"}}> Terms & Conditions</div>
+
+      </a>
     </>
   );
 };
