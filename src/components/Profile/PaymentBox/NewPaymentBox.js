@@ -31,6 +31,8 @@ import { BiRupee } from "react-icons/bi";
 import SuccessPaymentPage from "./index";
 import "./MobilePaymentBox.css";
 import { MdDelete } from "react-icons/md";
+import { message } from "antd";
+import { clear } from "@testing-library/user-event/dist/clear";
 
 const NewPaymentBox = (
   events,
@@ -119,6 +121,8 @@ const NewPaymentBox = (
   const [paying, setPaying] = useState(false);
   const [addpar, setAddpar] = useState(false);
   const [submitid, setSubmitid] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [male, setMale] = useState("");
 
   let team_pay = [];
 
@@ -243,17 +247,17 @@ const NewPaymentBox = (
       // event_team: event_team,
     };
     console.log(obj);
-    axios
-      .post("apiV1/participant_payment", obj)
-      .then((res) => {
-        setLoading(false);
-        window.location.href = res?.data?.link;
-      })
-      .then((err) => {
-        setLoading(false);
-        alert("Something went wrong");
-        console.log(err);
-      });
+    // axios
+    //   .post("apiV1/participant_payment", obj)
+    //   .then((res) => {
+    //     setLoading(false);
+    //     window.location.href = res?.data?.link;
+    //   })
+    //   .then((err) => {
+    //     setLoading(false);
+    //     alert("Something went wrong");
+    //     console.log(err);
+    //   });
   };
 
   const checkPayNow = () => {
@@ -287,17 +291,87 @@ const NewPaymentBox = (
     // }
   };
 
-  let getid = "";
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+  // const handleGenderChange = (event) => {
+  //   setMale("Male");
+  // };
+  const clearthomsoid = () => {
+    setInputValue("");
+  };
 
-  // async function checkInputExists(inputValue) {
-  //   try {
-  //     const response = await axios.get(`/${inputValue}`);
-  //     return response.data.exists;
-  //   } catch (error) {
-  //     console.error('Error checking input:', error);
-  //     throw error;
-  //   }
-  // }
+  async function checkInputExists(input) {
+    setLoading(true);
+    let obj1 = {
+      id: input,
+    };
+    try {
+      const response = await axios.post(
+        `https://api1.thomso.in/apiV1/verify_thomso_id`,
+        obj1
+      );
+      const u = response.data;
+      console.log("data", response.data);
+      // console.log("gender",u.gender);
+      setLoading(false);
+      if (response.data.gender == "Male" || response.data.gender == "Female") {
+        message.success("Thomso ID found");
+      } else {
+        message.error("Thomso ID not found");
+      }
+      if (u.gender == "Male") {
+        setMale("Male");
+        setGenderr("Male");
+      }
+    } catch (error) {
+      console.error("Error checking input:", error);
+      // throw error;
+      message.error("Thomso ID not found");
+      // return false;
+    }
+  }
+
+  const [genderr, setGenderr] = useState("Female");
+  const [paracco, setParacco] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  // useEffect(() => {
+  //   return () => {
+  //     if (isChecked == true) {
+  //       setParacco(true);
+  //     }
+  //   };
+  // });
+
+  const handleCheckboxChange = (event) => {
+    // Update the state based on the checkbox's checked property
+    setIsChecked(event.target.checked);
+    if (isChecked == true) {
+      setParacco(true);
+    }
+  };
+
+  async function pardata(input) {
+    setLoading(true);
+    let obj = [
+      {
+        "id": input,
+        "acco": `${paracco ? "True" : "False"}`,
+      },
+    ];
+    try {
+      const response = await axios.post(
+        `https://api1.thomso.in/apiV1/participant_payment`,
+        obj
+      );
+      const u = response.data;
+      console.log("data", response.data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
 
   const locator = useLocation();
   return (
@@ -469,19 +543,19 @@ const NewPaymentBox = (
                                         <input
                                           type="checkbox"
                                           checked
-                                        // onChange={}
+                                          // onChange={}
                                         />
                                       </td>
                                     ) : (
                                       <td className="pay-th">
                                         <input
                                           type="checkbox"
-                                        // checked
-                                        // onChange={}
+                                          // checked
+                                          // onChange={}
                                         />
                                       </td>
                                     )}
-                                    <td><MdDelete style={{ cursor: "pointer" }} color="white" size="20px" /></td>
+                                    {/* <td><MdDelete style={{ cursor: "pointer" }} color="white" size="20px" /></td> */}
                                     <td>
                                       <MdDelete
                                         style={{ cursor: "pointer" }}
@@ -505,15 +579,15 @@ const NewPaymentBox = (
                                             <input
                                               type="checkbox"
                                               checked
-                                            // onChange={}
+                                              // onChange={}
                                             />
                                           </td>
                                         ) : (
                                           <td className="pay-th">
                                             <input
                                               type="checkbox"
-                                            // checked
-                                            // onChange={}
+                                              // checked
+                                              // onChange={}
                                             />
                                           </td>
                                         )}
@@ -536,14 +610,21 @@ const NewPaymentBox = (
                             <div className="total-pay">
                               <div className="total-pay-1">
                                 <h1 className="total-pay-1-h1">TOTAL</h1>
-                                <h2 className="total-pay-1-h2">No. of Participants</h2>
+                                <h2 className="total-pay-1-h2">
+                                  No. of Participants
+                                </h2>
                               </div>
                               <div className="total-pay-2">
                                 <p className="total-pay-1-p1">₹ 2799</p>
                                 <p className="total-pay-1-p2">1</p>
                               </div>
                               <div className="total-pay-3">
-                                <button className="total-pay-3-btn" type="submit">Pay Now</button>
+                                <button
+                                  className="total-pay-3-btn"
+                                  type="submit"
+                                >
+                                  Pay Now
+                                </button>
                               </div>
                             </div>
                           </div>
@@ -642,7 +723,6 @@ const NewPaymentBox = (
                       )}
                     </>
                   )}
-
                 </>
               </div>
             </div>
@@ -680,74 +760,80 @@ const NewPaymentBox = (
           <div className={addpar ? "" : "none"} id="logout">
             <div className="l_body">
               <div className="logout_body" style={{ position: "relative" }}>
-                {submitid ? (
+                {genderr === "Male" ? (
                   <div className="add-acco">
-                    <h1 className="dacc">Does he want accomodation?</h1>
-                    <input type="checkbox" />
-                    <div className="fle-ro22" >
-                      {/* <input className="add-par-id" type="text" name="parid" placeholder="thomso id *" /> */}
-
-                      <button onClick={() => {
-                        setAddpar(!addpar);
-                        setSubmitid(false);
-                      }} className="clear-par-1" style={{fontSize: "16px" }}>Clear</button>
-
-                      <button onClick={() => setSubmitid(true)} className="submit-par-1" style={{ fontSize: "16px" }} >Submit</button>
+                    <div className="does-he">
+                      <h1 className="dacc">Does he want accomodation?</h1>
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={handleCheckboxChange}
+                      />
                     </div>
+                    <div className="fle-ro2">
+                      <button
+                        onClick={() => {
+                          setAddpar(!addpar);
+                          setSubmitid(false);
+                          clearthomsoid();
+                          setMale(false);
+                        }}
+                        className="clear-par"
+                        style={{ fontSize: "16px", padding: "6px" }}
+                      >
+                        Clear
+                      </button>
 
-                  {/* </div> */}
-                  <div className="fle-ro22" >
-                    <h1>Does he want accomodation?</h1>
-                    <input type="checkbox" />
-                  </div>
+                      <button
+                        onClick={() => {
+                          // setSubmitid(true);
+                          pardata(inputValue);
+                        }}
+                        className="submit-par"
+                        style={{ fontSize: "16px", padding: "6px" }}
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </div>
                 ) : (
-
                   <div className="add-par">
-                    <h1 className="add-parti" style={{ fontSize: "20px" }}>Add Participants</h1>
-                    {/* <div className="fle-ro"></div> */}
-                    <input className="add-par-id" type="text" name="parid" placeholder="thomso id *" />
-                    <div className="fle-ro2" >
-                      {/* <input className="add-par-id" type="text" name="parid" placeholder="thomso id *" /> */}
-
-                      <button onClick={() => {
-                        setAddpar(!addpar);
-                        setSubmitid(false);
-                      }} className="clear-par" style={{ padding: "6px", fontSize: "16px" }}>Clear</button>
-
-                      <button onClick={() => setSubmitid(true)} className="submit-par" style={{ padding: "6px", fontSize: "16px" }} >Submit</button>
-                    </div>
-
-                  </div>
-
-                )}
-
-                    {/* <h1>Add Participants</h1>
+                    <h1 className="add-parti" style={{ fontSize: "20px" }}>
+                      Add Participants
+                    </h1>
                     <input
                       className="add-par-id"
                       type="text"
-                      name="parid"
                       placeholder="thomso id *"
-                    /> */}
-                  {/* </div> */}
-                {/* )} */}
-                
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                    <div className="fle-ro2">
+                      <button
+                        onClick={() => {
+                          setAddpar(!addpar);
+                          setSubmitid(false);
+                          clearthomsoid();
+                        }}
+                        className="clear-par"
+                        style={{ padding: "6px", fontSize: "16px" }}
+                      >
+                        Clear
+                      </button>
 
-                {/* <button
-                  onClick={() => {
-                    setAddpar(!addpar);
-                    setSubmitid(false);
-                  }}
-                  className="clear-par"
-                >
-                  Clear
-                </button>
-                <button
-                  onClick={() => setSubmitid(true)}
-                  className="submit-par"
-                >
-                  Submit
-                </button> */}
+                      <button
+                        onClick={() => {
+                          // setSubmitid(true);
+                          checkInputExists(inputValue);
+                        }}
+                        className="submit-par"
+                        style={{ padding: "6px", fontSize: "16px" }}
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -825,32 +911,77 @@ const NewPaymentBox = (
                 <PaymentSuccess />
               ) : (
                 <>
-                {paying ? (
-                        <>
-                          <div
-                            className="Payleft1"
-                            style={{ marginRight: "auto", marginTop: "0" }}
-                          >
-                            <table className="pay-table">
-                              <thead className="par-head">
-                                <tr className="pay-tr-head">
-                                  {/* <th className="pay-th">Sr. No.</th> */}
-                                  <th className="pay-th">Thomso ID</th>
-                                  <th className="pay-th">Gender</th>
-                                  <th className="pay-th">Accomodation</th>
-                                </tr>
-                              </thead>
-                              <hr />
-                              <tbody className="pay-body-data">
-                                <>
+                  {paying ? (
+                    <>
+                      <div
+                        className="Payleft1"
+                        style={{ marginRight: "auto", marginTop: "0" }}
+                      >
+                        <table className="pay-table">
+                          <thead className="par-head">
+                            <tr className="pay-tr-head">
+                              {/* <th className="pay-th">Sr. No.</th> */}
+                              <th className="pay-th">Thomso ID</th>
+                              <th className="pay-th">Gender</th>
+                              <th className="pay-th">Accomodation</th>
+                            </tr>
+                          </thead>
+                          <hr />
+                          <tbody className="pay-body-data">
+                            <>
+                              <tr className="pay-tr">
+                                {/* <td className="pay-th">1.</td> */}
+                                <td className="pay-th">
+                                  {userDetails?.thomso_id}
+                                </td>
+                                <td className="pay-th">
+                                  {userDetails?.gender}
+                                </td>
+                                {acco ? (
+                                  <td className="pay-th pay-del">
+                                    <>
+                                    <input
+                                      type="checkbox"
+                                      checked
+                                      // onChange={}
+                                    />
+                                    <MdDelete
+                                    style={{ cursor: "pointer" }}
+                                    color="white"
+                                    size="20px"
+                                  />
+                                    </>
+                                  </td>
+                                ) : (
+                                  <td className="pay-th pay-del">
+                                    <>
+                                    <input
+                                      type="checkbox"
+                                      // checked
+                                      // onChange={}
+                                    />
+                                    <MdDelete
+                                    style={{ cursor: "pointer",size:"20px" }}
+                                    color="white"
+                                    size="20px"
+                                  />
+                                    </>
+                                  </td>
+                                )}
+                                {/* <td>
+                                  <MdDelete
+                                    style={{ cursor: "pointer" }}
+                                    color="white"
+                                    size="20px"
+                                  />
+                                </td> */}
+                              </tr>
+                              {team_pay.map((data) => {
+                                return (
                                   <tr className="pay-tr">
-                                    {/* <td className="pay-th">1.</td> */}
-                                    <td className="pay-th">
-                                      {userDetails?.thomso_id}
-                                    </td>
-                                    <td className="pay-th">
-                                      {userDetails?.gender}
-                                    </td>
+                                    {/* <td className="pay-th">{data?.id}.</td> */}
+                                    <td className="pay-th">{data?.thomsoid}</td>
+                                    <td className="pay-th">{data?.gender}</td>
                                     {acco ? (
                                       <td className="pay-th">
                                         <input
@@ -861,153 +992,135 @@ const NewPaymentBox = (
                                       </td>
                                     ) : (
                                       <td className="pay-th">
+                                        <>
                                         <input
                                           type="checkbox"
                                           // checked
                                           // onChange={}
                                         />
+                                        <MdDelete
+                                    style={{ cursor: "pointer",size:"20px" }}
+                                    color="white"
+                                    size="20px"
+                                  />
+                                    </>
                                       </td>
                                     )}
-                                    <td>
-                                      <MdDelete
-                                        style={{ cursor: "pointer" }}
-                                        color="white"
-                                        size="20px"
-                                      />
-                                    </td>
                                   </tr>
-                                  {team_pay.map((data) => {
-                                    return (
-                                      <tr className="pay-tr">
-                                        {/* <td className="pay-th">{data?.id}.</td> */}
-                                        <td className="pay-th">
-                                          {data?.thomsoid}
-                                        </td>
-                                        <td className="pay-th">
-                                          {data?.gender}
-                                        </td>
-                                        {acco ? (
-                                          <td className="pay-th">
-                                            <input
-                                              type="checkbox"
-                                              checked
-                                              // onChange={}
-                                            />
-                                          </td>
-                                        ) : (
-                                          <td className="pay-th">
-                                            <input
-                                              type="checkbox"
-                                              // checked
-                                              // onChange={}
-                                            />
-                                          </td>
-                                        )}
-                                      </tr>
-                                    );
-                                  })}
-                                </>
-                              </tbody>
-                            </table>
-                            <div
-                              onClick={() => setAddpar(!addpar)}
-                              className="add-participant"
-                              style={{
-                                color: "Selective-Yellow",
-                                cursor: "pointer",
-                              }}
-                            >
-                              + Add Participant
-                            </div>
-                            <div className="total-pay">
-                              <div className="total-pay-1">
-                                <h1 className="total-pay-1-h1">TOTAL</h1>
-                                <h2 className="total-pay-1-h2">No. of Participants</h2>
-                              </div>
-                              <div className="total-pay-2">
-                                <p className="total-pay-1-p1">₹ 2799</p>
-                                <p className="total-pay-1-p2">1</p>
-                              </div>
-                              <div className="total-pay-3">
-                                <button className="total-pay-3-btn" type="submit">Pay Now</button>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                <>
-                  <div className="main_boxx">
-                    <div className="MPaycontainer">
-                      <div className="MPayleft">
-                        <p className="Mpayheading">Payment Details</p>
-                        <div className="MamountBox">
-                          <div className="MPayAmount">
-                            <div>
-                              <p>Thomso Fees</p>
-                              {acco == true || acco == null ? (
-                                <p>Accommodation</p>
-                              ) : (
-                                <p style={{ color: "rgba(64, 64, 64, 1)" }}>
-                                  Accommodation
-                                </p>
-                              )}
-                            </div>
-                            <div>
-                              <p>₹ 2299</p>
-                              {acco == true || acco == null ? (
-                                <p>₹ 500</p>
-                              ) : (
-                                <p style={{ color: "rgba(64, 64, 64, 1)" }}>
-                                  ₹ 500
-                                </p>
-                              )}
-                            </div>
-                          </div>
-                          <div className="MPayline1"></div>
-                          <div className="MTotalAmount">
-                            <p className="MPaylarge">TOTAL</p>
-                            <p>
-                              <span className="MPaylarge">
-                                ₹{" "}
-                                {acco == true || acco == null ? "2799" : "2299"}
-                              </span>
-                              <span className="MPayTaxes"> + Taxes</span>
-                            </p>
-                          </div>
-                          <p className="MPayAccommodation">
-                            Accommodation includes 3 day-3 night stay and Food
-                            (Breakfast + Lunch){" "}
-                          </p>
-                        </div>
-                        <p className="MPayinfo"></p>
-
-                        <p className="MPayevent">
-                          Are you going to take Accommodation in IITR? (*
-                          Accommdation Compulsory for Female)
-                        </p>
+                                );
+                              })}
+                            </>
+                          </tbody>
+                        </table>
                         <div
-                          className="MyesNo"
-                          style={{ opacity: is_female ? "0.5" : "1" }}
+                          onClick={() => setAddpar(!addpar)}
+                          className="add-participant"
+                          style={{
+                            color: "Selective-Yellow",
+                            cursor: "pointer",
+                          }}
                         >
-                          <button
-                            className="Myesbtn"
-                            disabled={is_female}
-                            onClick={Accommdation}
-                            style={style2}
-                          >
-                            Yes
-                          </button>
-                          <button
-                            className="Mnobtn"
-                            disabled={is_female}
-                            onClick={noAccommdation}
-                            style={style1}
-                          >
-                            No
-                          </button>
+                          + Add Participant
                         </div>
-                        {checkPayNow() == true ? (
+                        <div className="total-pay">
+                          <div className="total-pay-up">
+                          <div className="total-pay-1">
+                            <h1 className="total-pay-1-h1">TOTAL</h1>
+                            <h2 className="total-pay-1-h2">
+                              No. of Participants
+                            </h2>
+                          </div>
+                          <div className="total-pay-2">
+                            <p className="total-pay-1-p1">₹ 2799</p>
+                            <p className="total-pay-1-p2">1</p>
+                          </div>
+                          </div>
+
+                          <div className="total-pay-3">
+                            <button className="total-pay-3-btn" type="submit">
+                              Pay Now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="main_boxx">
+                        <div className="MPaycontainer">
+                          <div className="MPayleft">
+                            <p className="Mpayheading">Payment Details</p>
+                            <div className="MamountBox">
+                              <div className="MPayAmount">
+                                <div>
+                                  <p>Thomso Fees</p>
+                                  {acco == true || acco == null ? (
+                                    <p>Accommodation</p>
+                                  ) : (
+                                    <p style={{ color: "rgba(64, 64, 64, 1)" }}>
+                                      Accommodation
+                                    </p>
+                                  )}
+                                </div>
+                                <div>
+                                  <p>₹ 2299</p>
+                                  {acco == true || acco == null ? (
+                                    <p>₹ 500</p>
+                                  ) : (
+                                    <p style={{ color: "rgba(64, 64, 64, 1)" }}>
+                                      ₹ 500
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                              <div className="MPayline1"></div>
+                              <div className="MTotalAmount">
+                                <p className="MPaylarge">TOTAL</p>
+                                <p>
+                                  <span className="MPaylarge">
+                                    ₹{" "}
+                                    {acco == true || acco == null
+                                      ? "2799"
+                                      : "2299"}
+                                  </span>
+                                  <span className="MPayTaxes"> + Taxes</span>
+                                </p>
+                              </div>
+                              <p className="MPayAccommodation">
+                                Accommodation includes 3 day-3 night stay and
+                                Food (Breakfast + Lunch){" "}
+                              </p>
+                            </div>
+                            <p className="MPayinfo"></p>
+
+                            <p className="MPayevent">
+                              Are you going to take Accommodation in IITR? (*
+                              Accommdation Compulsory for Female)
+                            </p>
+                            <div
+                              className="MyesNo"
+                              style={{ opacity: is_female ? "0.5" : "1" }}
+                            >
                               <button
+                                className="Myesbtn"
+                                disabled={is_female}
+                                onClick={Accommdation}
+                                style={style2}
+                              >
+                                Yes
+                              </button>
+                              <button
+                                className="Mnobtn"
+                                disabled={is_female}
+                                onClick={noAccommdation}
+                                style={style1}
+                              >
+                                No
+                              </button>
+                            </div>
+                            {checkPayNow() == true ? (
+                              <button
+                              style={{marginTop:"20px"}}
                                 className="PayNowBtnActive"
                                 onClick={paynow}
                               >
@@ -1018,15 +1131,15 @@ const NewPaymentBox = (
                                 )}
                               </button>
                             ) : (
-                              <button className="PayNowBtn">Pay Now</button>
+                              <button style={{marginTop:"20px"}} className="PayNowBtn">Pay Now</button>
                             )}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </>)}
+                    </>
+                  )}
                 </>
               )}
-
             </div>
           </div>
         </div>
