@@ -1,6 +1,6 @@
 .eventcard {
-    height: 33vh;
-    width: 35vh;
+    height: 39vh;
+    width: 18.25vw;
     /* background: url(../../../assests/footloose.png); */
     background-size: cover;
     background-position: center center;
@@ -50,6 +50,7 @@
     line-height: 13.275px;
     /* 100% */
     letter-spacing: -0.266px;
+    margin-bottom: 2vh;
 }
 
 .eventcard hr {
@@ -70,7 +71,8 @@
     letter-spacing: -0.159px;
     display: none;
 }
-.eventcard:hover p
+.eventcard:hover
+ p
 {
     display: block;
 }
