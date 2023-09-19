@@ -11,8 +11,8 @@ import Navbar from '../EventsNavbar/Eventsnavbar'
 import Footer from '../Navbar/WebNavbarNew'
 import { Link, useNavigate } from "react-router-dom"
 import { customEvent } from '../../utils/analyticsHelper';
-// import Thomso from "../../assests/thomso.mp4"
 import Thomso from "../../assests/thomso-unscreen.gif"
+import Attractions from './Attractions'
 
 function Home() {
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ function Home() {
 
       <img src={singers} alt="" className='singers' />
       <img src={singersmob} alt="" className='singersmob' />
-
+      <Attractions />
       <Footer />
     </div>
   )
