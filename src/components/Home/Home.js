@@ -83,7 +83,7 @@ function Home() {
 
       <img src={singers} alt="" className='singers' />
       <img src={singersmob} alt="" className='singersmob' />
-      <Attractions />
+      {/* <Attractions /> */}
       <Footer />
     </div>
   )
