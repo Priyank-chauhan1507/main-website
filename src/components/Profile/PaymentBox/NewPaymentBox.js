@@ -54,13 +54,17 @@ const NewPaymentBox = (
       .get(`/apiV1/current_user_participant`)
       .then((ress) => {
         setuserDetails(ress.data);
-        if(paymentData.length == 0){
-          var temp = paymentData
-          temp.push({ "id": ress.data?.thomso_id, "acco": acco1.toString() })
-          setPaymentData(temp)
-          var temp1 = paymentData1
-          temp1.push({ "id": ress.data?.thomso_id, "acco": acco1.toString() , "gender": ress.data?.gender})
-          setPaymentData1(temp1)
+        if (paymentData.length == 0) {
+          var temp = paymentData;
+          temp.push({ id: ress.data?.thomso_id, acco: acco1.toString() });
+          setPaymentData(temp);
+          var temp1 = paymentData1;
+          temp1.push({
+            id: ress.data?.thomso_id,
+            acco: acco1.toString(),
+            gender: ress.data?.gender,
+          });
+          setPaymentData1(temp1);
         }
       })
       .catch((err) => {
@@ -93,7 +97,9 @@ const NewPaymentBox = (
   const [isOpen3, setIsOpen3] = useState(false);
   const [loading, setLoading] = useState(false);
   const [eventArray, seteventArray] = useState([]);
-  const [acco, setacco] = useState(userDetails?.gender == "Female" ? true : null);
+  const [acco, setacco] = useState(
+    userDetails?.gender == "Female" ? true : null
+  );
   const [teamevent, setTeamEvent] = useState(null);
   const [selectedOption, setSelectedOption] = useState("Select Event");
   const [selectedOption2, setSelectedOption2] = useState("Select Event");
@@ -111,7 +117,6 @@ const NewPaymentBox = (
   const [paymentData1, setPaymentData1] = useState([]);
   const [acco1, setAcco1] = useState("true");
 
-
   console.log(paymentData1, "paymentData1");
   console.log(paymentData, "paymentData");
 
@@ -120,35 +125,41 @@ const NewPaymentBox = (
     color: "white",
   });
   const [style2, setStyle2] = useState(is_female ? ON : OFF);
+  const[totalpay,setTotalpay] = useState(acco1=="true" ? 2799 : 2299);
 
   const handleDataNo = () => {
-    var temp = paymentData
-    temp.push({ "id": inputValue, "acco": "false" })
-    setPaymentData(temp)
-    var temp1 = paymentData1
-    temp1.push({ "id": inputValue, "acco": "false" , "gender": "Male"})
-    setPaymentData1(temp1)
-  }
+    var temp = paymentData;
+    temp.push({ id: inputValue, acco: "false" });
+    setPaymentData(temp);
+    var temp1 = paymentData1;
+    temp1.push({ id: inputValue, acco: "false", gender: "Male" });
+    setPaymentData1(temp1);
+    setTotalpay(() => totalpay+2299);
+  };
 
   const handleDataYes = () => {
-    var temp = paymentData
-    temp.push({ "id": inputValue, "acco": "true" })
-    setPaymentData(temp)
-    var temp1 = paymentData1
-    temp1.push({ "id": inputValue, "acco": "true", "gender": "Male"})
-    setPaymentData1(temp1)
-  }
+    var temp = paymentData;
+    temp.push({ id: inputValue, acco: "true" });
+    setPaymentData(temp);
+    var temp1 = paymentData1;
+    temp1.push({ id: inputValue, acco: "true", gender: "Male" });
+    setPaymentData1(temp1);
+    setTotalpay(() => totalpay+2799);
+  };
+
+
+  
 
   const noAccommdation = () => {
     setacco(false);
-    console.log(acco1, "accoNO")
+    console.log(acco1, "accoNO");
     setStyle1({ background: "white", color: "black" });
     setStyle2({ background: "transparent", color: "white" });
   };
 
   const Accommdation = () => {
     setacco(true);
-    console.log(acco1, "accoYES")
+    console.log(acco1, "accoYES");
     setStyle2({ background: "white", color: "black" });
     setStyle1({ background: "transparent", color: "white" });
   };
@@ -214,17 +225,18 @@ const NewPaymentBox = (
       // console.log("data", u);
       setLoading(false);
       if (u.status == "true" && u.gender == "Female") {
-        var temp = paymentData
-        temp.push({ "id": input, "acco": "true" })
-        setPaymentData(temp)
-        var temp1 = paymentData1
-        temp1.push({ "id": input, "acco": "true", "gender": u.gender})
-        setPaymentData1(temp1)
+        var temp = paymentData;
+        temp.push({ id: input, acco: "true" });
+        setPaymentData(temp);
+        var temp1 = paymentData1;
+        temp1.push({ id: input, acco: "true", gender: u.gender });
+        setPaymentData1(temp1);
+        setTotalpay(() => totalpay+2799);
         setGenderr(u.gender);
-        setAddpar(!addpar)
+        setAddpar(!addpar);
       }
 
-      if(u.status == "false"){
+      if (u.status == "false") {
         message.error("Invalid Thomso id");
       }
       if (u.status == "true" && u.gender == "Male") {
@@ -239,7 +251,6 @@ const NewPaymentBox = (
     }
   }
 
-
   const [genderr, setGenderr] = useState("Female");
   const [paracco, setParacco] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
@@ -251,7 +262,6 @@ const NewPaymentBox = (
   //     }
   //   };
   // });
-
 
   const handleCheckboxChange = (event) => {
     // Update the state based on the checkbox's checked property
@@ -275,10 +285,10 @@ const NewPaymentBox = (
       );
       const u = response.data;
       console.log("data", response.data);
-      if(response.data.status == "true"){
-        window.open(`${response.data.payment_url}`,"_blank")
-      }else{
-        message.error(`${response.data.error}`)
+      if (response.data.status == "true") {
+        window.open(`${response.data.payment_url}`, "_blank");
+      } else {
+        message.error(`${response.data.error}`);
       }
       setLoading(false);
     } catch (error) {
@@ -452,16 +462,21 @@ const NewPaymentBox = (
                                           {data?.gender}
                                         </td>
 
-                                        <td className="pay-th">{data?.acco == "true" ? "YES" : "NO"}</td>
-                                        <td style={{width:"20px"}} className="pay-th">
-                                            <MdDelete
-                                              style={{
-                                                cursor: "pointer",
-                                                size: "20px",
-                                              }}
-                                              color="white"
-                                              size="20px"
-                                            />
+                                        <td className="pay-th">
+                                          {data?.acco == "true" ? "YES" : "NO"}
+                                        </td>
+                                        <td
+                                          style={{ width: "20px" }}
+                                          className="pay-th"
+                                        >
+                                          <MdDelete
+                                            style={{
+                                              cursor: "pointer",
+                                              size: "20px",
+                                            }}
+                                            color="white"
+                                            size="20px"
+                                          />
                                         </td>
                                       </tr>
                                     );
@@ -487,8 +502,8 @@ const NewPaymentBox = (
                                 </h2>
                               </div>
                               <div className="total-pay-2">
-                                <p className="total-pay-1-p1">₹ 2799</p>
-                                <p className="total-pay-1-p2">1</p>
+                                <p className="total-pay-1-p1">₹{totalpay}</p>
+                                <p className="total-pay-1-p2">{paymentData.length}</p>
                               </div>
                               <div className="total-pay-3">
                                 <button
@@ -562,9 +577,9 @@ const NewPaymentBox = (
                               <button
                                 className="yesbtn"
                                 disabled={is_female}
-                                onClick={ () => {
-                                  Accommdation()
-                                  setAcco1("true")
+                                onClick={() => {
+                                  setAcco1("true");
+                                  Accommdation();
                                 }}
                                 style={style2}
                               >
@@ -573,9 +588,9 @@ const NewPaymentBox = (
                               <button
                                 className="nobtn"
                                 disabled={is_female}
-                                onClick={ () => {
-                                  noAccommdation()
-                                  setAcco1("false")
+                                onClick={() => {
+                                  setAcco1("false");
+                                  noAccommdation();
                                 }}
                                 style={style1}
                               >
@@ -635,7 +650,7 @@ const NewPaymentBox = (
             </div>
           </div>
 
-{/* ------------------Add participant modal-------------- */}
+          {/* ------------------Add participant modal-------------- */}
           <div className={addpar ? "" : "none"} id="logout">
             <div className="l_body">
               <div className="logout_body" style={{ position: "relative" }}>
@@ -645,32 +660,33 @@ const NewPaymentBox = (
                       <h1 className="dacc">Does he want accomodation?</h1>
                     </div>
                     <div className="fle-ro2">
-                      <button
-                        onClick={() => {
-                          setSubmitid(false);
-                          clearthomsoid();
-                          handleDataNo()
-                          setMale(false);
-                          setAddpar(!addpar);
-                          setGenderr("Female")
-                        }}
-                        className="clear-par"
-                        style={{ fontSize: "16px", padding: "6px" }}
-                      >
-                        NO
-                      </button>
+                      
 
                       <button
                         onClick={() => {
                           setAddpar(!addpar);
-                          handleDataYes()
-                          setGenderr("Female")
+                          handleDataYes();
+                          setGenderr("Female");
                           clearthomsoid();
                         }}
                         className="submit-par"
                         style={{ fontSize: "16px", padding: "6px" }}
                       >
                         YES
+                      </button>
+                      <button
+                        onClick={() => {
+                          setSubmitid(false);
+                          clearthomsoid();
+                          handleDataNo();
+                          setMale(false);
+                          setAddpar(!addpar);
+                          setGenderr("Female");
+                        }}
+                        className="clear-par"
+                        style={{ fontSize: "16px", padding: "6px" }}
+                      >
+                        NO
                       </button>
                     </div>
                   </div>
@@ -703,6 +719,7 @@ const NewPaymentBox = (
                         onClick={() => {
                           // setSubmitid(true);
                           checkInputExists(inputValue);
+                          clearthomsoid();
                         }}
                         className="submit-par"
                         style={{ padding: "6px", fontSize: "16px" }}
@@ -716,7 +733,7 @@ const NewPaymentBox = (
             </div>
           </div>
 
-{/* ----------------------------------------------- */}
+          {/* ----------------------------------------------- */}
 
           <div className="nnp-mobile">
             <div
@@ -800,7 +817,6 @@ const NewPaymentBox = (
                         <table className="pay-table">
                           <thead className="par-head">
                             <tr className="pay-tr-head">
-                              {/* <th className="pay-th">Sr. No.</th> */}
                               <th className="pay-th">Thomso ID</th>
                               <th className="pay-th">Gender</th>
                               <th className="pay-th">Accomodation</th>
@@ -812,23 +828,25 @@ const NewPaymentBox = (
                               {paymentData1.map((data) => {
                                 return (
                                   <tr className="pay-tr">
-                                    {/* <td className="pay-th">{data?.id}.</td> */}
                                     <td className="pay-th">{data?.id}</td>
                                     <td className="pay-th">{data?.gender}</td>
-                                    <td className="pay-th" style={{gap:"10px"}}>
+                                    <td
+                                      className="pay-th"
+                                      style={{ gap: "10px" }}
+                                    >
                                       <>
-                                      {data?.acco == "true" ? "YES" : "NO"}
-                                      <MdDelete
-                                              style={{
-                                                cursor: "pointer",
-                                                size: "10px",
-                                              }}
-                                              color="white"
-                                              size="20px"
-                                            />
-                                            </>
-                                      </td>
-                                        {/* <td style={{width:"20px"}} className="pay-th">
+                                        {data?.acco == "true" ? "YES" : "NO"}
+                                        <MdDelete
+                                          style={{
+                                            cursor: "pointer",
+                                            size: "10px",
+                                          }}
+                                          color="white"
+                                          size="20px"
+                                        />
+                                      </>
+                                    </td>
+                                    {/* <td style={{width:"20px"}} className="pay-th">
                                             <MdDelete
                                               style={{
                                                 cursor: "pointer",
@@ -870,7 +888,10 @@ const NewPaymentBox = (
                           </div>
 
                           <div className="total-pay-3">
-                            <button className="total-pay-3-btn" type="submit">
+                            <button 
+                            className="total-pay-3-btn" 
+                            onClick={makePayment}
+                            >
                               Pay Now
                             </button>
                           </div>
@@ -937,7 +958,10 @@ const NewPaymentBox = (
                               <button
                                 className="Myesbtn"
                                 disabled={is_female}
-                                onClick={Accommdation}
+                                onClick={() => {
+                                  Accommdation();
+                                  setAcco1("true");
+                                }}
                                 style={style2}
                               >
                                 Yes
@@ -945,7 +969,10 @@ const NewPaymentBox = (
                               <button
                                 className="Mnobtn"
                                 disabled={is_female}
-                                onClick={noAccommdation}
+                                onClick={() => {
+                                  noAccommdation();
+                                  setAcco1("false");
+                                }}
                                 style={style1}
                               >
                                 No
