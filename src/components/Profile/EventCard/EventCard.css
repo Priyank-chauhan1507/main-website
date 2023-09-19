@@ -68,6 +68,11 @@
     /* 11.948px */
     margin: 0 .8vw 1vh;
     letter-spacing: -0.159px;
+    display: none;
+}
+.eventcard:hover p
+{
+    display: block;
 }
 
 .eventcards {
