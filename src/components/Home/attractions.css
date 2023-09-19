@@ -36,6 +36,7 @@
   align-items: center;
   overflow: scroll;
 }
+
 .subtitleBox {
   margin-top: 2rem;
 }
@@ -86,4 +87,43 @@
   .imagesBox{
     width: 90vw;
   }
+}
+
+@media only screen and (max-width:786px){
+  .imagesBox {
+    width: 90vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:15px;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: scroll;
+  }
+  .textContainer {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid grey;
+    padding-top: 3.5rem;
+    /* padding-right: -0.5rem; */
+}
+.majorAttractionsContainer {
+  width: 100vw;
+  padding-top: 12vh;
+    height: 61vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(http://localhost:3000/static/media/majorAttractions.a20747b….svg);
+}
+
+.subtitleBox ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 }
