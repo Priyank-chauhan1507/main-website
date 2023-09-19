@@ -17,7 +17,7 @@ const App = () => {
     {
       key: 1,
       content: <div className="judge1div">
-        <img src={judge1} className="judge1-img"alt="1" />
+        <img src={judge1} className="judge1-img j1"alt="1" />
         <div className='judge1-discription'>RAUNAK UPMANYU</div> 
         <div className='judge1-discription'>CHAIR OF HISTORIC COMMITEE</div>
 
@@ -26,7 +26,7 @@ const App = () => {
     {
       key: 2,
       content: <div className="judge2div">
-        <img src={judge2} className="judge2-img" alt="2" />
+        <img src={judge2} className="judge2-img j2" alt="2" />
         <div className='judge1-discription'>AISHNIT YADAV</div> 
         <div className='judge1-discription'>CHAIR OF UNGA</div>
       </div>
@@ -34,7 +34,7 @@ const App = () => {
     {
       key: 3,
       content: <div className="judge3div">
-        <img src={judge3} className="judge3-img"alt="3" />
+        <img src={judge3} className="judge3-img j3"alt="3" />
         <div className='judge1-discription'>NAMAN JAIN</div> 
         <div className='judge1-discription'>CHAIR OF AIPPM</div>
       </div>

@@ -76,7 +76,7 @@ const EventBox = () => {
   }
 
 
- 
+
 
   useEffect(() => {
     if (!userDetails?.id) {
@@ -245,7 +245,7 @@ const EventBox = () => {
                     >
                       Participate
                     </span>
-                    
+
                     {/* <span
                       onClick={() => {
                         setFilter("solo");
@@ -271,7 +271,7 @@ const EventBox = () => {
                       Team
                     </span> */}
                     {/* <div className="addEventButton-Profile">  */}
-                    <button 
+                    <button
                       onClick={() => {
                         setdisplay2(!display2);
                         setdisable("disable");
@@ -1030,7 +1030,7 @@ const EventBox = () => {
                     >
                       Participate
                     </span>
-                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/eventsmain')}>Add an Event</button>
+                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/events')}>Add an Event</button>
                     {/* <span
                       onClick={() => {
                         setFilter("solo");

@@ -70,7 +70,7 @@ function MobEventnavbar() {
           </h4>
           <h1
             onClick={() => {
-              navigate("/eventsmain");
+              navigate("/events");
               window.location.reload(false);
             }}
           >
@@ -158,7 +158,7 @@ function MobEventnavbar() {
           </h4>
           <h1
             onClick={() => {
-              navigate("/eventsmain");
+              navigate("/events");
               window.location.reload(false);
             }}
           >

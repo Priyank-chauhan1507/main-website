@@ -12,9 +12,13 @@ import Arrow from "../../../assests/ArrowMUN.png";
 // import UNGA from "../../../assests/UNGAmob.png";
 
 import "./Committee.css"
+import {useNavigate} from "react-router-dom"
 // import "./App.css"
 
 const App = () => {
+
+  
+  const navigate = useNavigate();
 
  
 
@@ -24,6 +28,7 @@ const App = () => {
       content: 
       <div className="carouselcontent">
         <img src={UNGA} className='carouselcontentimg' alt="" />
+        
         <div className="MUNcarousel">
 
         <div className="carouselcontenttext">
@@ -31,7 +36,7 @@ const App = () => {
             GENERAL ASSEMBLY <br />
             (UNGA)
         </div>
-        <button className="carouselcontentbtn">
+        <button className="carouselcontentbtn" onClick={()=>navigate("/muninfo_page1")}>
             <p className="carouselcontentpara">More Info</p> 
             <img src={Arrow} className="infoarrow" alt="" />
         </button>
@@ -52,10 +57,11 @@ const App = () => {
             PARTY MEET <br />
             (AIPPM)
         </div>
-        <button className="carouselcontentbtn">
+        <button className="carouselcontentbtn" onClick={()=>navigate("/muninfo_page2")}>
             <p className="carouselcontentpara">More Info</p> 
             <img src={Arrow} className="infoarrow" alt="" />
         </button>
+      
 
         </div>
 
@@ -72,10 +78,11 @@ const App = () => {
             INDIAN WAR CABINET <br />
             (HISTORIC COMMITTEE) 
         </div>
-        <button className="carouselcontentbtn">
+        <button className="carouselcontentbtn" onClick={()=>navigate("/muninfo_page3")}>
             <p className="carouselcontentpara">More Info</p> 
             <img src={Arrow} className="infoarrow" alt="" />
         </button>
+
 
         </div>
 
@@ -135,6 +142,7 @@ const App = () => {
     </div>
   )
 }
+
 
 export default App
 

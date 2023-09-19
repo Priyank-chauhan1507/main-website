@@ -157,6 +157,7 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
 
   return (
     <>
+    <div className="personaldetail-div">
       <Link to="/">
         <img src={logo} alt="" className="th-logo" />
       </Link>
@@ -358,6 +359,7 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
             </button>
           </div>
         </form>
+      </div>
       </div>
     </>
   )

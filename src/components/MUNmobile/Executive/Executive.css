@@ -6,20 +6,31 @@
 }
 .judge1-img{
     height:58vh;
+    object-fit: cover;
     border-radius: 10px;
+    
+    
 }
 .judge2-img{
     height:58vh;
     border-radius: 10px;
+
 }
 .judge3-img{
     height:58vh;
     border-radius: 10px;
+
 }
 .judge1-discription{
     color: #ffffff;
     text-align: center;
 }
+/* .j1{
+    object-fit: cover;
+} */
+/* .hero1{
+    object-fit: cover;
+} */
 
 @media only screen and (max-width:650px)
 {
@@ -41,10 +52,17 @@
 {
     height: 65vh;
 }
+/* .hero1{
+    object-fit: cover;
+} */
+
 .judge1-img{
-    height:48vh;
+    height:50vh;
     border-radius: 10px;
+    
+    
 }
+
 .judge2-img{
     height:48vh;
     border-radius: 10px;
@@ -60,6 +78,9 @@
 {
     height: 51vh;
 }
+/* .hero1{
+    object-fit: cover;
+} */
 .judge1-img{
     height:40vh;
     border-radius: 10px;

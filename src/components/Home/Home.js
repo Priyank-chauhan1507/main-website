@@ -11,8 +11,8 @@ import Navbar from '../EventsNavbar/Eventsnavbar'
 import Footer from '../Navbar/WebNavbarNew'
 import { Link, useNavigate } from "react-router-dom"
 import { customEvent } from '../../utils/analyticsHelper';
-// import Thomso from "../../assests/thomso.mp4"
 import Thomso from "../../assests/thomso-unscreen.gif"
+import Attractions from './Attractions'
 
 function Home() {
   const navigate = useNavigate();
@@ -55,13 +55,13 @@ function Home() {
       <img src={thomso} alt="" className='thomso' />
       {/* <img src={Thomso} alt="loading..." className='thomso'/> */}
       <img src={Belowthomso} alt="" className='b-thomso' />
-      
+
 
       {localStorage.getItem('token') ?
        (<div  style={{ margin: "0 auto",display:"flex",gap:"3vw" }}><Link to='/profile'>
         <button className='register'>PROFILE</button>
       </Link>
-      <Link to='/eventsmain'>
+      <Link to='/events'>
         <button className='Explore' onClick={() => customEvent("Explore Events Btn","user","From Home page to events", 1)}>Explore Events</button>
       </Link></div>)
       :
@@ -69,7 +69,7 @@ function Home() {
         <Link to='/register'>
         <button className='register' onClick={() => customEvent("REGISTER NOW! Btn","user","From Home page to registeration", 1)}>REGISTER NOW!</button>
       </Link>
-        <Link to='/eventsmain'>
+        <Link to='/events'>
         <button className='Explore'>Explore Events</button>
       </Link>
       </div>)}
@@ -83,7 +83,7 @@ function Home() {
 
       <img src={singers} alt="" className='singers' />
       <img src={singersmob} alt="" className='singersmob' />
-
+      {/* <Attractions /> */}
       <Footer />
     </div>
   )

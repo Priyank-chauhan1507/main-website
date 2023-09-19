@@ -69,7 +69,7 @@ function Navbar({ color, disable, setregister, register, data }) {
           <a
             className="event-nav-right-compo"
             onClick={() => {
-              navigate("/eventsmain");
+              navigate("/events");
             }}
           >
             Events
