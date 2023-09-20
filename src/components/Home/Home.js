@@ -48,6 +48,7 @@ import yellowmob from '../../assests/yellowmob.webp'
 import blue from '../../assests/blue.webp'
 
 import videoBack from '../../assests/videoBack.webp'
+import pause from '../../assests/pause.svg'
 
 
 function Home() {
@@ -308,18 +309,22 @@ function Home() {
 
 
   const videoRef = useRef(null);
+  const video2Ref = useRef(null);
 
   const handleVideoClick = () => {
     const video = videoRef.current;
+    const video2 = video2Ref.current;
     if (video) {
       if (video.paused) {
         video.play().catch(error => {
           console.error('Failed to play video:', error);
         });
         video.classList.add("vid_alt");
+        video2.classList.add("pause_alt");
       } else {
         video.pause();
         video.classList.remove("vid_alt");
+        video2.classList.remove("pause_alt");
       }
     }
   };
@@ -443,6 +448,7 @@ function Home() {
         <video className='vid' loop onClick={handleVideoClick} ref={videoRef}>
           <source src={mainvideo} type="video/mp4"></source>
         </video>
+        <img src={pause} className='pause' alt="pause.."  ref={video2Ref}/>
       </div>
 
      

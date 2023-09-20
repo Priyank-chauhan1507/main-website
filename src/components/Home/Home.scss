@@ -736,9 +736,26 @@ bottom: 31vh !important;
 #homebs2{
   display: none;
 }
+
+.pause{
+ display: none;
+}
+
+
 @media only screen and (max-width:768px){
   #homebg1{
 display: none;
+}
+
+.pause{
+  display: block;
+  position: absolute;
+    z-index: 1000000;
+    width: 6vw;
+}
+
+.pause_alt{
+  display: none;
 }
 
 #homebs2{
