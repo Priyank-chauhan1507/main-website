@@ -634,9 +634,9 @@ font-size:"16px";
   justify-content: center;
   align-items: center;
 }
-.logout_body{
+/* .logout_body{
   height: 207px;
-}
+} */
 .dacc{
   color: #111010;
   font-family: Comic Neue;
@@ -841,6 +841,9 @@ letter-spacing: -0.32px;
     padding: 2vh 2vw;
     height: 46vh;
 
+  }
+  .Payleft1{
+    overflow-y: scroll;
   }
   .pay-tr-head{
     width: 88vw;
