@@ -27,8 +27,10 @@ import Idcard from "./components/Profile/ID_card/Idcard";
 import IdcardBox from "./components/Profile/ID_card/idcardBox";
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
+import AdmitCard from "./components/Profile/PaymentBox/AdmitCard";
 import PdfDownload from "./PdfRenderer/PdfDownload"
 import Pdf from "./PdfRenderer/Renderer"
+import Qr from "./PdfRenderer/Qrcode"
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
 import FAQ from "./components/MUN/FAQ/FAQ";
@@ -87,8 +89,10 @@ function App(props) {
           <Route exact={true} path="/id_card" element={<Idcard />} />
           <Route exact={true} path="/pdf" element={<PdfDownload />} />
           <Route exact={true} path="/pdfs" element={<Pdf/>} />
+          <Route exact={true} path="/qr" element={<Qr/>} />
 
           <Route exact={true} path="/id_card_box" element={<IdcardBox />} />
+          <Route exact={true} path="/admitcard" element={<AdmitCard />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/eventsmain" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />

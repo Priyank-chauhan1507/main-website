@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   id_box_qr: {
     height: "40%",
     width: "100%",
-    border: "2px solid black",
+    
     padding: "2px",
   },
 
@@ -145,11 +145,19 @@ const styles = StyleSheet.create({
 
 const Renderer = () => {
   const [user, setuser] = useState({});
+  const [items, setItems] = useState();
 
 
   useEffect(() => {
     loadUserData();
   }, []);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem('dataKey'));
+    if (items) {
+      setItems(items);
+     }
+  }, [items]);
 
   const loadUserData = async () => {
     try {
@@ -172,13 +180,13 @@ const Renderer = () => {
             <View style={styles.id_border2}>
               <View style={styles.id_box}>
                 <View style={styles.id_box_left}>
-                  <Image
+                 {user.avtar && <Image
                     src={
                       user?.avtar
                     }
                     style={styles.id_box_image}
-                  />
-                  <Image src={qr} style={styles.id_box_qr} />
+                  />}
+                  <Image src={items} style={styles.id_box_qr} />
                 </View>
 
                 <View style={styles.id_box_right}>

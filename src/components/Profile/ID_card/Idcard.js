@@ -12,11 +12,15 @@ import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import axios from "axios";
 import "./Idcard.css";
 import { connect } from "react-redux";
+import QRcode from 'qrcode.react'
 
 const Idcard = ({ userDetails }) => {
   const locator = useLocation();
-  console.log(userDetails);
+  // console.log(userDetails);
   const [user, setuser] = useState({});
+  const [qr, setQr] = useState("");
+  const [vall,setVall] = useState("");
+  const [visible ,setVisible] = useState(false);
   //   const [userDetails, setuserDetails] = useState({});
 
   //   useEffect(() => {
@@ -27,6 +31,11 @@ const Idcard = ({ userDetails }) => {
     loadUserData();
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem('dataKey', JSON.stringify(vall));
+  }, [vall]);
+
+  
   const loadUserData = async () => {
     try {
       axios.get(`/apiV1/current_user_participant`).then((res) => {
@@ -34,12 +43,32 @@ const Idcard = ({ userDetails }) => {
         localStorage.setItem("user_id", res.data?.user_id);
         localStorage.setItem("id", res.data?.id);
         console.log("data", res.data);
+        setQr(user.thomso_id);
       });
     } catch (error) {
       console.log(error);
     }
   };
-  console.log(userDetails);
+  // console.log(userDetails);
+  
+  const Verify = ()=>{
+    console.log("sajclx");
+    setQr(user.thomso_id);
+    setVisible(true);
+    setTimeout(() => {
+      const canvas =   document.getElementById("myqr");
+    console.log(canvas,"sdkcjanh")
+    const pngUrl =   canvas
+    .toDataURL("image/png")
+    .replace("image/png", "image/octet-stream");
+    
+    setVall(pngUrl);
+    }, 1000);
+   
+
+    
+  };
+
 
   return (
     <div className="id_card_main_div">
@@ -48,10 +77,24 @@ const Idcard = ({ userDetails }) => {
         <div className="contain1_id">
           <div className="left_id">
             <div className="profile_id_pic">
-              <img src={user.avtar} className="profile_pic_image" alt="" />
+             {user.avtar &&  <img src={user.avtar} className="profile_pic_image" alt="" />}
             </div>
             <div className="id_qr">
-              <img src={qrcode} className="qr_image" alt="" />
+              {/* <img src={qrcode} className="qr_image" alt="" /> */}
+             {!visible && (<button
+          style={{cursor:"pointer",zIndex:"100"}}
+            onClick={Verify}
+            
+          >
+            verify
+          </button> )}
+            {visible && (<QRcode 
+              style={{marginTop:"3vh",}}
+                        id="myqr"
+                        value={qr} 
+                        size={100}
+                        
+                    /> )}
             </div>
           </div>
           <div className="right_id">

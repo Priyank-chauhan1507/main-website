@@ -33,7 +33,7 @@ color: #000;
 
 .contain1_id{
     display: flex;
-    z-index:-1;
+    z-index:0;
     background-image: url(../../../assests/dashedbg.webp);
     background-repeat: no-repeat;
     background-size: cover;
