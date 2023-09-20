@@ -69,6 +69,12 @@
     /* margin-right: 4vw; */
     padding: 5px 8px;
 }
+.event-regi-btn:hover{
+    /* color:black;
+    background:#b98b04;
+    transition: 0.3s ease-in-out;
+    /* border-color: #fff; */
+}
 
 
 .drop-row {
@@ -261,6 +267,18 @@
         position: relative;
 
     }
+    .slidebar1 h4:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .slidebar1 h1:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .slidebar1 h5:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 .bgmobile {
@@ -353,7 +371,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 8px;
-    background: #FFC414;
+    background: #ff3535;
     color: #FFF;
     text-align: center;
     leading-trim: both;
