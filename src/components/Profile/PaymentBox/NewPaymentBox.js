@@ -6,7 +6,6 @@ import log from "../../../assests/logout-logo.svg";
 import cs1 from "../../../assests/CautionSign1.svg";
 import MainProfileBox from "../MainProfileBox/MainProfileBox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
-// import EventMobileNav from "../EventsPage/EventMobileNav";
 import { json, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { connect } from "react-redux";

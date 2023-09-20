@@ -9,6 +9,8 @@ import {
   StyleSheet,
 } from "@react-pdf/renderer";
 import id_logo from "./ID_Logo.png";
+import iitr_logo from "./Group 36648.png";
+import thomso_logo from "./image 79.png";
 import qr from "./qr.png";
 import CS_normal from "./COMIC.TTF";
 import CS_bold from "./design.graffiti.comicsansmsgras.ttf";
@@ -36,8 +38,28 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+  },
+  id_header: {
+    display: "flex",
+    flexDirection: "row",
+    marginTop: "30px",
+    // justifyContent: "space-between",
+    // alignItems: "space-between",
+  },
+  id_header1: {
+    height: "56px",
+    width: "56px",
+    marginRight: '100px'
+  },
+  id_header2: {
+    fontSize: "20px",
+    marginRight: '100px'
+  },
+  id_header3: {
+    height: "56px",
+    width: "88px",
   },
   id_container: {
     height: "400px",
@@ -101,7 +123,7 @@ const styles = StyleSheet.create({
   id_box_qr: {
     height: "40%",
     width: "100%",
-    
+
     padding: "2px",
   },
 
@@ -141,22 +163,52 @@ const styles = StyleSheet.create({
     bottom: "0px",
     backgroundColor: "#F7B401",
   },
+  id_line: {
+    width: "95vw",
+    border: "1px solid black",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  id_insdata: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "90vw",
+    marginBottom: "20px",
+  },
+  id_ins: {
+    fontSize: "15px",
+    fontWeight: "600",
+    marginTop: "10px",
+    marginLeft: "10px",
+  },
+  id_data1: {
+    fontSize: "12px",
+    fontWeight: "600",
+    marginTop: "12px",
+    marginLeft: "10px",
+  },
+  id_data: {
+    fontSize: "12px",
+    marginTop: "12px",
+    marginLeft: "10px",
+  },
 });
 
 const Renderer = () => {
   const [user, setuser] = useState({});
   const [items, setItems] = useState();
 
-
   useEffect(() => {
     loadUserData();
   }, []);
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem('dataKey'));
+    const items = JSON.parse(localStorage.getItem("dataKey"));
     if (items) {
       setItems(items);
-     }
+    }
   }, [items]);
 
   const loadUserData = async () => {
@@ -173,6 +225,12 @@ const Renderer = () => {
   return (
     <Document>
       <Page size="A4" style={styles.id_page}>
+        <View style={styles.id_header}>
+          <Image src={iitr_logo} style={styles.id_header1} />
+          <Text style={styles.id_header2}>Provisional ID card</Text>
+          <Image src={thomso_logo} style={styles.id_header3}></Image>
+        </View>
+
         <View style={styles.id_container}>
           <Image src={id_logo} style={styles.id_logo} />
 
@@ -180,12 +238,9 @@ const Renderer = () => {
             <View style={styles.id_border2}>
               <View style={styles.id_box}>
                 <View style={styles.id_box_left}>
-                 {user.avtar && <Image
-                    src={
-                      user?.avtar
-                    }
-                    style={styles.id_box_image}
-                  />}
+                  {user.avtar && (
+                    <Image src={user?.avtar} style={styles.id_box_image} />
+                  )}
                   <Image src={items} style={styles.id_box_qr} />
                 </View>
 
@@ -200,13 +255,12 @@ const Renderer = () => {
                       <Text style={styles.id_box_text1}>Contact</Text>
                       <Text style={styles.id_box_text2}>{user?.contact}</Text>
                     </View>
-                    {user?.is_ca &&
+                    {user?.is_ca && (
                       <View>
-                      <Text style={styles.id_box_text1}>CA ID</Text>
-                      <Text style={styles.id_box_text2}>ThCA-2300138</Text>
-                    </View>
-                    }
-
+                        <Text style={styles.id_box_text1}>CA ID</Text>
+                        <Text style={styles.id_box_text2}>ThCA-2300138</Text>
+                      </View>
+                    )}
                   </View>
 
                   <Text style={styles.id_box_text1}>College</Text>
@@ -216,20 +270,57 @@ const Renderer = () => {
 
                   <Text style={styles.id_box_text1}>CA Referral & Name</Text>
                   {user?.referred_by_id ? (
-                  <Text style={styles.id_box_text2}>
-                  {user?.ca_thomso_id} ({user?.ca_name})
-                  </Text>
-                ) : (<Text style={styles.id_box_text2}>None</Text>)}
+                    <Text style={styles.id_box_text2}>
+                      {user?.ca_thomso_id} ({user?.ca_name})
+                    </Text>
+                  ) : (
+                    <Text style={styles.id_box_text2}>None</Text>
+                  )}
 
-                  <Text style={styles.id_box_textB}>Accommodation - {user?.accommodation ? "Yes" : "No"}</Text>
+                  <Text style={styles.id_box_textB}>
+                    Accommodation - {user?.accommodation ? "Yes" : "No"}
+                  </Text>
                   {/* <Text style={styles.id_box_text2}>None</Text> */}
                 </View>
               </View>
             </View>
           </View>
-
           <View style={styles.id_bottom}></View>
         </View>
+
+        <View style={styles.id_insdata}>
+          <View style={styles.id_line}></View>
+          <View>
+            <Text style={styles.id_ins}>INSTURCTIONS:</Text>
+            <Text style={styles.id_data1}>
+              → The Provisional ID card does not confer entitlement as a valid
+              identity or participant's pass for Thomso'23. It is mandatory for
+              all participants to bring this ID Card at the registration desk in
+              the Thomso Office at the MAC Building.
+            </Text>
+            <Text style={styles.id_data}>
+              → The ID Card must be in an undamaged condition and it is advised to
+              be carried within a file case to prevent any folding or creasing.
+            </Text>
+            <Text style={styles.id_data}>
+              → Additionally, participants are required to bring two identical
+              passport-sized photographs.
+            </Text>
+            <Text style={styles.id_data}>
+              → The ID card must be appropriately cut along the dotted lines and
+              presented at the registration desk.
+            </Text>
+            <Text style={styles.id_data}>
+              → Participants must bring a minimum of two printed copies of this ID
+              Card for the registration process.
+            </Text>
+            <Text style={styles.id_data}>
+              → Any forgery with this ID Card will lead to the jurisdiction of the
+              Thomso Organizing Committee and the authorities of IIT Roorkee.
+            </Text>
+          </View>
+        </View>
+
       </Page>
     </Document>
   );
