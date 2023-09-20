@@ -95,7 +95,7 @@
   }
   .singers{
     position: absolute;
-    width: 50rem;
+    width: 54rem;
     top: 9.5rem;
   }
   .singersmob{
@@ -238,19 +238,19 @@ margin-top: -28.8vw;
 
 }
 
-.aboutUs{
-  position:absolute ;
-  width :100%;
+.aboutUs {
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  top:10vw;
+  top: 9vw;
   color: #FFF;
-font-family: Super Comic;
-font-size: 2.5vw;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Super Comic;
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .proNites{
   position:absolute ;
@@ -258,10 +258,10 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  top:5vw;
+  top:2vw;
   color: #333;
 font-family: Super Comic;
-font-size: 2.5vw;
+font-size: 3vw;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -283,7 +283,7 @@ line-height: normal;
 
 .yellowy{
   position: absolute;
-  height:320vh;
+  height:120vh;
   width:100vw;
   top:-5rem;
 }
@@ -321,7 +321,7 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  top:20vw;
+  top:17vw;
   color: #FFF;
   text-align: center;
 font-family: Comic Neue;
@@ -337,7 +337,7 @@ padding:0 15vw;
 .home3rd{
   position: relative;
   width:100vw;
-  height:300vh;
+  height:100vh;
 }
 .home3rdmob{
   position: relative;
@@ -609,6 +609,10 @@ bottom: 31vh !important;
   height:80vh;
   width:80vw;
   cursor : url(../../assests/cursor.svg),auto;
+}
+.vid_alt{
+ 
+  cursor : url(../../assests/cursor.png),auto !important;
 }
 
 .videoBack{
