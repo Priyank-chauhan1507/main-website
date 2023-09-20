@@ -67,7 +67,7 @@ function Navbar({ color, disable, setregister, register, data }) {
         </Link>
         <div className="event-nav-right">
           <a
-            className="event-nav-right-compo"
+            className="event-nav-right-compo hover-underline-animation"
             onClick={() => {
               navigate("/events");
             }}
@@ -75,14 +75,14 @@ function Navbar({ color, disable, setregister, register, data }) {
             Events
           </a>
           <a
-            className="event-nav-right-compo"
+            className="event-nav-right-compo hover-underline-animation"
             href="https://ca.thomso.in/"
             target="_blank"
           >
             CA Portal
           </a>
           <a
-            className="event-nav-right-compo"
+            className="event-nav-right-compo hover-underline-animation"
             href="https://zonals.thomso.in/"
             target="_blank"
           >

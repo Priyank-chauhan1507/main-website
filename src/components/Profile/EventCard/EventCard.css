@@ -11,7 +11,9 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
+    cursor: pointer;
     z-index: 0;
+    transition: 0.3s ease-out;
     /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 6.13%, rgba(0, 0, 0, 0.45) 25.45%, rgba(0, 0, 0, 0.86) 54.90%, #000 92.12%); */
 
     /* border-radius: 8px; */
@@ -22,8 +24,9 @@
     display: flex;
     justify-content: space-between;
     margin: 0 15px;
- 
+    
     align-items: center;
+    /* text-decoration: none; */
 }
 .card-delete {
     position: absolute;
@@ -43,14 +46,20 @@
     color: #FFF;
     leading-trim: both;
     text-edge: cap;
-    font-family: Comic Neue;
-    font-size: 13px;
+    font-family: 'Comic Neue';
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
-    line-height: 13.275px;
+    /* line-height: 13.275px; */
     /* 100% */
     letter-spacing: -0.266px;
     margin-bottom: 2vh;
+}
+
+.eventcard:hover h2 {
+    font-size: 16px;
+    text-decoration: underline;
+    transition: 0.3s ease-out;
 }
 
 .eventcard hr {
@@ -61,8 +70,8 @@
 
 .eventcard p {
     color: #FFF;
-    font-family: Comic Sans MS;
-    font-size: 10px;
+    font-family: 'Comic Sans MS';
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -74,6 +83,14 @@
 .eventcard:hover
  p
 {
+    display: block;
+}
+
+.eventcard span {
+    display: none;
+}
+
+.eventcard:hover span {
     display: block;
 }
 
@@ -182,7 +199,39 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.13%, rgba(0, 0, 0, 0.45) 16.45%, rgba(0, 0, 0, 0.86) 54.90%, #000 92.12%);
 }
 
+
+@media only screen and (max-width: 1300px) {
+    .eventcard1 h2 {
+        font-size: 22px;
+    }
+    .eventcard1 {
+        margin: 0 15px 0 10px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .eventcard {
+        width: 25vw;
+    }
+    .eventcard1 {
+        margin: 0 10px 0 5px;
+    }
+    .eventcard1 h2 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .eventcard {
+        width: 23vw;
+    }
+}
+
 @media only screen and (max-width: 800px) {
+    .eventcard {
+        width: 22vw;
+    }
+    
     .eventcard-nav-part {
         display: none;
     }
@@ -191,6 +240,9 @@
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+    }
+    .eventcard1 h2 {
+        font-size: 19px;
     }
 }
 
@@ -214,7 +266,7 @@
     }
 
     .eventcard h2 {
-        font-size: 16px;
+        font-size: 18px;
 
         line-height: 20px !important;
 
