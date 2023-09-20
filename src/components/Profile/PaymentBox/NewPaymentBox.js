@@ -934,14 +934,7 @@ const NewPaymentBox = (
                                     >
                                       <>
                                         {data?.acco == "true" ? "YES" : "NO"}
-                                        {/* <MdDelete
-                                          style={{
-                                            cursor: "pointer",
-                                            size: "10px",
-                                          }}
-                                          color="white"
-                                          size="20px"
-                                        /> */}
+                                        
                                       </>
                                     </td>
                                     <td
@@ -949,13 +942,13 @@ const NewPaymentBox = (
                                       style={{ width: "20px" }}
                                     >
                                       <>
-                                        {/* {data?.acco == "true" ? "YES" : "NO"} */}
                                         <MdDelete
+                                        onClick={(index) => deletePayment(index)}
                                           style={{
                                             cursor: "pointer",
                                             size: "10px",
                                           }}
-                                          color="white"
+                                          color="red"
                                           size="20px"
                                         />
                                       </>
@@ -1012,7 +1005,7 @@ const NewPaymentBox = (
                     </>
                   ) : (
                     <>
-                      <div className="main_boxx">
+                      <div className="main_boxx" style={{overflowY:"scroll"}}>
                         <div className="MPaycontainer">
                           <div className="MPayleft">
                             <p className="Mpayheading">Payment Details</p>
@@ -1090,7 +1083,28 @@ const NewPaymentBox = (
                                 No
                               </button>
                             </div>
-                            {checkPayNow() == true ? (
+                            <div className="agree-terms-and-conditions">
+                                  <input
+                                    className="agree-checkbox"
+                                    style={{ cursor: "pointer" }}
+                                    type="checkbox"
+                                    checked={agree}
+                                    onChange={(e) => setAgree(!agree)}
+                                    required
+                                  />
+                                  <a
+                                    className="agree-a"
+                                    style={{
+                                      color: "white",
+                                      cursor: "pointer",
+                                    }}
+                                    href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                    target="_blank"
+                                  >
+                                    Agree Terms and Conditions *
+                                  </a>
+                                </div>
+                            {checkPayNow() == true && agree == true ? (
                               <button
                                 style={{ marginTop: "20px" }}
                                 className="PayNowBtnActive"
@@ -1105,6 +1119,19 @@ const NewPaymentBox = (
                             ) : (
                               <button
                                 style={{ marginTop: "20px" }}
+                                onClick={() =>{
+                                  if(agree == true){
+                                    message.info(
+                                      "Please select one accomodation option"
+                                    )
+                                  }else{
+                                    message.info(
+                                      "Please agree terms and conditions"
+                                    )
+                                  }
+                            }
+                              
+                            }
                                 className="PayNowBtn"
                               >
                                 Pay Now
