@@ -72,6 +72,8 @@ const NewPaymentBox = (
       });
   };
 
+  console.log(userDetails, "userdetails");
+
   function handleLogout() {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
@@ -110,12 +112,13 @@ const NewPaymentBox = (
   const [paymentLive, setPaymentLive] = useState(false);
   const [paying, setPaying] = useState(false);
   const [addpar, setAddpar] = useState(false);
-  const [submitid, setSubmitid] = useState(false);
+  // const [submitid, setSubmitid] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [male, setMale] = useState("");
   const [paymentData, setPaymentData] = useState([]);
   const [paymentData1, setPaymentData1] = useState([]);
   const [acco1, setAcco1] = useState("true");
+  const [agree, setAgree] = useState(false);
 
   console.log(paymentData1, "paymentData1");
   console.log(paymentData, "paymentData");
@@ -125,7 +128,21 @@ const NewPaymentBox = (
     color: "white",
   });
   const [style2, setStyle2] = useState(is_female ? ON : OFF);
-  const[totalpay,setTotalpay] = useState(acco1=="true" ? 2799 : 2299);
+  // const [totalpay, setTotalpay] = useState(acco1 == "true" ? 2799 : 2299);
+  const [totalpay, setTotalpay] = useState(0);
+
+  useEffect(() => {
+    return () => {
+      setTotalpay(0);
+      for(let i=0;i<paymentData1.length;i++){
+        if(paymentData1[i].acco == "true"){
+          setTotalpay(totalpay + 2799);
+        }else if(paymentData1[i].acco == "false"){
+          setTotalpay(totalpay + 2299);
+        }
+      }
+    }
+  }, [paymentData1])
 
   const handleDataNo = () => {
     var temp = paymentData;
@@ -134,7 +151,8 @@ const NewPaymentBox = (
     var temp1 = paymentData1;
     temp1.push({ id: inputValue, acco: "false", gender: "Male" });
     setPaymentData1(temp1);
-    setTotalpay(() => totalpay+2299);
+    // setTotalpay(() => totalpay + 2299);
+    clearthomsoid();
   };
 
   const handleDataYes = () => {
@@ -144,11 +162,9 @@ const NewPaymentBox = (
     var temp1 = paymentData1;
     temp1.push({ id: inputValue, acco: "true", gender: "Male" });
     setPaymentData1(temp1);
-    setTotalpay(() => totalpay+2799);
+    // setTotalpay(() => totalpay + 2799);
+    clearthomsoid();
   };
-
-
-  
 
   const noAccommdation = () => {
     setacco(false);
@@ -177,36 +193,11 @@ const NewPaymentBox = (
     } else {
       return true;
     }
-    // if (teamevent === false) {
-    //   return true;
-    // } else {
-    //   if (eventArray.length === 0) {
-    //     return true;
-    //   }
-    //   for (let i = 0; i < eventArray.length; i++) {
-    //     if (
-    //       eventArray[i].team_name === undefined ||
-    //       eventArray[i].team_name === ""
-    //     ) {
-    //       return false;
-    //     } else if (
-    //       (eventArray[i].event === 8 || eventArray[i].event === 12) &&
-    //       (eventArray[i].sub_event_name === undefined ||
-    //         eventArray[i].sub_event_name === "")
-    //     ) {
-    //       return false;
-    //     }
-    //   }
-    //   return true;
-    // }
   };
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
-  // const handleGenderChange = (event) => {
-  //   setMale("Male");
-  // };
   const clearthomsoid = () => {
     setInputValue("");
   };
@@ -231,9 +222,10 @@ const NewPaymentBox = (
         var temp1 = paymentData1;
         temp1.push({ id: input, acco: "true", gender: u.gender });
         setPaymentData1(temp1);
-        setTotalpay(() => totalpay+2799);
         setGenderr(u.gender);
         setAddpar(!addpar);
+        // setTotalpay(() => totalpay + 2799);
+        clearthomsoid();
       }
 
       if (u.status == "false") {
@@ -294,6 +286,13 @@ const NewPaymentBox = (
     } catch (error) {
       console.error("Error:", error);
     }
+  }
+
+  const deletePayment = (index) => {
+    var spliced1 = paymentData1.splice(index,1);
+    setPaymentData1(spliced1);
+    var spliced = paymentData.splice(index,1);
+    setPaymentData(spliced);
   }
 
   const locator = useLocation();
@@ -376,16 +375,16 @@ const NewPaymentBox = (
                   {userDetails?.is_iitr_alumn ? (
                     <div
                       className={
-                        locator.pathname === "/payment"
+                        locator.pathname === "/newpayment"
                           ? "lsp-c2 c2-text"
                           : "lsp-c2 c2-text"
                       }
                     >
                       <img src={icon3} alt="icon3" />
                       <Link
-                        to="/payment"
+                        to="/newpayment"
                         className={
-                          locator.pathname === "/payment"
+                          locator.pathname === "/newpayment"
                             ? "c1-text"
                             : "c2-text"
                         }
@@ -397,9 +396,9 @@ const NewPaymentBox = (
                     <div className="lsp-c1">
                       <img src={icon3} alt="icon3" />
                       <Link
-                        to="/payment"
+                        to="/newpayment"
                         className={
-                          locator.pathname === "/payment"
+                          locator.pathname === "/newpayment"
                             ? "c1-text"
                             : "c2-text"
                         }
@@ -451,7 +450,10 @@ const NewPaymentBox = (
                                 </tr>
                               </thead>
                               <hr />
-                              <tbody className="pay-body-data">
+                              <tbody
+                                className="pay-body-data"
+                                style={{ overflowY: "scroll" }}
+                              >
                                 <>
                                   {paymentData1.map((data, index) => {
                                     return (
@@ -470,11 +472,12 @@ const NewPaymentBox = (
                                           className="pay-th"
                                         >
                                           <MdDelete
+                                          onClick={(index) => deletePayment(index)}
                                             style={{
                                               cursor: "pointer",
                                               size: "20px",
                                             }}
-                                            color="white"
+                                            color="red"
                                             size="20px"
                                           />
                                         </td>
@@ -502,8 +505,16 @@ const NewPaymentBox = (
                                 </h2>
                               </div>
                               <div className="total-pay-2">
-                                <p className="total-pay-1-p1">₹{totalpay}</p>
-                                <p className="total-pay-1-p2">{paymentData.length}</p>
+                                <p className="total-pay-1-p1">
+                                  ₹{totalpay}
+                                  <span style={{ fontSize: "1vw" }}>
+                                    {" "}
+                                    + taxes
+                                  </span>
+                                </p>
+                                <p className="total-pay-1-p2">
+                                  {paymentData.length}
+                                </p>
                               </div>
                               <div className="total-pay-3">
                                 <button
@@ -520,97 +531,173 @@ const NewPaymentBox = (
                         <>
                           <div
                             className="Payleft"
-                            style={{ marginRight: "auto" }}
+                            style={{
+                              marginRight: "auto",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              gap: "10vw",
+                              marginLeft: "auto",
+                            }}
                           >
-                            <p className="payheading">Payment Details</p>
-                            <div className="amountBox">
-                              <div className="PayAmount">
-                                <div>
-                                  <p>Thomso Fees</p>
-                                  {acco == true || acco == null ? (
-                                    <p>Accommodation</p>
-                                  ) : (
-                                    <p style={{ color: "rgba(64, 64, 64, 1)" }}>
-                                      Accommodation
-                                    </p>
-                                  )}
-                                </div>
-                                <div>
-                                  <p>₹ 2299</p>
-                                  {acco == true || acco == null ? (
-                                    <p>₹ 500</p>
-                                  ) : (
-                                    <p style={{ color: "rgba(64, 64, 64, 1)" }}>
-                                      ₹ 500
-                                    </p>
-                                  )}
-                                </div>
-                              </div>
-                              <div className="Payline1"></div>
-                              <div className="TotalAmount">
-                                <p className="Paylarge">TOTAL</p>
-                                <p>
-                                  <span className="Paylarge">
-                                    ₹{" "}
-                                    {acco == true || acco == null
-                                      ? "2799"
-                                      : "2299"}
-                                  </span>
-                                  <span className="PayTaxes"> + Taxes</span>
-                                </p>
-                              </div>
-                              <p className="PayAccommodation">
-                                Accommodation includes 3 day-3 night stay and
-                                Food (Breakfast + Lunch){" "}
-                              </p>
-                            </div>
-                            <p className="Payinfo"></p>
-
-                            <p className="Payevent">
-                              Are you going to take Accommodation in IITR? (*
-                              Accommdation Compulsory for Female)
-                            </p>
                             <div
-                              className="yesNo"
-                              style={{ opacity: is_female ? "0.5" : "1" }}
+                              className="Payleft-left"
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                              }}
                             >
-                              <button
-                                className="yesbtn"
-                                disabled={is_female}
-                                onClick={() => {
-                                  setAcco1("true");
-                                  Accommdation();
-                                }}
-                                style={style2}
-                              >
-                                Yes
-                              </button>
-                              <button
-                                className="nobtn"
-                                disabled={is_female}
-                                onClick={() => {
-                                  setAcco1("false");
-                                  noAccommdation();
-                                }}
-                                style={style1}
-                              >
-                                No
-                              </button>
+                              <>
+                                <p className="payheading">Payment Details</p>
+                                <div className="amountBox">
+                                  <div className="PayAmount">
+                                    <div>
+                                      <p>Thomso Fees</p>
+                                      {acco == true || acco == null ? (
+                                        <p>Accommodation</p>
+                                      ) : (
+                                        <p
+                                          style={{
+                                            color: "rgba(64, 64, 64, 1)",
+                                          }}
+                                        >
+                                          Accommodation
+                                        </p>
+                                      )}
+                                    </div>
+                                    <div>
+                                      <p>₹ 2299</p>
+                                      {acco == true || acco == null ? (
+                                        <p>₹ 500</p>
+                                      ) : (
+                                        <p
+                                          style={{
+                                            color: "rgba(64, 64, 64, 1)",
+                                          }}
+                                        >
+                                          ₹ 500
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                  <div className="Payline1"></div>
+                                  <div className="TotalAmount">
+                                    <p className="Paylarge">TOTAL</p>
+                                    <p>
+                                      <span className="Paylarge">
+                                        ₹{" "}
+                                        {acco == true || acco == null
+                                          ? "2799"
+                                          : "2299"}
+                                      </span>
+                                      <span className="PayTaxes"> + Taxes</span>
+                                    </p>
+                                  </div>
+                                  <p className="PayAccommodation">
+                                    Accommodation includes 4 day-3 night stay
+                                    and Food (Breakfast + Lunch){" "}
+                                  </p>
+                                </div>
+                              </>
                             </div>
-                            {checkPayNow() == true ? (
-                              <button
-                                className="PayNowBtnActive"
-                                onClick={paynow}
-                              >
-                                {loading ? (
-                                  <CircularProgress color="inherit" size={20} />
+                            <div
+                              className="Payleft-right"
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                marginRight:"20px"
+                              }}
+                            >
+                              <>
+                                <p className="Payevent">
+                                  Are you going to take Accommodation in IITR?
+                                  (* Accommdation Compulsory for Female)
+                                </p>
+                                <div
+                                  className="yesNo"
+                                  style={{ opacity: is_female ? "0.5" : "1" }}
+                                >
+                                  <button
+                                    className="yesbtn"
+                                    disabled={is_female}
+                                    onClick={() => {
+                                      setAcco1("true");
+                                      Accommdation();
+                                    }}
+                                    style={style2}
+                                  >
+                                    Yes
+                                  </button>
+                                  <button
+                                    className="nobtn"
+                                    disabled={is_female}
+                                    onClick={() => {
+                                      setAcco1("false");
+                                      noAccommdation();
+                                    }}
+                                    style={style1}
+                                  >
+                                    No
+                                  </button>
+                                </div>
+                                <div className="agree-terms-and-conditions">
+                                  <input
+                                    className="agree-checkbox"
+                                    style={{ cursor: "pointer" }}
+                                    type="checkbox"
+                                    checked={agree}
+                                    onChange={(e) => setAgree(!agree)}
+                                    required
+                                  />
+                                  <a
+                                    className="agree-a"
+                                    style={{
+                                      color: "white",
+                                      cursor: "pointer",
+                                    }}
+                                    href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                    target="_blank"
+                                  >
+                                    Agree Terms and Conditions *
+                                  </a>
+                                </div>
+
+                                {checkPayNow() == true && agree == true ? (
+                                  <button
+                                    className="PayNowBtnActive"
+                                    onClick={paynow}
+                                  >
+                                    {loading ? (
+                                      <CircularProgress
+                                        color="inherit"
+                                        size={20}
+                                      />
+                                    ) : (
+                                      "Pay Now"
+                                    )}
+                                  </button>
                                 ) : (
-                                  "Pay Now"
+                                  <button
+                                    onClick={() =>{
+                                          if(agree == true){
+                                            message.info(
+                                              "Please select one accomodation option"
+                                            )
+                                          }else{
+                                            message.info(
+                                              "Please agree terms and conditions"
+                                            )
+                                          }
+                                    }
+                                      
+                                    }
+                                    className="PayNowBtn"
+                                  >
+                                    Pay Now
+                                  </button>
                                 )}
-                              </button>
-                            ) : (
-                              <button className="PayNowBtn">Pay Now</button>
-                            )}
+                              </>
+                            </div>
                           </div>
                         </>
                       )}
@@ -622,7 +709,10 @@ const NewPaymentBox = (
           </div>
           <div className={!logout ? "none" : ""} id="logout">
             <div className="l_body">
-              <div className="logout_body" style={{ position: "relative" }}>
+              <div
+                className="logout_body"
+                style={{ position: "relative", height: "318px" }}
+              >
                 <div className="redpic">
                   <img src={cs1} alt="redpic" />
                 </div>
@@ -660,14 +750,12 @@ const NewPaymentBox = (
                       <h1 className="dacc">Does he want accomodation?</h1>
                     </div>
                     <div className="fle-ro2">
-                      
-
                       <button
                         onClick={() => {
                           setAddpar(!addpar);
                           handleDataYes();
                           setGenderr("Female");
-                          clearthomsoid();
+                          // clearthomsoid();
                         }}
                         className="submit-par"
                         style={{ fontSize: "16px", padding: "6px" }}
@@ -676,11 +764,11 @@ const NewPaymentBox = (
                       </button>
                       <button
                         onClick={() => {
-                          setSubmitid(false);
-                          clearthomsoid();
-                          handleDataNo();
-                          setMale(false);
+                          // setSubmitid(false);
                           setAddpar(!addpar);
+                          handleDataNo();
+                          // clearthomsoid();
+                          setMale(false);
                           setGenderr("Female");
                         }}
                         className="clear-par"
@@ -706,7 +794,7 @@ const NewPaymentBox = (
                       <button
                         onClick={() => {
                           setAddpar(!addpar);
-                          setSubmitid(false);
+                          // setSubmitid(false);
                           clearthomsoid();
                         }}
                         className="clear-par"
@@ -717,9 +805,8 @@ const NewPaymentBox = (
 
                       <button
                         onClick={() => {
-                          // setSubmitid(true);
                           checkInputExists(inputValue);
-                          clearthomsoid();
+                          // clearthomsoid();
                         }}
                         className="submit-par"
                         style={{ padding: "6px", fontSize: "16px" }}
@@ -789,9 +876,9 @@ const NewPaymentBox = (
                   ) : (
                     <div className="mv-top-2">
                       <Link
-                        to="/payment"
+                        to="/newpayment"
                         className={
-                          Locator.pathname === "/payment"
+                          Locator.pathname === "/newpayment"
                             ? "nav-active"
                             : "nav-passive"
                         }
@@ -818,24 +905,51 @@ const NewPaymentBox = (
                           <thead className="par-head">
                             <tr className="pay-tr-head">
                               <th className="pay-th">Thomso ID</th>
-                              <th className="pay-th">Gender</th>
+                              <th className="pay-th" style={{ width: "14vw" }}>
+                                Gender
+                              </th>
                               <th className="pay-th">Accomodation</th>
                             </tr>
                           </thead>
                           <hr />
-                          <tbody className="pay-body-data">
+                          <tbody
+                            className="pay-body-data"
+                            style={{ overflowY: "scroll" }}
+                          >
                             <>
                               {paymentData1.map((data) => {
                                 return (
                                   <tr className="pay-tr">
                                     <td className="pay-th">{data?.id}</td>
-                                    <td className="pay-th">{data?.gender}</td>
                                     <td
                                       className="pay-th"
-                                      style={{ gap: "10px" }}
+                                      style={{ width: "14vw" }}
+                                    >
+                                      {data?.gender}
+                                    </td>
+                                    <td
+                                      className="pay-th"
+                                      style={{ width: "14vw" }}
+                                      // style={{ gap: "10px",alignItems:"center" }}
                                     >
                                       <>
                                         {data?.acco == "true" ? "YES" : "NO"}
+                                        {/* <MdDelete
+                                          style={{
+                                            cursor: "pointer",
+                                            size: "10px",
+                                          }}
+                                          color="white"
+                                          size="20px"
+                                        /> */}
+                                      </>
+                                    </td>
+                                    <td
+                                      className="pay-th"
+                                      style={{ width: "20px" }}
+                                    >
+                                      <>
+                                        {/* {data?.acco == "true" ? "YES" : "NO"} */}
                                         <MdDelete
                                           style={{
                                             cursor: "pointer",
@@ -846,16 +960,6 @@ const NewPaymentBox = (
                                         />
                                       </>
                                     </td>
-                                    {/* <td style={{width:"20px"}} className="pay-th">
-                                            <MdDelete
-                                              style={{
-                                                cursor: "pointer",
-                                                size: "20px",
-                                              }}
-                                              color="white"
-                                              size="20px"
-                                            />
-                                        </td> */}
                                   </tr>
                                 );
                               })}
@@ -882,15 +986,23 @@ const NewPaymentBox = (
                               </h2>
                             </div>
                             <div className="total-pay-2">
-                              <p className="total-pay-1-p1">₹ 2799</p>
-                              <p className="total-pay-1-p2">1</p>
+                              <p className="total-pay-1-p1">
+                                ₹{totalpay}
+                                <span style={{ fontSize: "18px" }}>
+                                  {" "}
+                                  + taxes
+                                </span>
+                              </p>
+                              <p className="total-pay-1-p2">
+                                {paymentData.length}
+                              </p>
                             </div>
                           </div>
 
                           <div className="total-pay-3">
-                            <button 
-                            className="total-pay-3-btn" 
-                            onClick={makePayment}
+                            <button
+                              className="total-pay-3-btn"
+                              onClick={makePayment}
                             >
                               Pay Now
                             </button>
@@ -941,7 +1053,7 @@ const NewPaymentBox = (
                                 </p>
                               </div>
                               <p className="MPayAccommodation">
-                                Accommodation includes 3 day-3 night stay and
+                                Accommodation includes 4 day-3 night stay and
                                 Food (Breakfast + Lunch){" "}
                               </p>
                             </div>
@@ -959,8 +1071,8 @@ const NewPaymentBox = (
                                 className="Myesbtn"
                                 disabled={is_female}
                                 onClick={() => {
-                                  Accommdation();
                                   setAcco1("true");
+                                  Accommdation();
                                 }}
                                 style={style2}
                               >
@@ -970,8 +1082,8 @@ const NewPaymentBox = (
                                 className="Mnobtn"
                                 disabled={is_female}
                                 onClick={() => {
-                                  noAccommdation();
                                   setAcco1("false");
+                                  noAccommdation();
                                 }}
                                 style={style1}
                               >
