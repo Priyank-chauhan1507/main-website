@@ -132,7 +132,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    background: #F7B900;
+    background:#F7B900;
+}
+.eventcard-nav button:hover{
+    background: transparent;
+    color: #F7B900;
+    border-color: #fff;
+    transition: 0.3s ease-in-out;
 }
 
 .events-team-name {
