@@ -54,6 +54,9 @@
     width: 100%;
     border: 2px solid black;
     padding: 2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
 
   .id_box_id {
@@ -90,4 +93,72 @@
     width: 100%;
     bottom: 0px;
     background-color: #F7B401;
+  }
+  .right_id_card
+  {
+    margin-left: 3vw;
+    margin-top: -2vh;
+  }
+  .generate
+  {
+    width: 12vw;
+    height: 6vh;
+    background-color: white;
+    color: black;
+    margin-top: 3vh;
+  }
+  .generate1
+  {
+    width: 12vw;
+    height: 6vh;
+    background-color: white;
+    color: black;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  .id_card_uploadphoto_text
+  {
+    margin-bottom: 5vh;
+  }
+  .id_card_downloadidcard_text
+  {
+    margin-top: 4vh;
+  }
+  .downloadsign
+  {
+    height: 12px;
+    width: 12px;
+  }
+
+  .preview
+  {
+    color: white;
+    margin-top: 3vh;
+  }
+
+  @media screen and (max-width:768px)
+  {
+    .id_border1
+    {
+      width: 100%;
+    }
+    .id_box_qr_text
+    {
+      text-align: center;
+    }
+    .id_card_uploadphoto_text
+    {
+      color: white;
+    }
+    .right_id_card
+    {
+      margin-top: 3vh;
+    }
+    .generate1{
+      margin: 4vh auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25vw;
+    }
   }

@@ -14,6 +14,7 @@ import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/payment.svg";
+import download from "../../../assests/downloadsign.png";
 import { message } from "antd";
 import icon31 from "../../../assests/payment.svg";
 import line from "../../../assests/line1.svg";
@@ -229,7 +230,7 @@ const Id_Card = () => {
                         value={qr} 
                         size={100}
                         
-                    /> ):<div className= "id_box_qr"> Qr not generated</div>}
+                    /> ):<div className= "id_box_qr"><div className="id_box_qr_text"> Qr code not generated </div></div>}
                 </div>
 
                 <div  className="id_box_right">
@@ -271,80 +272,32 @@ const Id_Card = () => {
             </div>
           </div>
           <div>
-         <div className="generate"> <button disabled={visible}
+            <div className="right_id_card">
+            <div className="id_card_uploadphoto_text">
+              Note: Please upload your photo to download your virtual ID card 
+            </div>
+            <hr />
+         <div > <button className="generate1" disabled={visible}
           style={{cursor:"pointer",zIndex:"100"}}
             onClick={Verify}
             
           >{!visible?"Generate your Qr code": "Qr code Generated "}
           </button> </div> 
-          <div className="generate">   <button disabled={!visible} ><Link to="/pdf"
+          <hr />
+          <div className="id_card_downloadidcard_text">
+              Download your Virtual ID Card 
+            </div>
+          <div>   <button className="generate" disabled={!visible} ><Link to="/pdf"
            style={{cursor:"pointer",color:"black",}}
             
             >
-            Download Id card
+           <img className="downloadsign"src={download}alt="" /> Download Id card
           </Link></button> </div> 
+            </div>
           
           </div>
           
-                {/* <div className="id_card_main_div">
-                  <div className="id_card_div">
-                    <img src={id_card_bg} className="id_card_bg1" alt="" />
-                    <div className="contain1_id">
-                      <div className="left_id">
-                        <div className="profile_id_pic">
-                          <img
-                            src={userDetails.avtar}
-                            className="profile_pic_image"
-                            alt=""
-                          />
-                        </div>
-                        <div className="id_qr">
-                          <img src={qrcode} className="qr_image" alt="" />
-                        </div>
-                      </div>
-                      <div className="right_id">
-                        <div className="thomso_card_id">{userDetails.thomso_id}</div>
-                        <div className="id_card_name">
-                          <div>Name :</div>
-                          <div className="dataSize">{userDetails.name}</div>
-                        </div>
-                        <div className="contain2_id">
-                          <div className="id_contactno">
-                            <div>Contact</div>
-                            <div className="dataSize">{userDetails.contact}</div>
-                          </div>
-                          {userDetails.is_ca === true && (
-                            <div className="id_ca_id">
-                              <div>CA-ID :</div>
-                              <div className="dataSize">
-                                {userDetails.ca_thomso_id}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                        <div className="id_college">
-                          <div>College</div>
-                          <div className="dataSize">{userDetails.college}</div>
-                        </div>
-                        {userDetails?.is_ca === false && (
-                          <div className="id_ca_referral">
-                            <div>CA-Referral and Name</div>
-                            <div className="dataSize">
-                              {userDetails.ca_thomso_id} and {userDetails.ca_name}
-                            </div>
-                          </div>
-                        )}
-                        <div className="id_accomodation">
-                          <div>Accomodation:</div>
-                          <div className="dataSize">
-                            {" "}
-                            {userDetails.accommodation ? "Yes" : "No"}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
+                
 
 
 
@@ -400,7 +353,7 @@ const Id_Card = () => {
                       to="/profile"
                       className={
                         Locator.pathname === "/profile"
-                          ? "nav-active"
+                          ? "nav-active"  
                           : "nav-passive"
                       }
                     >
@@ -438,7 +391,7 @@ const Id_Card = () => {
                 <div className="mpb-line1" />
               </div>
 
-
+              <div className="preview">Preview</div>            
 
               <div  className="id_border1">
             <div  className="id_border2">
@@ -450,8 +403,16 @@ const Id_Card = () => {
                     }
                     className="id_box_image"
                   />
-                  <img src={qr} className="id_box_qr" />
+
+                  {visible ? (<QRcode 
+              
+                        id="myqr"
+                        value={qr} 
+                        size={100}
+                        
+                    /> ):<div className= "id_box_qr"><div className="id_box_qr_text"> Qr code not generated </div></div>}
                 </div>
+                
 
                 <div  className="id_box_right">
                   <p  className="id_box_id">{userDetails?.thomso_id}</p>
@@ -491,6 +452,28 @@ const Id_Card = () => {
               </div>
             </div>
           </div>
+          <div className="right_id_card">
+            <div className="id_card_uploadphoto_text">
+              Note: Please upload your photo to download your virtual ID card 
+            </div>
+            <hr />
+         <div > <button className="generate1" disabled={visible}
+          style={{cursor:"pointer",zIndex:"100"}}
+            onClick={Verify}
+            
+          >{!visible?"Generate Qr code": "Qr code Generated "}
+          </button> </div> 
+          <hr />
+          <div className="id_card_downloadidcard_text">
+              Download your Virtual ID Card 
+            </div>
+          <div>   <button className="generate" disabled={!visible} ><Link to="/pdf"
+           style={{cursor:"pointer",color:"black",}}
+            
+            >
+           <img className="downloadsign"src={download}alt="" /> Download Id card
+          </Link></button> </div> 
+            </div>
 
 
             </div>
