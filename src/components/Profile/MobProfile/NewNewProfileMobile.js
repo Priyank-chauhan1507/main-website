@@ -155,7 +155,7 @@ const NewNewProfileMobile = ({ data }) => {
   return (
     <div
       className="new-mob-profile"
-      style={{ height: "81vh", overflowY: "auto", overflowX: "hidden" }}
+      style={{ height: "81vh", overflowY: "hidden", overflowX: "hidden" }}
     >
       {loading && <Loader />}
       <div className="mpb-mobileview">
@@ -214,6 +214,7 @@ const NewNewProfileMobile = ({ data }) => {
         </div>
         <div className="mpb-line1" />
       </div>
+      <div className="mainscroll">
       <div
         className={
           locator.pathname === "/payment" || locator.pathname === "/pevents"
@@ -225,10 +226,12 @@ const NewNewProfileMobile = ({ data }) => {
           <p id="mob_upload_pic">
             {" "}
             <FileUploader
+            style={{display:"flex",flexDirection:"column",justifyContent:"center"}}
               type="file"
               types={fileTypes}
               handleChange={changeHandler1}
               accept="image/jpeg, image/png"
+              className="fileupload-mob-profile"
             >
               <img
                 className="lsp-img11"
@@ -515,6 +518,7 @@ const NewNewProfileMobile = ({ data }) => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

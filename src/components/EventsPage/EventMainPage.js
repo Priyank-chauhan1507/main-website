@@ -216,6 +216,7 @@ const EventMainPage = ({ events }) => {
                         <div key={index}>
                           <input
                             type="checkbox"
+                            className="checkbox"
                             id={el}
                             value={el}
                             // onClick={()=>{setcheck(false)}}

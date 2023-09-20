@@ -14,11 +14,12 @@
     cursor: pointer;
   }
 
+
 .nav-active {
     font-family: 'Oxanium';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     /* identical to box height, or 125% */
 
@@ -29,7 +30,10 @@
 
     color: black;
     background: white;
-    padding: 2px;
+    padding: 2px 5px 2px 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
 
 }
 .new-mob-profile::-webkit-scrollbar{
@@ -39,7 +43,7 @@
     font-family: 'Oxanium';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     /* identical to box height, or 125% */
 
@@ -50,17 +54,21 @@
     color: rgba(255, 255, 255, 0.5);
     border: 2px solid white;
     gap: 10px;
-    padding: 2px;
+    padding: 2px 5px 2px 5px;
 
 }
-
+.fileupload-mob-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .mv-top {
     padding-top: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 25px;
+    gap:10vw;
 }
 
 .img--1 {
@@ -122,7 +130,25 @@
         display:none;
       }    
       
+    .mainscroll{
+        display: flex !important;
     
+    overflow-y: scroll;
+    height: 68vh !important;
+    flex-wrap: wrap !important;
+    overflow-x: hidden;
+    } 
+    .mainscroll::-webkit-scrollbar:vertical{
+        /* scrollbar-width: 10px;
+        scrollbar-color: #fff; */
+        width: 5px;
+  height: 80vh;
+  background-color: #aaa
+    }
+    .mainscroll::-webkit-scrollbar-button{
+        display: none;
+        
+    }
 
     .ca-ref-box{
         margin-top:2vh;
@@ -190,9 +216,10 @@
         flex-direction: row;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        gap:2rem;
+        align-items: center;
         margin-top: 35px;
-        gap: 8px;
+        gap: 35px;
     }
 
     .mob-lt1 {
@@ -215,6 +242,9 @@
         width: 15vw;
         height: 15vw;
         border-radius:100px;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 1px;
     }
 
     #profile_mob_cover{
@@ -236,7 +266,16 @@
 .paymentmobpage{
     display: none;
   }
-
+  @media only screen and (max-width: 440px){
+    .mv-top{
+        gap:7vw;
+    }
+  }
+  @media only screen and (max-width: 400px){
+    .mv-top{
+        gap:5vw;
+    }
+  }
 
   @media only screen and (max-width: 360px) {
 
@@ -244,8 +283,12 @@
         font-family: 'Oxanium';
         font-style: normal;
         font-weight: 600;
-        font-size: 4vw;
+        font-size: 3.5vw;
         line-height: 20px;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px;
+
         /* identical to box height, or 125% */
     
         display: flex;
@@ -261,7 +304,7 @@
         font-family: 'Oxanium';
         font-style: normal;
         font-weight: 400;
-        font-size: 4vw;
+        font-size: 3.5vw;
         line-height: 20px;
         /* identical to box height, or 125% */
     
@@ -273,7 +316,7 @@
     
     }
     
-    .nav-passive {
+    /* .nav-passive {
         font-family: 'Oxanium';
         font-style: normal;
         font-weight: 400;
@@ -281,16 +324,19 @@
         line-height: 20px;
         /* identical to box height, or 125% */
     
-        display: flex;
+        /* display: flex;
         align-items: center;
         letter-spacing: -0.02em;
     
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.5); */
     
-    }
+     /* } */  
 
     .mv-top{
-        gap: 15px;
+        gap: 10px;
+    }
+    .lsp-pic-1 {
+        gap:15px
     }
 
   }

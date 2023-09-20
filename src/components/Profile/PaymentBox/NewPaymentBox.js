@@ -836,7 +836,7 @@ const NewPaymentBox = (
           {/* ------------------Add participant modal-------------- */}
           <div className={addpar ? "" : "none"} id="logout">
             <div className="l_body">
-              <div className="logout_body" style={{ position: "relative" }}>
+              <div className="logout_body" style={{ position: "relative",height:"207px" }}>
                 {genderr === "Male" ? (
                   <div className="add-acco">
                     <div className="does-he">
@@ -984,10 +984,18 @@ const NewPaymentBox = (
                 </div>
                 <div className="mpb-line1" />
               </div>
-              {paymentstatus ? (
+              {userDetails.payment ? (
                 <PaymentSuccess />
-              ) : (
-                <>
+              ) : userDetails.gender == "Female" && config.girls_payment_close ? (
+                  <>
+                    <div>Girls Payments are closed now</div>
+                  </>
+                  ) : config.all_payment_close ? (
+                    <>
+                      <div>All Payments are closed now</div>
+                    </>
+                    ) : (
+                    <>
                   {paying ? (
                     <>
                       <div
@@ -1036,7 +1044,7 @@ const NewPaymentBox = (
                                     >
                                       <>
                                         <MdDelete
-                                        onClick={(index) => deletePayment(index)}
+                                        onClick={(index) => deletePayment(data?.id)}
                                           style={{
                                             cursor: "pointer",
                                             size: "10px",
@@ -1089,6 +1097,7 @@ const NewPaymentBox = (
                             <button
                               className="total-pay-3-btn"
                               onClick={makePayment}
+                              disabled={!paymentData.length}
                             >
                               Pay Now
                             </button>
@@ -1115,12 +1124,12 @@ const NewPaymentBox = (
                                   )}
                                 </div>
                                 <div>
-                                  <p>₹ config.min_amount + config.tax</p>
+                                  <p>₹ {config.min_amount}</p>
                                   {acco == true || acco == null ? (
-                                    <p>₹ 500</p>
+                                    <p>₹ { config.max_amount - config.min_amount}</p>
                                   ) : (
                                     <p style={{ color: "rgba(64, 64, 64, 1)" }}>
-                                      ₹ 500
+                                      ₹ { config.max_amount - config.min_amount}
                                     </p>
                                   )}
                                 </div>

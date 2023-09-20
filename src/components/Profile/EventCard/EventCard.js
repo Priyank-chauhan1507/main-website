@@ -56,7 +56,7 @@ function EventCard({ data, getEvents, getData, }) {
               {/* <div style={{background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 6.13%, rgba(0, 0, 0, 0.45) 25.45%, rgba(0, 0, 0, 0.86) 54.90%, #000 92.12%)'}}> */}
 
               
-              <div className="eventcard1" style={{textDecoration:"underline",color:"white"}}>
+              <div className="eventcard1" style={{color:"white"}}>
                 {data?.event__solo_team ? (
                   <h2>
                     {data?.event__name}({data?.event__solo_team})
