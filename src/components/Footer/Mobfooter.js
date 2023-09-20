@@ -61,27 +61,27 @@ const Footer = () => {
         <hr />
         <div className="social-links">
           <div className="link">
-            <a href="https://www.facebook.com/thomsoiitroorkee">
+            <a href="https://www.facebook.com/thomsoiitroorkee" target="_blank">
               <img src={Facebook} alt="Facebook" />
             </a>
           </div>
           <div className="link">
-            <a href="https://www.instagram.com/thomso.iitr/">
+            <a href="https://www.instagram.com/thomso.iitr/" target="_blank"> 
               <img src={Instagram} alt="Instagram" />
             </a>
           </div>
-          <div className="link">
-            <a href="https://twitter.com/Thomso_IITR">
+          {/* <div className="link">
+            <a href="https://twitter.com/Thomso_IITR" target="_blank">
               <img src={Twitter} alt="Twitter" />
             </a>
-          </div>
+          </div> */}
           <div className="link">
-            <a href="https://www.linkedin.com/company/thomso-official/mycompany/">
+            <a href="https://www.linkedin.com/company/thomso-official/mycompany/" target="_blank">
               <img src={LinkedIn} alt="LinkedIn" />
             </a>
           </div>
           <div className="link">
-            <a href="https://www.youtube.com/@iitrthomso">
+            <a href="https://www.youtube.com/@iitrthomso" target="_blank">
               <img src={Youtube} alt="Youtube" />
             </a>
           </div>

@@ -30,20 +30,20 @@ const WebNavbarNew = () => {
             <img src={logo} alt="logo" />
           </div>
           <div className="webNavbarMiddle2">
-            <a href="https://www.facebook.com/thomsoiitroorkee">
+            <a href="https://www.facebook.com/thomsoiitroorkee" target="_blank">
               <img
                 src={facebook}
                 alt="facebook"
                 style={{ cursor: "pointer" }}
               />
             </a>
-            <a href="https://www.instagram.com/thomso.iitr/">
+            <a href="https://www.instagram.com/thomso.iitr/" target="_blank">
               <img src={insta} alt="insta" style={{ cursor: "pointer" }} />
             </a>
-            <a href="https://twitter.com/Thomso_IITR">
+            {/* <a href="https://twitter.com/Thomso_IITR">
               <img src={x} alt="x" style={{ cursor: "pointer" }} />
-            </a>
-            <a href="https://www.youtube.com/@iitrthomso">
+            </a> */}
+            <a href="https://www.youtube.com/@iitrthomso" target="_blank">
               <img src={youtube} alt="youtube" style={{ cursor: "pointer" }} />
             </a>
           </div>
