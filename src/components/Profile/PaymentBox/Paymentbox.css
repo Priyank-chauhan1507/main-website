@@ -892,6 +892,18 @@ letter-spacing: -0.32px;
   .par-head{
     width: 83vw;
   }
+  .agree-terms-and-conditions{
+    margin-top: 10px;
+  }
+  .PayNowBtnActive, .PayNowBtn{
+    margin-bottom: 20px;
+  }
+  /* .main_boxx::-webkit-scrollbar{
+    display: block;
+    width: 2px;
+    color: #ded7d7;
+    border-radius: 0.5px;
+  } */
 }
 
 
