@@ -84,7 +84,7 @@ utton{
 
 .Payleft {
   margin-left: 55px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 
 }
 
@@ -133,6 +133,7 @@ utton{
   margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .PayTaxes {
@@ -163,19 +164,29 @@ utton{
 
 .Payevent {
   margin-top: 40px;
-  font-family: 'Oxanium';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 19px;
-  max-width: 358px;
+    font-family: 'Oxanium', cursive;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 358px;
 }
 
 .yesNo {
   display: flex;
   gap: 15px;
   margin-top: 26px;
-  margin-bottom: 55px;
+  margin-bottom: 20px;
+}
+
+.agree-terms-and-conditions{
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.agree-a:hover{
+  text-decoration: underline;
 }
 
 .yesbtn {
@@ -477,7 +488,7 @@ utton{
   flex-direction: column;
   gap: 1vh;
   height: 50vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   width: 65vw;
   overflow-x: hidden;
   /* padding: 20px; */
@@ -660,18 +671,28 @@ font-weight: 400;
 letter-spacing: -0.48px;
 } */
 .add-participant{
+  color: #fff;
+  font-family: Comic Neue;
+  font-size: 1.2vw;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+  margin-top: 2vh;
+  background: #F7B900;
+  padding: 8px;
+  width: 11vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-participant:hover{
   color: #F7B900;
-font-family: Comic Neue;
-font-size: 1.5vw;
-font-style: normal;
-font-weight: 400;
-line-height: 16px;
-letter-spacing: -0.4px;
-margin-top: 1.5vh;
+  background: #fff;
 }
 .total-pay{
   display: flex;
-  height: 15vh;
+  height: 13vh;
   /* width: 30vw; */
   margin-top: 10px;
   border: 0.5px solid rgba(255, 255, 255, 0.60);
@@ -738,7 +759,7 @@ letter-spacing: -0.4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 35vw;
+  margin-left: 31vw;
 }
 
 .total-pay-3-btn{
@@ -746,8 +767,8 @@ letter-spacing: -0.4px;
   align-items: center;
   justify-content: center;
   /* width: 5vw; */
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.60);
+  padding: 10px 25px;
+  background: #fff;
   color: #333;
 font-family: Lato;
 font-size: 1vw;
@@ -757,6 +778,11 @@ line-height: 20px;
 letter-spacing: -0.32px;
 }
 
+.total-pay-3-btn:hover{
+  color: #fff;
+  background: #333;
+}
+
 .does-he{
   display: flex;
   justify-content: center;
@@ -764,12 +790,51 @@ letter-spacing: -0.32px;
   gap: 15px;
 }
 
+@media only screen and (max-width:1150px){
+  .Paylarge{
+    font-size: 25px;
+  }
+}
 @media only screen and (max-width:1030px){
   .pay-th{
     font-size: 12px;
   }
+  .Paylarge{
+    font-size: 20px;
+  }
+  .Payevent{
+    font-size: 14px;
+  }
+  .agree-a{
+    font-size: 14px;
+  }
+  .yesbtn{
+    font-size: 14px;
+  }
+  .nobtn{
+    font-size: 14px;
+  }
 }
-
+@media only screen and (max-width:970px){
+  .Paylarge{
+    font-size: 15px;
+  }
+  .PayAmount p{
+    font-size: 14px;
+  }
+  .Payevent{
+    font-size: 12px;
+  }
+  .agree-a{
+    font-size: 12px;
+  }
+  .yesbtn{
+    font-size: 12px;
+  }
+  .nobtn{
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width:768px){
   .pay-table{
     width: 88vw;
@@ -785,12 +850,13 @@ letter-spacing: -0.32px;
     width: 20vw;
   }
   .pay-tr{
-    width: 88vw;
+    width: 83vw;
     gap: 10vw;
   }
   .add-participant{
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 7px;
+    width: 125px;
   }
   .total-pay{
     width: 88vw;
@@ -819,8 +885,12 @@ letter-spacing: -0.32px;
     justify-content: flex-start;
   }
   .total-pay-3-btn{
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px;
+    width: 110px;
+  }
+  .par-head{
+    width: 83vw;
   }
 }
 
