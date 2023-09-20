@@ -1,39 +1,57 @@
-.MUN-bg{
-    /* background-color: black; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400&display=swap');
+.MUN-bg {
+    /* background: url("../../../assests/BGMUN.webp"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    z-index: -1;
+    /* width: auto; */
+    padding-bottom: 10vh;
 }
+
 .MUN-Bg{
     position: absolute;
-    z-index: -1;
-    width: 100vw;
+    z-index:-1;
+    width:100vw;
+    height: 100%;
 }
-.top-MUN-img
+
+.topImgMUN
 {
+    width: 56vw;
+}
+
+
+.top-MUN-img {
     display: flex;
     justify-content: center;
-    margin-top: 19vh;
+    margin-top: 14vh;
 }
-.registerNowBtn
-{
+
+.registerNowBtn {
     display: flex;
     justify-content: center;
-    
+
 }
-.registerNowBtnClick
-{
+
+.registerNowBtnClick {
     border-radius: 16px;
     color: #000;
     font-family: Bangers;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 32px */
+    line-height: 100%;
+    /* 32px */
     letter-spacing: 1.6px;
     padding: 1vh 2.5vw;
     background-color: #fff;
-    margin-top: 20vh;
+    margin-top: 10vw;
+    cursor: pointer;
 }
-.prizesWorth
-{
+
+.prizesWorth {
     border-radius: 14px;
     background: rgba(8, 48, 114, 0.40);
     color: #FFF;
@@ -42,31 +60,140 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 162.2%; /* 32.44px */
+    line-height: 162.2%;
+    /* 32.44px */
     letter-spacing: 1px;
     width: 50vw;
     margin: auto;
-    margin-top: 33vh;
+    margin-top: 30vh;
     padding: 1.5vh 2vw;
     padding-bottom: 2.5vh;
 }
-.prizesWorth1
-{
+
+.prizesWorth1 {
     width: 25vw;
     display: block;
     margin-bottom: 5vh;
 }
-.prizesWorthDiv
-{
+
+.prizesWorthDiv {
     display: flex;
     justify-content: center;
+    color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 162.2%; /* 32.44px */
+letter-spacing: 1px;
+}
+.MUNjuDges
+{
+    margin-top: 35vh;
+}
+.MUNCommitee
+{
+    margin-top: 28vh;
+}
+.MUNFooter
+{
+    margin-top: 10vh;
+}
+
+.mun_mob_bg{
+    display: none;
+}
+.MUN-mob{
+    display: none;
 }
 
 @media only screen and (max-width:768px){
-    .prizesWorth{
+
+.mun_mob_bg {
+    display: none;
+}
+.MUN-bg{
+    display: none;
+}
+.MUN-mob{
+    display: block;
+}
+}
+
+@media only screen and (max-width:768px) {
+    .prizesWorth {
         width: 75vw;
     }
-    .prizesWorth1{
+
+    .prizesWorth1 {
         width: 60vw;
     }
+}
+@media only screen and (max-width:1000px)
+{
+    .topImgMUN
+{
+    width: 40vw;
+}
+}
+@media only screen and (max-width:1450px)
+{
+    .prizesWorth
+    {
+        margin-top: 25vh;
+    }
+}
+@media only screen and (max-width:1400px)
+{
+    .prizesWorth
+    {
+        margin-top: 20vh;
+    }
+}
+@media only screen and (max-width:1300px)
+{
+    .prizesWorth
+    {
+        margin-top: 15vh;
+    }
+}
+@media only screen and (max-width:1200px)
+{
+    .prizesWorth
+    {
+        margin-top: 10vh;
+    }
+}
+@media only screen and (max-width:1100px)
+{
+    
+    .registerNowBtnClick
+    {
+        margin-top: 13vh;
+    }
+}
+@media only screen and (max-width:768px)
+{
+    
+    .prizesWorth
+    {
+        margin-top: 4vh;
+    }
+
+    /* .MUN-Bg {
+        display: none !important;
+    } */
+
+    .mun_mob_bg {
+        display: block !important;
+    }
+
+    .iitr_mun {
+        width: 80vw !important;
+    }
+}
+
+.iitr_mun {
+    width: 50vw;
 }

@@ -1,6 +1,9 @@
 import React from 'react'
 import './Judges.css'
 import hero1 from "../../../assests/hero1.webp"
+import judge1 from '../../../assests/AIPPMjudge.webp'
+import judge2 from '../../../assests/Aishnit-yadav-Unga-judge.webp'
+import judge3 from '../../../assests/Raunak-Historic-judge.webp'
 
 function Judges() {
   return (
@@ -8,18 +11,18 @@ function Judges() {
         <h1 className='head-judge'>EXECUTIVE JUDGES</h1>
         <div className="judge-box-cont">
             <div className="judges-cont-1">
-                <img src={hero1} className="hero1" alt="" />
-                <div className="jelement1">SHANKAR TRIPATHI</div>
-                <div className="jelement2">CHAIR OF AIPPM</div>
+                <img src={judge1} className="hero1" alt="" />
+                <div className="jelement1">RAUNAK UPMANYU</div>
+                <div className="jelement2">CHAIR OF HISTORIC COMMITEE</div>
             </div>
             <div className="judges-cont-2">
-                <img src={hero1} className="hero1" alt="" />
-                <div className="jelement1">SHANKAR TRIPATHI</div>
-                <div className="jelement2">CHAIR OF AIPPM</div>
+                <img src={judge2} className="hero2" alt="" />
+                <div className="jelement1">AISHNIT YADAV</div>
+                <div className="jelement2">CHAIR OF UNGA</div>
             </div>
             <div className="judges-cont-3">
-                <img src={hero1} className="hero1" alt="" />
-                <div className="jelement1">SHANKAR TRIPATHI</div>
+                <img src={judge3} className="hero3" alt="" />
+                <div className="jelement1">NAMAN JAIN</div>
                 <div className="jelement2">CHAIR OF AIPPM</div>
             </div>
         </div>

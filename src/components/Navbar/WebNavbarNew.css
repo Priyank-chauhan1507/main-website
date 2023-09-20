@@ -5,12 +5,15 @@
     align-items: center;
     padding: 0 3rem;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
 height: 328px;
 margin-top:0rem;
 z-index: 1000;
 overflow: hidden;
 background-color: black;
+margin: 0 5VW 0 5VW;
+border-style: none;
+border-radius: 2vh;
 }
 
 .mob-foot{
@@ -107,4 +110,28 @@ line-height: normal;
     .mob-foot{
         display: block;
     }
+}
+
+.TNC{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: relative;
+top:-3rem;
+left: -1rem;
+z-index: 10000000000;
+cursor: pointer;
+text-decoration: underline;
+
+}
+
+.TNC:hover{
+   text-decoration: underline;
 }

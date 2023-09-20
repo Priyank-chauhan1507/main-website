@@ -76,7 +76,7 @@ const EventBox = () => {
   }
 
 
- 
+
 
   useEffect(() => {
     if (!userDetails?.id) {
@@ -155,7 +155,7 @@ const EventBox = () => {
                             : "c2-text"
                         }
                       >
-                        Events
+                        My Events
                       </Link>
                     </div>
                   )}
@@ -245,7 +245,7 @@ const EventBox = () => {
                     >
                       Participate
                     </span>
-                    
+
                     {/* <span
                       onClick={() => {
                         setFilter("solo");
@@ -270,6 +270,7 @@ const EventBox = () => {
                     >
                       Team
                     </span> */}
+                    {/* <div className="addEventButton-Profile">  */}
                     <button
                       onClick={() => {
                         setdisplay2(!display2);
@@ -278,6 +279,7 @@ const EventBox = () => {
                     >
                       + Add Event
                     </button>
+                    {/* </div> */}
                   </div>
                   {display2 ? (
                     <>
@@ -315,7 +317,7 @@ const EventBox = () => {
                       className="drop"
                     >
                          <div className="drop-row">
-                    <div className="col col-yellow">Choreo</div>
+                    <div className="col col-yellow">Choreo(Dance)</div>
                     <div
                       className="col colhover"
                       onClick={(e) => {
@@ -415,7 +417,7 @@ const EventBox = () => {
                         onHandleClick(29);
                       }}
                     >
-                      Campus Princess
+                      Campus Diva
                     </div>
                     <div
                       className="col colhover"
@@ -811,7 +813,7 @@ const EventBox = () => {
                         onHandleClick(14);
                       }}
                     >
-                      16 Frames
+                      24 Frames
                     </div>
                     <div
                       className="col colhover"
@@ -866,7 +868,7 @@ const EventBox = () => {
                         onHandleClick(83);
                       }}
                     >
-                      Karaoke
+                      Thomso Karaoke
                     </div>
                     <div className="col col-yellow">New Events</div>
                     <div
@@ -875,7 +877,15 @@ const EventBox = () => {
                         onHandleClick(84);
                       }}
                     >
-                      Sneaker Design*
+                      Sneaker Design(Duet)*
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(88);
+                      }}
+                    >
+                      Sneaker Design(Solo)*
                     </div>
                     <div
                       className="col colhover"
@@ -1020,7 +1030,7 @@ const EventBox = () => {
                     >
                       Participate
                     </span>
-                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/eventsmain')}>Add an Event</button>
+                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/events')}>Add an Event</button>
                     {/* <span
                       onClick={() => {
                         setFilter("solo");

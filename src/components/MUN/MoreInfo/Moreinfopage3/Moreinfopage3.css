@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto:wght@300&display=swap');
+.infoBg{
+    position: relative;
+    /* margin-top: -5vh; */
+    /* z-index: -999; */
+    /* width: 100vw; */
+}
+.mun_nav{
+    position: absolute;
+    z-index: 999;
+
+}
+.Bg-image{
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.Mob-Bg-image{
+    display: none;
+}
+.info_box3{
+    position:absolute;
+    z-index: 999;
+    color: #ffffff;
+    margin-top: -2vh;
+}
+.irmun{
+    position:absolute;
+    z-index: 999;
+    color: #ffffff;
+    display: flex;
+   font-family: Roboto Flex;
+   font-size: 1vw;
+   margin-top: 12vh;
+    padding: 0 7vw 0 7vw;
+}
+.historic{
+    color:rgba(255, 255, 255, 0.60);
+    font-family: Roboto Flex;
+   /* font-size: 1vw; */
+}
+.info_box3{
+    display: flex;
+    margin-top: 18vh;
+    padding: 0 7vw 0 7vw;
+}
+.info_heading{
+    font-family: Bangers;
+    font-weight: 400;
+    font-size: 3vw;
+    padding:0 0 5vh 0;
+}
+.info_content{
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+}
+.muninfo-text{
+    color: #FFF;
+    text-align: justify;
+    font-family: Roboto;
+    /* font-size: 20px; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%; /* 32.44px */
+    letter-spacing: 1px;
+    font-size: 1.3vw;
+    padding: 0 0 5vh 0;
+}
+.mobilemuninfo-text{
+    display: none;
+}
+.info_button{
+    font-family: Bangers;
+    font-weight: 400;
+    font-size: 3vh;
+    color: #ffffff;
+    background-color:rgba(217, 217, 217, 0.3);
+    border: none;
+    padding:0.5vh 0.5vw 0.5vh 0.5vw;
+}
+.info_img3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15vh;
+    /* width:40vw; */
+}
+.infoPage3img{
+    width:30vw;
+}
+.mun-infoPageimg3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:40vw;
+}
+.info_img3 h3{
+    width: 25vw;
+    color: #FFF;
+text-align: center;
+font-family: Bangers;
+font-size: 2.5vw;
+font-style: normal;
+font-weight: 400;
+line-height: 162.2%; 
+}
+
+@media screen and (max-width: 930px){
+    .muninfo-text{
+        font-size: 2vw;
+    }
+    .info_img3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0vh;
+        /* width:40vw; */
+    }
+    .Bg-image{
+        position:absolute;
+        width: 100vw;
+        height: 110vh;
+        
+    }
+}
+@media screen and (max-width: 768px){
+    .info_box3{
+        display: flex;
+        flex-direction: column-reverse;
+        gap:2vh;
+        margin-top: 12vh;
+    }
+    .muninfo-text{
+        display: none;
+    }
+    .mobilemuninfo-text{
+        display: block;
+        color: #FFF;
+        font-family: Roboto;
+        /* font-size: 20px; */
+        font-style: normal;
+        text-align: justify;
+        font-weight: 500;
+        line-height: 162.2%; /* 32.44px */
+        letter-spacing: 1px;
+        font-size: 2vh;
+        padding: 0 0 5vh 0;        
+    }
+    .infoPage3img{
+        width:40vw;
+    }
+    .info_img3 h3{
+        font-size: 6vw;
+        width:80vw;
+        margin-top: -2.5vh;
+    }
+    .irmun{
+       font-size: 3vw;
+       margin-top: 12vh;
+        padding: 0 7vw 0 5vw;
+    }
+    .Mob-Bg-image{
+        display: block;
+        position:absolute;
+        width: 100vw;
+        height: 120vh;
+    }
+    .info_heading{
+        display:none
+    }
+    .info_button{
+        font-family: Bangers;
+        font-weight: 400;
+        font-size: 3vh;
+        background-color:#FFF;
+        border: solid;
+        border-color: #0D1E3B;
+        border-width: 2px;
+        border-radius: 6px;
+        padding:0.5vh 0.5vw 0.5vh 0.5vw;
+        color: #0D1E3B;
+        line-height: 162.2%;
+    }
+    .info_img3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0vh;
+        /* width:40vw; */
+    }
+}
+@media screen and (max-width: 600px){
+    .mobilemuninfo-text{
+        font-size: 2.5vh;
+    }
+    .Mob-Bg-image{
+        display: block;
+        position:absolute;
+        width: 100vw;
+        height: 130vh;
+    }
+}
+@media screen and (max-width: 390px){
+    .Mob-Bg-image{
+        display: block;
+        position:absolute;
+        width: 100vw;
+        height: 140vh;
+    }
+}

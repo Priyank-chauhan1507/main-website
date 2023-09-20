@@ -1,0 +1,129 @@
+.CarouselCommittee
+{
+    height: 110vh;
+    width: 100vw;
+}
+@media only screen and (max-width:650px)
+{
+    .CarouselCommittee
+{
+    height: 100vh;
+}
+}
+@media only screen and (max-width:500px)
+{
+    .CarouselCommittee
+{
+    height: 80vh;
+}
+}
+@media only screen and (max-width:450px)
+{
+    .CarouselCommittee
+{
+    height: 65vh;
+}
+}
+@media only screen and (max-width:350px)
+{
+    .CarouselCommittee
+{
+    height: 51vh;
+}
+}
+.carouselcontent
+{
+    position: relative;
+}
+.carouselcontenttext
+{
+    position: absolute;
+    bottom:33vh;
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Bangers;
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.2%; /* 35.259px */
+}
+@media only screen and (max-width:650px)
+{
+    .carouselcontenttext{
+         bottom:25vh;
+        /* font-size:3vw; */
+    }
+    /* .carouselcontentbtn{
+        height:5vh !important;
+    } */
+}
+@media only screen and (max-width:500px)
+{
+    .carouselcontenttext{
+         bottom:21vh;
+        /* font-size:3vw; */
+    }
+    /* .carouselcontentbtn{
+        height:5vh !important;
+    } */
+}
+@media only screen and (max-width:410px)
+{
+    .carouselcontenttext{
+         bottom:15vh;
+        /* font-size:3vw; */
+    }
+    .carouselcontentbtn{
+        height:5vh !important;
+        bottom:6vh !important;
+    }
+}
+@media only screen and (max-width:330px){
+    .carouselcontentbtn{
+        bottom:3vh !important;
+    }
+}
+.carouselcontentbtn
+{
+    position: absolute;
+    bottom: 11vh;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14.024px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: transparent;
+    width: 18vw;
+    border-radius: 3.506px;
+    border: 1.402px solid #F7F7F7;
+    display: flex;
+    justify-content: center;
+    padding: 2vh 2vw;
+    height: auto;
+}
+.carouselcontentpara
+{
+    margin: auto;
+    padding: 0;
+    display: inline-block;
+    font-size:2.1vw;
+}
+.carouselcontentimg
+{
+    width: 52vw;
+}
+.MUNcarousel
+{
+    display: flex;
+    justify-content: center;
+}
+.carouselcontentarrow
+{
+    display: inline-block;
+}
+/* .infoarrow{
+    width:7vw;
+} */

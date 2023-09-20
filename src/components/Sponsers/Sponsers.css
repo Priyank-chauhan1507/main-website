@@ -1,0 +1,78 @@
+.scontainer{
+    background-image: url("../../assests/bg1.webp");
+    background-size: cover;
+    width: 100vw;
+    background-position: center center;
+    padding-bottom: 6vh;
+    overflow-x: clip;
+    height: 100vh;
+    overflow-y: auto;
+}
+.scontainer1{
+        display: flex;
+        justify-content: center;
+        padding-top: 13vh;
+    }
+ .tsponsors{
+        color: #FFF;
+        text-align: center;
+        font-family: Comic Neue;
+        font-size: 3vw;
+        padding-top: 7vh;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%; 
+        letter-spacing: 0.64px;
+        display: flex;
+        justify-content: center;
+}
+.sdabba{
+    height: 20vh;
+    width: 75vw;
+    margin: 6vh auto;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+
+}
+.simage{
+    
+    width: 51vw;
+}
+.simg-1{
+    width: 33%;
+    height: 90%;
+}
+.simg-2{
+    width: 50%;
+    height: 90%;
+}
+.simg-3{
+    width: 100%;
+    height: 90%;
+}
+.simg-4{
+    width: 30%;
+    margin: auto;
+}
+@media only screen and (max-width: 768px){
+    .sdabba{
+        width: 90%;
+        margin: 1vh auto;
+        border-radius: 3px;
+        height: 11vh;
+    }
+    .simage{
+        width: 70vw;
+    }
+    .scontainer1{
+        padding-top: 6vh;
+    }
+    .tsponsors{
+        font-size: 5vw;
+        padding-top: 6vh;
+    }
+}

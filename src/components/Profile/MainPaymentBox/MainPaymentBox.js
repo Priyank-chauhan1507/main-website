@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Profile.css";
 import LeftSideProfile from "../LeftSideProfile/Leftsideprofile";
 import PaymentBox from "../../Profile/PaymentBox/Paymentbox";
+// import NewPaymentBox from "../../Profile/PaymentBox/Paymentbox";
 import NewNewProfileMobile from "../MobProfile/NewNewProfileMobile";
 // import EventMobileNav from "../EventsPage/EventMobileNav";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +11,7 @@ import Navbar from "../../Navbar/Profilenavbar";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
 import MobliePaymentBox from "../PaymentBox/MobliePaymentBox"
+import NewPaymentBox from "../PaymentBox/NewPaymentBox";
 const team_event = [8, 12, 18, 40, 16];
 const team_event_details = [
   {
@@ -74,7 +76,7 @@ const Payment = ({ userDetails }) => {
   };
   return (
     <>
-      <PaymentBox
+      <NewPaymentBox
         events={events}
         participant_id={id}
         paymentstatus={userDetails?.payment}
@@ -83,6 +85,15 @@ const Payment = ({ userDetails }) => {
         }
         is_payment={master_config?.is_payment}
       />
+      {/* <PaymentBox
+        events={events}
+        participant_id={id}
+        paymentstatus={userDetails?.payment}
+        is_female={
+          userDetails?.gender?.toLowerCase() === "female" ? true : false
+        }
+        is_payment={master_config?.is_payment}
+      /> */}
       {/* <div className="nnpmobile-component">
         <MobliePaymentBox
           events={events}

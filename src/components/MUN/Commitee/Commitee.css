@@ -1,0 +1,70 @@
+.CommitteeheadingImg
+{
+  width: 50vh;
+}
+.Committeeheading
+{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.CommitteeBoxs
+{
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.CommitteeBox
+{
+  display: flex;
+  justify-content: center;
+}
+.CommitteeBoxImg1
+{
+  width: 20vw;
+  height: 68vh;
+}
+.CommitteeBoxImg2
+{
+  width: 20vw;
+  height: 58vh;
+  margin-top: 10.3vh;
+}
+.CommitteeBoxImg3
+{
+  width: 20vw;
+  height: 64vh;
+  margin-top: 5.3vh;
+}
+.CommitteeBox
+{
+  position: relative;
+}
+.CommitteeBoxBtn
+{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 5vh;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid #F7F7F7;
+  width: 10vw;
+  padding: 2vh 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-items: center;
+  right: 5vw;
+}
+@media screen and (max-width:1000px) {
+  .CommitteeBoxBtnText{
+    font-size: 1.5vw;
+  }
+}

@@ -1,0 +1,129 @@
+.majorAttractionsContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assests/majorAttractions.svg");
+}
+.textContainer {
+  width: 23vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-right: 1px solid grey;
+  padding-top: 3.5rem;
+  padding-right: 2.5rem;
+}
+.headingBox {
+  color: #fff;
+  text-align: right;
+  font-family: Super Comic;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.imagesBox {
+  width: 60vw;
+  height: 72vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: scroll;
+}
+
+.subtitleBox {
+  margin-top: 2rem;
+}
+.subtitleBox ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subtitleBox ul li {
+  color: #fff;
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  list-style-type: none;
+  cursor: pointer;
+}
+.exploreMore {
+  width: 8rem;
+  height: 12rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Comic Neue;
+  font-weight: 700;
+}
+* {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .majorAttractionsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .textContainer{
+    width: 80vw;
+    align-items: center;
+    border-right: none;
+  }
+  .imagesBox{
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width:786px){
+  .imagesBox {
+    width: 90vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:15px;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: scroll;
+  }
+  .textContainer {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid grey;
+    padding-top: 3.5rem;
+    /* padding-right: -0.5rem; */
+}
+.majorAttractionsContainer {
+  width: 100vw;
+  padding-top: 12vh;
+    height: 61vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(http://localhost:3000/static/media/majorAttractions.a20747b….svg);
+}
+
+.subtitleBox ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+}

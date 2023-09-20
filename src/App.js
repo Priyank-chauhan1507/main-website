@@ -18,6 +18,7 @@ import Eventsnavbar from "./components/EventsNavbar/Eventsnavbar";
 import EventMainPage from "./components/EventsPage/EventMainPage";
 import EventBox from "./components/Profile/EventBox/EventBox";
 import Paymentbox from "./components/Profile/PaymentBox/Paymentbox";
+import NewPaymentbox from "./components/Profile/PaymentBox/NewPaymentBox";
 import EventCard from "./components/Profile/EventCard/EventCard";
 import WebNavbarNew from "./components/Navbar/WebNavbarNew";
 import Mobfooter from "./components/Footer/Mobfooter"
@@ -33,23 +34,31 @@ import Pdf from "./PdfRenderer/Renderer"
 import Qr from "./PdfRenderer/Qrcode"
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
+import Home2 from "./components/MUNmobile/HomeMun/HomeMUN";
+import Home2Reg from "./components/MUNmobile/Registration/Registration";
+
 import FAQ from "./components/MUN/FAQ/FAQ";
 import Footer1 from "./components/MUN/Footer/Footer";
+import Commitee from "./components/MUN/Commitee/Commitee";
 // import Footer1 from "./components/MUN/Judges/Judges";
-import ReactGA from "react-ga4";
+import ReactGA4 from 'react-ga4';
 import Judges from "./components/MUN/Judges/Judges";
 import Page1 from "./components/Merch_page/Page1/Page1";
 import Page2 from "./components/Merch_page/Page2/Page2";
 // require('dotenv').config()
 import Page3 from "./components/Merch_page/Page3/Page3";
-
+import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopage1";
+import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopage2";
+import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
+import Sponsers from "./components/Sponsers/Sponsers"
+import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
-ReactGA.initialize("G-FG974BLVDN");
+ReactGA4.initialize("G-FG974BLVDN");
 
 function App(props) {
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
+    ReactGA4.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("user_id");
     if (token) {
@@ -81,12 +90,14 @@ function App(props) {
 
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />
+          <Route exact={true} path="/newpayment" element={<NewPaymentbox />} />
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
           <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
-          <Route exact={true} path="/id_card" element={<Idcard />} />
+          <Route exact={true} path="/id_cards" element={<Idcard />} />
+          <Route exact={true} path="/id_card" element={<Id_Card/>} />
           <Route exact={true} path="/pdf" element={<PdfDownload />} />
           <Route exact={true} path="/pdfs" element={<Pdf/>} />
           <Route exact={true} path="/qr" element={<Qr/>} />
@@ -94,15 +105,22 @@ function App(props) {
           <Route exact={true} path="/id_card_box" element={<IdcardBox />} />
           <Route exact={true} path="/admitcard" element={<AdmitCard />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
-          <Route exact={true} path="/eventsmain" element={<EventsMain />} />
+          <Route exact={true} path="/events" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
           <Route exact={true} path="/MUN" element={<Home1/>} />
+          <Route exact={true} path="/MUNmobile" element={<Home2/>} />
+          <Route exact={true} path="/MUNregister" element={<Home2Reg/>} />
           <Route exact={true} path="/MUN_FAQ" element={<FAQ/>} />
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
+          <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
           <Route exact={true} path="/merch_page1" element={<Page1/>} />
           <Route exact={true} path="/merch_page2" element={<Page2/>} />
           <Route exact={true} path="/merch_page3" element={<Page3/>} />
+          <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
+          <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
+          <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
+          <Route exact={true} path="/sponsers" element={<Sponsers/>} />
         </Routes>
       </Router>
     </>

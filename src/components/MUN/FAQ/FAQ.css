@@ -1,12 +1,23 @@
 body {
   /* background-color: white; */
 }
-
+.FAQdiv 
+{
+  display: flex;
+  justify-content: center;
+}
+.FAQimg
+{
+  width: 18vw;
+  margin-bottom:5vh;
+}
 .MUN_FAQ_main_div {
   background-color: transparent !important;
   width: 75vw;
   color: white;
   margin: 0 auto;
+  margin-top: 20vh;
+  margin-bottom:17vh;
 }
 
 .mun_faq_heading {
@@ -83,7 +94,7 @@ body {
 
 @media only screen and (max-width:768px) {
   .accordion_1 {
-    right: 2vw;
+    right: 13vw;
   }
 
   .panel p {
@@ -97,7 +108,7 @@ body {
     width: 100%;
   }
   .right_mun_faq_head {
-    width: 100%;
+    width: 70%;
   }
   .panel {
     padding: 0;

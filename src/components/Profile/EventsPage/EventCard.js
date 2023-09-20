@@ -66,7 +66,7 @@ const EventCard = ({ data }) => {
                 <div className="blackShield">
                   {/* <div style={{background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 6.13%, rgba(0, 0, 0, 0.45) 25.45%, rgba(0, 0, 0, 0.86) 54.90%, #000 92.12%)'}}> */}
 
-                  <div className="eventcard1">
+                  <div className="eventcard1" style={{textDecoration:"underline",color:"white"}}>
                     {datas?.solo_team ? (
                       <h2>
                         {datas?.name}({datas?.solo_team})
@@ -94,7 +94,7 @@ const EventCard = ({ data }) => {
                       </>
                     )} */}
                   </div>
-                  <hr />
+                  {/* <hr /> */}
                   <p>{datas?.description.slice(0, 100)}....</p>
                 </div>
                 {/* </div> */}
