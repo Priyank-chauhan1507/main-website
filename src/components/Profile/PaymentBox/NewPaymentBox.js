@@ -35,6 +35,7 @@ import { message } from "antd";
 import { clear } from "@testing-library/user-event/dist/clear";
 
 const NewPaymentBox = (
+  data,
   events,
   participant_id,
   paymentstatus,
@@ -44,16 +45,37 @@ const NewPaymentBox = (
   const navigate = useNavigate();
   const [logout, setLogout] = useState(0);
   const [userDetails, setuserDetails] = useState({});
+  const [config, SetConfig] = useState({})
+  // console.log(data, "amount");
 
-  useEffect(() => {
+
+  useEffect(() =>{
+    get_master_config();
     getData();
   }, []);
+
+
+    const get_master_config = async () => {
+      const ress = axios
+        .get(`/apiV1/payment_master`)
+        .then((ress) => {
+          data = ress.data
+          SetConfig(data[0])
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    console.log(config, "config");
+
 
   const getData = async () => {
     const ress = axios
       .get(`/apiV1/current_user_participant`)
       .then((ress) => {
         setuserDetails(ress.data);
+
         if (paymentData.length == 0) {
           var temp = paymentData;
           temp.push({ id: ress.data?.thomso_id, acco: acco1.toString() });
@@ -66,6 +88,7 @@ const NewPaymentBox = (
           });
           setPaymentData1(temp1);
         }
+
       })
       .catch((err) => {
         console.log(err);
@@ -128,16 +151,10 @@ const NewPaymentBox = (
     color: "white",
   });
   const [style2, setStyle2] = useState(is_female ? ON : OFF);
-  const [totalpay, setTotalpay] = useState(acco1 == "true" ? 2799 : 2299);
+  const [totalpay, setTotalpay] = useState(0);
+  console.log(totalpay);
   // const [totalpay, setTotalpay] = useState(0);
 
-  useEffect(() => {
-    // return () => {
-      
-    // }
-  }, [paymentData1])
-
-  
 
   const handleDataNo = () => {
     var temp = paymentData;
@@ -149,14 +166,14 @@ const NewPaymentBox = (
     let amount=0;
       for(let i=0;i<paymentData1.length;i++){
         if(paymentData1[i].acco == "true"){
-          amount =amount+ 2799;
+          amount =amount+ config.max_amount + config.tax;
         }else if(paymentData1[i].acco == "false"){
-          amount =amount+ 2299;
+          amount =amount+ config.min_amount + config.tax;
         }
       }
       setTotalpay(amount);
-      console.log(amount,"amount");
-    // setTotalpay(() => totalpay + 2299);
+      // console.log(amount,"amount");
+    // setTotalpay(() => totalpay + config.min_amount + config.tax);
     clearthomsoid();
   };
 
@@ -170,27 +187,27 @@ const NewPaymentBox = (
     let amount=0;
       for(let i=0;i<paymentData1.length;i++){
         if(paymentData1[i].acco == "true"){
-          amount =amount+ 2799;
+          amount =amount + config.max_amount + config.tax;
         }else if(paymentData1[i].acco == "false"){
-          amount =amount+ 2299;
+          amount =amount+ config.min_amount + config.tax;
         }
       }
       setTotalpay(amount);
-      console.log(amount,"amount");
-    // setTotalpay(() => totalpay + 2799);
+      // console.log(amount,"amount");
+    // setTotalpay(() => totalpay + config.max_amount + config.tax);
     clearthomsoid();
   };
 
   const noAccommdation = () => {
     setacco(false);
-    console.log(acco1, "accoNO");
+    // console.log(acco1, "accoNO");
     setStyle1({ background: "white", color: "black" });
     setStyle2({ background: "transparent", color: "white" });
   };
 
   const Accommdation = () => {
     setacco(true);
-    console.log(acco1, "accoYES");
+    // console.log(acco1, "accoYES");
     setStyle2({ background: "white", color: "black" });
     setStyle1({ background: "transparent", color: "white" });
   };
@@ -202,7 +219,7 @@ const NewPaymentBox = (
   };
 
   const checkPayNow = () => {
-    console.log("HERE");
+    // console.log("HERE");
     if (acco == null) {
       return false;
     } else {
@@ -230,7 +247,7 @@ const NewPaymentBox = (
       const u = response.data;
       // console.log("data", u);
       setLoading(false);
-      if (u.status == "true" && u.gender == "Female") {
+      if (u.status == "true" && u.gender == "Female" && config.girls_payment_close == false) {
         var temp = paymentData;
         temp.push({ id: input, acco: "true" });
         setPaymentData(temp);
@@ -240,17 +257,22 @@ const NewPaymentBox = (
         let amount=0;
       for(let i=0;i<paymentData1.length;i++){
         if(paymentData1[i].acco == "true"){
-          amount =amount+ 2799;
+          amount =amount+ config.max_amount + config.tax;
         }else if(paymentData1[i].acco == "false"){
-          amount =amount+ 2299;
+          amount =amount+ config.min_amount + config.tax;
         }
       }
+
       setTotalpay(amount);
-      console.log(amount,"amount");
+      // console.log(amount,"amount");
         setGenderr(u.gender);
         setAddpar(!addpar);
-        // setTotalpay(() => totalpay + 2799);
+        // setTotalpay(() => totalpay + config.max_amount + config.tax);
         clearthomsoid();
+      }
+
+      if(config.girls_payment_close == true && u.gender == "Female"){
+        message.info("Girls payment are closed now");
       }
 
       if (u.status == "false") {
@@ -289,6 +311,15 @@ const NewPaymentBox = (
   };
 
   const paynow = () => {
+    setTotalpay(acco1 == "true" ? config.max_amount + config.tax : config.min_amount + config.tax)
+    let data1 = paymentData1
+    data1[0].acco = acco1
+    setPaymentData(data1)
+
+    let data = paymentData
+    data[0].acco = acco1
+    setPaymentData(data)
+
     setPaying(true);
   };
 
@@ -301,7 +332,7 @@ const NewPaymentBox = (
         paymentData
       );
       const u = response.data;
-      console.log("data", response.data);
+      // console.log("data", response.data);
       if (response.data.status == "true") {
         window.open(`${response.data.payment_url}`, "_blank");
       } else {
@@ -313,21 +344,44 @@ const NewPaymentBox = (
     }
   }
 
-  const deletePayment = (index) => {
-    var spliced1 = paymentData1.splice(index,1);
-    setPaymentData1(spliced1);
-    var spliced = paymentData.splice(index,1);
-    setPaymentData(spliced);
-    let amount=0;
-      for(let i=0;i<paymentData1.length;i++){
-        if(paymentData1[i].acco == "true"){
-          amount =amount+ 2799;
-        }else if(paymentData1[i].acco == "false"){
-          amount =amount+ 2299;
+
+  const deletePayment = (id) => {
+    let amount = totalpay
+    let amount_delete = paymentData1
+    console.log(amount_delete, "amount_delete");
+    amount_delete = amount_delete?.filter((item) => item.id == id)
+    console.log(amount_delete, "amount_delete");
+    if(amount_delete[0].acco == "true"){
+        amount = amount - config.max_amount - config.tax;
+    }else if(amount_delete[0].acco == "false"){
+        amount =amount - config.min_amount - config.tax;
+    }
+    setTotalpay(amount);
+
+      let data1 = paymentData1
+      data1 = data1?.filter((item) => item.id != id)
+      setPaymentData1(data1);
+
+      let data = paymentData
+      data = data?.filter((item) => item.id != id)
+      setPaymentData(data);
+
+
+        // let amount = 0
+        // for(let i=0;i<paymentData1.length;i++){
+        //   if(paymentData1[i].acco == "true"){
+        //     amount =amount+ config.max_amount + config.tax;
+        //   }else if(paymentData1[i].acco == "false"){
+        //     amount =amount+ config.min_amount + config.tax;
+        //   }
+        // }
+        // setTotalpay(amount);
+
+
+        if(paymentData1.length == 0){
+          setTotalpay(0)
         }
-      }
-      setTotalpay(amount);
-  }
+    }
 
   const locator = useLocation();
   return (
@@ -337,9 +391,6 @@ const NewPaymentBox = (
         <img src={Back1} className="pro-back-img2" alt="" />
         <div className="nnp-head">
           <Navbar color="transparent" data={userDetails} />
-          {/* <div className="nnp-mobhead">
-            <EventMobileNav />
-          </div> */}
         </div>
         <div className="boxborder">
           <div className="nnp-laphead">
@@ -464,9 +515,17 @@ const NewPaymentBox = (
               >
                 <>
                   {/* <img src={paymentcenterpic} alt="" /> */}
-                  {paymentstatus ? (
+                  {userDetails.payment ? (
                     <PaymentSuccess />
-                  ) : (
+                  ) : userDetails.gender == "Female" && config.girls_payment_close ? (
+                  <>
+                    <div>Girls Payments are closed now</div>
+                  </>
+                  ) : config.all_payment_close ? (
+                    <>
+                      <div>All Payments are closed now</div>
+                    </>
+                    ) : (
                     <>
                       {paying ? (
                         <>
@@ -506,7 +565,7 @@ const NewPaymentBox = (
                                           className="pay-th"
                                         >
                                           <MdDelete
-                                          onClick={(index) => deletePayment(index)}
+                                          onClick={() => deletePayment(data?.id)}
                                             style={{
                                               cursor: "pointer",
                                               size: "20px",
@@ -554,6 +613,7 @@ const NewPaymentBox = (
                                 <button
                                   className="total-pay-3-btn"
                                   onClick={makePayment}
+                                  disabled={!paymentData.length}
                                 >
                                   Pay Now
                                 </button>
@@ -600,16 +660,16 @@ const NewPaymentBox = (
                                       )}
                                     </div>
                                     <div>
-                                      <p>₹ 2299</p>
+                                      <p>₹ {config.min_amount}</p>
                                       {acco == true || acco == null ? (
-                                        <p>₹ 500</p>
+                                        <p>₹ { config.max_amount - config.min_amount}</p>
                                       ) : (
                                         <p
                                           style={{
                                             color: "rgba(64, 64, 64, 1)",
                                           }}
                                         >
-                                          ₹ 500
+                                          ₹ { config.max_amount - config.min_amount}
                                         </p>
                                       )}
                                     </div>
@@ -621,8 +681,8 @@ const NewPaymentBox = (
                                       <span className="Paylarge">
                                         ₹{" "}
                                         {acco == true || acco == null
-                                          ? "2799"
-                                          : "2299"}
+                                          ? `${config.max_amount }`
+                                          : `${config.min_amount }`}
                                       </span>
                                       <span className="PayTaxes"> + Taxes</span>
                                     </p>
@@ -723,7 +783,7 @@ const NewPaymentBox = (
                                             )
                                           }
                                     }
-                                      
+
                                     }
                                     className="PayNowBtn"
                                   >
@@ -968,7 +1028,7 @@ const NewPaymentBox = (
                                     >
                                       <>
                                         {data?.acco == "true" ? "YES" : "NO"}
-                                        
+
                                       </>
                                     </td>
                                     <td
@@ -1056,7 +1116,7 @@ const NewPaymentBox = (
                                   )}
                                 </div>
                                 <div>
-                                  <p>₹ 2299</p>
+                                  <p>₹ config.min_amount + config.tax</p>
                                   {acco == true || acco == null ? (
                                     <p>₹ 500</p>
                                   ) : (
@@ -1073,8 +1133,8 @@ const NewPaymentBox = (
                                   <span className="MPaylarge">
                                     ₹{" "}
                                     {acco == true || acco == null
-                                      ? "2799"
-                                      : "2299"}
+                                      ? `${config.max_amount}`
+                                      : `${config.min_amount}`}
                                   </span>
                                   <span className="MPayTaxes"> + Taxes</span>
                                 </p>
@@ -1164,7 +1224,7 @@ const NewPaymentBox = (
                                     )
                                   }
                             }
-                              
+
                             }
                                 className="PayNowBtn"
                               >

@@ -71,13 +71,12 @@ const PaymentSuccess = () => {
           display: "flex",
         }}
       >
-        <a
-          href="https://drive.google.com/file/d/1wp-nx1QmelQCisDOtOr_kumXGSbWxqDq/view?usp=sharing"
+        <Link
+          to="/id_card"
           style={{ marginTop: "10px", marginRight: "30px" }}
-          target="_blank"
         >
-          <Button variant="contained">Download NOC</Button>
-        </a>
+          <Button variant="contained">Download ID</Button>
+        </Link>
       </div>
     </div>
   );

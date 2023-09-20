@@ -1,5 +1,5 @@
 // import "./App.css";
-import React,{useEffect} from "react";
+import React,{useEffect, useState} from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { fetchUser } from "./components/User/UserActions";
 import { connect } from "react-redux";
@@ -52,13 +52,14 @@ import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopa
 import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
 import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
+import axios from "axios"
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
-ReactGA4.initialize("G-FG974BLVDN");
+// ReactGA4.initialize("G-FG974BLVDN");
+const App = (props) => {
 
-function App(props) {
   useEffect(() => {
-    ReactGA4.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
+    // ReactGA4.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("user_id");
     if (token) {
@@ -90,7 +91,7 @@ function App(props) {
 
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />
-          <Route exact={true} path="/newpayment" element={<NewPaymentbox />} />
+          <Route exact={true} path="/newpayment" element={<NewPaymentbox/>} />
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
