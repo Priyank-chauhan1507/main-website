@@ -67,6 +67,7 @@
   width: 30vw;
   height: 60vh;
   margin-right: 2px;
+  border: 2px solid #fff;
 }
 
 
@@ -378,6 +379,12 @@
 
 }
 
+.checkbox {
+  transform : scale(2);
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
 @media (max-width:1500px){
   .events-left-event1 h1{
     font-size:3.3vw;
@@ -632,6 +639,10 @@
     letter-spacing: -0.32px;
   }
 
+  .checkbox {
+    transform : scale(3);
+    margin:20px ;
+  }
 }
 
 .events-left-event {
