@@ -128,21 +128,16 @@ const NewPaymentBox = (
     color: "white",
   });
   const [style2, setStyle2] = useState(is_female ? ON : OFF);
-  // const [totalpay, setTotalpay] = useState(acco1 == "true" ? 2799 : 2299);
-  const [totalpay, setTotalpay] = useState(0);
+  const [totalpay, setTotalpay] = useState(acco1 == "true" ? 2799 : 2299);
+  // const [totalpay, setTotalpay] = useState(0);
 
   useEffect(() => {
-    return () => {
-      setTotalpay(0);
-      for(let i=0;i<paymentData1.length;i++){
-        if(paymentData1[i].acco == "true"){
-          setTotalpay(totalpay + 2799);
-        }else if(paymentData1[i].acco == "false"){
-          setTotalpay(totalpay + 2299);
-        }
-      }
-    }
+    // return () => {
+      
+    // }
   }, [paymentData1])
+
+  
 
   const handleDataNo = () => {
     var temp = paymentData;
@@ -151,6 +146,16 @@ const NewPaymentBox = (
     var temp1 = paymentData1;
     temp1.push({ id: inputValue, acco: "false", gender: "Male" });
     setPaymentData1(temp1);
+    let amount=0;
+      for(let i=0;i<paymentData1.length;i++){
+        if(paymentData1[i].acco == "true"){
+          amount =amount+ 2799;
+        }else if(paymentData1[i].acco == "false"){
+          amount =amount+ 2299;
+        }
+      }
+      setTotalpay(amount);
+      console.log(amount,"amount");
     // setTotalpay(() => totalpay + 2299);
     clearthomsoid();
   };
@@ -162,6 +167,16 @@ const NewPaymentBox = (
     var temp1 = paymentData1;
     temp1.push({ id: inputValue, acco: "true", gender: "Male" });
     setPaymentData1(temp1);
+    let amount=0;
+      for(let i=0;i<paymentData1.length;i++){
+        if(paymentData1[i].acco == "true"){
+          amount =amount+ 2799;
+        }else if(paymentData1[i].acco == "false"){
+          amount =amount+ 2299;
+        }
+      }
+      setTotalpay(amount);
+      console.log(amount,"amount");
     // setTotalpay(() => totalpay + 2799);
     clearthomsoid();
   };
@@ -222,6 +237,16 @@ const NewPaymentBox = (
         var temp1 = paymentData1;
         temp1.push({ id: input, acco: "true", gender: u.gender });
         setPaymentData1(temp1);
+        let amount=0;
+      for(let i=0;i<paymentData1.length;i++){
+        if(paymentData1[i].acco == "true"){
+          amount =amount+ 2799;
+        }else if(paymentData1[i].acco == "false"){
+          amount =amount+ 2299;
+        }
+      }
+      setTotalpay(amount);
+      console.log(amount,"amount");
         setGenderr(u.gender);
         setAddpar(!addpar);
         // setTotalpay(() => totalpay + 2799);
@@ -293,6 +318,15 @@ const NewPaymentBox = (
     setPaymentData1(spliced1);
     var spliced = paymentData.splice(index,1);
     setPaymentData(spliced);
+    let amount=0;
+      for(let i=0;i<paymentData1.length;i++){
+        if(paymentData1[i].acco == "true"){
+          amount =amount+ 2799;
+        }else if(paymentData1[i].acco == "false"){
+          amount =amount+ 2299;
+        }
+      }
+      setTotalpay(amount);
   }
 
   const locator = useLocation();
