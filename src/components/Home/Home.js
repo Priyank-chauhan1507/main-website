@@ -43,7 +43,7 @@ import t5 from '../../assests/t5.webp'
 import t6 from '../../assests/t6.webp'
 
 import laststrips from '../../assests/laststrips.svg'
-import yellow from '../../assests/yellowBack2.webp'
+import yellow from '../../assests/yellowBack.webp'
 import yellowmob from '../../assests/yellowmob.webp'
 import blue from '../../assests/blue.webp'
 
@@ -105,33 +105,33 @@ function Home() {
 
 
 
-      if (elementTop <= 0) {
+      if (elementTop <= 0.6*window.innerHeight) {
 
 
-        image1Ref.current.style.position = "fixed";
-        image2Ref.current.style.position = "fixed";
-        image3Ref.current.style.position = "fixed";
-        image4Ref.current.style.position = "fixed";
-        image5Ref.current.style.position = "fixed";
+        // image1Ref.current.style.position = "fixed";
+        // image2Ref.current.style.position = "fixed";
+        // image3Ref.current.style.position = "fixed";
+        // image4Ref.current.style.position = "fixed";
+        // image5Ref.current.style.position = "fixed";
         console.log("xx", elementTop)
         if (elementLeft1 < 0.11 * window.innerWidth) {
-          image1Ref.current.style.left = `${window.scrollY - 2.6 * window.innerHeight}px`;
+          image1Ref.current.style.left = `${1.2*window.scrollY - 2.1 * window.innerHeight}px`;
           console.log("x", elementLeft1)
         }
         if (elementLeft2 < 0.23 * window.innerWidth) {
-          image2Ref.current.style.left = `${window.scrollY - 2.6 * window.innerHeight}px`;
+          image2Ref.current.style.left = `${window.scrollY - 1.6 * window.innerHeight}px`;
           console.log("x", elementLeft2)
         }
         if (elementLeft3 > 0.37 * window.innerWidth) {
-          image3Ref.current.style.left = `${(-window.scrollY + 4 * window.innerHeight)}px`;
+          image3Ref.current.style.left = `${(-window.scrollY + 2.8 * window.innerHeight)}px`;
           console.log("x", elementLeft3)
         }
         if (elementLeft4 > 0.55 * window.innerWidth) {
-          image4Ref.current.style.left = `${(-window.scrollY + 4.4 * window.innerHeight)}px`;
+          image4Ref.current.style.left = `${(-1.1*window.scrollY + 3.4 * window.innerHeight)}px`;
           console.log("xxx", elementLeft4)
         }
         if (elementLeft5 > 0.75 * window.innerWidth) {
-          image5Ref.current.style.left = `${(-window.scrollY + 4.4 * window.innerHeight)}px`;
+          image5Ref.current.style.left = `${(-window.scrollY + 3.4 * window.innerHeight)}px`;
           console.log("xxx", elementLeft5)
         }
 
@@ -142,58 +142,58 @@ function Home() {
 
 
 
-      if (elementTop > 0 && elementLeft1 > -0.20 * window.innerWidth) {
-        image1Ref.current.style.left = image1Ref.current.style.left = `${1.35 * window.scrollY - 2.6 * window.innerHeight}px`;
-        image1Ref.current.style.position = "absolute";
-        console.log('Element top touches screen top 2');
+      // if (elementTop > 0 && elementLeft1 > -0.20 * window.innerWidth) {
+      //   image1Ref.current.style.left = image1Ref.current.style.left = `${1.35 * window.scrollY - 2.6 * window.innerHeight}px`;
+      //   image1Ref.current.style.position = "absolute";
+      //   console.log('Element top touches screen top 2');
 
-      }
-      if (elementTop > 0 && elementLeft2 > -0.20 * window.innerWidth) {
-        image2Ref.current.style.left = image2Ref.current.style.left = `${1.478 * window.scrollY - 2.6 * window.innerHeight}px`;
-        image2Ref.current.style.position = "absolute";
-        console.log('Element top touches screen top 2');
+      // }
+      // if (elementTop > 0 && elementLeft2 > -0.20 * window.innerWidth) {
+      //   image2Ref.current.style.left = image2Ref.current.style.left = `${1.478 * window.scrollY - 2.6 * window.innerHeight}px`;
+      //   image2Ref.current.style.position = "absolute";
+      //   console.log('Element top touches screen top 2');
 
-      }
-      if (elementTop > 0 && elementLeft3 < 1.2 * window.innerWidth) {
-        image3Ref.current.style.left = `${-window.scrollY + 2.9 * window.innerHeight}px`;
-        image3Ref.current.style.position = "absolute";
-        console.log('Element top touches screen top 4');
+      // }
+      // if (elementTop > 0 && elementLeft3 < 1.2 * window.innerWidth) {
+      //   image3Ref.current.style.left = `${-window.scrollY + 2.9 * window.innerHeight}px`;
+      //   image3Ref.current.style.position = "absolute";
+      //   console.log('Element top touches screen top 4');
 
-      }
-      if (elementTop > 0 && elementLeft4 < 1.2 * window.innerWidth) {
-        image4Ref.current.style.left = `${-window.scrollY + 3.3 * window.innerHeight}px`;
-        image4Ref.current.style.position = "absolute";
-        console.log('Element top touches screen top 4');
+      // }
+      // if (elementTop > 0 && elementLeft4 < 1.2 * window.innerWidth) {
+      //   image4Ref.current.style.left = `${-window.scrollY + 3.3 * window.innerHeight}px`;
+      //   image4Ref.current.style.position = "absolute";
+      //   console.log('Element top touches screen top 4');
 
-      }
-      if (elementTop > 0 && elementLeft5 < 1.2 * window.innerWidth) {
-        image5Ref.current.style.left = `${-window.scrollY + 3.3 * window.innerHeight}px`;
-        image5Ref.current.style.position = "absolute";
-        console.log('Element top touches screen top 5');
+      // }
+      // if (elementTop > 0 && elementLeft5 < 1.2 * window.innerWidth) {
+      //   image5Ref.current.style.left = `${-window.scrollY + 3.3 * window.innerHeight}px`;
+      //   image5Ref.current.style.position = "absolute";
+      //   console.log('Element top touches screen top 5');
 
-      }
+      // }
 
       if (elementLeft3 < 0.39 * window.innerWidth) {
         display1Ref.current.style.opacity = "1";
-        display1Ref.current.style.position = "fixed";
+        // display1Ref.current.style.position = "fixed";
         display2Ref.current.style.opacity = "1";
-        display2Ref.current.style.position = "fixed";
+        // display2Ref.current.style.position = "fixed";
         display3Ref.current.style.opacity = "1";
-        display3Ref.current.style.position = "fixed";
+        // display3Ref.current.style.position = "fixed";
         display4Ref.current.style.opacity = "1";
-        display4Ref.current.style.position = "fixed";
+        // display4Ref.current.style.position = "fixed";
         display5Ref.current.style.opacity = "1";
-        display5Ref.current.style.position = "fixed";
+        // display5Ref.current.style.position = "fixed";
         display6Ref.current.style.opacity = "1";
-        display6Ref.current.style.position = "fixed";
+        // display6Ref.current.style.position = "fixed";
         display7Ref.current.style.opacity = "1";
-        display7Ref.current.style.position = "fixed";
+        // display7Ref.current.style.position = "fixed";
         display8Ref.current.style.opacity = "1";
-        display8Ref.current.style.position = "fixed";
+        // display8Ref.current.style.position = "fixed";
         display9Ref.current.style.opacity = "1";
-        display9Ref.current.style.position = "fixed";
+        // display9Ref.current.style.position = "fixed";
         display10Ref.current.style.opacity = "1";
-        display10Ref.current.style.position = "fixed";
+        // display10Ref.current.style.position = "fixed";
       }
 
       if (elementBottom < window.innerHeight) {
@@ -225,7 +225,7 @@ function Home() {
         image4Ref.current.style.position = "absolute";
         image5Ref.current.style.position = "absolute";
 
-        display10Ref.current.classList.add("proNites_alt");
+        // display10Ref.current.classList.add("proNites_alt");
         display1Ref.current.classList.add("line_1_alt");
         display2Ref.current.classList.add("line_2_alt");
         display3Ref.current.classList.add("line_3_alt");
@@ -236,17 +236,17 @@ function Home() {
         display8Ref.current.classList.add("sText4_alt");
         display9Ref.current.classList.add("sText5_alt");
 
-        image1Ref.current.classList.add("simg1_alt");
-        image2Ref.current.classList.add("simg2_alt");
-        image3Ref.current.classList.add("simg3_alt");
-        image4Ref.current.classList.add("simg4_alt");
-        image5Ref.current.classList.add("simg5_alt");
+        // image1Ref.current.classList.add("simg1_alt");
+        // image2Ref.current.classList.add("simg2_alt");
+        // image3Ref.current.classList.add("simg3_alt");
+        // image4Ref.current.classList.add("simg4_alt");
+        // image5Ref.current.classList.add("simg5_alt");
 
       }
 
       if (elementBottom > window.innerHeight && elementTop > 0) {
         console.log("great");
-        display10Ref.current.classList.remove("proNites_alt");
+        // display10Ref.current.classList.remove("proNites_alt");
         display1Ref.current.classList.remove("line_1_alt");
         display2Ref.current.classList.remove("line_2_alt");
         display3Ref.current.classList.remove("line_3_alt");
@@ -257,11 +257,11 @@ function Home() {
         display8Ref.current.classList.remove("sText4_alt");
         display9Ref.current.classList.remove("sText5_alt");
 
-        image1Ref.current.classList.remove("simg1_alt");
-        image2Ref.current.classList.remove("simg2_alt");
-        image3Ref.current.classList.remove("simg3_alt");
-        image4Ref.current.classList.remove("simg4_alt");
-        image5Ref.current.classList.remove("simg5_alt");
+        // image1Ref.current.classList.remove("simg1_alt");
+        // image2Ref.current.classList.remove("simg2_alt");
+        // image3Ref.current.classList.remove("simg3_alt");
+        // image4Ref.current.classList.remove("simg4_alt");
+        // image5Ref.current.classList.remove("simg5_alt");
 
       }
 
@@ -316,8 +316,10 @@ function Home() {
         video.play().catch(error => {
           console.error('Failed to play video:', error);
         });
+        video.classList.add("vid_alt");
       } else {
         video.pause();
+        video.classList.remove("vid_alt");
       }
     }
   };
@@ -390,7 +392,7 @@ function Home() {
 
       <div className={`home3rd`} ref={mainboxRef} >
         {/* <img className='redBack' src={redback} alt="loading"/> */}
-        <img style={{height:"320vh",width:"100vw"}} className='yellowy' src={yellow} alt="yellow_back"/>
+        <img style={{width:"100vw"}} className='yellowy' src={yellow} alt="yellow_back"/>
 
         <div className='proNites' ref={display10Ref} >PRONITES</div>
 
