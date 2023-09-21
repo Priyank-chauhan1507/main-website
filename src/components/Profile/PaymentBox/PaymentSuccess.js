@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import { Checkmark } from "react-checkmark";
 import Button from "@mui/material/Button";
+import "./PaymentSuccess.css"
+import done from "../../../assests/PaymentDone.svg"
 
 const PaymentSuccess = () => {
   return (
@@ -14,13 +16,28 @@ const PaymentSuccess = () => {
         alignItems: "center",
         width: "100%",
         height: "100%",
-        textAlign:"center",
-        marginTop:"10vh"
+        textAlign: "center",
+        marginTop: "10vh",
       }}
     >
       {/* <Checkmark size={100} /> */}
       <br />
-      <h1 style={{textAlign:"center",color:"green"}}>Payment Success</h1>
+      <h1
+        style={{
+          textAlign: "center",
+          color: "#28A745",
+          fontFamily: "Comic Neue",
+          fontSize: "20px",
+          fontStyle: "normal",
+          fontWeight: "700",
+          lineHeight: "normal",
+          borderRadius: "8px",
+          border: "1px solid #28A745",
+          padding: "16px 32px",
+        }}
+      >
+        Payment Done Successfully
+      </h1>
       <span
         style={{
           marginTop: "10px",
@@ -54,17 +71,16 @@ const PaymentSuccess = () => {
         <li>
           Each and every candidate has to reach MAC (Multi Activity Centre) upon
           reaching IITR campus, where participants will be provided with
-          identity cards, accommodation and coupons.
+          identity cards, accommodation and food coupons.
         </li>
         <li>
-          General E-Rickshaw charges: for reaching IITR main gate from Railway
+          General E-Rickshaw charges for reaching IITR main gate from Railway
           Station: Rs 20/-
         </li>
         <li>
           Please ensure to bring light woolens, as per the weather of roorkee.
         </li>
         <li>Please bring two passport size photographs along with it.</li>
-        <li>Mask are compulsary to bring.</li>
         <li>Optional : Do bring extra blanket to be on the safer side.</li>
       </span>
       <div
@@ -72,10 +88,7 @@ const PaymentSuccess = () => {
           display: "flex",
         }}
       >
-        <Link
-          to="/id_card"
-          style={{ marginTop: "10px", marginRight: "30px" }}
-        >
+        <Link to="/id_card" style={{ marginTop: "10px", marginRight: "30px" }}>
           <Button variant="contained">Download ID</Button>
         </Link>
       </div>

@@ -901,6 +901,9 @@ letter-spacing: -0.32px;
   .PayNowBtnActive, .PayNowBtn{
     margin-bottom: 20px;
   }
+  .mob-incl-all-tax{
+    font-size: 13px !important;
+  }
   /* .main_boxx::-webkit-scrollbar{
     display: block;
     width: 2px;
