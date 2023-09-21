@@ -18,29 +18,29 @@ function ContactUs() {
         <div className="detailsContact">
             <div className="contact1MUN">
             <div className="NameContact">
-                Shubhanshi Rajput
+                Avnish 
             </div>
             <div className="phoneContact">
                 <img src={Phone} alt="" /> &nbsp; &nbsp; &nbsp;
-                +91 8739096789
+                +91 9451584872
             </div>
-            <div className="phoneContact">
+            {/* <div className="phoneContact">
                 <img src={Mail} alt="" /> &nbsp; &nbsp; &nbsp;
                 alok_k@iitr.ac.in
-            </div>
+            </div> */}
             </div>
             <div className="contact2MUN">
             <div className="NameContact">
-                Shubhanshi Rajput
+                Kanwar Anmol
             </div>
             <div className="phoneContact">
                 <img src={Phone} alt="" /> &nbsp; &nbsp; &nbsp;
-                +91 8739096789
+                +91 7347346875
             </div>
-            <div className="phoneContact">
+            {/* <div className="phoneContact">
                 <img src={Mail} alt="" /> &nbsp; &nbsp; &nbsp;
                 alok_k@iitr.ac.in
-            </div>
+            </div> */}
             </div>
             
         </div>
