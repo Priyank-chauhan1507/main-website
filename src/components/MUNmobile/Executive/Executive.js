@@ -36,7 +36,7 @@ const App = () => {
       content: <div className="judge3div">
         <img src={judge3} className="judge3-img j3"alt="3" />
         <div className='judge1-discription'>NAMAN JAIN</div> 
-        <div className='judge1-discription'>CHAIR OF AIPPM</div>
+        <div className='judge1-discription'>PRESIDENT OF AIPPM</div>
       </div>
     }
   ]; 

@@ -23,7 +23,7 @@ function Judges() {
             <div className="judges-cont-3">
                 <img src={judge3} className="hero3" alt="" />
                 <div className="jelement1">NAMAN JAIN</div>
-                <div className="jelement2">CHAIR OF AIPPM</div>
+                <div className="jelement2">PRESIDENT OF AIPPM</div>
             </div>
         </div>
     </div>

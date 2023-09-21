@@ -69,7 +69,7 @@ function HomeMUN() {
           <div className="prizesMUNWorthDiv">
           <img src={Prizes} alt="" className="prizesMUNWorth1" />
           </div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed quisque auctor suspendisse tortor, risus. Natoque aliquet phasellus orci et a ut justo quis. Consequat arcu aliquam consectetur adipiscing cras ultricies ornare nec. Vulputate venenatis, blandit blandit
+          Model United Nations, referred to as MUN, offers participants a distinctive opportunity to immerse themselves in the realm of international diplomacy and the resolution of global challenges through constructive forums for open dialogue. MUN conferences foster a range of critical skills, including public speaking, research, negotiation, and teamwork, while also promoting a deeper understanding of global affairs and international relations. Delegates will uphold their countries' national policies while engaging in negotiations amid other, at times divergent, international policies.
         </div>
         <div className="CommitteeHead" id="committeeHead1">
           <img src={Committee} alt="" />
