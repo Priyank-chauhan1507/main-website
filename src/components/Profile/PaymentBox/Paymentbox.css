@@ -327,7 +327,10 @@ utton{
   letter-spacing: -0.02em;
   color: #333333;
 }
-
+.PaymentClosedAll
+{
+  width: 25vw;
+}
 .PayRight {
   margin-left: 100px;
   margin-top: 55px;
@@ -354,7 +357,10 @@ utton{
   letter-spacing: -0.02em;
   color: #FFFFFF;
 }
-
+.PaymentClosedAll1
+{
+  width: 25vw;
+}
 .Payevntnm {
   margin-top: 25px;
   display: flex;
@@ -515,6 +521,15 @@ utton{
   height: 5vh;
   gap: 6vw;
 }
+.PaymentClosedAll
+{
+  width: 25vw;
+}
+.PaymentClosedAll1
+{
+  width: 25vw;
+}
+
 
 .pay-tr{
   display: flex;
@@ -842,6 +857,16 @@ letter-spacing: -0.32px;
     height: 46vh;
 
   }
+  .PaymentClosedAll
+  {
+    width: 50vw;
+    margin: auto;
+  }
+  .PaymentClosedAll1
+  {
+    width: 50vw;
+    margin: auto;
+  }
   .Payleft1{
     overflow-y: scroll;
   }
@@ -911,8 +936,20 @@ letter-spacing: -0.32px;
     border-radius: 0.5px;
   } */
 }
+@media only screen and (max-width:500px)
+{
 
-
+  .PaymentClosedAll
+    {
+      width: 70vw;
+      margin: auto;
+    }
+  .PaymentClosedAll1
+    {
+      width: 70vw;
+      margin: auto;
+    }
+}
 @media only screen and (max-width:430px){
   /* .fle-ro2{
     display: flex;
