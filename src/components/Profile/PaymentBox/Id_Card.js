@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../Profile/Profile.css";
+import "./MobilePaymentBox.css";
 import "./Paymentbox.css";
 import "../LeftSideProfile/leftsideprofile.css";
 import log from "../../../assests/logout-logo.svg";
@@ -7,6 +8,7 @@ import cs1 from "../../../assests/CautionSign1.svg";
 import axios from "axios";
 import { connect } from "react-redux";
 import Navbar from "../../EventsNavbar/Eventsnavbar";
+import { FileUploader } from "react-drag-drop-files";
 import Back from "../../../assests/profile1.webp";
 import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
@@ -29,9 +31,9 @@ import "./Id_Card.css";
 import QRcode from "qrcode.react";
 import { useNavigate } from "react-router-dom";
 import PDFFile from "../../../PdfRenderer/Renderer";
+import { fetchUser } from "../../User/UserActions";
 import { PDFDownloadLink } from "@react-pdf/renderer";
-
-import "./MobilePaymentBox.css";
+const fileTypes = ["JPG", "PNG", "GIF"];
 
 const Id_Card = () => {
   //   const navigate = useNavigate();
@@ -41,6 +43,7 @@ const Id_Card = () => {
   const [vall, setVall] = useState("");
   const [visible, setVisible] = useState(false);
   const [download, setDownload] = useState(false);
+  const [qrshow,setQrshow] = useState(true);
 
   useEffect(() => {
     getData();
@@ -75,6 +78,7 @@ const Id_Card = () => {
     } else {
       setQr(userDetails?.thomso_id);
       setVisible(true);
+      setQrshow(false);
       setDownload(true);
       setTimeout(() => {
         const canvas = document.getElementById("myqr");
@@ -105,6 +109,50 @@ const Id_Card = () => {
   const toggling = () => setIsOpen(!isOpen);
   const toggling2 = () => setIsOpen2(!isOpen2);
   const toggling3 = () => setIsOpen3(!isOpen3);
+  const [profilepic, setprofilepic] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    fetchUser();
+  });
+
+  const changeHandler1 = async (file) => {
+    // setprofilepic(false);
+    const userId = userDetails?.user_id;
+    let formData = new FormData();
+    formData.append("avtar", file);
+    console.log(formData);
+    // setprofilepic(true);
+
+    if (file.size > 512000) {
+      message.warning("Size is too large.Size must be less than 500KB");
+      setprofilepic(null);
+      return false;
+    } else {
+      message.success("File successfully selected");
+      setprofilepic(true);
+      // window.location.reload(false);
+    }
+    const response = await axios.put(
+      `/apiV1/registeruser/${userId}`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    if (response.status == 200) {
+      // setprofilepic(true);
+      fetchUser();
+      setLoading(false);
+      window.location.reload(false);
+    } else {
+      setLoading(false);
+      message.error("Something went wrong while uploading, please reupload");
+      setprofilepic(null);
+    }
+  };
 
   return (
     <>
@@ -206,6 +254,7 @@ const Id_Card = () => {
                 className="Paycontainer"
                 style={{
                   display: "flex",
+                  flexDirection:"column",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
@@ -279,17 +328,21 @@ const Id_Card = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="right_id_card">
+                  <div className="right_id_card" 
+                  // style={{display:"none"}}
+                  >
                     <>
                       {!userDetails?.avtar && (
-                        <>
-                          <div className="id_card_uploadphoto_text">
-                            Note: Please upload your photo to download your
-                            virtual ID card
-                          </div>
-                          <hr />
-                        </>
+                        <FileUploader
+                        type="file"
+                        types={fileTypes}
+                        handleChange={changeHandler1}
+                        accept="image/jpeg, image/png, image/jpg"
+                      >
+                        <button className="generate1">Upload your profile</button>
+                      </FileUploader>
                       )}
+                      {(userDetails?.avtar && qrshow) && (
                       <div>
                         {" "}
                         <button
@@ -301,22 +354,11 @@ const Id_Card = () => {
                           alignItems: "center", zIndex: "100" }}
                           onClick={Verify}
                         >
-                          {!visible
-                            ? "Generate your Qr code"
-                            : (
-                              <>
-                              <img src={done} className="done-img" />
-                              Qr code Generated
-                              </>
-                              )}
+                          Generate QR code
                         </button>{" "}
-                      </div>
-                      <hr />
-                      <div className="id_card_downloadidcard_text">
-                        Download your Virtual ID Card
-                      </div>
+                      </div>)}
+                        {download && (
                       <div>
-                        {download ? (
                           <>
                             {" "}
                             <button className="generate">
@@ -336,29 +378,8 @@ const Id_Card = () => {
                               </Link>
                             </button>{" "}
                           </>
-                        ) : (
-                          <>
-                            {" "}
-                            <button
-                              onClick={() =>
-                                message.info("Please generate QR code")
-                              }
-                              className="not-download"
-                              style={{ cursor: "pointer", color: "black", display: "flex",
-                                gap: "10px",
-                                justifyContent: "center",
-                                alignItems: "center" }}
-                            >
-                              <img
-                                className="downloadsign"
-                                src={downloadd}
-                                alt=""
-                              />{" "}
-                              Download ID card
-                            </button>{" "}
-                          </>
-                        )}
                       </div>
+                        )}
                     </>
                   </div>
                 </div>
@@ -532,39 +553,34 @@ const Id_Card = () => {
                 <div className="right_id_card">
                   <>
                     {!userDetails?.avtar && (
-                      <>
-                        <div className="id_card_uploadphoto_text">
-                          Note: Please upload your photo to download your
-                          virtual ID card
-                        </div>
-                        <hr style={{ width: "100%" }} />
-                      </>
+                      <FileUploader
+                      type="file"
+                      types={fileTypes}
+                      handleChange={changeHandler1}
+                      accept="image/jpeg, image/png, image/jpg"
+                    >
+                      <button className="generate1">Upload your profile</button>
+                    </FileUploader>
                     )}
-                    <div>
-                      {" "}
-                      <button
-                        className="generate1"
-                        disabled={visible}
-                        style={{ cursor: "pointer", zIndex: "100" , color: "black", display: "flex",
-                        gap: "10px",
-                        justifyContent: "center",
-                        alignItems: "center"}}
-                        onClick={Verify}
-                      >
-                        {!visible ? "Generate QR code" : (
-                              <>
-                              <img src={done} className="done-img" />
-                              Qr code Generated
-                              </>
-                              )}
-                      </button>{" "}
-                    </div>
-                    <hr style={{ width: "100%" }} />
-                    <div className="id_card_downloadidcard_text">
-                      Download your Virtual ID Card
-                    </div>
-                    <div>
-                    {download ? (
+                    {(userDetails?.avtar && qrshow) && (
+                      <div>
+                        {" "}
+                        <button
+                          className="generate1"
+                          disabled={visible}
+                          style={{ cursor: "pointer", color: "black", display: "flex",
+                          gap: "10px",
+                          justifyContent: "center",
+                          alignItems: "center", zIndex: "100" }}
+                          onClick={Verify}
+                        >
+                          Generate QR code
+                        </button>{" "}
+                      </div>)}
+
+
+                    {download && (
+                      <div>
                           <>
                             {" "}
                             <button className="generate">
@@ -584,29 +600,8 @@ const Id_Card = () => {
                               </Link>
                             </button>{" "}
                           </>
-                        ) : (
-                          <>
-                            {" "}
-                            <button
-                              onClick={() =>
-                                message.info("Please generate QR code")
-                              }
-                              className="not-download"
-                              style={{ cursor: "pointer", color: "black", display: "flex",
-                                gap: "10px",
-                                justifyContent: "center",
-                                alignItems: "center" }}
-                            >
-                              <img
-                                className="downloadsign"
-                                src={downloadd}
-                                alt=""
-                              />{" "}
-                              Download ID card
-                            </button>{" "}
-                          </>
+                      </div>
                         )}
-                    </div>
                   </>
                 </div>
               </div>
