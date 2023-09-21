@@ -2,7 +2,7 @@
 
 .id_border1 {
     /* margin-vertical 17px; */
-    height: 45vh;
+    /* height: 45vh; */
     width: 25vw;
     border-radius: 3px;
     padding: 3px;
@@ -26,15 +26,16 @@
   }
 
   .id_box_left {
-    height: 100%;
+    /* height: 100%; */
     width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2vw;
   }
 
   .id_box_right {
-    height: 100%;
+    /* height: 100%; */
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -46,14 +47,14 @@
   }
 
   .id_box_image {
-    height: 50%;
+    height: 11vw;
     width: 100%;
     border: 1px solid black;
     padding: 1px;
   }
 
   .id_box_qr {
-    height: 40%;
+    height: 9vw;
     color:black;
     width: 100%;
     border: 2px solid black;
@@ -61,6 +62,11 @@
     display: flex;
     align-items: center;
     text-align: center;
+  }
+
+  #myqr{
+    width: 100% !important;
+    height: 9vw !important;
   }
 
   .id_box_id {
@@ -116,6 +122,19 @@
     justify-content: center;
     align-items: center;
   }
+  .not-download
+  {
+    /* height: 6vh; */
+    background-color: rgb(149, 145, 145);
+    color: black;
+    margin-top: 4vh;
+    /* margin-bottom: 4vh; */
+    padding: 1vw 2vh;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .generate1
   {
     /* height: 6vh; */
@@ -138,8 +157,9 @@
   .id_card_downloadidcard_text
   {
     margin-top: 4vh;
+    font-size: 2vw;
   }
-  .downloadsign
+  .downloadsign, .done-img
   {
     height: 12px;
     width: 12px;
@@ -151,29 +171,125 @@
     margin-top: 3vh;
   }
 
+  @media only screen and (max-width:900px){
+    .id_box_text2{
+      font-size: 0.9vw;
+    }
+  }
+
   @media screen and (max-width:768px)
   {
     .id_border1
     {
-      width: 100%;
+      width: auto;
+      margin-top: 25vh;
     }
     .id_box_qr_text
     {
       text-align: center;
+      font-size: 10px;
     }
     .id_card_uploadphoto_text
     {
       color: white;
+      font-size: 12px;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     .right_id_card
     {
       margin-top: 3vh;
+      width: 80%;
+      margin-left: 0vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .generate1{
       margin: 4vh auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 25vw;
+      /* width: 25vw; */
+      font-size: 20px;
+    }
+    .generate, .not-download{
+      margin: 4vh auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* width: 25vw; */
+      font-size: 20px;
+    }
+    .id_card_downloadidcard_text{
+      color: #fff;
+      font-size: 12px;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .done-img{
+      width: 20px;
+      height: 20px;
+    }
+    .downloadsign{
+      width: 20px;
+      height: 20px;
+    }
+    .id_box_image{
+      height: 80px;
+      width: 80px;
+    }
+    .id_box_qr{
+      height: 80px;
+      width: 80px;
+    }
+    .id_box_id{
+      font-size: 15px;
+    }
+    .id_box_text1{
+      font-size: 10px;
+    }
+    .id_box_text2{
+      font-size: 10px;
+    }
+    .id_box_textB{
+      font-size: 11px;
+    }
+    #myqr{
+      width: 80px !important;
+      height: 80px !important;
+    }
+  }
+
+  @media only screen and (max-width:500px){
+    .id_border1{
+      margin-top: 20vh;
+    }
+    .generate, .generate1, .not-download{
+      font-size: 18px;
+    }
+    .downloadsign, .done-img{
+      width: 18px;
+      height: 18px;
+    }
+  }
+  @media only screen and (max-width:360px){
+    .id_border1{
+      width: 90%;
+    }
+    .id_box_text2{
+      font-size: 9px;
+    }
+    .generate, .generate1, .not-download{
+      font-size: 15px;
+    }
+    .downloadsign, .done-img{
+      width: 15px;
+      height: 15px;
     }
   }
