@@ -33,6 +33,7 @@ import { useNavigate } from "react-router-dom";
 import PDFFile from "../../../PdfRenderer/Renderer";
 import { fetchUser } from "../../User/UserActions";
 import { PDFDownloadLink } from "@react-pdf/renderer";
+import pic1 from "../../../assests/profile1.png.jpg"
 const fileTypes = ["JPG", "PNG", "GIF"];
 
 const Id_Card = () => {
@@ -263,10 +264,14 @@ const Id_Card = () => {
                   <div className="id_border2">
                     <div className="id_box">
                       <div className="id_box_left">
+                        {userDetails?.avtar ? (
                         <img
                           src={userDetails?.avtar}
                           className="id_box_image"
-                        />
+                        />):(<img
+                          src={pic1}
+                          className="id_box_image"
+                        />)}
 
                         {visible ? (
                           <QRcode id="myqr" value={qr} size={100} />
@@ -489,10 +494,14 @@ const Id_Card = () => {
                   <div className="id_border2">
                     <div className="id_box">
                       <div className="id_box_left">
+                      {userDetails?.avtar ? (
                         <img
                           src={userDetails?.avtar}
                           className="id_box_image"
-                        />
+                        />):(<img
+                          src={pic1}
+                          className="id_box_image"
+                        />)}
 
                         {visible ? (
                           <QRcode id="myqr" value={qr} />
