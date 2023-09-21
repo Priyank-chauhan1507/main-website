@@ -76,13 +76,24 @@ export default function Attractions() {
                 key={id}
                 src={image === "" ? Apocalypse : image}
                 alt="hello"
-                width={177}
-                height={193}
+                width={175}
+                height={190}
+                style={{gap:"3rem"}}
               />
             );
           })}
         <a href="/events">
-          <div className="exploreMore">Explore more...</div>
+          <div className="exploreMore"><span style={{
+            width:'7.75rem',
+             color: "#2a2a2a",
+             textAlign: "center",
+             fontFamily: "Comic Neue",
+             fontSize: "1.5rem",
+             fontStyle: "normal",
+             fontWeight: "700",
+             lineHeight: "normal",
+             textWrap: "wrap",
+          }}>Explore more...</span></div>
         </a>
       </div>
     </div>
