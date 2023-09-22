@@ -368,7 +368,8 @@ function Home() {
 
        <div className='home3rdmob'>
         <img className='yellowmob' src={yellowmob} alt="yellowwwy"/>
-        <img className='pronite' src={pronite} alt="pronite" />
+        <img className='pronite' src={pronite} alt="pronite" data-aos="zoom-in"
+          data-aos-duration="1200" />
       </div> */}
 
 
