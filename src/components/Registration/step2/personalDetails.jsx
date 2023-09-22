@@ -62,7 +62,7 @@ const PersonalDetails = ({college,state,district,degree,year}) => {
 
 
       };
-      console.log(userresponse);
+      // console.log(userresponse);
       const response = await axios.post(`/apiV1/registeruser`, userresponse);
       const { data } = response;
           if (response.status === 201) {

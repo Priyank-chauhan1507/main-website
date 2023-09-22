@@ -8,7 +8,7 @@ import default_image from "./images/default_event.png";
 
 const EventCard = ({ data }) => {
   const [event, setEvent] = useState(null);
-  console.log(data);
+  // console.log(data);
 
   // console.log(event, "");
   const openPage = (e) => {

@@ -15,6 +15,8 @@ import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
 import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
+import Closed from "../../../assests/PaymentClosedGirls.webp";
+import Closed1 from "../../../assests/ClosedPaymentAll.webp";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/pay_black.png";
 import icon31 from "../../../assests/payment.svg";
@@ -32,6 +34,7 @@ import "./MobilePaymentBox.css";
 import { MdDelete } from "react-icons/md";
 import { message } from "antd";
 import { clear } from "@testing-library/user-event/dist/clear";
+import Loader from "../../Loader/Loader"
 
 const NewPaymentBox = (
   data,
@@ -52,6 +55,15 @@ const NewPaymentBox = (
     getData();
   }, []);
 
+  useEffect(() => {
+    setLoading(true);
+    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+      navigate(`/login`);
+    }else{
+      setLoading(false);
+    }
+  });
+
   const get_master_config = async () => {
     const ress = axios
       .get(`/apiV1/payment_master`)
@@ -64,12 +76,14 @@ const NewPaymentBox = (
       });
   };
 
-  console.log(config, "config");
+  // console.log(config, "config");
 
   const getData = async () => {
+    setLoading(true);
     const ress = axios
       .get(`/apiV1/current_user_participant`)
       .then((ress) => {
+        setLoading(false);
         setuserDetails(ress.data);
 
         if (paymentData.length == 0) {
@@ -86,11 +100,12 @@ const NewPaymentBox = (
         }
       })
       .catch((err) => {
+        setLoading(false);
         console.log(err);
       });
   };
 
-  console.log(userDetails, "userdetails");
+  // console.log(userDetails, "userdetails");
 
   function handleLogout() {
     localStorage.removeItem("token");
@@ -138,8 +153,8 @@ const NewPaymentBox = (
   const [acco1, setAcco1] = useState("true");
   const [agree, setAgree] = useState(false);
 
-  console.log(paymentData1, "paymentData1");
-  console.log(paymentData, "paymentData");
+  // console.log(paymentData1, "paymentData1");
+  // console.log(paymentData, "paymentData");
 
   const [style1, setStyle1] = useState({
     background: "transparent",
@@ -147,7 +162,7 @@ const NewPaymentBox = (
   });
   const [style2, setStyle2] = useState(is_female ? ON : OFF);
   const [totalpay, setTotalpay] = useState(0);
-  console.log(totalpay);
+  // console.log(totalpay);
   // const [totalpay, setTotalpay] = useState(0);
 
   const handleDataNo = () => {
@@ -309,6 +324,7 @@ const NewPaymentBox = (
   };
 
   const paynow = () => {
+    setLoading(true);
     setTotalpay(
       acco1 == "true"
         ? config.max_amount + config.tax
@@ -323,6 +339,7 @@ const NewPaymentBox = (
     setPaymentData(data);
 
     setPaying(true);
+    setLoading(false);
   };
 
 
@@ -353,11 +370,12 @@ const NewPaymentBox = (
   }
 
   const deletePayment = (id) => {
+    setLoading(true);
     let amount = totalpay;
     let amount_delete = paymentData1;
-    console.log(amount_delete, "amount_delete");
+    // console.log(amount_delete, "amount_delete");
     amount_delete = amount_delete?.filter((item) => item.id == id);
-    console.log(amount_delete, "amount_delete");
+    // console.log(amount_delete, "amount_delete");
     if (amount_delete[0].acco == "true") {
       amount = amount - config.max_amount - config.tax;
     } else if (amount_delete[0].acco == "false") {
@@ -372,6 +390,7 @@ const NewPaymentBox = (
     let data = paymentData;
     data = data?.filter((item) => item.id != id);
     setPaymentData(data);
+    setLoading(false);
 
     // let amount = 0
     // for(let i=0;i<paymentData1.length;i++){
@@ -391,6 +410,7 @@ const NewPaymentBox = (
   const locator = useLocation();
   return (
     <>
+    {loading && <Loader />}
       <div className="nnp-container">
         <img src={Back} className="pro-back-img" alt="" />
         <img src={Back1} className="pro-back-img2" alt="" />
@@ -525,11 +545,11 @@ const NewPaymentBox = (
                   ) : userDetails.gender == "Female" &&
                     config.girls_payment_close ? (
                     <>
-                      <div>Girls Payments are closed now</div>
+                      <img className="PaymentClosedAll1" src={Closed} alt="" />
                     </>
                   ) : config.all_payment_close ? (
                     <>
-                      <div>All Payments are closed now</div>
+                      <img className="PaymentClosedAll" src={Closed1} alt="" />
                     </>
                   ) : (
                     <>
@@ -708,8 +728,8 @@ const NewPaymentBox = (
                                 </div>
                               </>
                             </div>
-
-                            {userDetails?.gender == "Male" ? (
+                            {userDetails?.gender == "Male" ||
+                            userDetails?.gender == "Others" ? (
                               <div
                                 className="Payleft-right"
                                 style={{
@@ -820,6 +840,7 @@ const NewPaymentBox = (
                                     className="Payevent"
                                     style={{ marginBottom: "5vh" }}
                                   >
+                                    {" "}
                                     * Accommdation is Compulsory for Female
                                   </p>
                                   <div
@@ -846,7 +867,6 @@ const NewPaymentBox = (
                                       Agree Terms and Conditions *
                                     </a>
                                   </div>
-
                                   {agree == true ? (
                                     <button
                                       className="PayNowBtnActive"
@@ -885,6 +905,8 @@ const NewPaymentBox = (
               </div>
             </div>
           </div>
+
+          {/* -------------------Logout Modal ------------------- */}
           <div className={!logout ? "none" : ""} id="logout">
             <div className="l_body">
               <div
@@ -1003,6 +1025,8 @@ const NewPaymentBox = (
 
           {/* ----------------------------------------------- */}
 
+          {/* --------------Mobile----------------------------- */}
+
           <div className="nnp-mobile">
             <div
               className="mobpaymentcenterimg"
@@ -1077,11 +1101,11 @@ const NewPaymentBox = (
               ) : userDetails.gender == "Female" &&
                 config.girls_payment_close ? (
                 <>
-                  <div>Girls Payments are closed now</div>
+                  <img className="PaymentClosedAll" src={Closed} alt="" />
                 </>
               ) : config.all_payment_close ? (
                 <>
-                  <div>All Payments are closed now</div>
+                  <img className="PaymentClosedAll1" src={Closed1} alt="" />
                 </>
               ) : (
                 <>
@@ -1170,7 +1194,7 @@ const NewPaymentBox = (
                             <div className="total-pay-2">
                               <p className="total-pay-1-p1">
                                 ₹{totalpay}
-                                <span className="mob-incl-all-tax" style={{ fontSize: "18px" }}>
+                                <span style={{ fontSize: "14px" }}>
                                   {" "}
                                   (incl. all the taxes)
                                 </span>
@@ -1247,95 +1271,105 @@ const NewPaymentBox = (
                             </div>
                             <p className="MPayinfo"></p>
 
-                            {userDetails?.gender == "Male" ? (
-                              <>
-                                <p className="MPayevent">
-                                  Are you going to take Accommodation in IITR?
-                                  (* Accommdation Compulsory for Female)
-                                </p>
-                                <div
-                                  className="MyesNo"
-                                  style={{ opacity: is_female ? "0.5" : "1" }}
-                                >
-                                  <button
-                                    className="Myesbtn"
-                                    disabled={is_female}
-                                    onClick={() => {
-                                      setAcco1("true");
-                                      Accommdation();
-                                    }}
-                                    style={style2}
+                            {userDetails?.gender == "Male" ||
+                            userDetails?.gender == "Others" ? (
+                              <div
+                                className="Payleft-right"
+                                style={{
+                                  display: "flex",
+                                  flexDirection: "column",
+                                  marginRight: "20px",
+                                }}
+                              >
+                                <>
+                                  <p className="MPayevent">
+                                    Are you going to take Accommodation in IITR?
+                                    (* Accommdation Compulsory for Female)
+                                  </p>
+                                  <div
+                                    className="MyesNo"
+                                    style={{ opacity: is_female ? "0.5" : "1" }}
                                   >
-                                    Yes
-                                  </button>
-                                  <button
-                                    className="Mnobtn"
-                                    disabled={is_female}
-                                    onClick={() => {
-                                      setAcco1("false");
-                                      noAccommdation();
-                                    }}
-                                    style={style1}
-                                  >
-                                    No
-                                  </button>
-                                </div>
-                                <div className="agree-terms-and-conditions">
-                                  <input
-                                    className="agree-checkbox"
-                                    style={{ cursor: "pointer" }}
-                                    type="checkbox"
-                                    checked={agree}
-                                    onChange={(e) => setAgree(!agree)}
-                                    required
-                                  />
-                                  <a
-                                    className="agree-a"
-                                    style={{
-                                      color: "white",
-                                      cursor: "pointer",
-                                    }}
-                                    href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
-                                    target="_blank"
-                                  >
-                                    Agree Terms and Conditions *
-                                  </a>
-                                </div>
-                                {checkPayNow() == true && agree == true ? (
-                                  <button
-                                    style={{ marginTop: "20px" }}
-                                    className="PayNowBtnActive"
-                                    onClick={paynow}
-                                  >
-                                    {loading ? (
-                                      <CircularProgress
-                                        color="inherit"
-                                        size={20}
-                                      />
-                                    ) : (
-                                      "Pay Now"
-                                    )}
-                                  </button>
-                                ) : (
-                                  <button
-                                    style={{ marginTop: "20px" }}
-                                    onClick={() => {
-                                      if (agree == true) {
-                                        message.info(
-                                          "Please select one accomodation option"
-                                        );
-                                      } else {
-                                        message.info(
-                                          "Please agree terms and conditions"
-                                        );
-                                      }
-                                    }}
-                                    className="PayNowBtn"
-                                  >
-                                    Pay Now
-                                  </button>
-                                )}
-                              </>
+                                    <button
+                                      className="Myesbtn"
+                                      disabled={is_female}
+                                      onClick={() => {
+                                        setAcco1("true");
+                                        Accommdation();
+                                      }}
+                                      style={style2}
+                                    >
+                                      Yes
+                                    </button>
+                                    <button
+                                      className="Mnobtn"
+                                      disabled={is_female}
+                                      onClick={() => {
+                                        setAcco1("false");
+                                        noAccommdation();
+                                      }}
+                                      style={style1}
+                                    >
+                                      No
+                                    </button>
+                                  </div>
+                                  <div className="agree-terms-and-conditions">
+                                    <input
+                                      className="agree-checkbox"
+                                      style={{ cursor: "pointer" }}
+                                      type="checkbox"
+                                      checked={agree}
+                                      onChange={(e) => setAgree(!agree)}
+                                      required
+                                    />
+                                    <a
+                                      className="agree-a"
+                                      style={{
+                                        color: "white",
+                                        cursor: "pointer",
+                                      }}
+                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                      target="_blank"
+                                    >
+                                      Agree Terms and Conditions *
+                                    </a>
+                                  </div>
+                                  {checkPayNow() == true && agree == true ? (
+                                    <button
+                                      style={{ marginTop: "20px" }}
+                                      className="PayNowBtnActive"
+                                      onClick={paynow}
+                                    >
+                                      {loading ? (
+                                        <CircularProgress
+                                          color="inherit"
+                                          size={20}
+                                        />
+                                      ) : (
+                                        "Pay Now"
+                                      )}
+                                    </button>
+                                  ) : (
+                                    <button
+                                      style={{ marginTop: "20px" }}
+                                      onClick={() => {
+                                        if (agree == true) {
+                                          message.info(
+                                            "Please select one accomodation option"
+                                          );
+                                        } else {
+                                          message.info(
+                                            "Please agree terms and conditions"
+                                          );
+                                        }
+                                      }}
+                                      className="PayNowBtn"
+                                    >
+                                      Pay Now
+                                    </button>
+                                  )}
+                                </>
+                              </div>
                             ) : (
                               <>
                                 <div
@@ -1350,6 +1384,7 @@ const NewPaymentBox = (
                                     className="Payevent"
                                     style={{ marginBottom: "5vh" }}
                                   >
+                                    {" "}
                                     * Accommdation is Compulsory for Female
                                   </p>
                                   <div
@@ -1376,7 +1411,6 @@ const NewPaymentBox = (
                                       Agree Terms and Conditions *
                                     </a>
                                   </div>
-
                                   {agree == true ? (
                                     <button
                                       className="PayNowBtnActive"

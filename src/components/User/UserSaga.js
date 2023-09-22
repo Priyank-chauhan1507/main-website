@@ -6,12 +6,12 @@ import axios from "axios";
 
 function* getUser(action) {
   const { dispatch } = Store;
-  console.log(action.payload, "request getuser");
+  // console.log(action.payload, "request getuser");
   try {
     axios
       .get(`/apiV1/current_user_participant`)
       .then((res) => {
-        console.log(res.data, "userdata");
+        // console.log(res.data, "userdata");
         dispatch({
           type: ACTIONS.FETCH_USER_SUCCESS,
           payload: res.data,
@@ -47,19 +47,19 @@ function* getUser(action) {
 }
 
 function* getEvents() {
-  console.log("HERE");
+  // console.log("HERE");
   const { dispatch, getState } = Store;
   // console.log(getState);
   try {
     // const { id } = user.id;
     const id = getState().user.user.id;
     axios.get(`/apiV1/registeruserevent?participant_id=${id}`).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       var arr = [];
       for (var i = 0; i < res.data.length; i++) {
         arr.push(res.data[i].event);
       }
-      console.log(arr);
+      // console.log(arr);
       dispatch({
         type: ACTIONS.FETCH_EVENTS_SUCCESS,
         payload: arr,

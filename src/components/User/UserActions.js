@@ -13,7 +13,7 @@ export const login = (params = {}) => {
 };
 
 export const fetchUser = (params = {}) => {
-  console.log("I AM HERE", params);
+  // console.log("I AM HERE", params);
   return {
     type: ACTIONS.FETCH_USER_REQUEST,
     payload: params,

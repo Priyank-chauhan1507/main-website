@@ -26,7 +26,7 @@ const EventCardPage = ({
   fetchEvent,
 }) => {
   // const history = useHistory();
-  console.log(data);
+  // console.log(data);
   const reloadKarde = () => {
     // window.location.reload();
     closePage();

@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 
 const LeftSideProfile = ({ userDetails }) => {
   const locator = useLocation();
-  console.log(userDetails);
+  // console.log(userDetails);
   return (
     <div className="lsp-background">
       <div className="lsp-box">

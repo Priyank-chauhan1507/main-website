@@ -5,7 +5,7 @@ import logo from "./images/logo.svg";
 import { connect } from "react-redux";
 
 const EventHeader = ({ userDetails }) => {
-  console.log(userDetails);
+  // console.log(userDetails);
   return (
     <>
       <div>

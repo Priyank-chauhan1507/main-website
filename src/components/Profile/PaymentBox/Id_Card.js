@@ -5,6 +5,7 @@ import "./Paymentbox.css";
 import "../LeftSideProfile/leftsideprofile.css";
 import log from "../../../assests/logout-logo.svg";
 import cs1 from "../../../assests/CautionSign1.svg";
+import Loader from "../../Loader/Loader"
 import axios from "axios";
 import { connect } from "react-redux";
 import Navbar from "../../EventsNavbar/Eventsnavbar";
@@ -45,6 +46,7 @@ const Id_Card = () => {
   const [visible, setVisible] = useState(false);
   const [download, setDownload] = useState(false);
   const [qrshow,setQrshow] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getData();
@@ -62,11 +64,13 @@ const Id_Card = () => {
   });
 
   const getData = async () => {
+    setLoading(true);
     const ress = axios
       .get(`/apiV1/current_user_participant`)
       .then((ress) => {
         setuserDetails(ress.data);
         setQr(userDetails?.thomso_id);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -74,16 +78,19 @@ const Id_Card = () => {
   };
 
   const Verify = () => {
+    setLoading(true);
     if (!userDetails.avtar) {
+      setLoading(false);
       message.warning("Please upload your photo");
     } else {
+      setLoading(false);
       setQr(userDetails?.thomso_id);
       setVisible(true);
       setQrshow(false);
       setDownload(true);
       setTimeout(() => {
         const canvas = document.getElementById("myqr");
-        console.log(canvas, "sdkcjanh");
+        // console.log(canvas, "sdkcjanh");
         const pngUrl = canvas
           .toDataURL("image/png")
           .replace("image/png", "image/octet-stream");
@@ -111,7 +118,7 @@ const Id_Card = () => {
   const toggling2 = () => setIsOpen2(!isOpen2);
   const toggling3 = () => setIsOpen3(!isOpen3);
   const [profilepic, setprofilepic] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchUser();
@@ -119,17 +126,20 @@ const Id_Card = () => {
 
   const changeHandler1 = async (file) => {
     // setprofilepic(false);
+    setLoading(true);
     const userId = userDetails?.user_id;
     let formData = new FormData();
     formData.append("avtar", file);
-    console.log(formData);
+    // console.log(formData);
     // setprofilepic(true);
 
     if (file.size > 512000) {
+      // setLoading(false);
       message.warning("Size is too large.Size must be less than 500KB");
       setprofilepic(null);
       return false;
     } else {
+      // setLoading(false);
       message.success("File successfully selected");
       setprofilepic(true);
       // window.location.reload(false);
@@ -146,8 +156,8 @@ const Id_Card = () => {
     if (response.status == 200) {
       // setprofilepic(true);
       fetchUser();
-      setLoading(false);
       window.location.reload(false);
+      setLoading(false);
     } else {
       setLoading(false);
       message.error("Something went wrong while uploading, please reupload");
@@ -157,6 +167,7 @@ const Id_Card = () => {
 
   return (
     <>
+     {loading && <Loader />}
       <div className="nnp-container">
         <img src={Back} className="pro-back-img" alt="" />
         <img src={Back1} className="pro-back-img2" alt="" />

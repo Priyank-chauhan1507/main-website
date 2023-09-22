@@ -128,7 +128,7 @@ button {
 .MPayline1 {
   margin-top: 4px;
   border-bottom: 1px solid white;
-  max-width: 303px;
+  /* max-width: 303px; */
   height: 0px;
 }
 
