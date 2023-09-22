@@ -42,7 +42,7 @@ const Idcard = ({ userDetails }) => {
         setuser(res.data);
         localStorage.setItem("user_id", res.data?.user_id);
         localStorage.setItem("id", res.data?.id);
-        console.log("data", res.data);
+        // console.log("data", res.data);
         setQr(user.thomso_id);
       });
     } catch (error) {
@@ -52,12 +52,12 @@ const Idcard = ({ userDetails }) => {
   // console.log(userDetails);
   
   const Verify = ()=>{
-    console.log("sajclx");
+    // console.log("sajclx");
     setQr(user.thomso_id);
     setVisible(true);
     setTimeout(() => {
       const canvas =   document.getElementById("myqr");
-    console.log(canvas,"sdkcjanh")
+    // console.log(canvas,"sdkcjanh")
     const pngUrl =   canvas
     .toDataURL("image/png")
     .replace("image/png", "image/octet-stream");

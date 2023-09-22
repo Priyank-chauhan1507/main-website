@@ -26,7 +26,7 @@ const EventCardPage = ({
   fetchEvent,
 }) => {
   // const history = useHistory();
-  console.log(data);
+  // console.log(data);
   const reloadKarde = () => {
     // window.location.reload();
     closePage();
@@ -61,7 +61,7 @@ const EventCardPage = ({
       .post("/apiV1/registerevent", eventuser)
       .then((res) => {
         if (res.status == 201) {
-          console.log(res.data, "api data");
+          // console.log(res.data, "api data");
           if (button == "Register") {
             setButton("Registered");
           }

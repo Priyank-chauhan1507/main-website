@@ -106,7 +106,7 @@ const MobliePaymentBox = ({
   };
 
   const onOptionClicked = (value) => {
-    console.log(value);
+    // console.log(value);
     setSelectedOption(value);
     setIsOpen(false);
     setShowTeamInput({ display: "block" });
@@ -133,7 +133,7 @@ const MobliePaymentBox = ({
     setIsOpen3(false);
   };
 
-  console.log(eventArray);
+  // console.log(eventArray);
 
   const performTeamEvent = () => {
     setTeamEvent(true);
@@ -191,7 +191,7 @@ const MobliePaymentBox = ({
       acco: acco,
       event_team: event_team,
     };
-    console.log(obj);
+    // console.log(obj);
     axios
       .post("apiV1/participant_payment", obj)
       .then((res) => {
@@ -206,7 +206,7 @@ const MobliePaymentBox = ({
   };
 
   const checkPayNow = () => {
-    console.log("HERE");
+    // console.log("HERE");
     if (acco == null || teamevent == null) {
       return false;
     }
@@ -482,7 +482,7 @@ const MobliePaymentBox = ({
                         <div className="MpaylistContainer">
                           <ul>
                             {Object.keys(events).map((option) => {
-                              console.log(option);
+                              // console.log(option);
                               return (
                                 <li
                                   onClick={() => {

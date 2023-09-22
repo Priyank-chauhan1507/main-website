@@ -11,14 +11,14 @@ export default function Attractions() {
 
   const GetData = async () => {
     const response = await axios.get(`/apiV1/event?status=true&is_zonal=`);
-    console.log(response.data);
+    // console.log(response.data);
     setData(response.data);
     setNewData(response.data);
   };
   useEffect(() => {
     GetData();
   }, []);
-  console.log(Data);
+  // console.log(Data);
   return (
     <div className="majorAttractionsContainer">
       <div className="textContainer">

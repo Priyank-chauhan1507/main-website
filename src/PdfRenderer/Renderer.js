@@ -229,7 +229,7 @@ const Renderer = () => {
       console.log(error);
     }
   };
-  console.log(user, "ddddd");
+  // console.log(user, "ddddd");
   return (
     <Document>
       <Page size="A4" style={styles.id_page}>

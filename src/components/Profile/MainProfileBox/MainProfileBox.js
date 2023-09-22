@@ -62,7 +62,7 @@ const MainProfileBox = ({ data }) => {
   //     setuser(data);
   // }
 
-  console.log(userDetails, "profiledetails");
+  // console.log(userDetails, "profiledetails");
 
   const deleteUserImage = () => {
     const obj = {
@@ -137,7 +137,7 @@ const MainProfileBox = ({ data }) => {
     const userId = userDetails?.user_id;
     let formData = new FormData();
     formData.append("avtar", file);
-    console.log(formData);
+    // console.log(formData);
     // setprofilepic(true);
 
     if (file.size > 512000) {

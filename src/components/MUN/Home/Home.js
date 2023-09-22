@@ -32,7 +32,7 @@ function Home() {
           setuser(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
           localStorage.setItem("id", res.data?.id);
-          console.log("data", res.data);
+          // console.log("data", res.data);
           setCheck(true);
         })
         .catch((err) => {

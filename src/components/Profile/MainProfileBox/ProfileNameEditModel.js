@@ -18,7 +18,7 @@ const ProfileNameEditModel = () => {
         }
       );
       if (res.status === 200) {
-        console.log("Success");
+        // console.log("Success");
         window.location.reload(false);
       }
     } catch (error) {

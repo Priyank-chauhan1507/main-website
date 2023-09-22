@@ -5,9 +5,9 @@ import events from "./images/Events.svg";
 import { useState, useEffect } from "react";
 import axios from "axios";
 const EventSideMenu = ({ changeCategory, data, activeCategory }) => {
-  console.log(data);
+  // console.log(data);
   const [active, setActive] = useState(null);
-  console.log(activeCategory);
+  // console.log(activeCategory);
   return (
     <div className="ESM-Conatiner">
       <div className="ESM-Conatiner-header">

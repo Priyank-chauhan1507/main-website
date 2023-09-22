@@ -114,30 +114,30 @@ function Home() {
         // image3Ref.current.style.position = "fixed";
         // image4Ref.current.style.position = "fixed";
         // image5Ref.current.style.position = "fixed";
-        console.log("xx", elementTop)
+        // console.log("xx", elementTop)
         if (elementLeft1 < 0.11 * window.innerWidth) {
           image1Ref.current.style.left = `${1.2*window.scrollY - 2.1 * window.innerHeight}px`;
-          console.log("x", elementLeft1)
+          // console.log("x", elementLeft1)
         }
         if (elementLeft2 < 0.23 * window.innerWidth) {
           image2Ref.current.style.left = `${window.scrollY - 1.6 * window.innerHeight}px`;
-          console.log("x", elementLeft2)
+          // console.log("x", elementLeft2)
         }
         if (elementLeft3 > 0.37 * window.innerWidth) {
           image3Ref.current.style.left = `${(-window.scrollY + 2.8 * window.innerHeight)}px`;
-          console.log("x", elementLeft3)
+          // console.log("x", elementLeft3)
         }
         if (elementLeft4 > 0.55 * window.innerWidth) {
           image4Ref.current.style.left = `${(-1.1*window.scrollY + 3.4 * window.innerHeight)}px`;
-          console.log("xxx", elementLeft4)
+          // console.log("xxx", elementLeft4)
         }
         if (elementLeft5 > 0.75 * window.innerWidth) {
           image5Ref.current.style.left = `${(-window.scrollY + 3.4 * window.innerHeight)}px`;
-          console.log("xxx", elementLeft5)
+          // console.log("xxx", elementLeft5)
         }
 
 
-        console.log('Element top touches screen top');
+        // console.log('Element top touches screen top');
       }
 
 
@@ -198,7 +198,7 @@ function Home() {
       }
 
       if (elementBottom < window.innerHeight) {
-        console.log("hello")
+        // console.log("hello")
         display1Ref.current.style.opacity = "1";
         display1Ref.current.style.position = "absolute";
         display2Ref.current.style.opacity = "1";
@@ -246,7 +246,7 @@ function Home() {
       }
 
       if (elementBottom > window.innerHeight && elementTop > 0) {
-        console.log("great");
+        // console.log("great");
         // display10Ref.current.classList.remove("proNites_alt");
         display1Ref.current.classList.remove("line_1_alt");
         display2Ref.current.classList.remove("line_2_alt");
@@ -290,7 +290,7 @@ function Home() {
           setuser(res.data);
           localStorage.setItem("user_id", res.data?.user_id);
           localStorage.setItem("id", res.data?.id);
-          console.log("data", res.data);
+          // console.log("data", res.data);
         })
         .catch((err) => {
           console.log(err);

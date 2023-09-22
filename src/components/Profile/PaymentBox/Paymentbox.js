@@ -149,7 +149,7 @@ const PaymentBox = (
   };
 
   const onOptionClicked = (value) => {
-    console.log(value);
+    // console.log(value);
     setSelectedOption(value);
     setIsOpen(false);
     setShowTeamInput({ display: "block" });
@@ -176,7 +176,7 @@ const PaymentBox = (
     setIsOpen3(false);
   };
 
-  console.log(eventArray);
+  // console.log(eventArray);
 
   const performTeamEvent = () => {
     setTeamEvent(true);
@@ -234,7 +234,7 @@ const PaymentBox = (
       acco: acco,
       // event_team: event_team,
     };
-    console.log(obj);
+    // console.log(obj);
     axios
       .post("apiV1/participant_payment", obj)
       .then((res) => {
@@ -249,7 +249,7 @@ const PaymentBox = (
   };
 
   const checkPayNow = () => {
-    console.log("HERE");
+    // console.log("HERE");
     if (acco == null) {
       return false;
     } else {
