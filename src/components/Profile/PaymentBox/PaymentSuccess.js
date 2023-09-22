@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 // import { Checkmark } from "react-checkmark";
 import Button from "@mui/material/Button";
@@ -6,10 +6,14 @@ import "./PaymentSuccess.css"
 import done from "../../../assests/PaymentDone.svg"
 import tick from "../../../assests/TickCorrect.svg"
 import download from "../../../assests/downloadsign.png"
+import Loader from "../../Loader/Loader"
 
 
 const PaymentSuccess = () => {
+  const [loading, setLoading] = useState(false);
   return (
+    <>
+     {loading && <Loader />}
     <div
       style={{
         padding: "5%",
@@ -53,12 +57,13 @@ const PaymentSuccess = () => {
         }}
       >
         <Link to="/id_card">
-          <Button variant="contained" style={{color:"black", backgroundColor:"white",marginTop:"2vh"}}>
+          <Button onClick={() => setLoading(true)} variant="contained" style={{color:"black", backgroundColor:"white",marginTop:"2vh"}}>
             <img src={download} style={{height:"15px", width:"15px", marginRight:"5px"}} alt="" />
             Download ID Card</Button>
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

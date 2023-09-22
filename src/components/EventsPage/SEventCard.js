@@ -38,7 +38,7 @@ const SEventCard = ({ data, getEvents, fetchEvent, ispayment }) => {
       window.location.href = `${data?.event__payment_link}`;
     }
   };
-  console.log(data);
+  // console.log(data);
   return (
     <>
       {/* {data &&

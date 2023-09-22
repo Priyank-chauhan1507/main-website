@@ -12,7 +12,7 @@ const EventCard = ({ data }) => {
   const [event, setEvent] = useState(null);
   const [like, setlike] = useState(false);
 
-  console.log(data);
+  // console.log(data);
 
   // console.log(event, "");
   const openPage = (e) => {

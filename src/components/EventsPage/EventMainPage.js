@@ -53,7 +53,7 @@ const EventMainPage = ({ events }) => {
         )}`
       )
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setEvents1(res.data);
       })
       .catch((err) => {

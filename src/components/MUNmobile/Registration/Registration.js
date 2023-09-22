@@ -393,7 +393,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
     second_preference_choice_three: "",
   });
 
-  console.log(userDetails);
+  // console.log(userDetails);
 
   const handleChange1 = (first_preference) => {
     setUser({ ...user, first_preference: first_preference?.value });

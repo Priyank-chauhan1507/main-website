@@ -34,6 +34,7 @@ import "./MobilePaymentBox.css";
 import { MdDelete } from "react-icons/md";
 import { message } from "antd";
 import { clear } from "@testing-library/user-event/dist/clear";
+import Loader from "../../Loader/Loader"
 
 const NewPaymentBox = (
   data,
@@ -54,6 +55,15 @@ const NewPaymentBox = (
     getData();
   }, []);
 
+  useEffect(() => {
+    setLoading(true);
+    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+      navigate(`/login`);
+    }else{
+      setLoading(false);
+    }
+  });
+
   const get_master_config = async () => {
     const ress = axios
       .get(`/apiV1/payment_master`)
@@ -66,12 +76,14 @@ const NewPaymentBox = (
       });
   };
 
-  console.log(config, "config");
+  // console.log(config, "config");
 
   const getData = async () => {
+    setLoading(true);
     const ress = axios
       .get(`/apiV1/current_user_participant`)
       .then((ress) => {
+        setLoading(false);
         setuserDetails(ress.data);
 
         if (paymentData.length == 0) {
@@ -88,11 +100,12 @@ const NewPaymentBox = (
         }
       })
       .catch((err) => {
+        setLoading(false);
         console.log(err);
       });
   };
 
-  console.log(userDetails, "userdetails");
+  // console.log(userDetails, "userdetails");
 
   function handleLogout() {
     localStorage.removeItem("token");
@@ -140,8 +153,8 @@ const NewPaymentBox = (
   const [acco1, setAcco1] = useState("true");
   const [agree, setAgree] = useState(false);
 
-  console.log(paymentData1, "paymentData1");
-  console.log(paymentData, "paymentData");
+  // console.log(paymentData1, "paymentData1");
+  // console.log(paymentData, "paymentData");
 
   const [style1, setStyle1] = useState({
     background: "transparent",
@@ -149,7 +162,7 @@ const NewPaymentBox = (
   });
   const [style2, setStyle2] = useState(is_female ? ON : OFF);
   const [totalpay, setTotalpay] = useState(0);
-  console.log(totalpay);
+  // console.log(totalpay);
   // const [totalpay, setTotalpay] = useState(0);
 
   const handleDataNo = () => {
@@ -311,6 +324,7 @@ const NewPaymentBox = (
   };
 
   const paynow = () => {
+    setLoading(true);
     setTotalpay(
       acco1 == "true"
         ? config.max_amount + config.tax
@@ -325,6 +339,7 @@ const NewPaymentBox = (
     setPaymentData(data);
 
     setPaying(true);
+    setLoading(false);
   };
 
   async function makePayment() {
@@ -349,11 +364,12 @@ const NewPaymentBox = (
   }
 
   const deletePayment = (id) => {
+    setLoading(true);
     let amount = totalpay;
     let amount_delete = paymentData1;
-    console.log(amount_delete, "amount_delete");
+    // console.log(amount_delete, "amount_delete");
     amount_delete = amount_delete?.filter((item) => item.id == id);
-    console.log(amount_delete, "amount_delete");
+    // console.log(amount_delete, "amount_delete");
     if (amount_delete[0].acco == "true") {
       amount = amount - config.max_amount - config.tax;
     } else if (amount_delete[0].acco == "false") {
@@ -368,6 +384,7 @@ const NewPaymentBox = (
     let data = paymentData;
     data = data?.filter((item) => item.id != id);
     setPaymentData(data);
+    setLoading(false);
 
     // let amount = 0
     // for(let i=0;i<paymentData1.length;i++){
@@ -387,6 +404,7 @@ const NewPaymentBox = (
   const locator = useLocation();
   return (
     <>
+    {loading && <Loader />}
       <div className="nnp-container">
         <img src={Back} className="pro-back-img" alt="" />
         <img src={Back1} className="pro-back-img2" alt="" />

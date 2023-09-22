@@ -67,7 +67,7 @@ const EventMainPage = ({ events }) => {
     return regExp.test(pName);
   };
 
-  console.log(categoryId);
+  // console.log(categoryId);
 
   return (
     <>

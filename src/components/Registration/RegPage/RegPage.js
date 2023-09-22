@@ -30,7 +30,7 @@ export default function VerifyEmail() {
 
   const Verify = async (e) => {
     e.preventDefault();
-    console.log(Number(code));
+    // console.log(Number(code));
     setUser({ ...user, otp: Number(code) });
 
     setLoading({ loading: true });
@@ -50,7 +50,7 @@ export default function VerifyEmail() {
       message.error("Invalid OTP");
       setLoading(false);
       const { data } = err?.response;
-      console.log("register Error:", data);
+      // console.log("register Error:", data);
       var errorData = "";
       setErrorMsg(errorData);
       setError(true);
