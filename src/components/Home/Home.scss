@@ -284,6 +284,9 @@
     top: 10rem;
     font-size: 1.5rem;
   }
+  .mobtext{
+    display: none;
+  }
 }
 .proNites_alt {
   position: absolute;
@@ -301,6 +304,8 @@
   font-weight: 400;
   line-height: normal;
 }
+
+
 
 .aboutUsText {
   flex-direction: column;
