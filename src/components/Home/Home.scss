@@ -216,7 +216,7 @@
   // width:500vw;
   display: flex;
   gap: 10vw;
-  animation: moveCenterToLeftRight 80s linear infinite; /* Adjust animation duration as needed */
+  animation: moveCenterToLeftRight 160s linear infinite; /* Adjust animation duration as needed */
 }
 
 @keyframes moveCenterToLeftRight {
@@ -394,7 +394,7 @@
 .simg1 {
   position: absolute;
   top: 25vh;
-  left: -20vw;
+  left: 11vw;
 }
 .simg1_alt {
   position: absolute;
@@ -406,7 +406,7 @@
 .simg2 {
   position: absolute;
   top: 70vh;
-  left: -20vw;
+  left: 22.4vw;
 }
 .simg2_alt {
   position: absolute;
@@ -419,7 +419,7 @@
   position: absolute;
   top: 38vh;
   // left:36vw;
-  left: 120vw;
+  left: 36vw;
 }
 .simg3_alt {
   position: absolute;
@@ -432,7 +432,7 @@
 .simg4 {
   position: absolute;
   top: 55vh;
-  left: 120vw;
+  left: 55vw;
 }
 .simg4_alt {
   position: absolute;
@@ -444,8 +444,8 @@
 .simg5 {
   position: absolute;
   top: 25vh;
-  // left:75vw;
-  left: 120vw;
+  left:75vw;
+  // left: 120vw;
 }
 .simg5_alt {
   position: absolute;
