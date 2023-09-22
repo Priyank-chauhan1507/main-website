@@ -117,7 +117,7 @@
 
 .singBack {
   width: 100%;
-  height: 100%;
+  height: 105%;
   position: absolute;
 }
 
@@ -151,7 +151,7 @@
 .home2ndBack {
   width: 100vw;
   position: absolute;
-  height: 50vw;
+  height: 112%;
 }
 
 .aboutTop {
@@ -687,7 +687,8 @@
   }
 
   .home2ndBack {
-    height: 95vw;
+    // height: 95vw;
+    height: 112%;
   }
   .aboutUs {
     top: 18vw;
@@ -755,5 +756,8 @@
 
   .theme {
     font-size: 5vw;
+  }
+  .singBack{
+    height: 113%;
   }
 }
