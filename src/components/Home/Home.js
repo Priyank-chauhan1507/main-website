@@ -75,205 +75,132 @@ function Home() {
 
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
 
 
-    const handleScroll = () => {
+  //   const handleScroll = () => {
 
 
-      const rect = mainboxRef.current?.getBoundingClientRect();
-      const elementTop = rect.top;
-      const elementBottom = rect.bottom;
-      const elementLeft1 = image1Ref.current?.getBoundingClientRect().left;
-      const elementLeft2 = image2Ref.current?.getBoundingClientRect().left;
-      const elementLeft3 = image3Ref.current?.getBoundingClientRect().left;
-      const elementLeft4 = image4Ref.current?.getBoundingClientRect().left;
-      const elementLeft5 = image5Ref.current?.getBoundingClientRect().left;
-      const scrolly = window.scrollY;
+  //     const rect = mainboxRef.current?.getBoundingClientRect();
+  //     const elementTop = rect.top;
+  //     const elementBottom = rect.bottom;
+  //     const elementLeft1 = image1Ref.current?.getBoundingClientRect().left;
+  //     const elementLeft2 = image2Ref.current?.getBoundingClientRect().left;
+  //     const elementLeft3 = image3Ref.current?.getBoundingClientRect().left;
+  //     const elementLeft4 = image4Ref.current?.getBoundingClientRect().left;
+  //     const elementLeft5 = image5Ref.current?.getBoundingClientRect().left;
+  //     const scrolly = window.scrollY;
 
 
-      display1Ref.current.style.opacity = "0";
-      display2Ref.current.style.opacity = "0";
-      display3Ref.current.style.opacity = "0";
-      display4Ref.current.style.opacity = "0";
-      display5Ref.current.style.opacity = "0";
-      display6Ref.current.style.opacity = "0";
-      display7Ref.current.style.opacity = "0";
-      display8Ref.current.style.opacity = "0";
-      display9Ref.current.style.opacity = "0";
-      display10Ref.current.style.opacity = "0";
-
-
-
-      if (elementTop <= 0.6*window.innerHeight) {
-
-
-        // image1Ref.current.style.position = "fixed";
-        // image2Ref.current.style.position = "fixed";
-        // image3Ref.current.style.position = "fixed";
-        // image4Ref.current.style.position = "fixed";
-        // image5Ref.current.style.position = "fixed";
-        // console.log("xx", elementTop)
-        if (elementLeft1 < 0.11 * window.innerWidth) {
-          image1Ref.current.style.left = `${1.2*window.scrollY - 2.1 * window.innerHeight}px`;
-          // console.log("x", elementLeft1)
-        }
-        if (elementLeft2 < 0.23 * window.innerWidth) {
-          image2Ref.current.style.left = `${window.scrollY - 1.6 * window.innerHeight}px`;
-          // console.log("x", elementLeft2)
-        }
-        if (elementLeft3 > 0.37 * window.innerWidth) {
-          image3Ref.current.style.left = `${(-window.scrollY + 2.8 * window.innerHeight)}px`;
-          // console.log("x", elementLeft3)
-        }
-        if (elementLeft4 > 0.55 * window.innerWidth) {
-          image4Ref.current.style.left = `${(-1.1*window.scrollY + 3.4 * window.innerHeight)}px`;
-          // console.log("xxx", elementLeft4)
-        }
-        if (elementLeft5 > 0.75 * window.innerWidth) {
-          image5Ref.current.style.left = `${(-window.scrollY + 3.4 * window.innerHeight)}px`;
-          // console.log("xxx", elementLeft5)
-        }
-
-
-        // console.log('Element top touches screen top');
-      }
+  //     display1Ref.current.style.opacity = "0";
+  //     display2Ref.current.style.opacity = "0";
+  //     display3Ref.current.style.opacity = "0";
+  //     display4Ref.current.style.opacity = "0";
+  //     display5Ref.current.style.opacity = "0";
+  //     display6Ref.current.style.opacity = "0";
+  //     display7Ref.current.style.opacity = "0";
+  //     display8Ref.current.style.opacity = "0";
+  //     display9Ref.current.style.opacity = "0";
+  //     display10Ref.current.style.opacity = "0";
 
 
 
+  //     if (elementTop <= 0.6*window.innerHeight) {
 
-      // if (elementTop > 0 && elementLeft1 > -0.20 * window.innerWidth) {
-      //   image1Ref.current.style.left = image1Ref.current.style.left = `${1.35 * window.scrollY - 2.6 * window.innerHeight}px`;
-      //   image1Ref.current.style.position = "absolute";
-      //   console.log('Element top touches screen top 2');
+  //       if (elementLeft1 < 0.11 * window.innerWidth) {
+  //         image1Ref.current.style.left = `${1.2*window.scrollY - 2.1 * window.innerHeight}px`;
+  //       }
+  //       if (elementLeft2 < 0.23 * window.innerWidth) {
+  //         image2Ref.current.style.left = `${window.scrollY - 1.6 * window.innerHeight}px`;
+  //       }
+  //       if (elementLeft3 > 0.37 * window.innerWidth) {
+  //         image3Ref.current.style.left = `${(-window.scrollY + 2.8 * window.innerHeight)}px`;
+  //       }
+  //       if (elementLeft4 > 0.55 * window.innerWidth) {
+  //         image4Ref.current.style.left = `${(-1.1*window.scrollY + 3.4 * window.innerHeight)}px`;
+  //       }
+  //       if (elementLeft5 > 0.75 * window.innerWidth) {
+  //         image5Ref.current.style.left = `${(-window.scrollY + 3.4 * window.innerHeight)}px`;
+  //       }
 
-      // }
-      // if (elementTop > 0 && elementLeft2 > -0.20 * window.innerWidth) {
-      //   image2Ref.current.style.left = image2Ref.current.style.left = `${1.478 * window.scrollY - 2.6 * window.innerHeight}px`;
-      //   image2Ref.current.style.position = "absolute";
-      //   console.log('Element top touches screen top 2');
+  //     }
 
-      // }
-      // if (elementTop > 0 && elementLeft3 < 1.2 * window.innerWidth) {
-      //   image3Ref.current.style.left = `${-window.scrollY + 2.9 * window.innerHeight}px`;
-      //   image3Ref.current.style.position = "absolute";
-      //   console.log('Element top touches screen top 4');
 
-      // }
-      // if (elementTop > 0 && elementLeft4 < 1.2 * window.innerWidth) {
-      //   image4Ref.current.style.left = `${-window.scrollY + 3.3 * window.innerHeight}px`;
-      //   image4Ref.current.style.position = "absolute";
-      //   console.log('Element top touches screen top 4');
+  //     if (elementLeft3 < 0.39 * window.innerWidth) {
+  //       display1Ref.current.style.opacity = "1";
+  //       display2Ref.current.style.opacity = "1";
+  //       display3Ref.current.style.opacity = "1";
+  //       display4Ref.current.style.opacity = "1";
+  //       display5Ref.current.style.opacity = "1";
+  //       display6Ref.current.style.opacity = "1";
+  //       display7Ref.current.style.opacity = "1";
+  //       display8Ref.current.style.opacity = "1";
+  //       display9Ref.current.style.opacity = "1";
+  //       display10Ref.current.style.opacity = "1";
+  //     }
 
-      // }
-      // if (elementTop > 0 && elementLeft5 < 1.2 * window.innerWidth) {
-      //   image5Ref.current.style.left = `${-window.scrollY + 3.3 * window.innerHeight}px`;
-      //   image5Ref.current.style.position = "absolute";
-      //   console.log('Element top touches screen top 5');
+  //     if (elementBottom < window.innerHeight) {
+  //       display1Ref.current.style.opacity = "1";
+  //       display1Ref.current.style.position = "absolute";
+  //       display2Ref.current.style.opacity = "1";
+  //       display2Ref.current.style.position = "absolute";
+  //       display3Ref.current.style.opacity = "1";
+  //       display3Ref.current.style.position = "absolute";
+  //       display4Ref.current.style.opacity = "1";
+  //       display4Ref.current.style.position = "absolute";
+  //       display5Ref.current.style.opacity = "1";
+  //       display5Ref.current.style.position = "absolute";
+  //       display6Ref.current.style.opacity = "1";
+  //       display6Ref.current.style.position = "absolute";
+  //       display7Ref.current.style.opacity = "1";
+  //       display7Ref.current.style.position = "absolute";
+  //       display8Ref.current.style.opacity = "1";
+  //       display8Ref.current.style.position = "absolute";
+  //       display9Ref.current.style.opacity = "1";
+  //       display9Ref.current.style.position = "absolute";
+  //       display10Ref.current.style.opacity = "1";
+  //       display10Ref.current.style.position = "absolute";
 
-      // }
+  //       image1Ref.current.style.position = "absolute";
+  //       image2Ref.current.style.position = "absolute";
+  //       image3Ref.current.style.position = "absolute";
+  //       image4Ref.current.style.position = "absolute";
+  //       image5Ref.current.style.position = "absolute";
+  //       display1Ref.current.classList.add("line_1_alt");
+  //       display2Ref.current.classList.add("line_2_alt");
+  //       display3Ref.current.classList.add("line_3_alt");
+  //       display4Ref.current.classList.add("line_4_alt");
+  //       display5Ref.current.classList.add("sText1_alt");
+  //       display6Ref.current.classList.add("sText2_alt");
+  //       display7Ref.current.classList.add("sText3_alt");
+  //       display8Ref.current.classList.add("sText4_alt");
+  //       display9Ref.current.classList.add("sText5_alt");
 
-      if (elementLeft3 < 0.39 * window.innerWidth) {
-        display1Ref.current.style.opacity = "1";
-        // display1Ref.current.style.position = "fixed";
-        display2Ref.current.style.opacity = "1";
-        // display2Ref.current.style.position = "fixed";
-        display3Ref.current.style.opacity = "1";
-        // display3Ref.current.style.position = "fixed";
-        display4Ref.current.style.opacity = "1";
-        // display4Ref.current.style.position = "fixed";
-        display5Ref.current.style.opacity = "1";
-        // display5Ref.current.style.position = "fixed";
-        display6Ref.current.style.opacity = "1";
-        // display6Ref.current.style.position = "fixed";
-        display7Ref.current.style.opacity = "1";
-        // display7Ref.current.style.position = "fixed";
-        display8Ref.current.style.opacity = "1";
-        // display8Ref.current.style.position = "fixed";
-        display9Ref.current.style.opacity = "1";
-        // display9Ref.current.style.position = "fixed";
-        display10Ref.current.style.opacity = "1";
-        // display10Ref.current.style.position = "fixed";
-      }
 
-      if (elementBottom < window.innerHeight) {
-        // console.log("hello")
-        display1Ref.current.style.opacity = "1";
-        display1Ref.current.style.position = "absolute";
-        display2Ref.current.style.opacity = "1";
-        display2Ref.current.style.position = "absolute";
-        display3Ref.current.style.opacity = "1";
-        display3Ref.current.style.position = "absolute";
-        display4Ref.current.style.opacity = "1";
-        display4Ref.current.style.position = "absolute";
-        display5Ref.current.style.opacity = "1";
-        display5Ref.current.style.position = "absolute";
-        display6Ref.current.style.opacity = "1";
-        display6Ref.current.style.position = "absolute";
-        display7Ref.current.style.opacity = "1";
-        display7Ref.current.style.position = "absolute";
-        display8Ref.current.style.opacity = "1";
-        display8Ref.current.style.position = "absolute";
-        display9Ref.current.style.opacity = "1";
-        display9Ref.current.style.position = "absolute";
-        display10Ref.current.style.opacity = "1";
-        display10Ref.current.style.position = "absolute";
+  //     }
 
-        image1Ref.current.style.position = "absolute";
-        image2Ref.current.style.position = "absolute";
-        image3Ref.current.style.position = "absolute";
-        image4Ref.current.style.position = "absolute";
-        image5Ref.current.style.position = "absolute";
+  //     if (elementBottom > window.innerHeight && elementTop > 0) {
+  //       display1Ref.current.classList.remove("line_1_alt");
+  //       display2Ref.current.classList.remove("line_2_alt");
+  //       display3Ref.current.classList.remove("line_3_alt");
+  //       display4Ref.current.classList.remove("line_4_alt");
+  //       display5Ref.current.classList.remove("sText1_alt");
+  //       display6Ref.current.classList.remove("sText2_alt");
+  //       display7Ref.current.classList.remove("sText3_alt");
+  //       display8Ref.current.classList.remove("sText4_alt");
+  //       display9Ref.current.classList.remove("sText5_alt");
 
-        // display10Ref.current.classList.add("proNites_alt");
-        display1Ref.current.classList.add("line_1_alt");
-        display2Ref.current.classList.add("line_2_alt");
-        display3Ref.current.classList.add("line_3_alt");
-        display4Ref.current.classList.add("line_4_alt");
-        display5Ref.current.classList.add("sText1_alt");
-        display6Ref.current.classList.add("sText2_alt");
-        display7Ref.current.classList.add("sText3_alt");
-        display8Ref.current.classList.add("sText4_alt");
-        display9Ref.current.classList.add("sText5_alt");
+  //     }
 
-        // image1Ref.current.classList.add("simg1_alt");
-        // image2Ref.current.classList.add("simg2_alt");
-        // image3Ref.current.classList.add("simg3_alt");
-        // image4Ref.current.classList.add("simg4_alt");
-        // image5Ref.current.classList.add("simg5_alt");
+  //   };
 
-      }
+  //   window.addEventListener('scroll', handleScroll);
 
-      if (elementBottom > window.innerHeight && elementTop > 0) {
-        // console.log("great");
-        // display10Ref.current.classList.remove("proNites_alt");
-        display1Ref.current.classList.remove("line_1_alt");
-        display2Ref.current.classList.remove("line_2_alt");
-        display3Ref.current.classList.remove("line_3_alt");
-        display4Ref.current.classList.remove("line_4_alt");
-        display5Ref.current.classList.remove("sText1_alt");
-        display6Ref.current.classList.remove("sText2_alt");
-        display7Ref.current.classList.remove("sText3_alt");
-        display8Ref.current.classList.remove("sText4_alt");
-        display9Ref.current.classList.remove("sText5_alt");
-
-        // image1Ref.current.classList.remove("simg1_alt");
-        // image2Ref.current.classList.remove("simg2_alt");
-        // image3Ref.current.classList.remove("simg3_alt");
-        // image4Ref.current.classList.remove("simg4_alt");
-        // image5Ref.current.classList.remove("simg5_alt");
-
-      }
-
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
 
 
@@ -395,8 +322,7 @@ function Home() {
 
 
 
-      <div className={`home3rd`} ref={mainboxRef} >
-        {/* <img className='redBack' src={redback} alt="loading"/> */}
+      {/* <div className={`home3rd`} ref={mainboxRef} >
         <img style={{width:"100vw"}} className='yellowy' src={yellow} alt="yellow_back"/>
 
         <div className='proNites' ref={display10Ref} >PRONITES</div>
@@ -418,18 +344,18 @@ function Home() {
         <div className='sText3' ref={display7Ref}>VOGUE | 2022</div>
         <div className='sText4' ref={display8Ref}>DARSHAN RAWAL | 2022</div>
         <div className='sText5' ref={display9Ref}>JUBIN NAUTIYAL | 2019</div>
-      </div>
+      </div> */}
 
 
-      <div className='home3rdmob'>
+      {/* <div className='home3rdmob'>
         <img className='yellowmob' src={yellowmob} alt="yellowwwy"/>
         <img className='pronite' src={pronite} alt="pronite" />
-      </div>
+      </div> */}
 
 
-      <div>
+      {/* <div>
         <Attractions/>
-      </div>
+      </div> */}
 
    <div className='singersName' style={{position:"relative"}}>
     <img src={blue} alt="load..." className='singBack'/>
