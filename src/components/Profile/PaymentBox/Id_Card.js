@@ -58,6 +58,12 @@ const Id_Card = () => {
   }, [vall]);
 
   useEffect(() => {
+     if(userDetails?.payment == false){
+      navigate(`/payment`);
+    }
+  }, [userDetails]);
+
+  useEffect(() => {
     if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
       navigate(`/login`);
     }
@@ -344,7 +350,7 @@ const Id_Card = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="right_id_card" 
+                  <div className="right_id_card"
                   // style={{display:"none"}}
                   >
                     <>
