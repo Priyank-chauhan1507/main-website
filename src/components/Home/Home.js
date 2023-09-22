@@ -329,29 +329,44 @@ function Home() {
       {/* <div className={`home3rd`} ref={mainboxRef} >
         <img style={{width:"100vw"}} className='yellowy' src={yellow} alt="yellow_back"/>
 
-        <div className='proNites' ref={display10Ref} >PRONITES</div>
+        <div className='proNites' ref={display10Ref} data-aos="zoom-in"
+          data-aos-duration="1200" >PRONITES</div>
 
 
-        <img className='line_1' src={line1} alt="line_1" ref={display1Ref} />
-        <img className='line_2' src={line2} alt="line_2" ref={display2Ref} />
-        <img className='line_3' src={line3} alt="line_3" ref={display3Ref} />
-        <img className='line_4' src={line4} alt="line_4" ref={display4Ref} />
+        <img className='line_1' src={line1} alt="line_1" ref={display1Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='line_2' src={line2} alt="line_2" ref={display2Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='line_3' src={line3} alt="line_3" ref={display3Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='line_4' src={line4} alt="line_4" ref={display4Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
 
-        <img className='simg1' src={simg1} alt="simg1" ref={image1Ref} />
-        <img className='simg2' src={simg2} alt="simg2" ref={image2Ref} />
-        <img className='simg3' src={simg3} alt="simg3" ref={image3Ref} />
-        <img className='simg4' src={simg4} alt="simg4" ref={image4Ref} />
-        <img className='simg5' src={simg5} alt="simg5" ref={image5Ref} />
+        <img className='simg1' src={simg1} alt="simg1" ref={image1Ref}   data-aos="fade-right"
+          data-aos-duration="1200" />
+        <img className='simg2' src={simg2} alt="simg2" ref={image2Ref}   data-aos="fade-right"
+          data-aos-duration="1200" />
+        <img className='simg3' src={simg3} alt="simg3" ref={image3Ref}   data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='simg4' src={simg4} alt="simg4" ref={image4Ref } data-aos="fade-left"
+          data-aos-duration="1200"  />
+        <img className='simg5' src={simg5} alt="simg5" ref={image5Ref}   data-aos="fade-left"
+          data-aos-duration="1200" />
 
-        <div className='sText1' ref={display5Ref}>SONU NIGAM | 2022</div>
-        <div className='sText2' ref={display6Ref}>SANAM | 2022</div>
-        <div className='sText3' ref={display7Ref}>VOGUE | 2022</div>
-        <div className='sText4' ref={display8Ref}>DARSHAN RAWAL | 2022</div>
-        <div className='sText5' ref={display9Ref}>JUBIN NAUTIYAL | 2019</div>
-      </div> */}
+        <div className='sText1' ref={display5Ref} data-aos="fade-right"
+          data-aos-duration="1200">SONU NIGAM | 2022</div>
+        <div className='sText2' ref={display6Ref} data-aos="fade-right"
+          data-aos-duration="1200">SANAM | 2022</div>
+        <div className='sText3' ref={display7Ref} data-aos="zoom-in"
+          data-aos-duration="1200">VOGUE | 2022</div>
+        <div className='sText4' ref={display8Ref} data-aos="fade-left"
+          data-aos-duration="1200">DARSHAN RAWAL | 2022</div>
+        <div className='sText5' ref={display9Ref} data-aos="fade-left"
+          data-aos-duration="1200">JUBIN NAUTIYAL | 2019</div>
+      </div> 
 
 
-      {/* <div className='home3rdmob'>
+       <div className='home3rdmob'>
         <img className='yellowmob' src={yellowmob} alt="yellowwwy"/>
         <img className='pronite' src={pronite} alt="pronite" />
       </div> */}
