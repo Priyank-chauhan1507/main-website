@@ -21,7 +21,7 @@ const PaymentSuccess = () => {
         height: "100%",
         textAlign: "center",
         marginTop: "10vh",
-        overflow: "none"
+        overflow: "hidden" 
       }}
     >
       {/* <Checkmark size={100} /> */}
