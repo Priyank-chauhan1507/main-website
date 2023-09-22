@@ -49,11 +49,13 @@ import blue from '../../assests/blue.webp'
 
 import videoBack from '../../assests/videoBack.webp'
 import pause from '../../assests/pause.svg'
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos';
 
 
 function Home() {
 
-
+  AOS.init();
 
   const mainboxRef = useRef(null);
   const display1Ref = useRef(null);
@@ -309,8 +311,10 @@ function Home() {
           <img className='aboutTopText9' src={Slidetext} alt="about_us_top" />
 
         </div>
-        <div className='aboutUs'>ABOUT US</div>
-        <div className=' aboutUsText'>
+        <div className='aboutUs' data-aos="zoom-in"
+          data-aos-duration="1200">ABOUT US</div>
+        <div className=' aboutUsText' data-aos="zoom-in"
+          data-aos-duration="1200">
           <p>Welcome to <span className='blue-thomso'>Thomso’23</span> - the 40th edition of our grand cultural extravaganza and <span className='yellow-thomso'>the annual cultural festival of IIT Roorkee!</span></p>
           <p>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p>
           <p>This year, we proudly present 'An Eclectic Elysia' as our theme - a concept that encapsulates perfect happiness derived from a broad and diverse range of sources. Thomso’23 is an embodiment of this very theme. It celebrates the rich tapestry of human expression and culture, aiming to mesmerize you with a blend of cosmic charm and vibrant human vitality.</p>
@@ -357,36 +361,46 @@ function Home() {
         <Attractions/>
       </div> */}
 
-   <div className='singersName' style={{position:"relative"}}>
-    <img src={blue} alt="load..." className='singBack'/>
-    <div className='Asso' >ASSOCIATED CELEBRITIES</div>
+      <div className='singersName' style={{ position: "relative" }}>
+        <img src={blue} alt="load..." className='singBack' />
+        <div className='Asso' data-aos="zoom-in"
+          data-aos-duration="1200" >ASSOCIATED CELEBRITIES</div>
 
-      <img src={singers} alt="" className='singers' />
-      <img src={singersmob} alt="" className='singersmob' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={singers} alt="" className='singers' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={singersmob} alt="" className='singersmob' />
 
 
-   </div>
-      
+      </div>
+
 
 
       <div className='vidmain'>
-        <img src={videoBack} className='videoBack' alt="lodd..."/>
-        <video className='vid' loop onClick={handleVideoClick} ref={videoRef}>
+        <img src={videoBack} className='videoBack' alt="lodd..." />
+        <video className='vid' loop onClick={handleVideoClick} ref={videoRef} data-aos="zoom-in"
+          data-aos-duration="1200">
           <source src={mainvideo} type="video/mp4"></source>
         </video>
-        <img src={pause} className='pause' alt="pause.."  ref={video2Ref}/>
+        <img src={pause} className='pause' alt="pause.." ref={video2Ref} />
       </div>
 
-     
+
 
 
       <div className='imggBox'>
-        <img src={t1} alt="t__new" className='imgg1' />
-        <img src={t2} alt="t__new" className='imgg2' />
-        <img src={t3} alt="t__new" className='imgg3' />
-        <img src={t4} alt="t__new" className='imgg4' />
-        <img src={t5} alt="t__new" className='imgg5' />
-        <img src={t6} alt="t__new" className='imgg6' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t1} alt="t__new" className='imgg1' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t2} alt="t__new" className='imgg2' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t3} alt="t__new" className='imgg3' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t4} alt="t__new" className='imgg4' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t5} alt="t__new" className='imgg5' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t6} alt="t__new" className='imgg6' />
       </div>
 
 
