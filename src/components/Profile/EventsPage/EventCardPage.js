@@ -143,16 +143,16 @@ const EventCardPage = ({
             <div className="EPbtns">
               {button === "Login" && (
                 <Link to="/login">
-                  
+
           <AniButton onSubmit={""} name={"Login"} />
-       
+
                 </Link>
               )}
               {button === "Link" && (
                 <a href={data?.link}>
-               
+
           <AniButton onSubmit={""} name={"Register"} />
-        
+
                 </a>
               )}
               {button === "Registered" && (
@@ -161,11 +161,11 @@ const EventCardPage = ({
                 </div>
               )}
               {button === "Register" && (
-               
-                 
+
+
           <AniButton onSubmit={submit} name={"Register"} />
-        
-                
+
+
               )}
 
               {/* <div className="EPdropdown">

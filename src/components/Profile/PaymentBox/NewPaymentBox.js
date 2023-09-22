@@ -342,6 +342,8 @@ const NewPaymentBox = (
     setLoading(false);
   };
 
+
+  // var windowReference = window.open();
   async function makePayment() {
     setLoading(true);
 
@@ -353,7 +355,11 @@ const NewPaymentBox = (
       const u = response.data;
       // console.log("data", response.data);
       if (response.data.status == "true") {
-        window.open(`${response.data.payment_url}`, "_blank");
+        // window.open(`${response.data.payment_url}`, "_blank");
+        // windowReference.location = response.data.payment_url;
+        setTimeout(() => {
+          window.open(response.data.payment_url, '_blank');
+      })
       } else {
         message.error(`${response.data.error}`);
       }
