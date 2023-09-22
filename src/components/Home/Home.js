@@ -316,10 +316,10 @@ function Home() {
         <div className=' aboutUsText' data-aos="zoom-in"
           data-aos-duration="1200">
           <p>Welcome to <span className='blue-thomso'>Thomso’23</span> - the 40th edition of our grand cultural extravaganza and <span className='yellow-thomso'>the annual cultural festival of IIT Roorkee!</span></p>
-          <p>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p>
-          <p>This year, we proudly present 'An Eclectic Elysia' as our theme - a concept that encapsulates perfect happiness derived from a broad and diverse range of sources. Thomso’23 is an embodiment of this very theme. It celebrates the rich tapestry of human expression and culture, aiming to mesmerize you with a blend of cosmic charm and vibrant human vitality.</p>
-          <p>Thomso is a journey where the mundane is left behind, and each moment is a new adventure waiting to unfold.</p>
-          <p>As we bring together music, dance, drama, art, and more, we invite you to escape the monotony of daily life and dive into a world filled with wonder and fascination. At Thomso’23, every corner is a stage, every participant is a star, and every spectator is an enthusiast.</p>
+          <p className='mobtext'>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p>
+          <p >This year, we proudly present 'An Eclectic Elysia' as our theme - a concept that encapsulates perfect happiness derived from a broad and diverse range of sources. Thomso’23 is an embodiment of this very theme. It celebrates the rich tapestry of human expression and culture, aiming to mesmerize you with a blend of cosmic charm and vibrant human vitality.</p>
+          <p className='mobtext'>Thomso is a journey where the mundane is left behind, and each moment is a new adventure waiting to unfold.</p>
+          <p className='mobtext'>As we bring together music, dance, drama, art, and more, we invite you to escape the monotony of daily life and dive into a world filled with wonder and fascination. At Thomso’23, every corner is a stage, every participant is a star, and every spectator is an enthusiast.</p>
         </div>
       </div>
 
