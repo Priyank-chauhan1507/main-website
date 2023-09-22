@@ -5,19 +5,22 @@
     margin-top:10vh;
 }
 .judge1-img{
-    height:58vh;
+    /* height:58vh; */
+    width:52vw;
     object-fit: cover;
     border-radius: 10px;
     
     
 }
 .judge2-img{
-    height:58vh;
+    /* height:58vh; */
+    width:52vw;
     border-radius: 10px;
 
 }
 .judge3-img{
-    height:58vh;
+    /* height:58vh; */
+    width: 52vw;
     border-radius: 10px;
 
 }
