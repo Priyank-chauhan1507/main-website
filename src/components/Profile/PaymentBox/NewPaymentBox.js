@@ -46,30 +46,27 @@ const NewPaymentBox = (
   const navigate = useNavigate();
   const [logout, setLogout] = useState(0);
   const [userDetails, setuserDetails] = useState({});
-  const [config, SetConfig] = useState({})
+  const [config, SetConfig] = useState({});
   // console.log(data, "amount");
 
-
-  useEffect(() =>{
+  useEffect(() => {
     get_master_config();
     getData();
   }, []);
 
+  const get_master_config = async () => {
+    const ress = axios
+      .get(`/apiV1/payment_master`)
+      .then((ress) => {
+        data = ress.data;
+        SetConfig(data[0]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-    const get_master_config = async () => {
-      const ress = axios
-        .get(`/apiV1/payment_master`)
-        .then((ress) => {
-          data = ress.data
-          SetConfig(data[0])
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-
-    console.log(config, "config");
-
+  console.log(config, "config");
 
   const getData = async () => {
     const ress = axios
@@ -89,7 +86,6 @@ const NewPaymentBox = (
           });
           setPaymentData1(temp1);
         }
-
       })
       .catch((err) => {
         console.log(err);
@@ -156,7 +152,6 @@ const NewPaymentBox = (
   console.log(totalpay);
   // const [totalpay, setTotalpay] = useState(0);
 
-
   const handleDataNo = () => {
     var temp = paymentData;
     temp.push({ id: inputValue, acco: "false" });
@@ -164,16 +159,16 @@ const NewPaymentBox = (
     var temp1 = paymentData1;
     temp1.push({ id: inputValue, acco: "false", gender: "Male" });
     setPaymentData1(temp1);
-    let amount=0;
-      for(let i=0;i<paymentData1.length;i++){
-        if(paymentData1[i].acco == "true"){
-          amount =amount+ config.max_amount + config.tax;
-        }else if(paymentData1[i].acco == "false"){
-          amount =amount+ config.min_amount + config.tax;
-        }
+    let amount = 0;
+    for (let i = 0; i < paymentData1.length; i++) {
+      if (paymentData1[i].acco == "true") {
+        amount = amount + config.max_amount + config.tax;
+      } else if (paymentData1[i].acco == "false") {
+        amount = amount + config.min_amount + config.tax;
       }
-      setTotalpay(amount);
-      // console.log(amount,"amount");
+    }
+    setTotalpay(amount);
+    // console.log(amount,"amount");
     // setTotalpay(() => totalpay + config.min_amount + config.tax);
     clearthomsoid();
   };
@@ -185,16 +180,16 @@ const NewPaymentBox = (
     var temp1 = paymentData1;
     temp1.push({ id: inputValue, acco: "true", gender: "Male" });
     setPaymentData1(temp1);
-    let amount=0;
-      for(let i=0;i<paymentData1.length;i++){
-        if(paymentData1[i].acco == "true"){
-          amount =amount + config.max_amount + config.tax;
-        }else if(paymentData1[i].acco == "false"){
-          amount =amount+ config.min_amount + config.tax;
-        }
+    let amount = 0;
+    for (let i = 0; i < paymentData1.length; i++) {
+      if (paymentData1[i].acco == "true") {
+        amount = amount + config.max_amount + config.tax;
+      } else if (paymentData1[i].acco == "false") {
+        amount = amount + config.min_amount + config.tax;
       }
-      setTotalpay(amount);
-      // console.log(amount,"amount");
+    }
+    setTotalpay(amount);
+    // console.log(amount,"amount");
     // setTotalpay(() => totalpay + config.max_amount + config.tax);
     clearthomsoid();
   };
@@ -248,31 +243,35 @@ const NewPaymentBox = (
       const u = response.data;
       // console.log("data", u);
       setLoading(false);
-      if (u.status == "true" && u.gender == "Female" && config.girls_payment_close == false) {
+      if (
+        u.status == "true" &&
+        u.gender == "Female" &&
+        config.girls_payment_close == false
+      ) {
         var temp = paymentData;
         temp.push({ id: input, acco: "true" });
         setPaymentData(temp);
         var temp1 = paymentData1;
         temp1.push({ id: input, acco: "true", gender: u.gender });
         setPaymentData1(temp1);
-        let amount=0;
-      for(let i=0;i<paymentData1.length;i++){
-        if(paymentData1[i].acco == "true"){
-          amount =amount+ config.max_amount + config.tax;
-        }else if(paymentData1[i].acco == "false"){
-          amount =amount+ config.min_amount + config.tax;
+        let amount = 0;
+        for (let i = 0; i < paymentData1.length; i++) {
+          if (paymentData1[i].acco == "true") {
+            amount = amount + config.max_amount + config.tax;
+          } else if (paymentData1[i].acco == "false") {
+            amount = amount + config.min_amount + config.tax;
+          }
         }
-      }
 
-      setTotalpay(amount);
-      // console.log(amount,"amount");
+        setTotalpay(amount);
+        // console.log(amount,"amount");
         setGenderr(u.gender);
         setAddpar(!addpar);
         // setTotalpay(() => totalpay + config.max_amount + config.tax);
         clearthomsoid();
       }
 
-      if(config.girls_payment_close == true && u.gender == "Female"){
+      if (config.girls_payment_close == true && u.gender == "Female") {
         message.info("Girls payment are closed now");
       }
 
@@ -312,14 +311,18 @@ const NewPaymentBox = (
   };
 
   const paynow = () => {
-    setTotalpay(acco1 == "true" ? config.max_amount + config.tax : config.min_amount + config.tax)
-    let data1 = paymentData1
-    data1[0].acco = acco1
-    setPaymentData(data1)
+    setTotalpay(
+      acco1 == "true"
+        ? config.max_amount + config.tax
+        : config.min_amount + config.tax
+    );
+    let data1 = paymentData1;
+    data1[0].acco = acco1;
+    setPaymentData(data1);
 
-    let data = paymentData
-    data[0].acco = acco1
-    setPaymentData(data)
+    let data = paymentData;
+    data[0].acco = acco1;
+    setPaymentData(data);
 
     setPaying(true);
   };
@@ -345,44 +348,41 @@ const NewPaymentBox = (
     }
   }
 
-
   const deletePayment = (id) => {
-    let amount = totalpay
-    let amount_delete = paymentData1
+    let amount = totalpay;
+    let amount_delete = paymentData1;
     console.log(amount_delete, "amount_delete");
-    amount_delete = amount_delete?.filter((item) => item.id == id)
+    amount_delete = amount_delete?.filter((item) => item.id == id);
     console.log(amount_delete, "amount_delete");
-    if(amount_delete[0].acco == "true"){
-        amount = amount - config.max_amount - config.tax;
-    }else if(amount_delete[0].acco == "false"){
-        amount =amount - config.min_amount - config.tax;
+    if (amount_delete[0].acco == "true") {
+      amount = amount - config.max_amount - config.tax;
+    } else if (amount_delete[0].acco == "false") {
+      amount = amount - config.min_amount - config.tax;
     }
     setTotalpay(amount);
 
-      let data1 = paymentData1
-      data1 = data1?.filter((item) => item.id != id)
-      setPaymentData1(data1);
+    let data1 = paymentData1;
+    data1 = data1?.filter((item) => item.id != id);
+    setPaymentData1(data1);
 
-      let data = paymentData
-      data = data?.filter((item) => item.id != id)
-      setPaymentData(data);
+    let data = paymentData;
+    data = data?.filter((item) => item.id != id);
+    setPaymentData(data);
 
+    // let amount = 0
+    // for(let i=0;i<paymentData1.length;i++){
+    //   if(paymentData1[i].acco == "true"){
+    //     amount =amount+ config.max_amount + config.tax;
+    //   }else if(paymentData1[i].acco == "false"){
+    //     amount =amount+ config.min_amount + config.tax;
+    //   }
+    // }
+    // setTotalpay(amount);
 
-        // let amount = 0
-        // for(let i=0;i<paymentData1.length;i++){
-        //   if(paymentData1[i].acco == "true"){
-        //     amount =amount+ config.max_amount + config.tax;
-        //   }else if(paymentData1[i].acco == "false"){
-        //     amount =amount+ config.min_amount + config.tax;
-        //   }
-        // }
-        // setTotalpay(amount);
-
-
-        if(paymentData1.length == 0){
-          setTotalpay(0)
-        }
+    if (paymentData1.length == 0) {
+      setTotalpay(0);
     }
+  };
 
   const locator = useLocation();
   return (
@@ -518,15 +518,16 @@ const NewPaymentBox = (
                   {/* <img src={paymentcenterpic} alt="" /> */}
                   {userDetails.payment ? (
                     <PaymentSuccess />
-                  ) : userDetails.gender == "Female" && config.girls_payment_close ? (
-                  <>
-                    <img className="PaymentClosedAll1" src={Closed} alt="" />
-                  </>
+                  ) : userDetails.gender == "Female" &&
+                    config.girls_payment_close ? (
+                    <>
+                      <img className="PaymentClosedAll1" src={Closed} alt="" />
+                    </>
                   ) : config.all_payment_close ? (
                     <>
                       <img className="PaymentClosedAll" src={Closed1} alt="" />
                     </>
-                    ) : (
+                  ) : (
                     <>
                       {paying ? (
                         <>
@@ -566,7 +567,9 @@ const NewPaymentBox = (
                                           className="pay-th"
                                         >
                                           <MdDelete
-                                          onClick={() => deletePayment(data?.id)}
+                                            onClick={() =>
+                                              deletePayment(data?.id)
+                                            }
                                             style={{
                                               cursor: "pointer",
                                               size: "20px",
@@ -663,14 +666,20 @@ const NewPaymentBox = (
                                     <div>
                                       <p>₹ {config.min_amount}</p>
                                       {acco == true || acco == null ? (
-                                        <p>₹ { config.max_amount - config.min_amount}</p>
+                                        <p>
+                                          ₹{" "}
+                                          {config.max_amount -
+                                            config.min_amount}
+                                        </p>
                                       ) : (
                                         <p
                                           style={{
                                             color: "rgba(64, 64, 64, 1)",
                                           }}
                                         >
-                                          ₹ { config.max_amount - config.min_amount}
+                                          ₹{" "}
+                                          {config.max_amount -
+                                            config.min_amount}
                                         </p>
                                       )}
                                     </div>
@@ -682,8 +691,8 @@ const NewPaymentBox = (
                                       <span className="Paylarge">
                                         ₹{" "}
                                         {acco == true || acco == null
-                                          ? `${config.max_amount }`
-                                          : `${config.min_amount }`}
+                                          ? `${config.max_amount}`
+                                          : `${config.min_amount}`}
                                       </span>
                                       <span className="PayTaxes"> + Taxes</span>
                                     </p>
@@ -695,7 +704,8 @@ const NewPaymentBox = (
                                 </div>
                               </>
                             </div>
-                            {(userDetails?.gender == "Male" || userDetails?.gender == "Others") ? (
+                            {userDetails?.gender == "Male" ||
+                            userDetails?.gender == "Others" ? (
                               <div
                                 className="Payleft-right"
                                 style={{
@@ -793,17 +803,21 @@ const NewPaymentBox = (
                                 </>
                               </div>
                             ) : (
-                                <>
-                                  <div className="Payleft-right"
+                              <>
+                                <div
+                                  className="Payleft-right"
                                   style={{
                                     display: "flex",
                                     flexDirection: "column",
                                     marginRight: "20px",
-                                  }}>
-                                    <p
+                                  }}
+                                >
+                                  <p
                                     className="Payevent"
                                     style={{ marginBottom: "5vh" }}
-                                  > * Accommdation is Compulsory for Female
+                                  >
+                                    {" "}
+                                    * Accommdation is Compulsory for Female
                                   </p>
                                   <div
                                     className="agree-terms-and-conditions"
@@ -828,7 +842,6 @@ const NewPaymentBox = (
                                     >
                                       Agree Terms and Conditions *
                                     </a>
-                                    
                                   </div>
                                   {agree == true ? (
                                     <button
@@ -856,9 +869,10 @@ const NewPaymentBox = (
                                       Pay Now
                                     </button>
                                   )}
-                                  </div>
-                                </>)}
-                            </div>
+                                </div>
+                              </>
+                            )}
+                          </div>
                         </>
                       )}
                     </>
@@ -867,9 +881,6 @@ const NewPaymentBox = (
               </div>
             </div>
           </div>
-
-
-
 
           {/* -------------------Logout Modal ------------------- */}
           <div className={!logout ? "none" : ""} id="logout">
@@ -905,14 +916,13 @@ const NewPaymentBox = (
             </div>
           </div>
 
-
-
-
-
           {/* ------------------Add participant modal-------------- */}
           <div className={addpar ? "" : "none"} id="logout">
             <div className="l_body">
-              <div className="logout_body" style={{ position: "relative",height:"207px" }}>
+              <div
+                className="logout_body"
+                style={{ position: "relative", height: "207px" }}
+              >
                 {genderr === "Male" ? (
                   <div className="add-acco">
                     <div className="does-he">
@@ -991,9 +1001,6 @@ const NewPaymentBox = (
 
           {/* ----------------------------------------------- */}
 
-
-
-
           {/* --------------Mobile----------------------------- */}
 
           <div className="nnp-mobile">
@@ -1067,16 +1074,17 @@ const NewPaymentBox = (
               </div>
               {userDetails.payment ? (
                 <PaymentSuccess />
-              ) : userDetails.gender == "Female" && config.girls_payment_close ? (
-                  <>
-                    <img className="PaymentClosedAll" src={Closed} alt="" />
-                  </>
-                  ) : config.all_payment_close ? (
-                    <>
-                      <img className="PaymentClosedAll1" src={Closed1} alt="" />
-                    </>
-                    ) : (
-                    <>
+              ) : userDetails.gender == "Female" &&
+                config.girls_payment_close ? (
+                <>
+                  <img className="PaymentClosedAll" src={Closed} alt="" />
+                </>
+              ) : config.all_payment_close ? (
+                <>
+                  <img className="PaymentClosedAll1" src={Closed1} alt="" />
+                </>
+              ) : (
+                <>
                   {paying ? (
                     <>
                       <div
@@ -1114,10 +1122,7 @@ const NewPaymentBox = (
                                       style={{ width: "14vw" }}
                                       // style={{ gap: "10px",alignItems:"center" }}
                                     >
-                                      <>
-                                        {data?.acco == "true" ? "YES" : "NO"}
-
-                                      </>
+                                      <>{data?.acco == "true" ? "YES" : "NO"}</>
                                     </td>
                                     <td
                                       className="pay-th"
@@ -1125,7 +1130,9 @@ const NewPaymentBox = (
                                     >
                                       <>
                                         <MdDelete
-                                        onClick={(index) => deletePayment(data?.id)}
+                                          onClick={(index) =>
+                                            deletePayment(data?.id)
+                                          }
                                           style={{
                                             cursor: "pointer",
                                             size: "10px",
@@ -1188,7 +1195,10 @@ const NewPaymentBox = (
                     </>
                   ) : (
                     <>
-                      <div className="main_boxx" style={{overflowY:"scroll"}}>
+                      <div
+                        className="main_boxx"
+                        style={{ overflowY: "scroll" }}
+                      >
                         <div className="MPaycontainer">
                           <div className="MPayleft">
                             <p className="Mpayheading">Payment Details</p>
@@ -1207,10 +1217,12 @@ const NewPaymentBox = (
                                 <div>
                                   <p>₹ {config.min_amount}</p>
                                   {acco == true || acco == null ? (
-                                    <p>₹ { config.max_amount - config.min_amount}</p>
+                                    <p>
+                                      ₹ {config.max_amount - config.min_amount}
+                                    </p>
                                   ) : (
                                     <p style={{ color: "rgba(64, 64, 64, 1)" }}>
-                                      ₹ { config.max_amount - config.min_amount}
+                                      ₹ {config.max_amount - config.min_amount}
                                     </p>
                                   )}
                                 </div>
@@ -1235,11 +1247,8 @@ const NewPaymentBox = (
                             </div>
                             <p className="MPayinfo"></p>
 
-
-
-
-
-                            {(userDetails?.gender == "Male" || userDetails?.gender == "Others") ? (
+                            {userDetails?.gender == "Male" ||
+                            userDetails?.gender == "Others" ? (
                               <div
                                 className="Payleft-right"
                                 style={{
@@ -1249,161 +1258,167 @@ const NewPaymentBox = (
                                 }}
                               >
                                 <>
-                            <p className="MPayevent">
-                              Are you going to take Accommodation in IITR? (*
-                              Accommdation Compulsory for Female)
-                            </p>
-                            <div
-                              className="MyesNo"
-                              style={{ opacity: is_female ? "0.5" : "1" }}
-                            >
-                              <button
-                                className="Myesbtn"
-                                disabled={is_female}
-                                onClick={() => {
-                                  setAcco1("true");
-                                  Accommdation();
-                                }}
-                                style={style2}
-                              >
-                                Yes
-                              </button>
-                              <button
-                                className="Mnobtn"
-                                disabled={is_female}
-                                onClick={() => {
-                                  setAcco1("false");
-                                  noAccommdation();
-                                }}
-                                style={style1}
-                              >
-                                No
-                              </button>
-                            </div>
-                            <div className="agree-terms-and-conditions">
-                                  <input
-                                    className="agree-checkbox"
-                                    style={{ cursor: "pointer" }}
-                                    type="checkbox"
-                                    checked={agree}
-                                    onChange={(e) => setAgree(!agree)}
-                                    required
-                                  />
-                                  <a
-                                    className="agree-a"
-                                    style={{
-                                      color: "white",
-                                      cursor: "pointer",
-                                    }}
-                                    href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
-                                    target="_blank"
+                                  <p className="MPayevent">
+                                    Are you going to take Accommodation in IITR?
+                                    (* Accommdation Compulsory for Female)
+                                  </p>
+                                  <div
+                                    className="MyesNo"
+                                    style={{ opacity: is_female ? "0.5" : "1" }}
                                   >
-                                    Agree Terms and Conditions *
-                                  </a>
+                                    <button
+                                      className="Myesbtn"
+                                      disabled={is_female}
+                                      onClick={() => {
+                                        setAcco1("true");
+                                        Accommdation();
+                                      }}
+                                      style={style2}
+                                    >
+                                      Yes
+                                    </button>
+                                    <button
+                                      className="Mnobtn"
+                                      disabled={is_female}
+                                      onClick={() => {
+                                        setAcco1("false");
+                                        noAccommdation();
+                                      }}
+                                      style={style1}
+                                    >
+                                      No
+                                    </button>
+                                  </div>
+                                  <div className="agree-terms-and-conditions">
+                                    <input
+                                      className="agree-checkbox"
+                                      style={{ cursor: "pointer" }}
+                                      type="checkbox"
+                                      checked={agree}
+                                      onChange={(e) => setAgree(!agree)}
+                                      required
+                                    />
+                                    <a
+                                      className="agree-a"
+                                      style={{
+                                        color: "white",
+                                        cursor: "pointer",
+                                      }}
+                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                      target="_blank"
+                                    >
+                                      Agree Terms and Conditions *
+                                    </a>
+                                  </div>
+                                  {checkPayNow() == true && agree == true ? (
+                                    <button
+                                      style={{ marginTop: "20px" }}
+                                      className="PayNowBtnActive"
+                                      onClick={paynow}
+                                    >
+                                      {loading ? (
+                                        <CircularProgress
+                                          color="inherit"
+                                          size={20}
+                                        />
+                                      ) : (
+                                        "Pay Now"
+                                      )}
+                                    </button>
+                                  ) : (
+                                    <button
+                                      style={{ marginTop: "20px" }}
+                                      onClick={() => {
+                                        if (agree == true) {
+                                          message.info(
+                                            "Please select one accomodation option"
+                                          );
+                                        } else {
+                                          message.info(
+                                            "Please agree terms and conditions"
+                                          );
+                                        }
+                                      }}
+                                      className="PayNowBtn"
+                                    >
+                                      Pay Now
+                                    </button>
+                                  )}
+                                </>
+                              </div>
+                            ) : (
+                              <>
+                                <div
+                                  className="Payleft-right"
+                                  style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    marginRight: "20px",
+                                  }}
+                                >
+                                  <p
+                                    className="Payevent"
+                                    style={{ marginBottom: "5vh" }}
+                                  >
+                                    {" "}
+                                    * Accommdation is Compulsory for Female
+                                  </p>
+                                  <div
+                                    className="agree-terms-and-conditions"
+                                    style={{ marginBottom: "5vh" }}
+                                  >
+                                    <input
+                                      className="agree-checkbox"
+                                      style={{ cursor: "pointer" }}
+                                      type="checkbox"
+                                      checked={agree}
+                                      onChange={(e) => setAgree(!agree)}
+                                      required
+                                    />
+                                    <a
+                                      className="agree-a"
+                                      style={{
+                                        color: "white",
+                                        cursor: "pointer",
+                                      }}
+                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                      target="_blank"
+                                    >
+                                      Agree Terms and Conditions *
+                                    </a>
+                                  </div>
+                                  {agree == true ? (
+                                    <button
+                                      className="PayNowBtnActive"
+                                      onClick={paynow}
+                                    >
+                                      {loading ? (
+                                        <CircularProgress
+                                          color="inherit"
+                                          size={20}
+                                        />
+                                      ) : (
+                                        "Pay Now"
+                                      )}
+                                    </button>
+                                  ) : (
+                                    <button
+                                      onClick={() =>
+                                        message.info(
+                                          "Please agree terms and conditions"
+                                        )
+                                      }
+                                      className="PayNowBtn"
+                                    >
+                                      Pay Now
+                                    </button>
+                                  )}
                                 </div>
-                            {checkPayNow() == true && agree == true ? (
-                              <button
-                                style={{ marginTop: "20px" }}
-                                className="PayNowBtnActive"
-                                onClick={paynow}
-                              >
-                                {loading ? (
-                                  <CircularProgress color="inherit" size={20} />
-                                ) : (
-                                  "Pay Now"
-                                )}
-                              </button>
-                            ) : (
-                              <button
-                                style={{ marginTop: "20px" }}
-                                onClick={() =>{
-                                  if(agree == true){
-                                    message.info(
-                                      "Please select one accomodation option"
-                                    )
-                                  }else{
-                                    message.info(
-                                      "Please agree terms and conditions"
-                                    )
-                                  }
-                            }
-
-                            }
-                                className="PayNowBtn"
-                              >
-                                Pay Now
-                              </button>
+                              </>
                             )}
-                            </>
-                          </div>):(
-                            <>
-                            <div className="Payleft-right"
-                            style={{
-                              display: "flex",
-                              flexDirection: "column",
-                              marginRight: "20px",
-                            }}>
-                              <p
-                              className="Payevent"
-                              style={{ marginBottom: "5vh" }}
-                            > * Accommdation is Compulsory for Female
-                            </p>
-                            <div
-                              className="agree-terms-and-conditions"
-                              style={{ marginBottom: "5vh" }}
-                            >
-                              <input
-                                className="agree-checkbox"
-                                style={{ cursor: "pointer" }}
-                                type="checkbox"
-                                checked={agree}
-                                onChange={(e) => setAgree(!agree)}
-                                required
-                              />
-                              <a
-                                className="agree-a"
-                                style={{
-                                  color: "white",
-                                  cursor: "pointer",
-                                }}
-                                href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
-                                target="_blank"
-                              >
-                                Agree Terms and Conditions *
-                              </a>
-                              
-                            </div>
-                            {agree == true ? (
-                              <button
-                                className="PayNowBtnActive"
-                                onClick={paynow}
-                              >
-                                {loading ? (
-                                  <CircularProgress
-                                    color="inherit"
-                                    size={20}
-                                  />
-                                ) : (
-                                  "Pay Now"
-                                )}
-                              </button>
-                            ) : (
-                              <button
-                                onClick={() =>
-                                  message.info(
-                                    "Please agree terms and conditions"
-                                  )
-                                }
-                                className="PayNowBtn"
-                              >
-                                Pay Now
-                              </button>
-                            )}
-                            </div>
-                          </>)}
+                          </div>
                         </div>
-                        </div>
-                        </div>
+                      </div>
                     </>
                   )}
                 </>

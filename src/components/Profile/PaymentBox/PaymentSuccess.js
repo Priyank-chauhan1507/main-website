@@ -18,7 +18,7 @@ const PaymentSuccess = () => {
         flexDirection: "column",
         alignItems: "center",
         width: "100%",
-        height: "100%",
+        // height: "100%",
         textAlign: "center",
         marginTop: "10vh",
         overflow: "hidden" 
