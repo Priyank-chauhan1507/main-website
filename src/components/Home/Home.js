@@ -327,7 +327,7 @@ function Home() {
 
 
       {/* <div className={`home3rd`} ref={mainboxRef} >
-        <img style={{width:"100vw"}} className='yellowy' src={yellow} alt="yellow_back"/>
+        <img style={{width:"100vw",height:"132%"}} className='yellowy' src={yellow} alt="yellow_back"/>
 
         <div className='proNites' ref={display10Ref} data-aos="zoom-in"
           data-aos-duration="1200" >PRONITES</div>
