@@ -11,6 +11,7 @@ export default function PdfDownload() {
   </PDFViewer>
   </div>
   <div className="mobile">
+    <div>
       <PDFDownloadLink document={<Renderer/>} fileName='FORM'>
  {({loading})=>
     loading? (
@@ -19,6 +20,7 @@ export default function PdfDownload() {
  }
 
       </PDFDownloadLink></div>
+      </div>
       </>
   )
 }
