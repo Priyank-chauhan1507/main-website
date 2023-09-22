@@ -139,9 +139,9 @@ const Id_Card = () => {
     // console.log(formData);
     // setprofilepic(true);
 
-    if (file.size > 512000) {
-      // setLoading(false);
-      message.warning("Size is too large.Size must be less than 500KB");
+    if (file.size > 2048000) {
+      setLoading(false);
+      message.warning("Size is too large.Size must be less than 2MB");
       setprofilepic(null);
       return false;
     } else {
