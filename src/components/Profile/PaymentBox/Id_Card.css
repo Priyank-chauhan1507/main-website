@@ -179,7 +179,7 @@
     .id_border1
     {
       width: auto;
-      margin-top: 25vh;
+      margin-top: 5vh;
     }
     .id_box_qr_text
     {
@@ -264,9 +264,9 @@
   }
 
   @media only screen and (max-width:500px){
-    .id_border1{
+    /* .id_border1{
       margin-top: 20vh;
-    }
+    } */
     .generate, .generate1, .not-download{
       font-size: 18px;
     }
@@ -289,4 +289,5 @@
       width: 15px;
       height: 15px;
     }
+    
   }
