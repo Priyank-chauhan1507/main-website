@@ -26,7 +26,7 @@ import simg3 from '../../assests/simg3.svg'
 import simg4 from '../../assests/simg4.svg'
 import simg5 from '../../assests/simg5.svg'
 
-import pronite from '../../assests/pronite2.svg'
+import pronite from '../../assests/mobpro.webp'
 import { Link, useNavigate } from "react-router-dom"
 import { customEvent } from '../../utils/analyticsHelper';
 import Thomso from "../../assests/thomso-unscreen.gif"
