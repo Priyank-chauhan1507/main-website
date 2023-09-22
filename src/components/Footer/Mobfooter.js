@@ -1,5 +1,6 @@
 import React from "react";
 import "./mobfooter.css";
+import {Link} from "react-router-dom";
 import Logo from "../../assests/Logo.png";
 import Email from "../../assests/Email.png";
 import Phone from "../../assests/Phone.png";
@@ -16,7 +17,11 @@ const Footer = () => {
         <img className="mob-footer-logo" src={Logo} alt="Thomso Logo" />
 
         <div className="direction">
-          <h3 className="heading">Get Direction</h3>
+        <h3 className="heading">
+          <Link to="https://www.google.com/maps/place/Multi+Activity+Center+(MAC)/@29.8702051,77.8936357,17z/data=!4m14!1m7!3m6!1s0x390eb3648480a0c1:0x8f866617d941cb4b!2sMulti+Activity+Center+(MAC)!8m2!3d29.8702005!4d77.8962106!16s%2Fg%2F11bwq93s22!3m5!1s0x390eb3648480a0c1:0x8f866617d941cb4b!8m2!3d29.8702005!4d77.8962106!16s%2Fg%2F11bwq93s22?entry=ttu" target="_blank">
+          Get Direction
+          </Link>
+          </h3>
           <p>
             Thomso Office Multi Activity Centre Indian Institue of Technology,
             Roorkee 247667
