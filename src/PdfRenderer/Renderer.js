@@ -62,14 +62,15 @@ const styles = StyleSheet.create({
     width: "88px",
   },
   id_container: {
-    height: "400px",
+    height: "232px",
     width: "272px",
-    backgroundColor: "#6BDFF8",
+    // backgroundColor: "#6BDFF8",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     color: "black",
     fontFamily: "Comic Sans MS",
+    border:"2px solid black"
   },
   id_logo: {
     marginTop: "17px",
@@ -98,6 +99,13 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  id_box_red: {
+    color:"red",
+    width:"auto",
+    fontWeight:"600",
+    fontSize:"20px",
+    marginLeft:"auto"
   },
 
   id_box_left: {
@@ -161,7 +169,7 @@ const styles = StyleSheet.create({
     height: "41px",
     width: "100%",
     bottom: "0px",
-    backgroundColor: "#F7B401",
+    // backgroundColor: "#F7B401",
   },
   id_line: {
     width: "95vw",
@@ -232,7 +240,6 @@ const Renderer = () => {
         </View>
 
         <View style={styles.id_container}>
-          <Image src={id_logo} style={styles.id_logo} />
 
           <View style={styles.id_border1}>
             <View style={styles.id_border2}>
@@ -280,43 +287,44 @@ const Renderer = () => {
                   <Text style={styles.id_box_textB}>
                     Accommodation - {user?.accommodation ? "Yes" : "No"}
                   </Text>
-                  {/* <Text style={styles.id_box_text2}>None</Text> */}
                 </View>
               </View>
             </View>
           </View>
-          <View style={styles.id_bottom}></View>
+        </View>
+
+        <View>
+        <Text style={styles.id_box_red}>
+                    Bring Coloured Printed Copy of ID card with you.
+                  </Text>
         </View>
 
         <View style={styles.id_insdata}>
           <View style={styles.id_line}></View>
           <View>
-            <Text style={styles.id_ins}>INSTURCTIONS:</Text>
+            <Text style={styles.id_ins}>INSTRUCTIONS:</Text>
             <Text style={styles.id_data1}>
-              → The Provisional ID card does not confer entitlement as a valid
-              identity or participant's pass for Thomso'23. It is mandatory for
-              all participants to bring this ID Card at the registration desk in
-              the Thomso Office at the MAC Building.
+              1. This ID card is provisional and does not confer entitlement as a valid identity or participant's pass for Thomso'23. It is mandatory for all participants to bring this ID Card at the registration desk in the Thomso Office at the MAC Building for getting a valid id card.
+
             </Text>
             <Text style={styles.id_data}>
-              → The ID Card must be in an undamaged condition and it is advised to
-              be carried within a file case to prevent any folding or creasing.
+              2. This provisional ID Card must be in an undamaged condition and it is advised to be carried within a file case to prevent any folding or creasing.
+
             </Text>
             <Text style={styles.id_data}>
-              → Additionally, participants are required to bring two identical
+              3. Additionally, participants are required to bring two identical
               passport-sized photographs.
             </Text>
             <Text style={styles.id_data}>
-              → The ID card must be appropriately cut along the dotted lines and
-              presented at the registration desk.
+              4. Inner section of id card must be appropriately cut along the dotted lines and presented at the registration desk.
+
             </Text>
             <Text style={styles.id_data}>
-              → Participants must bring a minimum of two printed copies of this ID
-              Card for the registration process.
+              5. Participants must bring a minimum of two printed copies of this ID Card for the registration process.
+
             </Text>
             <Text style={styles.id_data}>
-              → Any forgery with this ID Card will lead to the jurisdiction of the
-              Thomso Organizing Committee and the authorities of IIT Roorkee.
+              6. Any forgery with the ID Card will lead to the jurisdiction of the Thomso Organizing Committee and the authorities of IIT Roorkee.
             </Text>
           </View>
         </View>
