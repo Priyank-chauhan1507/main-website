@@ -26,7 +26,7 @@ import simg3 from '../../assests/simg3.svg'
 import simg4 from '../../assests/simg4.svg'
 import simg5 from '../../assests/simg5.svg'
 
-import pronite from '../../assests/pronite2.svg'
+import pronite from '../../assests/mobpro.webp'
 import { Link, useNavigate } from "react-router-dom"
 import { customEvent } from '../../utils/analyticsHelper';
 import Thomso from "../../assests/thomso-unscreen.gif"
@@ -49,11 +49,13 @@ import blue from '../../assests/blue.webp'
 
 import videoBack from '../../assests/videoBack.webp'
 import pause from '../../assests/pause.svg'
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos';
 
 
 function Home() {
 
-
+  AOS.init();
 
   const mainboxRef = useRef(null);
   const display1Ref = useRef(null);
@@ -309,12 +311,17 @@ function Home() {
           <img className='aboutTopText9' src={Slidetext} alt="about_us_top" />
 
         </div>
-        <div className='aboutUs'>ABOUT US</div>
-        <div className=' aboutUsText'>
+        <div className='aboutUs' data-aos="zoom-in"
+          data-aos-duration="1200">ABOUT US</div>
+        <div className=' aboutUsText' data-aos="zoom-in"
+          data-aos-duration="1200">
           <p>Welcome to <span className='blue-thomso'>Thomso’23</span> - the 40th edition of our grand cultural extravaganza and <span className='yellow-thomso'>the annual cultural festival of IIT Roorkee!</span></p>
+          {/* <p className='mobtext'>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p> */}
           <p>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p>
-          <p>This year, we proudly present 'An Eclectic Elysia' as our theme - a concept that encapsulates perfect happiness derived from a broad and diverse range of sources. Thomso’23 is an embodiment of this very theme. It celebrates the rich tapestry of human expression and culture, aiming to mesmerize you with a blend of cosmic charm and vibrant human vitality.</p>
+          <p >This year, we proudly present 'An Eclectic Elysia' as our theme - a concept that encapsulates perfect happiness derived from a broad and diverse range of sources. Thomso’23 is an embodiment of this very theme. It celebrates the rich tapestry of human expression and culture, aiming to mesmerize you with a blend of cosmic charm and vibrant human vitality.</p>
+          {/* <p className='mobtext'>Thomso is a journey where the mundane is left behind, and each moment is a new adventure waiting to unfold.</p> */}
           <p>Thomso is a journey where the mundane is left behind, and each moment is a new adventure waiting to unfold.</p>
+          {/* <p className='mobtext'>As we bring together music, dance, drama, art, and more, we invite you to escape the monotony of daily life and dive into a world filled with wonder and fascination. At Thomso’23, every corner is a stage, every participant is a star, and every spectator is an enthusiast.</p> */}
           <p>As we bring together music, dance, drama, art, and more, we invite you to escape the monotony of daily life and dive into a world filled with wonder and fascination. At Thomso’23, every corner is a stage, every participant is a star, and every spectator is an enthusiast.</p>
         </div>
       </div>
@@ -323,33 +330,49 @@ function Home() {
 
 
       {/* <div className={`home3rd`} ref={mainboxRef} >
-        <img style={{width:"100vw"}} className='yellowy' src={yellow} alt="yellow_back"/>
+        <img style={{width:"100vw",height:"132%"}} className='yellowy' src={yellow} alt="yellow_back"/>
 
-        <div className='proNites' ref={display10Ref} >PRONITES</div>
-
-
-        <img className='line_1' src={line1} alt="line_1" ref={display1Ref} />
-        <img className='line_2' src={line2} alt="line_2" ref={display2Ref} />
-        <img className='line_3' src={line3} alt="line_3" ref={display3Ref} />
-        <img className='line_4' src={line4} alt="line_4" ref={display4Ref} />
-
-        <img className='simg1' src={simg1} alt="simg1" ref={image1Ref} />
-        <img className='simg2' src={simg2} alt="simg2" ref={image2Ref} />
-        <img className='simg3' src={simg3} alt="simg3" ref={image3Ref} />
-        <img className='simg4' src={simg4} alt="simg4" ref={image4Ref} />
-        <img className='simg5' src={simg5} alt="simg5" ref={image5Ref} />
-
-        <div className='sText1' ref={display5Ref}>SONU NIGAM | 2022</div>
-        <div className='sText2' ref={display6Ref}>SANAM | 2022</div>
-        <div className='sText3' ref={display7Ref}>VOGUE | 2022</div>
-        <div className='sText4' ref={display8Ref}>DARSHAN RAWAL | 2022</div>
-        <div className='sText5' ref={display9Ref}>JUBIN NAUTIYAL | 2019</div>
-      </div> */}
+        <div className='proNites' ref={display10Ref} data-aos="zoom-in"
+          data-aos-duration="1200" >PRONITES</div>
 
 
-      {/* <div className='home3rdmob'>
+        <img className='line_1' src={line1} alt="line_1" ref={display1Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='line_2' src={line2} alt="line_2" ref={display2Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='line_3' src={line3} alt="line_3" ref={display3Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='line_4' src={line4} alt="line_4" ref={display4Ref} data-aos="zoom-in"
+          data-aos-duration="1200" />
+
+        <img className='simg1' src={simg1} alt="simg1" ref={image1Ref}   data-aos="fade-right"
+          data-aos-duration="1200" />
+        <img className='simg2' src={simg2} alt="simg2" ref={image2Ref}   data-aos="fade-right"
+          data-aos-duration="1200" />
+        <img className='simg3' src={simg3} alt="simg3" ref={image3Ref}   data-aos="zoom-in"
+          data-aos-duration="1200" />
+        <img className='simg4' src={simg4} alt="simg4" ref={image4Ref } data-aos="fade-left"
+          data-aos-duration="1200"  />
+        <img className='simg5' src={simg5} alt="simg5" ref={image5Ref}   data-aos="fade-left"
+          data-aos-duration="1200" />
+
+        <div className='sText1' ref={display5Ref} data-aos="fade-right"
+          data-aos-duration="1200">SONU NIGAM | 2022</div>
+        <div className='sText2' ref={display6Ref} data-aos="fade-right"
+          data-aos-duration="1200">SANAM | 2022</div>
+        <div className='sText3' ref={display7Ref} data-aos="zoom-in"
+          data-aos-duration="1200">VOGUE | 2022</div>
+        <div className='sText4' ref={display8Ref} data-aos="fade-left"
+          data-aos-duration="1200">DARSHAN RAWAL | 2022</div>
+        <div className='sText5' ref={display9Ref} data-aos="fade-left"
+          data-aos-duration="1200">JUBIN NAUTIYAL | 2019</div>
+      </div> 
+
+
+       <div className='home3rdmob'>
         <img className='yellowmob' src={yellowmob} alt="yellowwwy"/>
-        <img className='pronite' src={pronite} alt="pronite" />
+        <img className='pronite' src={pronite} alt="pronite" data-aos="zoom-in"
+          data-aos-duration="1200" />
       </div> */}
 
 
@@ -357,36 +380,46 @@ function Home() {
         <Attractions/>
       </div> */}
 
-   <div className='singersName' style={{position:"relative"}}>
-    <img src={blue} alt="load..." className='singBack'/>
-    <div className='Asso' >ASSOCIATED CELEBRITIES</div>
+      <div className='singersName' style={{ position: "relative" }}>
+        <img src={blue} alt="load..." className='singBack' />
+        <div className='Asso' data-aos="zoom-in"
+          data-aos-duration="1200" >ASSOCIATED CELEBRITIES</div>
 
-      <img src={singers} alt="" className='singers' />
-      <img src={singersmob} alt="" className='singersmob' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={singers} alt="" className='singers' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={singersmob} alt="" className='singersmob' />
 
 
-   </div>
-      
+      </div>
+
 
 
       <div className='vidmain'>
-        <img src={videoBack} className='videoBack' alt="lodd..."/>
-        <video className='vid' loop onClick={handleVideoClick} ref={videoRef}>
+        <img src={videoBack} className='videoBack' alt="lodd..." />
+        <video className='vid' loop onClick={handleVideoClick} ref={videoRef} data-aos="zoom-in"
+          data-aos-duration="1200">
           <source src={mainvideo} type="video/mp4"></source>
         </video>
-        <img src={pause} className='pause' alt="pause.."  ref={video2Ref}/>
+        <img src={pause} className='pause' alt="pause.." ref={video2Ref} />
       </div>
 
-     
+
 
 
       <div className='imggBox'>
-        <img src={t1} alt="t__new" className='imgg1' />
-        <img src={t2} alt="t__new" className='imgg2' />
-        <img src={t3} alt="t__new" className='imgg3' />
-        <img src={t4} alt="t__new" className='imgg4' />
-        <img src={t5} alt="t__new" className='imgg5' />
-        <img src={t6} alt="t__new" className='imgg6' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t1} alt="t__new" className='imgg1' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t2} alt="t__new" className='imgg2' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t3} alt="t__new" className='imgg3' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t4} alt="t__new" className='imgg4' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t5} alt="t__new" className='imgg5' />
+        <img data-aos="zoom-in"
+          data-aos-duration="1200" src={t6} alt="t__new" className='imgg6' />
       </div>
 
 

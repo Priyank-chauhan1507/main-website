@@ -216,7 +216,7 @@
   // width:500vw;
   display: flex;
   gap: 10vw;
-  animation: moveCenterToLeftRight 80s linear infinite; /* Adjust animation duration as needed */
+  animation: moveCenterToLeftRight 160s linear infinite; /* Adjust animation duration as needed */
 }
 
 @keyframes moveCenterToLeftRight {
@@ -281,8 +281,11 @@
 
 @media only screen and (max-width: 768px) {
   .Asso {
-    top: 6rem;
-    font-size: 1rem;
+    top: 10rem;
+    font-size: 1.5rem;
+  }
+  .mobtext{
+    display: none;
   }
 }
 .proNites_alt {
@@ -301,6 +304,8 @@
   font-weight: 400;
   line-height: normal;
 }
+
+
 
 .aboutUsText {
   flex-direction: column;
@@ -394,7 +399,7 @@
 .simg1 {
   position: absolute;
   top: 25vh;
-  left: -20vw;
+  left: 11vw;
 }
 .simg1_alt {
   position: absolute;
@@ -406,7 +411,7 @@
 .simg2 {
   position: absolute;
   top: 70vh;
-  left: -20vw;
+  left: 22.4vw;
 }
 .simg2_alt {
   position: absolute;
@@ -419,7 +424,7 @@
   position: absolute;
   top: 38vh;
   // left:36vw;
-  left: 120vw;
+  left: 36vw;
 }
 .simg3_alt {
   position: absolute;
@@ -432,7 +437,7 @@
 .simg4 {
   position: absolute;
   top: 55vh;
-  left: 120vw;
+  left: 55vw;
 }
 .simg4_alt {
   position: absolute;
@@ -444,8 +449,8 @@
 .simg5 {
   position: absolute;
   top: 25vh;
-  // left:75vw;
-  left: 120vw;
+  left:75vw;
+  // left: 120vw;
 }
 .simg5_alt {
   position: absolute;
@@ -691,7 +696,8 @@
     height: 112%;
   }
   .aboutUs {
-    top: 18vw;
+    top: 14vw;
+    font-size: 1.4rem;
   }
 
   .aboutUsText {

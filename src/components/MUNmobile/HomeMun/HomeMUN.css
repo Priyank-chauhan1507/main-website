@@ -40,14 +40,14 @@
 {
     .HomeMUN-bg
 {
-    height: 759vh;
+    height: 764vh;
 }
 }
 @media only screen and (max-width:700px)
 {
     .HomeMUN-bg
 {
-    height: 730vh;
+    height: 760vh;
 }
 }
 
@@ -55,7 +55,7 @@
 {
     .HomeMUN-bg
     {
-        height: 723vh;
+        height: 730vh;
     }
 }
 
@@ -63,21 +63,21 @@
 {
     .HomeMUN-bg
     {
-        height: 4500px;
+        height: 720vh;
     }
 }
 @media only screen and (max-height:601px)
 {
     .HomeMUN-bg
     {
-        height: 607vh;
+        height: 770vh;
     }
 }
 @media only screen and (max-width:600px)
 {
     .HomeMUN-bg
 {
-    height: 707vh;
+    height: 735vh;
 }
 .FAQimg
     {
@@ -96,21 +96,15 @@
 {
     .HomeMUN-bg
 {
-    height: 688vh;
+    height: 730vh;
 }
 }
-@media only screen and (max-width:501px)
-{
-    .HomeMUN-bg
-{
-    height: 620vh;
-}
-}
+
 @media only screen and (max-width:500px)
 {
     .HomeMUN-bg
 {
-    height: 645vh;
+    height: 690vh;
 }
 }
 @media only screen and (max-width:450px)
@@ -128,7 +122,7 @@
 {
     .HomeMUN-bg
 {
-    height: 650vh;
+    height: 680vh;
 }
 .top-HomeMUN
 {
@@ -156,6 +150,11 @@
     height: 552vh;
 }
 } */
+@media only screen and (max-width:330px){
+    .HomeMUN-bg{
+        height:680vh;
+    }
+}
 
 .top-HomeMUN
 {
