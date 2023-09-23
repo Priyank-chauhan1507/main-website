@@ -2,7 +2,21 @@
 {
     height: 110vh;
     width: 100vw;
+    /* z-index:-1; */
+    /* position: absolute; */
 }
+
+.left-arrow-mun-car{
+
+   position:relative;
+   z-index: 2;
+}
+
+.css-1qzevvg{
+    margin-left:36vw !important; 
+    margin-top:0px !important;
+}
+
 @media only screen and (max-width:650px)
 {
     .CarouselCommittee
@@ -48,10 +62,18 @@
     font-weight: 400;
     line-height: 162.2%; /* 35.259px */
 }
+
+@media only screen and (max-width:768px)
+{
+    .carouselcontenttext{
+         bottom:22vh;
+    }
+}
+
 @media only screen and (max-width:650px)
 {
     .carouselcontenttext{
-         bottom:25vh;
+         bottom:20vh;
         /* font-size:3vw; */
     }
     /* .carouselcontentbtn{
@@ -61,7 +83,7 @@
 @media only screen and (max-width:500px)
 {
     .carouselcontenttext{
-         bottom:21vh;
+         bottom:15vh;
         /* font-size:3vw; */
     }
     /* .carouselcontentbtn{
@@ -87,7 +109,7 @@
 .carouselcontentbtn
 {
     position: absolute;
-    bottom: 11vh;
+    bottom: 5vh;
     color: #FFF;
     text-align: center;
     font-family: Roboto;
