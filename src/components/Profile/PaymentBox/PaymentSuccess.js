@@ -24,7 +24,7 @@ const PaymentSuccess = () => {
         width: "100%",
         // height: "100%",
         textAlign: "center",
-        marginTop: "10vh",
+        marginTop: "25vh",
         overflow: "hidden" 
       }}
     >
@@ -50,7 +50,7 @@ const PaymentSuccess = () => {
         Payment Done Successfully
       </h1>
       </div>
-      
+{/*       
       <div
         style={{
           display: "flex",
@@ -61,7 +61,7 @@ const PaymentSuccess = () => {
             <img src={download} style={{height:"15px", width:"15px", marginRight:"5px"}} alt="" />
             Download ID Card</Button>
         </Link>
-      </div>
+      </div> */}
     </div>
     </>
   );
