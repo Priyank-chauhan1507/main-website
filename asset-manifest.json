@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7277b420.css",
-    "main.js": "/static/js/main.a7e606ae.js",
+    "main.css": "/static/css/main.7e567a7c.css",
+    "main.js": "/static/js/main.bb6cff88.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -23,6 +23,7 @@
     "static/media/Historicnew.png": "/static/media/Historicnew.1f33d104a3d8a28d022e.png",
     "static/media/bgmunreg.webp": "/static/media/bgmunreg.e53cd90f1e42583ae97e.webp",
     "static/media/simg2.svg": "/static/media/simg2.0fc850ca661e345822ce3a1217c618d0.svg",
+    "static/media/BGMUN.webp": "/static/media/BGMUN.8b5285a30b8d5621f885.webp",
     "static/media/t1.webp": "/static/media/t1.33461dbb30188fa5a44e.webp",
     "static/media/Regback.webp": "/static/media/Regback.b51727b6557a74fd24b8.webp",
     "static/media/videoBack.webp": "/static/media/videoBack.5154b90e890743f49d3b.webp",
@@ -59,7 +60,6 @@
     "static/media/LOGOMUN.svg": "/static/media/LOGOMUN.b1bd40a0e1008f30352aae3a81f99c65.svg",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/slidetext.svg": "/static/media/slidetext.368ae98e4d0b3b5a0340b80efd80620a.svg",
-    "static/media/BGMUN.webp": "/static/media/BGMUN.96c91b99d86e9eefe101.webp",
     "static/media/muninfopage3img.webp": "/static/media/muninfopage3img.87bf61adf95e6489abc1.webp",
     "static/media/unischo.svg": "/static/media/unischo.552c8f3a6de19eb669d3585b62d14864.svg",
     "static/media/joy.svg": "/static/media/joy.8e7e6cdccd03e352fec59acc78c6bb12.svg",
@@ -143,11 +143,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.7277b420.css.map": "/static/css/main.7277b420.css.map",
-    "main.a7e606ae.js.map": "/static/js/main.a7e606ae.js.map"
+    "main.7e567a7c.css.map": "/static/css/main.7e567a7c.css.map",
+    "main.bb6cff88.js.map": "/static/js/main.bb6cff88.js.map"
   },
   "entrypoints": [
-    "static/css/main.7277b420.css",
-    "static/js/main.a7e606ae.js"
+    "static/css/main.7e567a7c.css",
+    "static/js/main.bb6cff88.js"
   ]
 }
