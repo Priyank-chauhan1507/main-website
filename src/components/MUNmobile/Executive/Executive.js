@@ -86,7 +86,7 @@ const App = () => {
         goToSlide={goToSlide}
         goToSlideDelay={20000000000}
         offsetRadius={offsetRadius}
-        // showNavigation={showArrows}
+       showNavigation={true}
         // animationConfig={config.gentle   }
       />
       </div>

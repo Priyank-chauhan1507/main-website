@@ -1,5 +1,7 @@
 import React, {useState ,useEffect} from 'react'
 import Carousel from 'react-spring-3d-carousel';
+import Icon from 'react-icons';
+import { BsFillArrowLeftCircleFill,BsFillArrowRightCircleFill } from "react-icons/bs";
 // import mun1 from "../../../assests/MUNImg1.png";
 import mun2 from "../../../assests/parmob.png";
 import mun3 from "../../../assests/flagmob.png";
@@ -128,6 +130,7 @@ const App = () => {
       <div className="CarouselCommittee" 
     //   style={{height: "50vh", width: "30vw"}}
       >
+        
       <Carousel
       style={{height: "60vh"}}
 
@@ -135,9 +138,23 @@ const App = () => {
         goToSlide={goToSlide}
         goToSlideDelay={20000000000}
         offsetRadius={offsetRadius}
-        // showNavigation={showArrows}
+        showNavigation={true}
+        plugins={[
+          {
+            options: {
+              arrowLeft: <button><BsFillArrowLeftCircleFill/></button>,
+              arrowLeftDisabled:<button><BsFillArrowLeftCircleFill/></button>,
+              arrowRight: <button><BsFillArrowRightCircleFill/></button>,
+              arrowRightDisabled: <button><BsFillArrowRightCircleFill/></button>,
+              addArrowClickHandler: true,
+            }
+          }
+        ]}
         // animationConfig={config.gentle   }
       />
+
+
+{/* <BsFillArrowLeftCircleFill className='left-arrow-mun-car'/> */}
       </div>
     </div>
   )
