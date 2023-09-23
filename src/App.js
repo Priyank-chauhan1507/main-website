@@ -90,8 +90,8 @@ const App = (props) => {
           <Route exact={true} path="/events/:id" element={<EventMainPage />} />
 
           <Route exact={true} path="/pevents" element={<EventBox />} />
-          <Route exact={true} path="/payment" element={<Paymentbox />} />
-          <Route exact={true} path="/newpayment" element={<NewPaymentbox/>} />
+          <Route exact={true} path="/payment_close" element={<Paymentbox />} />
+          <Route exact={true} path="/payment" element={<NewPaymentbox/>} />
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />

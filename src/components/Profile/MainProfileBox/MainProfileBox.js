@@ -486,9 +486,15 @@ const MainProfileBox = ({ data }) => {
           ) : (
             <div className="upload-doc-container">
               {file ? (
+                <>
                 <p className="mpb-text">Document Uploaded</p>
+                {/* <p className="mpb-text">Bring College Id card with you for registration verification.</p> */}
+                </>
               ) : (
+                <>
                 <p className="mpb-text">Upload document to verify</p>
+                {/* <p className="mpb-text">Bring College Id card with you for registration verification.</p> */}
+                </>
               )}
               {/* <p className="mpb-text">Document Uploaded</p> */}
               {file ? (

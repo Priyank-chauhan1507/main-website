@@ -506,9 +506,9 @@ const NewPaymentBox = (
                     <div className="lsp-c1">
                       <img src={icon3} alt="icon3" />
                       <Link
-                        to="/newpayment"
+                        to="/payment"
                         className={
-                          locator.pathname === "/newpayment"
+                          locator.pathname === "/payment"
                             ? "c1-text"
                             : "c2-text"
                         }
@@ -628,7 +628,7 @@ const NewPaymentBox = (
                               <div className="total-pay-2">
                                 <p className="total-pay-1-p1">
                                   ₹{totalpay}
-                                  <span style={{ fontSize: "1vw" }}>
+                                  <span style={{ fontSize: "0.8vw" }}>
                                     {" "}
                                     (incl. all the taxes)
                                   </span>
@@ -1081,9 +1081,9 @@ const NewPaymentBox = (
                   ) : (
                     <div className="mv-top-2">
                       <Link
-                        to="/newpayment"
+                        to="/payment"
                         className={
-                          Locator.pathname === "/newpayment"
+                          Locator.pathname === "/payment"
                             ? "nav-active"
                             : "nav-passive"
                         }
@@ -1194,7 +1194,7 @@ const NewPaymentBox = (
                             <div className="total-pay-2">
                               <p className="total-pay-1-p1">
                                 ₹{totalpay}
-                                <span style={{ fontSize: "14px" }}>
+                                <span style={{ fontSize: "11px" }}>
                                   {" "}
                                   (incl. all the taxes)
                                 </span>
