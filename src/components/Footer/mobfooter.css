@@ -12,16 +12,17 @@
     }
   
     .div1 {
-      padding: 9.74vh 0 6vh 5vw;
+      padding: 0 0 1vh 5vw;
     }
   
     .mob-footer-logo {
       width: 99.4px;
       height: 64px;
+      display: none;
     }
   
     .direction {
-      margin: 7.9vh 0;
+      margin: 3.9vh 0;
     }
   
     .heading {
@@ -31,6 +32,7 @@
       line-height: 1.4rem;
       letter-spacing: 0.05em;
       text-align: left;
+      text-decoration: underline;
     }
   
     .direction p {
@@ -40,6 +42,7 @@
       line-height: 160%;
       letter-spacing: 0.7px;
       width: 60%;
+      display: none;
     }
   
     .connect a span {

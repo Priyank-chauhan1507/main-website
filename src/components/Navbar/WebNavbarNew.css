@@ -124,8 +124,8 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 position: relative;
-top:-3rem;
-left: -1rem;
+top:-2rem;
+/* left: -1rem; */
 z-index: 10000000000;
 cursor: pointer;
 text-decoration: underline;

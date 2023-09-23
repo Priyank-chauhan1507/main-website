@@ -871,21 +871,21 @@ const EventBox = () => {
                       Thomso Karaoke
                     </div>
                     <div className="col col-yellow">New Events</div>
-                    <div
+                    {/* <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(84);
                       }}
                     >
                       Sneaker Design(Duet)*
-                    </div>
+                    </div> */}
                     <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(88);
                       }}
                     >
-                      Sneaker Design(Solo)*
+                      Funk Feets(Solo)*
                     </div>
                     <div
                       className="col colhover"
