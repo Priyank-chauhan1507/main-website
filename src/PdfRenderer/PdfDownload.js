@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PDFDownloadLink,PDFViewer } from "@react-pdf/renderer";
 import Renderer from "./Renderer"
 import "./Pdfcss.css"
@@ -12,7 +12,7 @@ export default function PdfDownload() {
   </div>
   <div className="mobile">
     <div>
-      <PDFDownloadLink document={<Renderer/>} fileName='FORM'>
+      <PDFDownloadLink document={<Renderer/>} fileName='Id Card'>
  {({loading})=>
     loading? (
         <button>Loading document..</button>

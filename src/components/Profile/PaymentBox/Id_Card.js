@@ -50,6 +50,7 @@ const Id_Card = () => {
 
   useEffect(() => {
     getData();
+    
   }, []);
   const navigate = useNavigate();
 
@@ -328,7 +329,7 @@ const Id_Card = () => {
 
                         <p className="id_box_text1">College</p>
                         <p className="id_box_text2">
-                          Indian Institute of Technology, Roorkee
+                        {userDetails?.college}
                         </p>
 
                         <p className="id_box_text1">CA Referral & Name</p>

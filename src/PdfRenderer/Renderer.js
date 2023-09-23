@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
 });
 
 const Renderer = () => {
-  const [user, setuser] = useState({});
+  const [user, setUser] = useState({});
   const [items, setItems] = useState();
 
   useEffect(() => {
@@ -222,7 +222,7 @@ const Renderer = () => {
   const loadUserData = async () => {
     try {
       axios.get(`/apiV1/current_user_participant`).then((res) => {
-        setuser(res.data);
+        setUser(res.data);
         // console.log("data", res.data);
       });
     } catch (error) {
@@ -265,14 +265,17 @@ const Renderer = () => {
                     {user?.is_ca && (
                       <View>
                         <Text style={styles.id_box_text1}>CA ID</Text>
-                        <Text style={styles.id_box_text2}>ThCA-2300138</Text>
+                        <Text style={styles.id_box_text2}>{user?.ca_thomso_id}</Text>
+
                       </View>
                     )}
                   </View>
 
                   <Text style={styles.id_box_text1}>College</Text>
                   <Text style={styles.id_box_text2}>
-                    Indian Institute of Technology, Roorkee
+                  {user?.college}
+
+
                   </Text>
 
                   <Text style={styles.id_box_text1}>CA Referral & Name</Text>
