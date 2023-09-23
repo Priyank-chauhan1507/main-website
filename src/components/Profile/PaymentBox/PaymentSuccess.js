@@ -15,6 +15,7 @@ const PaymentSuccess = () => {
     <>
      {loading && <Loader />}
     <div
+    className="pay-success"
       style={{
         padding: "5%",
         display: "flex",
@@ -24,7 +25,7 @@ const PaymentSuccess = () => {
         width: "100%",
         // height: "100%",
         textAlign: "center",
-        marginTop: "25vh",
+        // marginTop: "auto",
         overflow: "hidden" 
       }}
     >
