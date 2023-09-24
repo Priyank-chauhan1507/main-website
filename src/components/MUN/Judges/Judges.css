@@ -63,15 +63,21 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 19.746px;
+    border: 3.291px solid #FDD52E;
 }
 .hero2{
     width: 100%;
     height: 42vh;
+    border-radius: 19.746px;
+    border: 3.291px solid #FDD52E;
 
 }
 .hero3{
     width: 100%;
     height: 42vh;
+    border-radius: 19.746px;
+    border: 3.291px solid #FDD52E;
 }
 .jelement2{
     color: #FFF;

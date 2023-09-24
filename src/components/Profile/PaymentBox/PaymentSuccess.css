@@ -1,0 +1,18 @@
+
+.paymentsuccessful{
+    display: flex;
+    flex-direction: column;
+}
+
+.sponImg{
+    margin-bottom: 4rem;
+    width: 24rem;
+}
+@media only screen and (max-width:768px){
+    .pay-success{
+        margin: auto !important;
+    }
+    .sponImg{
+        width: 14rem;
+    }
+}

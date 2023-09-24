@@ -8,6 +8,8 @@ import tick from "../../../assests/TickCorrect.svg"
 import download from "../../../assests/downloadsign.png"
 import Loader from "../../Loader/Loader"
 
+import spon from '../../../assests/spon.svg'
+
 
 const PaymentSuccess = () => {
   const [loading, setLoading] = useState(false);
@@ -15,6 +17,7 @@ const PaymentSuccess = () => {
     <>
      {loading && <Loader />}
     <div
+    className="pay-success"
       style={{
         padding: "5%",
         display: "flex",
@@ -24,7 +27,7 @@ const PaymentSuccess = () => {
         width: "100%",
         // height: "100%",
         textAlign: "center",
-        marginTop: "10vh",
+        // marginTop: "auto",
         overflow: "hidden" 
       }}
     >
@@ -33,6 +36,7 @@ const PaymentSuccess = () => {
       <div className="paymentsuccessful" style={{
           //  display:"flex",
              alignItems: "center", gap:"10px"}}>
+              <img src={spon} alt="loaddingg.." className="sponImg"/>
             <img src={tick} alt="" />
       <h1
         style={{
@@ -50,7 +54,7 @@ const PaymentSuccess = () => {
         Payment Done Successfully
       </h1>
       </div>
-      
+{/*       
       <div
         style={{
           display: "flex",
@@ -61,7 +65,7 @@ const PaymentSuccess = () => {
             <img src={download} style={{height:"15px", width:"15px", marginRight:"5px"}} alt="" />
             Download ID Card</Button>
         </Link>
-      </div>
+      </div> */}
     </div>
     </>
   );

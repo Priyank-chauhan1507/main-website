@@ -33,7 +33,7 @@ const App = () => {
         
         <div className="MUNcarousel">
 
-        <div className="carouselcontenttext">
+        <div className="carouselcontenttext1">
             UNITED NATIONS <br />
             GENERAL ASSEMBLY <br />
             (UNGA)
@@ -54,7 +54,7 @@ const App = () => {
         <img src={mun2} className='carouselcontentimg' alt="" />
         <div className="MUNcarousel">
 
-        <div className="carouselcontenttext">
+        <div className="carouselcontenttext2">
              ALL INDIA POLITICAL<br />
             PARTY MEET <br />
             (AIPPM)
@@ -76,7 +76,7 @@ const App = () => {
         <img src={mun3} className='carouselcontentimg' alt="" />
         <div className="MUNcarousel">
 
-        <div className="carouselcontenttext">
+        <div className="carouselcontenttext3">
             INDIAN WAR CABINET <br />
             (HISTORIC COMMITTEE) 
         </div>
