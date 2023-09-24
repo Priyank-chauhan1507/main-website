@@ -187,6 +187,10 @@
     background-color: #fff;
     margin-top: 19vw;
 }
+.registerMUNNowBtnClick:hover
+{
+    background-color: #FDD52E;
+}
 .prizesMUNWorth {
     border-radius: 14px;
     background: rgba(8, 48, 114, 0.40);

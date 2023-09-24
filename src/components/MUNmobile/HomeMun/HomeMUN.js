@@ -6,7 +6,7 @@ import Contact from "../../../components/MUNmobile/ContactUs/ContactUs";
 import Executives from "../Executive/Executive";
 import Executive from "../../../assests/Executive.png";
 import Comittee from "../Committee/Committee";
-import Prizes from "../../../assests/PrizesWorth.png";
+import Prizes from "../../../assests/PrizesWorth100.png";
 import Committee from "../../../assests/COMMITTEE.png";
 import "./HomeMUN.css"
 import FAQ from '../../MUN/FAQ/FAQ';

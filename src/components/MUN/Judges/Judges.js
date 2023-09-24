@@ -18,12 +18,12 @@ function Judges() {
             <div className="judges-cont-2">
                 <img src={judge2} className="hero2" alt="" />
                 <div className="jelement1">AISHNIT YADAV</div>
-                <div className="jelement2">CHAIR OF UNGA</div>
+                <div className="jelement2">PRESIDENT OF UNGA</div>
             </div>
             <div className="judges-cont-3">
                 <img src={judge3} className="hero3" alt="" />
                 <div className="jelement1">NAMAN JAIN</div>
-                <div className="jelement2">PRESIDENT OF AIPPM</div>
+                <div className="jelement2">CHAIR OF AIPPM</div>
             </div>
         </div>
     </div>
