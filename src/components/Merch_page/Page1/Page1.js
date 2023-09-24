@@ -4,8 +4,59 @@ import ellipse from '../../../assests/Ellipse 129.png'
 import product from '../../../assests/Group 37501.png'
 import Navbar from "../../EventsNavbar/Eventsnavbar"
 import Footer from "../../Navbar/WebNavbarNew"
+// import tshirt1front from "../../../assests/t1front.webp"
+// import tshirt1back from "../../../assests/t1back.webp"
+// import tshirt2front from "../../../assests/t2front.webp"
+// import tshirt2back from "../../../assests/t2back.webp"
+import tshirt3front from "../../../assests/tshirt3front.webp"
+import tshirt3back from "../../../assests/tshirt3back.webp"
+import tshirt3front2 from "../../../assests/tshirt3front2.webp"
+import tshirt3back2 from "../../../assests/tshirt3back2.webp"
 
 function Page1() {
+
+    const data = [
+        {
+            id:1,
+            price:350,
+            img: [
+
+                {
+                    id:1,
+                    imgfront:tshirt3front,
+                    imgback:tshirt3back,
+                },
+                {
+                    id:2, 
+                    imgfront:tshirt3front2,
+                    imgback:tshirt3back2,               
+                },
+
+                
+            ]
+            
+        }
+        // {
+        //     id:1,
+        //     name:"orng",
+        //     img:{
+        //          img1:tshirt1front,
+        //          img2:tshirt1back,
+        //     },
+        // },
+        // {
+        //     id:2,
+        //     name:"lee-t",
+        //     img:{
+        //          img1:tshirt2front,
+        //          img2:tshirt2back,
+        //     },
+        //     price:350,
+        // },
+       
+    ]
+
+
   return (
     <>
     <div className='merchPage1'>
@@ -33,109 +84,35 @@ function Page1() {
         <hr />
     </div>
     <div className="product">
-        <div className="product1">
-            <div>
-                <img className='product-merch' src={product} alt="..." />
-            </div>
-                <div className="text">
-                <p className="product_name">THOMSO UNISEX TSHIRT</p>
-                <div className="price">
-                <p className="price1">Rs.350 </p>
-                <p className="price2">Rs.100</p>
-                </div>
-            </div>
-            </div>
-            <hr />
-        <div className="product2">
-                <div>
-                    <img className='product-merch' src={product} alt="..." />
-                </div>
-                    <div className="text">
-                    <p className="product_name">THOMSO UNISEX TSHIRT</p>
-                    <div className="price">
-                    <p className="price1">Rs.350 </p>
-                    <p className="price2">Rs.100</p>
+        {data.map(({id,img,price}) => {
+            return(
+                <>
+                {/* <Link to="/merch_page2">
+
+                </Link> */}
+                <div className="product1" key={id}>
+                    <div>
+                        <img className='product-merch' src={img[0].imgfront} alt="..." />
                     </div>
-                </div>
-                </div>
-                <hr />
-        <div className="product3">
-            <div>
-                <img className='product-merch' src={product} alt="..." />
-            </div>
-            <div className="text">
-                <p className="product_name">THOMSO UNISEX TSHIRT</p>
-                <div className="price">
-                    <p className="price1">Rs.350 </p>
-                    <p className="price2">Rs.100</p>
-                </div>
-                </div>
-                </div>
-                <hr />
-        <div className="product4">
-            <div>
-                <img className='product-merch' src={product} alt="..." />
-            </div>
-            <div className="text">
-                <p className="product_name">THOMSO UNISEX TSHIRT</p>
-            <div className="price">
-                <p className="price1">Rs.350 </p>
-                <p className="price2">Rs.100</p>
-            </div>
-            </div>
-            </div>
-            <hr />
-        <div className="product5">
-            <div>
-                <img className='product-merch' src={product} alt="..." />
-            </div>
-            <div className="text">
-                <p className="product_name">THOMSO UNISEX TSHIRT</p>
-            <div className="price">
-                <p className="price1">Rs.350 </p>
-                <p className="price2">Rs.100</p>
-            </div>
-            </div>
-            </div>
-            <hr />
-        <div className="product6">
-            <div>
-                <img className='product-merch' src={product} alt="..." />
-            </div>
-            <div className="text">
-                <p className="product_name">THOMSO UNISEX TSHIRT</p>
-            <div className="price">
-                <p className="price1">Rs.350 </p>
-                <p className="price2">Rs.100</p>
-            </div>
-            </div>
-            </div>
-            <hr />
-        <div className="product7">
-            <div>
-                <img className='product-merch' src={product} alt="..." />
-            </div>
-            <div className="text">
-                <p className="product_name">THOMSO UNISEX TSHIRT</p>
-            <div className="price">
-                <p className="price1">Rs.350 </p>
-                <p className="price2">Rs.100</p>
-            </div>
-            </div>
-            </div>
-            <hr />
-        <div className="product8">
-            <div>
-                <img className='product-merch' src={product} alt="..." />
-            </div>
-            <div className="text">
-                <p className="product_name">THOMSO UNISEX TSHIRT</p>
-            <div className="price">
-                <p className="price1">Rs.350 </p>
-                <p className="price2">Rs.100</p>
-            </div>
-            </div>
-            </div>
+                        <div className="text">
+                        <p className="product_name">THOMSO UNISEX TSHIRT</p>
+                        <div className="price">
+                        <p className="price1">{price} </p>
+                        <p className="price2">Rs.100</p>
+                        </div>
+                    </div>
+                    </div>
+                    <hr />
+                
+                </>
+            )
+        })}
+      
+       
+       
+       
+       
+        
             <hr />
     </div>
     
