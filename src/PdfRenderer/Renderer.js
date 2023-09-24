@@ -13,6 +13,9 @@ import iitr_logo from "./Group 36648.png";
 import thomso_logo from "./image 79.png";
 import qr from "./qr.png";
 import CS_normal from "./COMIC.TTF";
+import { connect } from "react-redux";
+import { fetchUser, logout } from "../components/User/UserActions";
+import { Store } from "../Config/Store";
 import CS_bold from "./design.graffiti.comicsansmsgras.ttf";
 import axios from "axios";
 
@@ -204,31 +207,47 @@ const styles = StyleSheet.create({
   },
 });
 
-const Renderer = () => {
-  const [user, setUser] = useState({});
-  const [items, setItems] = useState();
+const Renderer = ({user,items}) => {
+  
+ 
+//  const [items, setItems] = useState();
 
-  useEffect(() => {
-    loadUserData();
-  }, []);
+  // const[user,setUser] = useState({});
 
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("dataKey"));
-    if (items) {
-      setItems(items);
-    }
-  }, [items]);
+  // useEffect(() => {
+  //   loadUserData();
+  // }, []);
+  
+  
+ 
 
-  const loadUserData = async () => {
-    try {
-      axios.get(`/apiV1/current_user_participant`).then((res) => {
-        setUser(res.data);
-        // console.log("data", res.data);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // useEffect(() => {
+   
+  //     const items = JSON.parse(localStorage.getItem("dataKey"));
+  //   if (items) {
+  //     setItems(items);
+  //     setUser(data);
+  //   }
+  // }, [items]);
+  // console.log(user,"please");
+  
+  
+
+  // const func=()=>{
+  //   const { dispatch } = Store;
+  //   dispatch(fetchUser());
+  // }
+
+  // const loadUserData = async () => {
+  //   try {
+  //     axios.get(`/apiV1/current_user_participant`).then((res) => {
+  //       setUser(res.data);
+  //       // console.log("data", res.data);
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   // console.log(user, "ddddd");
   return (
     <Document>
@@ -248,7 +267,7 @@ const Renderer = () => {
                   {user.avtar && (
                     <Image src={user?.avtar} style={styles.id_box_image} />
                   )}
-                  <Image src={items} style={styles.id_box_qr} />
+                  <Image src={ JSON.parse(user?.qr)} style={styles.id_box_qr} />
                 </View>
 
                 <View style={styles.id_box_right}>

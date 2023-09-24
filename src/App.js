@@ -29,8 +29,8 @@ import IdcardBox from "./components/Profile/ID_card/idcardBox";
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
 import AdmitCard from "./components/Profile/PaymentBox/AdmitCard";
-import PdfDownload from "./PdfRenderer/PdfDownload"
-import Pdf from "./PdfRenderer/Renderer"
+import PdfDownload from "./PdfRenderer/PdfDownload";
+// import Pdf from "./PdfRenderer/Renderer"
 import Qr from "./PdfRenderer/Qrcode"
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
@@ -53,10 +53,30 @@ import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopa
 import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
+import Renderer from "./PdfRenderer/Renderer"
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 // ReactGA4.initialize("G-FG974BLVDN");
 const App = (props) => {
+
+
+  const [user,setUser] = useState({});
+  const [items,setItems] = useState();
+
+
+useEffect(() => {
+  if(localStorage.getItem("token")){
+    loadUserData();
+  };
+  }, [user]);
+
+//  useEffect(() => {
+   
+//       const items = JSON.parse(localStorage.getItem("dataKey"));
+//     if (items) {
+//       setItems(items);
+//         };
+//   }, []);
 
   useEffect(() => {
     // ReactGA4.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
@@ -66,6 +86,18 @@ const App = (props) => {
       props?.userDetails && props?.fetchUsers({ id: userId });
     }
   }, []);
+
+    const loadUserData = async () => {
+    try {
+      axios.get(`/apiV1/current_user_participant`).then((res) => {
+        setUser(res.data);
+        // console.log("data", res.data);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
 
   return (
     <>
@@ -99,8 +131,9 @@ const App = (props) => {
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/id_cards" element={<Idcard />} />
           <Route exact={true} path="/id_card" element={<Id_Card/>} />
-          <Route exact={true} path="/pdf" element={<PdfDownload />} />
-          <Route exact={true} path="/pdfs" element={<Pdf/>} />
+          <Route exact={true} path="/pdf" element={<PdfDownload data={user} items ={items} />} />
+          <Route exact={true} path="/renderer" element={<Renderer data ={user}  items = {items}/>} />
+          {/* <Route exact={true} path="/pdfs" element={<Pdf/>} /> */}
           <Route exact={true} path="/qr" element={<Qr/>} />
 
           <Route exact={true} path="/id_card_box" element={<IdcardBox />} />

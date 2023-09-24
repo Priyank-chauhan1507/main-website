@@ -41,12 +41,13 @@ const Id_Card = () => {
   //   const navigate = useNavigate();
   const [logout, setLogout] = useState(0);
   const [userDetails, setuserDetails] = useState({});
-  const [qr, setQr] = useState("");
+  // const [qr, setQr] = useState("");
   const [vall, setVall] = useState("");
   const [visible, setVisible] = useState(false);
   const [download, setDownload] = useState(false);
   const [qrshow,setQrshow] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [qr, setQr] = useState({qr : ""})
 
   useEffect(() => {
     getData();
@@ -69,6 +70,27 @@ const Id_Card = () => {
       navigate(`/login`);
     }
   });
+
+  
+ 
+  const QrChange = async ()   => {
+    navigate("/pdf");
+    
+    // setLoading(true);
+    // const response = await axios.put(`/apiV1/registeruser/${localStorage.getItem("user_id")}`, {"qr" : JSON.stringify(vall)});
+    // if (response.status == 200) {
+    //   // setprofilepic(true);
+    //   // fetchUser();
+    //   setLoading(false);
+      
+    //   console.log(response.data, "qr_response");
+    //       navigate("/pdf");
+    // } else {
+    //   setLoading(false);
+    //   message.error("Something went wrong while generating QR");
+    //   setprofilepic(null);
+    // }
+  };
 
   const getData = async () => {
     setLoading(true);
@@ -95,7 +117,7 @@ const Id_Card = () => {
       setVisible(true);
       setQrshow(false);
       setDownload(true);
-      setTimeout(() => {
+      setTimeout( async () => {
         const canvas = document.getElementById("myqr");
         // console.log(canvas, "sdkcjanh");
         const pngUrl = canvas
@@ -103,7 +125,24 @@ const Id_Card = () => {
           .replace("image/png", "image/octet-stream");
 
         setVall(pngUrl);
-      }, 1000);
+
+        setLoading(true);
+        const response = await axios.put(`/apiV1/registeruser/${localStorage.getItem("user_id")}`, {"qr" : JSON.stringify(pngUrl)});
+        if (response.status == 200) {
+          // setprofilepic(true);
+          // fetchUser();
+          setLoading(false);
+          
+          console.log(response.data, "qr_response");
+             
+        } else {
+          setLoading(false);
+          message.error("Something went wrong while generating QR");
+          setprofilepic(null);
+        }
+             
+          }, 1000);
+         
     }
   };
 
@@ -140,9 +179,9 @@ const Id_Card = () => {
     // console.log(formData);
     // setprofilepic(true);
 
-    if (file.size > 2048000) {
-      setLoading(false);
-      message.warning("Size is too large.Size must be less than 2MB");
+    if (file.size > 512000) {
+      // setLoading(false);
+      message.warning("Size is too large.Size must be less than 500KB");
       setprofilepic(null);
       return false;
     } else {
@@ -384,21 +423,13 @@ const Id_Card = () => {
                       <div>
                           <>
                             {" "}
-                            <button className="generate">
-                              <Link
-                                to="/pdf"
-                                style={{ cursor: "pointer", color: "black", display: "flex",
-                                gap: "10px",
-                                justifyContent: "center",
-                                alignItems: "center" }}
-                              >
+                            <button className="generate" onClick={QrChange}>
                                 <img
                                   className="downloadsign"
                                   src={downloadd}
                                   alt=""
                                 />{" "}
                                 Download ID card
-                              </Link>
                             </button>{" "}
                           </>
                       </div>
