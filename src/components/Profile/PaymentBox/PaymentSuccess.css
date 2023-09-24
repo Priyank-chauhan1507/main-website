@@ -3,3 +3,12 @@
         margin: auto !important;
     }
 }
+
+.paymentsuccessful{
+    display: flex;
+    flex-direction: column;
+}
+
+.sponImg{
+    margin-bottom: 4rem;
+}

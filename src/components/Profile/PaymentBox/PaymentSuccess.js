@@ -8,6 +8,8 @@ import tick from "../../../assests/TickCorrect.svg"
 import download from "../../../assests/downloadsign.png"
 import Loader from "../../Loader/Loader"
 
+import spon from '../../../assests/spon.svg'
+
 
 const PaymentSuccess = () => {
   const [loading, setLoading] = useState(false);
@@ -34,6 +36,7 @@ const PaymentSuccess = () => {
       <div className="paymentsuccessful" style={{
           //  display:"flex",
              alignItems: "center", gap:"10px"}}>
+              <img src={spon} alt="loaddingg.." className="sponImg"/>
             <img src={tick} alt="" />
       <h1
         style={{
