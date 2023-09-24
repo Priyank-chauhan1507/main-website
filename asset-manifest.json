@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d1d962e5.css",
-    "main.js": "/static/js/main.62d0f252.js",
+    "main.js": "/static/js/main.abdc9d7a.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -17,6 +17,7 @@
     "static/media/yellowBack.webp": "/static/media/yellowBack.3acd5ce5d18423f8a0ca.webp",
     "static/media/Landing-page-2-1.webp": "/static/media/Landing-page-2-1.a3d9992c858b965fed61.webp",
     "static/media/simg4.svg": "/static/media/simg4.b7c2630225a19d138392c3b50e837393.svg",
+    "static/media/tshirt3front.webp": "/static/media/tshirt3front.c4fc46fea9276f297141.webp",
     "static/media/t5.webp": "/static/media/t5.257269e2603260d259f0.webp",
     "static/media/t4.webp": "/static/media/t4.60152bafce56b451a379.webp",
     "static/media/CommitteeMUN.png": "/static/media/CommitteeMUN.4679133e9f4fe67fcce3.png",
@@ -36,9 +37,11 @@
     "static/media/t3.webp": "/static/media/t3.cc7fbc9e73f2e14d1d3a.webp",
     "static/media/t6.webp": "/static/media/t6.7fd65e9e65283bfd35bf.webp",
     "static/media/t2.webp": "/static/media/t2.ac5c473aead39c758465.webp",
+    "static/media/tshirt3front2.webp": "/static/media/tshirt3front2.045b659978c8c3a49cf8.webp",
     "static/media/baroda.svg": "/static/media/baroda.65ff8e3500333ae1ca8b487c52a787f1.svg",
     "static/media/events.png": "/static/media/events.48b2d778b6652a361cb4.png",
     "static/media/bgmobile.webp": "/static/media/bgmobile.9cec63dbb9098095c10c.webp",
+    "static/media/tshirt3back.webp": "/static/media/tshirt3back.04b27b47a846ea8e5001.webp",
     "static/media/AIPPMnew.png": "/static/media/AIPPMnew.1eceb14527aceb712109.png",
     "static/media/newsingermob.webp": "/static/media/newsingermob.22082dc446787622f983.webp",
     "static/media/bg.jpg": "/static/media/bg.b9c023b1978d5f11ddc0.jpg",
@@ -60,6 +63,7 @@
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/spon.svg": "/static/media/spon.621a6c76c08148593c13e5af3f55bc7c.svg",
     "static/media/slidetext.svg": "/static/media/slidetext.368ae98e4d0b3b5a0340b80efd80620a.svg",
+    "static/media/tshirt3back2.webp": "/static/media/tshirt3back2.30d604b4c38f102611cc.webp",
     "static/media/muninfopage3img.webp": "/static/media/muninfopage3img.87bf61adf95e6489abc1.webp",
     "static/media/unischo.svg": "/static/media/unischo.552c8f3a6de19eb669d3585b62d14864.svg",
     "static/media/joy.svg": "/static/media/joy.8e7e6cdccd03e352fec59acc78c6bb12.svg",
@@ -145,10 +149,10 @@
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
     "main.d1d962e5.css.map": "/static/css/main.d1d962e5.css.map",
-    "main.62d0f252.js.map": "/static/js/main.62d0f252.js.map"
+    "main.abdc9d7a.js.map": "/static/js/main.abdc9d7a.js.map"
   },
   "entrypoints": [
     "static/css/main.d1d962e5.css",
-    "static/js/main.62d0f252.js"
+    "static/js/main.abdc9d7a.js"
   ]
 }
