@@ -50,6 +50,10 @@
     margin-top: 10vw;
     cursor: pointer;
 }
+.registerNowBtnClick:hover
+{
+    background-color: #FDD52E;
+}
 
 .prizesWorth {
     border-radius: 14px;

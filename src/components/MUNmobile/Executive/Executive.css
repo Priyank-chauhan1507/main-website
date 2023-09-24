@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .CarouselCommittee
 {
     height: 110vh;
@@ -8,25 +10,52 @@
     /* height:58vh; */
     width:52vw;
     object-fit: cover;
-    border-radius: 10px;
-    
-    
+    border-radius: 17.796px;
 }
 .judge2-img{
     /* height:58vh; */
     width:52vw;
-    border-radius: 10px;
+    border-radius: 17.796px;
 
 }
 .judge3-img{
     /* height:58vh; */
     width: 52vw;
-    border-radius: 10px;
-
+    border-radius: 17.796px;
 }
 .judge1-discription{
-    color: #ffffff;
+    color: #FFF;
     text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+
+}
+.judge1-discription1{
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.judge1-discription2{
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.judge1-discription3{
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 /* .j1{
     object-fit: cover;
@@ -61,18 +90,18 @@
 
 .judge1-img{
     height:50vh;
-    border-radius: 10px;
+    border-radius: 17.796px;
     
     
 }
 
 .judge2-img{
     height:48vh;
-    border-radius: 10px;
+    border-radius: 17.796px;
 }
 .judge3-img{
     height:48vh;
-    border-radius: 10px;
+    border-radius: 17.796px;
 }
 }
 @media only screen and (max-width:350px)
@@ -86,14 +115,14 @@
 } */
 .judge1-img{
     height:40vh;
-    border-radius: 10px;
+    border-radius: 17.796px;
 }
 .judge2-img{
     height:40vh;
-    border-radius: 10px;
+    border-radius: 17.796px;
 }
 .judge3-img{
     height:40vh;
-    border-radius: 10px;
+    border-radius: 17.796px;
 }
 }
