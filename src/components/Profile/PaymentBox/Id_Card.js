@@ -74,7 +74,7 @@ const Id_Card = () => {
   
  
   const QrChange = async ()   => {
-    navigate("/pdf");
+    navigate("/ssssssss");
     
     // setLoading(true);
     // const response = await axios.put(`/apiV1/registeruser/${localStorage.getItem("user_id")}`, {"qr" : JSON.stringify(vall)});
