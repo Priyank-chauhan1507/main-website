@@ -116,7 +116,7 @@ const App = (props) => {
           <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
           <Route exact={true} path="/merch_page1" element={<Page1/>} />
-          <Route exact={true} path="/merch_page2" element={<Page2/>} />
+          <Route exact={true} path="/merch_page2/:id" element={<Page2/>} />
           <Route exact={true} path="/merch_page3" element={<Page3/>} />
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
