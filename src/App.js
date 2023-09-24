@@ -131,7 +131,7 @@ useEffect(() => {
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/id_cards" element={<Idcard />} />
           <Route exact={true} path="/iiiiiiii" element={<Id_Card/>} />
-          <Route exact={true} path="/ssssssss" element={<PdfDownload data={user} items ={items} />} />
+          <Route exact={true} path="/pdf" element={<PdfDownload data={user} items ={items} />} />
           <Route exact={true} path="/renderer" element={<Renderer data ={user}  items = {items}/>} />
           {/* <Route exact={true} path="/pdfs" element={<Pdf/>} /> */}
           <Route exact={true} path="/qr" element={<Qr/>} />
