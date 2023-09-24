@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8cfae1a6.css",
-    "main.js": "/static/js/main.bb864014.js",
+    "main.js": "/static/js/main.9ffee602.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -42,7 +42,6 @@
     "static/media/AIPPMnew.png": "/static/media/AIPPMnew.1eceb14527aceb712109.png",
     "static/media/newsingermob.webp": "/static/media/newsingermob.22082dc446787622f983.webp",
     "static/media/bg.jpg": "/static/media/bg.b9c023b1978d5f11ddc0.jpg",
-    "static/media/ClosedPaymentAll.webp": "/static/media/ClosedPaymentAll.b6e1ed586488618c5083.webp",
     "static/media/below-thomso.webp": "/static/media/below-thomso.c02a8a0d3de52907e375.webp",
     "static/media/IITRMUN.png": "/static/media/IITRMUN.6e40f1aae4933d84d827.png",
     "static/media/UNGAnew.png": "/static/media/UNGAnew.5c797f4a847eb935aa0c.png",
@@ -104,6 +103,7 @@
     "static/media/pay.svg": "/static/media/pay.1cc47b09e520356f23c74b99e352a2d4.svg",
     "static/media/Cross.webp": "/static/media/Cross.5ee0ebb078621a76a565.webp",
     "static/media/eventpic.webp": "/static/media/eventpic.15b58a132d7073862500.webp",
+    "static/media/ClosedPaymentAll.webp": "/static/media/ClosedPaymentAll.1fe54119f77c3c55609c.webp",
     "static/media/paymentpic.webp": "/static/media/paymentpic.b25fa82724bea521695b.webp",
     "static/media/cursor.svg": "/static/media/cursor.bc2780eef788479330e9.svg",
     "static/media/instagram.svg": "/static/media/instagram.58c95fb2834d78f23301fcde529399f6.svg",
@@ -144,10 +144,10 @@
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
     "main.8cfae1a6.css.map": "/static/css/main.8cfae1a6.css.map",
-    "main.bb864014.js.map": "/static/js/main.bb864014.js.map"
+    "main.9ffee602.js.map": "/static/js/main.9ffee602.js.map"
   },
   "entrypoints": [
     "static/css/main.8cfae1a6.css",
-    "static/js/main.bb864014.js"
+    "static/js/main.9ffee602.js"
   ]
 }
