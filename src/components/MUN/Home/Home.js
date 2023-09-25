@@ -91,7 +91,7 @@ function Home() {
           <Contact />
         </div>
         <div className="MUNFooter">
-          <Footer color="transparent" />
+          <Footer color="transparent" className="mun_footer_web"/>
         </div>
       </div>
       <div className="MUN-mob">
