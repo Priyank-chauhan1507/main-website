@@ -54,8 +54,8 @@ body {
   overflow: hidden;
   color: var(--Secondary2, #A09FAF);
   font-family: Roboto;
-  width: 100%;
-  text-align: justify;
+  width: 107%;
+  /* text-align: justify; */
 }
 
 .panel p {
