@@ -111,6 +111,31 @@
 .color122 {
   color: #2c2c2c;
 }
+.Quantity {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
+.quantityFont {
+  color: #2c2c2c;
+  font-family: Comic Sans MS;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: 0.4px;
+  text-transform: lowercase;
+  margin-right: 1rem;
+}
+.arithmatic{
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .colorbox {
   display: flex;
   flex-direction: row;
@@ -163,6 +188,7 @@
   border-radius: 5vh;
   border-radius: 100%;
   padding: 1.5vw;
+  cursor: pointer;
 }
 .size2 {
   border: 2px solid black;
@@ -173,26 +199,9 @@
   align-items: center;
   border-radius: 100%;
   padding: 1.5vw;
-}
-.size3 {
-  border: 2px solid black;
-  height: 4vh;
-  width: 2.5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  padding: 1.5vw;
-}
-.size4 {
-  border: 2px solid black;
-  height: 4vh;
-  width: 2.5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  padding: 1.5vw;
+  border-color: #F26120;
+  color: #F26120;
+  cursor: pointer;
 }
 .bag1 {
   /* border:2px solid black; */
