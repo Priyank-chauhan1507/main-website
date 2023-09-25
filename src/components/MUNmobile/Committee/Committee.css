@@ -98,9 +98,11 @@
          bottom:22vh;
     }
     .carouselcontenttext3{
-         bottom:39vh;
+         bottom:37vh;
     }
 }
+
+
 
 @media only screen and (max-width:650px)
 {
@@ -111,7 +113,12 @@
     /* .carouselcontentbtn{
         height:5vh !important;
     } */
+
+    .carouselcontenttext3{
+        bottom:30vh;
+   }
 }
+
 @media only screen and (max-width:500px)
 {
     .carouselcontenttext{
@@ -122,6 +129,45 @@
         height:5vh !important;
     } */
 }
+
+@media only screen and (max-width:490px)
+{
+    .carouselcontenttext3{
+        bottom:25vh;
+   }
+}
+
+@media only screen and (max-width:400px)
+{
+    .carouselcontenttext3{
+        bottom:21vh;
+   }
+
+   .carouselcontenttext1{
+    bottom:18vh;
+}
+
+.carouselcontenttext2{
+    bottom:19vh;
+}
+}
+
+
+@media only screen and (max-width:320px)
+{
+    .carouselcontenttext3{
+        bottom:17vh;
+   }
+
+   .carouselcontenttext1{
+    bottom:15vh;
+}
+
+.carouselcontenttext2{
+    bottom:15vh;
+}
+}
+
 @media only screen and (max-width:410px)
 {
     .carouselcontenttext{
