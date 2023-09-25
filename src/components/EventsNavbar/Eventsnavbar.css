@@ -208,6 +208,27 @@
     border-radius: 20px;
 }
 
+.none_display{
+    display: none;
+}
+
+.l_body{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    left: 0px;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background: rgba(10, 14, 17, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width:768px) {
     .mainnav {
         display: none;

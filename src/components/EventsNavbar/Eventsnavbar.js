@@ -6,6 +6,7 @@ import MobEventnavbar from "./MobEventnavbar";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../assests/profile1.png.jpg";
 import axios from "axios";
+import { Payment } from "@mui/icons-material";
 
 function Navbar({ color, disable, setregister, register, data }) {
   const [display1, setdisplay] = useState("none");
@@ -87,6 +88,19 @@ function Navbar({ color, disable, setregister, register, data }) {
             target="_blank"
           >
             Zonals
+          </a>
+          <a
+            className={localStorage.getItem("token")?"event-nav-right-compo hover-underline-animation":"none_display"}
+            onClick={() => {
+              {
+                userDetails.Payment ?
+                navigate("/iiiiiiii")
+              :
+                alert('payment incomplete');
+              }
+            }}
+          >
+            ID-CARD
           </a>
           {localStorage.getItem("token") ? (
             <>

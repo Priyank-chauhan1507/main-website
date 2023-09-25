@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assests/logo.svg";
 import logo1 from "../../assests/logo2.png";
+import axios from "axios";
 import bgmobile from "../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
 import cross from "../../assests/Cross.webp";
@@ -14,12 +15,30 @@ function MobEventnavbar() {
   };
 
   const [show, setshow] = useState(true);
+  const [user,setUser] = useState({});
   const [display, setdisplay] = useState("none");
   const [show1, setshow1] = useState({ check: false, first: "" });
   localStorage.setItem("show", show);
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
   };
+  useEffect(() => {
+    if(localStorage.getItem("token")){
+      loadUserData();
+      console.log(user);
+    };
+    }, []);
+  const loadUserData = async () => {
+    try {
+      axios.get(`/apiV1/current_user_participant`).then((res) => {
+        setUser(res.data);
+        // console.log("data", res.data);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
   return (
     <div className="nav-comp1">
       <div className="inner_mob_nav">
@@ -113,6 +132,20 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
+          <h1
+            onClick={() => {
+                {
+                  user.payment ?
+                  navigate("/iiiiiiii")
+                :
+                  alert('payment incomplete');
+                }
+              
+              window.location.reload(false);
+            }}
+          >
+            ID-Card
+          </h1>
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
@@ -201,6 +234,19 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
+          {localStorage.getItem("token") 
+          && (
+          <h1
+            onClick={() => {
+              navigate("/iiiiiiii");
+              window.location.reload(false);
+            }}
+            
+          >
+            ID-Card
+          </h1>
+          )
+          }
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
