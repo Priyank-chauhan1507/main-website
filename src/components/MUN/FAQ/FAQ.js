@@ -1,4 +1,4 @@
-  import React, { useState } from "react";
+  import React, { useState, Link } from "react";
 import "./FAQ.css";
 import img1 from "../../../assests/Cross.webp";
 import FAQ1 from "../../../assests/FAQS.png";
@@ -52,7 +52,7 @@ function FAQ() {
       <div className="accordion">
         <div className="left_num_faq">02</div>
         <div className="right_mun_faq_head">
-        What are the agendas of the IITR MUN 2022?
+        What are the agendas of the IITR MUN 2023?
           {plus["2nd"] ? (
             <AiFillPlusCircle
               class="accordion_1 plus_btn_mun"
@@ -70,11 +70,12 @@ function FAQ() {
               />
               <div className="panel">
                 <p>
-                There are three committees this year:  <br />
-                AIPPM: Evaluating the ongoing ethnic clashes in Manipur 
-                UNGA: Deliberation over unlawful occupation of territory and forced governance with special emphasis on Israel Palestine conflict
-                INDIAN WAR CABINET: Bangladesh Liberation War of 1971 <br />
-                https://thomso.in/events 
+                <div>There are three committees this year:</div> 
+                <div>AIPPM: Evaluating the ongoing ethnic clashes in Manipur</div>
+                <div>UNGA: Deliberation over unlawful occupation of territory and forced governance with special emphasis on Israel Palestine conflict</div> 
+                <div>INDIAN WAR CABINET: Bangladesh Liberation War of 1971 </div>
+                <Link to='\events.thomso.in' target="_blank"><h2>Events</h2></Link>
+                
                 </p>
               </div>
             </>
@@ -164,7 +165,7 @@ function FAQ() {
               />
               <div class="panel">
                 <p>
-                IITR MUN is a two days conference and will be held from 14 October to 15 October
+                IITR MUN is a two days conference and will be held on 13 October and 14 October
                 </p>
               </div>
             </>
