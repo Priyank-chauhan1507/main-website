@@ -7,13 +7,27 @@ import insta from "../../assests/instagram.svg";
 import x from "../../assests/x.svg";
 import youtube from "../../assests/youtube.svg";
 import Footer from "../Footer/Mobfooter";
+import { useLocation, Link, useNavigate  } from "react-router-dom";
+
 
 const WebNavbarNew = () => {
+  const navigate = useNavigate();
+  const locator = useLocation();
+  const onHandleClick = (e) => {
+    navigate(`/${e}`);
+  };
+  const Locator = useLocation();
+
+
   return (
     <>
       {/* <img src={background} alt="background" style={{width:"100vw",height:"340px",zIndex:"100",overflowY:'hidden'}}/> */}
       <Footer className='mob-foot' />
-      <div className="webNavbarMain">
+      <div     className={
+                          Locator.pathname === "/MUN"
+                          ? "webNavbarMain clearbgmun"
+                          : "webNavbarMain"
+                        }>
         <div className="webNavbarLeft">
           <div className="webNavbarLeft1">Contact us</div>
           <div className="webNavbarLeft3">

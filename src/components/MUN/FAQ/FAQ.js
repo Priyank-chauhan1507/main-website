@@ -147,11 +147,11 @@ function FAQ() {
         <div className="left_num_faq">05</div>
         <div className="right_mun_faq_head">
         What are the dates of IITR MUN?
-          {plus["4th"] ? (
+          {plus["5th"] ? (
             <AiFillPlusCircle
               class="accordion_1 plus_btn_mun"
               onClick={() => {
-                setPlus({ ...plus, ["4th"]: false });
+                setPlus({ ...plus, ["5th"]: false });
               }}
             />
           ) : (
@@ -159,7 +159,7 @@ function FAQ() {
               <AiFillMinusCircle
                 class="accordion_1 plus_btn_mun"
                 onClick={() => {
-                  setPlus({ ...plus, ["4th"]: true });
+                  setPlus({ ...plus, ["5th"]: true });
                 }}
               />
               <div class="panel">
@@ -176,11 +176,11 @@ function FAQ() {
         <div className="left_num_faq">06</div>
         <div className="right_mun_faq_head">
         What is the prize worth of the event?
-          {plus["4th"] ? (
+          {plus["6th"] ? (
             <AiFillPlusCircle
               class="accordion_1 plus_btn_mun"
               onClick={() => {
-                setPlus({ ...plus, ["4th"]: false });
+                setPlus({ ...plus, ["6th"]: false });
               }}
             />
           ) : (
@@ -188,7 +188,7 @@ function FAQ() {
               <AiFillMinusCircle
                 class="accordion_1 plus_btn_mun"
                 onClick={() => {
-                  setPlus({ ...plus, ["4th"]: true });
+                  setPlus({ ...plus, ["6th"]: true });
                 }}
               />
               <div class="panel">
