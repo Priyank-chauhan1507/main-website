@@ -45,6 +45,7 @@ import ReactGA4 from 'react-ga4';
 import Judges from "./components/MUN/Judges/Judges";
 import Page1 from "./components/Merch_page/Page1/Page1";
 import Page2 from "./components/Merch_page/Page2/Page2";
+import PopUP from "./components/Merch_page/PopUp/PopUp";
 // require('dotenv').config()
 import Page3 from "./components/Merch_page/Page3/Page3";
 import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopage1";
@@ -155,6 +156,7 @@ useEffect(() => {
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
           <Route exact={true} path="/sponsers" element={<Sponsers/>} />
+          <Route exact={true} path="/PopUp" element={<PopUP/>} />
         </Routes>
       </Router>
     </>
