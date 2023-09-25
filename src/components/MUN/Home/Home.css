@@ -92,6 +92,18 @@ font-weight: 400;
 line-height: 162.2%; /* 32.44px */
 letter-spacing: 1px;
 }
+
+.mun_footer_web{
+    background:none !important;
+    background-color: white !important;
+}
+
+.clearbgmun{
+    background:none !important;
+    background-color: rgba(0, 8, 21, 0.50) !important;
+    box-shadow: 1px 7px 30px 59px rgba(0, 0, 0, 0.07) !important;
+}
+
 .MUNjuDges
 {
     margin-top: 35vh;
