@@ -23,7 +23,7 @@ function FAQ() {
       <div className="accordion">
         <div className="left_num_faq">01</div>
         <div className="right_mun_faq_head">
-          What are the NFTs ?
+        Where can I register for Thomso?
           {plus["1st"] ? (
             <AiFillPlusCircle
               class="accordion_1 plus_btn_mun"
@@ -41,10 +41,7 @@ function FAQ() {
               />
               <div className="panel">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                Registration can be done at https://thomso.in/register 
                 </p>
               </div>
             </>
@@ -55,7 +52,7 @@ function FAQ() {
       <div className="accordion">
         <div className="left_num_faq">02</div>
         <div className="right_mun_faq_head">
-          How do i get NFTs?
+        What are the agendas of the IITR MUN 2022?
           {plus["2nd"] ? (
             <AiFillPlusCircle
               class="accordion_1 plus_btn_mun"
@@ -73,10 +70,11 @@ function FAQ() {
               />
               <div className="panel">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                There are three committees this year:  <br />
+                AIPPM: Evaluating the ongoing ethnic clashes in Manipur 
+                UNGA: Deliberation over unlawful occupation of territory and forced governance with special emphasis on Israel Palestine conflict
+                INDIAN WAR CABINET: Bangladesh Liberation War of 1971 <br />
+                https://thomso.in/events 
                 </p>
               </div>
             </>
@@ -87,7 +85,7 @@ function FAQ() {
       <div className="accordion">
         <div className="left_num_faq">03</div>
         <div className="right_mun_faq_head">
-          How can we buy your NFTs?
+        What will be included in the registration fees?
           {plus["3rd"] ? (
             <AiFillPlusCircle
               class="accordion_1 plus_btn_mun"
@@ -105,10 +103,10 @@ function FAQ() {
               />
               <div class="panel">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                Registration fee is Rs.2799+taxes. <br />
+                It will include accommodation(compulsory for girls) for three days, breakfast and lunch, goodies, participation in all events and pronites. <br /> 
+                What about dinner? <br />
+                At the time of dinner, pronites will be going on but participants could avail the facilities of stalls and canteens.
                 </p>
               </div>
             </>
@@ -119,7 +117,7 @@ function FAQ() {
       <div className="accordion">
         <div className="left_num_faq">04</div>
         <div className="right_mun_faq_head">
-          Who are the Team behind the Project?
+        How do I get the details/rulebook for any particular event?
           {plus["4th"] ? (
             <AiFillPlusCircle
               class="accordion_1 plus_btn_mun"
@@ -137,10 +135,65 @@ function FAQ() {
               />
               <div class="panel">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                Details can be found at - https://thomso.in/events 
+                </p>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+      <div className="mun_faq_cutline"></div>
+      <div className="accordion">
+        <div className="left_num_faq">05</div>
+        <div className="right_mun_faq_head">
+        What are the dates of IITR MUN?
+          {plus["4th"] ? (
+            <AiFillPlusCircle
+              class="accordion_1 plus_btn_mun"
+              onClick={() => {
+                setPlus({ ...plus, ["4th"]: false });
+              }}
+            />
+          ) : (
+            <>
+              <AiFillMinusCircle
+                class="accordion_1 plus_btn_mun"
+                onClick={() => {
+                  setPlus({ ...plus, ["4th"]: true });
+                }}
+              />
+              <div class="panel">
+                <p>
+                IITR MUN is a two days conference and will be held from 14 October to 15 October
+                </p>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+      <div className="mun_faq_cutline"></div>
+      <div className="accordion">
+        <div className="left_num_faq">06</div>
+        <div className="right_mun_faq_head">
+        What is the prize worth of the event?
+          {plus["4th"] ? (
+            <AiFillPlusCircle
+              class="accordion_1 plus_btn_mun"
+              onClick={() => {
+                setPlus({ ...plus, ["4th"]: false });
+              }}
+            />
+          ) : (
+            <>
+              <AiFillMinusCircle
+                class="accordion_1 plus_btn_mun"
+                onClick={() => {
+                  setPlus({ ...plus, ["4th"]: true });
+                }}
+              />
+              <div class="panel">
+                <p>
+                The prize worth is 100k
                 </p>
               </div>
             </>
