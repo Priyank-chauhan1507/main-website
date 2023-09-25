@@ -4,11 +4,12 @@ import hero1 from "../../../assests/hero1.webp"
 import judge1 from '../../../assests/AIPPMjudge.webp'
 import judge2 from '../../../assests/Aishnit-yadav-Unga-judge.webp'
 import judge3 from '../../../assests/Raunak-Historic-judge.webp'
+import Executive from '../../../assests/Executive.png'
 
 function Judges() {
   return (
     <div className='judges-container'>
-        <h1 className='head-judge'>EXECUTIVE JUDGES</h1>
+        <img src={Executive} alt="" style={{width:"35vw", margin:"auto"}} />
         <div className="judge-box-cont">
             <div className="judges-cont-1">
                 <img src={judge1} className="hero1" alt="" />
