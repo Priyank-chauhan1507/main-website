@@ -42,23 +42,6 @@ function Page2(props) {
         },
       ],
     },
-    // {
-    //     id:1,
-    //     name:"orng",
-    //     img:{
-    //          img1:tshirt1front,
-    //          img2:tshirt1back,
-    //     },
-    // },
-    // {
-    //     id:2,
-    //     name:"lee-t",
-    //     img:{
-    //          img1:tshirt2front,
-    //          img2:tshirt2back,
-    //     },
-    //     price:350,
-    // },
   ];
 
   const IncrementFunc = () => {
