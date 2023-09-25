@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.58cfe16d.css",
-    "main.js": "/static/js/main.0531287b.js",
+    "main.css": "/static/css/main.8bee1744.css",
+    "main.js": "/static/js/main.a61ac668.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -54,9 +54,6 @@
     "static/media/MUNmobileBG.webp": "/static/media/MUNmobileBG.5c74349865e47807dafb.webp",
     "static/media/back.webp": "/static/media/back.5993852469394dc9eb3a.webp",
     "static/media/design.graffiti.comicsansmsgras.ttf": "/static/media/design.graffiti.comicsansmsgras.92557e6ed016730cc765.ttf",
-    "static/media/parmob.png": "/static/media/parmob.9a9058b94c6bad55ad5f.png",
-    "static/media/flagmob.png": "/static/media/flagmob.e88ff8c53e1f5814ca74.png",
-    "static/media/UNGAmob.png": "/static/media/UNGAmob.e58f3079f47ecb2829d4.png",
     "static/media/laststrips.svg": "/static/media/laststrips.9119bab9f4a54cba6dac6b65f0ab4768.svg",
     "static/media/ID_Logo.png": "/static/media/ID_Logo.4c7afb1a960497df4304.png",
     "static/media/LOGOMUN.svg": "/static/media/LOGOMUN.b1bd40a0e1008f30352aae3a81f99c65.svg",
@@ -93,14 +90,17 @@
     "static/media/propic.svg": "/static/media/propic.39d1147898dd7f65cb0cd55d48ebe1ce.svg",
     "static/media/MUN-Top.webp": "/static/media/MUN-Top.09e1c67df91811380808.webp",
     "static/media/COMMITTEE.png": "/static/media/COMMITTEE.167b26eb3b03148cbcca.png",
+    "static/media/parmob.png": "/static/media/parmob.4c4c5b9de7eae7ea9ce6.png",
+    "static/media/flagmob.png": "/static/media/flagmob.eeb2958f1c45124bf9ec.png",
+    "static/media/munmobileinfobg.webp": "/static/media/munmobileinfobg.f76d34c1c4a84d5fad64.webp",
     "static/media/default_event.png": "/static/media/default_event.5e41c2c91152988c4289.png",
     "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
     "static/media/muninfopage1.webp": "/static/media/muninfopage1.ba98233eb1f144f09c46.webp",
+    "static/media/UNGAmob.png": "/static/media/UNGAmob.5321c603b6db27aaa0ab.png",
     "static/media/profile1.png.jpg": "/static/media/profile1.png.da7e7064ed2b96e76c47.jpg",
     "static/media/pepsi1.svg": "/static/media/pepsi1.4643b1a2664817effa263f96855ae439.svg",
     "static/media/Sponsersb.png": "/static/media/Sponsersb.1eb92a70d0ffce255e4b.png",
     "static/media/FAQS.png": "/static/media/FAQS.d7e2418ebabd135ce70f.png",
-    "static/media/munmobileinfobg.webp": "/static/media/munmobileinfobg.f0e962321435d8d2558d.webp",
     "static/media/hero1.webp": "/static/media/hero1.d30444af71136ae65b4e.webp",
     "static/media/abouttop.webp": "/static/media/abouttop.6411227c762878e6e928.webp",
     "static/media/muninfopage2img.webp": "/static/media/muninfopage2img.90568b849d77faa25d7f.webp",
@@ -147,11 +147,11 @@
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
     "static/media/Rect2.webp": "/static/media/Rect2.2a847493890abd25ae73.webp",
-    "main.58cfe16d.css.map": "/static/css/main.58cfe16d.css.map",
-    "main.0531287b.js.map": "/static/js/main.0531287b.js.map"
+    "main.8bee1744.css.map": "/static/css/main.8bee1744.css.map",
+    "main.a61ac668.js.map": "/static/js/main.a61ac668.js.map"
   },
   "entrypoints": [
-    "static/css/main.58cfe16d.css",
-    "static/js/main.0531287b.js"
+    "static/css/main.8bee1744.css",
+    "static/js/main.a61ac668.js"
   ]
 }
