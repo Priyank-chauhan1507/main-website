@@ -35,6 +35,23 @@ function Page1() {
         },
       ],
     },
+    {
+      id: 2,
+      price: 350,
+      Name: "THOMSO UNISEX TSHIRT",
+      img: [
+        {
+          id: 1,
+          imgfront: tshirt3front,
+          imgback: tshirt3back,
+        },
+        {
+          id: 2,
+          imgfront: tshirt3front2,
+          imgback: tshirt3back2,
+        },
+      ],
+    },
     // {
     //     id:1,
     //     name:"orng",
@@ -120,16 +137,6 @@ function Page1() {
           </div>
           <Footer />
         </div>
-      
-      {/* {RenderId === 1 && (
-        <Page2
-          Rect1={data[index].img[0].imgfront}
-          Rect2={data[index].img[0].imgfront}
-          Rect3={data[index].img[0].imgback}
-          NameOfShirt= {data[index].Name}
-          priceOfShirt={data[index].price}
-        />
-      )} */}
     </>
   );
 }
