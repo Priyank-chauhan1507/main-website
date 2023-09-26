@@ -722,7 +722,7 @@ const NewPaymentBox = (
                                     </p>
                                   </div>
                                   <p className="PayAccommodation">
-                                    Accommodation includes 4 day-3 night stay
+                                    Accommodation includes 4 day-4 night stay
                                     and Food (Breakfast + Lunch){" "}
                                   </p>
                                 </div>
@@ -1265,7 +1265,7 @@ const NewPaymentBox = (
                                 </p>
                               </div>
                               <p className="MPayAccommodation">
-                                Accommodation includes 4 day-3 night stay and
+                                Accommodation includes 4 day-4 night stay and
                                 Food (Breakfast + Lunch){" "}
                               </p>
                             </div>
