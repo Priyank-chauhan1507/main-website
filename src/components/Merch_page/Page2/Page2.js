@@ -9,6 +9,24 @@ import tshirt3front from "../../../assests/tshirt3front.webp";
 import tshirt3back from "../../../assests/tshirt3back.webp";
 import tshirt3front2 from "../../../assests/tshirt3front2.webp";
 import tshirt3back2 from "../../../assests/tshirt3back2.webp";
+import tshirt4front1 from "../../../assests/vibe.webp";
+import tshirt4back1 from "../../../assests/white-t-shirts-with-copy-space-gray-background 2.webp";
+import tshirt4front2 from "../../../assests/f3.webp";
+import tshirt4back2 from "../../../assests/f4.webp";
+import tshirt5front1 from "../../../assests/5.webp";
+import tshirt5back1 from "../../../assests/5'.webp";
+import tshirt5front2 from "../../../assests/black.webp";
+import tshirt5front3 from "../../../assests/lavender.webp";
+import tshirt5front4 from "../../../assests/Boink Aqua blue or teal whatever.webp";
+import tshirt5front5 from "../../../assests/4.webp";
+import tshirt5back5 from "../../../assests/4'.webp";
+import tshirt6front1 from "../../../assests/orng.webp";
+import tshirt6front2 from "../../../assests/sky b.webp";
+import tshirt6front3 from "../../../assests/purp.webp";
+import tshirt6back from "../../../assests/orng bck .webp";
+import tshirt7front from "../../../assests/Lee tee fin frnt.webp";
+import tshirt7back from "../../../assests/Lee tee fin bck.webp";
+
 import { useParams } from "react-router-dom";
 
 function Page2(props) {
@@ -21,40 +39,108 @@ function Page2(props) {
   const [imgIndex, setimgIndex] = useState(1);
 
   const data = [
+    // {
+    //   id: 1,
+    //   price: 350,
+    //   Name: "THOMSO UNISEX TSHIRT",
+    //   img: [
+    //     {
+    //       id: 1,
+    //       imgfront: tshirt3front,
+    //       imgback: tshirt3back,
+    //     },
+    //     {
+    //       id: 2,
+    //       imgfront: tshirt3front2,
+    //       imgback: tshirt3back2,
+    //     },
+    //   ],
+    // },
     {
       id: 1,
       price: 350,
-      Name: "THOMSO UNISEX TSHIRT",
+      Name: "Feel The Thomso vibe ",
       img: [
         {
           id: 1,
-          imgfront: tshirt3front,
-          imgback: tshirt3back,
+          imgfront: tshirt4front1,
+          imgback: tshirt4back1,
         },
         {
           id: 2,
-          imgfront: tshirt3front2,
-          imgback: tshirt3back2,
+          imgfront: tshirt4front2,
+          imgback: tshirt4back2,
         },
       ],
     },
-    // {
-    //     id:1,
-    //     name:"orng",
-    //     img:{
-    //          img1:tshirt1front,
-    //          img2:tshirt1back,
-    //     },
-    // },
-    // {
-    //     id:2,
-    //     name:"lee-t",
-    //     img:{
-    //          img1:tshirt2front,
-    //          img2:tshirt2back,
-    //     },
-    //     price:350,
-    // },
+    {
+      id: 2,
+      price: 350,
+      Name: "The Ellyx Tee  ",
+      img: [
+        {
+          id: 1,
+          imgfront: tshirt5front1,
+          imgback: tshirt5back1,
+        },
+        {
+          id: 2,
+          imgfront: tshirt5front2,
+          // imgback: tshirt4back2,
+        },
+        {
+          id: 3,
+          imgfront: tshirt5front3,
+          imgback: tshirt4back2,
+        },
+        {
+          id: 4,
+          imgfront: tshirt5front4,
+          // imgback: tshirt4back2,
+        },
+        {
+          id: 5,
+          imgfront: tshirt5front5,
+          imgback: tshirt5back5,
+        },
+      ],
+    },
+    {
+      id: 3,
+      price: 350,
+      Name: "The Thomso Tee",
+      img: [
+        {
+          id: 1,
+          imgfront: tshirt6front1,
+          imgback: tshirt6back,
+        },
+        {
+          id: 2,
+          imgfront: tshirt6front2,
+          imgback: tshirt6back,
+        },
+        {
+          id: 3,
+          imgfront: tshirt6front3,
+          imgback: tshirt6back,
+        },
+      ],
+    },
+    {
+      id: 4,
+      price: 350,
+      Name: "The Thomso king",
+      img: [
+        {
+          id: 1,
+          imgfront: tshirt7front,
+          imgback: tshirt7back,
+        },
+      ],
+    },
+
+
   ];
   const CreateObject = () => {
     if (!Name || quantity === 0 || !color || !size) {
