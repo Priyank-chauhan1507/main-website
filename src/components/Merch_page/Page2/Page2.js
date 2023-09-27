@@ -71,7 +71,7 @@ function Page2(props) {
       colors: [
         { colorId: 0, colorName: "white" },
         { colorId: 1, colorName: "black" },
-        { colorId: 2, colorName: "purple" },
+        { colorId: 2, colorName: "lavender" },
         { colorId: 3, colorName: "blue" },
         { colorId: 4, colorName: "beige" },
       ],
@@ -173,7 +173,7 @@ function Page2(props) {
   }
 
   useEffect(() => {
-    console.log("updated array: ", AddedToCart);
+    // console.log("updated array: ", AddedToCart);
   }, [AddedToCart, localStorage]);
 
   useEffect(() => {

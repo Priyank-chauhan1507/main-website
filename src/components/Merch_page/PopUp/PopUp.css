@@ -4,7 +4,8 @@
 {
     display: flex;
     justify-content: center;
-    
+    position: absolute;
+    top: 3vh;
 }
 .headingPopUp{
 color: #2C2C2C;
@@ -20,8 +21,8 @@ text-transform: lowercase;
 .rulerPopup
 {
     height: 1px;
-    background: rgba(0, 0, 0, 0.20);  
-    width: 100%; 
+    background: rgba(0, 0, 0, 0.20);
+    width: 100%;
     margin-top: 1vh;
 }
 .PopUpMerch
@@ -41,7 +42,7 @@ text-transform: lowercase;
     line-height: 24px; /* 120% */
     letter-spacing: 0.4px;
     margin-top: 1.5vh;
-    
+
 }
 .PopUpMerch::placeholder{
     color: rgba(85, 85, 85, 0.52);
@@ -95,8 +96,8 @@ text-transform: lowercase;
     line-height: 150%; /* 24px */
     letter-spacing: 1.6px;
     text-transform: lowercase;
-    background-color: #fff;  
-    background: #FFAF02;     
+    background-color: #fff;
+    background: #FFAF02;
     cursor: pointer;
     margin-left: 1.5vw;
 }
@@ -115,13 +116,13 @@ text-transform: lowercase;
     {
         padding: 8px 20px;
     }
-    
+
 }
 @media only screen and (max-height: 700px)
 {
     .semimainPopUp
     {
-        width: 60vw;        
+        width: 60vw;
     }
     .PopUpMerch
     {
@@ -135,7 +136,7 @@ text-transform: lowercase;
         font-size: 15px;
     }
     .PopUpMerch::placeholder{
-       
+
         font-size: 15px;
     }
 }
