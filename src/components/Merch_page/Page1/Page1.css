@@ -142,6 +142,7 @@ line-height: 24px;
 letter-spacing: 2px;
 word-wrap: normal;
 }
+}
 .price1{
     color: rgba(42.29, 41.58, 41.58, 0.98) !important;
     font-size: 20px !important;
@@ -179,6 +180,7 @@ word-wrap: normal
 .price span{
     white-space:nowrap;
 }
+
 @media screen and (max-width:1200px) {
     /* .ell-img{
         width:35vw;
@@ -264,6 +266,7 @@ word-wrap: normal
 .home_text{
     background-image:url("./mrechbg.webp");
     background-size: cover;
+}
 @media screen and (max-width:350px){
     .prod_img{
         padding-left:4vw;
