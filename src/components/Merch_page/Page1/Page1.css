@@ -116,18 +116,34 @@ padding-left: 20vw;
     margin-top: 3rem;
     margin-left:1vw;
     padding-left:1vw;
+    gap:1vw;
 }
 .product hr{
 display: none;
 }
 
 .product-merch{
-    width: 20vw;
+    width: 19vw;
     margin:2vw;
-    height:40vh;
+    height:38vh;
+    border-radius:15px ;
+}
+.product1:hover .product-merch{
+    transform: scale(1.1);
+    transition: 0.05s ease-in-out;
 }
 .product text{
     width: 2vw;
+}
+.product1{
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 1px;
+}
+.product1:hover{
+    box-shadow:4px 4px 0px 0px #000;
+    transition: 0.05s ease-in-out;
 }
 @media screen and (max-width:1200px ) and (min-width:632px) {
 .product_name{
@@ -247,6 +263,7 @@ word-wrap: normal
     justify-content: center;
     flex-wrap: wrap;
     padding: 0;
+    gap:2vh;
 }
 .product1,.product2,.product3,.product4,.product5,.product6,.product7,.product8{
     padding: 5vw;
