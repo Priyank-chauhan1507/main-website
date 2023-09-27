@@ -22,7 +22,7 @@ overflow-x: hidden !important;
     margin: 0;
 }
 .merch_bg_img{
-    position: relative;
+    /* position: relative; */
     /* z-index: -1; */
 }
 .merch_Bg{
@@ -30,8 +30,8 @@ overflow-x: hidden !important;
     height:60vh;
 }
 .merch_Smile{
-    position: absolute;
-    z-index: 1;
+    /* position: absolute; */
+    /* z-index: 1; */
     margin-top: 2rem;
     margin-left: -72vw;
     width: 90px;
@@ -55,8 +55,9 @@ padding-left: 20vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position:absolute;
+    /* position:absolute; */
     z-index: 1;
+    width:100vw;
 }
 .home_heading{
     font-size: 2vw;
@@ -74,6 +75,7 @@ padding-left: 20vw;
     margin-top: 1vw;
     font-size: 1.7vw;
     width:70vw;
+    padding-bottom:4vh;
 }
 /* .products_hr{
     margin-top: 2vw;
@@ -127,6 +129,7 @@ display: none;
 .product text{
     width: 2vw;
 }
+@media screen and (max-width:1200px ) and (min-width:632px) {
 .product_name{
     font-size: 1.4rem;
     font-weight:100;
@@ -186,6 +189,7 @@ word-wrap: normal
         /* width: 30vw; */
     }
 }
+
 @media screen and (max-width:1000px) {
     .merch_Smile{
         margin-left: -74vw;
@@ -208,7 +212,7 @@ word-wrap: normal
     width: 100%;
     padding: 0;
     /* margin: 0; */
-    margin-top: -25rem;
+    /* margin-top: -25rem; */
 }
 .home_heading{
     font-size: 2.5vw;
@@ -218,9 +222,10 @@ word-wrap: normal
 }
 .home_para{
     width: 70%;
-    font-size: 2.2vw;
+    font-size: 2.9vw;
     line-height: 2.8vw;
     text-align: center;
+    padding-bottom:4vh;
     /* margin: 0 auto; */
 }
 /* .home_para p{
@@ -256,6 +261,9 @@ word-wrap: normal
     font-size: 3vw;
 }
 }
+.home_text{
+    background-image:url("./mrechbg.webp");
+    background-size: cover;
 @media screen and (max-width:350px){
     .prod_img{
         padding-left:4vw;

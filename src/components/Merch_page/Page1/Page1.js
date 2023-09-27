@@ -67,9 +67,9 @@ function Page1() {
         <Navbar />
         <div className="merch_Page1">
           <div className="home_merchpage">
-            <div className="merch_bg_img">
-              <img src={merchBg} className="merch_Bg" alt="merch_Bg" />
-            </div>
+            {/* <div className="merch_bg_img"> */}
+              {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg" /> */}
+            {/* </div> */}
             <div className="merchSmilediv">
               <img src={merchSmily} className="merch_Smile" alt="merch_Smile" />
             </div>
@@ -77,6 +77,7 @@ function Page1() {
               <div className="home_heading">
                 <h1>Thomso Merch</h1>
                 <h1>IIT Roorkee</h1>
+                {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg"/> */}
               </div>
               <div className="home_para">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
