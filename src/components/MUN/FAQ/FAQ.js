@@ -39,10 +39,9 @@ function FAQ() {
                   setPlus({ ...plus, ["1st"]: true });
                 }}
               />
-              <div className="panel">
-                <p>
-                Registration can be done at https://thomso.in/register 
-                </p>
+              <div class="panel">
+              Registration can be done at &nbsp;
+                <a href="https://thomso.in/register " style={{color:"#a09faf",opacity:".5"}}>https://thomso.in/register </a>
               </div>
             </>
           )}
@@ -70,11 +69,14 @@ function FAQ() {
               />
               <div className="panel">
                 <p>
-                <div>There are three committees this year:</div> 
-                <div>AIPPM: Evaluating the ongoing ethnic clashes in Manipur</div>
-                <div>UNGA: Deliberation over unlawful occupation of territory and forced governance with special emphasis on Israel Palestine conflict</div> 
-                <div>INDIAN WAR CABINET: Bangladesh Liberation War of 1971 </div>
-                <Link to='\events.thomso.in' target="_blank"><h2>Events</h2></Link>
+                <div>There are three committees this year: <br />
+                AIPPM: Evaluating the ongoing ethnic clashes in Manipur <br />
+                UNGA: Deliberation over unlawful occupation of territory and forced governance with special emphasis on Israel Palestine conflict <br /> 
+                INDIAN WAR CABINET: Bangladesh Liberation War of 1971 <br />
+                <a href="https://thomso.in/events" style={{color:"#a09faf",opacity:".5"}}>https://thomso.in/events</a>
+                </div>
+                
+  
                 
                 </p>
               </div>
@@ -136,7 +138,7 @@ function FAQ() {
               />
               <div class="panel">
                 <p>
-                Details can be found at - https://thomso.in/events 
+                Details can be found at - <a href="https://thomso.in/events" style={{color:"#a09faf",opacity:".5"}}>https://thomso.in/events</a>
                 </p>
               </div>
             </>
