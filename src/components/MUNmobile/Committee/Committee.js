@@ -3,12 +3,12 @@ import Carousel from 'react-spring-3d-carousel';
 import Icon from 'react-icons';
 import { BsFillArrowLeftCircleFill,BsFillArrowRightCircleFill } from "react-icons/bs";
 // import mun1 from "../../../assests/MUNImg1.png";
-import mun2 from "../../../assests/parmob.png";
-import mun3 from "../../../assests/flagmob.png";
+import mun2 from "../../../assests/AIPPMnew.png";
+import mun3 from "../../../assests/Historicnew.png";
 // import { v4 as uuidv4 } from "uuid";
 // import { config } from "react-spring";
 import Committee from "../../../assests/CommitteeMUN.png";
-import UNGA from "../../../assests/UNGAmob.png";
+import UNGA from "../../../assests/UNGAnew.png";
 import Arrow from "../../../assests/ArrowMUN.png";
 // import UNGA from "../../../assests/UNGAmob.png";
 // import UNGA from "../../../assests/UNGAmob.png";
@@ -33,14 +33,16 @@ const App = () => {
         
         <div className="MUNcarousel">
 
-        <div className="carouselcontenttext1">
+        {/* <div className="carouselcontenttext1">
             UNITED NATIONS <br />
             GENERAL ASSEMBLY <br />
             (UNGA)
-        </div>
+        </div> */}
         <button className="carouselcontentbtn" onClick={()=>navigate("/muninfo_page1")}>
+        <div className="moreInfobtn">
             <p className="carouselcontentpara">More Info</p> 
             <img src={Arrow} className="infoarrow" alt="" />
+            </div>
         </button>
 
         </div>
@@ -54,14 +56,16 @@ const App = () => {
         <img src={mun2} className='carouselcontentimg' alt="" />
         <div className="MUNcarousel">
 
-        <div className="carouselcontenttext2">
+        {/* <div className="carouselcontenttext2">
              ALL INDIA POLITICAL<br />
             PARTY MEET <br />
             (AIPPM)
-        </div>
+        </div> */}
         <button className="carouselcontentbtn" onClick={()=>navigate("/muninfo_page2")}>
+        <div className="moreInfobtn">
             <p className="carouselcontentpara">More Info</p> 
             <img src={Arrow} className="infoarrow" alt="" />
+            </div>
         </button>
       
 
@@ -76,13 +80,15 @@ const App = () => {
         <img src={mun3} className='carouselcontentimg' alt="" />
         <div className="MUNcarousel">
 
-        <div className="carouselcontenttext3">
+        {/* <div className="carouselcontenttext3">
             INDIAN WAR CABINET <br />
             (HISTORIC COMMITTEE) 
-        </div>
+        </div> */}
         <button className="carouselcontentbtn" onClick={()=>navigate("/muninfo_page3")}>
+          <div className="moreInfobtn">
             <p className="carouselcontentpara">More Info</p> 
             <img src={Arrow} className="infoarrow" alt="" />
+            </div>
         </button>
 
 
