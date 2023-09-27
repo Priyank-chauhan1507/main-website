@@ -73,7 +73,10 @@ function Page2(props) {
       Name: "The Ellyx Tee  ",
       colors: [
         { colorId: 0, colorName: "white" },
-        { colorId: 1, colorName: "lavendar" },
+        { colorId: 1, colorName: "black" },
+        { colorId: 2, colorName: "purple" },
+        { colorId: 3, colorName: "blue" },
+        { colorId: 4, colorName: "beige" },
       ],
       img: [
         {
@@ -84,7 +87,7 @@ function Page2(props) {
         {
           id: 2,
           imgfront: tshirt5front2,
-          // imgback: tshirt4back2,
+          imgback: tshirt4back2,
         },
         {
           id: 3,
@@ -94,7 +97,7 @@ function Page2(props) {
         {
           id: 4,
           imgfront: tshirt5front4,
-          // imgback: tshirt4back2,
+          imgback: tshirt4back2,
         },
         {
           id: 5,
@@ -108,8 +111,10 @@ function Page2(props) {
       price: 350,
       Name: "The Thomso Tee",
       colors: [
-        { colorId: 0, colorName: "white" },
-        { colorId: 1, colorName: "lavendar" },
+        { colorId: 0, colorName: "orange" },
+        { colorId: 1, colorName: "teal" },
+        { colorId: 2, colorName: "purple" },
+        
       ],
       img: [
         {
@@ -134,8 +139,8 @@ function Page2(props) {
       price: 350,
       Name: "The Thomso king",
       colors: [
-        { colorId: 0, colorName: "white" },
-        { colorId: 1, colorName: "lavendar" },
+        { colorId: 0, colorName: "black" },
+       
       ],
       img: [
         {
@@ -256,21 +261,6 @@ function Page2(props) {
                           ></div>
                         );
                       })}
-
-                      {/* <div
-                        className="colorbox2"
-                        onClick={() => {
-                          setColor("black");
-                          setimgIndex(1);
-                        }}
-                      ></div>
-                      <div
-                        className="colorbox3"
-                        onClick={() => {
-                          setColor("blue");
-                          setimgIndex(0);
-                        }}
-                      ></div> */}
                     </div>
                     <div className="size">select size</div>
                     <div className="select-size">
