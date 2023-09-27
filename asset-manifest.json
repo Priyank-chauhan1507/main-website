@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab41d6fa.css",
-    "main.js": "/static/js/main.a2efc947.js",
+    "main.css": "/static/css/main.0b9befe7.css",
+    "main.js": "/static/js/main.3cc42d9f.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -86,10 +86,13 @@
     "static/media/munbg.webp": "/static/media/munbg.e54b108886babe3f5462.webp",
     "static/media/AIPPMjudge.webp": "/static/media/AIPPMjudge.4fb866f0fad5aab065f0.webp",
     "static/media/COMIC.TTF": "/static/media/COMIC.cf3d8690bffa563fb10b.TTF",
+    "static/media/orng(3).png": "/static/media/orng(3).f61fe68f490360695521.png",
     "static/media/express.svg": "/static/media/express.68efa23fe230b58eed7bbe68e1784fa1.svg",
     "static/media/Raunak-Historic-judge.webp": "/static/media/Raunak-Historic-judge.a3e959cf092960e3cf25.webp",
+    "static/media/orng (2).png": "/static/media/orng (2).bdf956febeb138d07fc0.png",
     "static/media/white-t-shirts-with-copy-space-gray-background 2.webp": "/static/media/white-t-shirts-with-copy-space-gray-background 2.e37a04127c286a0f6cd2.webp",
     "static/media/uniacco.svg": "/static/media/uniacco.64a64daffdd9239c729f6a72e57a9875.svg",
+    "static/media/orng (1).png": "/static/media/orng (1).55d4e548d40af87522ad.png",
     "static/media/4'.webp": "/static/media/4'.4d6f5eeaa9a73b3e2036.webp",
     "static/media/unicred.svg": "/static/media/unicred.711f6f7a6a7123e0751edb244424b664.svg",
     "static/media/PrizesWorth100.png": "/static/media/PrizesWorth100.b582043c66558945e7b3.png",
@@ -163,11 +166,11 @@
     "static/media/pause.svg": "/static/media/pause.b00e0a737956c2de96fa9f99c61ab9f8.svg",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
-    "main.ab41d6fa.css.map": "/static/css/main.ab41d6fa.css.map",
-    "main.a2efc947.js.map": "/static/js/main.a2efc947.js.map"
+    "main.0b9befe7.css.map": "/static/css/main.0b9befe7.css.map",
+    "main.3cc42d9f.js.map": "/static/js/main.3cc42d9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab41d6fa.css",
-    "static/js/main.a2efc947.js"
+    "static/css/main.0b9befe7.css",
+    "static/js/main.3cc42d9f.js"
   ]
 }
