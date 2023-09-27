@@ -27,6 +27,8 @@ import tshirt6back from "../../../assests/orng bck .webp";
 import tshirt7front from "../../../assests/Lee tee fin frnt.webp";
 import tshirt7back from "../../../assests/Lee tee fin bck.webp";
 
+import increment from "../../../assests/increment.svg";
+import decrement from "../../../assests/decrement.svg";
 import { useParams } from "react-router-dom";
 
 function Page2(props) {
@@ -37,6 +39,8 @@ function Page2(props) {
   const [quantity, setquantity] = useState(0);
   const [imgUrl, setImgUrl] = useState("");
   const [imgIndex, setimgIndex] = useState(1);
+  const [selected, setselected] = useState(0);
+  const [purchased, setPurchased] = useState([])
 
   const data = [
     // {
@@ -142,9 +146,25 @@ function Page2(props) {
 
 
   ];
+
+  const IncrementFunc = () => {
+    let num = quantity;
+    num += 1;
+    setquantity(num);
+  };
+  const DecrementFunc = () => {
+    if (quantity > 0) {
+      let num = quantity;
+      num -= 1;
+      setquantity(num);
+    } else {
+      setquantity(0);
+    }
+  };
+
   const CreateObject = () => {
-    if (!Name || quantity === 0 || !color || !size) {
-      return "please select every requirement";
+    if (quantity === 0 || !color || !size) {
+      return console.log("please select every requirement");
     }
     const allDetails = {
       name: Name,
@@ -152,6 +172,7 @@ function Page2(props) {
       color: color,
       size: size,
     };
+    console.log(allDetails);
     return allDetails;
   };
 
@@ -188,9 +209,7 @@ function Page2(props) {
                 </div>
               </div>
               <div className="shirt-container2">
-                <div className="tshirt-head" onClick={() => setName(Name)}>
-                  {Name}
-                </div>
+                <div className="tshirt-head">{Name}</div>
                 <div className="tshirt-price">
                   <div className="price1">Rs.{price}</div>
                   <div className="price3">Rs. 700</div>
@@ -214,38 +233,71 @@ function Page2(props) {
                     className="colorbox2"
                     onClick={() => {
                       setColor("black");
-                      setimgIndex(2);
+                      setimgIndex(1);
                     }}
                   ></div>
                   <div
                     className="colorbox3"
                     onClick={() => {
                       setColor("blue");
-                      setimgIndex(1);
+                      setimgIndex(0);
                     }}
                   ></div>
                 </div>
                 <div className="size">select size</div>
                 <div className="select-size">
                   <div
-                    className="size1"
+                    className={selected === 1 ? "size2" : "size1"}
                     onClick={() => {
                       setSize("s");
+                      setName(Name);
+                      setselected(1);
                     }}
                   >
                     s
                   </div>
-                  <div className="size2" onClick={() => setSize("m")}>
+                  <div
+                    className={selected === 2 ? "size2" : "size1"}
+                    onClick={() => {
+                      setSize("m");
+                      setName(Name);
+                      setselected(2);
+                    }}
+                  >
                     m
                   </div>
-                  <div className="size3" onClick={() => setSize("l")}>
+                  <div
+                    className={selected === 3 ? "size2" : "size1"}
+                    onClick={() => {
+                      setSize("l");
+                      setName(Name);
+                      setselected(3);
+                    }}
+                  >
                     l
                   </div>
-                  <div className="size4" onClick={() => setSize("xl")}>
+                  <div
+                    className={selected === 4 ? "size2" : "size1"}
+                    onClick={() => {
+                      setSize("xl");
+                      setName(Name);
+                      setselected(4);
+                    }}
+                  >
                     xl
                   </div>
                 </div>
-                <div className="Quantity">Quantity : {quantity}</div>
+                <div className="Quantity">
+                  <div className="quantityFont">Quantity :</div>
+                  <button className="arithmatic" onClick={IncrementFunc}>
+                    {" "}
+                    <img src={increment} alt="increment operator" />
+                  </button>
+                  <div className="arithmatic">{quantity}</div>
+                  <button className="arithmatic" onClick={DecrementFunc}>
+                    <img src={decrement} alt="increment operator" />
+                  </button>
+                </div>
                 <button className="bag1">
                   <img src={lock5} className="lock5" alt="" />
                   <div className="con1" onClick={CreateObject}>
