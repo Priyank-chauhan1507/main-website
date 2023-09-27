@@ -75,11 +75,11 @@ function Page1() {
             </div>
             <div className="home_text">
               <div className="home_heading">
-                <h1>Thomso Merch</h1>
-                <h1>IIT Roorkee</h1>
+                <h1>Own a piece of Thomso’23</h1>
+                <h1>Grab your tees now!</h1>
                 {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg"/> */}
               </div>
-              <div className="home_para">
+              {/* <div className="home_para">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -89,7 +89,7 @@ function Page1() {
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation.
-              </div>
+              </div> */}
             </div>
             {/* <div className="ellipse">
                 <img className="ell-img" src={ellipse} alt="..." />
