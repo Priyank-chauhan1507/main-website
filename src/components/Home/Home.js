@@ -49,6 +49,7 @@ import blue from '../../assests/blue.webp'
 
 import videoBack from '../../assests/videoBack.webp'
 import pause from '../../assests/pause.svg'
+import pause2 from '../../assests/pause2.svg'
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';
 
