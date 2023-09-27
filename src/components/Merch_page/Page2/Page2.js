@@ -24,7 +24,7 @@ import tshirt6front3 from "../../../assests/purp.webp";
 import tshirt6back from "../../../assests/orng bck .webp";
 import tshirt7front from "../../../assests/Lee tee fin frnt.webp";
 import tshirt7back from "../../../assests/Lee tee fin bck.webp";
-
+import { message } from "antd";
 import increment from "../../../assests/increment.svg";
 import decrement from "../../../assests/decrement.svg";
 import { useNavigate, useParams } from "react-router-dom";
@@ -32,23 +32,20 @@ import Page3 from "../Page3/Page3";
 
 function Page2(props) {
   const { id } = useParams();
-  // const navigate = useNavigate();
-  const [Name, setName] = useState("");
-  const [color, setColor] = useState("");
+  const navigate = useNavigate();
   const [size, setSize] = useState("");
-  const [quantity, setquantity] = useState(0);
-  const [imgUrl, setImgUrl] = useState("");
-  const [imgIndex, setimgIndex] = useState(0);
+  const [quantity, setquantity] = useState(1);
+  const [imgCol, setImgCol] = useState(0);
+  const [imgIndex, setimgIndex] = useState(true);
   const [selected, setselected] = useState(0);
   const [AddedToCart, setAddedToCart] = useState([]);
-  const [price, setPrice] = useState();
   const [renderId, setRenderId] = useState(0);
 
   const data = [
     {
       id: 1,
       price: 350,
-      Name: "Feel The Thomso vibe ",
+      Name: "Feel The Thomso vibe",
       colors: [
         { colorId: 0, colorName: "white" },
         { colorId: 1, colorName: "lavender" },
@@ -70,7 +67,7 @@ function Page2(props) {
     {
       id: 2,
       price: 350,
-      Name: "The Ellyx Tee  ",
+      Name: "The Ellyx Tee",
       colors: [
         { colorId: 0, colorName: "white" },
         { colorId: 1, colorName: "black" },
@@ -135,7 +132,7 @@ function Page2(props) {
     },
     {
       id: 4,
-      price: 350,
+      price: 450,
       Name: "The Thomso king",
       colors: [{ colorId: 0, colorName: "black" }],
       img: [
@@ -147,24 +144,30 @@ function Page2(props) {
       ],
     },
   ];
+  const item = data[id - 1]
+
+  const [color, setColor] = useState(item.colors[0].colorName);
+  const [imgSrc, setImgSrc] = useState();
 
   function CreateObject() {
-    if (quantity === 0 || !color || !size) {
-      return console.log("please select every requirement");
+    if (!size) {
+      message.error("Please Select any size");
     } else {
       const allDetails = {
         id: id,
-        name: Name,
+        name: item.Name,
         quantity: quantity,
         color: color,
         size: size,
-        price: price,
+        price: item.price,
+        // src: imgSrc
       };
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
         "AddedToCart",
         JSON.stringify([...AddedToCart, allDetails])
-      );
+        );
+        message.success("Item added to cart");
     }
     setRenderId(1);
   }
@@ -180,66 +183,53 @@ function Page2(props) {
     }
   }, []);
 
-  const RemoveItem = (id) => {
-    const storedData = JSON.parse(localStorage.getItem("AddedToCart"));
-    const updatedData = storedData.filter((item) => item.id !== id);
-    localStorage.setItem("AddedToCart", JSON.stringify(updatedData));
-    setAddedToCart(updatedData);
-  };
-
   const IncrementFunc = () => {
     let num = quantity;
     num += 1;
     setquantity(num);
-    setPrice(350);
   };
   const DecrementFunc = () => {
-    if (quantity > 0) {
+    if (quantity > 1) {
       let num = quantity;
       num -= 1;
       setquantity(num);
     } else {
-      setquantity(0);
+      setquantity(1);
     }
   };
 
   return (
     <>
-      {renderId === 0 && (
         <div className="page-2-merch">
           <Navbar />
-          {data
-            .filter((item) => item.id === parseInt(id))
-            .map(({ id, Name, price, img, colors }) => {
-              return (
                 <div className="shirt-container" key={id}>
                   <div className="shirt-container1">
                     <div className="big-box1">
                       <img
-                        src={imgUrl == "" ? img[imgIndex].imgfront : imgUrl}
+                        src={imgIndex ? item.img[imgCol].imgfront : item.img[imgCol].imgback}
                         alt=""
                         className="box-img2"
                       />
                     </div>
                     <div className="big-box2">
                       <img
-                        src={img[imgIndex].imgfront}
+                        src={item.img[imgCol].imgfront}
                         alt=""
                         className="box-img1"
-                        onClick={() => setImgUrl(img[imgIndex].imgfront)}
+                        onClick={() => setimgIndex(true)}
                       />
                       <img
-                        src={img[imgIndex].imgback}
+                        src={item.img[imgCol].imgback}
                         alt=""
                         className="box-img1"
-                        onClick={() => setImgUrl(img[imgIndex].imgback)}
+                        onClick={() => setimgIndex(false)}
                       />
                     </div>
                   </div>
                   <div className="shirt-container2">
-                    <div className="tshirt-head">{Name}</div>
+                    <div className="tshirt-head">{item.Name}</div>
                     <div className="tshirt-price">
-                      <div className="price1">Rs.{price}</div>
+                      <div className="price1">Rs.{item.price}</div>
                       <div className="price3">Rs. 700</div>
                       <div className="price1-offer">( 50% Off )</div>
                     </div>
@@ -250,14 +240,14 @@ function Page2(props) {
                       <div className="color122">{color}</div>
                     </div>
                     <div className="colorbox">
-                      {colors.map(({ colorId, colorName }) => {
+                      {item.colors.map(({ colorId, colorName }) => {
                         return (
                           <div
-                            className="colorbox1"
+                            className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
                             style={{ backgroundColor: colorName }}
                             onClick={() => {
                               setColor(colorName);
-                              setimgIndex(colorId);
+                              setImgCol(colorId);
                             }}
                           ></div>
                         );
@@ -268,42 +258,41 @@ function Page2(props) {
                       <div
                         className={selected === 1 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("s");
-                          setName(Name);
+                          setSize("S");
+
                           setselected(1);
                         }}
                       >
-                        s
+                        S
                       </div>
                       <div
                         className={selected === 2 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("m");
-                          setName(Name);
+                          setSize("M");
+
                           setselected(2);
                         }}
                       >
-                        m
+                        M
                       </div>
                       <div
                         className={selected === 3 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("l");
-                          setName(Name);
+                          setSize("L");
+
                           setselected(3);
                         }}
                       >
-                        l
+                        L
                       </div>
                       <div
                         className={selected === 4 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("xl");
-                          setName(Name);
+                          setSize("XL");
                           setselected(4);
                         }}
                       >
-                        xl
+                        XL
                       </div>
                     </div>
                     <div className="Quantity">
@@ -337,7 +326,7 @@ function Page2(props) {
                         <div
                           className="con1"
                           onClick={() => {
-                            setRenderId(1);
+                            navigate("/merch_page3")
                           }}
                         >
                           GO TO BAG
@@ -346,12 +335,8 @@ function Page2(props) {
                     </div>
                   </div>
                 </div>
-              );
-            })}
           <Footer />
         </div>
-      )}
-      {renderId === 1 && <Page3 Cart={AddedToCart} RemoveItem={RemoveItem} />}
     </>
   );
 }

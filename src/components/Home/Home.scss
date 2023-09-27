@@ -599,10 +599,10 @@
   z-index: 1000000;
   height: 80vh;
   width: 80vw;
-  cursor: url(../../assests/cursor.svg), auto;
+  cursor: url(../../assests/cursor.svg) 50 50, auto;
 }
 .vid_alt {
-  cursor: url(../../assests/cursor.png), auto !important;
+  cursor: url(../../assests/cursor.png) 50 50, auto !important;
 }
 
 .videoBack {

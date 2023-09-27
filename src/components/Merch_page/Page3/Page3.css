@@ -48,7 +48,7 @@
     padding:5vh 0 5vh 0;
     border-bottom: solid;
     border-width: 1px;
-    border-color: grey;   
+    border-color: grey;
 }
 .product_status{
     display:flex;
@@ -136,6 +136,14 @@
     color: #FFFFFF;
     border: none;
     border-radius: 4px;
+}
+.emptycart{
+    height: 50vh;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 1300px){
     .product_discription{

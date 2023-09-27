@@ -148,6 +148,14 @@
   width: 2.5vw;
   background-color: white;
 }
+
+.colorbox1A {
+  border: 3px solid black;
+  height: 4vh;
+  width: 2.5vw;
+  background-color: white;
+}
+
 .colorbox2 {
   border: 1px solid black;
   height: 4vh;
