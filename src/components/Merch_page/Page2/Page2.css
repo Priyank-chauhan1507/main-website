@@ -41,8 +41,8 @@
   text-transform: lowercase;
 }
 .box-img2 {
-  height: 50vh;
-  width: 35vw;
+  height: 60vh;
+  width: 25vw;
 }
 .tshirt-price {
   display: flex;
@@ -252,7 +252,7 @@
     width: 23vw;
   }
   .box-img2 {
-    width: 80vw;
+   width: 80vw;
   }
   .tshirt-head {
     font-size: 7.5vw;
