@@ -55,7 +55,7 @@ function Page1() {
     {
 
       id: 4,
-      price: 350,
+      price: 450,
       name: "The Thomso king",
       img:orng3,
     },
@@ -122,7 +122,6 @@ function Page1() {
                         </div>
                       </div>
                     </div>
-                    <hr />
                   </Link>
                 </>
               );
