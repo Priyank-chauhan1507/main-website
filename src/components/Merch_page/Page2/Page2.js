@@ -32,7 +32,7 @@ import Page3 from "../Page3/Page3";
 
 function Page2(props) {
   const { id } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [Name, setName] = useState("");
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
@@ -51,7 +51,7 @@ function Page2(props) {
       Name: "Feel The Thomso vibe ",
       colors: [
         { colorId: 0, colorName: "white" },
-        { colorId: 1, colorName: "lavendar" },
+        { colorId: 1, colorName: "lavender" },
       ],
       img: [
         {
@@ -114,7 +114,6 @@ function Page2(props) {
         { colorId: 0, colorName: "orange" },
         { colorId: 1, colorName: "teal" },
         { colorId: 2, colorName: "purple" },
-        
       ],
       img: [
         {
@@ -138,10 +137,7 @@ function Page2(props) {
       id: 4,
       price: 350,
       Name: "The Thomso king",
-      colors: [
-        { colorId: 0, colorName: "black" },
-       
-      ],
+      colors: [{ colorId: 0, colorName: "black" }],
       img: [
         {
           id: 1,
@@ -177,14 +173,19 @@ function Page2(props) {
     console.log("updated array: ", AddedToCart);
   }, [AddedToCart, localStorage]);
 
-  useEffect(() => {}, [color]);
-
   useEffect(() => {
     const storedArray = localStorage.getItem("AddedToCart");
     if (storedArray) {
       setAddedToCart(JSON.parse(storedArray));
     }
   }, []);
+
+  const RemoveItem = (id) => {
+    const storedData = JSON.parse(localStorage.getItem("AddedToCart"));
+    const updatedData = storedData.filter((item) => item.id !== id);
+    localStorage.setItem("AddedToCart", JSON.stringify(updatedData));
+    setAddedToCart(updatedData);
+  };
 
   const IncrementFunc = () => {
     let num = quantity;
@@ -249,7 +250,7 @@ function Page2(props) {
                       <div className="color122">{color}</div>
                     </div>
                     <div className="colorbox">
-                      {colors.map(({colorId,colorName}) => {
+                      {colors.map(({ colorId, colorName }) => {
                         return (
                           <div
                             className="colorbox1"
@@ -316,12 +317,33 @@ function Page2(props) {
                         <img src={decrement} alt="increment operator" />
                       </button>
                     </div>
-                    <button className="bag1">
-                      <img src={lock5} className="lock5" alt="" />
-                      <div className="con1" onClick={CreateObject}>
-                        ADD TO BAG
-                      </div>
-                    </button>
+                    <div
+                      style={{
+                        width:'40vw',
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "0.5rem",
+                        flexWrap:'wrap'
+                      }}
+                    >
+                      <button className="bag1">
+                        <img src={lock5} className="lock5" alt="" />
+                        <div className="con1" onClick={CreateObject}>
+                          ADD TO BAG
+                        </div>
+                      </button>
+                      <button className="bag1">
+                        <img src={lock5} className="lock5" alt="" />
+                        <div
+                          className="con1"
+                          onClick={() => {
+                            setRenderId(1);
+                          }}
+                        >
+                          GO TO BAG
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               );
@@ -329,7 +351,7 @@ function Page2(props) {
           <Footer />
         </div>
       )}
-      {renderId === 1 && <Page3 Cart={AddedToCart} />}
+      {renderId === 1 && <Page3 Cart={AddedToCart} RemoveItem={RemoveItem} />}
     </>
   );
 }
