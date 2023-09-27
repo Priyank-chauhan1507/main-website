@@ -39,14 +39,13 @@ function Page2(props) {
   const [imgIndex, setimgIndex] = useState(true);
   const [selected, setselected] = useState(0);
   const [AddedToCart, setAddedToCart] = useState([]);
-  const [price, setPrice] = useState();
   const [renderId, setRenderId] = useState(0);
 
   const data = [
     {
       id: 1,
       price: 350,
-      Name: "Feel The Thomso vibe ",
+      Name: "Feel The Thomso vibe",
       colors: [
         { colorId: 0, colorName: "white" },
         { colorId: 1, colorName: "lavender" },
@@ -68,7 +67,7 @@ function Page2(props) {
     {
       id: 2,
       price: 350,
-      Name: "The Ellyx Tee  ",
+      Name: "The Ellyx Tee",
       colors: [
         { colorId: 0, colorName: "white" },
         { colorId: 1, colorName: "black" },
@@ -133,7 +132,7 @@ function Page2(props) {
     },
     {
       id: 4,
-      price: 350,
+      price: 450,
       Name: "The Thomso king",
       colors: [{ colorId: 0, colorName: "black" }],
       img: [
@@ -148,7 +147,7 @@ function Page2(props) {
   const item = data[id - 1]
 
   const [color, setColor] = useState(item.colors[0].colorName);
-  const [Name, setName] = useState(item.Name);
+  const [imgSrc, setImgSrc] = useState();
 
   function CreateObject() {
     if (!size) {
@@ -156,11 +155,12 @@ function Page2(props) {
     } else {
       const allDetails = {
         id: id,
-        name: Name,
+        name: item.Name,
         quantity: quantity,
         color: color,
         size: size,
-        price: price,
+        price: item.price,
+        // src: imgSrc
       };
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
@@ -183,18 +183,10 @@ function Page2(props) {
     }
   }, []);
 
-  const RemoveItem = (id) => {
-    const storedData = JSON.parse(localStorage.getItem("AddedToCart"));
-    const updatedData = storedData.filter((item) => item.id !== id);
-    localStorage.setItem("AddedToCart", JSON.stringify(updatedData));
-    setAddedToCart(updatedData);
-  };
-
   const IncrementFunc = () => {
     let num = quantity;
     num += 1;
     setquantity(num);
-    setPrice(350);
   };
   const DecrementFunc = () => {
     if (quantity > 1) {
