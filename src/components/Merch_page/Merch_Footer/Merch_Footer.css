@@ -1,0 +1,138 @@
+.webNavbarMain{
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    align-items: center;
+    width: 90vw;
+height: 328px;
+margin-top:0rem;
+z-index: 1000;
+overflow: hidden;
+background-color: black;
+margin: 0 5VW 0 5VW;
+border-style: none;
+border-radius: 2vh;
+background: #000
+}
+
+.mob-foot{
+    display: none;
+}
+
+.webNavbarMain::-webkit-scrollbar{
+    display: none;
+}
+
+.webNavbarLeft{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.webNavbarLeft1{
+    padding-bottom: 20px;
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 75% */
+letter-spacing: -0.64px;
+}
+
+.webNavbarLeft2,
+.webNavbarLeft3{
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.webNavbarRight{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.webNavbarRight1{
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 75% */
+letter-spacing: -0.64px;
+}
+
+.webNavbarRight2{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    
+    color: #FFF;
+font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    
+}
+
+.webNavbarMiddle{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    align-items: center;
+    padding-left: 5rem;
+}
+
+
+.webNavbarMiddle2{
+    display: flex;
+    gap:20px;
+   
+}
+
+.webNavbarMiddle2 a img{
+    height:30px;
+    width:30px;
+}
+
+@media only screen and (max-width:768px){
+    .webNavbarMain{
+        display: none;
+    }
+    .mob-foot{
+        display: block;
+    }
+}
+
+.TNC{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Comic Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: relative;
+top:-2rem;
+/* left: -1rem; */
+z-index: 10000000000;
+cursor: pointer;
+text-decoration: underline;
+
+}
+
+.TNC:hover{
+   text-decoration: underline;
+}

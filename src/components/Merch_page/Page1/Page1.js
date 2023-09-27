@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./Page1.css";
 import ellipse from "../../../assests/Ellipse 129.png";
 import product from "../../../assests/Group 37501.png";
-import Navbar from "../../EventsNavbar/Eventsnavbar";
-import Footer from "../../Navbar/WebNavbarNew";
+import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
+import Footer from "../Merch_Footer/Merch_Footer";
 // import tshirt1front from "../../../assests/t1front.webp"
 // import tshirt1back from "../../../assests/t1back.webp"
 // import tshirt2front from "../../../assests/t2front.webp"
@@ -67,18 +67,19 @@ function Page1() {
         <Navbar />
         <div className="merch_Page1">
           <div className="home_merchpage">
-            <div className="merch_bg_img">
-              <img src={merchBg} className="merch_Bg" alt="merch_Bg" />
-            </div>
+            {/* <div className="merch_bg_img"> */}
+              {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg" /> */}
+            {/* </div> */}
             <div className="merchSmilediv">
               <img src={merchSmily} className="merch_Smile" alt="merch_Smile" />
             </div>
             <div className="home_text">
               <div className="home_heading">
-                <h1>Thomso Merch</h1>
-                <h1>IIT Roorkee</h1>
+                <h1>Own a piece of Thomso’23</h1>
+                <h1>Grab your tees now!</h1>
+                {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg"/> */}
               </div>
-              <div className="home_para">
+              {/* <div className="home_para">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -88,7 +89,7 @@ function Page1() {
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation.
-              </div>
+              </div> */}
             </div>
             {/* <div className="ellipse">
                 <img className="ell-img" src={ellipse} alt="..." />
