@@ -47,23 +47,7 @@ function Page2(props) {
   const [renderId, setRenderId] = useState(0);
 
   const data = [
-    // {
-    //   id: 1,
-    //   price: 350,
-    //   Name: "THOMSO UNISEX TSHIRT",
-    //   img: [
-    //     {
-    //       id: 1,
-    //       imgfront: tshirt3front,
-    //       imgback: tshirt3back,
-    //     },
-    //     {
-    //       id: 2,
-    //       imgfront: tshirt3front2,
-    //       imgback: tshirt3back2,
-    //     },
-    //   ],
-    // },
+    
     {
       id: 1,
       price: 350,
@@ -98,6 +82,7 @@ function Page2(props) {
         },
       ],
     },
+    {
       Name: "The Ellyx Tee  ",
       img: [
         {
