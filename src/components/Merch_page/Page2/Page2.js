@@ -173,7 +173,7 @@ function Page2(props) {
   }
 
   useEffect(() => {
-    console.log("updated array: ", AddedToCart);
+    // console.log("updated array: ", AddedToCart);
   }, [AddedToCart, localStorage]);
 
   useEffect(() => {
