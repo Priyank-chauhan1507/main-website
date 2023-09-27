@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -15,43 +16,75 @@ overflow-x: hidden !important;
 }
 .home_merchpage{
     display: flex;
-    background-color: #535353;
+    /* background-color: #535353; */
+    justify-content: center;
     padding: 0;
     margin: 0;
 }
-.ell-img{
+.merch_bg_img{
+    position: relative;
+    /* z-index: -1; */
+}
+.merch_Bg{
+    width:100vw;
+    height:60vh;
+}
+.merch_Smile{
+    position: absolute;
+    z-index: 1;
+    margin-top: 2rem;
+    margin-left: -72vw;
+    width: 90px;
+}
+/* .ell-img{
     width:29vw;
-}
-.ellipse{
+} */
+/* .ellipse{
 padding-left: 20vw;
-}
+} */
 .text1 p{
     font-size: 1.5vw;
 }
 .home_text{
 
-    width: 40vw;
+    /* width: 40vw; */
     padding: 1.8vw;
-    color: white;
-    padding-left: 10vw;
+    color:black;
+    /* padding-left: 10vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    z-index: 1;
 }
 .home_heading{
-    font-size: 1.7vw;
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-family: comic Neue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .home_para{
-    color: #FFFFFF;
-    margin-top: 5vw;
-    font-size: 1vw;
+    /* color: #FFFFFF; */
+    font-family: comic neue;
+    font-weight: 400;
+    margin-top: 1vw;
+    font-size: 1.7vw;
+    width:70vw;
 }
-.products_hr{
+/* .products_hr{
     margin-top: 2vw;
     margin-bottom: 2vw;
+    text-align: center;
 }
 .products_hr hr{
     width: 100%;
     margin-block-start: 0em;
     margin-block-end: 0em;
-}
+} */
 .text1{
     padding-left: 9vw;
     margin: 1vw;
@@ -68,7 +101,9 @@ padding-left: 20vw;
 .text{
     font-weight: bold;
 }
-.product_name{
+.prod_name{
+    display:inline-flex;
+    color:black;
     padding: 1vw;
 }
 .product{
@@ -76,6 +111,7 @@ padding-left: 20vw;
     padding-right: 10vw;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    margin-top: 3rem;
 
 }
 .product hr{
@@ -88,16 +124,24 @@ display: none;
     width: 2vw;
 }
 @media screen and (max-width:1200px) {
-    .ell-img{
+    /* .ell-img{
         width:35vw;
 
-    }
+    } */
     .home_para{
-        font-size: 1.2vw;
-        width: 30vw;
+        font-size: 1.8vw;
+        /* width: 30vw; */
+    }
+}
+@media screen and (max-width:1000px) {
+    .merch_Smile{
+        margin-left: -74vw;
     }
 }
 @media screen and (max-width:768px){
+    .merch_Smile{
+        display: none;
+    }
 .home_merchpage{
     display: block;
 }
@@ -110,10 +154,11 @@ display: none;
 .home_text{
     width: 100%;
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
+    margin-top: -25rem;
 }
 .home_heading{
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: center;
     padding-bottom: 3vw;
 
@@ -123,19 +168,19 @@ display: none;
     font-size: 2.2vw;
     line-height: 2.8vw;
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 /* .home_para p{
     width: 20vw;
 } */
-.ellipse{
+/* .ellipse{
     padding-bottom: 2vw;
     padding-top: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 0;
-}
+} */
 .product{
     display: flex;
     align-items: center;
