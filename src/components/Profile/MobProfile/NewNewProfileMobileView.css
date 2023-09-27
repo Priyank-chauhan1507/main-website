@@ -175,6 +175,10 @@
     .main-prof-box-head-text{
         width:22vw;
     }
+    .lsp-img1{
+        min-width: 82px;
+        min-height: 82px;
+    }
 
     .flex-2-title {
         font-family: "Oxanium";
