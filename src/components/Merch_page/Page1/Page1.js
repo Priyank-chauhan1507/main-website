@@ -33,27 +33,27 @@ function Page1() {
     {
       id: 1,
       price: 350,
-      
+
       name: "Feel The Thomso vibe ",
       img: orng2,
     },
     {
       id: 2,
       price: 350,
-      name: "The Ellyx Tee  ",
+      name: "The Allyx Tee  ",
       img: orng1,
-      
+
     },
     {
       id: 3,
       price: 350,
       name: "The Thomso Tee",
       img:orng,
-      
+
     },
-    
+
     {
-    
+
       id: 4,
       price: 350,
       name: "The Thomso king",
