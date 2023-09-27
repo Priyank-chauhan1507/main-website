@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../../assests/Merch_logo.png";
-import logo1 from "../../../assests/Merch_moblogo.png";
+import logo1 from "../../../assests/mob_merch.png";
 import bgmobile from "../../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
 import cross from "../../../assests/Cross.webp";

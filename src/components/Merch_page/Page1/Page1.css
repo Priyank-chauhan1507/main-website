@@ -267,6 +267,7 @@ word-wrap: normal
     background-image:url("./mrechbg.webp");
     background-size: cover;
 }
+/* < Stashed changes */
 @media screen and (max-width:350px){
     .prod_img{
         padding-left:4vw;

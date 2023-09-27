@@ -3,7 +3,7 @@ import "./Page1.css";
 import ellipse from "../../../assests/Ellipse 129.png";
 import product from "../../../assests/Group 37501.png";
 import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
-import Footer from "../../Navbar/WebNavbarNew";
+import Footer from "../Merch_Footer/Merch_Footer";
 // import tshirt1front from "../../../assests/t1front.webp"
 // import tshirt1back from "../../../assests/t1back.webp"
 // import tshirt2front from "../../../assests/t2front.webp"
