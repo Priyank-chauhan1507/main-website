@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Page1.css";
 import ellipse from "../../../assests/Ellipse 129.png";
 import product from "../../../assests/Group 37501.png";
-import Navbar from "../../EventsNavbar/Eventsnavbar";
+import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
 import Footer from "../../Navbar/WebNavbarNew";
 // import tshirt1front from "../../../assests/t1front.webp"
 // import tshirt1back from "../../../assests/t1back.webp"
