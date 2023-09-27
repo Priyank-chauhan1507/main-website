@@ -58,7 +58,7 @@ function Navbar({ color, disable, setregister, register, data }) {
     }
   };
   return (
-    <div style={{ background: color }} className="nav-comp">
+    <div style={{ background: color }} className="nav-comp11">
       <MobMerchnavbar />
       <div className="mainnav">
         <Link to="/">
@@ -66,7 +66,7 @@ function Navbar({ color, disable, setregister, register, data }) {
         </Link>
         <div className="event-nav-right">
           <a
-            className="event-nav-right-compo hover-underline-animation"
+            className="event-nav-right-compo11 hover-underline-animation"
             onClick={() => {
               navigate("/events");
             }}
@@ -74,14 +74,14 @@ function Navbar({ color, disable, setregister, register, data }) {
             Events
           </a>
           <a
-            className="event-nav-right-compo hover-underline-animation"
+            className="event-nav-right-compo11 hover-underline-animation11"
             href="https://ca.thomso.in/"
             target="_blank"
           >
             CA Portal
           </a>
           <a
-            className="event-nav-right-compo hover-underline-animation"
+            className="event-nav-right-compo11 hover-underline-animation11"
             href="https://zonals.thomso.in/"
             target="_blank"
           >
@@ -102,7 +102,7 @@ function Navbar({ color, disable, setregister, register, data }) {
             <>
               <button
                 onClick={() => navigate("/login")}
-                className="event-regi-btn"
+                className="event-regi-btn11"
                 id="registernow"
               >
                 LOG IN
