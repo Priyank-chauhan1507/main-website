@@ -5,11 +5,7 @@ import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Footer from "../../Navbar/WebNavbarNew";
 
 function Page3(props) {
-  const { Cart } = props;
-
-  const RemoveItem = (id) => {
-    return localStorage.removeItem(id);
-  }
+  const { Cart, RemoveItem } = props;
 
   return (
     <>
@@ -46,9 +42,17 @@ function Page3(props) {
                         </div>
                         <div className="prod_size">
                           <h3>{size}</h3>
+                          <h3>{color}</h3>
                         </div>
                         <div className="prod_button">
-                          <button className="prod_button1" onClick={() => {RemoveItem(id)}}>REMOVE</button>
+                          <button
+                            className="prod_button1"
+                            onClick={() => {
+                              RemoveItem(id);
+                            }}
+                          >
+                            REMOVE
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -60,7 +64,7 @@ function Page3(props) {
                         <h3>{quantity}</h3>
                       </div>
                       <div className="total_price">
-                        <h3>{quantity*price}</h3>
+                        <h3>{quantity * price}</h3>
                       </div>
                     </div>
                   </div>

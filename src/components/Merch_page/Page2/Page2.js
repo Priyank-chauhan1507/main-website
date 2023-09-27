@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Page2.css";
 import lock5 from "../../../assests/lock5.svg";
-import Rect1 from "../../../assests/Rect1.webp";
-import Rect2 from "../../../assests/Rect2.webp";
 import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Footer from "../../Navbar/WebNavbarNew";
 import tshirt3front from "../../../assests/tshirt3front.webp";
@@ -34,24 +32,27 @@ import Page3 from "../Page3/Page3";
 
 function Page2(props) {
   const { id } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [Name, setName] = useState("");
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
   const [quantity, setquantity] = useState(0);
   const [imgUrl, setImgUrl] = useState("");
-  const [imgIndex, setimgIndex] = useState(1);
+  const [imgIndex, setimgIndex] = useState(0);
   const [selected, setselected] = useState(0);
   const [AddedToCart, setAddedToCart] = useState([]);
-  const [price , setPrice] = useState()
+  const [price, setPrice] = useState();
   const [renderId, setRenderId] = useState(0);
 
   const data = [
-    
     {
       id: 1,
       price: 350,
       Name: "Feel The Thomso vibe ",
+      colors: [
+        { colorId: 0, colorName: "white" },
+        { colorId: 1, colorName: "lavender" },
+      ],
       img: [
         {
           id: 1,
@@ -65,25 +66,18 @@ function Page2(props) {
         },
       ],
     },
+
     {
       id: 2,
       price: 350,
-      Name: "THOMSO UNISEX TSHIRT",
-      img: [
-        {
-          id: 1,
-          imgfront: tshirt3front,
-          imgback: tshirt3back,
-        },
-        {
-          id: 2,
-          imgfront: tshirt3front2,
-          imgback: tshirt3back2,
-        },
-      ],
-    },
-    {
       Name: "The Ellyx Tee  ",
+      colors: [
+        { colorId: 0, colorName: "white" },
+        { colorId: 1, colorName: "black" },
+        { colorId: 2, colorName: "purple" },
+        { colorId: 3, colorName: "blue" },
+        { colorId: 4, colorName: "beige" },
+      ],
       img: [
         {
           id: 1,
@@ -93,7 +87,7 @@ function Page2(props) {
         {
           id: 2,
           imgfront: tshirt5front2,
-          // imgback: tshirt4back2,
+          imgback: tshirt4back2,
         },
         {
           id: 3,
@@ -103,7 +97,7 @@ function Page2(props) {
         {
           id: 4,
           imgfront: tshirt5front4,
-          // imgback: tshirt4back2,
+          imgback: tshirt4back2,
         },
         {
           id: 5,
@@ -116,6 +110,11 @@ function Page2(props) {
       id: 3,
       price: 350,
       Name: "The Thomso Tee",
+      colors: [
+        { colorId: 0, colorName: "orange" },
+        { colorId: 1, colorName: "teal" },
+        { colorId: 2, colorName: "purple" },
+      ],
       img: [
         {
           id: 1,
@@ -138,6 +137,7 @@ function Page2(props) {
       id: 4,
       price: 350,
       Name: "The Thomso king",
+      colors: [{ colorId: 0, colorName: "black" }],
       img: [
         {
           id: 1,
@@ -146,8 +146,6 @@ function Page2(props) {
         },
       ],
     },
-
-
   ];
 
   function CreateObject() {
@@ -160,7 +158,7 @@ function Page2(props) {
         quantity: quantity,
         color: color,
         size: size,
-        price: price
+        price: price,
       };
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
@@ -173,7 +171,7 @@ function Page2(props) {
 
   useEffect(() => {
     console.log("updated array: ", AddedToCart);
-  }, [AddedToCart,localStorage]);
+  }, [AddedToCart, localStorage]);
 
   useEffect(() => {
     const storedArray = localStorage.getItem("AddedToCart");
@@ -181,6 +179,13 @@ function Page2(props) {
       setAddedToCart(JSON.parse(storedArray));
     }
   }, []);
+
+  const RemoveItem = (id) => {
+    const storedData = JSON.parse(localStorage.getItem("AddedToCart"));
+    const updatedData = storedData.filter((item) => item.id !== id);
+    localStorage.setItem("AddedToCart", JSON.stringify(updatedData));
+    setAddedToCart(updatedData);
+  };
 
   const IncrementFunc = () => {
     let num = quantity;
@@ -205,7 +210,7 @@ function Page2(props) {
           <Navbar />
           {data
             .filter((item) => item.id === parseInt(id))
-            .map(({ id, Name, price, img }) => {
+            .map(({ id, Name, price, img, colors }) => {
               return (
                 <div className="shirt-container" key={id}>
                   <div className="shirt-container1">
@@ -229,7 +234,6 @@ function Page2(props) {
                         className="box-img1"
                         onClick={() => setImgUrl(img[imgIndex].imgback)}
                       />
-                      {/* <img src={Rect2} alt="" className="box-img1" /> */}
                     </div>
                   </div>
                   <div className="shirt-container2">
@@ -246,27 +250,18 @@ function Page2(props) {
                       <div className="color122">{color}</div>
                     </div>
                     <div className="colorbox">
-                      <div
-                        className="colorbox1"
-                        onClick={() => {
-                          setColor("white");
-                          setimgIndex(1);
-                        }}
-                      ></div>
-                      <div
-                        className="colorbox2"
-                        onClick={() => {
-                          setColor("black");
-                          setimgIndex(1);
-                        }}
-                      ></div>
-                      <div
-                        className="colorbox3"
-                        onClick={() => {
-                          setColor("blue");
-                          setimgIndex(0);
-                        }}
-                      ></div>
+                      {colors.map(({ colorId, colorName }) => {
+                        return (
+                          <div
+                            className="colorbox1"
+                            style={{ backgroundColor: colorName }}
+                            onClick={() => {
+                              setColor(colorName);
+                              setimgIndex(colorId);
+                            }}
+                          ></div>
+                        );
+                      })}
                     </div>
                     <div className="size">select size</div>
                     <div className="select-size">
@@ -322,12 +317,33 @@ function Page2(props) {
                         <img src={decrement} alt="increment operator" />
                       </button>
                     </div>
-                    <button className="bag1">
-                      <img src={lock5} className="lock5" alt="" />
-                      <div className="con1" onClick={CreateObject}>
-                        ADD TO BAG
-                      </div>
-                    </button>
+                    <div
+                      style={{
+                        width:'40vw',
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "0.5rem",
+                        flexWrap:'wrap'
+                      }}
+                    >
+                      <button className="bag1">
+                        <img src={lock5} className="lock5" alt="" />
+                        <div className="con1" onClick={CreateObject}>
+                          ADD TO BAG
+                        </div>
+                      </button>
+                      <button className="bag1">
+                        <img src={lock5} className="lock5" alt="" />
+                        <div
+                          className="con1"
+                          onClick={() => {
+                            setRenderId(1);
+                          }}
+                        >
+                          GO TO BAG
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               );
@@ -335,7 +351,7 @@ function Page2(props) {
           <Footer />
         </div>
       )}
-      {renderId === 1 && <Page3 Cart={AddedToCart} />}
+      {renderId === 1 && <Page3 Cart={AddedToCart} RemoveItem={RemoveItem} />}
     </>
   );
 }
