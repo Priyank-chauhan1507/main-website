@@ -37,6 +37,21 @@ function ContactUs() {
                 <img src={Phone} alt="" /> &nbsp; &nbsp; &nbsp;
                 +91 7347346875
             </div>
+            
+            {/* <div className="phoneContact">
+                <img src={Mail} alt="" /> &nbsp; &nbsp; &nbsp;
+                alok_k@iitr.ac.in
+            </div> */}
+            </div>
+            <div className="contact3MUN">
+            <div className="NameContact">
+                Soham Parolia
+            </div>
+            <div className="phoneContact">
+                <img src={Phone} alt="" /> &nbsp; &nbsp; &nbsp;
+                +91 9920150290
+            </div>
+            
             {/* <div className="phoneContact">
                 <img src={Mail} alt="" /> &nbsp; &nbsp; &nbsp;
                 alok_k@iitr.ac.in

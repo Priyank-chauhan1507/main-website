@@ -150,3 +150,38 @@ text-transform: lowercase;
         padding: 2px 16px;
     }
 }
+.semimainPopUp{
+    width:40vw;
+    margin:auto;
+}
+.mainPopUp{
+    display:flex;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+}
+@media only screen and (max-width: 800px){
+    .semimainPopUp{
+        width:50vw;
+    }
+}
+@media only screen and (max-width:600px){
+    .semimainPopUp{
+        width:65vw;
+    }
+}
+@media only screen and (max-width:410px){
+    .semimainPopUp{
+        width:70vw;
+    }
+}
+@media only screen and (max-width:375px){
+    .semimainPopUp{
+        width:75vw;
+    }
+}
+@media only screen and (max-width:350px){
+    .semimainPopUp{
+        width:90vw;
+    }
+}

@@ -5,7 +5,15 @@
     /* z-index:-1; */
     /* position: absolute; */
 }
-
+.carouselcontentbtn{
+    display: flex;
+    align-items: center;
+}
+.moreInfobtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .left-arrow-mun-car{
 
    position:relative;
@@ -88,6 +96,15 @@
     font-weight: 400;
     line-height: 162.2%; /* 35.259px */
 }
+/* .carouselcontentbtn{
+    display: flex;
+    align-items: center;
+} */
+/* .moreInfobtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 @media only screen and (max-width:768px)
 {
@@ -150,6 +167,13 @@
 .carouselcontenttext2{
     bottom:19vh;
 }
+.carouselcontentpara
+{
+    margin: auto;
+    padding: 0;
+    display: inline-block;
+    font-size:2.6vw;
+}
 }
 
 
@@ -176,7 +200,7 @@
     }
     .carouselcontentbtn{
         height:5vh !important;
-        bottom:6vh !important;
+        bottom:4vh !important;
     }
 }
 @media only screen and (max-width:330px){
@@ -203,13 +227,15 @@
     justify-content: center;
     padding: 2vh 2vw;
     height: auto;
+    /* display: flex;
+    align-items: center; */
 }
 .carouselcontentpara
 {
     margin: auto;
     padding: 0;
     display: inline-block;
-    font-size:2.1vw;
+    font-size:2.6vw;
 }
 .carouselcontentimg
 {
@@ -223,6 +249,9 @@
 .carouselcontentarrow
 {
     display: inline-block;
+}
+.infoarrow{
+    width:2vw;
 }
 /* .infoarrow{
     width:7vw;
