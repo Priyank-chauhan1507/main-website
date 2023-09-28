@@ -76,6 +76,14 @@ function MobEventnavbar() {
           >
             Events
           </h1>
+          <h1
+            onClick={() => {
+              navigate("/merch_page1");
+              window.location.reload(false);
+            }}
+          >
+            Merch
+          </h1>
           {/* {event &&
             events.map((el) => {
               const { par, child } = el;
