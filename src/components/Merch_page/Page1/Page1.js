@@ -29,7 +29,7 @@ import orng2 from "../../../assests/orng (2).png";
 import orng3 from "../../../assests/orng(3).png";
 import tshirt4front2 from "../../../assests/f3.webp";
 import merchyellowbg from "../../../assests/Merchbggrp.png";
-import mobmerchbg from "../../../assests/mobmerchbg.png";
+import mobmerchbg from "../../../assests/merchmob.png";
 import Loader from "../../Loader/Loader"
 
 function Page1() {
