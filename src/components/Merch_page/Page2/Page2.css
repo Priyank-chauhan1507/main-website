@@ -7,6 +7,7 @@
   border: 1px solid black;
   transform: scale(1.1);
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 }
 .shirt-container {
   width: 100vw;
@@ -35,6 +36,7 @@
   height: 10vw;
   width: 11.5vw;
   border-radius:10px;
+  cursor: pointer;
 }
 .tshirt-head {
   color: #202020;

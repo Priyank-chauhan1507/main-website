@@ -191,7 +191,7 @@ function MobEventnavbar() {
           </h4>
           <h1
             onClick={() => {
-              navigate("/merch_page1");
+              navigate("/thomsomerchhome");
               window.location.reload(false);
             }}
           >

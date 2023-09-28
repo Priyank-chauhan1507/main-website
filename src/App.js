@@ -149,9 +149,9 @@ useEffect(() => {
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
-          <Route exact={true} path="/merch_page1" element={<Page1/>} />
-          <Route exact={true} path="/merch_page2/:id" element={<Page2/>} />
-          <Route exact={true} path="/merch_page3" element={<Page3/>} />
+          <Route exact={true} path="/thomsomerchhome" element={<Page1/>} />
+          <Route exact={true} path="/thomsomerchselection/:id" element={<Page2/>} />
+          <Route exact={true} path="/thomsomerchcart" element={<Page3/>} />
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
