@@ -75,14 +75,14 @@ function Page1() {
   //   setClasstyle(newText);
   // }
 
-  useEffect(() => {
-    setLoading(true);
-    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
-      navigate(`/login`);
-    }else{
-      setLoading(false);
-    }
-  });
+  // useEffect(() => {
+  //   setLoading(true);
+  //   if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+  //     navigate(`/login`);
+  //   }else{
+  //     setLoading(false);
+  //   }
+  // });
 
   return (
     <>
@@ -132,7 +132,7 @@ function Page1() {
             {data.map(({ id, img, price, name }) => {
               return (
                 <>
-                  <Link to={`/merch_page2/${id}`}>
+                  <Link to={`/thomsomerchselection/${id}`}>
                     <div className="product1" /*onClick={changeclassyle}*/ key={id}>
                       <div className="prod_img">
                         <img className="product-merch" src={img} alt="..." />

@@ -197,7 +197,7 @@ function Page2(props) {
         JSON.stringify([...AddedToCart, allDetails])
         );
         message.success("Item added to cart");
-        navigate("/merch_page3");
+        navigate("/thomsomerchcart");
     }
     setRenderId(1);
   }
@@ -213,14 +213,14 @@ function Page2(props) {
     }
   }, []);
 
-  useEffect(() => {
-    setLoading(true);
-    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
-      navigate(`/login`);
-    }else{
-      setLoading(false);
-    }
-  });
+  // useEffect(() => {
+  //   setLoading(true);
+  //   if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+  //     navigate(`/login`);
+  //   }else{
+  //     setLoading(false);
+  //   }
+  // });
 
   const IncrementFunc = () => {
     let num = quantity;
