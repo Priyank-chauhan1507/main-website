@@ -75,13 +75,14 @@
   padding-right: 1vw;
 }
 .price1-offer {
-  color: #f26120;
+  color: #00BE6E;
   font-family: Comic Sans MS;
   font-size: 1.4vh;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 24px */
   letter-spacing: 0.32px;
+  margin-left:10px;
   /* text-transform: lowercase; */
 }
 .inclu {
@@ -96,7 +97,7 @@
 }
 .hr1 {
   height: 0.2vh;
-  width: 50vw;
+  width: 45vw;
   margin: 2vh 0;
 }
 .color12 {
@@ -120,6 +121,7 @@
   margin-top: 0.5rem;
   margin-top: 3vh;
   margin-bottom: 2.5vh;
+  align-items: center
 }
 
 .border-box{
@@ -252,6 +254,14 @@
   letter-spacing: 2.4px;
   text-transform: lowercase;
 }
+
+.buy_now{
+  background:white !important;
+  color:black !important;
+  border:1px solid black;
+  margin-top:2.45vh !important;
+}
+
 .lock5 {
   height: 2vh;
   width: 2vw;
@@ -282,8 +292,15 @@
   .box-img2 {
    width: 80vw;
   }
+  .big-box2{
+    gap: 15vw;
+    justify-content: center;
+  }
   .tshirt-head {
     font-size: 7.5vw;
+  }
+  .select-size{
+    gap:3.5vw;
   }
   .price1 {
     font-size: 5vw;
@@ -312,6 +329,9 @@
   .colorbox {
     gap: 3vw;
   }
+  .colorbox1A {
+    width: 6.5vw;
+  }
   .color12 {
     font-size: 3vh;
   }
@@ -321,7 +341,7 @@
   }
   .bag1 {
     height: 5vh;
-    width: 34vw;
+    width: 36vw;
   }
   .size1 {
     width: 7.5vw;
@@ -341,5 +361,8 @@
   }
   .lock5 {
     width: 3vw;
+  }
+  .hr1{
+    width:81vw;
   }
 }

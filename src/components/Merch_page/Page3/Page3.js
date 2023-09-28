@@ -147,12 +147,12 @@ const Page3 = () => {
                         />
                         {/* <div className="prod_img">{image}</div> */}
                         <div className="prod_discription">
-                          <div className="prod_name">
+                          <div className="prod_name product_name_merch_3">
                             <h3>{name}</h3>
                           </div>
                           <div className="prod_size">
-                            <h3>{size}</h3>
-                            <h3>{color}</h3>
+                            <h3>size : {size}</h3>
+                            <h3>color : {color}</h3>
                           </div>
                           <div className="prod_button">
                             <button

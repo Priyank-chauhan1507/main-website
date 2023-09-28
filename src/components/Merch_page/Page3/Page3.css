@@ -39,8 +39,9 @@
 .other_title{
     display: flex;
     flex-direction: row;
-    gap:10vw;
-    /* padding:3px; */
+    gap: 9vw;
+    /* padding: 3px; */
+    margin-bottom: 1vh;
 }
 .prod1_img{
     width:20vw;
@@ -66,6 +67,9 @@
     font-size: 1.8vw;
     /* padding-bottom: -1vh; */
 }
+.product_name_merch_3{
+    padding : 0px !important;
+}
 .prod_size{
     font-family: comic Neue;
     font-style: italic;
@@ -80,6 +84,9 @@
     font-family: 'Bangers', cursive;
     font-size: 1.5vw;
     padding:2px 4px 2px 4px;
+    width:8.5vw;
+    background: white;
+    border: 0.5px solid black;
 }
 .product_discription{
     display: flex;
@@ -130,7 +137,8 @@
     gap:2vw;
     position:relative;
     justify-content: center;
-    top:-20vh;
+    top:2.5vh;
+    margin-bottom: 2vh;
 }
 .prod_button2,.prod_button3{
     font-family:'Bangers', cursive ;
