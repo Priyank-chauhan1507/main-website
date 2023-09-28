@@ -26,9 +26,10 @@
   gap: 2vw;
 }
 .box-img1 {
-  padding-top: 4vh;
+  margin-top: 4vh;
   height: 10vw;
-  width: 10vw;
+  width: 11.5vw;
+  border-radius:10px;
 }
 .tshirt-head {
   color: #202020;
@@ -41,8 +42,9 @@
   text-transform: lowercase;
 }
 .box-img2 {
-  height: 60vh;
+  height: 50vh;
   width: 25vw;
+  border-radius: 16px;
 }
 .tshirt-price {
   display: flex;
@@ -151,13 +153,16 @@
   height: 4vh;
   width: 2.5vw;
   background-color: white;
+  cursor: pointer;
 }
+
 
 .colorbox1A {
   border: 3px solid black;
   height: 4vh;
   width: 2.5vw;
   background-color: white;
+  cursor: pointer;
 }
 
 .colorbox2 {

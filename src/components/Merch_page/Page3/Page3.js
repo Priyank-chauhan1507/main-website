@@ -108,7 +108,7 @@ const Page3 = () => {
             <h1>YOUR CART</h1>
           </div>
 
-          {data.length == 0 ? (
+          {data?.length == 0 ? (
             <>
               <div className="emptycart">Cart is Empty</div>
               <div className="footer_button">

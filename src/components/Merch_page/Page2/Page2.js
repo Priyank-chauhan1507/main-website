@@ -11,13 +11,16 @@ import tshirt4front1 from "../../../assests/vibe.webp";
 import tshirt4back1 from "../../../assests/white-t-shirts-with-copy-space-gray-background 2.webp";
 import tshirt4front2 from "../../../assests/f3.webp";
 import tshirt4back2 from "../../../assests/f4.webp";
-import tshirt5front1 from "../../../assests/5.webp";
-import tshirt5back1 from "../../../assests/5'.webp";
-import tshirt5front2 from "../../../assests/black.webp";
-import tshirt5front3 from "../../../assests/lavender.webp";
-import tshirt5front4 from "../../../assests/Boink Aqua blue or teal whatever.webp";
-import tshirt5front5 from "../../../assests/4.webp";
-import tshirt5back5 from "../../../assests/4'.webp";
+import tshirt5front1 from "../../../assests/white23front.webp";
+import tshirt5back1 from "../../../assests/white23back.webp";
+import tshirt5front2 from "../../../assests/black23front.webp";
+import tshirt5back2 from "../../../assests/black23back.webp";
+import tshirt5front3 from "../../../assests/lavender23front.webp";
+import tshirt5back3 from "../../../assests/lavender23back.webp";
+import tshirt5front4 from "../../../assests/blue23front.webp";
+import tshirt5back4 from "../../../assests/blue23back.webp";
+import tshirt5front5 from "../../../assests/beige23front.webp";
+import tshirt5back5 from "../../../assests/beige23back.webp";
 import tshirt6front1 from "../../../assests/orng.webp";
 import tshirt6front2 from "../../../assests/sky b.webp";
 import tshirt6front3 from "../../../assests/purp.webp";
@@ -69,32 +72,32 @@ function Page2(props) {
       price: 350,
       Name: "The Allyx Tee",
       colors: [
-        { colorId: 0, colorName: "white" },
+        { colorId: 0, colorName: "lavender" },
         { colorId: 1, colorName: "black" },
-        { colorId: 2, colorName: "lavender" },
-        { colorId: 3, colorName: "blue" },
+        { colorId: 2, colorName: "white" },
+        { colorId: 3, colorName: "aquablue" },
         { colorId: 4, colorName: "beige" },
       ],
       img: [
         {
           id: 1,
-          imgfront: tshirt5front1,
-          imgback: tshirt5back1,
+          imgfront: tshirt5front3,
+          imgback: tshirt5back3,
         },
         {
           id: 2,
           imgfront: tshirt5front2,
-          imgback: tshirt4back2,
+          imgback: tshirt5back2,
         },
         {
           id: 3,
-          imgfront: tshirt5front3,
-          imgback: tshirt4back2,
+          imgfront: tshirt5front1,
+          imgback: tshirt5back1,
         },
         {
           id: 4,
           imgfront: tshirt5front4,
-          imgback: tshirt4back2,
+          imgback: tshirt5back4,
         },
         {
           id: 5,
@@ -204,11 +207,20 @@ function Page2(props) {
                 <div className="shirt-container" key={id}>
                   <div className="shirt-container1">
                     <div className="big-box1">
+                      {
+id == 4 ?
+                      <img
+                        src={imgIndex ? item.img[imgCol].imgback : item.img[imgCol].imgfront}
+                        alt=""
+                        className="box-img2"
+                      />
+                      :
                       <img
                         src={imgIndex ? item.img[imgCol].imgfront : item.img[imgCol].imgback}
                         alt=""
                         className="box-img2"
                       />
+                      }
                     </div>
                     <div className="big-box2">
                       <img
@@ -229,7 +241,7 @@ function Page2(props) {
                     <div className="tshirt-head">{item.Name}</div>
                     <div className="tshirt-price">
                       <div className="price1">Rs.{item.price}</div>
-                      <div className="price3">Rs. 700</div>
+                      <div className="price3">Rs.{2*item.price}</div>
                       <div className="price1-offer">( 50% Off )</div>
                     </div>
                     <div className="inclu">Inclusive of all taxes</div>
@@ -243,7 +255,7 @@ function Page2(props) {
                         return (
                           <div
                             className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
-                            style={{ backgroundColor: colorName }}
+                            style={colorId == 3 ?{backgroundColor:"#2ec2e6"}: { backgroundColor: colorName }}
                             onClick={() => {
                               setColor(colorName);
                               setImgCol(colorId);
@@ -313,24 +325,30 @@ function Page2(props) {
                         gap: "0.5rem",
                         flexWrap:'wrap'
                       }}
+
                     >
+                      <div onClick={CreateObject}>
                       <button className="bag1">
                         <img src={lock5} className="lock5" alt="" />
-                        <div className="con1" onClick={CreateObject}>
+                        <div className="con1" >
                           ADD TO BAG
                         </div>
                       </button>
+                      </div>
+                      <div   className="con1"
+                          onClick={() => {
+                            navigate("/merch_page3")
+                          }}>
                       <button className="bag1">
                         <img src={lock5} className="lock5" alt="" />
                         <div
-                          className="con1"
-                          onClick={() => {
-                            navigate("/merch_page3")
-                          }}
+                        
                         >
                           GO TO BAG
                         </div>
+                        
                       </button>
+                      </div>
                     </div>
                   </div>
                 </div>
