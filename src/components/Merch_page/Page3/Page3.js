@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import productImg from "../../../assests/productimg.svg";
-import Navbar from "../../EventsNavbar/Eventsnavbar";
-import Footer from "../../Navbar/WebNavbarNew";
+import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
+// import Navbar from "../../EventsNavbar/Eventsnavbar";
+// import Footer from "../../Navbar/WebNavbarNew";
+import Footer from "../Merch_Footer/Merch_Footer";
 import { useNavigate} from "react-router-dom";
 import "../PopUp/PopUp.css";
 import "./Page3.css";
@@ -34,7 +36,7 @@ const Page3 = () => {
     let a = 0;
     setData(JSON.parse(localStorage.getItem("AddedToCart")));
     for (let i = 0; i < data?.length; i++) {
-      a += data[i].price;
+      a += data[i].quantity*data[i].price;
     }
     setSubTotal(a);
   }, []);
@@ -42,7 +44,7 @@ const Page3 = () => {
   useEffect(() => {
     let a = 0;
     for (let i = 0; i < data.length; i++) {
-      a += data[i].price;
+      a += data[i].quantity*data[i].price;
     }
     setSubTotal(a);
   }, [data]);
@@ -105,7 +107,7 @@ const Page3 = () => {
         <Navbar />
         <div className="main_body">
           <div className="heading_cart">
-            <h1>YOUR CART</h1>
+            <h1 style={{fontWeight:"400"}}>YOUR CART</h1>
           </div>
 
           {data?.length == 0 ? (

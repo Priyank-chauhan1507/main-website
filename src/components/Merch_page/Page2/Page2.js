@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Page2.css";
 import lock5 from "../../../assests/lock5.svg";
-import Navbar from "../../EventsNavbar/Eventsnavbar";
-import Footer from "../../Navbar/WebNavbarNew";
+import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
+// import Navbar from "../../EventsNavbar/Eventsnavbar";
+// import Footer from "../../Navbar/WebNavbarNew";
+import Footer from "../Merch_Footer/Merch_Footer";
 import tshirt3front from "../../../assests/tshirt3front.webp";
 import tshirt3back from "../../../assests/tshirt3back.webp";
 import tshirt3front2 from "../../../assests/tshirt3front2.webp";
