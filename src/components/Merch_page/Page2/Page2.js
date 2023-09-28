@@ -176,6 +176,29 @@ function Page2(props) {
     }
     setRenderId(1);
   }
+  function CreateObject1() {
+    if (!size) {
+      message.error("Please Select any size");
+    } else {
+      const allDetails = {
+        id: id,
+        name: item.Name,
+        quantity: quantity,
+        color: color,
+        size: size,
+        price: item.price,
+        image: item.img[imgCol].imgfront,
+      };
+      setAddedToCart([...AddedToCart, allDetails]);
+      localStorage.setItem(
+        "AddedToCart",
+        JSON.stringify([...AddedToCart, allDetails])
+        );
+        message.success("Item added to cart");
+        navigate("/merch_page3");
+    }
+    setRenderId(1);
+  }
 
   useEffect(() => {
     // console.log("updated array: ", AddedToCart);
@@ -399,9 +422,7 @@ with our T-shirt crafted from soft cotton.</p>
                       </button>
                       </div>
                       <div   className="con1"
-                          onClick={() => {
-                            navigate("/merch_page3")
-                          }}>
+                          onClick={CreateObject1}>
                       <button className="bag1 buy_now">
                         {/* <img src={lock5} className="lock5" alt="" /> */}
                         <div

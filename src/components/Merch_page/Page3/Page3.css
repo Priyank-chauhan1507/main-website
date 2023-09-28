@@ -200,23 +200,25 @@
 
 .mainPopUp{
     width: 100vw;
-    height: 100vh;
-    backdrop-filter: blur(10px);
-    /* background: gray; */
+    height: 101vh;
+    backdrop-filter: blur(2px);
+    /* background: black; */
+    /* opacity: 0.9; */
     margin-top: -3.5vh;
     overflow: hidden;
     position: fixed;
 }
 
 .semiyPopUp{
-    border: 4px solid #000;
+    border: 2px solid #000;
     margin-top: 5vh;
+    width: 40vw;
 }
 
 
 .semimainPopUp{
     margin-left: 30vw;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
     margin-left: 30vw !important;
     /* width: 30vw; */
 }
@@ -364,5 +366,19 @@ h3{
         background: white;
         border: 0.5px solid black;
     }
+    .semiyPopUp{
+        width: 50vw;
+    }
  
+}
+
+@media screen and (max-width:768px){
+    .semiyPopUp{
+        width: 75vw;
+    }
+}
+@media screen and (max-width:350px){
+    .semiyPopUp{
+        width: 85vw;
+    }
 }

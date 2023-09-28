@@ -195,7 +195,7 @@ word-wrap: normal;
 .text{
     margin-left:1vw;
     margin-top:-1vw;
-    
+    padding-bottom: 3vh;
 }
 .price3{
     color: rgba(153, 153, 153, 0.98) !important;
