@@ -89,7 +89,7 @@ function Navbar({ color, disable, setregister, register, data }) {
           >
             Zonals
           </a>
-          <a
+          {/* <a
             className={localStorage.getItem("token")?"event-nav-right-compo hover-underline-animation":"none_display"}
             onClick={() => {
               {
@@ -101,7 +101,7 @@ function Navbar({ color, disable, setregister, register, data }) {
             }}
           >
             ID-CARD
-          </a>
+          </a> */}
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
