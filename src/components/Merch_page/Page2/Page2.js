@@ -9,10 +9,10 @@ import tshirt3front from "../../../assests/tshirt3front.webp";
 import tshirt3back from "../../../assests/tshirt3back.webp";
 import tshirt3front2 from "../../../assests/tshirt3front2.webp";
 import tshirt3back2 from "../../../assests/tshirt3back2.webp";
-import tshirt4front1 from "../../../assests/vibe.webp";
-import tshirt4back1 from "../../../assests/white-t-shirts-with-copy-space-gray-background 2.webp";
-import tshirt4front2 from "../../../assests/f3.webp";
-import tshirt4back2 from "../../../assests/f4.webp";
+import tshirt4front1 from "../../../assests/feelthevibewhitwfront.webp";
+import tshirt4back1 from "../../../assests/feelthevibewhiteback.webp";
+import tshirt4front2 from "../../../assests/feelthevibelavenderfront.webp";
+import tshirt4back2 from "../../../assests/feelthevibelavenderback.webp";
 import tshirt5front1 from "../../../assests/white23front.webp";
 import tshirt5back1 from "../../../assests/white23back.webp";
 import tshirt5front2 from "../../../assests/black23front.webp";
@@ -26,7 +26,7 @@ import tshirt5back5 from "../../../assests/beige23back.webp";
 import tshirt6front1 from "../../../assests/orng.webp";
 import tshirt6front2 from "../../../assests/sky b.webp";
 import tshirt6front3 from "../../../assests/purp.webp";
-import tshirt6back from "../../../assests/orng bck .webp";
+import tshirt6back from "../../../assests/feelthevibewhiteback.webp";
 import tshirt7front from "../../../assests/thomsokingfront.webp";
 import tshirt7back from "../../../assests/thomsokingback.webp";
 import { message } from "antd";
@@ -226,6 +226,24 @@ id == 4 ?
                       }
                     </div>
                     <div className="big-box2">
+                      {
+id == 4 ?
+                     (
+                      <> <img
+                        src={item.img[imgCol].imgback}
+                        alt=""
+                        className="box-img1"
+                        onClick={() => setimgIndex(true)}
+                      />
+                      <img
+                        src={item.img[imgCol].imgfront}
+                        alt=""
+                        className="box-img1"
+                        onClick={() => setimgIndex(false)}
+                      />
+                      </>)                      :
+                      (
+                      <>
                       <img
                         src={item.img[imgCol].imgfront}
                         alt=""
@@ -238,6 +256,10 @@ id == 4 ?
                         className="box-img1"
                         onClick={() => setimgIndex(false)}
                       />
+                      </>)
+                       }
+
+
                     </div>
                   </div>
                   <div className="shirt-container2">
