@@ -14,7 +14,7 @@ import tshirt4back2 from "../../../assests/f4.webp";
 import tshirt5front1 from "../../../assests/white23front.webp";
 import tshirt5back1 from "../../../assests/white23back.webp";
 import tshirt5front2 from "../../../assests/black23front.webp";
-import tshirt5back2 from "../../../assests/black23back.webp";
+import tshirt5back2 from "../../../assests/black23backnew.webp";
 import tshirt5front3 from "../../../assests/lavender23front.webp";
 import tshirt5back3 from "../../../assests/lavender23back.webp";
 import tshirt5front4 from "../../../assests/blue23front.webp";
@@ -50,19 +50,19 @@ function Page2(props) {
       price: 350,
       Name: "Feel The Thomso vibe",
       colors: [
-        { colorId: 0, colorName: "white" },
-        { colorId: 1, colorName: "lavender" },
+        { colorId: 1, colorName: "white" },
+        { colorId: 0, colorName: "lavender" },
       ],
       img: [
         {
           id: 1,
-          imgfront: tshirt4front1,
-          imgback: tshirt4back1,
+          imgfront: tshirt4front2,
+          imgback: tshirt4back2,
         },
         {
           id: 2,
-          imgfront: tshirt4front2,
-          imgback: tshirt4back2,
+          imgfront: tshirt4front1,
+          imgback: tshirt4back1,
         },
       ],
     },
@@ -70,7 +70,7 @@ function Page2(props) {
     {
       id: 2,
       price: 350,
-      Name: "The Allyx Tee",
+      Name: "The Ellyx Tee",
       colors: [
         { colorId: 0, colorName: "lavender" },
         { colorId: 1, colorName: "black" },
@@ -257,14 +257,25 @@ with our T-shirt crafted from soft cotton.</p>
                     <div className="colorbox">
                       {item.colors.map(({ colorId, colorName }) => {
                         return (
-                          <div
+                          <>
+                         {colorName == "lavender" ? <div
+                            className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
+                            style={{backgroundColor:"#c0ade6"}}
+                            onClick={() => {
+                              setColor(colorName);
+                              setImgCol(colorId);
+                            }}
+                          ></div>
+                         : <div
                             className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
                             style={colorId == 3 ?{backgroundColor:"#2ec2e6"}: { backgroundColor: colorName }}
                             onClick={() => {
                               setColor(colorName);
                               setImgCol(colorId);
                             }}
-                          ></div>
+                            ></div>
+                          }
+                      </>
                         );
                       })}
                     </div>
@@ -285,7 +296,7 @@ with our T-shirt crafted from soft cotton.</p>
                         onClick={() => {
                           setSize("S");
 
-                          setselected(1);
+                          setselected(2);
                         }}
                       >
                         S
@@ -295,7 +306,7 @@ with our T-shirt crafted from soft cotton.</p>
                         onClick={() => {
                           setSize("M");
 
-                          setselected(2);
+                          setselected(3);
                         }}
                       >
                         M
@@ -305,7 +316,7 @@ with our T-shirt crafted from soft cotton.</p>
                         onClick={() => {
                           setSize("L");
 
-                          setselected(3);
+                          setselected(4);
                         }}
                       >
                         L
@@ -314,7 +325,7 @@ with our T-shirt crafted from soft cotton.</p>
                         className={selected === 5 ? "size2" : "size1"}
                         onClick={() => {
                           setSize("XL");
-                          setselected(4);
+                          setselected(5);
                         }}
                       >
                         XL
@@ -323,7 +334,7 @@ with our T-shirt crafted from soft cotton.</p>
                         className={selected === 6 ? "size2" : "size1"}
                         onClick={() => {
                           setSize("XXL");
-                          setselected(4);
+                          setselected(6);
                         }}
                       >
                         XXL
@@ -372,7 +383,7 @@ with our T-shirt crafted from soft cotton.</p>
                         <div
                         
                         >
-                          GO TO BAG
+                          BUY NOW
                         </div>
                         
                       </button>

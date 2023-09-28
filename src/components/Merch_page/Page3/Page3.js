@@ -140,7 +140,7 @@ const Page3 = () => {
                       <div className="product_status">
                         <img
                           src={image}
-                          className="prod_img"
+                          className="prod1_img"
                           alt="prod_img"
                         />
                         {/* <div className="prod_img">{image}</div> */}

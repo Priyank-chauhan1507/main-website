@@ -27,6 +27,7 @@ import orng from "../../../assests/orng.webp";
 import orng1 from "../../../assests/orng (1).png";
 import orng2 from "../../../assests/orng (2).png";
 import orng3 from "../../../assests/orng(3).png";
+import tshirt4front2 from "../../../assests/f3.webp";
 import merchyellowbg from "../../../assests/Merchbggrp.png";
 
 function Page1() {
@@ -41,7 +42,7 @@ function Page1() {
     {
       id: 2,
       price: 350,
-      name: "The Allyx Tee  ",
+      name: "The Ellyx Tee  ",
       img: orng1,
 
     },
