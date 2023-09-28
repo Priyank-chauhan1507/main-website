@@ -234,7 +234,7 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
-          {localStorage.getItem("token") 
+          {/* {localStorage.getItem("token") 
           && (
           <h1
             onClick={() => {
@@ -246,7 +246,7 @@ function MobEventnavbar() {
             ID-Card
           </h1>
           )
-          }
+          } */}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
