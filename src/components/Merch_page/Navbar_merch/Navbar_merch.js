@@ -5,6 +5,7 @@ import axios from "axios";
 import logo from "../../../assests/MerchLogo.png";
 import "./Navbar_merch.css";
 import MobMerchnavbar from "./mobNavbar_merch";
+import Cart from "../../../assests/cart.webp";
 
 function Navbar({ color, disable, setregister, register, data }) {
   const [display1, setdisplay] = useState("none");
@@ -95,6 +96,14 @@ function Navbar({ color, disable, setregister, register, data }) {
           >
             Zonals
           </a>
+          <>
+          <img
+                src={Cart}
+                onClick={() => {
+                  navigate("/thomsomerchcart");
+                }}
+                className="cart_logo"
+              /></>
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
