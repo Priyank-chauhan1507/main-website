@@ -52,8 +52,8 @@ function Page2(props) {
       price: 350,
       Name: "Feel The Thomso vibe",
       colors: [
-        { colorId: 1, colorName: "white" },
         { colorId: 0, colorName: "lavender" },
+        { colorId: 1, colorName: "white" },
       ],
       img: [
         {

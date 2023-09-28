@@ -242,14 +242,18 @@ word-wrap: normal
     }
 }
 @media screen and (max-width:768px){
-    .merch_Smile{
-        display: none;
-    }
+.merch_Page1{
+    padding-top: 30px;
+}
+.merch_Smile{
+    display: none;
+}
 .home_merchpage{
     display: block;
 }
 .product{
     display: block;
+    margin-top: 12vh;
 }
 .product-merch{
     width: 60vw;
