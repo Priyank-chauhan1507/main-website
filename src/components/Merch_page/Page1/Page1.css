@@ -226,6 +226,10 @@ word-wrap: normal
         /* width: 30vw; */
     }
 }
+/* //////// */
+.MerchYellowBGmob{
+    display: none;
+}
 
 @media screen and (max-width:1000px) {
     .merch_Smile{
@@ -298,14 +302,84 @@ word-wrap: normal
 .text1 p{
     font-size: 3vw;
 }
+
+.dis_none_merch_1{
+    display: none;
+}
+
+/* /////// */
+
+.MerchYellowBGmob{
+    display: block;
+    width: 100%;
+    height: 298vh
+    
+}
+.merch_Page1{
+    overflow: hidden;
+}
+.product1{
+    margin-left: 13vw;
+}
+.hr-row{
+    display: none !important;
+}
+
+
 }
 .home_text{
     /* background-image:url("./mrechbg.webp"); */
     /* background-size: cover; */
 }
 /* < Stashed changes */
+
+
+@media screen and (max-width:598px){
+    .MerchYellowBGmob{
+        height: 286vh;
+    }
+}
+@media screen and (max-width:550px){
+    .MerchYellowBGmob{
+        height: 282vh;
+    }
+}
+@media screen and (max-width:460px){
+    .MerchYellowBGmob{
+        height: 274vh;
+    }
+}
+@media screen and (max-width:412px){
+    .MerchYellowBGmob{
+        height: 270vh;
+    }
+}
+@media screen and (max-width:407px){
+    .MerchYellowBGmob{
+        height: 270vh;
+    }
+}
+@media screen and (max-width:387px){
+    .MerchYellowBGmob{
+        height: 280vh;
+    }
+}
+@media screen and (max-width:375px){
+    .MerchYellowBGmob{
+        height: 281vh;
+    }
+}
+
+
+
 @media screen and (max-width:350px){
     .prod_img{
         padding-left:4vw;
+    }
+    
+}
+@media screen and (max-width:324px){
+    .MerchYellowBGmob{
+        height: 278vh;
     }
 }
