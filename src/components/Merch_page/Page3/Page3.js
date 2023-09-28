@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import productImg from "../../../assests/productimg.svg";
-import "./Page3.css";
 import Navbar from "../../EventsNavbar/Eventsnavbar";
 import Footer from "../../Navbar/WebNavbarNew";
 import { useNavigate} from "react-router-dom";
 import "../PopUp/PopUp.css";
+import "./Page3.css";
 import axios from "axios";
 import CircularProgress from "@mui/material/CircularProgress";
 import { message } from "antd";
@@ -33,7 +33,7 @@ const Page3 = () => {
   useEffect(() => {
     let a = 0;
     setData(JSON.parse(localStorage.getItem("AddedToCart")));
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data?.length; i++) {
       a += data[i].price;
     }
     setSubTotal(a);
@@ -215,7 +215,7 @@ const Page3 = () => {
         style={showPopup ? { display: "flex" } : { display: "none" }}
       >
         <div
-          className="semimainPopUp"
+          className="semiyPopUp"
           style={{ background: "white", borderRadius: "6px", padding: "25px" }}
         >
           <div className="headingPopUp">ADD ADDRESS</div>

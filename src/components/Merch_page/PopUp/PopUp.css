@@ -102,6 +102,11 @@ text-transform: lowercase;
     margin-left: 1.5vw;
 }
 
+.blur{
+    height: 100vh;
+    width:100vw;
+    filter: blur(200px);
+}
 @media only screen and (max-height: 800px)
 {
     .btnPopUp

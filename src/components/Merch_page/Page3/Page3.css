@@ -145,6 +145,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.mainPopUp{
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    /* background: gray; */
+    margin-top: -3.5vh;
+}
+
+.semimainPopUp{
+    margin-left: 30vw;
+    border: 2px solid #000000;
+    margin-left: 30vw !important;
+}
+
 @media screen and (max-width: 1300px){
     .product_discription{
     display: flex;
