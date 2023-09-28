@@ -163,6 +163,7 @@ function Page2(props) {
         color: color,
         size: size,
         price: item.price,
+        image: item.img[imgCol].imgfront,
       };
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(

@@ -122,7 +122,7 @@ const Page3 = () => {
             </>
           ) : (
             <div className="cart_cont">
-              a z
+    
               <div className="title_cart">
                 <div className="product_title">
                   <h3>product</h3>
@@ -134,15 +134,16 @@ const Page3 = () => {
                 </div>
               </div>
               {data &&
-                data.map(({ id, name, color, price, size, quantity }) => {
+                data.map(({ id, name, color, price, size, quantity,image }) => {
                   return (
                     <div className="cart_status" key={id}>
                       <div className="product_status">
                         <img
-                          src={productImg}
+                          src={image}
                           className="prod_img"
                           alt="prod_img"
                         />
+                        {/* <div className="prod_img">{image}</div> */}
                         <div className="prod_discription">
                           <div className="prod_name">
                             <h3>{name}</h3>
