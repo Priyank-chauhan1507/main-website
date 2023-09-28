@@ -214,6 +214,7 @@
   border-radius: 100%;
   padding: 1.5vw;
   cursor: pointer;
+  user-select: none;
 }
 .size2 {
   border: 2px solid black;
@@ -227,6 +228,7 @@
   border-color: #F26120;
   color: #F26120;
   cursor: pointer;
+  user-select: none;
 }
 .bag1 {
   /* border:2px solid black; */
