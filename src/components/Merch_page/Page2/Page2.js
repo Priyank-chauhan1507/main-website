@@ -267,13 +267,13 @@ id == 4 ?
                       <> <img
                         src={item.img[imgCol].imgback}
                         alt=""
-                        className="box-img1"
+                        className={imgIndex ? 'active box-img1' : 'box-img1'}
                         onClick={() => setimgIndex(true)}
                       />
                       <img
                         src={item.img[imgCol].imgfront}
                         alt=""
-                        className="box-img1"
+                        className={imgIndex ? 'active box-img1' : 'box-img1'}
                         onClick={() => setimgIndex(false)}
                       />
                       </>)                      :
@@ -282,13 +282,13 @@ id == 4 ?
                       <img
                         src={item.img[imgCol].imgfront}
                         alt=""
-                        className="box-img1"
+                        className={imgIndex ? 'active box-img1' : 'box-img1'}
                         onClick={() => setimgIndex(true)}
                       />
                       <img
                         src={item.img[imgCol].imgback}
                         alt=""
-                        className="box-img1"
+                        className={imgIndex ? 'box-img1' : 'active box-img1'}
                         onClick={() => setimgIndex(false)}
                       />
                       </>)

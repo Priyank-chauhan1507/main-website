@@ -3,6 +3,11 @@
   width: 100vw !important;
   overflow-x: hidden !important;
 }
+.active{
+  border: 1px solid black;
+  transform: scale(1.1);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .shirt-container {
   width: 100vw;
   display: flex;
