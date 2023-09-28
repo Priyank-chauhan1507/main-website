@@ -39,6 +39,14 @@ const Page3 = () => {
     setSubTotal(a);
   }, []);
 
+  useEffect(() => {
+    let a = 0;
+    for (let i = 0; i < data.length; i++) {
+      a += data[i].price;
+    }
+    setSubTotal(a);
+  }, [data]);
+
   // console.log(data);
 
   const RemoveItem = (id) => {

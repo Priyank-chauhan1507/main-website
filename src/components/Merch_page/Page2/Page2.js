@@ -70,7 +70,7 @@ function Page2(props) {
     {
       id: 2,
       price: 350,
-      Name: "The Ellyx Tee",
+      Name: "The Allyx Tee",
       colors: [
         { colorId: 0, colorName: "lavender" },
         { colorId: 1, colorName: "black" },
@@ -163,7 +163,6 @@ function Page2(props) {
         color: color,
         size: size,
         price: item.price,
-        // src: imgSrc
       };
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
