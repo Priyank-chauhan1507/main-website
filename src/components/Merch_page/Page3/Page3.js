@@ -153,6 +153,7 @@ const Page3 = () => {
                           <div className="prod_size">
                             <h3>size : {size}</h3>
                             <h3>color : {color}</h3>
+                            <h3 className="mob_quant">quantity : {quantity}</h3>
                           </div>
                           <div className="prod_button">
                             <button
@@ -175,6 +176,11 @@ const Page3 = () => {
                         </div>
                         <div className="total_price">
                           <h3>{quantity * price}</h3>
+                        </div>
+                      </div>
+                      <div className="product_discriptionmobile">
+                         <div className="total_price">
+                          <h3>Rs.{quantity * price}</h3>
                         </div>
                       </div>
                       <div className="mob_data_merch_3">
