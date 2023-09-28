@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Page2.css";
 import lock5 from "../../../assests/lock5.svg";
-import Navbar from "../../EventsNavbar/Eventsnavbar";
-import Footer from "../../Navbar/WebNavbarNew";
+import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
+// import Navbar from "../../EventsNavbar/Eventsnavbar";
+// import Footer from "../../Navbar/WebNavbarNew";
+import Footer from "../Merch_Footer/Merch_Footer";
 import tshirt3front from "../../../assests/tshirt3front.webp";
 import tshirt3back from "../../../assests/tshirt3back.webp";
 import tshirt3front2 from "../../../assests/tshirt3front2.webp";
@@ -11,20 +13,23 @@ import tshirt4front1 from "../../../assests/vibe.webp";
 import tshirt4back1 from "../../../assests/white-t-shirts-with-copy-space-gray-background 2.webp";
 import tshirt4front2 from "../../../assests/f3.webp";
 import tshirt4back2 from "../../../assests/f4.webp";
-import tshirt5front1 from "../../../assests/5.webp";
-import tshirt5back1 from "../../../assests/5'.webp";
-import tshirt5front2 from "../../../assests/black.webp";
-import tshirt5front3 from "../../../assests/lavender.webp";
-import tshirt5front4 from "../../../assests/Boink Aqua blue or teal whatever.webp";
-import tshirt5front5 from "../../../assests/4.webp";
-import tshirt5back5 from "../../../assests/4'.webp";
+import tshirt5front1 from "../../../assests/white23front.webp";
+import tshirt5back1 from "../../../assests/white23back.webp";
+import tshirt5front2 from "../../../assests/black23front.webp";
+import tshirt5back2 from "../../../assests/black23backnew.webp";
+import tshirt5front3 from "../../../assests/lavender23front.webp";
+import tshirt5back3 from "../../../assests/lavender23back.webp";
+import tshirt5front4 from "../../../assests/blue23front.webp";
+import tshirt5back4 from "../../../assests/blue23back.webp";
+import tshirt5front5 from "../../../assests/beige23front.webp";
+import tshirt5back5 from "../../../assests/beige23back.webp";
 import tshirt6front1 from "../../../assests/orng.webp";
 import tshirt6front2 from "../../../assests/sky b.webp";
 import tshirt6front3 from "../../../assests/purp.webp";
 import tshirt6back from "../../../assests/orng bck .webp";
 import tshirt7front from "../../../assests/Lee tee fin frnt.webp";
 import tshirt7back from "../../../assests/Lee tee fin bck.webp";
-
+import { message } from "antd";
 import increment from "../../../assests/increment.svg";
 import decrement from "../../../assests/decrement.svg";
 import { useNavigate, useParams } from "react-router-dom";
@@ -32,37 +37,34 @@ import Page3 from "../Page3/Page3";
 
 function Page2(props) {
   const { id } = useParams();
-  // const navigate = useNavigate();
-  const [Name, setName] = useState("");
-  const [color, setColor] = useState("");
+  const navigate = useNavigate();
   const [size, setSize] = useState("");
-  const [quantity, setquantity] = useState(0);
-  const [imgUrl, setImgUrl] = useState("");
-  const [imgIndex, setimgIndex] = useState(0);
+  const [quantity, setquantity] = useState(1);
+  const [imgCol, setImgCol] = useState(0);
+  const [imgIndex, setimgIndex] = useState(true);
   const [selected, setselected] = useState(0);
   const [AddedToCart, setAddedToCart] = useState([]);
-  const [price, setPrice] = useState();
   const [renderId, setRenderId] = useState(0);
 
   const data = [
     {
       id: 1,
       price: 350,
-      Name: "Feel The Thomso vibe ",
+      Name: "Feel The Thomso vibe",
       colors: [
-        { colorId: 0, colorName: "white" },
-        { colorId: 1, colorName: "lavender" },
+        { colorId: 1, colorName: "white" },
+        { colorId: 0, colorName: "lavender" },
       ],
       img: [
         {
           id: 1,
-          imgfront: tshirt4front1,
-          imgback: tshirt4back1,
+          imgfront: tshirt4front2,
+          imgback: tshirt4back2,
         },
         {
           id: 2,
-          imgfront: tshirt4front2,
-          imgback: tshirt4back2,
+          imgfront: tshirt4front1,
+          imgback: tshirt4back1,
         },
       ],
     },
@@ -70,34 +72,34 @@ function Page2(props) {
     {
       id: 2,
       price: 350,
-      Name: "The Ellyx Tee  ",
+      Name: "The Ellyx Tee",
       colors: [
-        { colorId: 0, colorName: "white" },
+        { colorId: 0, colorName: "lavender" },
         { colorId: 1, colorName: "black" },
-        { colorId: 2, colorName: "purple" },
-        { colorId: 3, colorName: "blue" },
+        { colorId: 2, colorName: "white" },
+        { colorId: 3, colorName: "aquablue" },
         { colorId: 4, colorName: "beige" },
       ],
       img: [
         {
           id: 1,
-          imgfront: tshirt5front1,
-          imgback: tshirt5back1,
+          imgfront: tshirt5front3,
+          imgback: tshirt5back3,
         },
         {
           id: 2,
           imgfront: tshirt5front2,
-          imgback: tshirt4back2,
+          imgback: tshirt5back2,
         },
         {
           id: 3,
-          imgfront: tshirt5front3,
-          imgback: tshirt4back2,
+          imgfront: tshirt5front1,
+          imgback: tshirt5back1,
         },
         {
           id: 4,
           imgfront: tshirt5front4,
-          imgback: tshirt4back2,
+          imgback: tshirt5back4,
         },
         {
           id: 5,
@@ -135,7 +137,7 @@ function Page2(props) {
     },
     {
       id: 4,
-      price: 350,
+      price: 450,
       Name: "The Thomso king",
       colors: [{ colorId: 0, colorName: "black" }],
       img: [
@@ -147,30 +149,36 @@ function Page2(props) {
       ],
     },
   ];
+  const item = data[id - 1]
+
+  const [color, setColor] = useState(item.colors[0].colorName);
+  const [imgSrc, setImgSrc] = useState();
 
   function CreateObject() {
-    if (quantity === 0 || !color || !size) {
-      return console.log("please select every requirement");
+    if (!size) {
+      message.error("Please Select any size");
     } else {
       const allDetails = {
         id: id,
-        name: Name,
+        name: item.Name,
         quantity: quantity,
         color: color,
         size: size,
-        price: price,
+        price: item.price,
+        image: item.img[imgCol].imgfront,
       };
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
         "AddedToCart",
         JSON.stringify([...AddedToCart, allDetails])
-      );
+        );
+        message.success("Item added to cart");
     }
     setRenderId(1);
   }
 
   useEffect(() => {
-    console.log("updated array: ", AddedToCart);
+    // console.log("updated array: ", AddedToCart);
   }, [AddedToCart, localStorage]);
 
   useEffect(() => {
@@ -180,67 +188,66 @@ function Page2(props) {
     }
   }, []);
 
-  const RemoveItem = (id) => {
-    const storedData = JSON.parse(localStorage.getItem("AddedToCart"));
-    const updatedData = storedData.filter((item) => item.id !== id);
-    localStorage.setItem("AddedToCart", JSON.stringify(updatedData));
-    setAddedToCart(updatedData);
-  };
-
   const IncrementFunc = () => {
     let num = quantity;
     num += 1;
     setquantity(num);
-    setPrice(350);
   };
   const DecrementFunc = () => {
-    if (quantity > 0) {
+    if (quantity > 1) {
       let num = quantity;
       num -= 1;
       setquantity(num);
     } else {
-      setquantity(0);
+      setquantity(1);
     }
   };
 
   return (
     <>
-      {renderId === 0 && (
         <div className="page-2-merch">
           <Navbar />
-          {data
-            .filter((item) => item.id === parseInt(id))
-            .map(({ id, Name, price, img, colors }) => {
-              return (
                 <div className="shirt-container" key={id}>
                   <div className="shirt-container1">
                     <div className="big-box1">
+                      {
+id == 4 ?
                       <img
-                        src={imgUrl == "" ? img[imgIndex].imgfront : imgUrl}
+                        src={imgIndex ? item.img[imgCol].imgback : item.img[imgCol].imgfront}
                         alt=""
                         className="box-img2"
                       />
+                      :
+                      <img
+                        src={imgIndex ? item.img[imgCol].imgfront : item.img[imgCol].imgback}
+                        alt=""
+                        className="box-img2"
+                      />
+                      }
                     </div>
                     <div className="big-box2">
                       <img
-                        src={img[imgIndex].imgfront}
+                        src={item.img[imgCol].imgfront}
                         alt=""
                         className="box-img1"
-                        onClick={() => setImgUrl(img[imgIndex].imgfront)}
+                        onClick={() => setimgIndex(true)}
                       />
                       <img
-                        src={img[imgIndex].imgback}
+                        src={item.img[imgCol].imgback}
                         alt=""
                         className="box-img1"
-                        onClick={() => setImgUrl(img[imgIndex].imgback)}
+                        onClick={() => setimgIndex(false)}
                       />
                     </div>
                   </div>
                   <div className="shirt-container2">
-                    <div className="tshirt-head">{Name}</div>
+                    <div className="tshirt-head">{item.Name}</div>
+                    <p className="description_text">Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth. 
+Experience ultimate comfort and effortless style
+with our T-shirt crafted from soft cotton.</p>
                     <div className="tshirt-price">
-                      <div className="price1">Rs.{price}</div>
-                      <div className="price3">Rs. 700</div>
+                      <div className="price1">Rs.{item.price}</div>
+                      <div className="price3">Rs.{2*item.price}</div>
                       <div className="price1-offer">( 50% Off )</div>
                     </div>
                     <div className="inclu">Inclusive of all taxes</div>
@@ -250,16 +257,27 @@ function Page2(props) {
                       <div className="color122">{color}</div>
                     </div>
                     <div className="colorbox">
-                      {colors.map(({ colorId, colorName }) => {
+                      {item.colors.map(({ colorId, colorName }) => {
                         return (
-                          <div
-                            className="colorbox1"
-                            style={{ backgroundColor: colorName }}
+                          <>
+                         {colorName == "lavender" ? <div
+                            className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
+                            style={{backgroundColor:"#c0ade6"}}
                             onClick={() => {
                               setColor(colorName);
-                              setimgIndex(colorId);
+                              setImgCol(colorId);
                             }}
                           ></div>
+                         : <div
+                            className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
+                            style={colorId == 3 ?{backgroundColor:"#2ec2e6"}: { backgroundColor: colorName }}
+                            onClick={() => {
+                              setColor(colorName);
+                              setImgCol(colorId);
+                            }}
+                            ></div>
+                          }
+                      </>
                         );
                       })}
                     </div>
@@ -268,54 +286,77 @@ function Page2(props) {
                       <div
                         className={selected === 1 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("s");
-                          setName(Name);
+                          setSize("S");
+
                           setselected(1);
                         }}
                       >
-                        s
+                        XS
                       </div>
                       <div
                         className={selected === 2 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("m");
-                          setName(Name);
+                          setSize("S");
+
                           setselected(2);
                         }}
                       >
-                        m
+                        S
                       </div>
                       <div
                         className={selected === 3 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("l");
-                          setName(Name);
+                          setSize("M");
+
                           setselected(3);
                         }}
                       >
-                        l
+                        M
                       </div>
                       <div
                         className={selected === 4 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("xl");
-                          setName(Name);
+                          setSize("L");
+
                           setselected(4);
                         }}
                       >
-                        xl
+                        L
+                      </div>
+                      <div
+                        className={selected === 5 ? "size2" : "size1"}
+                        onClick={() => {
+                          setSize("XL");
+                          setselected(5);
+                        }}
+                      >
+                        XL
+                      </div>
+                      <div
+                        className={selected === 6 ? "size2" : "size1"}
+                        onClick={() => {
+                          setSize("XXL");
+                          setselected(6);
+                        }}
+                      >
+                        XXL
                       </div>
                     </div>
                     <div className="Quantity">
                       <div className="quantityFont">Quantity :</div>
+                      <div className="border-box">
+                      <button className="arithmatic" onClick={DecrementFunc}>
+                        <img src={decrement} alt="increment operator" />
+                      </button>
+
+                      <div className="arithmatic">{quantity}</div>
+
                       <button className="arithmatic" onClick={IncrementFunc}>
                         {" "}
                         <img src={increment} alt="increment operator" />
                       </button>
-                      <div className="arithmatic">{quantity}</div>
-                      <button className="arithmatic" onClick={DecrementFunc}>
-                        <img src={decrement} alt="increment operator" />
-                      </button>
+
+                      </div>
                     </div>
                     <div
                       style={{
@@ -325,33 +366,35 @@ function Page2(props) {
                         gap: "0.5rem",
                         flexWrap:'wrap'
                       }}
+
                     >
+                      <div onClick={CreateObject}>
                       <button className="bag1">
                         <img src={lock5} className="lock5" alt="" />
-                        <div className="con1" onClick={CreateObject}>
+                        <div className="con1" >
                           ADD TO BAG
                         </div>
                       </button>
+                      </div>
+                      <div   className="con1"
+                          onClick={() => {
+                            navigate("/merch_page3")
+                          }}>
                       <button className="bag1">
                         <img src={lock5} className="lock5" alt="" />
                         <div
-                          className="con1"
-                          onClick={() => {
-                            setRenderId(1);
-                          }}
+                        
                         >
-                          GO TO BAG
+                          BUY NOW
                         </div>
+                        
                       </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              );
-            })}
           <Footer />
         </div>
-      )}
-      {renderId === 1 && <Page3 Cart={AddedToCart} RemoveItem={RemoveItem} />}
     </>
   );
 }

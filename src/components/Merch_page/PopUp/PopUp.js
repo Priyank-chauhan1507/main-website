@@ -3,9 +3,12 @@ import './PopUp.css'
 
 const PopUp = () => {
   return (
+    <>
+      <div className='blur'></div>
     <div className="mainPopUp">
 
-    <div className="semimainPopUp" style={{background:"white",borderRadius:"6px",width:"40vw",padding:"25px"}}>
+    <div className='blur'></div>
+    <div className="semimainPopUp" style={{background:"white",borderRadius:"6px",padding:"25px"}}>
       <div className="headingPopUp">ADD ADDRESS</div>
       <div>
         <div className="rulerPopup"></div>
@@ -26,6 +29,7 @@ const PopUp = () => {
       </div>
     </div>
     </div>
+    </>
   )
 }
 

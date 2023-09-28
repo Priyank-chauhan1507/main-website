@@ -73,7 +73,7 @@ function FAQ() {
                 AIPPM: Evaluating the ongoing ethnic clashes in Manipur <br />
                 UNGA: Deliberation over unlawful occupation of territory and forced governance with special emphasis on Israel Palestine conflict <br /> 
                 INDIAN WAR CABINET: Bangladesh Liberation War of 1971 <br />
-                <a href="https://thomso.in/events" style={{color:"#a09faf",opacity:".5"}}>https://thomso.in/events</a>
+                {/* <a href="https://thomso.in/events" style={{color:"#a09faf",opacity:".5"}}>https://thomso.in/events</a> */}
                 </div>
                 
   
@@ -167,7 +167,7 @@ function FAQ() {
               />
               <div class="panel">
                 <p>
-                IITR MUN is a two days conference and will be held on 13 October and 14 October
+                IITR MUN is a two days conference and will be held on 13th and 14th October
                 </p>
               </div>
             </>
