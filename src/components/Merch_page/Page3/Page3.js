@@ -121,7 +121,7 @@ const Page3 = () => {
               <div className="emptycart">Cart is Empty</div>
               <div className="footer_button1">
                 <button
-                  className="prod_button2 check-outbtn prod_button1"
+                  className="prod_button2 check-outbtn prod_button1" style={{backgroundColor:"#f26120",color:"white",borderRadius:"5px",borderStyle:"none",padding:"7px 4px 7px 4px"}}
                   onClick={() => navigate("/merch_page1")}
                 >
                   CONTINUE SHOPPING
