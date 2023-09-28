@@ -271,6 +271,12 @@
   padding-left: 0.5vw;
 }
 
+@media only screen and (max-width: 1000px) {
+  .bag1{
+    width:18vw;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .shirt-container {
     flex-direction: column;
@@ -341,7 +347,7 @@
   }
   .bag1 {
     height: 5vh;
-    width: 36vw;
+    width: 40vw;
   }
   .size1 {
     width: 7.5vw;
