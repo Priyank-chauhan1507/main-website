@@ -60,7 +60,7 @@ function Page1() {
 
       id: 4,
       price: 450,
-      name: "The Thomso king",
+      name: "The Roar of Thomso",
       img:orng3,
     },
   ];

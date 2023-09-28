@@ -27,8 +27,8 @@ import tshirt6front1 from "../../../assests/orng.webp";
 import tshirt6front2 from "../../../assests/sky b.webp";
 import tshirt6front3 from "../../../assests/purp.webp";
 import tshirt6back from "../../../assests/orng bck .webp";
-import tshirt7front from "../../../assests/Lee tee fin frnt.webp";
-import tshirt7back from "../../../assests/Lee tee fin bck.webp";
+import tshirt7front from "../../../assests/thomsokingfront.webp";
+import tshirt7back from "../../../assests/thomsokingback.webp";
 import { message } from "antd";
 import increment from "../../../assests/increment.svg";
 import decrement from "../../../assests/decrement.svg";
@@ -138,7 +138,7 @@ function Page2(props) {
     {
       id: 4,
       price: 450,
-      Name: "The Thomso king",
+      Name: "The Roar of Thomso",
       colors: [{ colorId: 0, colorName: "black" }],
       img: [
         {
