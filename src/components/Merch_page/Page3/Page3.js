@@ -80,12 +80,18 @@ const Page3 = () => {
       // console.log(userresponse);
       const response = await axios.post(`/apiV1/merch_payment_request`, userresponse);
       const u = response.data;
+      if(user.contact.length==10 && /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(user.email)){
       if (response.data.status == "true") {
         setTimeout(() => {
           window.open(response.data.payment_url, '_blank');
       })
-      } else {
+      }else{
         message.error(`${response.data.error}`);
+      }
+    }else if(user.contact.length>10 || user.contact.length<10){
+        message.error("Please Enter correct phone number");
+      }else{
+        message.error("Please Enter correct email address");
       }
       setLoading(false);
       // navigate("/otpverify");
@@ -258,6 +264,7 @@ const Page3 = () => {
                 className="PopUpMerch"
                 name="contact"
                 value={user.contact}
+                pattern="/^[6-9]{1}+[0-9]{9}$/"
                 required
                 onChange={(e) => onInputChange(e)}
               />
