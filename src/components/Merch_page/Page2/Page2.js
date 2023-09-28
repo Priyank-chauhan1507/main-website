@@ -197,7 +197,7 @@ function Page2(props) {
         JSON.stringify([...AddedToCart, allDetails])
         );
         message.success("Item added to cart");
-        navigate("/thomsomerchcart");
+        navigate("/merch_cart");
     }
     setRenderId(1);
   }
@@ -299,7 +299,7 @@ id == 4 ?
                   </div>
                   <div className="shirt-container2">
                     <div className="tshirt-head">{item.Name}</div>
-                    <p className="description_text">Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth. 
+                    <p className="description_text">Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth.
 Experience ultimate comfort and effortless style
 with our T-shirt crafted from soft cotton.</p>
                     <div className="tshirt-price">
@@ -442,7 +442,7 @@ with our T-shirt crafted from soft cotton.</p>
                         >
                           BUY NOW
                         </div>
-                        
+
                       </button>
                       </div>
                     </div>

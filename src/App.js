@@ -72,7 +72,7 @@ useEffect(() => {
   }, [user]);
 
 //  useEffect(() => {
-   
+
 //       const items = JSON.parse(localStorage.getItem("dataKey"));
 //     if (items) {
 //       setItems(items);
@@ -98,7 +98,7 @@ useEffect(() => {
       console.log(error);
     }
   };
-  
+
 
   return (
     <>
@@ -149,9 +149,9 @@ useEffect(() => {
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
-          <Route exact={true} path="/thomsomerchhome" element={<Page1/>} />
-          <Route exact={true} path="/thomsomerchselection/:id" element={<Page2/>} />
-          <Route exact={true} path="/thomsomerchcart" element={<Page3/>} />
+          <Route exact={true} path="/merch_home" element={<Page1/>} />
+          <Route exact={true} path="/merch_selection/:id" element={<Page2/>} />
+          <Route exact={true} path="/merch_cart" element={<Page3/>} />
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />

@@ -116,7 +116,7 @@ function Page1() {
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation.
               </div> */}
-            </div> 
+            </div>
             {/* <div className="ellipse">
                 <img className="ell-img" src={ellipse} alt="..." />
               </div> */}
@@ -132,7 +132,7 @@ function Page1() {
             {data.map(({ id, img, price, name }) => {
               return (
                 <>
-                  <Link to={`/thomsomerchselection/${id}`}>
+                  <Link to={`/merch_selection/${id}`}>
                     <div className="product1" /*onClick={changeclassyle}*/ key={id}>
                       <div className="prod_img">
                         <img className="product-merch" src={img} alt="..." />
