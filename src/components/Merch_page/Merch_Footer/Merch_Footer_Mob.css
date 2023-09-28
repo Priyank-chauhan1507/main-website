@@ -23,6 +23,7 @@
     
       .direction {
         margin: 3.9vh 0;
+        display: none;
       }
     
       .heading {

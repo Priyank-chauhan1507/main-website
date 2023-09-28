@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap");
 .page-2-merch {
   width: 100vw !important;
   overflow-x: hidden !important;
@@ -93,7 +93,7 @@
   font-weight: 400;
   line-height: 150%; /* 24px */
   letter-spacing: 0.32px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 .hr1 {
   height: 0.2vh;
@@ -168,11 +168,19 @@
 
 
 .colorbox1A {
-  border: 3px solid black;
+  border: 1px solid black;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1);
   height: 4vh;
   width: 2.5vw;
   background-color: white;
   cursor: pointer;
+}
+
+.description_text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
 }
 
 .colorbox2 {
@@ -206,8 +214,8 @@
 }
 .size1 {
   border: 2px solid black;
-  height: 4vh;
-  width: 2.5vw;
+  height: 4vmin;
+  width: 4vmin;
   /* padding: auto; */
   display: flex;
   justify-content: center;
@@ -271,13 +279,49 @@
   padding-left: 0.5vw;
 }
 
+.btn-text{
+  min-width: fit-content;
+}
+
+
+@media only screen and (max-width: 1080px) {
+  .btn-text {
+    font-size: 90%;
+  }
+  .bag1{
+    width: max-content;
+    padding: 0 3vw;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .bag1{
     width:18vw;
   }
 }
 
+.btn-text {
+  font-size: 100%;
+}
+
 @media only screen and (max-width: 768px) {
+
+  .arithmatic{
+    height: 1.5rem;
+    width: 1.5rem;
+
+  }
+  .colorbox1A {
+    width: 6.5vw;
+    height: 6.5vw;
+  }
+  .box-img1{
+    /* transform: scale(1.2); */
+  }
+  .big-box2{
+    justify-content: center;
+    gap: 15vw;
+  }
   .shirt-container {
     flex-direction: column;
     align-items: center;
@@ -297,6 +341,7 @@
   }
   .box-img2 {
    width: 80vw;
+   height: auto;
   }
   .big-box2{
     gap: 15vw;
@@ -320,11 +365,14 @@
     font-size: 2.4vh;
   }
   .inclu {
-    font-size: 3vh;
+    font-size: 2.5vh;
     padding-top: 2vh;
   }
   .colorbox1 {
-    width: 6.5vw;
+    width: 6.5vmin;
+    height: 6.5vmin;
+    max-width: 30px;
+    max-height: 30px;
   }
   .colorbox2 {
     width: 6.5vw;
@@ -337,9 +385,17 @@
   }
   .colorbox1A {
     width: 6.5vw;
+    max-width: 30px;
+    max-height: 30px;
   }
   .color12 {
     font-size: 3vh;
+  }
+  .color121{
+    font-size: 18px;
+  }
+  .color122{
+    font-size: 18px;
   }
   .size {
     font-size: 3vh;
@@ -347,11 +403,23 @@
   }
   .bag1 {
     height: 5vh;
-    width: 40vw;
+    width: 80vw;
+  }
+  .con1{
+    width: 37vw;
+  }
+  .size{
+    font-size: 18px;
+
+  }
+  .select-size{
+    gap: 2.5vw;
   }
   .size1 {
-    width: 7.5vw;
-    height: 5vh;
+    width: 7.5vmin;
+    height: 7.5vmin;
+    min-height: 33px;
+    min-width: 33px;
   }
   .size2 {
     width: 7.5vw;
@@ -370,5 +438,8 @@
   }
   .hr1{
     width:81vw;
+  }
+  .Quantity{
+    margin-top: 4vh;
   }
 }
