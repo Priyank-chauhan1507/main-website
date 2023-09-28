@@ -380,7 +380,7 @@ with our T-shirt crafted from soft cotton.</p>
                           onClick={() => {
                             navigate("/merch_page3")
                           }}>
-                      <button className="bag1">
+                      <button className="bag1 buy_now">
                         <img src={lock5} className="lock5" alt="" />
                         <div
                         

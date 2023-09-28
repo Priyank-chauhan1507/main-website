@@ -115,7 +115,7 @@ const Page3 = () => {
               <div className="emptycart">Cart is Empty</div>
               <div className="footer_button1">
                 <button
-                  className="prod_button2"
+                  className="prod_button2 check-outbtn prod_button1"
                   onClick={() => navigate("/merch_page1")}
                 >
                   CONTINUE SHOPPING
@@ -147,12 +147,12 @@ const Page3 = () => {
                         />
                         {/* <div className="prod_img">{image}</div> */}
                         <div className="prod_discription">
-                          <div className="prod_name">
+                          <div className="prod_name product_name_merch_3">
                             <h3>{name}</h3>
                           </div>
                           <div className="prod_size">
-                            <h3>{size}</h3>
-                            <h3>{color}</h3>
+                            <h3>size : {size}</h3>
+                            <h3>color : {color}</h3>
                           </div>
                           <div className="prod_button">
                             <button
@@ -176,6 +176,9 @@ const Page3 = () => {
                         <div className="total_price">
                           <h3>{quantity * price}</h3>
                         </div>
+                      </div>
+                      <div className="mob_data_merch_3">
+                        
                       </div>
                     </div>
                   );
