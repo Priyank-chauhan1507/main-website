@@ -4,6 +4,7 @@ import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
 // import Navbar from "../../EventsNavbar/Eventsnavbar";
 // import Footer from "../../Navbar/WebNavbarNew";
 import Footer from "../Merch_Footer/Merch_Footer";
+import emptycart from "../../../assests/cartempty.webp";
 import { useNavigate} from "react-router-dom";
 import "../PopUp/PopUp.css";
 import "./Page3.css";
@@ -118,7 +119,10 @@ const Page3 = () => {
 
           {data?.length == 0 ? (
             <>
-              <div className="emptycart">Cart is Empty</div>
+              {/* <div className="emptycart">Cart is Empty</div> */}
+              <div className="empty-cart">
+                <img src={emptycart} className="empty_img" alt="empty-image"/>
+              </div>
               <div className="footer_button1">
                 <button
                   className="prod_button2 check-outbtn prod_button1" style={{backgroundColor:"#f26120",color:"white",borderRadius:"5px",borderStyle:"none",padding:"7px 4px 7px 4px"}}
