@@ -212,7 +212,7 @@ const Page3 = () => {
                 <div className="footer_button">
                   <button
                     className="prod_button2"
-                    onClick={() => navigate("/thomsomerchhome")}
+                    onClick={() => navigate("/merch_home")}
                   >
                     CONTINUE SHOPPING
                   </button>

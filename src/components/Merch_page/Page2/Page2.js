@@ -40,6 +40,7 @@ function Page2(props) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [size, setSize] = useState("");
+  const [no, setNo] = useState(0)
   const [quantity, setquantity] = useState(1);
   const [imgCol, setImgCol] = useState(0);
   const [imgIndex, setimgIndex] = useState(true);
@@ -161,7 +162,7 @@ function Page2(props) {
       message.error("Please Select any size");
     } else {
       const allDetails = {
-        id: id,
+        id: no,
         name: item.Name,
         quantity: quantity,
         color: color,
@@ -169,6 +170,7 @@ function Page2(props) {
         price: item.price,
         image: item.img[imgCol].imgfront,
       };
+      setNo(no + 1);
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
         "AddedToCart",
@@ -178,12 +180,13 @@ function Page2(props) {
     }
     setRenderId(1);
   }
+
   function CreateObject1() {
     if (!size) {
       message.error("Please Select any size");
     } else {
       const allDetails = {
-        id: id,
+        id: no,
         name: item.Name,
         quantity: quantity,
         color: color,
@@ -191,6 +194,7 @@ function Page2(props) {
         price: item.price,
         image: item.img[imgCol].imgfront,
       };
+      setNo(no + 1);
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
         "AddedToCart",
@@ -343,7 +347,7 @@ with our T-shirt crafted from soft cotton.</p>
                       <div
                         className={selected === 1 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("S");
+                          setSize("XS");
 
                           setselected(1);
                         }}
