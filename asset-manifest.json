@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3cef05c0.css",
-    "main.js": "/static/js/main.6e1eb270.js",
+    "main.css": "/static/css/main.69bf65e5.css",
+    "main.js": "/static/js/main.aceffd8c.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -62,13 +62,12 @@
     "static/media/purp.webp": "/static/media/purp.28dd42ab0aca4728faff.webp",
     "static/media/MUNmobileBG.webp": "/static/media/MUNmobileBG.5c74349865e47807dafb.webp",
     "static/media/back.webp": "/static/media/back.5993852469394dc9eb3a.webp",
-    "static/media/orng bck .webp": "/static/media/orng bck .c3c038bf129f3f79f7ab.webp",
     "static/media/design.graffiti.comicsansmsgras.ttf": "/static/media/design.graffiti.comicsansmsgras.92557e6ed016730cc765.ttf",
+    "static/media/feelthevibewhitwfront.webp": "/static/media/feelthevibewhitwfront.88094f7ccc416b58dcb9.webp",
     "static/media/lavender23front.webp": "/static/media/lavender23front.e352b70acbfb5bcf4e43.webp",
     "static/media/laststrips.svg": "/static/media/laststrips.9119bab9f4a54cba6dac6b65f0ab4768.svg",
     "static/media/ID_Logo.png": "/static/media/ID_Logo.4c7afb1a960497df4304.png",
     "static/media/LOGOMUN.svg": "/static/media/LOGOMUN.b1bd40a0e1008f30352aae3a81f99c65.svg",
-    "static/media/f4.webp": "/static/media/f4.4c074ab34f9b1eb582e0.webp",
     "static/media/logo.svg": "/static/media/logo.a04fa2d6e0d8b284291e06a10ab910f7.svg",
     "static/media/5.webp": "/static/media/5.10f035974c43902040e3.webp",
     "static/media/spon.svg": "/static/media/spon.621a6c76c08148593c13e5af3f55bc7c.svg",
@@ -89,11 +88,11 @@
     "static/media/munbg.webp": "/static/media/munbg.e54b108886babe3f5462.webp",
     "static/media/AIPPMjudge.webp": "/static/media/AIPPMjudge.4fb866f0fad5aab065f0.webp",
     "static/media/COMIC.TTF": "/static/media/COMIC.cf3d8690bffa563fb10b.TTF",
+    "static/media/feelthevibelavenderfront.webp": "/static/media/feelthevibelavenderfront.6acf8e3b1f6f8a14a8a6.webp",
     "static/media/orng(3).png": "/static/media/orng(3).f61fe68f490360695521.png",
     "static/media/express.svg": "/static/media/express.68efa23fe230b58eed7bbe68e1784fa1.svg",
     "static/media/Raunak-Historic-judge.webp": "/static/media/Raunak-Historic-judge.a3e959cf092960e3cf25.webp",
     "static/media/orng (2).png": "/static/media/orng (2).bdf956febeb138d07fc0.png",
-    "static/media/white-t-shirts-with-copy-space-gray-background 2.webp": "/static/media/white-t-shirts-with-copy-space-gray-background 2.e37a04127c286a0f6cd2.webp",
     "static/media/uniacco.svg": "/static/media/uniacco.64a64daffdd9239c729f6a72e57a9875.svg",
     "static/media/orng (1).png": "/static/media/orng (1).55d4e548d40af87522ad.png",
     "static/media/unicred.svg": "/static/media/unicred.711f6f7a6a7123e0751edb244424b664.svg",
@@ -110,9 +109,11 @@
     "static/media/Aishnit-yadav-Unga-judge.webp": "/static/media/Aishnit-yadav-Unga-judge.3a4ab3d52a4ed505e490.webp",
     "static/media/bonkers.svg": "/static/media/bonkers.ef0f44dae8cfafa2887af15fba8d9bbe.svg",
     "static/media/PaymentClosedGirls.webp": "/static/media/PaymentClosedGirls.6601f60f7ebf36f62895.webp",
+    "static/media/feelthevibelavenderback.webp": "/static/media/feelthevibelavenderback.cd7353db581a082be486.webp",
     "static/media/propic.svg": "/static/media/propic.39d1147898dd7f65cb0cd55d48ebe1ce.svg",
     "static/media/MUN-Top.webp": "/static/media/MUN-Top.09e1c67df91811380808.webp",
     "static/media/COMMITTEE.png": "/static/media/COMMITTEE.167b26eb3b03148cbcca.png",
+    "static/media/feelthevibewhiteback.webp": "/static/media/feelthevibewhiteback.5870d733d7b5ef59351a.webp",
     "static/media/munmobileinfobg.webp": "/static/media/munmobileinfobg.f76d34c1c4a84d5fad64.webp",
     "static/media/blue23back.webp": "/static/media/blue23back.dc6268032cf734bd91c7.webp",
     "static/media/white23back.webp": "/static/media/white23back.3941b0fde57238dee712.webp",
@@ -174,11 +175,11 @@
     "static/media/pause.svg": "/static/media/pause.b00e0a737956c2de96fa9f99c61ab9f8.svg",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
     "static/media/productimg.svg": "/static/media/productimg.e800485e41b41b124b70a32061a2b3f9.svg",
-    "main.3cef05c0.css.map": "/static/css/main.3cef05c0.css.map",
-    "main.6e1eb270.js.map": "/static/js/main.6e1eb270.js.map"
+    "main.69bf65e5.css.map": "/static/css/main.69bf65e5.css.map",
+    "main.aceffd8c.js.map": "/static/js/main.aceffd8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cef05c0.css",
-    "static/js/main.6e1eb270.js"
+    "static/css/main.69bf65e5.css",
+    "static/js/main.aceffd8c.js"
   ]
 }
