@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../../assests/profile1.png.jpg";
 import axios from "axios";
-import logo from "../../../assests/Merch_logo.png";
+import logo from "../../../assests/MerchLogo.png";
 import "./Navbar_merch.css";
 import MobMerchnavbar from "./mobNavbar_merch";
 
@@ -66,7 +66,7 @@ function Navbar({ color, disable, setregister, register, data }) {
         </Link>
         <div className="event-nav-right">
           <a
-            className="event-nav-right-compo11 hover-underline-animation"
+            className="event-nav-right-compo11 hover-underline-animation11"
             onClick={() => {
               navigate("/merch_page1");
             }}
@@ -74,7 +74,7 @@ function Navbar({ color, disable, setregister, register, data }) {
             Merch
           </a>
           <a
-            className="event-nav-right-compo11 hover-underline-animation"
+            className="event-nav-right-compo11 hover-underline-animation11"
             onClick={() => {
               navigate("/events");
             }}
