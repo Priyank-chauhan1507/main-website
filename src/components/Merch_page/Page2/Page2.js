@@ -240,6 +240,9 @@ id == 4 ?
                   </div>
                   <div className="shirt-container2">
                     <div className="tshirt-head">{item.Name}</div>
+                    <p className="description_text">Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth. 
+Experience ultimate comfort and effortless style
+with our T-shirt crafted from soft cotton.</p>
                     <div className="tshirt-price">
                       <div className="price1">Rs.{item.price}</div>
                       <div className="price3">Rs.{2*item.price}</div>
@@ -275,10 +278,20 @@ id == 4 ?
                           setselected(1);
                         }}
                       >
-                        S
+                        XS
                       </div>
                       <div
                         className={selected === 2 ? "size2" : "size1"}
+                        onClick={() => {
+                          setSize("S");
+
+                          setselected(1);
+                        }}
+                      >
+                        S
+                      </div>
+                      <div
+                        className={selected === 3 ? "size2" : "size1"}
                         onClick={() => {
                           setSize("M");
 
@@ -288,7 +301,7 @@ id == 4 ?
                         M
                       </div>
                       <div
-                        className={selected === 3 ? "size2" : "size1"}
+                        className={selected === 4 ? "size2" : "size1"}
                         onClick={() => {
                           setSize("L");
 
@@ -298,7 +311,7 @@ id == 4 ?
                         L
                       </div>
                       <div
-                        className={selected === 4 ? "size2" : "size1"}
+                        className={selected === 5 ? "size2" : "size1"}
                         onClick={() => {
                           setSize("XL");
                           setselected(4);
@@ -306,17 +319,31 @@ id == 4 ?
                       >
                         XL
                       </div>
+                      <div
+                        className={selected === 6 ? "size2" : "size1"}
+                        onClick={() => {
+                          setSize("XXL");
+                          setselected(4);
+                        }}
+                      >
+                        XXL
+                      </div>
                     </div>
                     <div className="Quantity">
                       <div className="quantityFont">Quantity :</div>
+                      <div className="border-box">
+                      <button className="arithmatic" onClick={DecrementFunc}>
+                        <img src={decrement} alt="increment operator" />
+                      </button>
+
+                      <div className="arithmatic">{quantity}</div>
+
                       <button className="arithmatic" onClick={IncrementFunc}>
                         {" "}
                         <img src={increment} alt="increment operator" />
                       </button>
-                      <div className="arithmatic">{quantity}</div>
-                      <button className="arithmatic" onClick={DecrementFunc}>
-                        <img src={decrement} alt="increment operator" />
-                      </button>
+
+                      </div>
                     </div>
                     <div
                       style={{

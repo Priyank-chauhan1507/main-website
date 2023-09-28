@@ -27,6 +27,7 @@ import orng from "../../../assests/orng.webp";
 import orng1 from "../../../assests/orng (1).png";
 import orng2 from "../../../assests/orng (2).png";
 import orng3 from "../../../assests/orng(3).png";
+import merchyellowbg from "../../../assests/Merchbggrp.png";
 
 function Page1() {
   const data = [
@@ -66,6 +67,7 @@ function Page1() {
       <div className="merchPage1">
         <Navbar />
         <div className="merch_Page1">
+          <img className="MerchYellowBG" src={merchyellowbg} alt="" />
           <div className="home_merchpage">
             {/* <div className="merch_bg_img"> */}
               {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg" /> */}
@@ -75,8 +77,8 @@ function Page1() {
             </div>
             <div className="home_text">
               <div className="home_heading">
-                <h1>Own a piece of Thomso’23</h1>
-                <h1>Grab your tees now!</h1>
+                {/* <h1>Own a piece of Thomso’23</h1>
+                <h1>Grab your tees now!</h1> */}
                 {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg"/> */}
               </div>
               {/* <div className="home_para">
@@ -90,7 +92,7 @@ function Page1() {
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation.
               </div> */}
-            </div>
+            </div> 
             {/* <div className="ellipse">
                 <img className="ell-img" src={ellipse} alt="..." />
               </div> */}
