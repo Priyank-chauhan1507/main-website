@@ -33,6 +33,7 @@ import mobmerchbg from "../../../assests/mobmerchbg.png";
 
 
 function Page1() {
+  // const[classtyle, setClasstyle] = useState("product1");
   const data = [
     {
       id: 1,
@@ -64,6 +65,11 @@ function Page1() {
       img:orng3,
     },
   ];
+
+  // const changeclassyle=()=>{
+  //   let newText="product1A"
+  //   setClasstyle(newText);
+  // }
 
   return (
     <>
@@ -113,7 +119,7 @@ function Page1() {
               return (
                 <>
                   <Link to={`/merch_page2/${id}`}>
-                    <div className="product1" key={id}>
+                    <div className="product1" /*onClick={changeclassyle}*/ key={id}>
                       <div className="prod_img">
                         <img className="product-merch" src={img} alt="..." />
                       </div>

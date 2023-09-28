@@ -161,7 +161,7 @@ display: none;
   transform-style: preserve-3d; */
 }
 .product1:hover .product-merch{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.05s ease-in-out;
     /* transform: rotateY(360deg); */
 }
@@ -194,7 +194,7 @@ word-wrap: normal;
 }
 .text{
     margin-left:1vw;
-    margin-top:0vw;
+    margin-top:-1vw;
     
 }
 .price3{
@@ -274,6 +274,16 @@ word-wrap: normal
     padding-bottom:4vh;
     /* margin: 0 auto; */
 }
+/* .product1A{
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 1px;
+    background-color: #ffffff;
+    box-shadow:4px 4px 0px 0px #000;
+    transition: 0.05s ease-in-out;
+    padding: 5vw;
+} */
 /* .home_para p{
     width: 20vw;
 } */
@@ -325,6 +335,7 @@ word-wrap: normal
 }
 .product1{
     margin-left: 13vw;
+    margin-top: 3vh;
 }
 .hr-row{
     display: none !important;
