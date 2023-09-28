@@ -34,6 +34,7 @@ import increment from "../../../assests/increment.svg";
 import decrement from "../../../assests/decrement.svg";
 import { useNavigate, useParams } from "react-router-dom";
 import Page3 from "../Page3/Page3";
+import Loader from "../../Loader/Loader"
 
 function Page2(props) {
   const { id } = useParams();
@@ -45,6 +46,7 @@ function Page2(props) {
   const [selected, setselected] = useState(0);
   const [AddedToCart, setAddedToCart] = useState([]);
   const [renderId, setRenderId] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const data = [
     {
@@ -211,6 +213,15 @@ function Page2(props) {
     }
   }, []);
 
+  useEffect(() => {
+    setLoading(true);
+    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+      navigate(`/login`);
+    }else{
+      setLoading(false);
+    }
+  });
+
   const IncrementFunc = () => {
     let num = quantity;
     num += 1;
@@ -228,6 +239,7 @@ function Page2(props) {
 
   return (
     <>
+    {loading && <Loader />}
         <div className="page-2-merch">
           <Navbar />
                 <div className="shirt-container" key={id}>

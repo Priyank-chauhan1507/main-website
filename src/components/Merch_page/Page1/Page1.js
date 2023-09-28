@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Page1.css";
 import ellipse from "../../../assests/Ellipse 129.png";
 import product from "../../../assests/Group 37501.png";
@@ -12,7 +12,7 @@ import tshirt3front from "../../../assests/tshirt3front.webp";
 import tshirt3back from "../../../assests/tshirt3back.webp";
 import tshirt3front2 from "../../../assests/tshirt3front2.webp";
 import tshirt3back2 from "../../../assests/tshirt3back2.webp";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Page2 from "../Page2/Page2";
 import tshirt4front1 from "../../../assests/vibe.webp";
 
@@ -30,7 +30,7 @@ import orng3 from "../../../assests/orng(3).png";
 import tshirt4front2 from "../../../assests/f3.webp";
 import merchyellowbg from "../../../assests/Merchbggrp.png";
 import mobmerchbg from "../../../assests/mobmerchbg.png";
-
+import Loader from "../../Loader/Loader"
 
 function Page1() {
   // const[classtyle, setClasstyle] = useState("product1");
@@ -66,13 +66,27 @@ function Page1() {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const [loading, setLoading] = useState(false);
+
   // const changeclassyle=()=>{
   //   let newText="product1A"
   //   setClasstyle(newText);
   // }
 
+  useEffect(() => {
+    setLoading(true);
+    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+      navigate(`/login`);
+    }else{
+      setLoading(false);
+    }
+  });
+
   return (
     <>
+    {loading && <Loader />}
       <div className="merchPage1">
         <Navbar />
         <div className="merch_Page1">
