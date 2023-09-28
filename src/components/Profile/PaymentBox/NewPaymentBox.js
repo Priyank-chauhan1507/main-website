@@ -785,7 +785,7 @@ const NewPaymentBox = (
                                         color: "white",
                                         cursor: "pointer",
                                       }}
-                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                      href="https://drive.google.com/file/d/166MAX7s0VpYPHzaBoDUHY4OzPkWSXGXE/view?usp=drive_link"
                                       target="_blank"
                                     >
                                       Agree Terms and Conditions *
@@ -1328,7 +1328,7 @@ const NewPaymentBox = (
                                         color: "white",
                                         cursor: "pointer",
                                       }}
-                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                      href="https://drive.google.com/file/d/166MAX7s0VpYPHzaBoDUHY4OzPkWSXGXE/view?usp=drive_link"
                                       target="_blank"
                                     >
                                       Agree Terms and Conditions *
