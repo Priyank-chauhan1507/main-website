@@ -113,7 +113,7 @@ const Page3 = () => {
           {data?.length == 0 ? (
             <>
               <div className="emptycart">Cart is Empty</div>
-              <div className="footer_button">
+              <div className="footer_button1">
                 <button
                   className="prod_button2"
                   onClick={() => navigate("/merch_page1")}
