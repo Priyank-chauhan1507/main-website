@@ -132,7 +132,7 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
-          <h1
+          {/* <h1
             onClick={() => {
                 {
                   user.payment ?
@@ -145,7 +145,7 @@ function MobEventnavbar() {
             }}
           >
             ID-Card
-          </h1>
+          </h1> */}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
