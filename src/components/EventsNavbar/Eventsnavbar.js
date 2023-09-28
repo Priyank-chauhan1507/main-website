@@ -67,14 +67,14 @@ function Navbar({ color, disable, setregister, register, data }) {
           <img className="event-nav-left" src={logo} alt="" />
         </Link>
         <div className="event-nav-right">
-          <a
+          {/* <a
             className="event-nav-right-compo hover-underline-animation"
             onClick={() => {
               navigate("/thomsomerchhome");
             }}
           >
             Merch
-          </a>
+          </a> */}
           <a
             className="event-nav-right-compo hover-underline-animation"
             onClick={() => {
