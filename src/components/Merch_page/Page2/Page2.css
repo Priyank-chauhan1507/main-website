@@ -229,8 +229,8 @@
 }
 .size2 {
   border: 2px solid black;
-  height: 4vh;
-  width: 2.5vw;
+  height: 4vmin;
+  width: 4vmin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,8 +423,10 @@
     min-width: 33px;
   }
   .size2 {
-    width: 7.5vw;
-    height: 5vh;
+    width: 7.5vmin;
+    height: 7.5vmin;
+    min-height: 33px;
+    min-width: 33px;
   }
   .size3 {
     width: 7.5vw;
