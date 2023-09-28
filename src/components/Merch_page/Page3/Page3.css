@@ -40,6 +40,9 @@
     gap:10vw;
     /* padding:3px; */
 }
+.prod_img{
+    width:20vw;
+}
 .cart_status{
     display: flex;
     flex-direction: row;
