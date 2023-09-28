@@ -371,7 +371,7 @@ with our T-shirt crafted from soft cotton.</p>
                       <div onClick={CreateObject}>
                       <button className="bag1">
                         <img src={lock5} className="lock5" alt="" />
-                        <div className="con1" >
+                        <div className="con1 btn-text" >
                           ADD TO BAG
                         </div>
                       </button>
@@ -381,9 +381,9 @@ with our T-shirt crafted from soft cotton.</p>
                             navigate("/merch_page3")
                           }}>
                       <button className="bag1 buy_now">
-                        <img src={lock5} className="lock5" alt="" />
+                        {/* <img src={lock5} className="lock5" alt="" /> */}
                         <div
-                        
+                        className="btn-text"
                         >
                           BUY NOW
                         </div>
