@@ -205,14 +205,14 @@ function MobEventnavbar() {
           >
             Events
           </h1>
-          <h1
+          {/* <h1
             onClick={() => {
               navigate("/MUN");
               window.location.reload(false);
             }}
           >
             MUN
-          </h1>
+          </h1> */}
           {/* {event &&
             events.map((el) => {
               const { par, child } = el;
