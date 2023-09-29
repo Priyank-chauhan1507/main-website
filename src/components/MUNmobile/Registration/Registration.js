@@ -374,13 +374,14 @@ const Historic = [
   value: Historic,
   label: Historic,
 }));
-export default function MUNmobileregistration({ userDetails, fetchMuns }) {
+export default function MUNmobileregistration({ fetchMuns }) {
   const [choice1, Setchoice1] = useState(false);
   const [choice2, Setchoice2] = useState(false);
   // const [choice3, Setchoice3] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [userDetails,setuserDetails] = useState({})
 
   const [user, setUser] = useState({
     first_preference: "",
@@ -440,12 +441,41 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
     });
   };
 
+  useEffect(() => {
+    loadUserData();
+  }, []);
+
+  const loadUserData = async () => {
+    try {
+      axios
+        .get(`/apiV1/current_user_participant`)
+        .then((res) => {
+          setuserDetails(res.data);
+          localStorage.setItem("user_id", res.data?.user_id);
+          localStorage.setItem("id", res.data?.id);
+          console.log(res.data,"user");
+        })
+        .catch((err) => {
+          console.log(err);
+          if (err?.response?.status == 401) {
+            if (localStorage.getItem("token")) {
+              localStorage.removeItem("token");
+              localStorage.removeItem("user_id");
+              window.location.pathname = "/";
+            }
+          }
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const userresponse = {
-        // participant: userDetails?.id,
+        participant: userDetails?.id,
         first_preference: user.first_preference,
         second_preference: user.second_preference,
         first_preference_choice_one: user.first_preference_choice_one,
@@ -682,7 +712,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
             </div>
           </div>
           <div className="sub-button">
-            <Button onSubmit={onSubmit} className="subbutton">
+            <Button type="submit" className="subbutton">
               Submit
             </Button>
           </div>
