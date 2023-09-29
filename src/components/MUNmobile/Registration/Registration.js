@@ -441,7 +441,7 @@ export default function MUNmobileregistration({ fetchMuns }) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const userresponse = {
         first_preference: user.first_preference,
