@@ -13,12 +13,14 @@ import MUNmob from "../../../components/MUNmobile/HomeMun/HomeMUN";
 import Footer from "../../../components/Navbar/WebNavbarNew";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Loader from "../../Loader/Loader"
 
 
 function Home() {
   const navigate = useNavigate();
-  const [user, setuser] = useState({})
-  const [check, setCheck] = useState(false)
+  const [user, setuser] = useState({});
+  const [check, setCheck] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loadUserData();
@@ -50,12 +52,14 @@ function Home() {
     }
   };
 
+
   // const RegisterMUN = () => {
   //   {localStorage.getItem("token") ? (navigate("/MUNregister")) : message.info("Please login to register for MUN")}
   // }
   
   return (
     <>
+    {loading && <Loader />}
       {" "}
       <div className="MUN-bg">
         <img src={BG} className="MUN-Bg" alt="" />
@@ -65,13 +69,19 @@ function Home() {
         </div>
         
         <div className="registerNowBtn">
-          {check ?
+          {localStorage.getItem("token") ?
           (<button
-           onClick={() => navigate("/MUNregister")}
+           onClick={() => {
+            setLoading(true);
+            navigate("/MUNregister");
+          }}
            className="registerNowBtnClick">Register Now</button>)
           :
           (<button
-            onClick={() => navigate("/login")}
+            onClick={() => {
+              setLoading(true);
+              navigate("/login");
+            }}
             className="registerNowBtnClick">Register Now</button>)}
         </div>
         <div className="prizesWorth">
