@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 import "./Registration.scss";
+import { json, useNavigate } from "react-router-dom";
 // import Navbar from '../../EventsNavbar/MobEventnavbar';
 import Navbar from "../../EventsNavbar/Eventsnavbar";
+import Loader from "../../Loader/Loader"
 import BGimg from "../../../assests/MUNmobilebg.png";
 import Select from "react-select";
 import BgMunReg from "../../../assests/bgmunreg.webp";
@@ -392,6 +394,7 @@ export default function MUNmobileregistration({ fetchMuns }) {
     second_preference_choice_three: "",
   });
 
+  const navigate = useNavigate();
   // console.log(userDetails);
 
   const handleChange1 = (first_preference) => {
@@ -439,6 +442,15 @@ export default function MUNmobileregistration({ fetchMuns }) {
     });
   };
 
+  useEffect(() => {
+    setLoading(true);
+    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+      navigate(`/login`);
+    }else{
+      setLoading(false);
+    }
+  });
+
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -471,6 +483,8 @@ export default function MUNmobileregistration({ fetchMuns }) {
   };
 
   return (
+    <>
+    {loading && <Loader />}
     <div className="mun-register">
       <div className="bgImg">
         <img src={BGimg} className="MobileBG" alt="" />
@@ -684,6 +698,7 @@ export default function MUNmobileregistration({ fetchMuns }) {
               </div>
             </div>
           </div>
+          {localStorage.getItem("token") &&
           <div className="sub-button">
             <button type="submit" className="subbutton">
             {loading ? (
@@ -692,11 +707,12 @@ export default function MUNmobileregistration({ fetchMuns }) {
                 "Submit"
               )}
             </button>
-          </div>
+          </div>}
         </div>
       {/* </> */}
       </form>
       </div>
     </div>
+    </>
   );
 }
