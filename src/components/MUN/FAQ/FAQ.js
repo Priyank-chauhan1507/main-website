@@ -14,6 +14,8 @@ function FAQ() {
     "2nd": true,
     "3rd": true,
     "4th": true,
+    "5th": true,
+    "6th": true
   });
   return (
     <div className="MUN_FAQ_main_div">
