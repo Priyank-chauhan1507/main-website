@@ -83,7 +83,7 @@
 {
     .HomeMUN-bg
     {
-        height: 746vh;
+        height: 841vh;
     }
 }
 @media only screen and (max-width:600px)
@@ -250,7 +250,7 @@
     margin-bottom: -2vh;
 }
 #committeeHead2 img{
-    margin-top:9vh;
+    margin-top:18vh;
     width:55vw;
 }
 
@@ -274,7 +274,7 @@
 } */
 @media only screen and (min-height:600px){
     .HomeMUN-bg{
-        height:672vh;
+        height:676vh;
     }
 }
 
