@@ -40,6 +40,7 @@ function Page2(props) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [size, setSize] = useState("");
+  const [no, setNo] = useState(0)
   const [quantity, setquantity] = useState(1);
   const [imgCol, setImgCol] = useState(0);
   const [imgIndex, setimgIndex] = useState(true);
@@ -161,7 +162,7 @@ function Page2(props) {
       message.error("Please Select any size");
     } else {
       const allDetails = {
-        id: id,
+        id: no,
         name: item.Name,
         quantity: quantity,
         color: color,
@@ -169,6 +170,7 @@ function Page2(props) {
         price: item.price,
         image: item.img[imgCol].imgfront,
       };
+      setNo(no + 1);
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
         "AddedToCart",
@@ -178,12 +180,13 @@ function Page2(props) {
     }
     setRenderId(1);
   }
+
   function CreateObject1() {
     if (!size) {
       message.error("Please Select any size");
     } else {
       const allDetails = {
-        id: id,
+        id: no,
         name: item.Name,
         quantity: quantity,
         color: color,
@@ -191,13 +194,14 @@ function Page2(props) {
         price: item.price,
         image: item.img[imgCol].imgfront,
       };
+      setNo(no + 1);
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
         "AddedToCart",
         JSON.stringify([...AddedToCart, allDetails])
         );
         message.success("Item added to cart");
-        navigate("/merch_page3");
+        navigate("/merch_cart");
     }
     setRenderId(1);
   }
@@ -213,14 +217,14 @@ function Page2(props) {
     }
   }, []);
 
-  useEffect(() => {
-    setLoading(true);
-    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
-      navigate(`/login`);
-    }else{
-      setLoading(false);
-    }
-  });
+  // useEffect(() => {
+  //   setLoading(true);
+  //   if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+  //     navigate(`/login`);
+  //   }else{
+  //     setLoading(false);
+  //   }
+  // });
 
   const IncrementFunc = () => {
     let num = quantity;
@@ -299,7 +303,7 @@ id == 4 ?
                   </div>
                   <div className="shirt-container2">
                     <div className="tshirt-head">{item.Name}</div>
-                    <p className="description_text">Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth. 
+                    <p className="description_text">Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth.
 Experience ultimate comfort and effortless style
 with our T-shirt crafted from soft cotton.</p>
                     <div className="tshirt-price">
@@ -343,7 +347,7 @@ with our T-shirt crafted from soft cotton.</p>
                       <div
                         className={selected === 1 ? "size2" : "size1"}
                         onClick={() => {
-                          setSize("S");
+                          setSize("XS");
 
                           setselected(1);
                         }}
@@ -442,7 +446,7 @@ with our T-shirt crafted from soft cotton.</p>
                         >
                           BUY NOW
                         </div>
-                        
+
                       </button>
                       </div>
                     </div>

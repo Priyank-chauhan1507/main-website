@@ -67,14 +67,14 @@ function Navbar({ color, disable, setregister, register, data }) {
           <img className="event-nav-left" src={logo} alt="" />
         </Link>
         <div className="event-nav-right">
-          <a
+          {/* <a
             className="event-nav-right-compo hover-underline-animation"
             onClick={() => {
-              navigate("/merch_page1");
+              navigate("/thomsomerchhome");
             }}
           >
             Merch
-          </a>
+          </a> */}
           <a
             className="event-nav-right-compo hover-underline-animation"
             onClick={() => {
@@ -83,6 +83,14 @@ function Navbar({ color, disable, setregister, register, data }) {
           >
             Events
           </a>
+          {/* <a
+            className="event-nav-right-compo hover-underline-animation"
+            onClick={() => {
+              navigate("/MUN");
+            }}
+          >
+            MUN
+          </a> */}
           <a
             className="event-nav-right-compo hover-underline-animation"
             href="https://ca.thomso.in/"

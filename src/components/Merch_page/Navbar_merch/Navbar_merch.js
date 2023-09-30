@@ -2,9 +2,10 @@ import React, { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../../assests/profile1.png.jpg";
 import axios from "axios";
-import logo from "../../../assests/Merch_logo.png";
+import logo from "../../../assests/MerchLogo.png";
 import "./Navbar_merch.css";
 import MobMerchnavbar from "./mobNavbar_merch";
+import Cart from "../../../assests/cart.webp";
 
 function Navbar({ color, disable, setregister, register, data }) {
   const [display1, setdisplay] = useState("none");
@@ -66,15 +67,15 @@ function Navbar({ color, disable, setregister, register, data }) {
         </Link>
         <div className="event-nav-right">
           <a
-            className="event-nav-right-compo11 hover-underline-animation"
+            className="event-nav-right-compo11 hover-underline-animation11"
             onClick={() => {
-              navigate("/merch_page1");
+              navigate("/thomsomerchhome");
             }}
           >
             Merch
           </a>
           <a
-            className="event-nav-right-compo11 hover-underline-animation"
+            className="event-nav-right-compo11 hover-underline-animation11"
             onClick={() => {
               navigate("/events");
             }}
@@ -95,6 +96,14 @@ function Navbar({ color, disable, setregister, register, data }) {
           >
             Zonals
           </a>
+          <>
+          <img
+                src={Cart}
+                onClick={() => {
+                  navigate("/thomsomerchcart");
+                }}
+                className="cart_logo"
+              /></>
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}

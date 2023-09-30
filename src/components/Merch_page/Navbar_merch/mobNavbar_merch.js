@@ -4,6 +4,7 @@ import logo1 from "../../../assests/mob_merch.png";
 import bgmobile from "../../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
 import cross from "../../../assests/Cross.webp";
+import Cart from "../../../assests/cart.webp";
 function MobEventnavbar() {
   const navigate = useNavigate();
   // const [event, setevent] = useState(false);
@@ -31,7 +32,17 @@ function MobEventnavbar() {
             navigate("/");
           }}
         />
+        <div className="merch-mob-cart-nav">
+              <>
+          <img
+                src={Cart}
+                onClick={() => {
+                  navigate("/thomsomerchcart");
+                }}
+                className="cart_logo"
+              /></>
         {show ? (
+        
           <>
             <img
               src={logo1}
@@ -57,6 +68,7 @@ function MobEventnavbar() {
           </>
         )}
       </div>
+      </div>
 
       {show ? (
         <div className="slidebar1 slidebar2" style={{ display: display }}>
@@ -78,7 +90,7 @@ function MobEventnavbar() {
           </h1>
           <h1
             onClick={() => {
-              navigate("/merch_page1");
+              navigate("/thomsomerchhome");
               window.location.reload(false);
             }}
           >

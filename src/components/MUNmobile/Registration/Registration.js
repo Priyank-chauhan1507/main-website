@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 import "./Registration.scss";
+import { json, useNavigate } from "react-router-dom";
 // import Navbar from '../../EventsNavbar/MobEventnavbar';
 import Navbar from "../../EventsNavbar/Eventsnavbar";
+import Loader from "../../Loader/Loader"
 import BGimg from "../../../assests/MUNmobilebg.png";
 import Select from "react-select";
 import BgMunReg from "../../../assests/bgmunreg.webp";
-import { Button } from "antd";
 import CircularProgress from "@mui/material/CircularProgress";
-import { fetchMun } from "../../User/UserActions";
 import {message} from "antd"
+
 
 const Portfolio = [
   "UNITED NATIONS GENERAL ASSEMBLY (UNGA)",
@@ -374,7 +375,7 @@ const Historic = [
   value: Historic,
   label: Historic,
 }));
-export default function MUNmobileregistration({ userDetails, fetchMuns }) {
+export default function MUNmobileregistration({ fetchMuns }) {
   const [choice1, Setchoice1] = useState(false);
   const [choice2, Setchoice2] = useState(false);
   // const [choice3, Setchoice3] = useState(false);
@@ -393,6 +394,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
     second_preference_choice_three: "",
   });
 
+  const navigate = useNavigate();
   // console.log(userDetails);
 
   const handleChange1 = (first_preference) => {
@@ -440,12 +442,20 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
     });
   };
 
+  useEffect(() => {
+    setLoading(true);
+    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+      navigate(`/login`);
+    }else{
+      setLoading(false);
+    }
+  });
+
   const onSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const userresponse = {
-        // participant: userDetails?.id,
         first_preference: user.first_preference,
         second_preference: user.second_preference,
         first_preference_choice_one: user.first_preference_choice_one,
@@ -455,19 +465,26 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
         second_preference_choice_two: user.second_preference_choice_two,
         second_preference_choice_three: user.second_preference_choice_three,
       };
-      const response = await axios.post("/apiV1/mun", userresponse);
-      const { data } = response;
+      const response = await axios.post("/apiV1/mun_register", userresponse);
+      // const { data } = response;
       setLoading(false);
-      setSuccess(true);
-      fetchMuns();
-      //   navigate("/verifyemail");
-    } catch (err) {
+      if(response.status == 201){
+          message.success("🎉 You are Registered Successsully for MUN")
+      }
+
+      if(response.status == 200){
+          message.info(response.data.message)
+      }
+
+    }catch (err) {
       setLoading(false);
-      setError(true);
+      message.error("😓 Something went wrong please try again")
     }
   };
 
   return (
+    <>
+    {loading && <Loader />}
     <div className="mun-register">
       <div className="bgImg">
         <img src={BGimg} className="MobileBG" alt="" />
@@ -522,7 +539,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     isSearchable={false}
                   />
                 </div>
-                {choice1 && 
+                {choice1 &&
                 (
                 <><div>
                   Preference 1
@@ -617,7 +634,7 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
                     isSearchable={false}
                   />
                  </div>
-                  {choice2 && 
+                  {choice2 &&
                   (<><div>
                   Preference 1
                   <Select
@@ -681,21 +698,21 @@ export default function MUNmobileregistration({ userDetails, fetchMuns }) {
               </div>
             </div>
           </div>
+          {localStorage.getItem("token") &&
           <div className="sub-button">
-            <Button onSubmit={onSubmit} className="subbutton">
-              Submit
-            </Button>
-          </div>
+            <button type="submit" className="subbutton">
+            {loading ? (
+                <CircularProgress color="inherit" size={20} />
+              ) : (
+                "Submit"
+              )}
+            </button>
+          </div>}
         </div>
       {/* </> */}
       </form>
       </div>
-      {success && (
-        message.success("🎉 You are Registered Successsully for MUN")
-      )}
-      {error && (
-        message.error("😓 Something went wrong please try again")
-      )}
     </div>
+    </>
   );
 }

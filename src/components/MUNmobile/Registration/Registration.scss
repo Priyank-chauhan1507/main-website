@@ -164,11 +164,15 @@ margin-top: -2vh;
     margin-top:4vh;
 }
 .subbutton{
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 600;
-    font-weight: 1.5vh;
-    
+    padding: 8px 15px 8px 15px;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+    background: #264fa1;
+    font-weight: 600;
+    outline: none;
+    border: none;
 }
 // .RegistrationMain{
 

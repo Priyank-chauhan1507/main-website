@@ -189,14 +189,14 @@ function MobEventnavbar() {
           >
             Home
           </h4>
-          <h1
+          {/* <h1
             onClick={() => {
-              navigate("/merch_page1");
+              navigate("/thomsomerchhome");
               window.location.reload(false);
             }}
           >
             Merch
-          </h1>
+          </h1> */}
           <h1
             onClick={() => {
               navigate("/events");
@@ -205,6 +205,14 @@ function MobEventnavbar() {
           >
             Events
           </h1>
+          {/* <h1
+            onClick={() => {
+              navigate("/MUN");
+              window.location.reload(false);
+            }}
+          >
+            MUN
+          </h1> */}
           {/* {event &&
             events.map((el) => {
               const { par, child } = el;

@@ -29,7 +29,7 @@ import orng2 from "../../../assests/orng (2).png";
 import orng3 from "../../../assests/orng(3).png";
 import tshirt4front2 from "../../../assests/f3.webp";
 import merchyellowbg from "../../../assests/Merchbggrp.png";
-import mobmerchbg from "../../../assests/mobmerchbg.png";
+import mobmerchbg from "../../../assests/merchmob.png";
 import Loader from "../../Loader/Loader"
 
 function Page1() {
@@ -75,14 +75,14 @@ function Page1() {
   //   setClasstyle(newText);
   // }
 
-  useEffect(() => {
-    setLoading(true);
-    if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
-      navigate(`/login`);
-    }else{
-      setLoading(false);
-    }
-  });
+  // useEffect(() => {
+  //   setLoading(true);
+  //   if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+  //     navigate(`/login`);
+  //   }else{
+  //     setLoading(false);
+  //   }
+  // });
 
   return (
     <>
@@ -116,7 +116,7 @@ function Page1() {
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation.
               </div> */}
-            </div> 
+            </div>
             {/* <div className="ellipse">
                 <img className="ell-img" src={ellipse} alt="..." />
               </div> */}
@@ -132,7 +132,7 @@ function Page1() {
             {data.map(({ id, img, price, name }) => {
               return (
                 <>
-                  <Link to={`/merch_page2/${id}`}>
+                  <Link to={`/merch_selection/${id}`}>
                     <div className="product1" /*onClick={changeclassyle}*/ key={id}>
                       <div className="prod_img">
                         <img className="product-merch" src={img} alt="..." />

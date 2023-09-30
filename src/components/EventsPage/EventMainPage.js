@@ -21,6 +21,14 @@ import { message } from "antd";
 import loader from "../../assests/loader.gif";
 import Loader from "../Loader/Loader";
 import cross_img from "../../assests/Cross.webp";
+import { Link } from "react-router-dom";
+import Select from "react-select";
+
+const slotsOptions = [
+  { value: "Day 1", label: "Day 1" },
+  { value: "Day 2", label: "Day 2" },
+  { value: "Day 3", label: "Day 3" }
+];
 
 const EventMainPage = ({ events }) => {
   const id = useParams()?.id;
@@ -29,7 +37,7 @@ const EventMainPage = ({ events }) => {
   const [events1, setEvents1] = useState([]);
   const [exist, setExist] = useState(false);
   const [filter, setfilter] = useState([]);
-  const [eventdata, setEventData] = useState({});
+  const [eventdata, setEventData] = useState([]);
   const [check, setcheck] = useState(true)
   const [register, setregister] = useState(true);
   const [active, setActive] = useState(false);
@@ -40,10 +48,22 @@ const EventMainPage = ({ events }) => {
     sub_event: "",
   });
   const [loading, setLoading] = useState(false);
+  const [paidEvent, setPaidEvent] = useState(false);
+  const [slot, setSlot] = useState("");
 
   useEffect(() => {
     getEvents();
   }, []);
+
+  // useEffect(() => {
+  //   for (let num = 0; num < events1.length; num++) {
+  //     if (events1[num]?.event == id && events1[num]?.event__is_payment == true) {
+  //       setPaidEvent(true)
+  //       break;
+  //     }
+  //   }
+  // }, [events1])
+
 
   const getEvents = async () => {
     axios
@@ -53,7 +73,7 @@ const EventMainPage = ({ events }) => {
         )}`
       )
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         setEvents1(res.data);
       })
       .catch((err) => {
@@ -115,6 +135,7 @@ const EventMainPage = ({ events }) => {
   }, [id]);
 
   const loadUserData = async () => {
+    setLoading(true)
     try {
       axios
         .get(`/apiV1/event`)
@@ -124,20 +145,15 @@ const EventMainPage = ({ events }) => {
           });
 
           setEventData(selectedItem);
+          setLoading(false)
           // setEventData(res.data);
-          localStorage.setItem("user_id", res.data?.user_id);
         })
         .catch((err) => {
+          setLoading(false)
           console.log(err);
-          if (err?.response?.status == 401) {
-            if (localStorage.getItem("token")) {
-              localStorage.removeItem("token");
-              localStorage.removeItem("user_id");
-              window.location.pathname = "/";
-            }
-          }
         });
     } catch (error) {
+      setLoading(false)
       console.log(error);
     }
   };
@@ -159,7 +175,7 @@ const EventMainPage = ({ events }) => {
   const handleClick = (e) => {
     if (
       eventdata[0]?.solo_team === "duet" ||
-      eventdata[0]?.solo_team === "team" || 
+      eventdata[0]?.solo_team === "team" ||
       eventdata[0]?.solo_team === "Duet" ||
       eventdata[0]?.solo_team === "Team"
     ) {
@@ -168,6 +184,36 @@ const EventMainPage = ({ events }) => {
       onSubmit(e);
     }
   };
+
+  const handleChange1 = (slots) => {
+    setSlot(slots?.value);
+    console.log(slot, "slot");
+  };
+
+  async function payForEvent() {
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        `https://api1.thomso.in/apiV1/paid_events_request`,
+        {"event_name": eventdata[0].name, "slot": slot}
+      );
+      const u = response.data;
+      // console.log("data", response.data);
+      if (response.data.status == "true") {
+        setTimeout(() => {
+          window.open(response.data.payment_url, '_blank');
+      })
+      } else {
+        message.error(`${response.data.error}`);
+      }
+      setLoading(false);
+    } catch (error) {
+      console.error("Error:", error);
+      setLoading(false);
+    }
+  }
+
 
   return (
     <>
@@ -180,7 +226,7 @@ const EventMainPage = ({ events }) => {
             {register ? (
               <>
                 <span className="events-left-event01">
-                  Events {">"} {eventdata[0]?.category?.name} {">"}{" "}
+                  <span onClick={() => {navigate("/events")}} style={{cursor: "pointer", color: "#264fa1", fontSize: "14px"}}>EVENTS</span> {">"} {eventdata[0]?.category?.name} {">"}{" "}
                   {eventdata[0]?.name}
                 </span>
 
@@ -224,7 +270,7 @@ const EventMainPage = ({ events }) => {
                             onChange={onChangeSubEvent}
                             checked={el === registerData.sub_event}
                             onClick={() => setActive(true)}
-                            
+
                             // required
                           />
                           <label htmlFor={el} style={{ color: "white" }}>
@@ -255,8 +301,48 @@ const EventMainPage = ({ events }) => {
                         <>REGISTER</>
                       )}
                     </button>
-                  ) : (
-                    <button
+                  ) : (<>
+                    {paidEvent ? (
+                    <div>
+
+                    {eventdata[0]?.name == "SILENT DJ" && (
+                      <>
+                        <div style={{color: 'white'}}>
+                  Choose Your Slot
+                  <Select
+                    styles={{backgroundColor: "rgb(48, 77, 127)"}}
+                    name="slots"
+                    className=""
+                    placeholder="Slots"
+                    onChange={handleChange1}
+                    require
+                    options={
+                      slotsOptions
+                    }
+                    isSearchable={false}
+                  />
+                </div>
+                      </>
+                    )}
+                      <button
+                      className="events-left-event5-btn1"
+                      id="newchangesinbutton"
+                      onClick={(e) => payForEvent(e)}
+                    >
+                      {loading ? (
+                        <>
+                          <Loader />
+                          <>Pay Now</>
+                        </>
+                      ) : (
+                        <>Pay Now</>
+                      )}
+                    </button>
+
+                    </div>
+
+                    ) : (
+                      <button
                       className="events-left-event5-btn1"
                       id="newchangesinbutton"
                       onClick={(e) => handleClick(e)}
@@ -270,6 +356,8 @@ const EventMainPage = ({ events }) => {
                         <>REGISTER</>
                       )}
                     </button>
+                    )}
+                  </>
                   )}
                   {eventdata[0]?.rulebook != null && (
                     <a
