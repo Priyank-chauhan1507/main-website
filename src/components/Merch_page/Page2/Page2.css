@@ -270,6 +270,9 @@
   letter-spacing: 2.4px;
   text-transform: lowercase;
 }
+.bage1change{
+  display: none;
+}
 
 .buy_now{
   background:white !important;

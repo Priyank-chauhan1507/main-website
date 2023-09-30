@@ -37,6 +37,7 @@ import Page3 from "../Page3/Page3";
 import Loader from "../../Loader/Loader"
 
 function Page2(props) {
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [size, setSize] = useState("");
@@ -48,6 +49,8 @@ function Page2(props) {
   const [AddedToCart, setAddedToCart] = useState([]);
   const [renderId, setRenderId] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [bagChange, setbagChange] = useState("bag1");
+  const [cartchange,setcartchange]=useState("bage1change");
 
   const data = [
     {
@@ -177,8 +180,12 @@ function Page2(props) {
         JSON.stringify([...AddedToCart, allDetails])
         );
         message.success("Item added to cart");
+        let newText="bage1change";
+        setbagChange(newText);
+        let newtext1="bag1";
+        setcartchange(newtext1);
+        setRenderId(1);
     }
-    setRenderId(1);
   }
 
   function CreateObject1() {
@@ -430,10 +437,18 @@ with our T-shirt crafted from soft cotton.</p>
 
                     >
                       <div onClick={CreateObject}>
-                      <button className="bag1">
+                      <button className={bagChange}>
                         <img src={lock5} className="lock5" alt="" />
                         <div className="con1 btn-text" >
                           ADD TO BAG
+                        </div>
+                      </button>
+                      </div>
+                      <div onClick={() => {navigate("/merch_cart");}}>
+                      <button className={cartchange}>
+                        <img src={lock5} className="lock5" alt="" />
+                        <div className="con1 btn-text" >
+                          GO TO BAG
                         </div>
                       </button>
                       </div>
