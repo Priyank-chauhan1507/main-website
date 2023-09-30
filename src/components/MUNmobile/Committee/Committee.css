@@ -21,10 +21,9 @@
 }
 
 .css-1qzevvg{
-    margin-left:36vw !important; 
+    margin-left:auto !important; 
     margin-top:0px !important;
 }
-
 @media only screen and (max-width:650px)
 {
     .CarouselCommittee
@@ -37,6 +36,9 @@
     .CarouselCommittee
 {
     height: 80vh;
+}
+.carouselcontentbtn{
+    bottom:2vh !important;
 }
 }
 @media only screen and (max-width:450px)
@@ -152,6 +154,10 @@
     .carouselcontenttext3{
         bottom:25vh;
    }
+   .carouselcontentbtn{
+    height:4vh !important;
+    bottom:2vh !important;
+}
 }
 
 @media only screen and (max-width:400px)
@@ -199,13 +205,13 @@
         /* font-size:3vw; */
     }
     .carouselcontentbtn{
-        height:5vh !important;
-        bottom:4vh !important;
+        height:4vh !important;
+        bottom:3vh !important;
     }
 }
 @media only screen and (max-width:330px){
     .carouselcontentbtn{
-        bottom:3vh !important;
+        bottom:2vh !important;
     }
 }
 .carouselcontentbtn

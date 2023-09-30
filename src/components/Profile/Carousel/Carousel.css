@@ -1,0 +1,32 @@
+
+#white_div{
+    color:white;
+    border-radius: 4px;
+    border: 2px solid rgba(42, 42, 42, 0.98);
+    background: rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(6px);
+    width: 71vw;
+    height: 47.3vh;
+}
+
+.car_head_txt{
+    margin-top:2vh;
+    margin-left:2vw;
+}
+
+.slider{
+    animation: none;
+}
+
+.carousel_events1{
+    height:20vh;
+    width:63vw;
+    .carousel-slider{
+        height: 38vh;
+        margin-top: 2vh;
+        margin-left:4vw;
+    }
+    .carousel .slider-wrapper.axis-horizontal .slider{
+        width:20vw;
+    }
+}
