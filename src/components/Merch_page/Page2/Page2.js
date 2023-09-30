@@ -454,15 +454,15 @@ with our T-shirt crafted from soft cotton.</p>
                       </div>
                       <div   className="con1"
                           onClick={CreateObject1}>
-                      <button className="bag1 buy_now">
-                        {/* <img src={lock5} className="lock5" alt="" /> */}
+                      {/* <button className="bag1 buy_now">
+                        <img src={lock5} className="lock5" alt="" />
                         <div
                         className="btn-text"
                         >
                           BUY NOW
                         </div>
 
-                      </button>
+                      </button> */}
                       </div>
                     </div>
                   </div>
