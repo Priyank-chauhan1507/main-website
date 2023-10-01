@@ -127,7 +127,7 @@ padding-left: 20vw;
     padding-right: 10vw;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-left:1vw;
     padding-left:1vw;
     gap:1vw;
@@ -331,7 +331,7 @@ word-wrap: normal
 .MerchYellowBGmob{
     display: block;
     width: 96vw;
-    height: 298vh;
+    height: 315vh;
     margin:0 2vw 0 2vw;
     
 }
@@ -357,37 +357,37 @@ word-wrap: normal
 
 @media screen and (max-width:598px){
     .MerchYellowBGmob{
-        height: 286vh;
+        height: 308vh;
     }
 }
 @media screen and (max-width:550px){
     .MerchYellowBGmob{
-        height: 282vh;
+        height: 302vh;
     }
 }
 @media screen and (max-width:460px){
     .MerchYellowBGmob{
-        height: 274vh;
+        height: 299vh;
     }
 }
 @media screen and (max-width:412px){
     .MerchYellowBGmob{
-        height: 270vh;
+        height: 295vh;
     }
 }
 @media screen and (max-width:407px){
     .MerchYellowBGmob{
-        height: 270vh;
+        /* height: 270vh; */
     }
 }
 @media screen and (max-width:387px){
     .MerchYellowBGmob{
-        height: 280vh;
+        height: 308vh;
     }
 }
 @media screen and (max-width:375px){
     .MerchYellowBGmob{
-        height: 281vh;
+        /* height: 281vh; */
     }
 }
 
@@ -401,6 +401,6 @@ word-wrap: normal
 }
 @media screen and (max-width:324px){
     .MerchYellowBGmob{
-        height: 278vh;
+        height: 300vh;
     }
 }
