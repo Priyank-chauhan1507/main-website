@@ -718,7 +718,8 @@ const NewPaymentBox = (
                                           ? `${config.max_amount}`
                                           : `${config.min_amount}`}
                                       </span>
-                                      <span className="PayTaxes">Convenience Fees + Taxes</span>
+                                      <br />
+                                      <span className="PayTaxes">(+ Convenience Fees & Taxes)</span>
                                     </p>
                                   </div>
                                   <p className="PayAccommodation">
