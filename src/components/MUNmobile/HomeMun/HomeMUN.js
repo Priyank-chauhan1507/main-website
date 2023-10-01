@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BG from "../../../assests/MUNmobileBG.webp";
 import MUNTop from "../../../assests/IITRMUN.png";
-import Navbar from "../../../components/EventsNavbar/MobEventnavbar";
+import Navbar from "../../../components/EventsNavbar/Eventsnavbar";
 import Contact from "../../../components/MUNmobile/ContactUs/ContactUs";
 import Executives from "../Executive/Executive";
 import Executive from "../../../assests/Executive.png";
