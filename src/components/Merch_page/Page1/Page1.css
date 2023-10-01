@@ -341,7 +341,7 @@ word-wrap: normal
 .MerchYellowBGmob{
     display: block;
     width: 96vw;
-    height: 325vh;
+    height: 315vh;
     margin:0 2vw 0 2vw;
     
 }
@@ -363,20 +363,16 @@ word-wrap: normal
     /* background-size: cover; */
 }
 /* < Stashed changes */
-@media screen and (max-width:700px){
-    .MerchYellowBGmob{
-        height: 320vh;
-    }
-}
+
 
 @media screen and (max-width:598px){
     .MerchYellowBGmob{
-        height: 315vh;
+        height: 308vh;
     }
 }
 @media screen and (max-width:550px){
     .MerchYellowBGmob{
-        height: 316vh;
+        height: 302vh;
     }
 }
 @media screen and (max-width:460px){
@@ -396,7 +392,7 @@ word-wrap: normal
 }
 @media screen and (max-width:387px){
     .MerchYellowBGmob{
-        height: 310vh;
+        height: 308vh;
     }
 }
 @media screen and (max-width:375px){
