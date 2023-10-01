@@ -27,7 +27,7 @@
 }
 
 #img_1__card_ec {
-  width: 226px;
+  width: 100%;
   height: 200px;
   margin: 12px;
   object-fit: cover;
@@ -70,6 +70,10 @@
 .none{
   display: none;
 }
+@media screen and (max-width:1150px){
+  #img_1__card_ec {
+    width: 100%;}
+}
 @media screen and (max-width:768px){
   #card_icc{
     width: 300px;
@@ -78,7 +82,7 @@
     /* width: 74vw;
   } */
   #img_1__card_ec {
-    width: 275px;
+    width: 100%;
     height: auto;
     margin: 10px;
     margin-bottom: 10px !important;
@@ -108,3 +112,4 @@
   padding: 10px 20px;
   text-align: center;
 }
+
