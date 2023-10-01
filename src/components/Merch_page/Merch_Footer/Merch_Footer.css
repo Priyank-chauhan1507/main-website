@@ -130,7 +130,7 @@
     top: -2rem;
     /* left: -1rem; */
     z-index: 10000000000;
-    z-index: 0;
+    z-index: 1600;
     cursor: pointer;
     text-decoration: underline;
 
@@ -138,4 +138,9 @@
 
 .TNC:hover {
     text-decoration: underline;
+}
+@media (max-width:768px) {
+    .TNC{
+        z-index: 0;
+    }
 }
