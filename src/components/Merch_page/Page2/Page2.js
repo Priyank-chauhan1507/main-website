@@ -393,14 +393,14 @@ with our T-shirt crafted from soft cotton.</p>
 
                       </div>
                     </div>
-                    <div
-                      style={{
-                        width:'40vw',
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "0.5rem",
-                        flexWrap:'wrap'
-                      }}
+                    <div className="bag-cart-btn"
+                      // style={{
+                      //   width:'40vw',
+                      //   display: "flex",
+                      //   flexDirection: "row",
+                      //   gap: "0.5rem",
+                      //   flexWrap:'wrap'
+                      // }}
 
                     >
                       <div onClick={CreateObject}>
@@ -419,18 +419,18 @@ with our T-shirt crafted from soft cotton.</p>
                         </div>
                       </button>
                       </div>
-                      {/* <div   className="con1"
-                          onClick={CreateObject1}>
+                      <div   className="con1"
+                          onClick={()=>{navigate("/merch_home")}}>
                       <button className="bag1 buy_now">
-                        <img src={lock5} className="lock5" alt="" />
+                        {/* <img src={lock5} className="lock5" alt="" /> */}
                         <div
                         className="btn-text"
                         >
-                          BUY NOW
+                          CONTINUE SHOPPING
                         </div>
 
                       </button>
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
