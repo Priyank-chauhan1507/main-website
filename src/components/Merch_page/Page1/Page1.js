@@ -129,11 +129,10 @@ function Page1() {
               <hr />
             </div> */}
           <div className="product">
-            {data.map(({ id, img, price, name }) => {
+            {data.map(({ id, img, price, name }, index) => {
               return (
-                <>
-                  <Link to={`/merch_selection/${id}`}>
-                    <div className="product1" /*onClick={changeclassyle}*/ key={id}>
+                  <Link to={`/merch_selection/${id}`} key={index}>
+                    <div className="product1" /*onClick={changeclassyle}*/ key={index}>
                       <div className="prod_img">
                         <img className="product-merch" src={img} alt="..." />
                       </div>
@@ -149,7 +148,6 @@ function Page1() {
                       </div>
                     </div>
                   </Link>
-                </>
               );
             })}
 

@@ -5,10 +5,10 @@ import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
 // import Navbar from "../../EventsNavbar/Eventsnavbar";
 // import Footer from "../../Navbar/WebNavbarNew";
 import Footer from "../Merch_Footer/Merch_Footer";
-import tshirt3front from "../../../assests/tshirt3front.webp";
-import tshirt3back from "../../../assests/tshirt3back.webp";
-import tshirt3front2 from "../../../assests/tshirt3front2.webp";
-import tshirt3back2 from "../../../assests/tshirt3back2.webp";
+// import tshirt3front from "../../../assests/tshirt3front.webp";
+// import tshirt3back from "../../../assests/tshirt3back.webp";
+// import tshirt3front2 from "../../../assests/tshirt3front2.webp";
+// import tshirt3back2 from "../../../assests/tshirt3back2.webp";
 import tshirt4front1 from "../../../assests/feelthevibewhitwfront.webp";
 import tshirt4back1 from "../../../assests/feelthevibewhiteback.webp";
 import tshirt4front2 from "../../../assests/feelthevibelavenderfront.webp";
@@ -33,22 +33,19 @@ import { message } from "antd";
 import increment from "../../../assests/increment.svg";
 import decrement from "../../../assests/decrement.svg";
 import { useNavigate, useParams } from "react-router-dom";
-import Page3 from "../Page3/Page3";
-import Loader from "../../Loader/Loader"
+// import Loader from "../../Loader/Loader"
 
 function Page2(props) {
 
   const { id } = useParams();
   const navigate = useNavigate();
   const [size, setSize] = useState("");
-  const [no, setNo] = useState(0)
   const [quantity, setquantity] = useState(1);
   const [imgCol, setImgCol] = useState(0);
   const [imgIndex, setimgIndex] = useState(true);
   const [selected, setselected] = useState(0);
   const [AddedToCart, setAddedToCart] = useState([]);
-  const [renderId, setRenderId] = useState(0);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [bagChange, setbagChange] = useState("bag1");
   const [cartchange,setcartchange]=useState("bage1change");
 
@@ -158,14 +155,14 @@ function Page2(props) {
   const item = data[id - 1]
 
   const [color, setColor] = useState(item.colors[0].colorName);
-  const [imgSrc, setImgSrc] = useState();
+
 
   function CreateObject() {
     if (!size) {
       message.error("Please Select any size");
     } else {
       const allDetails = {
-        id: no,
+        id: Math.floor(Math.random() *1000) + 1,
         name: item.Name,
         quantity: quantity,
         color: color,
@@ -173,7 +170,6 @@ function Page2(props) {
         price: item.price,
         image: item.img[imgCol].imgfront,
       };
-      setNo(no + 1);
       setAddedToCart([...AddedToCart, allDetails]);
       localStorage.setItem(
         "AddedToCart",
@@ -184,38 +180,10 @@ function Page2(props) {
         setbagChange(newText);
         let newtext1="bag1";
         setcartchange(newtext1);
-        setRenderId(1);
     }
   }
 
-  function CreateObject1() {
-    if (!size) {
-      message.error("Please Select any size");
-    } else {
-      const allDetails = {
-        id: no,
-        name: item.Name,
-        quantity: quantity,
-        color: color,
-        size: size,
-        price: item.price,
-        image: item.img[imgCol].imgfront,
-      };
-      setNo(no + 1);
-      setAddedToCart([...AddedToCart, allDetails]);
-      localStorage.setItem(
-        "AddedToCart",
-        JSON.stringify([...AddedToCart, allDetails])
-        );
-        message.success("Item added to cart");
-        navigate("/merch_cart");
-    }
-    setRenderId(1);
-  }
 
-  useEffect(() => {
-    // console.log("updated array: ", AddedToCart);
-  }, [AddedToCart, localStorage]);
 
   useEffect(() => {
     const storedArray = localStorage.getItem("AddedToCart");
@@ -250,7 +218,6 @@ function Page2(props) {
 
   return (
     <>
-    {loading && <Loader />}
         <div className="page-2-merch">
           <Navbar />
                 <div className="shirt-container" key={id}>
@@ -325,9 +292,9 @@ with our T-shirt crafted from soft cotton.</p>
                       <div className="color122">{color}</div>
                     </div>
                     <div className="colorbox">
-                      {item.colors.map(({ colorId, colorName }) => {
+                      {item.colors.map(({ colorId, colorName }, i) => {
                         return (
-                          <>
+                          <div key={i}>
                          {colorName == "lavender" ? <div
                             className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
                             style={{backgroundColor:"#c0ade6"}}
@@ -345,7 +312,7 @@ with our T-shirt crafted from soft cotton.</p>
                             }}
                             ></div>
                           }
-                      </>
+                      </div>
                         );
                       })}
                     </div>
@@ -452,9 +419,9 @@ with our T-shirt crafted from soft cotton.</p>
                         </div>
                       </button>
                       </div>
-                      <div   className="con1"
+                      {/* <div   className="con1"
                           onClick={CreateObject1}>
-                      {/* <button className="bag1 buy_now">
+                      <button className="bag1 buy_now">
                         <img src={lock5} className="lock5" alt="" />
                         <div
                         className="btn-text"
@@ -462,8 +429,8 @@ with our T-shirt crafted from soft cotton.</p>
                           BUY NOW
                         </div>
 
-                      </button> */}
-                      </div>
+                      </button>
+                      </div> */}
                     </div>
                   </div>
                 </div>

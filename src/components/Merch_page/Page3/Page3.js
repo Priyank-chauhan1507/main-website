@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import productImg from "../../../assests/productimg.svg";
+// import productImg from "../../../assests/productimg.svg";
 import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
 // import Navbar from "../../EventsNavbar/Eventsnavbar";
 // import Footer from "../../Navbar/WebNavbarNew";
@@ -15,13 +15,12 @@ import { message } from "antd";
 const Page3 = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
-  const [Cart, setCart] = useState(false);
+  // const [Cart, setCart] = useState(false);
   const [subTotal, setSubTotal] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
 
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState("");
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -34,12 +33,7 @@ const Page3 = () => {
   });
 
   useEffect(() => {
-    let a = 0;
     setData(JSON.parse(localStorage.getItem("AddedToCart")));
-    for (let i = 0; i < data?.length; i++) {
-      a += data[i].quantity*data[i].price;
-    }
-    setSubTotal(a);
   }, []);
 
   useEffect(() => {
@@ -53,6 +47,7 @@ const Page3 = () => {
   // console.log(data);
 
   const RemoveItem = (id) => {
+    console.log(id);
     const storedData = JSON.parse(localStorage.getItem("AddedToCart"));
     const updatedData = storedData.filter((item) => item.id !== id);
     localStorage.setItem("AddedToCart", JSON.stringify(updatedData));
@@ -80,7 +75,7 @@ const Page3 = () => {
       };
       // console.log(userresponse);
       const response = await axios.post(`/apiV1/merch_payment_request`, userresponse);
-      const u = response.data;
+      // const u = response.data;
       if(user.contact.length==10 && /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(user.email)){
       if (response.data.status == "true") {
         setTimeout(() => {
@@ -100,10 +95,8 @@ const Page3 = () => {
       setLoading(false);
       const { data } = err?.response;
       console.log("register Error:", data);
-      var errorData = "";
+      // var errorData = "";
       message.error(err)
-      setErrorMsg(errorData);
-      setError(true);
       setLoading(false);
     }
   };
@@ -146,9 +139,9 @@ const Page3 = () => {
                 </div>
               </div>
               {data &&
-                data.map(({ id, name, color, price, size, quantity,image }) => {
+                data.map(({ id, name, color, price, size, quantity,image }, i) => {
                   return (
-                    <div className="cart_status" key={id}>
+                    <div className="cart_status" key={i}>
                       <div className="product_status">
                         <img
                           src={image}
