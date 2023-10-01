@@ -116,6 +116,7 @@ line-height: 162.2%;
         flex-direction: column-reverse;
         gap:2vh;
         margin-top: 12vh;
+        z-index: 1;
     }
     .muninfo-text{
         display: none;
