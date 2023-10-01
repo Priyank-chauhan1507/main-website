@@ -69,18 +69,18 @@ function Navbar({ color, disable, setregister, register, data }) {
           <a
             className="event-nav-right-compo11 hover-underline-animation11"
             onClick={() => {
-              navigate("/merch_home");
-            }}
-          >
-            Merch
-          </a>
-          <a
-            className="event-nav-right-compo11 hover-underline-animation11"
-            onClick={() => {
               navigate("/events");
             }}
           >
             Events
+          </a>
+          <a
+            className="event-nav-right-compo11 hover-underline-animation11"
+            onClick={() => {
+              navigate("/merch_home");
+            }}
+          >
+            Merch
           </a>
           <a
             className="event-nav-right-compo11 hover-underline-animation11"
