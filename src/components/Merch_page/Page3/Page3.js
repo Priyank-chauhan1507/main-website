@@ -118,7 +118,7 @@ const Page3 = () => {
               </div>
               <div className="footer_button1">
                 <button
-                  className="prod_button2 check-outbtn prod_button1" style={{backgroundColor:"#f26120",color:"white",borderRadius:"5px",borderStyle:"none",padding:"7px 4px 7px 4px"}}
+                  className="prod_button2 check-outbtn" style={{backgroundColor:"#f26120",color:"white",borderRadius:"5px",borderStyle:"none",padding:"7px 4px 7px 4px"}}
                   onClick={() => navigate("/merch_home")}
                 >
                   CONTINUE SHOPPING
