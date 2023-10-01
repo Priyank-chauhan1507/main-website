@@ -293,6 +293,11 @@
 .btn-text{
   min-width: fit-content;
 }
+.bag-cart-btn{
+  width:40vw;
+  display: flex;
+  gap:0.5rem;
+}
 
 
 @media only screen and (max-width: 1080px) {
@@ -301,18 +306,18 @@
   }
   .bag1{
     width: max-content;
-    padding: 0 3vw;
+    padding: 0 2vw;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .bag1{
-    width:18vw;
+    width:22vw;
   }
 }
 
 .btn-text {
-  font-size: 100%;
+  font-size: 80%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -321,6 +326,10 @@
     height: 1.5rem;
     width: 1.5rem;
 
+  }
+  .bag-cart-btn{
+    display: flex;
+    flex-wrap: wrap;
   }
   .colorbox1A {
     width: 6.5vw;
