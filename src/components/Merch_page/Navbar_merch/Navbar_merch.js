@@ -69,7 +69,7 @@ function Navbar({ color, disable, setregister, register, data }) {
           <a
             className="event-nav-right-compo11 hover-underline-animation11"
             onClick={() => {
-              navigate("/thomsomerchhome");
+              navigate("/merch_home");
             }}
           >
             Merch
