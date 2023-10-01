@@ -27,7 +27,7 @@ import Select from "react-select";
 const slotsOptions = [
   { value: "Day 1", label: "Day 1" },
   { value: "Day 2", label: "Day 2" },
-  { value: "Day 3", label: "Day 3" }
+  { value: "Day 3", label: "Day 3" },
 ];
 
 const EventMainPage = ({ events }) => {
@@ -38,7 +38,7 @@ const EventMainPage = ({ events }) => {
   const [exist, setExist] = useState(false);
   const [filter, setfilter] = useState([]);
   const [eventdata, setEventData] = useState([]);
-  const [check, setcheck] = useState(true)
+  const [check, setcheck] = useState(true);
   const [register, setregister] = useState(true);
   const [active, setActive] = useState(false);
   const [activet, setActivet] = useState(false);
@@ -63,7 +63,6 @@ const EventMainPage = ({ events }) => {
   //     }
   //   }
   // }, [events1])
-
 
   const getEvents = async () => {
     axios
@@ -97,26 +96,30 @@ const EventMainPage = ({ events }) => {
 
       //  console.log(events1);
       for (let num = 0; num < events1.length; num++) {
-        if (events1[num].event == eventuser.event && events1[num].sub_event==eventuser.sub_event) {
+        if (
+          events1[num].event == eventuser.event &&
+          events1[num].sub_event == eventuser.sub_event
+        ) {
           exit = true;
           setExist(true);
           break;
         }
       }
       if (exit) {
-        message.info(`You are already registered for ${eventdata[0]?.name} ${eventuser.sub_event}`);
+        message.info(
+          `You are already registered for ${eventdata[0]?.name} ${eventuser.sub_event}`
+        );
         setLoading(false);
-        navigate('/pevents')
-       }
-        else{
-       axios
-        .post("/apiV1/registerevent", eventuser)
-        .then((res) => {
-          if (res.status == 201) {
-            message.success(
-              `🎉You are registerd successfully for ${eventdata[0]?.name} ${eventuser.sub_event}`
-            );
-            navigate('/pevents');
+        navigate("/pevents");
+      } else {
+        axios
+          .post("/apiV1/registerevent", eventuser)
+          .then((res) => {
+            if (res.status == 201) {
+              message.success(
+                `🎉You are registerd successfully for ${eventdata[0]?.name} ${eventuser.sub_event}`
+              );
+              navigate("/pevents");
 
               setregister(true);
               getEvents();
@@ -135,7 +138,7 @@ const EventMainPage = ({ events }) => {
   }, [id]);
 
   const loadUserData = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
       axios
         .get(`/apiV1/event`)
@@ -145,15 +148,15 @@ const EventMainPage = ({ events }) => {
           });
 
           setEventData(selectedItem);
-          setLoading(false)
+          setLoading(false);
           // setEventData(res.data);
         })
         .catch((err) => {
-          setLoading(false)
+          setLoading(false);
           console.log(err);
         });
     } catch (error) {
-      setLoading(false)
+      setLoading(false);
       console.log(error);
     }
   };
@@ -196,14 +199,14 @@ const EventMainPage = ({ events }) => {
     try {
       const response = await axios.post(
         `https://api1.thomso.in/apiV1/paid_events_request`,
-        {"event_name": eventdata[0].name, "slot": slot}
+        { event_name: eventdata[0].name, slot: slot }
       );
       const u = response.data;
       // console.log("data", response.data);
       if (response.data.status == "true") {
         setTimeout(() => {
-          window.open(response.data.payment_url, '_blank');
-      })
+          window.open(response.data.payment_url, "_blank");
+        });
       } else {
         message.error(`${response.data.error}`);
       }
@@ -214,10 +217,9 @@ const EventMainPage = ({ events }) => {
     }
   }
 
-
   return (
     <>
-      <div>
+      <div style={{ overflowY: "hidden" }}>
         <img src={bgmobile} alt="" className="bgmobile" />
         <Navbar2 setregister={setregister} register="event" />
         <img src={bg} alt="" className="bg-events" />
@@ -226,7 +228,19 @@ const EventMainPage = ({ events }) => {
             {register ? (
               <>
                 <span className="events-left-event01">
-                  <span onClick={() => {navigate("/events")}} style={{cursor: "pointer", color: "#264fa1", fontSize: "14px"}}>EVENTS</span> {">"} {eventdata[0]?.category?.name} {">"}{" "}
+                  <span
+                    onClick={() => {
+                      navigate("/events");
+                    }}
+                    style={{
+                      cursor: "pointer",
+                      color: "#264fa1",
+                      fontSize: "14px",
+                    }}
+                  >
+                    EVENTS
+                  </span>{" "}
+                  {">"} {eventdata[0]?.category?.name} {">"}{" "}
                   {eventdata[0]?.name}
                 </span>
 
@@ -239,7 +253,7 @@ const EventMainPage = ({ events }) => {
                 <p className="events-left-event2">
                   {eventdata[0]?.description}
                 </p>
-                {(eventdata[0]?.note != "" && eventdata[0]?.is_price == true) && (
+                {eventdata[0]?.note != "" && eventdata[0]?.is_price == true && (
                   <div className="events-left-event3">
                     <span>Note:</span>
                     <p>{eventdata[0]?.note}</p>
@@ -254,7 +268,8 @@ const EventMainPage = ({ events }) => {
                     <h1>{eventdata[0]?.price}</h1>
                   </div>
                 )}
-                {(eventdata[0]?.solo_team === "solo" || eventdata[0]?.solo_team === "Solo") &&
+                {(eventdata[0]?.solo_team === "solo" ||
+                  eventdata[0]?.solo_team === "Solo") &&
                   eventdata[0]?.sub_event &&
                   (eventdata[0]?.sub_event).split(",").map((el, index) => {
                     return (
@@ -282,7 +297,8 @@ const EventMainPage = ({ events }) => {
                   })}
 
                 <div className="events-left-event5">
-                  {(eventdata[0]?.solo_team === "solo" || eventdata[0]?.solo_team === "Solo") &&
+                  {(eventdata[0]?.solo_team === "solo" ||
+                    eventdata[0]?.solo_team === "Solo") &&
                   eventdata[0]?.sub_event &&
                   active === false ? (
                     <button
@@ -301,63 +317,61 @@ const EventMainPage = ({ events }) => {
                         <>REGISTER</>
                       )}
                     </button>
-                  ) : (<>
-                    {paidEvent ? (
-                    <div>
-
-                    {eventdata[0]?.name == "SILENT DJ" && (
-                      <>
-                        <div style={{color: 'white'}}>
-                  Choose Your Slot
-                  <Select
-                    styles={{backgroundColor: "rgb(48, 77, 127)"}}
-                    name="slots"
-                    className=""
-                    placeholder="Slots"
-                    onChange={handleChange1}
-                    require
-                    options={
-                      slotsOptions
-                    }
-                    isSearchable={false}
-                  />
-                </div>
-                      </>
-                    )}
-                      <button
-                      className="events-left-event5-btn1"
-                      id="newchangesinbutton"
-                      onClick={(e) => payForEvent(e)}
-                    >
-                      {loading ? (
-                        <>
-                          <Loader />
-                          <>Pay Now</>
-                        </>
+                  ) : (
+                    <>
+                      {paidEvent ? (
+                        <div>
+                          {eventdata[0]?.name == "SILENT DJ" && (
+                            <>
+                              <div style={{ color: "white" }}>
+                                Choose Your Slot
+                                <Select
+                                  styles={{
+                                    backgroundColor: "rgb(48, 77, 127)",
+                                  }}
+                                  name="slots"
+                                  className=""
+                                  placeholder="Slots"
+                                  onChange={handleChange1}
+                                  require
+                                  options={slotsOptions}
+                                  isSearchable={false}
+                                />
+                              </div>
+                            </>
+                          )}
+                          <button
+                            className="events-left-event5-btn1"
+                            id="newchangesinbutton"
+                            onClick={(e) => payForEvent(e)}
+                          >
+                            {loading ? (
+                              <>
+                                <Loader />
+                                <>Pay Now</>
+                              </>
+                            ) : (
+                              <>Pay Now</>
+                            )}
+                          </button>
+                        </div>
                       ) : (
-                        <>Pay Now</>
+                        <button
+                          className="events-left-event5-btn1"
+                          id="newchangesinbutton"
+                          onClick={(e) => handleClick(e)}
+                        >
+                          {loading ? (
+                            <>
+                              <Loader />
+                              <>REGISTER</>
+                            </>
+                          ) : (
+                            <>REGISTER</>
+                          )}
+                        </button>
                       )}
-                    </button>
-
-                    </div>
-
-                    ) : (
-                      <button
-                      className="events-left-event5-btn1"
-                      id="newchangesinbutton"
-                      onClick={(e) => handleClick(e)}
-                    >
-                      {loading ? (
-                        <>
-                          <Loader />
-                          <>REGISTER</>
-                        </>
-                      ) : (
-                        <>REGISTER</>
-                      )}
-                    </button>
-                    )}
-                  </>
+                    </>
                   )}
                   {eventdata[0]?.rulebook != null && (
                     <a
@@ -385,11 +399,13 @@ const EventMainPage = ({ events }) => {
                 <form
                   className="events-left-event7"
                   onSubmit={(e) => {
-                    {eventdata[0]?.sub_event && activet && onSubmit(e)}
-                    {!eventdata[0]?.sub_event && onSubmit(e)}
-
-                  }
-                  }
+                    {
+                      eventdata[0]?.sub_event && activet && onSubmit(e);
+                    }
+                    {
+                      !eventdata[0]?.sub_event && onSubmit(e);
+                    }
+                  }}
                 >
                   <div className="events-left-event9">
                     {eventdata[0]?.sub_event &&
@@ -431,14 +447,18 @@ const EventMainPage = ({ events }) => {
                     onChange={(e) => handleChange(e)}
                     required
                   />
-                  {((eventdata[0]?.solo_team != "Solo" && eventdata[0]?.solo_team != "solo") &&
+                  {eventdata[0]?.solo_team != "Solo" &&
+                  eventdata[0]?.solo_team != "solo" &&
                   eventdata[0]?.sub_event &&
-                  activet === false) ? (
-                    <button className="events-left-event8" type="submit" onClick={() =>{
-                      message.warning("Please select a sub-event!");
-                      // window.location.reload(true);
-                    }
-                    }>
+                  activet === false ? (
+                    <button
+                      className="events-left-event8"
+                      type="submit"
+                      onClick={() => {
+                        message.warning("Please select a sub-event!");
+                        // window.location.reload(true);
+                      }}
+                    >
                       {loading ? (
                         <>
                           <Loader />
@@ -465,18 +485,19 @@ const EventMainPage = ({ events }) => {
             )}
           </div>
           {register && (
-          <div className="events-right">
-            <img
-              src={eventdata[0]?.image === null ? photo : eventdata[0]?.image}
-              className="event-photo"
-              alt=""
-            />
-            <img
-              src={eventdata[0]?.image === null ? photo : eventdata[0]?.image}
-              className="event-photo1"
-              alt=""
-            />
-          </div>)}
+            <div className="events-right">
+              <img
+                src={eventdata[0]?.image === null ? photo : eventdata[0]?.image}
+                className="event-photo"
+                alt=""
+              />
+              <img
+                src={eventdata[0]?.image === null ? photo : eventdata[0]?.image}
+                className="event-photo1"
+                alt=""
+              />
+            </div>
+          )}
         </div>
       </div>
     </>

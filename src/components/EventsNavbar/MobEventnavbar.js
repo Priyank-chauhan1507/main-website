@@ -38,9 +38,9 @@ function MobEventnavbar() {
       console.log(error);
     }
   };
-  
+  const [position, setposition] = useState("relative")
   return (
-    <div className="nav-comp1">
+    <div className="nav-comp1" style={{position:position}}>
       <div className="inner_mob_nav">
         <img
           className="event-nav-left logo-width"
@@ -58,6 +58,7 @@ function MobEventnavbar() {
               onClick={() => {
                 show === false ? setshow(true) : setshow(false);
                 setdisplay("flex");
+                setposition("fixed")
               }}
               className="logo3"
             />
@@ -70,6 +71,7 @@ function MobEventnavbar() {
               onClick={() => {
                 show === false ? setshow(true) : setshow(false);
                 setdisplay("flex");
+                setposition("relative");
               }}
               className="logo2"
             />
@@ -94,6 +96,14 @@ function MobEventnavbar() {
             }}
           >
             Events
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/MUN");
+              window.location.reload(false);
+            }}
+          >
+            MUN
           </h1>
           {/* {event &&
             events.map((el) => {
