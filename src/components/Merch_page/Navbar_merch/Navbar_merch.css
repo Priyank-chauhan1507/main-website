@@ -403,6 +403,8 @@
     animation: slide .6s forwards;
     padding-bottom: 20px;
     min-height: 108vh;
+    height: 100vh;
+    overflow: auto;
 }
 
 .slidebar2 {

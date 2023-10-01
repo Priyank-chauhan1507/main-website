@@ -73,7 +73,7 @@ const WebNavbarNew = () => {
         </div>
 
       </div>
-      <a href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link" className="TNC" style={{color:"white",zIndex:"1"}} target="_blank">
+      <a href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link" className="TNC" style={{color:"white",zIndex:"0"}} target="_blank">
        Terms & Conditions
 
       </a>
