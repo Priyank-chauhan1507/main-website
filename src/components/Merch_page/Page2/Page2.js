@@ -283,7 +283,7 @@ with our T-shirt crafted from soft cotton.</p>
                     <div className="tshirt-price">
                       <div className="price1">Rs.{item.price}</div>
                       <div className="price3">Rs.{2*item.price}</div>
-                      <div className="price1-offer">( 50% Off )</div>
+                      <div className="price1-offer">( 50% Off + Free Delivery )</div>
                     </div>
                     <div className="inclu">Inclusive of all taxes</div>
                     <hr className="hr1" />
@@ -316,7 +316,7 @@ with our T-shirt crafted from soft cotton.</p>
                         );
                       })}
                     </div>
-                    <div className="size">select size</div>
+                    <div className="size">select size <button className="size_chart_merch"><a href="https://drive.google.com/file/d/1oRe3hu5vF3rn9TGK_22iwguljWgnI8cR/view">Size chart </a> </button> </div>
                     <div className="select-size">
                       <div
                         className={selected === 1 ? "size2" : "size1"}
