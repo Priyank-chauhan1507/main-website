@@ -37,7 +37,7 @@ function MobEventnavbar() {
           <img
                 src={Cart}
                 onClick={() => {
-                  navigate("/thomsomerchcart");
+                  navigate("/merch_cart");
                 }}
                 className="cart_logo"
               /></>
@@ -90,7 +90,7 @@ function MobEventnavbar() {
           </h1>
           <h1
             onClick={() => {
-              navigate("/thomsomerchhome");
+              navigate("/merch_home");
               window.location.reload(false);
             }}
           >

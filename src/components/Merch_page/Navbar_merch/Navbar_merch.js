@@ -69,7 +69,7 @@ function Navbar({ color, disable, setregister, register, data }) {
           <a
             className="event-nav-right-compo11 hover-underline-animation11"
             onClick={() => {
-              navigate("/thomsomerchhome");
+              navigate("/merch_home");
             }}
           >
             Merch
@@ -100,7 +100,7 @@ function Navbar({ color, disable, setregister, register, data }) {
           <img
                 src={Cart}
                 onClick={() => {
-                  navigate("/thomsomerchcart");
+                  navigate("/merch_cart");
                 }}
                 className="cart_logo"
               /></>
