@@ -133,6 +133,7 @@ line-height: 162.2%;
         flex-direction: column-reverse;
         gap:2vh;
         margin-top: 12vh;
+        z-index: 1;
     }
     .muninfo-text{
         display: none;
@@ -162,6 +163,7 @@ line-height: 162.2%;
        font-size: 3vw;
        margin-top: 12vh;
         padding: 0 7vw 0 5vw;
+        z-index: 1;
     }
     .Mob-Bg-image{
         display: block;
