@@ -76,10 +76,10 @@ function ContactUs() {
         </div>
 
         <div className="socialmediaMUN">
-            <img src={fb} alt="" />
-            <img src={ig} alt="" />
-            <img src={X} alt="" />
-            <img src={yt} alt="" />
+            <a href="https://www.facebook.com/thomsoiitroorkee"><img src={fb} alt="" /></a>
+            <a href="https://www.instagram.com/thomso.iitr/"><img src={ig} alt="" /></a>
+            <a href="https://twitter.com/Thomso_IITR"><img src={X} alt="" /></a>
+            <a href="https://www.youtube.com/@iitrthomso"><img src={yt} alt="" /></a>
         </div>
 
 
