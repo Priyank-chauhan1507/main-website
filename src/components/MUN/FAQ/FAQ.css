@@ -44,7 +44,8 @@ body {
 
 .accordion_1 {
   position: absolute;
-  right: 12vw;
+  /* right: -30vw; */
+  left: 66vw;
 }
 
 .panel {
