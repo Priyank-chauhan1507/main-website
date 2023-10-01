@@ -84,6 +84,14 @@ function Navbar({ color, disable, setregister, register, data }) {
           </a>
           <a
             className="event-nav-right-compo11 hover-underline-animation11"
+            onClick={() => {
+              navigate("/MUN");
+            }}
+          >
+            MUN
+          </a>
+          <a
+            className="event-nav-right-compo11 hover-underline-animation11"
             href="https://ca.thomso.in/"
             target="_blank"
           >
