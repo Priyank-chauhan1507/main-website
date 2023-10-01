@@ -100,7 +100,7 @@ function Navbar({ color, disable, setregister, register, data }) {
           <img
                 src={Cart}
                 onClick={() => {
-                  navigate("/thomsomerchcart");
+                  navigate("/merch_cart");
                 }}
                 className="cart_logo"
               /></>
