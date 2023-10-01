@@ -31,12 +31,12 @@ const WebNavbarNew = () => {
         <div className="webNavbarLeft">
           <div className="webNavbarLeft1">Contact us</div>
           <div className="webNavbarLeft3">
-            <div>Jolly</div>
-            <div> 7081537653</div>
+            <div>Utkarsh</div>
+            <div> 9458892698</div>
           </div>
           <div className="webNavbarLeft2">
-            <div>Kartikey</div>
-            <div>9205915692</div>
+            <div>Satyarth</div>
+            <div>9660796510</div>
           </div>
         </div>
         <div className="webNavbarMiddle">
