@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import logo from "../../../assests/Merch_logo.png";
 import logo1 from "../../../assests/mob_merch.png";
 import logo from "../../../assests/MerchLogo.png";
-
+import logo2 from "../../../assests/logo.svg"
 import bgmobile from "../../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
 import cross from "../../../assests/Cross.webp";
@@ -28,7 +28,7 @@ function MobEventnavbar() {
       <div className="inner_mob_nav">
         <img
           className="event-nav-left logo-width"
-          src={logo}
+          src={show ? logo: logo2}
           alt=""
           onClick={() => {
             navigate("/");
