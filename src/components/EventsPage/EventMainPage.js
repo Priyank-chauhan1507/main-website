@@ -55,14 +55,14 @@ const EventMainPage = ({ events }) => {
     getEvents();
   }, []);
 
-  // useEffect(() => {
-  //   for (let num = 0; num < events1.length; num++) {
-  //     if (events1[num]?.event == id && events1[num]?.event__is_payment == true) {
-  //       setPaidEvent(true)
-  //       break;
-  //     }
-  //   }
-  // }, [events1])
+  useEffect(() => {
+    for (let num = 0; num < events1.length; num++) {
+      if (events1[num]?.event == id && events1[num]?.event__is_payment == true) {
+        setPaidEvent(true)
+        break;
+      }
+    }
+  }, [events1])
 
 
   const getEvents = async () => {
