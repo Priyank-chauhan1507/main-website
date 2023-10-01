@@ -15,7 +15,7 @@ import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
 import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
-import Closed from "../../../assests/PaymentClosedGirls.webp";
+import Closed from "../../../assests/PaymentClosedGirls.png";
 import Closed1 from "../../../assests/ClosedPaymentAll.webp";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/pay_black.png";

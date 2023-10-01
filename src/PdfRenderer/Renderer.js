@@ -10,12 +10,12 @@ import {
 } from "@react-pdf/renderer";
 import id_logo from "./ID_Logo.png";
 import iitr_logo from "./Group 36648.png";
-import thomso_logo from "./image 79.png";
+import thomso_logo from "./MerchLogo.png";
 import qr from "./qr.png";
 import CS_normal from "./COMIC.TTF";
 import { connect } from "react-redux";
 import { fetchUser, logout } from "../components/User/UserActions";
-import { Store } from "../Config/Store";
+import { Store } from "../Config/Store";  
 import CS_bold from "./design.graffiti.comicsansmsgras.ttf";
 import axios from "axios";
 
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     color: "black",
     fontFamily: "Comic Sans MS",
-    border:"2px solid black"
+    border:"2px dashed black"
   },
   id_logo: {
     marginTop: "17px",
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   id_border2: {
     height: "100%",
     width: "100%",
-    border: "1px dashed black",
+    border: "2px solid black",
     padding: "5px",
   },
   id_box: {
@@ -338,7 +338,7 @@ const Renderer = ({user,items}) => {
               passport-sized photographs.
             </Text>
             <Text style={styles.id_data}>
-              4. Inner section of id card must be appropriately cut along the dotted lines and presented at the registration desk.
+              4. Outer line of id card must be appropriately cut along the dotted lines and presented at the registration desk.
 
             </Text>
             <Text style={styles.id_data}>
