@@ -15,6 +15,7 @@
   align-items: flex-end;
   border-right: 1px solid grey;
   padding-top: 3.5rem;
+  z-index: 2;
 }
 .headingBox {
   width: 68vw;
@@ -93,14 +94,41 @@
 }
 
 
-
-@media only screen and (max-width:600px){
+@media only screen and (max-width:786px){
   #major_attractions_text{
     width:70vw;
   }
   .subtitleBox ul li{
     font-size:3vw;
   } 
+  .majorAttractionsContainer{
+    background:url('../../assests/attractions_bg_mobile.webp') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+  } 
+}
+
+
+
+@media only screen and (max-width:600px){
+  #major_attractions_text{
+    width:70vw;
+  }
+  .subtitleBox ul li{
+    font-size:2vw;
+  } 
+  .subtitleBox ul {
+    gap:3vw !important;
+  }
+}
+
+@media only screen and (max-width:450px){
+  .home-attraction-btn{
+    font-size:3vw;
+  }
+  .home-attraction-btn-active{
+    font-size:3vw;
+  }
 }
 
 @media screen and (max-width: 2500px) {
@@ -133,7 +161,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1.5rem;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     overflow: scroll;
     margin-top: -12vh;
