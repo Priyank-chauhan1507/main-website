@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: url("../../assests/majorAttractions.svg");
+  background: url("../../assests/attractions_bg.webp");
 }
 .textContainer {
   width: 23vw;
@@ -15,12 +15,11 @@
   align-items: flex-end;
   border-right: 1px solid grey;
   padding-top: 3.5rem;
-  padding-right: 2.5rem;
 }
 .headingBox {
-  width: 15rem;
+  width: 68vw;
   color: #fff;
-  text-align: right;
+  text-align: center;
   font-family: Super Comic !important;
   font-size: 1.5rem;
   font-style: normal;
@@ -58,6 +57,23 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.home-attraction-btn{
+  background: transparent;
+  padding: 1.2vh 1.7vw;
+  border:1px solid white;
+  color:white;
+  border-radius: 5px;
+}
+
+.home-attraction-btn-active{
+  background: white;
+  padding: 1.2vh 1.7vw;
+  color:black;
+  border:1px solid white;
+  border-radius: 5px;
+}
+
 .exploreMore {
   width: 11rem;
   height: 12rem;
@@ -74,7 +90,19 @@
 ::-webkit-scrollbar {
   display: none;
 }
-@media screen and (max-width: 700px) {
+
+
+
+@media only screen and (max-width:600px){
+  #major_attractions_text{
+    width:70vw;
+  }
+  .subtitleBox ul li{
+    font-size:3vw;
+  } 
+}
+
+@media screen and (max-width: 2500px) {
   .majorAttractionsContainer {
     display: flex;
     flex-direction: column;
@@ -92,14 +120,18 @@
   }
 }
 
-@media only screen and (max-width: 786px) {
+.imagesBox img{
+  border:2.53px solid white;
+}
+
+@media only screen and (max-width: 2100px) {
   .imagesBox {
     width: 90vw;
     height: 72vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: space-evenly;
     align-items: center;
     overflow: scroll;
@@ -116,16 +148,16 @@
   .majorAttractionsContainer {
     width: 100vw;
     padding-top: 12vh;
-    height: 61vh;
+    height: 86vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(http://localhost:3000/static/media/majorAttractions.a20747b….svg);
+    background: url('../../assests/attractions_bg.webp');
   }
 
   .subtitleBox ul {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 6vw;
   }
 }
