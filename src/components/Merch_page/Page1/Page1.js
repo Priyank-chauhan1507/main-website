@@ -142,7 +142,7 @@ function Page1() {
                         </div>
                         <br></br>
                         <div className="price">
-                          <p className="price1">Rs. {price}/- <span className="price3">Rs. {2*price}/-</span> <span className="offer">(50% off)</span> </p>
+                          <p className="price1">Rs. {price}/- <span className="price3">Rs. {1.25*price}/-</span> <span className="offer">(20% off)</span> </p>
                           {/* <p className="price2">Rs.100</p> */}
                         </div>
                       </div>
