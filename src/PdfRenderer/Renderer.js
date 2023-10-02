@@ -186,12 +186,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "90vw",
-    marginBottom: "20px",
+    marginBottom: "10px",
   },
   id_ins: {
     fontSize: "15px",
     fontWeight: "600",
-    marginTop: "10px",
+    marginTop: "5px",
     marginLeft: "10px",
   },
   id_data1: {
@@ -347,6 +347,10 @@ const Renderer = ({user,items}) => {
             </Text>
             <Text style={styles.id_data}>
               6. Any forgery with the ID Card will lead to the jurisdiction of the Thomso Organizing Committee and the authorities of IIT Roorkee.
+            </Text>
+
+            <Text style={styles.id_data}>
+              7. This identification card does not serve as a valid proof of payment status. It is exclusively designated as a provisional identification card, intended solely for the purpose of verifying payment at the registration desk.
             </Text>
           </View>
         </View>
