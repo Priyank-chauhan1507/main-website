@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.fca5806d.css",
-    "main.js": "/static/js/main.b45a37bf.js",
+    "main.css": "/static/css/main.3bdcc1e2.css",
+    "main.js": "/static/js/main.81a8a5b4.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
-    "static/media/majorAttractions.svg": "/static/media/majorAttractions.0639f2015e73eaeac4b5.svg",
     "static/media/home2nd.webp": "/static/media/home2nd.e514ea5b72712e535165.webp",
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/main.webp": "/static/media/main.d1eb2c773ae8dcebfefa.webp",
@@ -23,6 +22,7 @@
     "static/media/Merchbggrp.png": "/static/media/Merchbggrp.35989a7c269076015b04.png",
     "static/media/tshirt3front.webp": "/static/media/tshirt3front.c4fc46fea9276f297141.webp",
     "static/media/thomsokingback.webp": "/static/media/thomsokingback.583136c0fbc7c834baf8.webp",
+    "static/media/attractions_bg.webp": "/static/media/attractions_bg.f674a9be85d8d543d817.webp",
     "static/media/t5.webp": "/static/media/t5.257269e2603260d259f0.webp",
     "static/media/t4.webp": "/static/media/t4.60152bafce56b451a379.webp",
     "static/media/CommitteeMUN.png": "/static/media/CommitteeMUN.4679133e9f4fe67fcce3.png",
@@ -107,6 +107,7 @@
     "static/media/qr.png": "/static/media/qr.22aba290a6fe3844c00f.png",
     "static/media/MUNmobilebg.png": "/static/media/MUNmobilebg.4bdcff3db89d7cf8d6b0.png",
     "static/media/reg-logo.svg": "/static/media/reg-logo.7ff1b44e2c10de2dbb38076a1e4fbf12.svg",
+    "static/media/MAJOR_ATTRACTIONS.svg": "/static/media/MAJOR_ATTRACTIONS.b9feb28cfd295e0f20fe502b44e3746b.svg",
     "static/media/Aishnit-yadav-Unga-judge.webp": "/static/media/Aishnit-yadav-Unga-judge.3a4ab3d52a4ed505e490.webp",
     "static/media/bonkers.svg": "/static/media/bonkers.ef0f44dae8cfafa2887af15fba8d9bbe.svg",
     "static/media/feelthevibelavenderback.webp": "/static/media/feelthevibelavenderback.cd7353db581a082be486.webp",
@@ -178,11 +179,11 @@
     "static/media/line_2.svg": "/static/media/line_2.0d51758040a07ca2655eb326cd2e946e.svg",
     "static/media/pause.svg": "/static/media/pause.b00e0a737956c2de96fa9f99c61ab9f8.svg",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
-    "main.fca5806d.css.map": "/static/css/main.fca5806d.css.map",
-    "main.b45a37bf.js.map": "/static/js/main.b45a37bf.js.map"
+    "main.3bdcc1e2.css.map": "/static/css/main.3bdcc1e2.css.map",
+    "main.81a8a5b4.js.map": "/static/js/main.81a8a5b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.fca5806d.css",
-    "static/js/main.b45a37bf.js"
+    "static/css/main.3bdcc1e2.css",
+    "static/js/main.81a8a5b4.js"
   ]
 }
