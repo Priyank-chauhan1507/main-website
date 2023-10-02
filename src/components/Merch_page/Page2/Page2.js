@@ -36,7 +36,6 @@ import { useNavigate, useParams } from "react-router-dom";
 // import Loader from "../../Loader/Loader"
 
 function Page2(props) {
-
   const { id } = useParams();
   const navigate = useNavigate();
   const [size, setSize] = useState("");
@@ -47,7 +46,7 @@ function Page2(props) {
   const [AddedToCart, setAddedToCart] = useState([]);
   // const [loading, setLoading] = useState(false);
   const [bagChange, setbagChange] = useState("bag1");
-  const [cartchange,setcartchange]=useState("bage1change");
+  const [cartchange, setcartchange] = useState("bage1change");
 
   const data = [
     {
@@ -152,17 +151,16 @@ function Page2(props) {
       ],
     },
   ];
-  const item = data[id - 1]
+  const item = data[id - 1];
 
   const [color, setColor] = useState(item.colors[0].colorName);
-
 
   function CreateObject() {
     if (!size) {
       message.error("Please Select any size");
     } else {
       const allDetails = {
-        id: Math.floor(Math.random() *1000) + 1,
+        id: Math.floor(Math.random() * 1000) + 1,
         name: item.Name,
         quantity: quantity,
         color: color,
@@ -174,16 +172,14 @@ function Page2(props) {
       localStorage.setItem(
         "AddedToCart",
         JSON.stringify([...AddedToCart, allDetails])
-        );
-        message.success("Item added to cart");
-        let newText="bage1change";
-        setbagChange(newText);
-        let newtext1="bag1";
-        setcartchange(newtext1);
+      );
+      message.success("Item added to cart");
+      let newText = "bage1change";
+      setbagChange(newText);
+      let newtext1 = "bag1";
+      setcartchange(newtext1);
     }
   }
-
-
 
   useEffect(() => {
     const storedArray = localStorage.getItem("AddedToCart");
@@ -218,224 +214,246 @@ function Page2(props) {
 
   return (
     <>
-        <div className="page-2-merch">
-          <Navbar />
-                <div className="shirt-container" key={id}>
-                  <div className="shirt-container1">
-                    <div className="big-box1">
-                      {
-id == 4 ?
-                      <img
-                        src={imgIndex ? item.img[imgCol].imgback : item.img[imgCol].imgfront}
-                        alt=""
-                        className="box-img2"
-                      />
-                      :
-                      <img
-                        src={imgIndex ? item.img[imgCol].imgfront : item.img[imgCol].imgback}
-                        alt=""
-                        className="box-img2"
-                      />
-                      }
-                    </div>
-                    <div className="big-box2">
-                      {
-id == 4 ?
-                     (
-                      <> <img
-                        src={item.img[imgCol].imgback}
-                        alt=""
-                        className={imgIndex ? 'active box-img1' : 'box-img1'}
-                        onClick={() => setimgIndex(true)}
-                      />
-                      <img
-                        src={item.img[imgCol].imgfront}
-                        alt=""
-                        className={imgIndex ? 'box-img1' : 'active box-img1'}
-                        onClick={() => setimgIndex(false)}
-                      />
-                      </>)                      :
-                      (
-                      <>
-                      <img
-                        src={item.img[imgCol].imgfront}
-                        alt=""
-                        className={imgIndex ? 'active box-img1' : 'box-img1'}
-                        onClick={() => setimgIndex(true)}
-                      />
-                      <img
-                        src={item.img[imgCol].imgback}
-                        alt=""
-                        className={imgIndex ? 'box-img1' : 'active box-img1'}
-                        onClick={() => setimgIndex(false)}
-                      />
-                      </>)
-                       }
-
-
-                    </div>
+      <div className="page-2-merch">
+        <Navbar />
+        <div className="shirt-container" key={id}>
+          <div className="shirt-container1">
+            <div className="big-box1">
+              {id == 4 ? (
+                <img
+                  src={
+                    imgIndex
+                      ? item.img[imgCol].imgback
+                      : item.img[imgCol].imgfront
+                  }
+                  alt=""
+                  className="box-img2"
+                />
+              ) : (
+                <img
+                  src={
+                    imgIndex
+                      ? item.img[imgCol].imgfront
+                      : item.img[imgCol].imgback
+                  }
+                  alt=""
+                  className="box-img2"
+                />
+              )}
+            </div>
+            <div className="big-box2">
+              {id == 4 ? (
+                <>
+                  {" "}
+                  <img
+                    src={item.img[imgCol].imgback}
+                    alt=""
+                    className={imgIndex ? "active box-img1" : "box-img1"}
+                    onClick={() => setimgIndex(true)}
+                  />
+                  <img
+                    src={item.img[imgCol].imgfront}
+                    alt=""
+                    className={imgIndex ? "box-img1" : "active box-img1"}
+                    onClick={() => setimgIndex(false)}
+                  />
+                </>
+              ) : (
+                <>
+                  <img
+                    src={item.img[imgCol].imgfront}
+                    alt=""
+                    className={imgIndex ? "active box-img1" : "box-img1"}
+                    onClick={() => setimgIndex(true)}
+                  />
+                  <img
+                    src={item.img[imgCol].imgback}
+                    alt=""
+                    className={imgIndex ? "box-img1" : "active box-img1"}
+                    onClick={() => setimgIndex(false)}
+                  />
+                </>
+              )}
+            </div>
+          </div>
+          <div className="shirt-container2">
+            <div className="tshirt-head">{item.Name}</div>
+            <p className="description_text">
+              Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth.
+              Experience ultimate comfort and effortless style with our T-shirt
+              crafted from soft cotton.
+            </p>
+            <div className="tshirt-price">
+              <div className="price1">Rs.{item.price}</div>
+              <div className="price3">Rs.{1.25 * item.price}</div>
+              <div className="price1-offer">( 20% Off + Free Delivery )</div>
+            </div>
+            <div className="inclu">Inclusive of all taxes</div>
+            <hr className="hr1" />
+            <div className="color12">
+              <div className="color121">color :</div>
+              <div className="color122">{color}</div>
+            </div>
+            <div className="colorbox">
+              {item.colors.map(({ colorId, colorName }, i) => {
+                return (
+                  <div key={i}>
+                    {colorName == "lavender" ? (
+                      <div
+                        className={
+                          imgCol == colorId ? "colorbox1A" : "colorbox1"
+                        }
+                        style={{ backgroundColor: "#c0ade6" }}
+                        onClick={() => {
+                          setColor(colorName);
+                          setImgCol(colorId);
+                        }}
+                      ></div>
+                    ) : (
+                      <div
+                        className={
+                          imgCol == colorId ? "colorbox1A" : "colorbox1"
+                        }
+                        style={
+                          colorId == 3
+                            ? { backgroundColor: "#2ec2e6" }
+                            : { backgroundColor: colorName }
+                        }
+                        onClick={() => {
+                          setColor(colorName);
+                          setImgCol(colorId);
+                        }}
+                      ></div>
+                    )}
                   </div>
-                  <div className="shirt-container2">
-                    <div className="tshirt-head">{item.Name}</div>
-                    <p className="description_text">Round neck style 100% cotton, biowash Tshirt of 210 GSM cloth.
-Experience ultimate comfort and effortless style
-with our T-shirt crafted from soft cotton.</p>
-                    <div className="tshirt-price">
-                      <div className="price1">Rs.{item.price}</div>
-                      <div className="price3">Rs.{2*item.price}</div>
-                      <div className="price1-offer">( 50% Off + Free Delivery )</div>
-                    </div>
-                    <div className="inclu">Inclusive of all taxes</div>
-                    <hr className="hr1" />
-                    <div className="color12">
-                      <div className="color121">color :</div>
-                      <div className="color122">{color}</div>
-                    </div>
-                    <div className="colorbox">
-                      {item.colors.map(({ colorId, colorName }, i) => {
-                        return (
-                          <div key={i}>
-                         {colorName == "lavender" ? <div
-                            className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
-                            style={{backgroundColor:"#c0ade6"}}
-                            onClick={() => {
-                              setColor(colorName);
-                              setImgCol(colorId);
-                            }}
-                          ></div>
-                         : <div
-                            className={imgCol == colorId ? "colorbox1A" : "colorbox1"}
-                            style={colorId == 3 ?{backgroundColor:"#2ec2e6"}: { backgroundColor: colorName }}
-                            onClick={() => {
-                              setColor(colorName);
-                              setImgCol(colorId);
-                            }}
-                            ></div>
-                          }
-                      </div>
-                        );
-                      })}
-                    </div>
-                    <div className="size">select size <button className="size_chart_merch"><a href="https://drive.google.com/file/d/1oRe3hu5vF3rn9TGK_22iwguljWgnI8cR/view">Size chart </a> </button> </div>
-                    <div className="select-size">
-                      <div
-                        className={selected === 1 ? "size2" : "size1"}
-                        onClick={() => {
-                          setSize("XS");
+                );
+              })}
+            </div>
+            <div className="size">
+              select size{" "}
+              <button className="size_chart_merch">
+                <a href="https://drive.google.com/file/d/1oRe3hu5vF3rn9TGK_22iwguljWgnI8cR/view">
+                  Size chart{" "}
+                </a>{" "}
+              </button>{" "}
+            </div>
+            <div className="select-size">
+              <div
+                className={selected === 1 ? "size2" : "size1"}
+                onClick={() => {
+                  setSize("XS");
 
-                          setselected(1);
-                        }}
-                      >
-                        XS
-                      </div>
-                      <div
-                        className={selected === 2 ? "size2" : "size1"}
-                        onClick={() => {
-                          setSize("S");
+                  setselected(1);
+                }}
+              >
+                XS
+              </div>
+              <div
+                className={selected === 2 ? "size2" : "size1"}
+                onClick={() => {
+                  setSize("S");
 
-                          setselected(2);
-                        }}
-                      >
-                        S
-                      </div>
-                      <div
-                        className={selected === 3 ? "size2" : "size1"}
-                        onClick={() => {
-                          setSize("M");
+                  setselected(2);
+                }}
+              >
+                S
+              </div>
+              <div
+                className={selected === 3 ? "size2" : "size1"}
+                onClick={() => {
+                  setSize("M");
 
-                          setselected(3);
-                        }}
-                      >
-                        M
-                      </div>
-                      <div
-                        className={selected === 4 ? "size2" : "size1"}
-                        onClick={() => {
-                          setSize("L");
+                  setselected(3);
+                }}
+              >
+                M
+              </div>
+              <div
+                className={selected === 4 ? "size2" : "size1"}
+                onClick={() => {
+                  setSize("L");
 
-                          setselected(4);
-                        }}
-                      >
-                        L
-                      </div>
-                      <div
-                        className={selected === 5 ? "size2" : "size1"}
-                        onClick={() => {
-                          setSize("XL");
-                          setselected(5);
-                        }}
-                      >
-                        XL
-                      </div>
-                      <div
-                        className={selected === 6 ? "size2" : "size1"}
-                        onClick={() => {
-                          setSize("XXL");
-                          setselected(6);
-                        }}
-                      >
-                        XXL
-                      </div>
-                    </div>
-                    <div className="Quantity">
-                      <div className="quantityFont">Quantity :</div>
-                      <div className="border-box">
-                      <button className="arithmatic" onClick={DecrementFunc}>
-                        <img src={decrement} alt="increment operator" />
-                      </button>
+                  setselected(4);
+                }}
+              >
+                L
+              </div>
+              <div
+                className={selected === 5 ? "size2" : "size1"}
+                onClick={() => {
+                  setSize("XL");
+                  setselected(5);
+                }}
+              >
+                XL
+              </div>
+              <div
+                className={selected === 6 ? "size2" : "size1"}
+                onClick={() => {
+                  setSize("XXL");
+                  setselected(6);
+                }}
+              >
+                XXL
+              </div>
+            </div>
+            <div className="Quantity">
+              <div className="quantityFont">Quantity :</div>
+              <div className="border-box">
+                <button className="arithmatic" onClick={DecrementFunc}>
+                  <img src={decrement} alt="increment operator" />
+                </button>
 
-                      <div className="arithmatic">{quantity}</div>
+                <div className="arithmatic">{quantity}</div>
 
-                      <button className="arithmatic" onClick={IncrementFunc}>
-                        {" "}
-                        <img src={increment} alt="increment operator" />
-                      </button>
-
-                      </div>
-                    </div>
-                    <div className="bag-cart-btn"
-                      // style={{
-                      //   width:'40vw',
-                      //   display: "flex",
-                      //   flexDirection: "row",
-                      //   gap: "0.5rem",
-                      //   flexWrap:'wrap'
-                      // }}
-
-                    >
-                      <div onClick={CreateObject}>
-                      <button className={bagChange}>
-                        <img src={lock5} className="lock5" alt="" />
-                        <div className="con1 btn-text" >
-                          ADD TO BAG
-                        </div>
-                      </button>
-                      </div>
-                      <div onClick={() => {navigate("/merch_cart");}}>
-                      <button className={cartchange}>
-                        <img src={lock5} className="lock5" alt="" />
-                        <div className="con1 btn-text" >
-                          GO TO BAG
-                        </div>
-                      </button>
-                      </div>
-                      <div   className="con1"
-                          onClick={()=>{navigate("/merch_home")}}>
-                      <button className="bag1 buy_now">
-                        {/* <img src={lock5} className="lock5" alt="" /> */}
-                        <div
-                        className="btn-text"
-                        >
-                          CONTINUE SHOPPING
-                        </div>
-
-                      </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          <Footer />
+                <button className="arithmatic" onClick={IncrementFunc}>
+                  {" "}
+                  <img src={increment} alt="increment operator" />
+                </button>
+              </div>
+            </div>
+            <div
+              className="bag-cart-btn"
+              // style={{
+              //   width:'40vw',
+              //   display: "flex",
+              //   flexDirection: "row",
+              //   gap: "0.5rem",
+              //   flexWrap:'wrap'
+              // }}
+            >
+              <div onClick={CreateObject}>
+                <button className={bagChange}>
+                  <img src={lock5} className="lock5" alt="" />
+                  <div className="con1 btn-text">ADD TO BAG</div>
+                </button>
+              </div>
+              <div
+                onClick={() => {
+                  navigate("/merch_cart");
+                }}
+              >
+                <button className={cartchange}>
+                  <img src={lock5} className="lock5" alt="" />
+                  <div className="con1 btn-text">GO TO BAG</div>
+                </button>
+              </div>
+              <div
+                className="con1"
+                onClick={() => {
+                  navigate("/merch_home");
+                }}
+              >
+                <button className="bag1 buy_now">
+                  {/* <img src={lock5} className="lock5" alt="" /> */}
+                  <div className="btn-text">CONTINUE SHOPPING</div>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+        <Footer />
+      </div>
     </>
   );
 }
