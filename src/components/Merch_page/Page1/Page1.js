@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Page1.css";
 import ellipse from "../../../assests/Ellipse 129.png";
 import product from "../../../assests/Group 37501.png";
-import Navbar from "../../EventsNavbar/Eventsnavbar";
+import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
 import Footer from "../../Navbar/WebNavbarNew";
 // import tshirt1front from "../../../assests/t1front.webp"
 // import tshirt1back from "../../../assests/t1back.webp"
@@ -23,49 +23,41 @@ import tshirt6front1 from "../../../assests/orng.webp";
 import tshirt7front from "../../../assests/Lee tee fin frnt.webp";
 import merchBg from "../../../assests/mrechbg.webp";
 import merchSmily from "../../../assests/merchsmily.webp";
+import orng from "../../../assests/orng.webp";
+import orng1 from "../../../assests/orng (1).png";
+import orng2 from "../../../assests/orng (2).png";
+import orng3 from "../../../assests/orng(3).png";
 
 function Page1() {
   const data = [
     {
       id: 1,
       price: 350,
-      Name: "Feel The Thomso vibe ",
-      img: tshirt4front1,
+      
+      name: "Feel The Thomso vibe ",
+      img: orng2,
     },
     {
       id: 2,
       price: 350,
-      Name: "The Ellyx Tee  ",
-      img: tshirt5front1,
+      name: "The Ellyx Tee  ",
+      img: orng1,
+      
     },
     {
       id: 3,
       price: 350,
-      Name: "The Thomso Tee",
-      img: tshirt6front1,
+      name: "The Thomso Tee",
+      img:orng,
+      
     },
-    // {
-    //   id: 2,
-    //   price: 350,
-    //   Name: "THOMSO UNISEX TSHIRT",
-    //   img: [
-    //     {
-    //       id: 1,
-    //       imgfront: tshirt3front,
-    //       imgback: tshirt3back,
-    //     },
-    //     {
-    //       id: 2,
-    //       imgfront: tshirt3front2,
-    //       imgback: tshirt3back2,
-    //     },
-    //   ],
-    // },
+    
     {
+    
       id: 4,
       price: 350,
-      Name: "The Thomso king",
-      img: tshirt7front,
+      name: "The Thomso king",
+      img:orng3,
     },
   ];
 
@@ -116,15 +108,16 @@ function Page1() {
                 <>
                   <Link to={`/merch_page2/${id}`}>
                     <div className="product1" key={id}>
-                      <div>
+                      <div className="prod_img">
                         <img className="product-merch" src={img} alt="..." />
                       </div>
                       <div className="text">
                         <div className="prod_name">
                           <p className="product_name">{name}</p>
                         </div>
+                        <br></br>
                         <div className="price">
-                          <p className="price1">{price} </p>
+                          <p className="price1">Rs. {price}/- <span className="price3">Rs. 700/-</span> <span className="offer">(50% off)</span> </p>
                           {/* <p className="price2">Rs.100</p> */}
                         </div>
                       </div>

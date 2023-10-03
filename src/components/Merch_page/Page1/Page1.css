@@ -21,10 +21,7 @@ overflow-x: hidden !important;
     padding: 0;
     margin: 0;
 }
-.merch_bg_img{
-    /* position: relative; */
-    /* z-index: -1; */
-}
+
 .merch_Bg{
     width:100vw;
     height:60vh;
@@ -106,26 +103,83 @@ padding-left: 20vw;
 .prod_name{
     display:inline-flex;
     color:black;
-    padding: 1vw;
+    padding: 0 1vw;
 }
 .product{
     padding-left: 10vw;
     padding-right: 10vw;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     margin-top: 3rem;
-
+    margin-left:1vw;
+    padding-left:1vw;
 }
 .product hr{
 display: none;
 }
+
 .product-merch{
-    width: 24vw;
+    width: 20vw;
+    margin:2vw;
+    height:40vh;
 }
 .product text{
     width: 2vw;
 }
 @media screen and (max-width:1200px ) and (min-width:632px) {
+
+.product_name{
+    font-size: 1.4rem;
+    font-weight:100;
+    color: #2C2C2C;
+font-size: 20px;
+font-family: Bangers;
+font-weight: 400;
+text-transform: lowercase;
+line-height: 24px;
+letter-spacing: 2px;
+word-wrap: normal;
+}
+.price1{
+    color: rgba(42.29, 41.58, 41.58, 0.98) !important;
+    font-size: 20px !important;
+    font-family: Comic Neue    !important;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+    letter-spacing: 0.40px !important;
+    word-wrap: normal !important;   
+}
+.text{
+    margin-left:1vw;
+    margin-top:0vw;
+    
+}
+.price3{
+    color: rgba(153, 153, 153, 0.98) !important;
+font-size: 16px !important;
+font-family: Comic Neue !important;
+font-weight: 700 !important;
+text-decoration: line-through !important;
+line-height: 20px !important;
+letter-spacing: 0.32px !important;
+word-wrap: normal !important;
+padding-right:0px !important;
+}
+.offer{
+    color: #00BE6E;
+font-size: 16px;
+font-family: Comic Neue;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0.32px;
+word-wrap: normal
+}
+.price span{
+    white-space:nowrap;
+}
+}
+@media screen and (max-width:1200px) {
+
     /* .ell-img{
         width:35vw;
 
@@ -210,4 +264,10 @@ display: none;
 .home_text{
     background-image:url("./mrechbg.webp");
     background-size: cover;
+}
+@media screen and (max-width:350px){
+    .prod_img{
+        padding-left:4vw;
+    }
+
 }
