@@ -33,7 +33,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { customEvent } from '../../utils/analyticsHelper';
 import Thomso from "../../assests/thomso-unscreen.gif"
 
-import Attractions from './Attractions'
+import Attractions from './Attraction_new'
 
 import mainvideo from '../../assests/thomso.mp4'
 
@@ -49,7 +49,7 @@ import yellow from '../../assests/yellowBack.webp'
 import yellowmob from '../../assests/yellowmob.webp'
 import blue from '../../assests/blue.webp'
 
-import videoBack from '../../assests/videoBack.webp'
+import videoBack from '../../assests/after.webp'
 import pause from '../../assests/pause.svg'
 import pause2 from '../../assests/pause2.svg'
 import thomsostrip from '../../assests/thomsostrip.webp'
@@ -441,9 +441,7 @@ The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or sta
       </div> */}
 
 
-      {/* <div>
-        <Attractions/>
-      </div> */}
+      
 
 
 
@@ -460,6 +458,9 @@ The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or sta
 
       </div>
 
+      <div>
+        <Attractions/>
+      </div>
 
 
       <div className='vidmain'>

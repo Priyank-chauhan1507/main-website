@@ -178,6 +178,9 @@
   .majorAttractionsContainer {
     width: 100vw;
     padding-top: 12vh;
+    margin-top: -18vh;
+    position: relative;
+    z-index: 1;
     height: 86vh;
     display: flex;
     justify-content: center;

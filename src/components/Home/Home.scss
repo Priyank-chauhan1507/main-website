@@ -657,7 +657,7 @@ animation: shaking 0.45s infinite;
   position: absolute;
   z-index: 1000000;
   height: 80vh;
-  width: 80vw;
+  width: 70vw;
   cursor: url(../../assests/cursor.svg) 50 50, auto;
 }
 .vid_alt {
@@ -842,4 +842,27 @@ animation: shaking 0.45s infinite;
   left: -1rem;
   height: 109vh;
   z-index: 1;
+}
+
+@media only screen and (max-width:800px){
+  .img_Pronite {
+    position: absolute;
+    width: 121vw;
+    left: -3rem;
+    height: 109vh;
+    z-index: 1;
+}
+
+.bkc_image {
+  position: absolute;
+  z-index: 3;
+  top: 48vh;
+  width: 4rem;
+  left: 79vw;
+  cursor: pointer;
+}
+
+.slider1 img{
+  display: none;
+}
 }
