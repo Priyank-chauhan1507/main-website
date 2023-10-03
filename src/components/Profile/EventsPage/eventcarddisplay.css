@@ -31,11 +31,11 @@
 }
 
 .ECD-card-Display::-webkit-scrollbar {
-  display: none !important;
+  /* display: none !important; */
 }
 
 .mobile-search-bar {
-  display: none;
+  /* display: none; */
 }
 
 @media screen and (max-width: 768px) {
@@ -79,7 +79,7 @@
     width: 80vw;
   }
   .ESM-Conatiner-list::-webkit-scrollbar{
-    display: none !important;
+    /* display: none !important; */
   }
   .all-container {
     display: flex;

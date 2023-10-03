@@ -8,9 +8,9 @@ export default function Product(props) {
       <h2>{props.name}</h2>
       <p className="price">{props.price}</p>
       <p>{props.description}</p>
-      <p>
+      {/* <p>
         <button>Participate Now</button>
-      </p>
+      </p> */}
     </div>
   );
 }
