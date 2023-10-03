@@ -52,6 +52,7 @@ import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopa
 import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopage2";
 import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
 import Carousel1 from "./components/Profile/Carousel/Carousel1";
+import Attraction_new from "./components/Home/Attraction_new";
 import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
@@ -131,8 +132,8 @@ useEffect(() => {
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
           <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
-          <Route exact={true} path="/id_cards" element={<Idcard />} />
-          <Route exact={true} path="/iiiiiiii" element={<Id_Card/>} />
+          {/* <Route exact={true} path="/id_cards" element={<Idcard />} /> */}
+          <Route exact={true} path="/id_card" element={<Id_Card/>} />
           <Route exact={true} path="/pdf" element={<PdfDownload data={user} items ={items} />} />
           <Route exact={true} path="/renderer" element={<Renderer data ={user}  items = {items}/>} />
           {/* <Route exact={true} path="/pdfs" element={<Pdf/>} /> */}
@@ -159,6 +160,7 @@ useEffect(() => {
           <Route exact={true} path="/sponsers" element={<Sponsers/>} />
           <Route exact={true} path="/PopUp" element={<PopUP/>} />
           <Route exact={true} path="/Carousel" element={<Carousel1/>} />
+          <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
         </Routes>
       </Router>
     </>
