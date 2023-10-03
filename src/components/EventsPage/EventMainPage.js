@@ -55,17 +55,17 @@ const EventMainPage = ({ events }) => {
     getEvents();
   }, []);
 
-  // useEffect(() => {
-  //   for (let num = 0; num < events1.length; num++) {
-  //     if (
-  //       events1[num]?.event == id &&
-  //       events1[num]?.event__is_payment == true
-  //     ) {
-  //       setPaidEvent(true);
-  //       break;
-  //     }
-  //   }
-  // }, [events1]);
+  useEffect(() => {
+    for (let num = 0; num < events1.length; num++) {
+      if (
+        events1[num]?.event == id &&
+        events1[num]?.event__is_payment == true
+      ) {
+        setPaidEvent(true);
+        break;
+      }
+    }
+  }, [events1]);
 
   const getEvents = async () => {
     axios
@@ -146,25 +146,32 @@ const EventMainPage = ({ events }) => {
   async function payForEvent() {
     setLoading(true);
 
-    try {
-      const response = await axios.post(
-        `https://api1.thomso.in/apiV1/paid_events_request`,
-        { event_name: eventdata[0].name, slot: slot }
-      );
-      const u = response.data;
-      // console.log("data", response.data);
-      if (response.data.status == "true") {
-        setTimeout(() => {
-          window.open(response.data.payment_url, "_blank");
-        });
-      } else {
-        message.error(`${response.data.error}`);
+    if(eventdata[0].name == "SILENT DJ" && slot.length < 2){
+      message.error("Please Select any slot");
+      setLoading(false);
+    }else{
+
+      try{
+        const response = await axios.post(
+          `https://api1.thomso.in/apiV1/paid_events_request`,
+          { event_name: eventdata[0].name, slot: slot }
+        );
+        const u = response.data;
+        // console.log("data", response.data);
+        if (response.data.status == "true") {
+          setTimeout(() => {
+            window.open(response.data.payment_url, "_blank");
+          });
+        } else {
+          message.error(`${response.data.error}`);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error("Error:", error);
+        setLoading(false);
       }
-      setLoading(false);
-    } catch (error) {
-      console.error("Error:", error);
-      setLoading(false);
     }
+
   }
   const onSubmit = (e) => {
     let exit = false;
