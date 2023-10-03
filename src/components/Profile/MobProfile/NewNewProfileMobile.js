@@ -239,7 +239,7 @@ const NewNewProfileMobile = ({ data }) => {
                 alt="profilepic"
               />
               <div className="lsp-text0">
-                {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
+                {userDetails?.avtar ? "Change Profile" : "Upload Profile"}
               </div>
             </FileUploader>
           </p>

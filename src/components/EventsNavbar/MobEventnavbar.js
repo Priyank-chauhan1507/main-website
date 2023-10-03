@@ -4,6 +4,7 @@ import logo1 from "../../assests/logo2.png";
 import axios from "axios";
 import bgmobile from "../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
+import {message} from "antd";
 import cross from "../../assests/Cross.webp";
 function MobEventnavbar() {
   const navigate = useNavigate();
@@ -150,20 +151,22 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
-          {/* <h1
+          {/* {localStorage.getItem("token") && (
+          <h1
             onClick={() => {
                 {
                   user.payment ?
                   navigate("/iiiiiiii")
                 :
-                  alert('payment incomplete');
+                  message.info('Payment is incomplete');
+                  navigate("/payment");
                 }
               
               window.location.reload(false);
             }}
           >
             ID-Card
-          </h1> */}
+          </h1>)} */}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
@@ -268,19 +271,22 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
-          {/* {localStorage.getItem("token") 
-          && (
+          {/* {localStorage.getItem("token") && (
           <h1
             onClick={() => {
-              navigate("/iiiiiiii");
+                {
+                  user.payment ?
+                  navigate("/iiiiiiii")
+                :
+                  message.info('Payment is incomplete');
+                  navigate("/payment");
+                }
+              
               window.location.reload(false);
             }}
-            
           >
             ID-Card
-          </h1>
-          )
-          } */}
+          </h1>)} */}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {

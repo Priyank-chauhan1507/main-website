@@ -719,7 +719,7 @@ const NewPaymentBox = (
                                           : `${config.min_amount}`}
                                       </span>
                                       <br />
-                                      <span className="PayTaxes">(+ Convenience Fees & Taxes)</span>
+                                      <span className="PayTaxes">+ (Convenience Fees & Taxes)</span>
                                     </p>
                                   </div>
                                   <p className="PayAccommodation">

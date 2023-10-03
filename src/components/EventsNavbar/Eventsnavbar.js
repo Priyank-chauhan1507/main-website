@@ -5,6 +5,7 @@ import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../assests/profile1.png.jpg";
+import {message} from "antd";
 import axios from "axios";
 import { Payment } from "@mui/icons-material";
 
@@ -59,6 +60,9 @@ function Navbar({ color, disable, setregister, register, data }) {
       console.log(error);
     }
   };
+
+  console.log(userDetails,"user");
+
   return (
     <div style={{ background: color }} className="nav-comp">
       <MobEventnavbar />
@@ -108,12 +112,14 @@ function Navbar({ color, disable, setregister, register, data }) {
           {/* <a
             className={localStorage.getItem("token")?"event-nav-right-compo hover-underline-animation":"none_display"}
             onClick={() => {
-              {
-                userDetails.Payment ?
+              
+                userDetails.payment ?
                 navigate("/iiiiiiii")
               :
-                alert('payment incomplete');
-              }
+                message.info('Payment is incomplete');
+                navigate("/payment");
+                
+              
             }}
           >
             ID-CARD

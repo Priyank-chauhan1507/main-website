@@ -52,6 +52,7 @@ import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopa
 import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopage2";
 import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
 import Carousel1 from "./components/Profile/Carousel/Carousel1";
+import Attraction_new from "./components/Home/Attraction_new";
 import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
@@ -159,6 +160,7 @@ useEffect(() => {
           <Route exact={true} path="/sponsers" element={<Sponsers/>} />
           <Route exact={true} path="/PopUp" element={<PopUP/>} />
           <Route exact={true} path="/Carousel" element={<Carousel1/>} />
+          <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
         </Routes>
       </Router>
     </>
