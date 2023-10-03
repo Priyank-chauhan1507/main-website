@@ -580,14 +580,14 @@ const Id_Card = () => {
                           {userDetails?.is_ca && (
                             <div>
                               <p className="id_box_text1">CA ID</p>
-                              <p className="id_box_text2">ThCA-2300138</p>
+                              <p className="id_box_text2"> {userDetails?.ca_thomso_id}</p>
                             </div>
                           )}
                         </div>
 
                         <p className="id_box_text1">College</p>
                         <p className="id_box_text2">
-                          Indian Institute of Technology, Roorkee
+                        {userDetails?.college}
                         </p>
 
                         <p className="id_box_text1">CA Referral & Name</p>

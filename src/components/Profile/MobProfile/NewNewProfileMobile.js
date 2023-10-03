@@ -239,23 +239,23 @@ const NewNewProfileMobile = ({ data }) => {
                 alt="profilepic"
               />
               <div className="lsp-text0">
-                {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
+                {userDetails?.avtar ? "Change Profile" : "Upload Profile"}
               </div>
             </FileUploader>
           </p>
         </div>
         <div className="mob-lt1">
-          {display1 && <ProfileNameEditModel />}
+          {/* {display1 && <ProfileNameEditModel />} */}
           <span className="lsp-text1">
             {userDetails?.name}
             {userDetails?.is_ca ? "(CA)" : ""}
-            <BiEdit
+            {/* <BiEdit
               size={20}
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setdisplay1(true);
               }}
-            />
+            /> */}
           </span>
           <span className="lsp-text2">{userDetails?.thomso_id}</span>
           {userDetails?.is_ca && (

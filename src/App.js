@@ -51,6 +51,8 @@ import Page3 from "./components/Merch_page/Page3/Page3";
 import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopage1";
 import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopage2";
 import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
+import Carousel1 from "./components/Profile/Carousel/Carousel1";
+import Attraction_new from "./components/Home/Attraction_new";
 import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
@@ -72,7 +74,7 @@ useEffect(() => {
   }, [user]);
 
 //  useEffect(() => {
-   
+
 //       const items = JSON.parse(localStorage.getItem("dataKey"));
 //     if (items) {
 //       setItems(items);
@@ -98,7 +100,7 @@ useEffect(() => {
       console.log(error);
     }
   };
-  
+
 
   return (
     <>
@@ -149,14 +151,16 @@ useEffect(() => {
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
-          <Route exact={true} path="/merch_page1" element={<Page1/>} />
-          <Route exact={true} path="/merch_page2/:id" element={<Page2/>} />
-          <Route exact={true} path="/merch_page3" element={<Page3/>} />
+          <Route exact={true} path="/merch_home" element={<Page1/>} />
+          <Route exact={true} path="/merch_selection/:id" element={<Page2/>} />
+          <Route exact={true} path="/merch_cart" element={<Page3/>} />
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
           <Route exact={true} path="/sponsers" element={<Sponsers/>} />
           <Route exact={true} path="/PopUp" element={<PopUP/>} />
+          <Route exact={true} path="/Carousel" element={<Carousel1/>} />
+          <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
         </Routes>
       </Router>
     </>

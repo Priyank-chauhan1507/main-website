@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Page1.css";
 import ellipse from "../../../assests/Ellipse 129.png";
 import product from "../../../assests/Group 37501.png";
 import Navbar from "../../Merch_page/Navbar_merch/Navbar_merch";
-import Footer from "../../Navbar/WebNavbarNew";
+import Footer from "../Merch_Footer/Merch_Footer";
 // import tshirt1front from "../../../assests/t1front.webp"
 // import tshirt1back from "../../../assests/t1back.webp"
 // import tshirt2front from "../../../assests/t2front.webp"
@@ -12,7 +12,7 @@ import tshirt3front from "../../../assests/tshirt3front.webp";
 import tshirt3back from "../../../assests/tshirt3back.webp";
 import tshirt3front2 from "../../../assests/tshirt3front2.webp";
 import tshirt3back2 from "../../../assests/tshirt3back2.webp";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Page2 from "../Page2/Page2";
 import tshirt4front1 from "../../../assests/vibe.webp";
 
@@ -27,13 +27,18 @@ import orng from "../../../assests/orng.webp";
 import orng1 from "../../../assests/orng (1).png";
 import orng2 from "../../../assests/orng (2).png";
 import orng3 from "../../../assests/orng(3).png";
+import tshirt4front2 from "../../../assests/f3.webp";
+import merchyellowbg from "../../../assests/Merchbggrp.png";
+import mobmerchbg from "../../../assests/merchmob.png";
+import Loader from "../../Loader/Loader"
 
 function Page1() {
+  // const[classtyle, setClasstyle] = useState("product1");
   const data = [
     {
       id: 1,
       price: 350,
-      
+
       name: "Feel The Thomso vibe ",
       img: orng2,
     },
@@ -42,30 +47,51 @@ function Page1() {
       price: 350,
       name: "The Ellyx Tee  ",
       img: orng1,
-      
+
     },
     {
       id: 3,
       price: 350,
       name: "The Thomso Tee",
       img:orng,
-      
+
     },
-    
+
     {
-    
+
       id: 4,
-      price: 350,
-      name: "The Thomso king",
+      price: 450,
+      name: "The Roar of Thomso",
       img:orng3,
     },
   ];
 
+  const navigate = useNavigate();
+
+  const [loading, setLoading] = useState(false);
+
+  // const changeclassyle=()=>{
+  //   let newText="product1A"
+  //   setClasstyle(newText);
+  // }
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   if (!localStorage.getItem("token") || !localStorage.getItem("user_id")) {
+  //     navigate(`/login`);
+  //   }else{
+  //     setLoading(false);
+  //   }
+  // });
+
   return (
     <>
+    {loading && <Loader />}
       <div className="merchPage1">
         <Navbar />
         <div className="merch_Page1">
+          <img className="MerchYellowBG dis_none_merch_1" src={merchyellowbg} alt="" />
+          <img className="MerchYellowBGmob" src={mobmerchbg} alt="" />
           <div className="home_merchpage">
             {/* <div className="merch_bg_img"> */}
               {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg" /> */}
@@ -75,11 +101,11 @@ function Page1() {
             </div>
             <div className="home_text">
               <div className="home_heading">
-                <h1>Thomso Merch</h1>
-                <h1>IIT Roorkee</h1>
+                {/* <h1>Own a piece of Thomso’23</h1>
+                <h1>Grab your tees now!</h1> */}
                 {/* <img src={merchBg} className="merch_Bg" alt="merch_Bg"/> */}
               </div>
-              <div className="home_para">
+              {/* <div className="home_para">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -89,7 +115,7 @@ function Page1() {
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation.
-              </div>
+              </div> */}
             </div>
             {/* <div className="ellipse">
                 <img className="ell-img" src={ellipse} alt="..." />
@@ -103,11 +129,10 @@ function Page1() {
               <hr />
             </div> */}
           <div className="product">
-            {data.map(({ id, img, price, name }) => {
+            {data.map(({ id, img, price, name }, index) => {
               return (
-                <>
-                  <Link to={`/merch_page2/${id}`}>
-                    <div className="product1" key={id}>
+                  <Link to={`/merch_selection/${id}`} key={index}>
+                    <div className="product1" /*onClick={changeclassyle}*/ key={index}>
                       <div className="prod_img">
                         <img className="product-merch" src={img} alt="..." />
                       </div>
@@ -117,18 +142,16 @@ function Page1() {
                         </div>
                         <br></br>
                         <div className="price">
-                          <p className="price1">Rs. {price}/- <span className="price3">Rs. 700/-</span> <span className="offer">(50% off)</span> </p>
+                          <p className="price1">Rs. {price}/- <span className="price3">Rs. {1.25*price}/-</span> <span className="offer">(20% off)</span> </p>
                           {/* <p className="price2">Rs.100</p> */}
                         </div>
                       </div>
                     </div>
-                    <hr />
                   </Link>
-                </>
               );
             })}
 
-            <hr />
+            <hr className="hr-row"/>
           </div>
         </div>
         <Footer />

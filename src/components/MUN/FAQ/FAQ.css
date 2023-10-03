@@ -44,7 +44,8 @@ body {
 
 .accordion_1 {
   position: absolute;
-  right: 12vw;
+  /* right: -30vw; */
+  left: 66vw;
 }
 
 .panel {
@@ -77,6 +78,8 @@ body {
 
 
 .right_mun_faq_head {
+  position: relative;
+  /* display: flex; */
   margin-top: 1vh;
   color: var(--Surface, #F6F6F6);
   font-family: Roboto;
@@ -94,7 +97,7 @@ body {
 
 @media only screen and (max-width:768px) {
   .accordion_1 {
-    right: 13vw;
+    right: -10vw;
   }
 
   .panel p {

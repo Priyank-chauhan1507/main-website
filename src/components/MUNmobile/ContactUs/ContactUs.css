@@ -7,7 +7,7 @@
 }
 .MUN-bottom
 {
-    width: 60vw;
+    width: 80vw;
     margin: 0 auto;
 }
 
@@ -103,6 +103,7 @@
 {
     display: flex;
     justify-content: space-between;
-    width: 60vw;
+    width: 75vw;
     margin-top: 10vh;
+    padding:0 0 2rem 0;
 }

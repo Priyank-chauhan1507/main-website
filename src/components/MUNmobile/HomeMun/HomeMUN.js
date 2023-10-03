@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BG from "../../../assests/MUNmobileBG.webp";
 import MUNTop from "../../../assests/IITRMUN.png";
-import Navbar from "../../../components/EventsNavbar/MobEventnavbar";
+import Navbar from "../../../components/EventsNavbar/Eventsnavbar";
 import Contact from "../../../components/MUNmobile/ContactUs/ContactUs";
 import Executives from "../Executive/Executive";
 import Executive from "../../../assests/Executive.png";
@@ -10,13 +10,15 @@ import Prizes from "../../../assests/PrizesWorth100.png";
 import Committee from "../../../assests/COMMITTEE.png";
 import "./HomeMUN.css"
 import FAQ from '../../MUN/FAQ/FAQ';
+import Loader from "../../Loader/Loader"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function HomeMUN() {
   const navigate = useNavigate();
   const [user, setuser] = useState({})
-  const [check, setCheck] = useState(false)
+  const [check, setCheck] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loadUserData();
@@ -48,6 +50,8 @@ function HomeMUN() {
     }
   };
   return (
+    <>
+    {loading && <Loader />}
     <div className="HomeMUN-body">
       <img src={BG} className="HomeMUN-bg" alt="" />
       <Navbar/>
@@ -55,13 +59,19 @@ function HomeMUN() {
         <img src={MUNTop} className="top-HomeMUN-img" alt="" />
       </div>
       <div className="registerMUNNowBtn">
-      {check ?
+      {localStorage.getItem("token") ?
           (<button
-           onClick={() => navigate("/MUNregister")}
+           onClick={() => {
+            setLoading(true);
+            navigate("/MUNregister");
+          }}
            className="registerMUNNowBtnClick">Register Now</button>)
           :
           (<button
-            onClick={() => navigate("/login")}
+            onClick={() => {
+              setLoading(true);
+              navigate("/login");
+            }}
             className="registerMUNNowBtnClick">Register Now</button>)}
           
       </div>  
@@ -69,7 +79,9 @@ function HomeMUN() {
           <div className="prizesMUNWorthDiv">
           <img src={Prizes} alt="" className="prizesMUNWorth1" />
           </div>
-          Model United Nations, referred to as MUN, offers participants a distinctive opportunity to immerse themselves in the realm of international diplomacy and the resolution of global challenges through constructive forums for open dialogue. MUN conferences foster a range of critical skills, including public speaking, research, negotiation, and teamwork, while also promoting a deeper understanding of global affairs and international relations. Delegates will uphold their countries' national policies while engaging in negotiations amid other, at times divergent, international policies.
+          <div className="mun-cont">
+          Model United Nations, referred to as MUN, offers participants a distinctive opportunity to immerse themselves in the realm of international diplomacy and the resolution of global challenges through constructive forums for open dialogue. Delegates will uphold their countries' national policies while engaging in negotiations amid other, at times divergent, international policies.
+          </div>
         </div>
         <div className="CommitteeHead" id="committeeHead1">
           <img src={Committee} alt="" />
@@ -90,6 +102,7 @@ function HomeMUN() {
 
 
     </div>
+    </>
   )
 }
 

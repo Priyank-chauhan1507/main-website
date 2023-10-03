@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue&display=swap');
 .merchPage3{
+    user-select: none;
     width: 100vw !important;
     overflow-x: hidden !important;
 }
 .main_body{
     width:100vw;
-    border: solid;
-    border-color: black;
+
+        /* border: solid;
+        border-color: black; */
+
+    /* border: solid; */
+    /* border-color: black; */
+
     background-color: white;
 }
 .heading_cart{
     display:flex;
     justify-content: center;
+    padding-top: 2rem;
     font-family: 'Bangers', cursive;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 .cart_cont{
     display: flex;
@@ -28,6 +36,7 @@
     /* padding:3px; */
     font-family: Comic Neue;
     border-bottom: solid;
+    margin-top: 5vh;
     border-width: 1px;
     border-color: grey;
 }
@@ -37,18 +46,25 @@
 .other_title{
     display: flex;
     flex-direction: row;
-    gap:10vw;
-    /* padding:3px; */
+    gap: 9vw;
+    /* padding: 3px; */
+    margin-bottom: 1vh;
+}
+.prod1_img{
+    width:20vw;
+    height:auto;
+    border-radius: 16px;
 }
 .cart_status{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap:21vw;
     align-items: center;
     padding:5vh 0 5vh 0;
     border-bottom: solid;
     border-width: 1px;
-    border-color: grey;   
+    border-color: grey;
 }
 .product_status{
     display:flex;
@@ -60,6 +76,9 @@
     font-weight: lighter;
     font-size: 1.8vw;
     /* padding-bottom: -1vh; */
+}
+.product_name_merch_3{
+    padding : 0px !important;
 }
 .prod_size{
     font-family: comic Neue;
@@ -75,11 +94,18 @@
     font-family: 'Bangers', cursive;
     font-size: 1.5vw;
     padding:2px 4px 2px 4px;
+    width:8.5vw;
+    background: white;
+    border: 0.5px solid black;
 }
 .product_discription{
+    /* margin-right: 10vw; */
     display: flex;
     flex-direction: row;
     gap:11vw;
+}
+.product_discriptionmobile{
+    display: none ;
 }
 .cart_footer{
     /* width:100vw; */
@@ -124,6 +150,17 @@
     flex-direction: row;
     gap:2vw;
 }
+.footer_button1{
+    padding-bottom: 4vh;
+    display:flex;
+    flex-direction: row;
+    gap:2vw;
+    position: relative;
+    justify-content: center;
+    top:4vh;
+    margin-bottom: 2vh;
+}
+
 .prod_button2,.prod_button3{
     font-family:'Bangers', cursive ;
     font-size: 1.5vw;
@@ -131,16 +168,241 @@
     word-spacing: 5px;
     /* border-radius: 2px; */
 }
+
+.check-outbtn{
+    margin-bottom: 5vh;
+    width:13vw;
+}
+
+/* 
+.prod_button2{
+    margin-bottom: 3vh;
+} */
+
+
 .prod_button3{
     background-color: #FF4E00;
     color: #FFFFFF;
     border: none;
     border-radius: 4px;
 }
+.emptycart{
+    height: 50vh;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prod_button1mob{
+    display: none;
+}
+
+.mainPopUp{
+    width: 100vw;
+    height: 101vh;
+    backdrop-filter: blur(2px);
+    /* background: black; */
+    /* opacity: 0.9; */
+    margin-top: -3.5vh;
+    overflow: hidden;
+    position: fixed;
+}
+
+.semiyPopUp{
+    border: 2px solid #000;
+    margin-top: 5vh;
+    width: 40vw;
+}
+.empty-cart{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    
+}
+.empty_img{
+    width:20vw;
+    height:auto;
+}
+
+
+.semimainPopUp{
+    margin-left: 30vw;
+    border: 2px solid #000000;
+    margin-left: 30vw !important;
+    /* width: 30vw; */
+}
+.mob_quant{
+    display: none;
+}
+
+h3{
+    color:black;
+}
+
 @media screen and (max-width: 1300px){
     .product_discription{
     display: flex;
     flex-direction: row;
     gap:11.5vw;
+    }
+    .cart_status{
+        gap:20vw;
+    }
+}
+@media screen and (max-width: 1142px){
+    .product_discription{
+    display: flex;
+    flex-direction: row;
+    gap:12.2vw;
+    }
+    .cart_status{
+        gap:18vw;
+    }
+}
+@media screen and (max-width: 1025px){
+    .product_discription{
+    display: flex;
+    flex-direction: row;
+    gap:12.5vw;
+    }
+    .cart_status{
+        gap:17vw;
+    }
+}
+@media screen and (max-width: 960px){
+    .product_discription{
+    display: flex;
+    flex-direction: row;
+    gap:12.5vw;
+    }
+    .cart_status{
+        gap:16vw;
+    }
+}
+@media screen and (max-width: 870px){
+    .product_discription{
+    display: flex;
+    flex-direction: row;
+    gap:12.8vw;
+    }
+    .cart_status{
+        gap:0vw;
+    }
+}
+
+
+@media screen and (max-width:786px){
+    .main_body{
+        border:none;    
+    }
+    .prod1_img{
+        width:28vw;
+        height:auto;
+        border-radius: 16px;
+    }
+    .prod_button1{
+        /* display: none; */
+        font-size: 3vw !important;
+        width: 14.5vw !important;
+        height: 3.5vh !important;
+    }
+    .product_name_merch_3 {
+        /* display:none;    */
+    }
+    .prod_size {
+        /* display:none;    */
+    }
+    .prod_button {
+        /* display:none;    */
+    }
+    .product_discription{
+        /* display:none; */
+    }
+}
+
+@media screen and (max-width:768px){
+    .title_cart{
+        display:none;
+    }
+    .cart_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .subtotal{
+        justify-content: space-around;
+        gap:5vw;
+    }
+    .footer_button{
+        flex-direction: column-reverse;
+        padding-top: 5vh;
+    }
+    .prod_button2,.prod_button3{
+        font-size: 3.5vw;
+        width:80vw;
+    }
+    .prod_button2{
+        background-color: #FFFFFF;
+        color: #000000;
+        border-style: solid;
+        border-color: #000000;
+        border-width: 2px;
+        border-radius: 5px;
+    }
+    .prod_discription{
+        justify-content: center;
+    }
+    .price_value,.quantity_value{
+        display: none;
+    }
+    .product_discription{
+        /* justify-content: right; */
+        display: none;
+    }
+    .product_discriptionmobile{
+        display: flex ;
+        flex-direction: row;
+        justify-content: space-between;
+        /* gap:5vh; */
+    }
+    .mob_quant{
+        display: block;
+    }
+    .prod_size{
+        font-size:13px;
+        width:35vw;
+    }
+    .prod_name h3{
+        font-size: 2.5vw;
+    }
+
+    .prod_button1mob{
+        display: block;
+        font-family: 'Bangers', cursive;
+        font-size: 1.5vw;
+        padding:2px 4px 2px 4px;
+        width:8.5vw;
+        background: white;
+        border: 0.5px solid black;
+    }
+    .semiyPopUp{
+        width: 50vw;
+    }
+    .empty_img{
+        width:30vw;
+        height:25vh;
+    }
+ 
+}
+
+@media screen and (max-width:768px){
+    .semiyPopUp{
+        width: 75vw;
+    }
+}
+@media screen and (max-width:350px){
+    .semiyPopUp{
+        width: 85vw;
     }
 }

@@ -5,7 +5,9 @@ import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../assests/profile1.png.jpg";
+import {message} from "antd";
 import axios from "axios";
+import { Payment } from "@mui/icons-material";
 
 function Navbar({ color, disable, setregister, register, data }) {
   const [display1, setdisplay] = useState("none");
@@ -58,6 +60,9 @@ function Navbar({ color, disable, setregister, register, data }) {
       console.log(error);
     }
   };
+
+  console.log(userDetails,"user");
+
   return (
     <div style={{ background: color }} className="nav-comp">
       <MobEventnavbar />
@@ -76,6 +81,22 @@ function Navbar({ color, disable, setregister, register, data }) {
           </a>
           <a
             className="event-nav-right-compo hover-underline-animation"
+            onClick={() => {
+              navigate("/merch_home");
+            }}
+          >
+            Merch
+          </a>
+          <a
+            className="event-nav-right-compo hover-underline-animation"
+            onClick={() => {
+              navigate("/MUN");
+            }}
+          >
+            MUN
+          </a>
+          <a
+            className="event-nav-right-compo hover-underline-animation"
             href="https://ca.thomso.in/"
             target="_blank"
           >
@@ -88,6 +109,21 @@ function Navbar({ color, disable, setregister, register, data }) {
           >
             Zonals
           </a>
+          {/* <a
+            className={localStorage.getItem("token")?"event-nav-right-compo hover-underline-animation":"none_display"}
+            onClick={() => {
+              
+                userDetails.payment ?
+                navigate("/iiiiiiii")
+              :
+                message.info('Payment is incomplete');
+                navigate("/payment");
+                
+              
+            }}
+          >
+            ID-CARD
+          </a> */}
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}

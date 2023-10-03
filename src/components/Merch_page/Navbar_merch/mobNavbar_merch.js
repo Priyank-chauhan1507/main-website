@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import logo from "../../../assests/Merch_logo.png";
-import logo1 from "../../../assests/Merch_moblogo.png";
+// import logo from "../../../assests/Merch_logo.png";
+import logo1 from "../../../assests/mob_merch.png";
+import logo from "../../../assests/MerchLogo.png";
+import logo2 from "../../../assests/logo.svg"
 import bgmobile from "../../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
 import cross from "../../../assests/Cross.webp";
+import Cart from "../../../assests/cart.webp";
 function MobEventnavbar() {
   const navigate = useNavigate();
   // const [event, setevent] = useState(false);
@@ -20,18 +23,29 @@ function MobEventnavbar() {
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
   };
+  const [position, setposition] = useState("relative")
   return (
-    <div className="nav-comp1">
+    <div className="nav-comp1" style={{position:position}}>
       <div className="inner_mob_nav">
         <img
           className="event-nav-left logo-width"
-          src={logo}
+          src={show ? logo: logo2}
           alt=""
           onClick={() => {
             navigate("/");
           }}
         />
+        <div className="merch-mob-cart-nav">
+              <>
+          <img
+                src={Cart}
+                onClick={() => {
+                  navigate("/merch_cart");
+                }}
+                className="cart_logo"
+              /></>
         {show ? (
+        
           <>
             <img
               src={logo1}
@@ -39,6 +53,8 @@ function MobEventnavbar() {
               onClick={() => {
                 show === false ? setshow(true) : setshow(false);
                 setdisplay("flex");
+                setposition("fixed")
+
               }}
               className="logo3"
             />
@@ -51,11 +67,13 @@ function MobEventnavbar() {
               onClick={() => {
                 show === false ? setshow(true) : setshow(false);
                 setdisplay("flex");
+                setposition("relative");
               }}
               className="logo2"
             />
           </>
         )}
+      </div>
       </div>
 
       {show ? (
@@ -75,6 +93,22 @@ function MobEventnavbar() {
             }}
           >
             Events
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/MUN");
+              window.location.reload(false);
+            }}
+          >
+            MUN
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/merch_home");
+              window.location.reload(false);
+            }}
+          >
+            Merch
           </h1>
           {/* {event &&
             events.map((el) => {
@@ -163,6 +197,22 @@ function MobEventnavbar() {
             }}
           >
             Events
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/MUN");
+              window.location.reload(false);
+            }}
+          >
+            MUN
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/merch_home");
+              window.location.reload(false);
+            }}
+          >
+            Merch
           </h1>
           {/* {event &&
             events.map((el) => {

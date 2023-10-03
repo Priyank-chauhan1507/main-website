@@ -15,7 +15,7 @@ import Back1 from "../../../assests/landingpage.webp";
 import { useLocation, Link } from "react-router-dom";
 import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
-import Closed from "../../../assests/PaymentClosedGirls.webp";
+import Closed from "../../../assests/PaymentClosedGirls.png";
 import Closed1 from "../../../assests/ClosedPaymentAll.webp";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/pay_black.png";
@@ -718,7 +718,8 @@ const NewPaymentBox = (
                                           ? `${config.max_amount}`
                                           : `${config.min_amount}`}
                                       </span>
-                                      <span className="PayTaxes"> + Taxes</span>
+                                      <br />
+                                      <span className="PayTaxes">+ (Convenience Fees & Taxes)</span>
                                     </p>
                                   </div>
                                   <p className="PayAccommodation">
@@ -785,7 +786,7 @@ const NewPaymentBox = (
                                         color: "white",
                                         cursor: "pointer",
                                       }}
-                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                      href="https://drive.google.com/file/d/166MAX7s0VpYPHzaBoDUHY4OzPkWSXGXE/view?usp=drive_link"
                                       target="_blank"
                                     >
                                       Agree Terms and Conditions *
@@ -1328,7 +1329,7 @@ const NewPaymentBox = (
                                         color: "white",
                                         cursor: "pointer",
                                       }}
-                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                                      href="https://drive.google.com/file/d/166MAX7s0VpYPHzaBoDUHY4OzPkWSXGXE/view?usp=drive_link"
                                       target="_blank"
                                     >
                                       Agree Terms and Conditions *

@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assests/logo.svg";
 import logo1 from "../../assests/logo2.png";
+import axios from "axios";
 import bgmobile from "../../assests/bgmobile.webp";
 import { useNavigate } from "react-router-dom";
+import {message} from "antd";
 import cross from "../../assests/Cross.webp";
 function MobEventnavbar() {
   const navigate = useNavigate();
@@ -14,14 +16,32 @@ function MobEventnavbar() {
   };
 
   const [show, setshow] = useState(true);
+  const [user,setUser] = useState({});
   const [display, setdisplay] = useState("none");
   const [show1, setshow1] = useState({ check: false, first: "" });
   localStorage.setItem("show", show);
   const onHandleClick = (e) => {
     navigate(`/events/${e}`);
   };
+  useEffect(() => {
+    if(localStorage.getItem("token")){
+      loadUserData();
+      console.log(user);
+    };
+    }, []);
+  const loadUserData = async () => {
+    try {
+      axios.get(`/apiV1/current_user_participant`).then((res) => {
+        setUser(res.data);
+        // console.log("data", res.data);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const [position, setposition] = useState("relative")
   return (
-    <div className="nav-comp1">
+    <div className="nav-comp1" style={{position:position}}>
       <div className="inner_mob_nav">
         <img
           className="event-nav-left logo-width"
@@ -39,6 +59,7 @@ function MobEventnavbar() {
               onClick={() => {
                 show === false ? setshow(true) : setshow(false);
                 setdisplay("flex");
+                setposition("fixed")
               }}
               className="logo3"
             />
@@ -51,6 +72,7 @@ function MobEventnavbar() {
               onClick={() => {
                 show === false ? setshow(true) : setshow(false);
                 setdisplay("flex");
+                setposition("relative");
               }}
               className="logo2"
             />
@@ -75,6 +97,22 @@ function MobEventnavbar() {
             }}
           >
             Events
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/merch_home");
+              window.location.reload(false);
+            }}
+          >
+            Merch
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/MUN");
+              window.location.reload(false);
+            }}
+          >
+            MUN
           </h1>
           {/* {event &&
             events.map((el) => {
@@ -113,6 +151,22 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
+          {/* {localStorage.getItem("token") && (
+          <h1
+            onClick={() => {
+                {
+                  user.payment ?
+                  navigate("/iiiiiiii")
+                :
+                  message.info('Payment is incomplete');
+                  navigate("/payment");
+                }
+              
+              window.location.reload(false);
+            }}
+          >
+            ID-Card
+          </h1>)} */}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
@@ -164,6 +218,22 @@ function MobEventnavbar() {
           >
             Events
           </h1>
+          <h1
+            onClick={() => {
+              navigate("/merch_home");
+              window.location.reload(false);
+            }}
+          >
+            Merch
+          </h1>
+          <h1
+            onClick={() => {
+              navigate("/MUN");
+              window.location.reload(false);
+            }}
+          >
+            MUN
+          </h1>
           {/* {event &&
             events.map((el) => {
               const { par, child } = el;
@@ -201,6 +271,22 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
+          {/* {localStorage.getItem("token") && (
+          <h1
+            onClick={() => {
+                {
+                  user.payment ?
+                  navigate("/iiiiiiii")
+                :
+                  message.info('Payment is incomplete');
+                  navigate("/payment");
+                }
+              
+              window.location.reload(false);
+            }}
+          >
+            ID-Card
+          </h1>)} */}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {

@@ -1,4 +1,4 @@
-.nav-comp {
+.nav-comp11 {
     display: flex;
     background-color: #FFF;
     justify-content: space-between;
@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-.event-nav-right-compo {
+.event-nav-right-compo11 {
     color: var(--default-2, #2C2C2C);
     text-align: justify;
     leading-trim: both;
@@ -52,14 +52,14 @@
     text-decoration-color: rgba(255, 255, 255, 1);
   }  */
 
-  .hover-underline-animation {
+  .hover-underline-animation11 {
     display: inline-block;
     position: relative;
     color: 
     #2C2C2C;
   }
   
-  .hover-underline-animation:after {
+  .hover-underline-animation11:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -73,7 +73,7 @@
     transition: transform 0.25s ease-out;
   }
   
-  .hover-underline-animation:hover:after {
+  .hover-underline-animation11:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
@@ -101,8 +101,8 @@
     text-decoration: underline;
 }
 
-.event-regi-btn {
-    color: #000;
+.event-regi-btn11 {
+    color: #FFF;
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Comic Sans MS;
@@ -114,7 +114,7 @@
     letter-spacing: 0.4px;
     text-decoration: none;
     border-radius: 8px;
-    background: #F7B900;
+    background: #2C2C2C;
 
     display: inline-flex;
 
@@ -207,17 +207,28 @@
     height: 40px;
     border-radius: 20px;
 }
+.cart_logo{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
 
 @media (max-width:768px) {
     .mainnav {
         display: none;
+    }
+    .merch-mob-cart-nav{
+        display:flex;
+        gap:2rem;
     }
 
     .nav-comp1 {
         display: flex;
         width: 100vw;
         align-items: center;
-        padding: 10px;
+        position: relative;
+        z-index: 1;
+        padding: 10px 0px 0 0;
         justify-content: space-between;
     }
 
@@ -234,6 +245,8 @@
         height: 30px; */
         height: 50px;
         width: 50px;
+        position: fixed;
+        right:0;
     }
 
 
@@ -347,6 +360,8 @@
     align-items: center;
     z-index: 100;
     justify-content: space-between;
+    /* position: fixed;
+    right: 0; */
 }
 
 @keyframes slide {
@@ -388,6 +403,8 @@
     animation: slide .6s forwards;
     padding-bottom: 20px;
     min-height: 108vh;
+    height: 100vh;
+    overflow: auto;
 }
 
 .slidebar2 {

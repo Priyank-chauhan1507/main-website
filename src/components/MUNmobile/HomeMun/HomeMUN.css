@@ -1,10 +1,20 @@
+.HomeMUN-body{
+    /* background:#0b1d39; */
+    /* position: relative; */
+    width:100vw;
+    height:700vh;
+    overflow-x: hidden; 
+    /* background-image: url("../../../assests/MUNmobileBG.webp"); */
+}
 .HomeMUN-bg
 {
-    position: absolute;
-    z-index: -10;
+    background-color: #0b1d39;
+    position:absolute;
+    z-index: -1;
     width: 100vw;
-    height: 775vh;
+    height: 700vh;
 }
+
 /* @media only screen and (max-height:1000px)
 {
     .HomeMUN-bg
@@ -29,132 +39,8 @@
 }
 } */
 
-@media only screen and (max-width:768px)
-{
-    .FAQimg
-    {
-        width: 15vw;
-    }
-}
-@media only screen and (max-height:740px)
-{
-    .HomeMUN-bg
-{
-    height: 780vh;
-}
-}
-@media only screen and (max-width:700px)
-{
-    .HomeMUN-bg
-{
-    height: 773vh;
-}
-}
-
-@media only screen and (max-width:680px)
-{
-    .HomeMUN-bg
-    {
-        height: 770vh;
-    }
-}
-
-@media only screen and (max-width:640px)
-{
-    .HomeMUN-bg
-    {
-        height: 748vh;
-    }
-}
-@media only screen and (max-height:601px)
-{
-    .HomeMUN-bg
-    {
-        height: 746vh;
-    }
-}
-@media only screen and (max-width:600px)
-{
-    .HomeMUN-bg
-{
-    height: 748vh;
-}
-.FAQimg
-    {
-        width: 20vw;
-    }
-}
-
-@media only screen and (max-width:550px)
-{
-    .prizesMUNWorth
-    {
-        margin-top: 20vh;
-    }
-}
-@media only screen and (max-width:549px)
-{
-    .HomeMUN-bg
-{
-    height: 745vh;
-}
-}
-
-@media only screen and (max-width:500px)
-{
-    .HomeMUN-bg
-{
-    height: 720vh;
-}
-}
-@media only screen and (max-width:450px)
-{
-    .HomeMUN-bg
-{
-    height: 690vh;
-}
-.FAQimg
-{
-    width: 25vw;
-}
-}
-@media only screen and (max-width:400px)
-{
-    .HomeMUN-bg
-{
-    height: 710vh;
-}
-.top-HomeMUN
-{
-    margin-top: 5vh;
-}
-
-}
 
 
-
-
-@media only screen and (max-width:350px)
-
-{
-    .HomeMUN-bg
-{
-    height: 693vh;
-}
-}
-/* @media only screen and (max-width:349px)
-
-{
-    .HomeMUN-bg
-{
-    height: 552vh;
-}
-} */
-@media only screen and (max-width:330px){
-    .HomeMUN-bg{
-        height:705vh;
-    }
-}
 
 .top-HomeMUN
 {
@@ -203,12 +89,13 @@
     line-height: 162.2%;
     /* 32.44px */
     letter-spacing: 1px;
-    width: 50vw;
+    width: 75vw;
     margin: auto;
     margin-top: 30vh;
     padding: 1.5vh 2vw;
     padding-bottom: 2.5vh;
 }
+
 
 .prizesMUNWorth1 {
     width: 35vw;
@@ -223,6 +110,7 @@
 
 .CommitteeHead
 {
+
     display: flex;
     justify-content: center;
 }
@@ -234,7 +122,7 @@
     margin-bottom: -2vh;
 }
 #committeeHead2 img{
-    margin-top:9vh;
+    margin-top:18vh;
     width:55vw;
 }
 
@@ -256,12 +144,156 @@
         margin-top: 10vh;
     }           
 } */
-
-
+/* @media only screen and (min-height:600px){
+    .HomeMUN-bg{
+        height:685vh;
+    }
+} */
 
 
 .ExecutiveMobile
 {
     display: flex;
     justify-content: center;
+}
+@media only screen and (max-width:768px)
+{
+    .FAQimg
+    {
+        width: 15vw;
+    }
+    .HomeMUN-bg{
+        /* height:840vh; */
+    }
+}
+/* @media only screen and (max-height:740px)
+{
+    .HomeMUN-bg
+{
+    height: 800vh;
+}
+} */
+@media only screen and (max-width:700px)
+{
+    .HomeMUN-bg
+{
+    /* height: 832vh; */
+}
+}
+
+@media only screen and (max-width:680px)
+{
+    .HomeMUN-bg
+    {
+        /* height: 832vh; */
+    }
+}
+
+@media only screen and (max-width:640px)
+{
+    .HomeMUN-bg
+    {
+        height: 670vh;
+    }
+    .HomeMUN-body{
+        height: 670vh;
+    }
+}
+@media only screen and (max-height:601px)
+{
+    .HomeMUN-bg
+    {
+        /* height: 841vh; */
+    }
+}
+@media only screen and (max-width:600px)
+{
+    .HomeMUN-bg
+{
+    /* height: 808vh; */
+}
+.FAQimg
+    {
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width:550px)
+{
+    .prizesMUNWorth
+    {
+        margin-top: 20vh;
+    }
+}
+@media only screen and (max-width:549px)
+{
+    .HomeMUN-bg
+{
+    /* height: 804vh; */
+}
+}
+
+@media only screen and (max-width:500px)
+{
+    .HomeMUN-bg
+{
+    height: 610vh;
+}
+    .HomeMUN-body{
+        height: 610vh;
+    }
+}
+@media only screen and (max-width:450px)
+{
+    .HomeMUN-bg
+{
+    height: 570vh;
+}
+  .HomeMUN-body{
+    height: 570vh;
+  }
+.FAQimg
+{
+    width: 25vw;
+}
+}
+@media only screen and (max-width:400px)
+{
+    .HomeMUN-bg
+{
+    /* height: 763vh; */
+}
+.top-HomeMUN
+{
+    margin-top: 5vh;
+}
+
+}
+
+
+
+
+@media only screen and (max-width:350px)
+
+{
+    .HomeMUN-bg
+{
+    height: 530vh;
+}
+    .HomeMUN-body{
+        height: 530vh;
+    }
+}
+/* @media only screen and (max-width:349px)
+
+{
+    .HomeMUN-bg
+{
+    height: 552vh;
+}
+} */
+@media only screen and (max-width:330px){
+    .HomeMUN-bg{
+        /* height: 755vh; */
+    }
 }

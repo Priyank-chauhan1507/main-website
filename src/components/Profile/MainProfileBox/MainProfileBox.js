@@ -201,20 +201,20 @@ const MainProfileBox = ({ data }) => {
                   alt="profilepic"
                 />
                 <div className="lsp-text0">
-                  {userDetails?.avtar ? "profile uploaded" : "Upload Profile"}
+                  {userDetails?.avtar ? "Change Profile" : "Upload Profile"}
                 </div>
               </FileUploader>
             </div>
             <span className="lsp-text1">
               {display1 && <ProfileNameEditModel />}
               {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
-              <BiEdit
+              {/* <BiEdit
                 size={20}
                 style={{ cursor: "pointer" }}
                 onClick={() => {
                   setdisplay1(true);
                 }}
-              />
+              /> */}
             </span>
             <span className="lsp-text2">
               Thomso ID : {userDetails?.thomso_id}

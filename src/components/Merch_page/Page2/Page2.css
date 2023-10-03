@@ -1,7 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap");
 .page-2-merch {
   width: 100vw !important;
   overflow-x: hidden !important;
+}
+.active{
+  border: 1px solid black;
+  transform: scale(1.1);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 }
 .shirt-container {
   width: 100vw;
@@ -22,13 +28,15 @@
 .big-box2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 2vw;
 }
 .box-img1 {
-  padding-top: 4vh;
+  margin-top: 4vh;
   height: 10vw;
-  width: 10vw;
+  width: 11.5vw;
+  border-radius:10px;
+  cursor: pointer;
 }
 .tshirt-head {
   color: #202020;
@@ -41,8 +49,9 @@
   text-transform: lowercase;
 }
 .box-img2 {
-  height: 60vh;
+  height: 50vh;
   width: 25vw;
+  border-radius: 16px;
 }
 .tshirt-price {
   display: flex;
@@ -58,8 +67,9 @@
   font-weight: 400;
   line-height: 150%; /* 30px */
   letter-spacing: 0.4px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   padding-right: 1vw;
+  /* padding-bottom: 3vh; */
 }
 .price3 {
   color: #757575;
@@ -69,18 +79,19 @@
   font-weight: 400;
   line-height: 150%; /* 30px */
   letter-spacing: 0.4px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   padding-right: 1vw;
 }
 .price1-offer {
-  color: #f26120;
+  color: #00BE6E;
   font-family: Comic Sans MS;
   font-size: 1.4vh;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 24px */
   letter-spacing: 0.32px;
-  text-transform: lowercase;
+  margin-left:10px;
+  /* text-transform: lowercase; */
 }
 .inclu {
   color: #00be6e;
@@ -90,11 +101,12 @@
   font-weight: 400;
   line-height: 150%; /* 24px */
   letter-spacing: 0.32px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 .hr1 {
   height: 0.2vh;
-  width: 50vw;
+  width: 45vw;
+  margin: 2vh 0;
 }
 .color12 {
   color: #757575;
@@ -115,7 +127,17 @@
   display: flex;
   flex-direction: row;
   margin-top: 0.5rem;
+  margin-top: 3vh;
+  margin-bottom: 2.5vh;
+  align-items: center
 }
+
+.border-box{
+  display: flex;
+  border: 2px solid black;
+  flex-direction: row;
+}
+
 .quantityFont {
   color: #2c2c2c;
   font-family: Comic Sans MS;
@@ -126,6 +148,8 @@
   letter-spacing: 0.4px;
   text-transform: lowercase;
   margin-right: 1rem;
+  
+
 }
 .arithmatic{
   width: 2rem;
@@ -147,13 +171,24 @@
   height: 4vh;
   width: 2.5vw;
   background-color: white;
+  cursor: pointer;
 }
 
+
 .colorbox1A {
-  border: 3px solid black;
+  border: 1px solid black;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1);
   height: 4vh;
   width: 2.5vw;
   background-color: white;
+  cursor: pointer;
+}
+
+.description_text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
 }
 
 .colorbox2 {
@@ -187,8 +222,8 @@
 }
 .size1 {
   border: 2px solid black;
-  height: 4vh;
-  width: 2.5vw;
+  height: 4vmin;
+  width: 4vmin;
   /* padding: auto; */
   display: flex;
   justify-content: center;
@@ -197,11 +232,12 @@
   border-radius: 100%;
   padding: 1.5vw;
   cursor: pointer;
+  user-select: none;
 }
 .size2 {
   border: 2px solid black;
-  height: 4vh;
-  width: 2.5vw;
+  height: 4vmin;
+  width: 4vmin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,10 +246,11 @@
   border-color: #F26120;
   color: #F26120;
   cursor: pointer;
+  user-select: none;
 }
 .bag1 {
   /* border:2px solid black; */
-  height: 4vh;
+  height: 5vh;
   width: 15vw;
   display: flex;
   align-items: center;
@@ -222,16 +259,47 @@
   border-radius: 4px;
   background: #f26120;
   border: none;
+  padding-right: 1vw;
 
   color: #fff;
   font-family: Bangers;
-  font-size: 2vh;
+  font-size: 2.5vh;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 36px */
   letter-spacing: 2.4px;
   text-transform: lowercase;
 }
+.bage1change{
+  display: none;
+}
+
+.buy_now{
+  background:white !important;
+  color:black !important;
+  border:1px solid black;
+  margin-top:2.45vh !important;
+}
+
+.size_chart_merch{
+  padding:3px;
+  margin-left:10px;
+  border-radius:5px;
+  background-color: black;
+  border:0.25px solid black;
+  color: white;
+  font-family: Comic Sans MS;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.4px;
+}
+
+.size_chart_merch a{
+  color:white;
+}
+
 .lock5 {
   height: 2vh;
   width: 2vw;
@@ -241,7 +309,58 @@
   padding-left: 0.5vw;
 }
 
+.btn-text{
+  min-width: fit-content;
+}
+.bag-cart-btn{
+  width:40vw;
+  display: flex;
+  gap:0.5rem;
+}
+
+
+@media only screen and (max-width: 1080px) {
+  .btn-text {
+    font-size: 90%;
+  }
+  .bag1{
+    width: max-content;
+    padding: 0 2vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .bag1{
+    width:22vw;
+  }
+}
+
+.btn-text {
+  font-size: 80%;
+}
+
 @media only screen and (max-width: 768px) {
+
+  .arithmatic{
+    height: 1.5rem;
+    width: 1.5rem;
+
+  }
+  .bag-cart-btn{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .colorbox1A {
+    width: 6.5vw;
+    height: 6.5vw;
+  }
+  .box-img1{
+    /* transform: scale(1.2); */
+  }
+  .big-box2{
+    justify-content: center;
+    gap: 15vw;
+  }
   .shirt-container {
     flex-direction: column;
     align-items: center;
@@ -261,9 +380,17 @@
   }
   .box-img2 {
    width: 80vw;
+   height: auto;
+  }
+  .big-box2{
+    gap: 15vw;
+    justify-content: center;
   }
   .tshirt-head {
     font-size: 7.5vw;
+  }
+  .select-size{
+    gap:3.5vw;
   }
   .price1 {
     font-size: 5vw;
@@ -274,14 +401,17 @@
     padding-right: 3vw;
   }
   .price1-offer {
-    font-size: 2.4vh;
+    font-size: 2vh;
   }
   .inclu {
-    font-size: 3vh;
+    font-size: 2.5vh;
     padding-top: 2vh;
   }
   .colorbox1 {
-    width: 6.5vw;
+    width: 6.5vmin;
+    height: 6.5vmin;
+    max-width: 30px;
+    max-height: 30px;
   }
   .colorbox2 {
     width: 6.5vw;
@@ -292,8 +422,19 @@
   .colorbox {
     gap: 3vw;
   }
+  .colorbox1A {
+    width: 6.5vw;
+    max-width: 30px;
+    max-height: 30px;
+  }
   .color12 {
     font-size: 3vh;
+  }
+  .color121{
+    font-size: 18px;
+  }
+  .color122{
+    font-size: 18px;
   }
   .size {
     font-size: 3vh;
@@ -301,15 +442,29 @@
   }
   .bag1 {
     height: 5vh;
-    width: 34vw;
+    width: 80vw;
+  }
+  .con1{
+    width: auto;
+  }
+  .size{
+    font-size: 18px;
+
+  }
+  .select-size{
+    gap: 2.5vw;
   }
   .size1 {
-    width: 7.5vw;
-    height: 5vh;
+    width: 7.5vmin;
+    height: 7.5vmin;
+    min-height: 33px;
+    min-width: 33px;
   }
   .size2 {
-    width: 7.5vw;
-    height: 5vh;
+    width: 7.5vmin;
+    height: 7.5vmin;
+    min-height: 33px;
+    min-width: 33px;
   }
   .size3 {
     width: 7.5vw;
@@ -321,5 +476,11 @@
   }
   .lock5 {
     width: 3vw;
+  }
+  .hr1{
+    width:81vw;
+  }
+  .Quantity{
+    margin-top: 4vh;
   }
 }
