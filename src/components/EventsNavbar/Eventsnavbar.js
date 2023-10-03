@@ -61,7 +61,7 @@ function Navbar({ color, disable, setregister, register, data }) {
     }
   };
 
-  console.log(userDetails,"user");
+  // console.log(userDetails,"user");
 
   return (
     <div style={{ background: color }} className="nav-comp">
