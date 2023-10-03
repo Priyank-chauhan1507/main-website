@@ -26,7 +26,7 @@ function MobEventnavbar() {
   useEffect(() => {
     if(localStorage.getItem("token")){
       loadUserData();
-      console.log(user);
+      // console.log(user);
     };
     }, []);
   const loadUserData = async () => {
@@ -151,22 +151,14 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
-          {/* {localStorage.getItem("token") && (
+          {localStorage.getItem("token") && (
           <h1
             onClick={() => {
-                {
-                  user.payment ?
-                  navigate("/iiiiiiii")
-                :
-                  message.info('Payment is incomplete');
-                  navigate("/payment");
-                }
-              
-              window.location.reload(false);
-            }}
+                {user.payment ? (navigate("/iiiiiiii")) : (navigate("/payment"))}
+                console.log(user.payment);}}
           >
             ID-Card
-          </h1>)} */}
+          </h1>)}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {
@@ -271,22 +263,14 @@ function MobEventnavbar() {
           <a href="https://zonals.thomso.in/" target="_blank">
             <h5>Zonals</h5>
           </a>
-          {/* {localStorage.getItem("token") && (
+          {localStorage.getItem("token") && (
           <h1
-            onClick={() => {
-                {
-                  user.payment ?
-                  navigate("/iiiiiiii")
-                :
-                  message.info('Payment is incomplete');
-                  navigate("/payment");
-                }
-              
-              window.location.reload(false);
-            }}
+          onClick={() => {
+            {user.payment ? (navigate("/iiiiiiii")) : (navigate("/payment"))}
+            console.log(user.payment);}}
           >
             ID-Card
-          </h1>)} */}
+          </h1>)}
           {localStorage.getItem("token") && (
             <h5
               onClick={() => {

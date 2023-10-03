@@ -32,6 +32,7 @@ function Navbar({ color, disable, setregister, register, data }) {
       setregister(true);
     }
   };
+
   useEffect(() => {
     loadUserData();
   }, []);
@@ -61,7 +62,7 @@ function Navbar({ color, disable, setregister, register, data }) {
     }
   };
 
-  console.log(userDetails,"user");
+  // console.log(userDetails,"user");
 
   return (
     <div style={{ background: color }} className="nav-comp">
@@ -109,21 +110,20 @@ function Navbar({ color, disable, setregister, register, data }) {
           >
             Zonals
           </a>
-          {/* <a
-            className={localStorage.getItem("token")?"event-nav-right-compo hover-underline-animation":"none_display"}
-            onClick={() => {
-              
-                userDetails.payment ?
-                navigate("/iiiiiiii")
-              :
-                message.info('Payment is incomplete');
-                navigate("/payment");
-                
-              
-            }}
+          {userDetails && userDetails.payment ? (<a
+            className={localStorage.getItem("token") ? "event-nav-right-compo hover-underline-animation" : "none_display"}
+            href="http://localhost:3000/iiiiiiii"
           >
             ID-CARD
-          </a> */}
+          </a>): (
+             <a
+             className={localStorage.getItem("token") ? "event-nav-right-compo hover-underline-animation" : "none_display"}
+             href="http://localhost:3000/payment"
+           >
+             ID-CARD
+           </a>
+          )}
+
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
