@@ -6,8 +6,10 @@ import axios from "axios";
 import DeleteModule from "../MainProfileBox/DeleteModule";
 import Loader from "../../Loader/Loader";
 import InnerCard from "./InnerCard";
+import { useNavigate } from "react-router-dom";
 
 function EventCard({ data, getEvents, getData, }) {
+  const navigate = useNavigate()
   const [like, setlike] = useState(false);
   const [loading, setLoading] = useState(false);
   const [module, setmodule] = useState(false);
@@ -43,6 +45,7 @@ function EventCard({ data, getEvents, getData, }) {
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
               }}
+              onClick={() => {navigate(`/events/`+data?.event)}}
             >
               <div
                 className="card-delete"

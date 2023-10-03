@@ -24,10 +24,11 @@
     display: flex;
     justify-content: space-between;
     margin: 0 15px;
-    
+
     align-items: center;
     /* text-decoration: none; */
 }
+
 .card-delete {
     position: absolute;
     top: 10px;
@@ -80,9 +81,8 @@
     letter-spacing: -0.159px;
     display: none;
 }
-.eventcard:hover
- p
-{
+
+.eventcard:hover p {
     display: block;
 }
 
@@ -99,15 +99,35 @@
     gap: 2vw;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    margin: 0 0 2vh !important;;
+    margin: 0 0 2vh !important;
+    ;
     height: 68vh;
     flex-wrap: wrap;
 }
-
-.eventcards::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888
+    ;
 }
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+/* .eventcards::-webkit-scrollbar{
+    display: block;
+    width: 10px !important;
+} */
 .eventcard-nav {
     display: flex;
     color: #FFF;
@@ -134,7 +154,7 @@
 .eventcard-nav button {
     color: #333;
     font-family: Comic Neue;
-
+    
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -149,9 +169,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    background:#F7B900;
+    background: #F7B900;
 }
-.eventcard-nav button:hover{
+
+.eventcard-nav button:hover {
     background: transparent;
     color: #F7B900;
     border-color: #fff;
@@ -173,6 +194,7 @@
     display: block;
     margin-top: 2vh;
 }
+
 .events-team-name1 {
     color: #FFF;
     leading-trim: both;
@@ -194,8 +216,8 @@
     color: black;
     padding: 5px 8px;
 }
-.blackShield
-{
+
+.blackShield {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.13%, rgba(0, 0, 0, 0.45) 16.45%, rgba(0, 0, 0, 0.86) 54.90%, #000 92.12%);
 }
 
@@ -204,6 +226,7 @@
     .eventcard1 h2 {
         font-size: 22px;
     }
+    
     .eventcard1 {
         margin: 0 15px 0 10px;
     }
@@ -213,9 +236,11 @@
     .eventcard {
         width: 25vw;
     }
+
     .eventcard1 {
         margin: 0 10px 0 5px;
     }
+    
     .eventcard1 h2 {
         font-size: 20px;
     }
@@ -235,12 +260,13 @@
     .eventcard-nav-part {
         display: none;
     }
-
+    
     .eventcard-nav {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
     }
+    
     .eventcard1 h2 {
         font-size: 19px;
     }
@@ -253,12 +279,13 @@
         line-height: 13px !important;
         padding-bottom: 2px !important;
     }
+    
     .events-team-name1 {
         font-size: 11px !important;
         line-height: 13px !important;
         padding-bottom: 2px !important;
     }
-
+    
     .eventcard p {
         font-size: 13px !important;
         margin-left: 13px !important;
@@ -267,12 +294,14 @@
 
     .eventcard h2 {
         font-size: 18px;
-
+        
         line-height: 20px !important;
-
+        
     }
-    .eventcard{
+    
+    .eventcard {
         width: 80vw;
         height: 40vh;
     }
 }
+

@@ -27,7 +27,7 @@ const EventBox = () => {
   const [logout, setLogout] = useState(0);
   const [display1, setdisplay] = useState(false);
   const [display2, setdisplay2] = useState(false);
-  const [clicked, setclicked] = useState("")
+  const [clicked, setclicked] = useState("");
   const [disable, setdisable] = useState("notdisable");
   const [events, setEvents] = useState([]);
   const [userDetails, setuserDetails] = useState({});
@@ -75,9 +75,6 @@ const EventBox = () => {
     window.location.pathname = "/";
   }
 
-
-
-
   useEffect(() => {
     if (!userDetails?.id) {
       // navigate.push("/login");
@@ -96,24 +93,29 @@ const EventBox = () => {
         <img src={Back} className="pro-back-img" alt="" />
         <img src={Back1} className="pro-back-img2" alt="" />
         <div className="nnp-head">
-          <Navbar color="transparent" disable={disable} data={userDetails}/>
+          <Navbar color="transparent" disable={disable} data={userDetails} />
         </div>
         <div className="boxborder">
           <div className="nnp-laphead">
             <div className="nnp-content">
               <div className="lsp-box">
                 <div className="lsp-pic">
-                  <img className="lsp-img1" src={userDetails?.avtar ? userDetails?.avtar : pic} alt="profilepic" />
+                  <img
+                    className="lsp-img1"
+                    src={userDetails?.avtar ? userDetails?.avtar : pic}
+                    alt="profilepic"
+                  />
                   <span className="lsp-text1">
                     {userDetails?.name} {userDetails?.is_ca ? "(CA)" : ""}
                   </span>
                   <span className="lsp-text2">
                     Thomso ID:{userDetails?.thomso_id}
                   </span>
-                  {userDetails?.is_ca &&
-            (<span className="lsp-text2">
-              CA ID : {userDetails?.ca_thomso_id}
-            </span>)}
+                  {userDetails?.is_ca && (
+                    <span className="lsp-text2">
+                      CA ID : {userDetails?.ca_thomso_id}
+                    </span>
+                  )}
                 </div>
                 {/* <div>
                   {userDetails?.username}
@@ -194,44 +196,44 @@ const EventBox = () => {
                       </Link>
                     </div>
                   )}
-                               <button
-            className="main-logout-btn"
-            onClick={() => setLogout(!logout)}
-          >
-            <img src={log} alt="log" />
-            <span>Logout</span>
-          </button>
+                  <button
+                    className="main-logout-btn"
+                    onClick={() => setLogout(!logout)}
+                  >
+                    <img src={log} alt="log" />
+                    <span>Logout</span>
+                  </button>
                 </div>
               </div>
               <div className={!logout ? "none" : ""} id="logout">
-        <div className="l_body">
-          <div className="logout_body">
-            <div className="redpic">
-              <img src={cs1} alt="redpic" />
-            </div>
-            <div className="textt">
-              <div className="fText">Are You Sure?</div>
-              <div className="sText">
-                Do you really want to leave and logout?
+                <div className="l_body">
+                  <div className="logout_body">
+                    <div className="redpic">
+                      <img src={cs1} alt="redpic" />
+                    </div>
+                    <div className="textt">
+                      <div className="fText">Are You Sure?</div>
+                      <div className="sText">
+                        Do you really want to leave and logout?
+                      </div>
+                    </div>
+                    <div className="btns">
+                      <button className="btn1">
+                        <span
+                          onClick={() => {
+                            setLogout(!logout);
+                          }}
+                        >
+                          Cancel
+                        </span>
+                      </button>
+                      <button className="btn2" onClick={handleLogout}>
+                        <span>Logout</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="btns">
-              <button className="btn1">
-                <span
-                  onClick={() => {
-                    setLogout(!logout);
-                  }}
-                >
-                  Cancel
-                </span>
-              </button>
-              <button className="btn2" onClick={handleLogout}>
-                <span>Logout</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
               <div className="c-line1">
                 <img className="c-line1-img" src={line} alt="line" />
               </div>
@@ -287,13 +289,24 @@ const EventBox = () => {
                     </>
                   ) : (
                     <div className="eventcards">
-                      {
-                      events.length!==0 ?
-                      (events.map((el) => {
-                        return <EventCard data={el} getEvents={getEvents} getData={getData} setclicked={setclicked}/>;
-                      }))
-                      :( <img src={eventcenterpic} className="eventbgpic1" alt="" />)
-                      }
+                      {events.length !== 0 ? (
+                        events.map((el) => {
+                          return (
+                            <EventCard
+                              data={el}
+                              getEvents={getEvents}
+                              getData={getData}
+                              setclicked={setclicked}
+                            />
+                          );
+                        })
+                      ) : (
+                        <img
+                          src={eventcenterpic}
+                          className="eventbgpic1"
+                          alt=""
+                        />
+                      )}
                     </div>
                   )}
                 </div>
@@ -316,243 +329,243 @@ const EventBox = () => {
                       style={{ top: "5vh", right: "1vw", width: "70vw" }}
                       className="drop"
                     >
-                         <div className="drop-row">
-                    <div className="col col-yellow">Choreo(Dance)</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(76);
-                      }}
-                    >
-                      Footloose (Solo)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(77);
-                      }}
-                    >
-                      Footloose (Duet)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(75);
-                      }}
-                    >
-                      Footloose (Team)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(42);
-                      }}
-                    >
-                      Step up (Solo)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(43);
-                      }}
-                    >
-                      Step up (Team)
-                    </div>
-                    <div className="col col-yellow">Da Vinci's Gala</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(56);
-                      }}
-                    >
-                      Art Talkies
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(57);
-                      }}
-                    >
-                      Naqaab
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(58);
-                      }}
-                    >
-                      Paint Fiesta
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(59);
-                      }}
-                    >
-                      Costume Design
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(60);
-                      }}
-                    >
-                      Relay Rangoli
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(61);
-                      }}
-                    >
-                      Live Sketching
-                    </div>
-                    {/* <div className="nav-events"/> */}
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Fashion</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(29);
-                      }}
-                    >
-                      Campus Diva
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(31);
-                      }}
-                    >
-                      Mr & Ms Thomso
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(78);
-                      }}
-                    >
-                      Vogue
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(63);
-                      }}
-                    >
-                      Coscon
-                    </div>
-                    <div className="col col-yellow">LITFest</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(16);
-                      }}
-                    >
-                      Literati
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(19);
-                      }}
-                    >
-                      Pictionary
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(21);
-                      }}
-                    >
-                      Spin a Yarn
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(24);
-                      }}
-                    >
-                      Big Ideas
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(27);
-                      }}
-                    >
-                      Desi Twist
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(30);
-                      }}
-                    >
-                      Slam Poetry
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(28);
-                      }}
-                    >
-                      Nerdy Bate
-                    </div>
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Music</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(4);
-                      }}
-                    >
-                      Sargam (Solo)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(5);
-                      }}
-                    >
-                      Sargam (Duet)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(3);
-                      }}
-                    >
-                      Sargam (Team)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(6);
-                      }}
-                    >
-                      Battle Of Bands
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(7);
-                      }}
-                    >
-                      Gully War
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(8);
-                      }}
-                    >
-                      War of DJ'S
-                    </div>
-                    <div className="col col-yellow">Carnival</div>
-                    {/* <div
+                      <div className="drop-row">
+                        <div className="col col-yellow">Choreo(Dance)</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(76);
+                          }}
+                        >
+                          Footloose (Solo)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(77);
+                          }}
+                        >
+                          Footloose (Duet)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(75);
+                          }}
+                        >
+                          Footloose (Team)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(42);
+                          }}
+                        >
+                          Step up (Solo)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(43);
+                          }}
+                        >
+                          Step up (Team)
+                        </div>
+                        <div className="col col-yellow">Da Vinci's Gala</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(56);
+                          }}
+                        >
+                          Art Talkies
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(57);
+                          }}
+                        >
+                          Naqaab
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(58);
+                          }}
+                        >
+                          Paint Fiesta
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(59);
+                          }}
+                        >
+                          Costume Design
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(60);
+                          }}
+                        >
+                          Relay Rangoli
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(61);
+                          }}
+                        >
+                          Live Sketching
+                        </div>
+                        {/* <div className="nav-events"/> */}
+                      </div>
+                      <div className="drop-row">
+                        <div className="col col-yellow">Fashion</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(29);
+                          }}
+                        >
+                          Campus Diva
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(31);
+                          }}
+                        >
+                          Mr & Ms Thomso
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(78);
+                          }}
+                        >
+                          Vogue
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(63);
+                          }}
+                        >
+                          Coscon
+                        </div>
+                        <div className="col col-yellow">LITFest</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(16);
+                          }}
+                        >
+                          Literati
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(19);
+                          }}
+                        >
+                          Pictionary
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(21);
+                          }}
+                        >
+                          Spin a Yarn
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(24);
+                          }}
+                        >
+                          Big Ideas
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(27);
+                          }}
+                        >
+                          Desi Twist
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(30);
+                          }}
+                        >
+                          Slam Poetry
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(28);
+                          }}
+                        >
+                          Nerdy Bate
+                        </div>
+                      </div>
+                      <div className="drop-row">
+                        <div className="col col-yellow">Music</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(4);
+                          }}
+                        >
+                          Sargam (Solo)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(5);
+                          }}
+                        >
+                          Sargam (Duet)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(3);
+                          }}
+                        >
+                          Sargam (Team)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(6);
+                          }}
+                        >
+                          Battle Of Bands
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(7);
+                          }}
+                        >
+                          Gully War
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(8);
+                          }}
+                        >
+                          War of DJ'S
+                        </div>
+                        <div className="col col-yellow">Carnival</div>
+                        {/* <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(39);
@@ -560,23 +573,23 @@ const EventBox = () => {
                     >
                       Hunger Games
                     </div> */}
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(40);
-                      }}
-                    >
-                      Sumo Wrestling
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(41);
-                      }}
-                    >
-                      Air Rifle Shooting
-                    </div>
-                    {/* <div
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(40);
+                          }}
+                        >
+                          Sumo Wrestling
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(41);
+                          }}
+                        >
+                          Air Rifle Shooting
+                        </div>
+                        {/* <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(44);
@@ -584,23 +597,23 @@ const EventBox = () => {
                     >
                       Caricature
                     </div> */}
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(45);
-                      }}
-                    >
-                      Body Zorbing
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(47);
-                      }}
-                    >
-                      Human Foosball
-                    </div>
-                    {/* <div
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(45);
+                          }}
+                        >
+                          Body Zorbing
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(47);
+                          }}
+                        >
+                          Human Foosball
+                        </div>
+                        {/* <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(49);
@@ -608,270 +621,272 @@ const EventBox = () => {
                     >
                       The Boulevard Games
                     </div> */}
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(50);
-                      }}
-                    >
-                      Tattoo Artist
-                    </div>
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Entertainment</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(17);
-                      }}
-                    >
-                      Thomso's Got Talent(Solo)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(18);
-                      }}
-                    >
-                      Thomso's Got Talent(Team)
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(20);
-                      }}
-                    >
-                      Open MIC
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(62);
-                      }}
-                    >
-                      The Dank Knight
-                    </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(50);
+                          }}
+                        >
+                          Tattoo Artist
+                        </div>
+                      </div>
+                      <div className="drop-row">
+                        <div className="col col-yellow">Entertainment</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(17);
+                          }}
+                        >
+                          Thomso's Got Talent(Solo)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(18);
+                          }}
+                        >
+                          Thomso's Got Talent(Team)
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(20);
+                          }}
+                        >
+                          Open MIC
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(62);
+                          }}
+                        >
+                          The Dank Knight
+                        </div>
 
-                    <div className="col col-yellow">Adventure</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(52);
-                      }}
-                    >
-                      Seiger
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(53);
-                      }}
-                    >
-                      Treasure Hunt
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(54);
-                      }}
-                    >
-                      Street Soccer
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(55);
-                      }}
-                    >
-                      Scavenger Hunt
-                    </div>
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Dramatics</div>
-                    <div
-                      className="col"
-                      onClick={(e) => {
-                        onHandleClick(9);
-                      }}
-                    >
-                      Abhivyakti
-                    </div>
+                        <div className="col col-yellow">Adventure</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(52);
+                          }}
+                        >
+                          Seiger
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(53);
+                          }}
+                        >
+                          Treasure Hunt
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(54);
+                          }}
+                        >
+                          Street Soccer
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(55);
+                          }}
+                        >
+                          Scavenger Hunt
+                        </div>
+                      </div>
+                      <div className="drop-row">
+                        <div className="col col-yellow">Dramatics</div>
+                        <div
+                          className="col"
+                          onClick={(e) => {
+                            onHandleClick(9);
+                          }}
+                        >
+                          Abhivyakti
+                        </div>
 
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(79);
-                      }}
-                    >
-                      Nukkad Natak
-                    </div>
-                    {/* <div className="col colhover">Mimicry</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(79);
+                          }}
+                        >
+                          Nukkad Natak
+                        </div>
+                        {/* <div className="col colhover">Mimicry</div>
                     <div className="col colhover">Monologue</div> */}
 
-                    {/* <div className="col col-yellow">Marketing and Finance</div> */}
+                        {/* <div className="col col-yellow">Marketing and Finance</div> */}
 
-                    <div className="col col-yellow">Marketing and Finance</div>
+                        <div className="col col-yellow">
+                          Marketing and Finance
+                        </div>
 
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(22);
-                      }}
-                    >
-                      Auction Frenzy
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(23);
-                      }}
-                    >
-                      Corporata
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(25);
-                      }}
-                    >
-                      Mark Sense
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(26);
-                      }}
-                    >
-                      A(d)esign
-                    </div>
-                    <div className="col col-yellow">Quizzing</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(12);
-                      }}
-                    >
-                      Quriosity
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(13);
-                      }}
-                    >
-                      Telly sporcle
-                    </div>
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Gaming</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(46);
-                      }}
-                    >
-                      Apocalypse
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(48);
-                      }}
-                    >
-                      Queen's Gambit
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(51);
-                      }}
-                    >
-                      Snooker's Elite
-                    </div>
-                    <div className="col col-yellow">Culinary</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(35);
-                      }}
-                    >
-                      Food Fiesta
-                    </div>
-                    <div className="col col-yellow">MUN</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(32);
-                      }}
-                    >
-                      IITR-MUN
-                    </div>
-                    <div className="col col-yellow">Cinematic</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(14);
-                      }}
-                    >
-                      24 Frames
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(15);
-                      }}
-                    >
-                      Box Office
-                    </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(22);
+                          }}
+                        >
+                          Auction Frenzy
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(23);
+                          }}
+                        >
+                          Corporata
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(25);
+                          }}
+                        >
+                          Mark Sense
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(26);
+                          }}
+                        >
+                          A(d)esign
+                        </div>
+                        <div className="col col-yellow">Quizzing</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(12);
+                          }}
+                        >
+                          Quriosity
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(13);
+                          }}
+                        >
+                          Telly sporcle
+                        </div>
+                      </div>
+                      <div className="drop-row">
+                        <div className="col col-yellow">Gaming</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(46);
+                          }}
+                        >
+                          Apocalypse
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(48);
+                          }}
+                        >
+                          Queen's Gambit
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(51);
+                          }}
+                        >
+                          Snooker's Elite
+                        </div>
+                        <div className="col col-yellow">Culinary</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(35);
+                          }}
+                        >
+                          Food Fiesta
+                        </div>
+                        <div className="col col-yellow">MUN</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(32);
+                          }}
+                        >
+                          IITR-MUN
+                        </div>
+                        <div className="col col-yellow">Cinematic</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(14);
+                          }}
+                        >
+                          24 Frames
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(15);
+                          }}
+                        >
+                          Box Office
+                        </div>
 
-                    {/* <div className="col col-yellow">Cultural Workshops</div> */}
-                    {/* <div className="col col-yellow1">Technical Workshops</div> */}
-                  </div>
-                  <div className="drop-row">
-                    <div className="col col-yellow">Online</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(80);
-                      }}
-                    >
-                      Bgmi
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(81);
-                      }}
-                    >
-                      Quizardry
-                    </div>
-                    <div className="col col-yellow">Night Life</div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(1);
-                      }}
-                    >
-                      Silent DJ
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(82);
-                      }}
-                    >
-                      Nightlife Cafe
-                    </div>
-                    <div
-                      className="col colhover "
-                      onClick={(e) => {
-                        onHandleClick(83);
-                      }}
-                    >
-                      Thomso Karaoke
-                    </div>
-                    <div className="col col-yellow">New Events</div>
-                    {/* <div
+                        {/* <div className="col col-yellow">Cultural Workshops</div> */}
+                        {/* <div className="col col-yellow1">Technical Workshops</div> */}
+                      </div>
+                      <div className="drop-row">
+                        <div className="col col-yellow">Online</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(80);
+                          }}
+                        >
+                          Bgmi
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(81);
+                          }}
+                        >
+                          Quizardry
+                        </div>
+                        <div className="col col-yellow">Night Life</div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(1);
+                          }}
+                        >
+                          Silent DJ
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(82);
+                          }}
+                        >
+                          Nightlife Cafe
+                        </div>
+                        <div
+                          className="col colhover "
+                          onClick={(e) => {
+                            onHandleClick(83);
+                          }}
+                        >
+                          Thomso Karaoke
+                        </div>
+                        <div className="col col-yellow">New Events</div>
+                        {/* <div
                       className="col colhover"
                       onClick={(e) => {
                         onHandleClick(84);
@@ -879,47 +894,47 @@ const EventBox = () => {
                     >
                       Sneaker Design(Duet)*
                     </div> */}
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(88);
-                      }}
-                    >
-                      Funk Feets(Solo)*
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(85);
-                      }}
-                    >
-                      Mimicry*
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(86);
-                      }}
-                    >
-                      Monologue*
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(73);
-                      }}
-                    >
-                      Thomsography*
-                    </div>
-                    <div
-                      className="col colhover"
-                      onClick={(e) => {
-                        onHandleClick(87);
-                      }}
-                    >
-                      Vlogging*
-                    </div>
-                  </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(88);
+                          }}
+                        >
+                          Funk Feets(Solo)*
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(85);
+                          }}
+                        >
+                          Mimicry*
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(86);
+                          }}
+                        >
+                          Monologue*
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(73);
+                          }}
+                        >
+                          Thomsography*
+                        </div>
+                        <div
+                          className="col colhover"
+                          onClick={(e) => {
+                            onHandleClick(87);
+                          }}
+                        >
+                          Vlogging*
+                        </div>
+                      </div>
                     </div>
                   )}
                 </>
@@ -927,34 +942,34 @@ const EventBox = () => {
             </div>
           </div>
           <div className={!logout ? "none" : ""} id="logout">
-        <div className="l_body">
-          <div className="logout_body">
-            <div className="redpic">
-              <img src={cs1} alt="redpic" />
-            </div>
-            <div className="textt">
-              <div className="fText">Are You Sure?</div>
-              <div className="sText">
-                Do you really want to leave and logout?
+            <div className="l_body">
+              <div className="logout_body">
+                <div className="redpic">
+                  <img src={cs1} alt="redpic" />
+                </div>
+                <div className="textt">
+                  <div className="fText">Are You Sure?</div>
+                  <div className="sText">
+                    Do you really want to leave and logout?
+                  </div>
+                </div>
+                <div className="btns">
+                  <button className="btn1">
+                    <span
+                      onClick={() => {
+                        setLogout(!logout);
+                      }}
+                    >
+                      Cancel
+                    </span>
+                  </button>
+                  <button className="btn2" onClick={handleLogout}>
+                    <span>Logout</span>
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="btns">
-              <button className="btn1">
-                <span
-                  onClick={() => {
-                    setLogout(!logout);
-                  }}
-                >
-                  Cancel
-                </span>
-              </button>
-              <button className="btn2" onClick={handleLogout}>
-                <span>Logout</span>
-              </button>
-            </div>
           </div>
-        </div>
-      </div>
           <div className="nnp-mobile">
             <div className="mobpaymentcenterimg">
               <div className="mpb-mobileview">
@@ -964,8 +979,8 @@ const EventBox = () => {
                       to="/profile"
                       className={
                         Locator.pathname === "/profile"
-                        ? "nav-active"
-                        : "nav-passive"
+                          ? "nav-active"
+                          : "nav-passive"
                       }
                     >
                       <img src={icon1} alt="profile" className="img--1" />
@@ -978,8 +993,8 @@ const EventBox = () => {
                         to="/pevents"
                         className={
                           Locator.pathname === "/pevents"
-                          ? "nav-active"
-                          : "nav-passive"
+                            ? "nav-active"
+                            : "nav-passive"
                         }
                       >
                         <img src={icon21} alt="Events" className="img--1" />
@@ -993,8 +1008,8 @@ const EventBox = () => {
                         to="/payment-alumn"
                         className={
                           Locator.pathname === "/payment-alumn"
-                          ? "nav-active"
-                          : "nav-passive"
+                            ? "nav-active"
+                            : "nav-passive"
                         }
                       >
                         <img src={icon3} alt="payment" className="img--1" />
@@ -1007,8 +1022,8 @@ const EventBox = () => {
                         to="/payment"
                         className={
                           Locator.pathname === "/payment"
-                          ? "nav-active"
-                          : "nav-passive"
+                            ? "nav-active"
+                            : "nav-passive"
                         }
                       >
                         <img src={icon3} alt="payment" className="img--1" />
@@ -1023,14 +1038,20 @@ const EventBox = () => {
                 <>
                   <div className="eventcard-nav">
                     <span
-                    className="eventcard-nav-part"
+                      className="eventcard-nav-part"
                       style={{
                         cursor: "default",
                       }}
                     >
                       Participate
                     </span>
-                    <button className="eventcard-button" style={{margin:'auto'}} onClick={() => navigate('/events')}>Add an Event</button>
+                    <button
+                      className="eventcard-button"
+                      style={{ margin: "auto" }}
+                      onClick={() => navigate("/events")}
+                    >
+                      Add an Event
+                    </button>
                     {/* <span
                       onClick={() => {
                         setFilter("solo");
@@ -1057,13 +1078,27 @@ const EventBox = () => {
                     {/* </span> */}
                   </div>
                   <div className="eventcards">
-                  {
-                      events.length!==0 ?
-                      (events.map((el) => {
-                        return <EventCard data={el} getEvents={getEvents} getData={getData} setclicked={setclicked}/>;
-                      }))
-                      :( <img src={eventcenterpic} className="eventbgpic1" alt="" />)
-                      }
+                    {events.length !== 0 ? (
+                      events.map((el) => {
+                        return (
+                          <div>
+                            <EventCard
+                              data={el}
+                              getEvents={getEvents}
+                              getData={getData}
+                              setclicked={setclicked}
+                            />
+                            ;
+                          </div>
+                        );
+                      })
+                    ) : (
+                      <img
+                        src={eventcenterpic}
+                        className="eventbgpic1"
+                        alt=""
+                      />
+                    )}
                   </div>
                 </>
               ) : (

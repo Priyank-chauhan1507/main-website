@@ -9,7 +9,7 @@
 }
 
 .ESM-Conatiner-list::-webkit-scrollbar {
-  display: none !important;
+  /* display: none !important; */
 }
 
 
