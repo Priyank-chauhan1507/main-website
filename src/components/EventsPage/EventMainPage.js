@@ -9,7 +9,7 @@ import EventMainPageMob from "./EventMainPageMob";
 import { Store } from "../../Config/Store";
 import { connect } from "react-redux";
 import { escapeRegex } from "./helper";
-import { ImCross } from "react-icons/im";
+// import { ImCross } from "react-icons/im";
 import Navbar2 from "../EventsNavbar/Eventsnavbar";
 import bgmobile from "../../assests/bgmobile.webp";
 import bg from "../../assests/eventback.webp";

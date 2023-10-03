@@ -346,7 +346,7 @@ const Renderer = ({user,items}) => {
 
             </Text>
             <Text style={styles.id_data}>
-              6. Any forgery with the ID Card will lead to the jurisdiction of the Thomso Organizing Committee and the authorities of IIT Roorkee.
+              6. Any forgery with the ID Card will lead to the jurisdiction of the Thomso Organizing Committee and the authorities of IIT Roorkee.
             </Text>
 
             <Text style={styles.id_data}>
