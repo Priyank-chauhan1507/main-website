@@ -1,32 +1,118 @@
-
-#white_div{
-    color:white;
+#white_div {
+    color: white;
     border-radius: 4px;
     border: 2px solid rgba(42, 42, 42, 0.98);
     background: rgba(0, 0, 0, 0.38);
     backdrop-filter: blur(6px);
     width: 71vw;
-    height: 47.3vh;
+    height: 55vh;
+    padding-top: 2vh;
 }
 
-.car_head_txt{
-    margin-top:2vh;
-    margin-left:2vw;
+.car_head_txt {
+    margin-top: 2vh;
+    margin-left: 4%;
+    padding-bottom: 4vh;
+    color: #FFF;
+    font-family: Comic Neue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 120% */
+
 }
 
-.slider{
+.slider {
     animation: none;
 }
+.car_gard{
+    width: 167.653px;
+height: 135px;
+flex-shrink: 0;border-radius: 4px;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 3.42%, rgba(0, 0, 0, 0.45) 23.3%, rgba(0, 0, 0, 0.86) 53.6%, #000 91.89%);position: absolute;
+bottom: 0;
+width: 100%;
 
-.carousel_events1{
-    height:20vh;
-    width:63vw;
-    .carousel-slider{
+}
+.payCarousel {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-left: 3%;
+    overflow-x: clip;
+    /* translate: 20vh; */
+}
+
+.carouselcard {
+    margin: 0 10px;
+}
+
+.carousel_events1 {
+    height: 20vh;
+    width: 63vw;
+
+    .carousel-slider {
         height: 38vh;
         margin-top: 2vh;
-        margin-left:4vw;
+        margin-left: 4vw;
     }
-    .carousel .slider-wrapper.axis-horizontal .slider{
-        width:20vw;
+
+    .carousel .slider-wrapper.axis-horizontal .slider {
+        width: 20vw;
     }
+}
+
+.slider {
+    top: -5vw;
+    left: 0vw;
+
+    gap: 2vw;
+}
+
+.control-dots {
+    display: none !important;
+}
+
+.slide {
+    border: 1px solid;
+}
+
+.carouselcard_name {
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13.275px;
+    /* 100% */
+    margin-left: 15px;
+    letter-spacing: -0.266px;
+    position: relative;
+    z-index:1;
+}
+
+.carouselcard_participate {
+    border-radius: 2px;
+    background: #F7B900;
+    display: flex;
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px 7px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: rgba(18, 17, 17, 0.98);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13.275px;
+    /* 110.628% */
+    position: relative;
+    z-index:1;
 }

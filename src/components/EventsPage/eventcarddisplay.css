@@ -33,7 +33,7 @@
 }
 
 .ECD-card-Display::-webkit-scrollbar {
-  display: none !important;
+  /* display: none !important; */
 }
 .mobile-search-bar {
   display: none;
