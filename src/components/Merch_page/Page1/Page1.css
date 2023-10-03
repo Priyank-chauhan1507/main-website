@@ -35,10 +35,7 @@ min-height: 103vh;
     padding: 0;
     margin: 0;
 }
-.merch_bg_img{
-    /* position: relative; */
-    /* z-index: -1; */
-}
+
 .merch_Bg{
     width:100vw;
     height:60vh;
@@ -170,6 +167,8 @@ display: none;
 }
 
 @media screen and (max-width:1200px ) and (min-width:632px) {
+
+
 .product_name{
     font-size: 1.4rem;
     font-weight:100;
@@ -222,6 +221,7 @@ word-wrap: normal
 }
 
 @media screen and (max-width:1200px) {
+
     /* .ell-img{
         width:35vw;
 
@@ -359,9 +359,12 @@ word-wrap: normal
 
 }
 .home_text{
+    background-image:url("./mrechbg.webp");
+    background-size: cover;
+}
     /* background-image:url("./mrechbg.webp"); */
     /* background-size: cover; */
-}
+/* } */
 /* < Stashed changes */
 @media screen and (max-width:700px){
     .MerchYellowBGmob{
@@ -404,8 +407,6 @@ word-wrap: normal
         /* height: 281vh; */
     }
 }
-
-
 
 @media screen and (max-width:350px){
     .prod_img{
