@@ -15,7 +15,7 @@ import qr from "./qr.png";
 import CS_normal from "./COMIC.TTF";
 import { connect } from "react-redux";
 import { fetchUser, logout } from "../components/User/UserActions";
-import { Store } from "../Config/Store";  
+import { Store } from "../Config/Store";
 import CS_bold from "./design.graffiti.comicsansmsgras.ttf";
 import axios from "axios";
 
@@ -208,8 +208,8 @@ const styles = StyleSheet.create({
 });
 
 const Renderer = ({user,items}) => {
-  
- 
+
+
 //  const [items, setItems] = useState();
 
   // const[user,setUser] = useState({});
@@ -217,12 +217,12 @@ const Renderer = ({user,items}) => {
   // useEffect(() => {
   //   loadUserData();
   // }, []);
-  
-  
- 
+
+
+
 
   // useEffect(() => {
-   
+
   //     const items = JSON.parse(localStorage.getItem("dataKey"));
   //   if (items) {
   //     setItems(items);
@@ -230,8 +230,8 @@ const Renderer = ({user,items}) => {
   //   }
   // }, [items]);
   // console.log(user,"please");
-  
-  
+
+
 
   // const func=()=>{
   //   const { dispatch } = Store;
@@ -335,7 +335,7 @@ const Renderer = ({user,items}) => {
             </Text>
             <Text style={styles.id_data}>
               3. Additionally, participants are required to bring two identical
-              passport-sized photographs.
+              passport-sized photographs and aadhar card or any government issued photo identity proof.
             </Text>
             <Text style={styles.id_data}>
               4. Outer line of id card must be appropriately cut along the dotted lines and presented at the registration desk.
