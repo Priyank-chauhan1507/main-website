@@ -128,6 +128,7 @@ display: none;
 }
 @media screen and (max-width:1200px ) and (min-width:632px) {
 
+
 .product_name{
     font-size: 1.4rem;
     font-weight:100;
@@ -269,5 +270,4 @@ word-wrap: normal
     .prod_img{
         padding-left:4vw;
     }
-
 }
