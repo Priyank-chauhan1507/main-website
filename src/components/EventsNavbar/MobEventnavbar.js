@@ -266,7 +266,7 @@ function MobEventnavbar() {
           {localStorage.getItem("token") && (
           <h1
           onClick={() => {
-            {user.payment ? (navigate("/iiiiiiii")) : (navigate("/payment"))}
+            {user.payment ? (navigate("/id_card")) : (navigate("/payment"))}
             console.log(user.payment);}}
           >
             ID-Card
