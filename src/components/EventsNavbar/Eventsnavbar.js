@@ -112,13 +112,13 @@ function Navbar({ color, disable, setregister, register, data }) {
           </a>
           {userDetails && userDetails.payment ? (<a
             className={localStorage.getItem("token") ? "event-nav-right-compo hover-underline-animation" : "none_display"}
-            href="http://localhost:3000/id_card"
+            href="https://thomso.in/id_card"
           >
             ID-CARD
           </a>): (
              <a
              className={localStorage.getItem("token") ? "event-nav-right-compo hover-underline-animation" : "none_display"}
-             href="http://localhost:3000/payment"
+             href="https://thomso.in/payment"
            >
              ID-CARD
            </a>
