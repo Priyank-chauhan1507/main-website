@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Homebg from "../../assests/main.webp"
+import thomsoblue from "../../assests/thomsoblue.webp"
 import Homebgmob from "../../assests/mobback.webp"
 import thomso from "../../assests/thomso.webp"
 // import thomso from "../../assests/thomso.svg"
@@ -12,6 +13,7 @@ import Navbar from '../EventsNavbar/Eventsnavbar'
 import Footer from '../Navbar/WebNavbarNew'
 import Themename from '../../assests/themeName.svg'
 import About from '../../assests/home2nd.webp'
+import aboutback from '../../assests/aboutback.webp'
 import Abouttop from '../../assests/abouttop.webp'
 import Slidetext from '../../assests/slidetext.svg'
 import redback from '../../assests/redback.webp'
@@ -50,6 +52,11 @@ import blue from '../../assests/blue.webp'
 import videoBack from '../../assests/videoBack.webp'
 import pause from '../../assests/pause.svg'
 import pause2 from '../../assests/pause2.svg'
+import thomsostrip from '../../assests/thomsostrip.webp'
+import thomso2 from '../../assests/thomso3.svg'
+import pronite2 from '../../assests/pronite.webp'
+import backchod from '../../assests/backchod.svg'
+
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';
 
@@ -58,22 +65,22 @@ function Home() {
 
   AOS.init();
 
-  const mainboxRef = useRef(null);
-  const display1Ref = useRef(null);
-  const display2Ref = useRef(null);
-  const display3Ref = useRef(null);
-  const display4Ref = useRef(null);
-  const display5Ref = useRef(null);
-  const display6Ref = useRef(null);
-  const display7Ref = useRef(null);
-  const display8Ref = useRef(null);
-  const display9Ref = useRef(null);
-  const display10Ref = useRef(null);
-  const image1Ref = useRef(null);
-  const image2Ref = useRef(null);
-  const image3Ref = useRef(null);
-  const image4Ref = useRef(null);
-  const image5Ref = useRef(null);
+  // const mainboxRef = useRef(null);
+  // const display1Ref = useRef(null);
+  // const display2Ref = useRef(null);
+  // const display3Ref = useRef(null);
+  // const display4Ref = useRef(null);
+  // const display5Ref = useRef(null);
+  // const display6Ref = useRef(null);
+  // const display7Ref = useRef(null);
+  // const display8Ref = useRef(null);
+  // const display9Ref = useRef(null);
+  // const display10Ref = useRef(null);
+  // const image1Ref = useRef(null);
+  // const image2Ref = useRef(null);
+  // const image3Ref = useRef(null);
+  // const image4Ref = useRef(null);
+  // const image5Ref = useRef(null);
 
 
 
@@ -263,15 +270,15 @@ function Home() {
   return (
     <div className='home'>
 
-      <img src={Homebg} id="homebg1" className='homebg' alt="" />
-      <img src={Homebg} id="homebg2" className='homebg' alt="" />
+      <img src={thomsoblue} id="homebg1" className='homebg' alt="" />
+      {/* <img src={Homebg} id="homebg2" className='homebg' alt="" /> */}
 
       <Navbar color="transparent" data={user} />
 
-      <img src={thomso} alt="" className='thomso' />
+      <img src={thomso2} alt="" className='thomso' />
 
       {/* <img src={Thomso} alt="loading..." className='thomso'/> */}
-      <img src={Belowthomso} alt="" className='b-thomso' />
+      <img src={Belowthomso} alt="" className='b-thomso' style={{opacity:"0"}} />
 
 
 
@@ -298,35 +305,92 @@ function Home() {
 
 
       <div className='home2nd'>
-        <img className='home2ndBack' src={About} alt="about_us" />
-        <img className='aboutTop' src={Abouttop} alt="about_us_top" />
-        <div className='slider'>
-          <img className='aboutTopText1' src={Slidetext} alt="about_us_top" />
-          <img className='aboutTopText2' src={Slidetext} alt="about_us_top" />
+        <img className='home2ndBack' src={aboutback} alt="about_us" />
+        <img className='aboutTop' src={thomsostrip} alt="about_us_top" />
+        {/* <div className='slider'> */}
+          {/* <img className='aboutTopText1' src={Slidetext} alt="about_us_top" /> */}
+          {/* <img className='aboutTopText2' src={Slidetext} alt="about_us_top" />
           <img className='aboutTopText3' src={Slidetext} alt="about_us_top" />
           <img className='aboutTopText4' src={Slidetext} alt="about_us_top" />
           <img className='aboutTopText5' src={Slidetext} alt="about_us_top" />
           <img className='aboutTopText6' src={Slidetext} alt="about_us_top" />
           <img className='aboutTopText7' src={Slidetext} alt="about_us_top" />
           <img className='aboutTopText8' src={Slidetext} alt="about_us_top" />
-          <img className='aboutTopText9' src={Slidetext} alt="about_us_top" />
+          <img className='aboutTopText9' src={Slidetext} alt="about_us_top" /> */}
 
-        </div>
+        {/* </div> */}
         <div className='aboutUs' data-aos="zoom-in"
           data-aos-duration="1200">ABOUT US</div>
         <div className=' aboutUsText' data-aos="zoom-in"
           data-aos-duration="1200">
-          <p>Welcome to <span className='blue-thomso'>Thomso’23</span> - the 40th edition of our grand cultural extravaganza and <span className='yellow-thomso'>the annual cultural festival of IIT Roorkee!</span></p>
+          {/* <p>Welcome to <span className='blue-thomso'>Thomso’23</span> - the 40th edition of our grand cultural extravaganza and <span className='yellow-thomso'>the annual cultural festival of IIT Roorkee!</span></p> */}
           {/* <p className='mobtext'>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p> */}
-          <p>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p>
-          <p >This year, we proudly present 'An Eclectic Elysia' as our theme - a concept that encapsulates perfect happiness derived from a broad and diverse range of sources. Thomso’23 is an embodiment of this very theme. It celebrates the rich tapestry of human expression and culture, aiming to mesmerize you with a blend of cosmic charm and vibrant human vitality.</p>
+          <p>
+          ABOUT US
+The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or state of perfect happiness derived from a broad and diverse range of sources. This theme reflects the vision and mission of Thomso’23, which is to celebrate the diversity and richness of human expression and culture. Thomso’23 aims to provide a mesmerizing experience that will fuse the mystical charm of the universe with the vitality of human expression. Thomso’23 invites you to escape from the dullness of your daily life and dive into a world full of wonder and fascination, where every moment is a new adventure waiting to happen.
+            {/* Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds. */}
+            </p>
+          {/* <p >This year, we proudly present 'An Eclectic Elysia' as our theme - a concept that encapsulates perfect happiness derived from a broad and diverse range of sources. Thomso’23 is an embodiment of this very theme. It celebrates the rich tapestry of human expression and culture, aiming to mesmerize you with a blend of cosmic charm and vibrant human vitality.</p> */}
           {/* <p className='mobtext'>Thomso is a journey where the mundane is left behind, and each moment is a new adventure waiting to unfold.</p> */}
-          <p>Thomso is a journey where the mundane is left behind, and each moment is a new adventure waiting to unfold.</p>
+          {/* <p>Thomso is a journey where the mundane is left behind, and each moment is a new adventure waiting to unfold.</p> */}
           {/* <p className='mobtext'>As we bring together music, dance, drama, art, and more, we invite you to escape the monotony of daily life and dive into a world filled with wonder and fascination. At Thomso’23, every corner is a stage, every participant is a star, and every spectator is an enthusiast.</p> */}
-          <p>As we bring together music, dance, drama, art, and more, we invite you to escape the monotony of daily life and dive into a world filled with wonder and fascination. At Thomso’23, every corner is a stage, every participant is a star, and every spectator is an enthusiast.</p>
+          {/* <p>As we bring together music, dance, drama, art, and more, we invite you to escape the monotony of daily life and dive into a world filled with wonder and fascination. At Thomso’23, every corner is a stage, every participant is a star, and every spectator is an enthusiast.</p> */}
         </div>
       </div>
 
+          <div style={{position:"relative"}} className='homenewbox'>
+<img src={pronite2} alt="pronite" className='img_Pronite'/>
+<img src={backchod} alt="bkc" className='bkc_image'/>
+          <div className='slider1'>
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          </div>
+          <div className='slider2'>
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t1} alt="t__new" className='imgg11' />
+          </div>
+
+          </div>
 
 
 
@@ -380,6 +444,8 @@ function Home() {
       {/* <div>
         <Attractions/>
       </div> */}
+
+
 
       <div className='singersName' style={{ position: "relative" }}>
         <img src={blue} alt="load..." className='singBack' />

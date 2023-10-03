@@ -24,6 +24,7 @@
     position: relative;
 
     margin: 11vh 30vw 0vh 30vw;
+    top: 10vw;
   }
   .b-thomso {
     position: relative;
@@ -140,6 +141,9 @@
 
 .butHolder {
   margin-bottom: 13vh !important;
+  position: relative;
+    top: -5vw;
+
 }
 
 .home2nd {
@@ -209,14 +213,17 @@
   margin-top: -28.8vw;
 }
 
-.slider {
+.slider1 {
+ 
+  top: 10vh;
   position: absolute;
-  top: -5vw;
-  left: 10vw;
-  // width:500vw;
+  z-index: 2;
+  left: 2vw;
+  width: 10vw;
+  gap: 1rem;
   display: flex;
-  gap: 10vw;
-  animation: moveCenterToLeftRight 160s linear infinite; /* Adjust animation duration as needed */
+  gap: 2rem;
+  animation: moveCenterToLeftRight 25s linear infinite; /* Adjust animation duration as needed */
 }
 
 @keyframes moveCenterToLeftRight {
@@ -224,7 +231,57 @@
     transform: translateX(0) translateY(0);
   }
   100% {
-    transform: translateX(-115%) translateY(380%);
+    transform: translateX(-1000%) translateY(0);
+  }
+}
+.slider2 {
+ 
+  top: 67vh;
+  position: absolute;
+  z-index: 2;
+  left: 2vw;
+  width: 10vw;
+  gap: 1rem;
+  display: flex;
+  gap: 2rem;
+  animation: moveCenterToLeftRight2 25s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes moveCenterToLeftRight2 {
+  0% {
+    transform: translateX(-1000%) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.bkc_image{
+  position: absolute;
+  z-index: 3;
+  top: 46vh;
+  left: 77vw;
+  cursor: pointer;
+}
+
+.bkc_image:hover{
+animation: shaking 0.45s infinite;
+}
+
+@keyframes shaking{
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25%{
+    transform: translateX(3px) translateY(3px);
+
+  }
+  50%{
+    transform: translateX(-3px) translateY(-3px);
+
+  }
+  100% {
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -234,10 +291,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 9vw;
-  color: #fff;
+  top: 15vw;
+  color: black;
   font-family: Super Comic;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -316,13 +373,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 17vw;
-  color: #fff;
+  top: 24vw;
+  color: black;
   text-align: center;
   font-family: Comic Neue;
   font-size: 1.4vw;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   line-height: 150%; /* 30px */
   letter-spacing: 0.4px;
   // text-transform: lowercase;
@@ -622,6 +679,12 @@
   // height:30vh;
   width: 33.3vw;
 }
+
+.imgg11{
+  width: 22rem;
+
+}
+
 .yellowmob {
   width: 100vw;
   height: 81rem;
@@ -693,10 +756,7 @@
     min-height: 95vw;
   }
 
-  .home2ndBack {
-    // height: 95vw;
-    height: 112%;
-  }
+
   .aboutUs {
     top: 14vw;
     font-size: 1.4rem;
@@ -768,4 +828,18 @@
   .singBack{
     height: 113%;
   }
+}
+
+.homenewbox{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.img_Pronite{
+  position: absolute;
+  width: 103vw;
+  left: -1rem;
+  height: 109vh;
+  z-index: 1;
 }
