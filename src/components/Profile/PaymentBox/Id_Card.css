@@ -109,7 +109,7 @@
   .generate
   {
     /* height: 6vh; */
-    background-color: white;
+    /* background-color: white; */
     color: black;
     margin-top: 4vh;
     /* margin-bottom: 4vh; */
@@ -118,6 +118,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f7b900;
+    font-weight: 550;
+    border-color: #f7b900;
+  }
+  .generate:hover{
+    background: transparent;
+    color: #f7b900;
   }
   .not-download
   {
@@ -135,7 +142,7 @@
   .generate1
   {
     /* height: 6vh; */
-    background-color: white;
+    /* background-color: white; */
     color: black;
     margin-top: 4vh;
     margin-bottom: 4vh;
@@ -144,6 +151,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f7b900;
+    font-weight: 550;
+    border-color: #f7b900;
+  }
+  .generate1:hover{
+    background: transparent;
+    color: #f7b900;
+  }
+  .generate:hover .downloadsign{
+    color: #f7b900;
   }
   .id_card_uploadphoto_text
   {
@@ -161,6 +178,9 @@
     height: 12px;
     width: 12px;
   }
+  /* .downloadsign:hover{
+    color: #f7b900;
+  } */
 
   .preview
   {
