@@ -38,6 +38,17 @@
   align-items: center;
   overflow: scroll;
 }
+.imagesBox::-webkit-scrollbar{
+  width: 0px !important;
+} 
+
+.imagesBox::-webkit-scrollbar-thumb{
+  background: none !important;
+}
+
+.imagesBox::-webkit-scrollbar-track{
+  background: none !important;
+}   
 
 .subtitleBox {
   margin-top: 2rem;
@@ -89,8 +100,8 @@
 * {
   -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
-  /* display: none; */
+.home::-webkit-scrollbar {
+  display: none;
 }
 
 

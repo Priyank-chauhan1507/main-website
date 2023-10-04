@@ -336,6 +336,24 @@ animation: shaking 0.45s infinite;
   width: 100vw;
   top: -5rem;
 }
+.home2ndBackmob{
+  display: none;
+}
+.img_Pronite{
+  position: absolute;
+  width: 103vw;
+  left: -1rem;
+  height: 109vh;
+  z-index: 1;
+}
+.img_mobPronite{
+  display:none;
+}
+.homenewbox{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
 
 @media only screen and (max-width: 768px) {
   .Asso {
@@ -344,6 +362,42 @@ animation: shaking 0.45s infinite;
   }
   .mobtext{
     display: none;
+  }
+  .home2ndBack{
+    display: none;
+  }
+  .home2ndBackmob{
+    display: block;
+    width: 100vw;
+    height: 61vw;
+  }
+  .img_Pronite{
+    display: none;
+  }
+  .img_mobPronite{
+    display:block;
+    position: absolute;
+    z-index: 1;
+    width:100vw;
+    height:58vh;
+  }
+  .bkc_image {
+    position: absolute;
+    z-index: 3;
+    top: 5vw;
+    width: 4rem;
+    left: 87vw;
+    cursor: pointer;
+  }
+  .slider2{
+    top:18vh;
+  }
+  .homenewbox{
+    height:54vh;
+  }
+  .bkc_image{
+    top:0;
+    left:86vw;
   }
 }
 .proNites_alt {
@@ -720,7 +774,7 @@ animation: shaking 0.45s infinite;
   left: -5vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .home {
     min-height: 100vh !important;
     width: 100vw;
@@ -755,7 +809,7 @@ animation: shaking 0.45s infinite;
     // top: 3%;
   }
   .home2nd {
-    min-height: 95vw;
+    min-height: 61vw;
   }
 
 
@@ -796,10 +850,18 @@ animation: shaking 0.45s infinite;
 .pause {
   display: none;
 }
+#homebgmob{
+  display: none;
+}
 
 @media only screen and (max-width: 768px) {
   #homebg1 {
     display: none;
+  }
+  #homebgmob{
+    display:block;
+    position: absolute;
+    width:100vw
   }
 
   .pause {
@@ -832,21 +894,11 @@ animation: shaking 0.45s infinite;
   }
 }
 
-.homenewbox{
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
 
-.img_Pronite{
-  position: absolute;
-  width: 103vw;
-  left: -1rem;
-  height: 109vh;
-  z-index: 1;
-}
 
-@media only screen and (max-width:800px){
+
+
+@media only screen and (max-width:768px){
   .img_Pronite {
     position: absolute;
     width: 121vw;
@@ -858,9 +910,9 @@ animation: shaking 0.45s infinite;
 .bkc_image {
   position: absolute;
   z-index: 3;
-  top: 48vh;
+  
   width: 4rem;
-  left: 79vw;
+  
   cursor: pointer;
 }
 

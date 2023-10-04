@@ -44,7 +44,7 @@ import t4 from '../../assests/t4.webp'
 import t5 from '../../assests/t5.webp'
 import t6 from '../../assests/t6.webp'
 
-import laststrips from '../../assests/laststrips1.png'
+import laststrips from '../../assests/bhosda.webp';
 import yellow from '../../assests/yellowBack.webp'
 import yellowmob from '../../assests/yellowmob.webp'
 import blue from '../../assests/blue.webp'
@@ -53,9 +53,12 @@ import videoBack from '../../assests/after.webp'
 import pause from '../../assests/pause.svg'
 import pause2 from '../../assests/pause2.svg'
 import thomsostrip from '../../assests/thomsostrip.webp'
-import thomso2 from '../../assests/thomso3.svg'
+import Logo from '../../assests/Logo_new.gif'
 import pronite2 from '../../assests/pronite.webp'
 import backchod from '../../assests/backchod.svg'
+import aboutbackmob from "../../assests/Mask group (3).webp";
+import mobpronite from "../../assests/homepronite.webp";
+import homemobnew from "../../assests/homenmbg.webp";
 
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';
@@ -271,11 +274,11 @@ function Home() {
     <div className='home'>
 
       <img src={thomsoblue} id="homebg1" className='homebg' alt="" />
-      {/* <img src={Homebg} id="homebg2" className='homebg' alt="" /> */}
+      <img src={homemobnew} id="homebgmob" className='homebgmob' alt="" />
 
       <Navbar color="transparent" data={user} />
 
-      <img src={thomso2} alt="" className='thomso' />
+      <img src={Logo} alt="" className='thomso' />
 
       {/* <img src={Thomso} alt="loading..." className='thomso'/> */}
       <img src={Belowthomso} alt="" className='b-thomso' style={{opacity:"0"}} />
@@ -306,6 +309,7 @@ function Home() {
 
       <div className='home2nd'>
         <img className='home2ndBack' src={aboutback} alt="about_us" />
+        <img className='home2ndBackmob' src={aboutbackmob} alt="about_usmob" />
         <img className='aboutTop' src={thomsostrip} alt="about_us_top" />
         {/* <div className='slider'> */}
           {/* <img className='aboutTopText1' src={Slidetext} alt="about_us_top" /> */}
@@ -340,6 +344,7 @@ The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or sta
 
           <div style={{position:"relative"}} className='homenewbox'>
 <img src={pronite2} alt="pronite" className='img_Pronite'/>
+<img src={mobpronite} alt="mob-pronite" className='img_mobPronite'/>
 <img src={backchod} alt="bkc" className='bkc_image'/>
           <div className='slider1'>
           <img src={t1} alt="t__new" className='imgg11' />
@@ -451,7 +456,7 @@ The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or sta
           data-aos-duration="1200" >ASSOCIATED CELEBRITIES</div>
 
         <img data-aos="zoom-in"
-          data-aos-duration="1200" src={singers} alt="" className='singers' />
+          data-aos-duration="1200" src={singers} alt="" className='singers' style={{width:"75vw",height:"80vh"}}/>
         <img data-aos="zoom-in"
           data-aos-duration="1200" src={singersmob} alt="" className='singersmob' />
 
