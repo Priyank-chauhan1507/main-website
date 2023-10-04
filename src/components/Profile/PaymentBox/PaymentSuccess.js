@@ -9,6 +9,7 @@ import download from "../../../assests/downloadsign.png"
 import Loader from "../../Loader/Loader"
 
 import spon from '../../../assests/spon.svg'
+import Carousel1 from "../Carousel/Carousel1";
 
 
 const PaymentSuccess = () => {
@@ -28,7 +29,7 @@ const PaymentSuccess = () => {
         // height: "100%",
         textAlign: "center",
         // marginTop: "auto",
-        overflow: "hidden" 
+        // overflow: "hidden" 
       }}
     >
       {/* <Checkmark size={100} /> */}
@@ -54,6 +55,7 @@ const PaymentSuccess = () => {
         Payment Done Successfully
       </h1>
       </div>
+      <Carousel1/>
 {/*       
       <div
         style={{
