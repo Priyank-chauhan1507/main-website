@@ -11,7 +11,8 @@ function CarouselCard({ data }) {
           background: `url(${data?.image})`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
-          width: "14.25vw",
+          width: "100%",
+          height:"32vh"
         }}
       >
         <h1 className="carouselcard_name">{data?.name}</h1>
