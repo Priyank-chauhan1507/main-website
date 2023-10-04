@@ -14,7 +14,7 @@
   width: 80vw;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 5vh auto 0;
 }
 .CommitteeBox
 {
@@ -24,19 +24,18 @@
 .CommitteeBoxImg1
 {
   width: 20vw;
-  height: 68vh;
+  height: 65vh;
 }
 .CommitteeBoxImg2
 {
   width: 20vw;
-  height: 58vh;
-  margin-top: 10.3vh;
+  height: 65vh;
 }
 .CommitteeBoxImg3
 {
   width: 20vw;
-  height: 64vh;
-  margin-top: 5.3vh;
+  height: 65vh;
+  /* margin-top: 5.3vh; */
 }
 .CommitteeBox
 {

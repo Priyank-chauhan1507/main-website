@@ -11,7 +11,7 @@ margin-top:0rem;
 z-index: 1000;
 overflow: hidden;
 /* background-color: black; */
-  background: url(Newfooterbg.webp);
+  background: url('../../assests/Newfooteer');
   background-position: center;
   background-size: cover;
   background-color: white !important;
