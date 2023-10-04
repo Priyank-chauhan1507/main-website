@@ -707,9 +707,11 @@ animation: shaking 0.45s infinite;
 
 .lastDiv {
   position: relative;
-  min-height: 26vw;
+  min-height: 17vw;
   height: auto;
   width: 100vw;
+  background-color: #fff;
+  z-index: 1001;
 }
 
 .lastDivSub {

@@ -70,6 +70,12 @@ const NewPaymentBox = (
       .then((ress) => {
         data = ress.data;
         SetConfig(data[0]);
+        // console.log(data[0], "acco close");
+        if(data[0].all_acco_close == true){
+          setacco(false);
+          setStyle1({ background: "white", color: "black" });
+          setStyle2({ background: "transparent", color: "white" });
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -256,11 +262,12 @@ const NewPaymentBox = (
       const u = response.data;
       // console.log("data", u);
       setLoading(false);
-      if (
+      if(
         u.status == "true" &&
         u.gender == "Female" &&
-        config.girls_payment_close == false
-      ) {
+        config.girls_payment_close == false &&
+        !config.all_acco_close
+      ){
         var temp = paymentData;
         temp.push({ id: input, acco: "true" });
         setPaymentData(temp);
@@ -284,6 +291,32 @@ const NewPaymentBox = (
         clearthomsoid();
       }
 
+      if(u.status === "true" && config.all_acco_close){
+        if(u.gender == "Female"){
+          message.info("Girls payment are closed now");
+          setAddpar(!addpar);
+        }else{
+          var temp = paymentData;
+          temp.push({ id: input, acco: "false" });
+          setPaymentData(temp);
+          var temp1 = paymentData1;
+          temp1.push({ id: input, acco: "false", gender: u.gender });
+          setPaymentData1(temp1);
+          let amount = 0;
+          for (let i = 0; i < paymentData1.length; i++) {
+            if (paymentData1[i].acco == "true") {
+              amount = amount + config.max_amount + config.tax;
+            } else if (paymentData1[i].acco == "false") {
+              amount = amount + config.min_amount + config.tax;
+            }
+          }
+          setTotalpay(amount);
+          setGenderr(u.gender);
+          setAddpar(!addpar);
+          clearthomsoid();
+        }
+      }
+
       if (config.girls_payment_close == true && u.gender == "Female") {
         message.info("Girls payment are closed now");
       }
@@ -291,10 +324,12 @@ const NewPaymentBox = (
       if (u.status == "false") {
         message.error("Invalid Thomso id");
       }
+
       if (u.status == "true" && u.gender == "Male") {
         setMale("Male");
         setGenderr("Male");
       }
+
     } catch (error) {
       console.error("Error checking input:", error);
       // throw error;
@@ -336,6 +371,21 @@ const NewPaymentBox = (
 
     let data = paymentData;
     data[0].acco = acco1;
+    setPaymentData(data);
+
+    setPaying(true);
+    setLoading(false);
+  };
+
+  const paynow_non_acco = () => {
+    setLoading(true);
+    setTotalpay( config.min_amount + config.tax);
+    let data1 = paymentData1;
+    data1[0].acco = "false";
+    setPaymentData(data1);
+
+    let data = paymentData;
+    data[0].acco = "false";
     setPaymentData(data);
 
     setPaying(true);
@@ -408,6 +458,241 @@ const NewPaymentBox = (
   };
 
   const locator = useLocation();
+
+  const AccomodationCondition = () => {
+    if((userDetails?.gender == "Male" || userDetails?.gender == "Others") && (config.all_acco_close) ){
+      return <div
+          className="Payleft-right"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginRight: "20px",
+          }}
+        >
+          <>
+            <p className="Payevent">
+            Accomodation in full now only get ticket for non accomodation
+              (* Accommdation Compulsory for Female)
+            </p>
+            <div className="agree-terms-and-conditions">
+              <input
+                className="agree-checkbox"
+                style={{ cursor: "pointer" }}
+                type="checkbox"
+                checked={agree}
+                onChange={(e) => setAgree(!agree)}
+                required
+              />
+              <a
+                className="agree-a"
+                style={{
+                  color: "white",
+                  cursor: "pointer",
+                }}
+                href="https://drive.google.com/file/d/166MAX7s0VpYPHzaBoDUHY4OzPkWSXGXE/view?usp=drive_link"
+                target="_blank"
+              >
+                Agree Terms and Conditions *
+              </a>
+            </div>
+
+            {checkPayNow() == true && agree == true ? (
+              <button
+                className="PayNowBtnActive"
+                onClick={paynow_non_acco}
+              >
+                {loading ? (
+                  <CircularProgress
+                    color="inherit"
+                    size={20}
+                  />
+                ) : (
+                  "Pay Now"
+                )}
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                    message.info(
+                      "Please agree terms and conditions"
+                    );
+                  }}
+                className="PayNowBtn"
+              >
+                Pay Now
+              </button>
+            )}
+          </>
+        </div>
+    }
+    else if(userDetails?.gender == "Male" || userDetails?.gender == "Others"){
+      return <div
+      className="Payleft-right"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        marginRight: "20px",
+      }}
+    >
+      <>
+        <p className="Payevent">
+          Are you going to take Accommodation in IITR?
+          (* Accommdation Compulsory for Female)
+        </p>
+        <div
+              className="yesNo"
+              style={{ opacity: is_female ? "0.5" : "1" }}
+            >
+              <button
+                className="yesbtn"
+                disabled={is_female}
+                onClick={() => {
+                  setAcco1("true");
+                  Accommdation();
+                }}
+                style={style2}
+              >
+                Yes
+              </button>
+              <button
+                className="nobtn"
+                disabled={is_female}
+                onClick={() => {
+                  setAcco1("false");
+                  noAccommdation();
+                }}
+                style={style1}
+              >
+                No
+              </button>
+            </div>
+        <div className="agree-terms-and-conditions">
+          <input
+            className="agree-checkbox"
+            style={{ cursor: "pointer" }}
+            type="checkbox"
+            checked={agree}
+            onChange={(e) => setAgree(!agree)}
+            required
+          />
+          <a
+            className="agree-a"
+            style={{
+              color: "white",
+              cursor: "pointer",
+            }}
+            href="https://drive.google.com/file/d/166MAX7s0VpYPHzaBoDUHY4OzPkWSXGXE/view?usp=drive_link"
+            target="_blank"
+          >
+            Agree Terms and Conditions *
+          </a>
+        </div>
+
+        {checkPayNow() == true && agree == true ? (
+          <button
+            className="PayNowBtnActive"
+            onClick={paynow}
+          >
+            {loading ? (
+              <CircularProgress
+                color="inherit"
+                size={20}
+              />
+            ) : (
+              "Pay Now"
+            )}
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              if (agree == true) {
+                message.info(
+                  "Please select one accomodation option"
+                );
+              } else {
+                message.info(
+                  "Please agree terms and conditions"
+                );
+              }
+            }}
+            className="PayNowBtn"
+          >
+            Pay Now
+          </button>
+        )}
+      </>
+    </div>
+    }
+    else{
+      return <div
+            className="Payleft-right"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginRight: "20px",
+            }}
+          >
+            <p
+              className="Payevent"
+              style={{ marginBottom: "5vh" }}
+            >
+              {" "}
+              * Accommdation is Compulsory for Female
+            </p>
+            <div
+              className="agree-terms-and-conditions"
+              style={{ marginBottom: "5vh" }}
+            >
+              <input
+                className="agree-checkbox"
+                style={{ cursor: "pointer" }}
+                type="checkbox"
+                checked={agree}
+                onChange={(e) => setAgree(!agree)}
+                required
+              />
+              <a
+                className="agree-a"
+                style={{
+                  color: "white",
+                  cursor: "pointer",
+                }}
+                href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
+                target="_blank"
+              >
+                Agree Terms and Conditions *
+              </a>
+            </div>
+            {agree == true ? (
+              <button
+                className="PayNowBtnActive"
+                onClick={paynow}
+              >
+                {loading ? (
+                  <CircularProgress
+                    color="inherit"
+                    size={20}
+                  />
+                ) : (
+                  "Pay Now"
+                )}
+              </button>
+            ) : (
+              <button
+                onClick={() =>
+                  message.info(
+                    "Please agree terms and conditions"
+                  )
+                }
+                className="PayNowBtn"
+              >
+                Pay Now
+              </button>
+            )}
+          </div>
+    }
+  }
+
   return (
     <>
     {loading && <Loader />}
@@ -729,174 +1014,13 @@ const NewPaymentBox = (
                                 </div>
                               </>
                             </div>
-                            {userDetails?.gender == "Male" ||
-                            userDetails?.gender == "Others" ? (
-                              <div
-                                className="Payleft-right"
-                                style={{
-                                  display: "flex",
-                                  flexDirection: "column",
-                                  marginRight: "20px",
-                                }}
-                              >
-                                <>
-                                  <p className="Payevent">
-                                    Are you going to take Accommodation in IITR?
-                                    (* Accommdation Compulsory for Female)
-                                  </p>
-                                  <div
-                                    className="yesNo"
-                                    style={{ opacity: is_female ? "0.5" : "1" }}
-                                  >
-                                    <button
-                                      className="yesbtn"
-                                      disabled={is_female}
-                                      onClick={() => {
-                                        setAcco1("true");
-                                        Accommdation();
-                                      }}
-                                      style={style2}
-                                    >
-                                      Yes
-                                    </button>
-                                    <button
-                                      className="nobtn"
-                                      disabled={is_female}
-                                      onClick={() => {
-                                        setAcco1("false");
-                                        noAccommdation();
-                                      }}
-                                      style={style1}
-                                    >
-                                      No
-                                    </button>
-                                  </div>
-                                  <div className="agree-terms-and-conditions">
-                                    <input
-                                      className="agree-checkbox"
-                                      style={{ cursor: "pointer" }}
-                                      type="checkbox"
-                                      checked={agree}
-                                      onChange={(e) => setAgree(!agree)}
-                                      required
-                                    />
-                                    <a
-                                      className="agree-a"
-                                      style={{
-                                        color: "white",
-                                        cursor: "pointer",
-                                      }}
-                                      href="https://drive.google.com/file/d/166MAX7s0VpYPHzaBoDUHY4OzPkWSXGXE/view?usp=drive_link"
-                                      target="_blank"
-                                    >
-                                      Agree Terms and Conditions *
-                                    </a>
-                                  </div>
 
-                                  {checkPayNow() == true && agree == true ? (
-                                    <button
-                                      className="PayNowBtnActive"
-                                      onClick={paynow}
-                                    >
-                                      {loading ? (
-                                        <CircularProgress
-                                          color="inherit"
-                                          size={20}
-                                        />
-                                      ) : (
-                                        "Pay Now"
-                                      )}
-                                    </button>
-                                  ) : (
-                                    <button
-                                      onClick={() => {
-                                        if (agree == true) {
-                                          message.info(
-                                            "Please select one accomodation option"
-                                          );
-                                        } else {
-                                          message.info(
-                                            "Please agree terms and conditions"
-                                          );
-                                        }
-                                      }}
-                                      className="PayNowBtn"
-                                    >
-                                      Pay Now
-                                    </button>
-                                  )}
-                                </>
-                              </div>
-                            ) : (
-                              <>
-                                <div
-                                  className="Payleft-right"
-                                  style={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    marginRight: "20px",
-                                  }}
-                                >
-                                  <p
-                                    className="Payevent"
-                                    style={{ marginBottom: "5vh" }}
-                                  >
-                                    {" "}
-                                    * Accommdation is Compulsory for Female
-                                  </p>
-                                  <div
-                                    className="agree-terms-and-conditions"
-                                    style={{ marginBottom: "5vh" }}
-                                  >
-                                    <input
-                                      className="agree-checkbox"
-                                      style={{ cursor: "pointer" }}
-                                      type="checkbox"
-                                      checked={agree}
-                                      onChange={(e) => setAgree(!agree)}
-                                      required
-                                    />
-                                    <a
-                                      className="agree-a"
-                                      style={{
-                                        color: "white",
-                                        cursor: "pointer",
-                                      }}
-                                      href="https://drive.google.com/file/d/1j3SrUhxlt6JUg3kjpK2mSLe6iy3onzCd/view?usp=drive_link"
-                                      target="_blank"
-                                    >
-                                      Agree Terms and Conditions *
-                                    </a>
-                                  </div>
-                                  {agree == true ? (
-                                    <button
-                                      className="PayNowBtnActive"
-                                      onClick={paynow}
-                                    >
-                                      {loading ? (
-                                        <CircularProgress
-                                          color="inherit"
-                                          size={20}
-                                        />
-                                      ) : (
-                                        "Pay Now"
-                                      )}
-                                    </button>
-                                  ) : (
-                                    <button
-                                      onClick={() =>
-                                        message.info(
-                                          "Please agree terms and conditions"
-                                        )
-                                      }
-                                      className="PayNowBtn"
-                                    >
-                                      Pay Now
-                                    </button>
-                                  )}
-                                </div>
-                              </>
-                            )}
+{/* acco non-acco conditions for male and female */}
+                            <div>
+                              {AccomodationCondition()}
+                            </div>
+{/* end page 1 */}
+
                           </div>
                         </>
                       )}
@@ -948,7 +1072,7 @@ const NewPaymentBox = (
                 className="logout_body"
                 style={{ position: "relative", height: "207px" }}
               >
-                {genderr === "Male" ? (
+                {genderr === "Male" && !config.all_acco_close ? (
                   <div className="add-acco">
                     <div className="does-he">
                       <h1 className="dacc">Does he want accomodation?</h1>

@@ -44,7 +44,7 @@ import t4 from '../../assests/t4.webp'
 import t5 from '../../assests/t5.webp'
 import t6 from '../../assests/t6.webp'
 
-import laststrips from '../../assests/laststrips.svg'
+import laststrips from '../../assests/laststrips1.png'
 import yellow from '../../assests/yellowBack.webp'
 import yellowmob from '../../assests/yellowmob.webp'
 import blue from '../../assests/blue.webp'
