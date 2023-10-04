@@ -1463,8 +1463,7 @@ const NewPaymentBox = (
                 <>
                   <img className="PaymentClosedAll" src={Closed} alt="" />
                 </>
-              // ) : config.all_payment_close ? (
-              ) : false ? (
+              ) : config.all_payment_close ? (
                 <>
                   <img className="PaymentClosedAll1" src={Closed1} alt="" />
                 </>
