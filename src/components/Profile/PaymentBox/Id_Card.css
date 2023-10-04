@@ -23,6 +23,12 @@
     justify-content: space-between;
   }
 
+  .xyz{
+    font-size:1.5rem;
+    margin-bottom: 5vh;
+    color:white;
+  }
+
   .id_box_left {
     /* height: 100%; */
     width: 35%;
@@ -30,6 +36,10 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 2vw;
+  }
+
+  .id_card_full_box{
+    height:82vh;
   }
 
   .id_box_right {
@@ -248,6 +258,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    }
+    .xyz{
+      margin-bottom:0px !important;
+      font-size:1.2rem !important;
     }
     .done-img{
       width: 20px;
