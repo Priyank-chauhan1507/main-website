@@ -309,7 +309,7 @@ const Id_Card = () => {
               </div>
 
               <div
-                className="Paycontainer"
+                className="Paycontainer id_card_full_box"
                 style={{
                   display: "flex",
                   flexDirection:"column",
@@ -542,6 +542,9 @@ const Id_Card = () => {
                   marginTop: "5vh",
                 }}
               >
+                 <div className="xyz">
+                  Please Download your ID Card
+                </div>
                 <div className="id_border1">
                   <div className="id_border2">
                     <div className="id_box">
