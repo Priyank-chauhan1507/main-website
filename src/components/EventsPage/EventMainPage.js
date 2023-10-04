@@ -333,7 +333,7 @@ const EventMainPage = ({ events }) => {
                   ) : (
                     <>
                       {paidEvent ? (
-                        <div style={{display:"flex",gap:"40px"}}>
+                        <div >
                           {eventdata[0]?.name == "SILENT DJ" && (
                             <div >
                               <div style={{ color: "white" }}>
