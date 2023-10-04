@@ -38,6 +38,17 @@
   align-items: center;
   overflow: scroll;
 }
+.imagesBox::-webkit-scrollbar{
+  width: 0px !important;
+} 
+
+.imagesBox::-webkit-scrollbar-thumb{
+  background: none !important;
+}
+
+.imagesBox::-webkit-scrollbar-track{
+  background: none !important;
+}   
 
 .subtitleBox {
   margin-top: 2rem;
@@ -89,8 +100,8 @@
 * {
   -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
-  /* display: none; */
+.home::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -178,6 +189,9 @@
   .majorAttractionsContainer {
     width: 100vw;
     padding-top: 12vh;
+    margin-top: -18vh;
+    position: relative;
+    z-index: 1;
     height: 86vh;
     display: flex;
     justify-content: center;
