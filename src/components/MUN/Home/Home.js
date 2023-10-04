@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Home.css";
 import MUNTop from "../../../assests/MUN-Top.webp";
 import BG from "../../../assests/BGMUN.webp";
 import BG_mob from "../../../assests/mun_mob.webp";
@@ -13,7 +12,10 @@ import MUNmob from "../../../components/MUNmobile/HomeMun/HomeMUN";
 import Footer from "../../../components/Navbar/WebNavbarNew";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Loader from "../../Loader/Loader"
+import Loader from "../../Loader/Loader";
+import MUN_Bg1 from "../../../assests/MUN-Bg1.webp";
+import MUN_Bg2 from "../../../assests/MUN-Bg2.webp";
+import "./Home.css";
 
 
 function Home() {
@@ -62,7 +64,10 @@ function Home() {
     {loading && <Loader />}
       {" "}
       <div className="MUN-bg">
-        <img src={BG} className="MUN-Bg" alt="" />
+        <div className="MUN-Bg">
+          <img src={MUN_Bg1} className="Bg-top" alt="" />
+          <img src={MUN_Bg2} className="Bg-bottom" alt="" />
+        </div>
         <Navbar color="transparent" />
         <div className="top-MUN-img">
           <img src={MUNTop} alt="" className="topImgMUN iitr_mun" />
