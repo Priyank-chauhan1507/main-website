@@ -121,7 +121,7 @@ const Carousel1 = () => {
         ))} */}
       <div className="payCarousel" >
         {events.filter((el) => {
-          return el.is_payment === true && el.name !== "SILENT DJ";
+          return el.is_payment === true;
         }).slice(0,4).map((item) => (
           <CarouselCard data={item} />
         ))}
