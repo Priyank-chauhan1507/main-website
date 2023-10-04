@@ -5,16 +5,20 @@
   gap: 12px;
   align-items: center;
 }
-.lsp-c1{
+
+.lsp-c1 {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 7px 25px;
 }
-.lsp-c2,.lsp-c3{
+
+.lsp-c2,
+.lsp-c3 {
   margin-left: 23px;
 }
+
 .lsp-img1 {
   height: 15vmin;
   width: 15vmin;
@@ -24,17 +28,17 @@
   margin-top: 36px;
   max-width: 170px;
   max-height: 170px;
-  border-radius:100px;
+  border-radius: 100px;
   border-style: solid;
   border-color: #FFF;
   border-width: 1px;
 }
 
-.lsp-text0{
-  color:white;
-  font-size:12px;
-  font-family:Comic Neue;
-  margin-top:9px;
+.lsp-text0 {
+  color: white;
+  font-size: 12px;
+  font-family: Comic Neue;
+  margin-top: 9px;
   display: flex;
   justify-content: center;
 }
@@ -50,7 +54,7 @@
   align-items: center;
   text-align: center;
   letter-spacing: -0.02em;
-  gap:20px;
+  gap: 20px;
 }
 
 .lsp-text2 {
@@ -77,7 +81,7 @@
 .lsp-box {
   margin-top: 10vh;
   margin-left: 2vw;
-  margin-right:-1vw;
+  margin-right: -1vw;
   /* background-color: black; */
   display: flex;
   flex-direction: column;
@@ -85,14 +89,18 @@
   align-items: center;
   width: 15vw;
   height: 75vh;
-    gap: 7vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  gap: 7vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
 }
 
-.lsp-box::-webkit-scrollbar{
+.lsp-box::-webkit-scrollbar {
   display: none !important;
+}
+
+.css-b62m3t-container {
+  color: black;
 }
 
 .c1-text {
@@ -115,7 +123,7 @@
   /* line-height: 20px; */
   /* 125% */
   letter-spacing: -0.32px;
-  text-decoration:none !important;
+  text-decoration: none !important;
 }
 
 .c2-text {
@@ -123,19 +131,19 @@
   font-family: "Oxanium";
   font-style: normal;
   font-weight: 400;
-  text-decoration:none !important;
+  text-decoration: none !important;
   font-size: 18px;
   /* line-height: 20px; */
   /* display: flex;
   align-items: center; */
   letter-spacing: -0.02em;
   color: #FFF;
-font-family: Comic Neue;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-/* line-height: 15.748px; 98.427% */
-letter-spacing: -0.32px;
+  font-family: Comic Neue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 15.748px; 98.427% */
+  letter-spacing: -0.32px;
 }
 
 .c2-text:hover {
@@ -150,10 +158,10 @@ letter-spacing: -0.32px;
   height: 7vh;
   flex-direction: column;
   justify-content: center;
-  margin-top:0vh;
+  margin-top: 0vh;
 }
 
-.payment-profile{
+.payment-profile {
   /* padding-top:70px!important; */
 }
 
@@ -162,20 +170,27 @@ letter-spacing: -0.32px;
     text-align: center;
     font-size: 13px;
   }
+
   .lsp-text1 {
-    font-size:16px;
+    font-size: 16px;
   }
-  .c1-text,.c2-text{
+
+  .c1-text,
+  .c2-text {
     font-size: 16px;
   }
 }
-@media only screen and (max-width: 1000px){
-  .c1-text,.c2-text{
-    font-size:13px;
+
+@media only screen and (max-width: 1000px) {
+
+  .c1-text,
+  .c2-text {
+    font-size: 13px;
   }
 }
-@media only screen and (max-width:950){
-  .c1-text{
+
+@media only screen and (max-width:950) {
+  .c1-text {
     font-size: 10px;
   }
 }
@@ -193,22 +208,25 @@ letter-spacing: -0.32px;
   .lsp-text1 {
     text-align: center;
     font-size: 13px;
-    gap:15px;
+    gap: 15px;
   }
-  .lsp-text2{
+
+  .lsp-text2 {
     font-size: 10px;
   }
 
   /* .lsp-c1 {
     margin-left: 2vw;
   } */
-  .c1-text,.c2-text{
+  .c1-text,
+  .c2-text {
     font-size: 10px;
   }
 }
-@media only screen and (max-width: 900px){
-  .lsp-text1{
-    gap:10px;
+
+@media only screen and (max-width: 900px) {
+  .lsp-text1 {
+    gap: 10px;
   }
 }
 
@@ -217,32 +235,37 @@ letter-spacing: -0.32px;
     text-align: center;
     font-size: 12px;
   }
+
   /* .lsp-pic {
     padding-left: 2vw;
   } */
   /* .lsp-text0{
     margin-left:-2vw;
   } */
-  .lsp-text2{
+  .lsp-text2 {
     font-size: 9px;
   }
 }
-@media only screen and (max-width:768px){
-  .lsp-text1{
+
+@media only screen and (max-width:768px) {
+  .lsp-text1 {
     text-align: center;
     font-size: 20px;
-    gap:25px;
+    gap: 25px;
   }
-  .lsp-text2{
+
+  .lsp-text2 {
     font-size: 16px;
   }
 }
-@media only screen and (max-width:360px){
-  .lsp-text1{
+
+@media only screen and (max-width:360px) {
+  .lsp-text1 {
     /* display: block; */
     font-size: 14px !important;
   }
-  .lsp-text2{
+
+  .lsp-text2 {
     /* display: block; */
     font-size: 12px !important;
   }
