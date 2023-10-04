@@ -6,6 +6,11 @@
     width:100vw;
     /* height:100vh; */
 }
+.ourteampage1::-webkit-scrollbar{
+    height: 0;
+    width:0;
+    display: none;
+}
 .ourteam_heading{
     display:flex;
     justify-content: center;
@@ -21,8 +26,8 @@
     align-items: flex-end;
 }
 .ourteamimg1{
-    width:20vw;
-    height:auto;
+    width:24vw;
+    height:54vh;
 }
 .convenordiv{
     position: absolute;
@@ -32,8 +37,8 @@
     flex-shrink: 0;
 }
 .ourteamimg2{
-    width:55vw;
-    height:auto;
+    width:60vw;
+    height:52vh;
 }
 .ourteamimgdiv1{
     display: flex;  
@@ -82,12 +87,12 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin-top: 2rem;
-    margin-left:1.5vw;
+    margin-left:1.3vw;
     padding-left:1vw;
     gap:2vw;
     /* position: absolute; */
     top: 33vh;
-    width: 85vw;
+    width: 100vw;
 }
 .verticalhead-list{
     padding-left: 10vw;
@@ -95,12 +100,12 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin-top: 2rem;
-    margin-left:1.5vw;
+    margin-left:1.3vw;
     padding-left:1vw;
     gap:2vw;
     /* position: absolute; */
     top: 33vh;
-    width: 85vw;
+    width: 100vw;
 }
 .member1{
     border-style: solid;
@@ -132,8 +137,10 @@
     color: #FFAF02;
     font-weight: 400;
     letter-spacing: 1.762px;
+    -webkit-text-stroke: 3px black;
 
 }
+/* .memb-name {-webkit-text-stroke: 1px black;} */
 
 .membphone{
     display: flex;
@@ -163,4 +170,108 @@ letter-spacing: 0.378px;
 .media-icon{
     width:2vw;
     cursor: pointer;
+}
+.member1:hover{
+    box-shadow:3px 3px 0px 0px #000;
+}
+.ourteammobpage1{
+    display: none;
+}
+@media screen and (max-width:1700px){
+    .coconvenor-list,.verticalhead-list{
+        margin-left:1.2vw;
+    }
+}
+@media screen and (max-width:1400px){
+    .coconvenor-list,.verticalhead-list{
+        margin-left:0.9vw;
+    }
+}
+@media screen and (max-width:1000px){
+    .coconvenor-list,.verticalhead-list{
+        margin-left:0.4vw;
+    }
+}
+@media screen and (max-width:850px){
+    .coconvenor-list,.verticalhead-list{
+        margin-left:0.2vw;
+    }
+}
+
+@media screen and (max-width:768px){
+    .ourteampage1{
+        display:none;
+    }
+    .ourteammobpage1{
+        display:block;
+        width:100vw;
+        background-color: #ffffff;
+       
+    }
+    .ourteammobimg1{
+        width:50vw;
+    }
+    .ourteammobimg2{
+        width:50vw;
+    }
+    .convenordiv{
+        width:40vw;
+    }
+    .ourteammobimgdiv1{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:17vh 0 10vh 0;
+    }
+    .ourteammob_imgdiv1{
+        display: flex;
+        align-items: flex-end;
+    }
+    .coconvenormob-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        padding: 0;
+        gap:2vh;
+    }
+    .verticalheadmob-list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            padding: 0;
+            gap:2vh;
+        
+    }
+    .member-identity{
+        width: 56vw;
+        margin: 2vw;
+        height: 35vh;
+    }
+    .co-con{
+        width: 50vw;
+        height:auto;
+    }
+    .memb-name{
+        font-size:10vw;
+    }
+    .memb-phone{
+        font-size:4vw;
+    }
+    .phone-img{
+        width:3vw;
+    }
+    .media-icon{
+        width:5vw;
+    }
+    .memb-media{
+        gap:5vw;
+    }
+    .memberimg{
+        margin: 4vh 0 2vh 10vw;
+    }
 }

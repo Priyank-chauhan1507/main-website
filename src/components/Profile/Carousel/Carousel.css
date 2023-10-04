@@ -4,9 +4,10 @@
     border: 2px solid rgba(42, 42, 42, 0.98);
     background: rgba(0, 0, 0, 0.38);
     backdrop-filter: blur(6px);
-    width: 71vw;
-    height: 55vh;
+    width: 66vw;
+    height: 45vh;
     padding-top: 2vh;
+    margin-top: 10px;
 }
 
 .car_head_txt {
@@ -38,14 +39,30 @@ width: 100%;
 .payCarousel {
     display: flex;
     gap: 10px;
-    width: 100%;
-    margin-left: 3%;
+    width: 97%;
+    margin: 0 1vw;
     overflow-x: clip;
     /* translate: 20vh; */
 }
-
+@media (max-width:1000px) {
+    .payCarousel{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+       
+    }
+    .carouselcard {
+        margin: 0 10px;
+        width: 93% !important;
+    }
+    #white_div{
+        height: auto;
+        margin-top: 10px;
+    }
+}
 .carouselcard {
     margin: 0 10px;
+    width: 25%;
 }
 
 .carousel_events1 {
