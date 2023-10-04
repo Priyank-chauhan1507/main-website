@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import ourteaming1 from "../../assests/ourteamimg1.webp";
-import ourteamimg2 from "../../assests/ourteamimg2.webp";
+import ourteaming1 from "../../assests/ourteamblueimg.webp";
+import ourteamimg2 from "../../assests/ourteamyellowimg.webp";
 import convenorimg from "../../assests/convenor.webp";
 import "./ourteams.css";
 import Navbar from "../../components/EventsNavbar/Eventsnavbar";
@@ -12,6 +12,10 @@ import blackfb from "../../assests/blackfb.svg";
 import blackinsta from "../../assests/blackinsta.svg";
 import blackthread from "../../assests/blackthread.svg";
 import verticalhead from "../../assests/VERTICLE-HEAD.webp";
+import Footer from '../../components/Navbar/WebNavbarNew';
+import ourteammobimg1 from "../../assests/mobteamyellowimg.webp";
+import ourteammobimg2 from "../../assests/mobteamblueimg.webp";
+import Mobfooter from "../../components/Footer/Mobfooter";
 
 export default function ourteams() {
     const coconvenorlist=[
@@ -192,7 +196,92 @@ export default function ourteams() {
                 </div>
 
             </div>
+            <div className="ourteamfooter" style={{borderRadius:"0",backgroundColor:"black"}}>
+            <Footer />
+            </div>
         </div>
+    </div>
+    <div className="ourteammobpage1">
+        <div className="ourteammobnav" style={{backgroundColor:"#2c2c2c"}}>
+        <Navbar/>
+        </div>
+        <div className="ourteammobimgdiv1">
+                <div className="ourteammob_imgdiv1">
+                    <img src={ourteammobimg1} className='ourteammobimg1' alt='ourteammobimg1'/>
+                    <img src={convenorimg} className='convenordiv' alt='convenordiv'/>
+                </div>
+        <div className="ourteammob_imgdiv2">
+            <img src={ourteammobimg2} className='ourteammobimg2' alt='ourteammobimg2'/>
+
+        </div>
+        </div>
+        <div className="coconvenor">
+                <div className="co-con-heading">
+                <img src={coconvenor} className='co-con' alt='co-con'/>
+                </div>
+                <div className="coconvenormob-list">
+                    {coconvenorlist.map(({id, membername,phone,facebook,insta,thread,img},index)=>{
+                        return(
+                            <div className="member1" key={index}>
+                            <div className="memberimg">
+                                <img className='member-identity' src={img} alt="..."/>
+                            </div>
+                            <div className="membname">
+                                <p className="memb-name">{membername}</p>
+                            </div>
+                            <div className="membphone">
+                                <img className='phone-img' src={phoneicon} alt="..."/>
+                                <p className='memb-phone'>{phone}</p>
+                            </div>
+                            <div className="memb-media">
+                                <img className="media-icon"src={blackfb} onClick={()=>window.open({facebook},"_blank")}/>
+                                <img className="media-icon"src={blackinsta} onClick={()=>window.open({insta},"_blank")}/>
+                                <img className="media-icon"src={blackthread} onClick={()=>window.open({thread},"_blank")}/>
+                            </div>
+                            </div>
+
+
+                        )
+                    })}
+
+                </div>
+
+            </div>
+            <div className="vertical-head">
+                <div className="co-con-heading">
+                <img src={verticalhead} className='co-con' alt='co-con'/>
+                </div>
+                <div className="verticalheadmob-list">
+                    {verticalheadlist.map(({id, membername,phone,facebook,insta,thread,img},index)=>{
+                        return(
+                            <div className="member1" key={index}>
+                            <div className="memberimg">
+                                <img className='member-identity' src={img} alt="..."/>
+                            </div>
+                            <div className="membname">
+                                <p className="memb-name">{membername}</p>
+                            </div>
+                            <div className="membphone">
+                                <img className='phone-img' src={phoneicon} alt="..."/>
+                                <p className='memb-phone'>{phone}</p>
+                            </div>
+                            <div className="memb-media">
+                                <img className="media-icon"src={blackfb} onClick={()=>window.open({facebook},"_blank")}/>
+                                <img className="media-icon"src={blackinsta} onClick={()=>window.open({insta},"_blank")}/>
+                                <img className="media-icon"src={blackthread} onClick={()=>window.open({thread},"_blank")}/>
+                            </div>
+                            </div>
+
+
+                        )
+                    })}
+
+                </div>
+
+            </div>
+            <div className="teammobfooter">
+                <Mobfooter/>
+            </div>
     </div>
     </>
   )

@@ -27,6 +27,7 @@
       }
     
       .heading {
+        padding-top: 4vh;
         margin-bottom: 3vh;
         font-size: 1rem;
         font-weight: 700;
