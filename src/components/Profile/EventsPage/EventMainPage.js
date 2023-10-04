@@ -36,6 +36,7 @@ const EventMainPage = ({ events }) => {
         )
         .then((response) => {
           setData(response.data);
+          console.log(response.data)
           dispatch({
             type: "SET_EVENTS",
             payload: {

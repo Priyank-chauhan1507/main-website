@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap');
+.ourteampage1{
+    background-color: #ffffff;
+    width:100vw;
+    /* height:100vh; */
+}
+.ourteam_heading{
+    display:flex;
+    justify-content: center;
+    margin-top: 10vh;
+    padding: 1rem;
+}
+.meet{
+    width:30vw;
+    height:auto;
+}
+.ourteam_imgdiv1{
+    display: flex;
+    align-items: flex-end;
+}
+.ourteamimg1{
+    width:20vw;
+    height:auto;
+}
+.convenordiv{
+    position: absolute;
+    z-index: 1;
+    width:20vw;
+    height:auto;
+    flex-shrink: 0;
+}
+.ourteamimg2{
+    width:55vw;
+    height:auto;
+}
+.ourteamimgdiv1{
+    display: flex;  
+    justify-content: center;
+    padding: 10vh 0 3vh 0;  
+
+}
+.conv_text{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    padding-left: 7vw;
+    padding-top: 3vh;
+}
+.ourteam_imgdiv2{
+    display: flex;
+    flex-shrink: 0;
+}
+.conv_text h3{
+    font-family: Bangers;
+    letter-spacing: 2.56px;
+    font-size: 2.5vw;
+    padding-bottom: 1vh;
+}
+.conv_text h4{
+    font-family: comic neue;
+    font-size: 1.7vw;
+    padding-bottom: 3vh;
+}
+.conv_text h5{
+    font-family: comic neue;
+    width:44vw;
+}
+.co-con-heading{
+    display: flex;
+    justify-content: center;
+    margin:8vh 0 15vh 0;
+}
+.co-con{
+    width:25vw;
+    height:auto;
+}
+.coconvenor-list{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 2rem;
+    margin-left:1.5vw;
+    padding-left:1vw;
+    gap:2vw;
+    /* position: absolute; */
+    top: 33vh;
+    width: 85vw;
+}
+.verticalhead-list{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 2rem;
+    margin-left:1.5vw;
+    padding-left:1vw;
+    gap:2vw;
+    /* position: absolute; */
+    top: 33vh;
+    width: 85vw;
+}
+.member1{
+    border-style: solid;
+    border-color: black;
+    /* border-radius: 15px; */
+    border-width: 2px;
+    background-color: #ffffff;
+    margin-bottom: 5vh;
+}
+.memberimg{
+    background-image: url(../../assests/memberimgbg.webp);
+    object-fit: cover;
+    margin:3vh 0 2vh 3vw;
+    border-style: solid;
+}
+.member-identity{
+    width: 15vw;
+    margin:2vw;
+    height:30vh;
+    /* border-radius:15px ; */
+}
+.membname{
+    display: flex;
+    justify-content: center;
+}
+.memb-name{
+    font-family: Bangers;
+    font-size: 3vw;
+    color: #FFAF02;
+    font-weight: 400;
+    letter-spacing: 1.762px;
+
+}
+
+.membphone{
+    display: flex;
+    justify-content: center;
+    gap:2vw;
+}
+.memb-phone{
+    color: #202020;
+leading-trim: both;
+text-edge: cap;
+font-family: Comic Neue;
+font-size: 2vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.378px;
+}
+.phone-img{
+    width:1.6vw;
+}
+.memb-media{
+    display: flex;
+    justify-content: center;
+    padding:2vh 0 2vh 0;
+    gap:2vw;
+}
+.media-icon{
+    width:2vw;
+    cursor: pointer;
+}

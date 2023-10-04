@@ -57,6 +57,7 @@ import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
 import Renderer from "./PdfRenderer/Renderer"
+import Ourteam from "./components/Teams/ourteams";
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 // ReactGA4.initialize("G-FG974BLVDN");
@@ -161,6 +162,7 @@ useEffect(() => {
           <Route exact={true} path="/PopUp" element={<PopUP/>} />
           <Route exact={true} path="/Carousel" element={<Carousel1/>} />
           <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
+          <Route exact={true} path="/our_team" element={<Ourteam/>} />
         </Routes>
       </Router>
     </>

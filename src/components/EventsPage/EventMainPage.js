@@ -333,9 +333,9 @@ const EventMainPage = ({ events }) => {
                   ) : (
                     <>
                       {paidEvent ? (
-                        <div>
+                        <div >
                           {eventdata[0]?.name == "SILENT DJ" && (
-                            <>
+                            <div >
                               <div style={{ color: "white" }}>
                                 Choose Your Slot
                                 <Select
@@ -351,7 +351,7 @@ const EventMainPage = ({ events }) => {
                                   isSearchable={false}
                                 />
                               </div>
-                            </>
+                            </div>
                           )}
                           <button
                             className="events-left-event5-btn1"
