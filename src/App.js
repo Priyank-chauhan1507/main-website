@@ -57,7 +57,11 @@ import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
 import Renderer from "./PdfRenderer/Renderer"
+
 import Ourteam from "./components/Teams/ourteams";
+
+import NewSponsers from "./components/NewSponsers/NewSponsers";
+
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 // ReactGA4.initialize("G-FG974BLVDN");
@@ -107,6 +111,7 @@ useEffect(() => {
     <>
       <Router>
         <Routes>
+        
           <Route exact={true} path="/" element={<Home />} />
           {/* <Route exact={true} path="/personaldetails" element={<PersonalDetails />} /> */}
           <Route exact={true} path="/register" element={<CollegeDetails />} />
@@ -115,6 +120,7 @@ useEffect(() => {
           <Route exact={true} path="/login" element={<Login />} />
           <Route exact={true} path="/forgotpassword" element={<Forget/>} />
           <Route exact={true} path="/otpverify" element={<RegPage />} />
+          
           <Route
             exact={true}
             path="/auth/reset-password/:email/:token"
@@ -162,7 +168,11 @@ useEffect(() => {
           <Route exact={true} path="/PopUp" element={<PopUP/>} />
           <Route exact={true} path="/Carousel" element={<Carousel1/>} />
           <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
+
           <Route exact={true} path="/our_team" element={<Ourteam/>} />
+
+          <Route exact={true} path="/spons" element={<NewSponsers />} />
+
         </Routes>
       </Router>
     </>
