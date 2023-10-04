@@ -9,7 +9,7 @@ import EventMainPageMob from "./EventMainPageMob";
 import { Store } from "../../Config/Store";
 import { connect } from "react-redux";
 import { escapeRegex } from "./helper";
-import { ImCross } from "react-icons/im";
+// import { ImCross } from "react-icons/im";
 import Navbar2 from "../EventsNavbar/Eventsnavbar";
 import bgmobile from "../../assests/bgmobile.webp";
 import bg from "../../assests/eventback.webp";
@@ -55,14 +55,17 @@ const EventMainPage = ({ events }) => {
     getEvents();
   }, []);
 
-  // useEffect(() => {
-  //   for (let num = 0; num < events1.length; num++) {
-  //     if (events1[num]?.event == id && events1[num]?.event__is_payment == true) {
-  //       setPaidEvent(true)
-  //       break;
-  //     }
-  //   }
-  // }, [events1])
+  useEffect(() => {
+    for (let num = 0; num < events1.length; num++) {
+      if (
+        events1[num]?.event == id &&
+        events1[num]?.event__is_payment == true
+      ) {
+        setPaidEvent(true);
+        break;
+      }
+    }
+  }, [events1]);
 
   const getEvents = async () => {
     axios
@@ -78,59 +81,6 @@ const EventMainPage = ({ events }) => {
       .catch((err) => {
         console.log(err);
       });
-  };
-  const onSubmit = (e) => {
-    let exit = false;
-    e.preventDefault();
-    if (!localStorage.getItem("token")) {
-      navigate("/login");
-    } else {
-      setLoading(true);
-      const eventuser = {
-        event: eventdata[0]?.id,
-        participant: localStorage.getItem("id"),
-        team_leader_name: registerData.team_leader_name,
-        team_name: registerData.team_name,
-        sub_event: registerData.sub_event,
-      };
-
-      //  console.log(events1);
-      for (let num = 0; num < events1.length; num++) {
-        if (
-          events1[num].event == eventuser.event &&
-          events1[num].sub_event == eventuser.sub_event
-        ) {
-          exit = true;
-          setExist(true);
-          break;
-        }
-      }
-      if (exit) {
-        message.info(
-          `You are already registered for ${eventdata[0]?.name} ${eventuser.sub_event}`
-        );
-        setLoading(false);
-        navigate("/pevents");
-      } else {
-        axios
-          .post("/apiV1/registerevent", eventuser)
-          .then((res) => {
-            if (res.status == 201) {
-              message.success(
-                `🎉You are registerd successfully for ${eventdata[0]?.name} ${eventuser.sub_event}`
-              );
-              navigate("/pevents");
-
-              setregister(true);
-              getEvents();
-            }
-            setLoading(false);
-          })
-          .catch((err) => {
-            console.log(err.response.data);
-          });
-      }
-    }
   };
 
   useEffect(() => {
@@ -196,27 +146,90 @@ const EventMainPage = ({ events }) => {
   async function payForEvent() {
     setLoading(true);
 
-    try {
-      const response = await axios.post(
-        `https://api1.thomso.in/apiV1/paid_events_request`,
-        { event_name: eventdata[0].name, slot: slot }
-      );
-      const u = response.data;
-      // console.log("data", response.data);
-      if (response.data.status == "true") {
-        setTimeout(() => {
-          window.open(response.data.payment_url, "_blank");
-        });
-      } else {
-        message.error(`${response.data.error}`);
-      }
+    if(eventdata[0].name == "SILENT DJ" && slot.length < 2){
+      message.error("Please Select any slot");
       setLoading(false);
-    } catch (error) {
-      console.error("Error:", error);
-      setLoading(false);
-    }
-  }
+    }else{
 
+      try{
+        const response = await axios.post(
+          `https://api1.thomso.in/apiV1/paid_events_request`,
+          { event_name: eventdata[0].name, slot: slot }
+        );
+        const u = response.data;
+        // console.log("data", response.data);
+        if (response.data.status == "true") {
+          setTimeout(() => {
+            window.open(response.data.payment_url, "_blank");
+          });
+        } else {
+          message.error(`${response.data.error}`);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error("Error:", error);
+        setLoading(false);
+      }
+    }
+
+  }
+  const onSubmit = (e) => {
+    let exit = false;
+    e.preventDefault();
+    if (!localStorage.getItem("token")) {
+      navigate("/login");
+    } else {
+      setLoading(true);
+      const eventuser = {
+        event: eventdata[0]?.id,
+        participant: localStorage.getItem("id"),
+        team_leader_name: registerData.team_leader_name,
+        team_name: registerData.team_name,
+        sub_event: registerData.sub_event,
+      };
+
+      //  console.log(events1);
+      for (let num = 0; num < events1.length; num++) {
+        if (
+          events1[num].event == eventuser.event &&
+          events1[num].sub_event == eventuser.sub_event
+        ) {
+          exit = true;
+          setExist(true);
+          break;
+        }
+      }
+      if (exit) {
+        message.info(
+          `You are already registered for ${eventdata[0]?.name} ${eventuser.sub_event}`
+        );
+        setLoading(false);
+        if (eventdata[0].is_payment !== true) {
+          navigate("/pevents");
+        }
+      } else {
+        axios
+          .post("/apiV1/registerevent", eventuser)
+          .then((res) => {
+            if (res.status == 201) {
+              message.success(
+                `🎉You are registerd successfully for ${eventdata[0]?.name} ${eventuser.sub_event}`
+              );
+              if (eventdata[0].is_payment !== true) {
+                navigate("/pevents");
+              }
+
+              setregister(true);
+              getEvents();
+            }
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.log(err.response.data);
+          });
+      }
+    }
+  };
   return (
     <>
       <div style={{ overflowY: "hidden" }}>
@@ -320,9 +333,9 @@ const EventMainPage = ({ events }) => {
                   ) : (
                     <>
                       {paidEvent ? (
-                        <div>
+                        <div >
                           {eventdata[0]?.name == "SILENT DJ" && (
-                            <>
+                            <div >
                               <div style={{ color: "white" }}>
                                 Choose Your Slot
                                 <Select
@@ -338,7 +351,7 @@ const EventMainPage = ({ events }) => {
                                   isSearchable={false}
                                 />
                               </div>
-                            </>
+                            </div>
                           )}
                           <button
                             className="events-left-event5-btn1"

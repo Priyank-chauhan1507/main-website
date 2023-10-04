@@ -4,10 +4,16 @@ import diamond from "./images/diamond.svg";
 import events from "./images/Events.svg";
 import { useState, useEffect } from "react";
 import axios from "axios";
-const EventSideMenu = ({ changeCategory, data, activeCategory }) => {
-  // console.log(data);
+import { connect } from "react-redux";
+const EventSideMenu = ({
+  changeCategory,
+  data,
+  activeCategory,
+  userDetails,
+}) => {
   const [active, setActive] = useState(null);
   // console.log(activeCategory);
+  // console.log(userDetails)
   return (
     <div className="ESM-Conatiner">
       <div className="ESM-Conatiner-header">
@@ -25,7 +31,7 @@ const EventSideMenu = ({ changeCategory, data, activeCategory }) => {
           All
         </span>
         {data &&
-          data.map((data) => {
+          data.filter((el)=>{return el.name !== "CULTURAL WORKSHOP"}).map((data) => {
             return (
               <span
                 className={
@@ -43,5 +49,10 @@ const EventSideMenu = ({ changeCategory, data, activeCategory }) => {
     </div>
   );
 };
-
-export default EventSideMenu;
+const mapStateToProps = (state) => {
+  let userDetails = state.user.user;
+  return {
+    userDetails,
+  };
+};
+export default connect(mapStateToProps, null)(EventSideMenu);

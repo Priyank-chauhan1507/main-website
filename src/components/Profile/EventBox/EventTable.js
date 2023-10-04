@@ -8,7 +8,7 @@ function EventTable() {
     navigate(`/events/${e}`);
   };
   return (
-    <div style={{ top: "10vh", right: "2vw", width: "70vw" }} className="drop">
+    <div style={{ top: "10vh", right: "2vw", width: "72vw" }} className="drop">
          <div className="drop-row">
                     <div className="col col-yellow">Choreo</div>
                     <div
@@ -611,6 +611,98 @@ function EventTable() {
                       }}
                     >
                       Vlogging*
+                    </div>
+                  </div>
+                  <div className="drop-row">
+                    <div className="col col-yellow">Fitness</div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(92);
+                      }}
+                    >
+                      Power Lifting
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(89);
+                      }}
+                    >
+                      Body Building
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(91);
+                      }}
+                    >
+                      Burn To Earn
+                    </div>
+                    <div className="col col-yellow">Cultural Workshop</div>
+                    {/* <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(84);
+                      }}
+                    >
+                      Sneaker Design(Duet)*
+                    </div> */}
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(93);
+                      }}
+                    >
+                      Irish Dance Workshop
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(94);
+                      }}
+                    >
+                      Live Sketching Workshop
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(95);
+                      }}
+                    >
+                      Salsa Dance Workshop
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(96);
+                      }}
+                    >
+                      Public Speaking
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(97);
+                      }}
+                    >
+                      Dramatics Workshop
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(90);
+                      }}
+                    >
+                      Leadership Skills
+                    </div>
+                    <div
+                      className="col colhover"
+                      onClick={(e) => {
+                        onHandleClick(98);
+                      }}
+                    >
+                      Video Editing Workshop
                     </div>
                   </div>
     </div>
