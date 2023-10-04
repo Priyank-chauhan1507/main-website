@@ -317,6 +317,9 @@ const Id_Card = () => {
                   alignItems: "center",
                 }}
               >
+                <div className="xyz">
+                  Please Download your ID Card
+                </div>
                 <div className="id_border1">
                   <div className="id_border2">
                     <div className="id_box">
@@ -410,7 +413,7 @@ const Id_Card = () => {
                         <button
                           className="generate1"
                           disabled={visible}
-                          style={{ cursor: "pointer", color: "black", display: "flex",
+                          style={{ cursor: "pointer", display: "flex",
                           gap: "10px",
                           justifyContent: "center",
                           alignItems: "center", zIndex: "100" }}
