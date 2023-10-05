@@ -2,51 +2,40 @@
     /* background:#0b1d39; */
     /* position: relative; */
     width:100vw;
-    height:700vh;
+    /* height:700vh; */
     overflow-x: hidden; 
+    position: absolute;
+    z-index: -5;
+    background-color: #0c1d39;
     /* background-image: url("../../../assests/MUNmobileBG.webp"); */
 }
 .HomeMUN-bg
 {
-    background-color: #0b1d39;
+    /* background-color: #0b1d39; */
     position:absolute;
     z-index: -1;
     width: 100vw;
-    height: 700vh;
+    /* height: 700vh; */
+    display: flex;
+    flex-direction: column;
 }
 
-/* @media only screen and (max-height:1000px)
-{
-    .HomeMUN-bg
-{
-    height: 480vh;
+.HomeMUN-bg-1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
-} */
-
-
-/* @media only screen and (max-height:750px){
-     height: 720vh;
-} */
-
-
-
-
-/* @media only screen and (max-width:550px)
-{
-    .HomeMUN-bg
-{
-    height: 660vh;
+.HomeMUN-bg-2 {
+    height: auto;
+    width: 100vw;
+    position: relative;
 }
-} */
-
-
-
 
 .top-HomeMUN
 {
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
+    margin-top: 6vh;
 }
 .top-HomeMUN-img
 {
@@ -71,7 +60,7 @@
     letter-spacing: 1.6px;
     padding: 1vh 2.5vw;
     background-color: #fff;
-    margin-top: 19vw;
+    margin-top: 25vw;
 }
 .registerMUNNowBtnClick:hover
 {
@@ -91,14 +80,14 @@
     letter-spacing: 1px;
     width: 75vw;
     margin: auto;
-    margin-top: 30vh;
+    margin-top: 25vh;
     padding: 1.5vh 2vw;
     padding-bottom: 2.5vh;
 }
 
 
 .prizesMUNWorth1 {
-    width: 35vw;
+    width: 55vw;
     display: block;
     margin-bottom: 5vh;
 }
@@ -110,7 +99,7 @@
 
 .CommitteeHead
 {
-
+    margin-top: 10vh;
     display: flex;
     justify-content: center;
 }
@@ -156,15 +145,17 @@
     display: flex;
     justify-content: center;
 }
+
+{
 @media only screen and (max-width:768px)
 {
-    .FAQimg
+    /* .FAQimg
     {
         width: 15vw;
     }
     .HomeMUN-bg{
-        /* height:840vh; */
-    }
+        height:840vh;
+    } */
 }
 /* @media only screen and (max-height:740px)
 {
@@ -175,113 +166,113 @@
 } */
 @media only screen and (max-width:700px)
 {
-    .HomeMUN-bg
+    /* .HomeMUN-bg
 {
-    /* height: 832vh; */
-}
+    height: 832vh;
+} */
 }
 
 @media only screen and (max-width:680px)
 {
-    .HomeMUN-bg
+    /* .HomeMUN-bg
     {
-        /* height: 832vh; */
-    }
+        height: 832vh;
+    } */
 }
 
 @media only screen and (max-width:640px)
 {
-    .HomeMUN-bg
+    /* .HomeMUN-bg
     {
         height: 670vh;
     }
     .HomeMUN-body{
         height: 670vh;
-    }
+    } */
 }
 @media only screen and (max-height:601px)
 {
-    .HomeMUN-bg
+    /* .HomeMUN-bg
     {
-        /* height: 841vh; */
-    }
+        height: 841vh;
+    } */
 }
 @media only screen and (max-width:600px)
 {
-    .HomeMUN-bg
+    /* .HomeMUN-bg
 {
-    /* height: 808vh; */
+    height: 808vh;
 }
 .FAQimg
     {
         width: 20vw;
-    }
+    } */
 }
 
 @media only screen and (max-width:550px)
 {
-    .prizesMUNWorth
+    /* .prizesMUNWorth
     {
         margin-top: 20vh;
-    }
+    } */
 }
 @media only screen and (max-width:549px)
 {
-    .HomeMUN-bg
+    /* .HomeMUN-bg
 {
-    /* height: 804vh; */
+    height: 804vh;
+} */
 }
 }
 
 @media only screen and (max-width:500px)
 {
-    .HomeMUN-bg
-{
-    height: 610vh;
-}
-    .HomeMUN-body{
-        height: 610vh;
+    .top-HomeMUN-img {
+        margin-top: 3vh;
+    }
+    .prizesMUNWorth{
+        margin-top: 18vh;
     }
 }
 @media only screen and (max-width:450px)
 {
-    .HomeMUN-bg
-{
-    height: 570vh;
-}
-  .HomeMUN-body{
-    height: 570vh;
-  }
-.FAQimg
-{
-    width: 25vw;
-}
+    .top-HomeMUN-img {
+        margin-top: 4vh;
+    }
+    .prizesMUNWorth{
+        margin-top: 19vh;
+    }
+    .CommitteeHead {
+        margin-top: 7vh;
+    }
+    /* #committeeHead2{
+
+    } */
 }
 @media only screen and (max-width:400px)
 {
-    .HomeMUN-bg
-{
-    /* height: 763vh; */
-}
-.top-HomeMUN
-{
-    margin-top: 5vh;
-}
+    .top-HomeMUN-img {
+        margin-top: 4vh;
+    }
+    .prizesMUNWorth{
+        margin-top: 21vh;
+    }
+    .CommitteeHead {
+        margin-top: 5vh;
+    }
 
 }
-
-
-
-
 @media only screen and (max-width:350px)
 
 {
-    .HomeMUN-bg
-{
-    height: 530vh;
-}
-    .HomeMUN-body{
-        height: 530vh;
+    .top-HomeMUN-img {
+        margin-top: 5vh;
+    }
+    .prizesMUNWorth{
+        margin-top: 22vh;
+    }
+    .CommitteeHead {
+        margin-top: 5vh;
     }
 }
 /* @media only screen and (max-width:349px)
@@ -292,8 +283,8 @@
     height: 552vh;
 }
 } */
-@media only screen and (max-width:330px){
+/* @media only screen and (max-width:330px){
     .HomeMUN-bg{
-        /* height: 755vh; */
+        height: 755vh;
     }
-}
+} */
