@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d1fdf1f.css",
-    "main.js": "/static/js/main.bf318a52.js",
+    "main.css": "/static/css/main.b96ef388.css",
+    "main.js": "/static/js/main.ed2ba6c8.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -39,6 +39,7 @@
     "static/media/BGMUN.webp": "/static/media/BGMUN.8b5285a30b8d5621f885.webp",
     "static/media/t1.webp": "/static/media/t1.33461dbb30188fa5a44e.webp",
     "static/media/Regback.webp": "/static/media/Regback.b51727b6557a74fd24b8.webp",
+    "static/media/muninfopage1.webp": "/static/media/muninfopage1.dcafaf259ab8dc899c71.webp",
     "static/media/bg1.webp": "/static/media/bg1.d66410e25000319d0f90.webp",
     "static/media/pronite.webp": "/static/media/pronite.00eda0efcfa084410bb1.webp",
     "static/media/thomso-unscreen.gif": "/static/media/thomso-unscreen.d40db52c4efc91750d1a.gif",
@@ -60,6 +61,7 @@
     "static/media/events.png": "/static/media/events.48b2d778b6652a361cb4.png",
     "static/media/bgmobile.webp": "/static/media/bgmobile.9cec63dbb9098095c10c.webp",
     "static/media/tshirt3back.webp": "/static/media/tshirt3back.04b27b47a846ea8e5001.webp",
+    "static/media/muninfopage3img.webp": "/static/media/muninfopage3img.e3c681227f10e3b8f432.webp",
     "static/media/Mask group (3).webp": "/static/media/Mask group (3).87c3911a16f18f64a567.webp",
     "static/media/bhosda.webp": "/static/media/bhosda.433b190c2a289ccb0f47.webp",
     "static/media/newsingermob.webp": "/static/media/newsingermob.22082dc446787622f983.webp",
@@ -78,6 +80,7 @@
     "static/media/MUNmobileBG.webp": "/static/media/MUNmobileBG.5c74349865e47807dafb.webp",
     "static/media/back.webp": "/static/media/back.5993852469394dc9eb3a.webp",
     "static/media/design.graffiti.comicsansmsgras.ttf": "/static/media/design.graffiti.comicsansmsgras.92557e6ed016730cc765.ttf",
+    "static/media/muninfopage2img.webp": "/static/media/muninfopage2img.c1311206c4cdc04b2df3.webp",
     "static/media/aboutback.webp": "/static/media/aboutback.fbdad0cc3edb147ce7dc.webp",
     "static/media/feelthevibewhitwfront.webp": "/static/media/feelthevibewhitwfront.88094f7ccc416b58dcb9.webp",
     "static/media/lavender23front.webp": "/static/media/lavender23front.e352b70acbfb5bcf4e43.webp",
@@ -91,7 +94,6 @@
     "static/media/slidetext.svg": "/static/media/slidetext.368ae98e4d0b3b5a0340b80efd80620a.svg",
     "static/media/tshirt3back2.webp": "/static/media/tshirt3back2.30d604b4c38f102611cc.webp",
     "static/media/black23front.webp": "/static/media/black23front.2d22993d1e8f551c4845.webp",
-    "static/media/muninfopage3img.webp": "/static/media/muninfopage3img.87bf61adf95e6489abc1.webp",
     "static/media/unischo.svg": "/static/media/unischo.552c8f3a6de19eb669d3585b62d14864.svg",
     "static/media/blue23front.webp": "/static/media/blue23front.50d774b09e06e0365969.webp",
     "static/media/joy.svg": "/static/media/joy.8e7e6cdccd03e352fec59acc78c6bb12.svg",
@@ -141,7 +143,6 @@
     "static/media/sponscont.png": "/static/media/sponscont.14cc2c92d3f9f85779e9.png",
     "static/media/default_event.png": "/static/media/default_event.5e41c2c91152988c4289.png",
     "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
-    "static/media/muninfopage1.webp": "/static/media/muninfopage1.ba98233eb1f144f09c46.webp",
     "static/media/black23backnew.webp": "/static/media/black23backnew.453cd6c3aba850cbcf43.webp",
     "static/media/profile1.png.jpg": "/static/media/profile1.png.da7e7064ed2b96e76c47.jpg",
     "static/media/lavender23back.webp": "/static/media/lavender23back.6b20ae58038fe14b1d72.webp",
@@ -160,7 +161,6 @@
     "static/media/memberimgbg.webp": "/static/media/memberimgbg.dd2533a59655a90b88ef.webp",
     "static/media/merchsmily.webp": "/static/media/merchsmily.8b2f8a946d215d4ecb12.webp",
     "static/media/abouttop.webp": "/static/media/abouttop.6411227c762878e6e928.webp",
-    "static/media/muninfopage2img.webp": "/static/media/muninfopage2img.90568b849d77faa25d7f.webp",
     "static/media/pay.svg": "/static/media/pay.1cc47b09e520356f23c74b99e352a2d4.svg",
     "static/media/Cross.webp": "/static/media/Cross.5ee0ebb078621a76a565.webp",
     "static/media/eventpic.webp": "/static/media/eventpic.15b58a132d7073862500.webp",
@@ -210,11 +210,11 @@
     "static/media/line_2.svg": "/static/media/line_2.0d51758040a07ca2655eb326cd2e946e.svg",
     "static/media/pause.svg": "/static/media/pause.b00e0a737956c2de96fa9f99c61ab9f8.svg",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
-    "main.7d1fdf1f.css.map": "/static/css/main.7d1fdf1f.css.map",
-    "main.bf318a52.js.map": "/static/js/main.bf318a52.js.map"
+    "main.b96ef388.css.map": "/static/css/main.b96ef388.css.map",
+    "main.ed2ba6c8.js.map": "/static/js/main.ed2ba6c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d1fdf1f.css",
-    "static/js/main.bf318a52.js"
+    "static/css/main.b96ef388.css",
+    "static/js/main.ed2ba6c8.js"
   ]
 }
