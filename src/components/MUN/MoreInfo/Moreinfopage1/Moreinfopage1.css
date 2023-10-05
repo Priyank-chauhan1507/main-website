@@ -12,6 +12,11 @@
     z-index: 999;
 
 }
+.info_text1 {
+    margin-top: 3vh;
+    width: 50vw;
+    margin-right: 5vw;
+}
 .Bg-image{
     position:absolute;
     width: 100vw;
@@ -84,13 +89,18 @@
 }
 .info_img1{
     display: flex;
+    /* height: 100vh; */
+    /* width: 40vw; */
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: -5vh;
+    margin: auto;
     /* width:40vw; */
+
 }
 .infoPage1img{
-    width:40vw;
+    width:28vw;
 }
 .mun-infopageimg1{
     width:40vw;
@@ -135,7 +145,8 @@ line-height: 162.2%;
         padding: 0 0 5vh 0;        
     }
     .infoPage1img{
-        width:50vw;
+        margin-top: 5vh;
+        width:60vw;
     }
     .info_img1 h3{
         font-size: 6vw;
@@ -167,6 +178,15 @@ line-height: 162.2%;
         padding:0.5vh 0.5vw 0.5vh 0.5vw;
         color: #0D1E3B;
         line-height: 162.2%;
+    }
+    .info_text1 {
+        margin-top: 0vh;
+        width: auto;
+        margin-right: 0;
+    }
+    .portfolio_button{
+        display: flex;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 600px){

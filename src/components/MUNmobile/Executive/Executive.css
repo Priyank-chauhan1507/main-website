@@ -11,17 +11,20 @@
     width:52vw;
     object-fit: cover;
     border-radius: 17.796px;
+    border: 5px solid #fdd52e;
 }
 .judge2-img{
     /* height:58vh; */
     width:52vw;
     border-radius: 17.796px;
-
+    border: 5px solid #fdd52e;
+    
 }
 .judge3-img{
     /* height:58vh; */
     width: 52vw;
     border-radius: 17.796px;
+    border: 5px solid #fdd52e;
 }
 .judge1-discription{
     color: #FFF;
