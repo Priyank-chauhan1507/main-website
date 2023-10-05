@@ -22,7 +22,8 @@ function ContactUs() {
             </div>
             <div className="phoneContact">
                 <img src={Phone} alt="" /> &nbsp; &nbsp; &nbsp;
-                +91 9451584872
+                <a href='tel:9451584872'>+91 9451584872</a>
+                
             </div>
             {/* <div className="phoneContact">
                 <img src={Mail} alt="" /> &nbsp; &nbsp; &nbsp;
@@ -35,7 +36,7 @@ function ContactUs() {
             </div>
             <div className="phoneContact">
                 <img src={Phone} alt="" /> &nbsp; &nbsp; &nbsp;
-                +91 7347346875
+                <a href='tel:7347346875'>+91 7347346875</a>
             </div>
             
             {/* <div className="phoneContact">
@@ -49,7 +50,7 @@ function ContactUs() {
             </div>
             <div className="phoneContact">
                 <img src={Phone} alt="" /> &nbsp; &nbsp; &nbsp;
-                +91 9920150290
+                <a href='tel:9920150290'>+91 9920150290</a>
             </div>
             
             {/* <div className="phoneContact">
