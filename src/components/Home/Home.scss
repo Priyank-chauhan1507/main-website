@@ -224,7 +224,7 @@
   gap: 1rem;
   display: flex;
   gap: 2rem;
-  animation: moveCenterToLeftRight 25s linear infinite; /* Adjust animation duration as needed */
+  animation: moveCenterToLeftRight 15s linear infinite; /* Adjust animation duration as needed */
 }
 
 @keyframes moveCenterToLeftRight {
@@ -245,7 +245,7 @@
   gap: 1rem;
   display: flex;
   gap: 2rem;
-  animation: moveCenterToLeftRight2 25s linear infinite; /* Adjust animation duration as needed */
+  animation: moveCenterToLeftRight2 15s linear infinite; /* Adjust animation duration as needed */
 }
 
 @keyframes moveCenterToLeftRight2 {
@@ -380,7 +380,7 @@ animation: shaking 0.45s infinite;
     position: absolute;
     z-index: 0;
     width:100vw;
-    height:58vh;
+    height:65vh;
   }
   .bkc_image {
     position: absolute;
@@ -394,7 +394,7 @@ animation: shaking 0.45s infinite;
     top:18vh;
   }
   .homenewbox{
-    height:54vh;
+    height:60vh;
   }
   .bkc_image{
     top:0;
@@ -864,7 +864,7 @@ animation: shaking 0.45s infinite;
     display:block;
     position: absolute;
     width:100vw;
-    height:90vh;
+    height:110vh;
   }
 
   .pause {
@@ -893,7 +893,7 @@ animation: shaking 0.45s infinite;
     font-size: 5vw;
   }
   .singBack{
-    height: 113%;
+    height: 95%;
   }
 }
 
