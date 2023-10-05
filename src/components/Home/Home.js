@@ -47,7 +47,7 @@ import t6 from '../../assests/t6.webp'
 import laststrips from '../../assests/bhosda.webp';
 import yellow from '../../assests/yellowBack.webp'
 import yellowmob from '../../assests/yellowmob.webp'
-import blue from '../../assests/blue.webp'
+import blue from '../../assests/homebluemob.webp';
 
 import videoBack from '../../assests/after.webp'
 import pause from '../../assests/pause.svg'
@@ -331,7 +331,6 @@ function Home() {
           {/* <p>Welcome to <span className='blue-thomso'>Thomso’23</span> - the 40th edition of our grand cultural extravaganza and <span className='yellow-thomso'>the annual cultural festival of IIT Roorkee!</span></p> */}
           {/* <p className='mobtext'>Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds.</p> */}
           <p>
-          ABOUT US
 The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or state of perfect happiness derived from a broad and diverse range of sources. This theme reflects the vision and mission of Thomso’23, which is to celebrate the diversity and richness of human expression and culture. Thomso’23 aims to provide a mesmerizing experience that will fuse the mystical charm of the universe with the vitality of human expression. Thomso’23 invites you to escape from the dullness of your daily life and dive into a world full of wonder and fascination, where every moment is a new adventure waiting to happen.
             {/* Thomso is not merely a festival; it's an experience of unparalleled grandeur where talents converge, creativity flourishes, and joy knows no bounds. */}
             </p>
