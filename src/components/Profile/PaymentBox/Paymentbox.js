@@ -404,7 +404,7 @@ const PaymentBox = (
                 style={{ display:"flex" ,justifyContent: "center", alignItems: "center" }}
               >
                 <>
-                <img src={paymentcenterpic} alt="" />
+                <img style={{width:"25vw",height:"40vh"}} src={paymentcenterpic} alt="" />
                   {/* {paymentstatus ? (
                     <PaymentSuccess />
                   ) : (
