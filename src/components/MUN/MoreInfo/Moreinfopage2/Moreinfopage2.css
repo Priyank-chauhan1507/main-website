@@ -18,6 +18,11 @@
     height: 100vh;
     
 }
+.info_text2 {
+    margin-top: 3vh;
+    width: 50vw;
+    margin-right: 5vw;
+}
 .Mob-Bg-image{
     display: none;
 }
@@ -88,9 +93,11 @@
     align-items: center;
     margin-top: 0;
     /* width:40vw; */
+    margin: auto;
+
 }
-.infoPage1img{
-    width:40vw;
+.infoPage2img{
+    width:28vw;
 }
 .mun-infopageimg1{
     width:40vw;
@@ -134,7 +141,7 @@ line-height: 162.2%;
         font-size: 2vh;
         padding: 0 0 5vh 0;        
     }
-    .infoPage1img{
+    .infoPage2img{
         width:50vw;
     }
     .info_img2 h3{
@@ -167,6 +174,15 @@ line-height: 162.2%;
         padding:0.5vh 0.5vw 0.5vh 0.5vw;
         color: #0D1E3B;
         line-height: 162.2%;
+    }
+    .info_text2 {
+        margin-top: 1vh;
+        width: auto;
+        margin-right: 0;
+    }
+    .portfolio_button{
+        display: flex;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 600px){
