@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.806a33de.css",
-    "main.js": "/static/js/main.654113f7.js",
+    "main.css": "/static/css/main.1d4d4bdb.css",
+    "main.js": "/static/js/main.3b83b055.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -10,6 +10,7 @@
     "static/media/mun_mob.webp": "/static/media/mun_mob.0ab7948db7f75cc54f5f.webp",
     "static/media/main.webp": "/static/media/main.d1eb2c773ae8dcebfefa.webp",
     "static/media/MUN-Bg1.webp": "/static/media/MUN-Bg1.cb9bd0e62a36ab2253d3.webp",
+    "static/media/sponsback.png": "/static/media/sponsback.53876f087c1b324ced13.png",
     "static/media/MUN-Bg2.webp": "/static/media/MUN-Bg2.42f6dba431715016bf04.webp",
     "static/media/simg5.svg": "/static/media/simg5.fb8a3d5ba0d43ab399622fc2aa96457c.svg",
     "static/media/homenmbg.webp": "/static/media/homenmbg.1c0789420586c11bc9e3.webp",
@@ -64,6 +65,7 @@
     "static/media/newsingermob.webp": "/static/media/newsingermob.22082dc446787622f983.webp",
     "static/media/convenor.webp": "/static/media/convenor.a81eefc519684aa2fbe3.webp",
     "static/media/bg.jpg": "/static/media/bg.b9c023b1978d5f11ddc0.jpg",
+    "static/media/sponsbgcloud.png": "/static/media/sponsbgcloud.70e6f87de72be0d37d23.png",
     "static/media/below-thomso.webp": "/static/media/below-thomso.c02a8a0d3de52907e375.webp",
     "static/media/IITRMUN.png": "/static/media/IITRMUN.6e40f1aae4933d84d827.png",
     "static/media/UNGAnew.png": "/static/media/UNGAnew.5c797f4a847eb935aa0c.png",
@@ -136,6 +138,7 @@
     "static/media/munmobileinfobg.webp": "/static/media/munmobileinfobg.f76d34c1c4a84d5fad64.webp",
     "static/media/blue23back.webp": "/static/media/blue23back.dc6268032cf734bd91c7.webp",
     "static/media/white23back.webp": "/static/media/white23back.3941b0fde57238dee712.webp",
+    "static/media/sponscont.png": "/static/media/sponscont.14cc2c92d3f9f85779e9.png",
     "static/media/default_event.png": "/static/media/default_event.5e41c2c91152988c4289.png",
     "static/media/RegbackMobile.webp": "/static/media/RegbackMobile.0c8eee93fd769aed7381.webp",
     "static/media/muninfopage1.webp": "/static/media/muninfopage1.ba98233eb1f144f09c46.webp",
@@ -151,6 +154,7 @@
     "static/media/Sponsersb.png": "/static/media/Sponsersb.1eb92a70d0ffce255e4b.png",
     "static/media/FAQS.png": "/static/media/FAQS.d7e2418ebabd135ce70f.png",
     "static/media/MerchLogo.png": "/static/media/MerchLogo.9d0fdb9db9bc16d6888e.png",
+    "static/media/sponsbox4.png": "/static/media/sponsbox4.59d1d5f27d823dda0b62.png",
     "static/media/hero1.webp": "/static/media/hero1.d30444af71136ae65b4e.webp",
     "static/media/thomsostrip.webp": "/static/media/thomsostrip.0ccebf0f12ea3fd654e7.webp",
     "static/media/memberimgbg.webp": "/static/media/memberimgbg.dd2533a59655a90b88ef.webp",
@@ -207,11 +211,11 @@
     "static/media/line_2.svg": "/static/media/line_2.0d51758040a07ca2655eb326cd2e946e.svg",
     "static/media/pause.svg": "/static/media/pause.b00e0a737956c2de96fa9f99c61ab9f8.svg",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
-    "main.806a33de.css.map": "/static/css/main.806a33de.css.map",
-    "main.654113f7.js.map": "/static/js/main.654113f7.js.map"
+    "main.1d4d4bdb.css.map": "/static/css/main.1d4d4bdb.css.map",
+    "main.3b83b055.js.map": "/static/js/main.3b83b055.js.map"
   },
   "entrypoints": [
-    "static/css/main.806a33de.css",
-    "static/js/main.654113f7.js"
+    "static/css/main.1d4d4bdb.css",
+    "static/js/main.3b83b055.js"
   ]
 }
