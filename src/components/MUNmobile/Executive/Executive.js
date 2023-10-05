@@ -2,9 +2,9 @@
 import Carousel from 'react-spring-3d-carousel';
 // import { v4 as uuidv4 } from "uuid";
 // import { config } from "react-spring";
-import judge1 from "../../../assests/AIPPMjudgeresize.webp";
+import judge1 from "../../../assests/Judge_historic.JPG";
 import judge2 from '../../../assests/Aishnit-yadav-Unga-judge.webp'
-import judge3 from '../../../assests/Raunak-Historic-judge.webp'
+import judge3 from '../../../assests/AIPPMjudgeresize.webp'
 
 import "./Executive.css"
 // import "./App.css"
@@ -18,7 +18,7 @@ const App = () => {
       key: 1,
       content: <div className="judge1div">
         <img src={judge1} className="judge1-img j1"alt="1" />
-        <div className='judge1-discription1'>RAUNAK UPMANYU</div> 
+        <div className='judge1-discription1'>LAKSHIT TANDON</div> 
         <div className='judge1-discription'>CHAIR OF HISTORIC COMMITEE</div>
 
       </div> 
@@ -35,7 +35,7 @@ const App = () => {
       key: 3,
       content: <div className="judge3div">
         <img src={judge3} className="judge3-img j3"alt="3" />
-        <div className='judge1-discription3'>NAMAN JAIN</div> 
+        <div className='judge1-discription3'>RAUNAK UPMANYU</div> 
         <div className='judge1-discription'>CHAIR OF AIPPM</div>
       </div>
     }
