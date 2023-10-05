@@ -1,0 +1,57 @@
+.spons_box3{
+    margin-top: 54vh;
+   z-index: 10;
+   position: relative;
+   
+   
+}
+
+
+.spons_box3>img{
+    width: 100vw;
+    height: 39vh;
+}
+
+.spons_cont3{
+    color: #000;
+text-align: center;
+margin-left: 23vw;
+font-family: Comic Sans MS;
+font-size: 1.1vw;
+font-style: normal;
+font-weight: 700;
+line-height: 4vh; /* 100% */
+letter-spacing: -0.4px;
+
+z-index: 10;
+margin-top: -33vh;
+}
+
+
+.spons_heading{
+    display: flex;
+    
+}
+
+.spons_heading>p{
+    margin-left: -7vw;
+    padding-right: 13vw;
+}
+
+.brand{
+    width: 9vw;
+}
+
+.spons_img2{
+    display: flex;
+    margin-left: -10vw;
+    margin-top: 8.5vh;
+}
+
+.spons_img2>img{
+    margin-left: 1.3vw;
+    margin-right: 2vw;
+    height: 14vh;
+    margin-top: -5vh;
+
+}

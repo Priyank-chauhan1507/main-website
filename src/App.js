@@ -61,6 +61,7 @@ import Renderer from "./PdfRenderer/Renderer"
 import Ourteam from "./components/Teams/ourteams";
 
 import NewSponsers from "./components/NewSponsers/NewSponsers";
+import NewSponsersmobile from "./components/NewSponsers/NewSponsersmobile";
 
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
@@ -113,6 +114,7 @@ useEffect(() => {
         <Routes>
         
           <Route exact={true} path="/" element={<Home />} />
+          <Route exact={true} path="/Sponsmob" element={<NewSponsersmobile />} />
           {/* <Route exact={true} path="/personaldetails" element={<PersonalDetails />} /> */}
           <Route exact={true} path="/register" element={<CollegeDetails />} />
           <Route exact={true} path="/emailverified" element={<EmailVerify />} />
