@@ -10,7 +10,7 @@ import singersmob from "../../assests/newsingermob.webp"
 import axios from "axios";
 import "./Home.scss"
 import Navbar from '../EventsNavbar/Eventsnavbar'
-import Footer from '../Navbar/WebNavbarNew'
+import Footer from "../Navbar/Newfooter";
 import Themename from '../../assests/themeName.svg'
 import About from '../../assests/home2nd.webp'
 import aboutback from '../../assests/aboutback.webp'

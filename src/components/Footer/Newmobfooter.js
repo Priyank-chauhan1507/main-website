@@ -9,10 +9,12 @@ import Instagram from "../../assests/Insta1.png";
 import Twitter from "../../assests/Twitter.png";
 import LinkedIn from "../../assests/LinkedIn.png";
 import Youtube from "../../assests/Youtube1.png";
+import newmobfooterbg from "../../components/Footer/newmobbg.webp";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footernew">
+      <img src={newmobfooterbg} className="newfooter-bg" alt="..."/>
       <div className="div1">
         <img className="mob-footer-logo" src={Logo} alt="Thomso Logo" />
 

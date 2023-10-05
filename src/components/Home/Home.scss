@@ -766,8 +766,8 @@ animation: shaking 0.45s infinite;
   height: auto;
   width: 100vw;
   background-color: #fff;
-  z-index: 0;
-  margin-bottom:2vh;
+  z-index: 1;
+  margin-bottom:-1vh;
 }
 
 .lastDivSub {
