@@ -313,7 +313,7 @@ const Id_Card = () => {
                 style={{
                   display: "flex",
                   flexDirection:"column",
-                  justifyContent: "center",
+                  overflowY:"scroll",
                   alignItems: "center",
                 }}
               >

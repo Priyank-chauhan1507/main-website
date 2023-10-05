@@ -1,24 +1,32 @@
-.webNavbarMain{
+.webNavbarMainnew{
     display: flex;
     color:#000 !important;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
+    padding: 5vh 0 5vh 0;
     align-items: center;
-    width: 90vw;
+    width: 100vw;
 height: 410px;
 margin-top:0rem;
-z-index: 1000;
+z-index: 0;
 overflow: hidden;
 /* background-color: black; */
-  background: url('../../assests/Newfooteer');
+  /* background: url('../../assests/newfooterb/g.webp'); */
   background-position: center;
   background-size: cover;
+  object-fit: cover;
   background-color: white !important;
-margin: 0 5VW 0 5VW;
+margin:o;
 border-style: none;
 /* border-radius: 2vh; */
 /* background: #000 */
+}
+.footer-new-bg{
+    width: 100vw;
+    height: 44vh;
+    margin-bottom: -5vh;
+    position: absolute;
+    z-index:-1;
 }
 
 .mob-foot{
@@ -26,11 +34,11 @@ border-style: none;
   
 }
 
-.webNavbarMain::-webkit-scrollbar{
+.webNavbarMainnew::-webkit-scrollbar{
     display: none;
 }
 
-.webNavbarLeft{
+.webNavbar{
     display: flex;
     flex-direction: column;
     gap:20px;
@@ -110,7 +118,7 @@ line-height: normal;
 }
 
 @media only screen and (max-width:768px){
-    .webNavbarMain{
+    .webNavbarMainnew{
         display: none;
     }
     .mob-foot{
