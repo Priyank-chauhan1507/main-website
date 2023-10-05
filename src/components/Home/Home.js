@@ -348,51 +348,51 @@ The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or sta
 <img src={backchod} alt="bkc" className='bkc_image'/>
           <div className='slider1'>
           <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
+          <img src={t5} alt="t__new" className='imgg11' />
+          <img src={t6} alt="t__new" className='imgg11' />
           <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
+          <img src={t5} alt="t__new" className='imgg11' />
+          <img src={t6} alt="t__new" className='imgg11' />
           <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
+          <img src={t5} alt="t__new" className='imgg11' />
+          <img src={t6} alt="t__new" className='imgg11' />
           <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
           </div>
           <div className='slider2'>
           <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
+          <img src={t5} alt="t__new" className='imgg11' />
+          <img src={t6} alt="t__new" className='imgg11' />
           <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
+          <img src={t5} alt="t__new" className='imgg11' />
+          <img src={t6} alt="t__new" className='imgg11' />
           <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
+          <img src={t5} alt="t__new" className='imgg11' />
+          <img src={t6} alt="t__new" className='imgg11' />
           <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
-          <img src={t1} alt="t__new" className='imgg11' />
+          <img src={t2} alt="t__new" className='imgg11' />
+          <img src={t3} alt="t__new" className='imgg11' />
+          <img src={t4} alt="t__new" className='imgg11' />
           </div>
 
           </div>
