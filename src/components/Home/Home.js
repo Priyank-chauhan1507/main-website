@@ -59,6 +59,7 @@ import backchod from '../../assests/backchod.svg'
 import aboutbackmob from "../../assests/Mask group (3).webp";
 import mobpronite from "../../assests/homepronite.webp";
 import homemobnew from "../../assests/homenmbg.webp";
+import attractionbgimg from "../../assests/attractions_bg.webp";
 
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';

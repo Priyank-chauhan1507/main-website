@@ -17,6 +17,7 @@
     background-size: cover;
     background-position: center center;
     width: 100vw;
+    height:90vh;
     overflow-x: hidden;
     // height: 100vh;
   }
@@ -118,7 +119,7 @@
 
 .singBack {
   width: 100%;
-  height: 105%;
+  height: 135%;
   position: absolute;
 }
 
@@ -238,7 +239,7 @@
  
   top: 67vh;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   left: 2vw;
   width: 10vw;
   gap: 1rem;

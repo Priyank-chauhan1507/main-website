@@ -5,7 +5,13 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: url("../../assests/attractions_bg.webp");
+  /* background: url("../../assests/attractions_bg.webp"); */
+}
+.mj-attrac-img{
+  width: 100vw;
+  height: 78vh;
+  
+  position: absolute;
 }
 .textContainer {
   width: 23vw;
@@ -26,7 +32,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top:-12vh;
+  margin-top:0;
 }
 .imagesBox {
   width: 60vw;
@@ -175,6 +181,7 @@
     justify-content: start;
     align-items: center;
     overflow: scroll;
+    z-index: 1;
     margin-top: -12vh;
   }
   .textContainer {
@@ -196,7 +203,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../../assests/attractions_bg.webp');
+    /* background: url('../../assests/attractions_bg.webp'); */
     background-size:cover;
   }
 
@@ -204,5 +211,10 @@
     display: flex;
     flex-direction: row;
     gap: 6vw;
+  }
+}
+@media screen and (max-width:768px){
+  .mj-attrac-img{
+    display: none;
   }
 }
