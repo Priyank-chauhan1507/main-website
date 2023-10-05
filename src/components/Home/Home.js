@@ -53,7 +53,7 @@ import videoBack from '../../assests/after.webp'
 import pause from '../../assests/pause.svg'
 import pause2 from '../../assests/pause2.svg'
 import thomsostrip from '../../assests/thomsostrip.webp'
-import Logo from '../../assests/Logo_new.gif'
+import Logo from '../../assests/Logo_new_final.gif'
 import pronite2 from '../../assests/pronite.webp'
 import backchod from '../../assests/backchod.svg'
 import aboutbackmob from "../../assests/Mask group (3).webp";
