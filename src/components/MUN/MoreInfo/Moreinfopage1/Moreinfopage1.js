@@ -25,7 +25,7 @@ export default function Moreinfopage1() {
             </div>
         <div className="info_box1">
             <div className="info_content">
-            <div className="info_text">
+            <div className="info_text info_text1">
                 <h2 className="info_heading">UNITED NATIONS GENERAL ASSEMBLY (UNGA)</h2>
                 <p className="muninfo-text"> UNGA is one of the six principal organs of the United Nations, consisting of all 193 member states. It serves as a forum for international diplomacy, where countries come together to discuss and collaborate on global issues. UNGA sessions are held annually in New York, allowing nations to address a wide range of topics, from climate change to human rights, with the aim of fostering cooperation and finding solutions to global challenges.
                 <br />
