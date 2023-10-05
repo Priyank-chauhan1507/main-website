@@ -238,7 +238,7 @@
  
   top: 67vh;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
   left: 2vw;
   width: 10vw;
   gap: 1rem;
@@ -377,13 +377,13 @@ animation: shaking 0.45s infinite;
   .img_mobPronite{
     display:block;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     width:100vw;
     height:58vh;
   }
   .bkc_image {
     position: absolute;
-    z-index: 3;
+    z-index: 0;
     top: 5vw;
     width: 4rem;
     left: 87vw;
@@ -765,7 +765,7 @@ animation: shaking 0.45s infinite;
   height: auto;
   width: 100vw;
   background-color: #fff;
-  z-index: 1001;
+  z-index: 0;
 }
 
 .lastDivSub {
@@ -909,7 +909,7 @@ animation: shaking 0.45s infinite;
 
 .bkc_image {
   position: absolute;
-  z-index: 3;
+  z-index: 0;
   
   width: 4rem;
   

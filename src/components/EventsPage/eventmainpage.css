@@ -418,7 +418,7 @@
     height: auto;
     position: absolute;
     margin-top: -2vh;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     scroll-behavior: smooth;
     padding-bottom: 50px;
     position: relative;
