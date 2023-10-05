@@ -1,5 +1,5 @@
 import React from "react";
-import "./WebNavbarNew.css";
+import "./Newfooter.css";
 import mainlogo from "../../assests/Merch_moblogo.png";
 import background from "../../assests/back.webp";
 // import facebook from "../../assests/facebook.svg";
@@ -9,7 +9,7 @@ import Insta from "../../assests/Insta1.png";
 import x from "../../assests/x.svg";
 // import youtube from "../../assests/youtube.svg";
 import Youtube from "../../assests/Youtube1.png";
-import Footer from "../Footer/Mobfooter";
+// import Footer from "../Footer/Newmobfooter";
 // import Newfooter from "newfooterbg.webp"
 import { useLocation, Link, useNavigate  } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const WebNavbarNew = () => {
   return (
     <>
       {/* <img src={background} alt="background" style={{width:"100vw",height:"340px",zIndex:"100",overflowY:'hidden'}}/> */}
-      <Footer className='mob-foot' />
+      {/* <Footer className='mob-foot' /> */}
       <div     className={
                           Locator.pathname === "/MUN"
                           ? "webNavbarMain clearbgmun"
