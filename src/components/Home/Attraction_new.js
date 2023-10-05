@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import Apocalypse from "../../assests/Apocalypse7.svg";
 import Major_Attractions from "../../assests/MAJOR_ATTRACTIONS.svg"
+import attractionbgimg from "../../assests/attractions_bg.webp";
 
 export default function Attraction_new() {
   // const [Data, setData] = useState(Array.from({ length: 8 }));
@@ -26,6 +27,7 @@ export default function Attraction_new() {
   // console.log(Data);
   return (
     <div className="majorAttractionsContainer">
+      <img src={attractionbgimg} className="mj-attrac-img" alt="..."/>
       <div className="textContainer">
         <h1 className="headingBox"><img src={Major_Attractions} id="major_attractions_text" alt="" /></h1>
         <div className="subtitleBox">
