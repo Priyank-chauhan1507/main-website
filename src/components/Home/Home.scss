@@ -862,7 +862,8 @@ animation: shaking 0.45s infinite;
   #homebgmob{
     display:block;
     position: absolute;
-    width:100vw
+    width:100vw;
+    height:90vh;
   }
 
   .pause {
@@ -921,3 +922,8 @@ animation: shaking 0.45s infinite;
   display: none;
 }
 }
+@media screen and (max-width:500px){
+  .bkc_image{
+    width:3rem;
+  }
+} 

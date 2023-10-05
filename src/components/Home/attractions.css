@@ -10,7 +10,7 @@
 .mj-attrac-img{
   width: 100vw;
   height: 78vh;
-  
+
   position: absolute;
 }
 .textContainer {
@@ -213,8 +213,19 @@
     gap: 6vw;
   }
 }
+@media screen and (max-width:786px){
+  .majorAttractionsContainer{
+    padding-top: 0;
+  }
+  .mj-attrac-img{
+    display: none;
+  }
+}
 @media screen and (max-width:768px){
   .mj-attrac-img{
     display: none;
+  }
+  .majorAttractionsContainer{
+    padding-top: 0;
   }
 }
