@@ -1026,9 +1026,9 @@ const NewPaymentBox = (
                     <div className="lsp-c1">
                       <img src={icon3} alt="icon3" />
                       <Link
-                        to="/payment_bhasad"
+                        to="/payment"
                         className={
-                          locator.pathname === "/payment_bhasad"
+                          locator.pathname === "/payment"
                             ? "c1-text"
                             : "c2-text"
                         }
@@ -1441,9 +1441,9 @@ const NewPaymentBox = (
                   ) : (
                     <div className="mv-top-2">
                       <Link
-                        to="/payment_bhasad"
+                        to="/payment"
                         className={
-                          Locator.pathname === "/payment_bhasad"
+                          Locator.pathname === "/payment"
                             ? "nav-active"
                             : "nav-passive"
                         }
