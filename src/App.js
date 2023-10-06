@@ -136,7 +136,7 @@ useEffect(() => {
           <Route exact={true} path="/eventpayment" element={<EventPayment />} />
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />
-          <Route exact={true} path="/payment_mnit" element={<NewPaymentbox/>} />
+          <Route exact={true} path="/payment_pgtab" element={<NewPaymentbox/>} />
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
