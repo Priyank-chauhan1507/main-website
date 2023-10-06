@@ -58,6 +58,7 @@ import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
 import Renderer from "./PdfRenderer/Renderer"
 import Ourteam from "./components/Teams/ourteams";
+import EventPayment from "./components/EventPayment/EventPayment";
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 // ReactGA4.initialize("G-FG974BLVDN");
@@ -124,7 +125,7 @@ useEffect(() => {
           <Route exact={true} path="/profile" element={<Profile />} />
           <Route exact={true} path="/eventsnavbar" element={<Eventsnavbar />} />
           <Route exact={true} path="/events/:id" element={<EventMainPage />} />
-
+          <Route exact={true} path="/eventpayment" element={<EventPayment />} />
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment_close" element={<Paymentbox />} />
           <Route exact={true} path="/payment" element={<NewPaymentbox/>} />

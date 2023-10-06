@@ -206,6 +206,8 @@
     /* opacity: 0.9; */
     margin-top: -3.5vh;
     overflow: hidden;
+    margin-left: 5vw !important;
+
     position: fixed;
 }
 
