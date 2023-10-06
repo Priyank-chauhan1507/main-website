@@ -21,7 +21,7 @@ export default function Moreinfopage1() {
             </div>
         <div className="info_box2">
             <div className="info_content">
-            <div className="info_text">
+            <div className="info_text info_text2">
                 <h2 className="info_heading">ALL INDIA POLITICAL PARTY MEET ( AIPPM)</h2>
                 <p className="muninfo-text">AIPPM is a simulated event that brings together delegates from various Indian political parties to discuss and debate key national and international issues. Modelled after the real-life political landscape of India, AIPPM provides a platform for participants to engage in lively debates, negotiations, and policy-making, aiming to find common ground and develop effective solutions to address the country's most pressing concerns.
                 <br />
@@ -36,7 +36,7 @@ export default function Moreinfopage1() {
             </div>
             <div className="info_img2">
                 <div className="mun-infoPage1img1">
-                <img  src={InfoPage1Img} className="infoPage1img" alt="infoPage1img"/>
+                <img  src={InfoPage1Img} className="infoPage2img" alt="infoPage1img"/>
                 </div>
                 <h3>ALL INDIA POLITICAL PARTY MEET ( AIPPM)</h3>
             </div>

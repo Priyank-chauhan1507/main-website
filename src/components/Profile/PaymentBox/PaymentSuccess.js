@@ -22,14 +22,14 @@ const PaymentSuccess = () => {
       style={{
         padding: "5%",
         display: "flex",
-        justifyContent: "center",
+        // justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
         width: "100%",
         // height: "100%",
         textAlign: "center",
         // marginTop: "auto",
-        // overflow: "hidden" 
+        // overflowY: "scroll" 
       }}
     >
       {/* <Checkmark size={100} /> */}

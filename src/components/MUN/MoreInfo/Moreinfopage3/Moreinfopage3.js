@@ -21,7 +21,7 @@ export default function Moreinfopage1() {
             </div>
         <div className="info_box3">
             <div className="info_content">
-            <div className="info_text">
+            <div className="info_text info_text3">
                 <h2 className="info_heading">INDIAN WAR CABINET (HISTORIC COMMITTEE)</h2>
                 <p className="muninfo-text">The Indian War Cabinet is a committee within the context of Model United Nations (MUN) simulations. It replicates the decision-making process of India's highest leadership during times of crisis and conflict. Delegates assume the roles of top government officials, including the Prime Minister and Defence Minister, and work together to strategise, plan, and respond to simulated national security and defence challenges. This committee tests delegates' crisis management skills, diplomacy, and their ability to protect their nation's interests in a dynamic and fast-paced environment.
                 <br />

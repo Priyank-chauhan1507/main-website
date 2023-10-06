@@ -1,8 +1,8 @@
 import React from 'react'
 import Committee from "../../../assests/COMMITTEE.png";
-import UNGA from "../../../assests/UNGAnew.png";
-import AIPPM from "../../../assests/AIPPMnew.png";
-import Historic from "../../../assests/Historicnew.png";
+import UNGA from "../../../assests/Component 1.png";
+import AIPPM from "../../../assests/Component 2.png";
+import Historic from "../../../assests/Component 3.png";
 import ArrowMUN from "../../../assests/ArrowMUN.png";
 import "./Commitee.css";
 import { Link, useNavigate } from "react-router-dom";

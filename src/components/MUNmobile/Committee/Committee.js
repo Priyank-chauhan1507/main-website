@@ -3,12 +3,12 @@ import Carousel from 'react-spring-3d-carousel';
 import Icon from 'react-icons';
 import { BsFillArrowLeftCircleFill,BsFillArrowRightCircleFill } from "react-icons/bs";
 // import mun1 from "../../../assests/MUNImg1.png";
-import mun2 from "../../../assests/AIPPMnew.png";
-import mun3 from "../../../assests/Historicnew.png";
+import mun2 from "../../../assests/Component 2.png";
+import mun3 from "../../../assests/Component 3.png";
 // import { v4 as uuidv4 } from "uuid";
 // import { config } from "react-spring";
 import Committee from "../../../assests/CommitteeMUN.png";
-import UNGA from "../../../assests/UNGAnew.png";
+import UNGA from "../../../assests/Component 1.png";
 import Arrow from "../../../assests/ArrowMUN.png";
 // import UNGA from "../../../assests/UNGAmob.png";
 // import UNGA from "../../../assests/UNGAmob.png";
@@ -133,7 +133,7 @@ const App = () => {
 
   return (
     <div>
-      <div className="CarouselCommittee" 
+      <div className="CarouselCommittee Committeediv" 
     //   style={{height: "50vh", width: "30vw"}}
       >
         

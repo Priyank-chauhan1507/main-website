@@ -1,5 +1,5 @@
 import React from "react";
-import "./WebNavbarNew.css";
+import "./Newfooter.css";
 import mainlogo from "../../assests/Merch_moblogo.png";
 import background from "../../assests/back.webp";
 // import facebook from "../../assests/facebook.svg";
@@ -9,7 +9,8 @@ import Insta from "../../assests/Insta1.png";
 import x from "../../assests/x.svg";
 // import youtube from "../../assests/youtube.svg";
 import Youtube from "../../assests/Youtube1.png";
-import Footer from "../Footer/Mobfooter";
+import Footer from "../Footer/Newmobfooter";
+import footernewbg from "../../assests/newfooterbg.webp"
 // import Newfooter from "newfooterbg.webp"
 import { useLocation, Link, useNavigate  } from "react-router-dom";
 
@@ -29,10 +30,12 @@ const WebNavbarNew = () => {
       <Footer className='mob-foot' />
       <div     className={
                           Locator.pathname === "/MUN"
-                          ? "webNavbarMain clearbgmun"
-                          : "webNavbarMain"
+                          ? "webNavbarMainnew clearbgmun"
+                          : "webNavbarMainnew"
                         }>
-        <div className="webNavbarLeft">
+                          <img src={footernewbg}
+                          className="footer-new-bg" alt="..."/>
+        <div className="webNavbarLeft" style={{paddingLeft:"5vh"}}>
           <div className="webNavbarLeft1">Contact us</div>
           <div className="webNavbarLeft3">
             <div>Jolly</div>
@@ -66,7 +69,7 @@ const WebNavbarNew = () => {
             </a>
           </div>
         </div>
-        <div className="webNavbarRight">
+        <div className="webNavbarRight" style={{paddingRight:"5vh"}}>
           <div className="webNavbarRight1">Get Directions</div>
           <div className="webNavbarRight2">
             <div>Thomso Office</div>

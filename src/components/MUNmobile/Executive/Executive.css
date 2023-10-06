@@ -2,26 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .CarouselCommittee
 {
-    height: 110vh;
+    height: 85vh;
     width: 100vw;
-    margin-top:10vh;
+    margin-top:-6vh;
 }
 .judge1-img{
     /* height:58vh; */
     width:52vw;
     object-fit: cover;
     border-radius: 17.796px;
+    border: 5px solid #fdd52e;
 }
 .judge2-img{
     /* height:58vh; */
     width:52vw;
     border-radius: 17.796px;
-
+    border: 5px solid #fdd52e;
+    
 }
 .judge3-img{
     /* height:58vh; */
     width: 52vw;
     border-radius: 17.796px;
+    border: 5px solid #fdd52e;
 }
 .judge1-discription{
     color: #FFF;
@@ -75,33 +78,37 @@
 {
     .CarouselCommittee
 {
-    height: 80vh;
+    margin-top: 5vh;
+    height: 60vh;
 }
 }
 @media only screen and (max-width:450px)
 {
     .CarouselCommittee
 {
-    height: 65vh;
+    height: 60vh;
 }
-/* .hero1{
-    object-fit: cover;
-} */
+
+    .ExecutiveMobile{
+        margin-top: -5vh;
+    }
 
 .judge1-img{
-    height:50vh;
+    height:48vh;
     border-radius: 17.796px;
-    
+    width: auto;
     
 }
 
 .judge2-img{
     height:48vh;
     border-radius: 17.796px;
+    width: auto;
 }
 .judge3-img{
     height:48vh;
     border-radius: 17.796px;
+    width: auto;
 }
 }
 @media only screen and (max-width:350px)
@@ -115,14 +122,17 @@
 } */
 .judge1-img{
     height:40vh;
+    width: auto;
     border-radius: 17.796px;
 }
 .judge2-img{
     height:40vh;
     border-radius: 17.796px;
+    width: auto;
 }
 .judge3-img{
     height:40vh;
     border-radius: 17.796px;
+    width: auto;
 }
 }

@@ -57,8 +57,13 @@ import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
 import Renderer from "./PdfRenderer/Renderer"
+
 import Ourteam from "./components/Teams/ourteams";
 import EventPayment from "./components/EventPayment/EventPayment";
+
+import NewSponsers from "./components/NewSponsers/NewSponsers";
+import NewSponsersmobile from "./components/NewSponsers/NewSponsersmobile";
+
 
 // console.log(process.env.REACT_APP_TRACKING_ID);
 // ReactGA4.initialize("G-FG974BLVDN");
@@ -108,7 +113,9 @@ useEffect(() => {
     <>
       <Router>
         <Routes>
+        
           <Route exact={true} path="/" element={<Home />} />
+          <Route exact={true} path="/Sponsmob" element={<NewSponsersmobile />} />
           {/* <Route exact={true} path="/personaldetails" element={<PersonalDetails />} /> */}
           <Route exact={true} path="/register" element={<CollegeDetails />} />
           <Route exact={true} path="/emailverified" element={<EmailVerify />} />
@@ -116,6 +123,7 @@ useEffect(() => {
           <Route exact={true} path="/login" element={<Login />} />
           <Route exact={true} path="/forgotpassword" element={<Forget/>} />
           <Route exact={true} path="/otpverify" element={<RegPage />} />
+          
           <Route
             exact={true}
             path="/auth/reset-password/:email/:token"
@@ -127,8 +135,8 @@ useEffect(() => {
           <Route exact={true} path="/events/:id" element={<EventMainPage />} />
           <Route exact={true} path="/eventpayment" element={<EventPayment />} />
           <Route exact={true} path="/pevents" element={<EventBox />} />
-          <Route exact={true} path="/payment_close" element={<Paymentbox />} />
-          <Route exact={true} path="/payment" element={<NewPaymentbox/>} />
+          <Route exact={true} path="/payment" element={<Paymentbox />} />
+          <Route exact={true} path="/payment_closed" element={<NewPaymentbox/>} />
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
@@ -163,7 +171,11 @@ useEffect(() => {
           <Route exact={true} path="/PopUp" element={<PopUP/>} />
           <Route exact={true} path="/Carousel" element={<Carousel1/>} />
           <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
+
           <Route exact={true} path="/our_team" element={<Ourteam/>} />
+
+          <Route exact={true} path="/spons" element={<NewSponsers />} />
+
         </Routes>
       </Router>
     </>

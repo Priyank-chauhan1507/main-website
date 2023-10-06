@@ -21,6 +21,12 @@
     align-items: center;
 }
 
+@media only screen and (max-width:980px) and (min-width:768px){
+    .event-nav-right-compo{
+        font-size: 15px !important;
+    }
+}
+
 .event-nav-right-compo {
     color: var(--default-2, #FFF);
     text-align: justify;

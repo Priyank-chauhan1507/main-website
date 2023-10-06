@@ -23,6 +23,12 @@
     justify-content: space-between;
   }
 
+  .xyz{
+    font-size:1.5rem;
+    margin-bottom: 5vh;
+    color:white;
+  }
+
   .id_box_left {
     /* height: 100%; */
     width: 35%;
@@ -30,6 +36,10 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 2vw;
+  }
+
+  .id_card_full_box{
+    height:78vh;
   }
 
   .id_box_right {
@@ -109,7 +119,7 @@
   .generate
   {
     /* height: 6vh; */
-    background-color: white;
+    /* background-color: white; */
     color: black;
     margin-top: 4vh;
     /* margin-bottom: 4vh; */
@@ -118,6 +128,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f7b900;
+    font-weight: 550;
+    border-color: #f7b900;
+  }
+  .generate:hover{
+    background: transparent;
+    color: #f7b900;
   }
   .not-download
   {
@@ -135,7 +152,7 @@
   .generate1
   {
     /* height: 6vh; */
-    background-color: white;
+    /* background-color: white; */
     color: black;
     margin-top: 4vh;
     margin-bottom: 4vh;
@@ -144,6 +161,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f7b900;
+    font-weight: 550;
+    border-color: #f7b900;
+  }
+  .generate1:hover{
+    background: transparent;
+    color: #f7b900;
+  }
+  .generate:hover .downloadsign{
+    color: #f7b900;
   }
   .id_card_uploadphoto_text
   {
@@ -161,6 +188,9 @@
     height: 12px;
     width: 12px;
   }
+  /* .downloadsign:hover{
+    color: #f7b900;
+  } */
 
   .preview
   {
@@ -228,6 +258,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    }
+    .xyz{
+      margin-bottom:0px !important;
+      font-size:1.2rem !important;
     }
     .done-img{
       width: 20px;

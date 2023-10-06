@@ -32,6 +32,10 @@
     margin-right: 2vw !important;
 }
 
+.Committeediv {
+    /* height: 50vh !important; */
+}
+
 @media only screen and (max-width:650px) {
     .CarouselCommittee {
         height: 100vh;
@@ -171,6 +175,17 @@
     }
 }
 
+@media only screen and (max-width:420px) {
+    .CommitteeHead{
+        margin-top: 0 !important;
+    }
+    .CarouselCommittee {
+        margin-top: 3vh;
+    }
+    .Committeediv {
+        height: 55vh !important;
+    }
+}
 @media only screen and (max-width:400px) {
     .carouselcontenttext3 {
         bottom: 21vh;

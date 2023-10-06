@@ -410,7 +410,7 @@
   }
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
   .events_back {
     flex-direction: column-reverse;
     align-items: center;
@@ -418,7 +418,7 @@
     height: auto;
     position: absolute;
     margin-top: -2vh;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     scroll-behavior: smooth;
     padding-bottom: 50px;
     position: relative;
@@ -454,6 +454,7 @@
     width: 100vw;
     /* height: 55%; */
     gap: 11px;
+    margin-top: 5vh;
     /* overflow-y:auto; */
     /* overflow-x: hidden; */
     /* overflow-y:  auto !important; */
@@ -700,6 +701,11 @@
     height: 68vh !important;
     ;
     flex-wrap: wrap !important;
+  }
+}
+@media (min-width:601px) {
+  .events-left {
+    overflow-y: scroll;
   }
 }
 

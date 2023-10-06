@@ -13,6 +13,8 @@ import FAQ from '../../MUN/FAQ/FAQ';
 import Loader from "../../Loader/Loader"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import MobBG1 from "../../../assests/MUN_mobbg1.webp"
+import MobBG2 from "../../../assests/MUN_mobbg2.webp"
 
 function HomeMUN() {
   const navigate = useNavigate();
@@ -53,7 +55,10 @@ function HomeMUN() {
     <>
     {loading && <Loader />}
     <div className="HomeMUN-body">
-      <img src={BG} className="HomeMUN-bg" alt="" />
+      <div className='HomeMUN-bg'>
+        <img src={MobBG1} className="HomeMUN-bg-1" alt="" />
+        <img src={MobBG2} className="HomeMUN-bg-2" alt="" />
+      </div>
       <Navbar/>
       <div className="top-HomeMUN">
         <img src={MUNTop} className="top-HomeMUN-img" alt="" />
