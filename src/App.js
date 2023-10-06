@@ -59,6 +59,7 @@ import axios from "axios"
 import Renderer from "./PdfRenderer/Renderer"
 
 import Ourteam from "./components/Teams/ourteams";
+import EventPayment from "./components/EventPayment/EventPayment";
 
 import NewSponsers from "./components/NewSponsers/NewSponsers";
 import NewSponsersmobile from "./components/NewSponsers/NewSponsersmobile";
@@ -132,7 +133,7 @@ useEffect(() => {
           <Route exact={true} path="/profile" element={<Profile />} />
           <Route exact={true} path="/eventsnavbar" element={<Eventsnavbar />} />
           <Route exact={true} path="/events/:id" element={<EventMainPage />} />
-
+          <Route exact={true} path="/eventpayment" element={<EventPayment />} />
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />
           <Route exact={true} path="/payment_closed" element={<NewPaymentbox/>} />

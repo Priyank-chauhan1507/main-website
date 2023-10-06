@@ -1,0 +1,187 @@
+.eventpayment {
+    min-height: 100Vh;
+
+    position: relative;
+    bottom: 0vh;
+    width: 100vw;
+
+    /* padding-bottom: 5vh; */
+}
+
+.eventpayment_header {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.eventpayment_body {
+    padding-top: 2vh;
+    width: 100vw;
+    background: url(../../assests/bg12.webp);
+    background-size: cover;
+    background-color: #FC0;
+    padding-bottom: 1vh;
+    min-height: 90vh;
+
+}
+
+.eventpayment_body h1 {
+    color: #1E1E1E;
+    font-family: Super Comic;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    display: table;
+    line-height: normal;
+    letter-spacing: 2.16px;
+    margin: 4vh auto 0;
+
+}
+
+.eventpayment_card {
+    width: 80%;
+    /* height: 40vh; */
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 4px 4px 48px 0px rgba(0, 0, 0, 0.08);
+    margin: 5vh auto;
+    display: flex;
+
+}
+
+
+.eventpayment_left{
+    width: 30%;
+    height: auto;
+    border-radius: 8px 0px 0px 8px;
+    background: #42B2FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eventpayment_right {
+    width: 70%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.eventpayment_right h2 {
+    color: #F26120;
+    font-family: Super Comic;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.2px;
+}
+
+.eventpayment p {
+    color: #070707;
+    text-align: justify;
+    font-family: Comic Neue;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 142.857% */
+    margin: 1% 0;
+}
+
+.eventpayment .entry {
+    color: #F26120;
+    font-family: Comic Neue;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 100% */
+}
+
+.eventpayment_entry_fee {
+    margin-top: 1vw;
+}
+
+.eventpayment .fee {
+    color: #070707;
+    font-family: Comic Neue;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 100% */
+}
+
+.eventpayment_pay {
+    display: flex;
+    margin: 1% 0;
+    width: 9vw;
+    padding: .5vw 1vw;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #FC0;
+    color: #000;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Comic Sans MS;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: 0.4px;
+    cursor: pointer;
+}
+
+.eventpayment_image {
+    width: 75%;
+    height: 80%;
+
+}
+@media (max-width:768px) {
+    .eventpayment_image {
+        width: 150px;
+        height: 120px;
+    
+    }
+    .eventpayment_pay{
+        width: 40%;
+        margin: auto;
+    }
+    .eventpayment_card{
+        flex-direction: column;
+        width: 60%;
+        padding-bottom: 10px;
+    }
+    .eventpayment_left{
+        width: auto;
+        height: 40%;
+    }
+    .eventpayment_right{
+        width: auto;
+    }
+    .eventpayment p{
+        color: #070707;
+        font-size: 1.1vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 10px;
+        /* 142.857% */
+        margin: 1% 0;
+    }
+    .eventpayment h2{
+        text-align: center;
+        font-size: 4vw !important;
+    }
+    .eventpayment_entry_fee{
+        text-align: center;
+    }}
