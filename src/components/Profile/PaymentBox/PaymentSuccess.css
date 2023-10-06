@@ -3,16 +3,35 @@
     display: flex;
     flex-direction: column;
 }
-
 .sponImg{
-    margin-bottom: 1rem;
+    margin-bottom: -0.5rem;
     width: 24rem;
+}
+.pay-success{
+    overflow-y: scroll;
+}
+@media only screen and (max-width:1000px){
+.sponImg{
+    margin-bottom: -1.5rem;
+    width: 19rem;
+}
 }
 @media only screen and (max-width:768px){
     .pay-success{
         margin: auto !important;
     }
     .sponImg{
-        width: 14rem;
+        margin-bottom: 0rem;
+        width: 22rem;
+    }
+    .paymentsuccessful{
+        display: flex;
+        flex-direction: column;
+    };
+    
+}
+@media only screen and (max-width:450px){
+    .sponImg{
+    width: 14rem;
     }
 }

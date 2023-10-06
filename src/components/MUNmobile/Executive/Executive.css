@@ -94,19 +94,21 @@
     }
 
 .judge1-img{
-    height:50vh;
+    height:48vh;
     border-radius: 17.796px;
-    
+    width: auto;
     
 }
 
 .judge2-img{
     height:48vh;
     border-radius: 17.796px;
+    width: auto;
 }
 .judge3-img{
     height:48vh;
     border-radius: 17.796px;
+    width: auto;
 }
 }
 @media only screen and (max-width:350px)
@@ -120,14 +122,17 @@
 } */
 .judge1-img{
     height:40vh;
+    width: auto;
     border-radius: 17.796px;
 }
 .judge2-img{
     height:40vh;
     border-radius: 17.796px;
+    width: auto;
 }
 .judge3-img{
     height:40vh;
     border-radius: 17.796px;
+    width: auto;
 }
 }
