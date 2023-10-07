@@ -229,3 +229,12 @@
     padding-top: 0;
   }
 }
+
+@media screen and (min-width:600px) and (max-width:1500px){
+  .subtitleBox ul{
+    margin-top:-4vh;
+  }
+  .imagesBox{
+    margin-top:2vh;
+  }
+}
