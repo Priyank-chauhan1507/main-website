@@ -171,17 +171,28 @@
     }
     .eventpayment p{
         color: #070707;
-        font-size: 1.1vw;
+        font-size: 3vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 10px;
-        /* 142.857% */
+        line-height: 17px;
         margin: 1% 0;
     }
     .eventpayment h2{
         text-align: center;
-        font-size: 4vw !important;
+        font-size: 6vw !important;
     }
     .eventpayment_entry_fee{
         text-align: center;
-    }}
+        font-size:  4.3vw !important;
+    }
+    .eventpayment_entry_fee .entry{
+        font-size: 4vw !important;
+    }
+    .eventpayment_entry_fee .fee{
+        font-size: 4vw !important;
+    }
+    .eventpayment_pay{
+        margin-top: 1vw;
+        font-size: 4vw !important;
+    }
+}
