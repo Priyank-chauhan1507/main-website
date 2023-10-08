@@ -65,11 +65,12 @@ padding-top: 21vh;
     margin-top: 24vh;
    z-index: 10;
    position: relative;
+   margin-bottom: 20vh;
    
 }
 
 .spons_box2{
-    margin-top: 53vh;
+    margin-top: 47vh;
    z-index: 10;
    position: relative;
    margin-bottom: 7vh;
@@ -215,14 +216,14 @@ margin-top: -33vh;
     border-right: 3px;
 } */
 
-.lastbox{
+/* 
     display: none
-}
+} */
 
 @media only screen and (max-width: 768px){
-    .last{
+    /* .last{
         display: none;
-    }
+    } */
 
     .brand{
         width: 12vw;

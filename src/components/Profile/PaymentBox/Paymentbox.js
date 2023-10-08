@@ -20,7 +20,7 @@ import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/pay_black.png";
 import icon31 from "../../../assests/payment.svg";
 import line from "../../../assests/line1.svg";
-import paymentcenterpic from "../../../assests/ClosedPaymentAll.webp";
+import paymentcenterpic from "../../../assests/NonAcco.webp";
 import PaymentSuccess from "./PaymentSuccess";
 // import { useHistory } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
