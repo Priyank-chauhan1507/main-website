@@ -115,7 +115,7 @@ useEffect(() => {
         <Routes>
         
           <Route exact={true} path="/" element={<Home />} />
-          <Route exact={true} path="/Sponsmob" element={<NewSponsersmobile />} />
+          <Route exact={true} path="/sponsmobile" element={<NewSponsersmobile />} />
           {/* <Route exact={true} path="/personaldetails" element={<PersonalDetails />} /> */}
           <Route exact={true} path="/register" element={<CollegeDetails />} />
           <Route exact={true} path="/emailverified" element={<EmailVerify />} />
