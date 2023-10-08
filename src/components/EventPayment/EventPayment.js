@@ -30,7 +30,37 @@ function EventPayment() {
         <h1>Paid events</h1>
         {events
           .filter((el) => {
-            return el.is_payment === true;
+            return el.is_payment === true && el.name==="SILENT DJ";
+          })
+          .map((el) => {
+            return (
+              <div className="eventpayment_card" id={el.id}>
+                <div className="eventpayment_left">
+                  <img src={el.image} alt="" className="eventpayment_image" />
+                </div>
+                <div className="eventpayment_right">
+                  <h2>{el.name}</h2>
+                  <p>{el.description}</p>
+                  <div className="eventpayment_entry_fee">
+                    <span className="entry">Entry Fee :</span>
+                    <span className="fee">Rs. {el.payment_amount}/-</span>
+                  </div>
+                  <div
+                    className="eventpayment_pay"
+                    onClick={() => {
+                      setdetails(!details);
+                      setevent(el.name);
+                    }}
+                  >
+                    PAY NOW
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        {events
+          .filter((el) => {
+            return el.is_payment === true && el.name!=="SILENT DJ";
           })
           .map((el) => {
             return (
