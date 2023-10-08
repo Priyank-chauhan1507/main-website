@@ -16,6 +16,10 @@
 
 
 
+
+
+
+
 .navbar{
     position: fixed;
     z-index: 20;
@@ -216,13 +220,21 @@ margin-top: -33vh;
     border-right: 3px;
 } */
 
-.lastbox{
-    display: none
+.sponsmobview{
+    display: none;
 }
 
 @media only screen and (max-width: 768px){
-    .last{
+   
+    .spons_home{
+       
         display: none;
+        
+        
+    }
+    
+    .sponsmobview{
+        display:block;
     }
 
     .brand{

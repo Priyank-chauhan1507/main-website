@@ -324,7 +324,7 @@ utton {
   color: #333333;
 }
 .PaymentClosedAll {
-  width: 25vw;
+  width: 18vw;
 }
 .PayRight {
   margin-left: 100px;
@@ -514,12 +514,12 @@ utton {
   height: 5vh;
   gap: 6vw;
 }
-.PaymentClosedAll {
+/* .PaymentClosedAll {
   width: 25vw;
 }
 .PaymentClosedAll1 {
   width: 25vw;
-}
+} */
 
 .pay-tr {
   display: flex;
@@ -846,7 +846,7 @@ letter-spacing: -0.48px;
     height: 46vh;
   }
   .PaymentClosedAll {
-    width: 50vw;
+    width: 35vw;
     margin: auto;
   }
   .PaymentClosedAll1 {

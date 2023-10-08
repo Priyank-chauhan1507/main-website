@@ -16,7 +16,7 @@ import { useLocation, Link } from "react-router-dom";
 import pic from "../../../assests/profile1.png.jpg";
 import icon1 from "../../../assests/profile.svg";
 import Closed from "../../../assests/PaymentClosedGirls.png";
-import Closed1 from "../../../assests/ClosedPaymentAll.webp";
+import Closed1 from "../../../assests/NonAcco.webp";
 import icon2 from "../../../assests/events.svg";
 import icon3 from "../../../assests/pay_black.png";
 import icon31 from "../../../assests/payment.svg";
@@ -1026,9 +1026,9 @@ const NewPaymentBox = (
                     <div className="lsp-c1">
                       <img src={icon3} alt="icon3" />
                       <Link
-                        to="/payment_skit"
+                        to="/payment_gdtu"
                         className={
-                          locator.pathname === "/payment_skit"
+                          locator.pathname === "/payment_gdtu"
                             ? "c1-text"
                             : "c2-text"
                         }
@@ -1441,9 +1441,9 @@ const NewPaymentBox = (
                   ) : (
                     <div className="mv-top-2">
                       <Link
-                        to="/payment_skit"
+                        to="/payment_gdtu"
                         className={
-                          Locator.pathname === "/payment_skit"
+                          Locator.pathname === "/payment_gdtu"
                             ? "nav-active"
                             : "nav-passive"
                         }

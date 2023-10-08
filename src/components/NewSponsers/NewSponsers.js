@@ -90,6 +90,7 @@ import denver from '../../assests/denver_logo_600x.webp'
 import kabbadi from '../../assests/kabaddiadda logo png.png'
 import indinoir from '../../assests/Indinoir logo 1.jpg'
 import intern  from '../../assests/internshala_og_image.webp'
+import NewSponsersmobile from './NewSponsersmobile'
 
 
 
@@ -97,8 +98,9 @@ import intern  from '../../assests/internshala_og_image.webp'
 function NewSponsers() {
 
   return (
-    
+    <>
     <div className='spons_home'>
+        {/* <div className='spons_pcview'> */}
         <div className='navbar'>
         <Navbar />
         </div>
@@ -523,14 +525,22 @@ function NewSponsers() {
         
 
            
-</div>        
+     </div>        
 
  
         </div>
        
+     {/* </div> */}
+
+     
 
 
     </div>
+
+    <div className='sponsmobview'>
+        <NewSponsersmobile/>
+     </div>
+    </>
   )
 }
 
