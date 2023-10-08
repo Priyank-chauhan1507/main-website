@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="phone connect para4">
             <a href="tel:+917081537653">
               <img src={Phone} alt="Call" />
-              <span>7081537653 (Jolly)</span>
+              <span>9155992335 (Aadarsh)</span>
             </a>
           </div>
           <div className="phone connect para3">

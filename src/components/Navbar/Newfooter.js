@@ -38,8 +38,8 @@ const WebNavbarNew = () => {
         <div className="webNavbarLeft" style={{paddingLeft:"5vh"}}>
           <div className="webNavbarLeft1">Contact us</div>
           <div className="webNavbarLeft3">
-            <div>Jolly</div>
-            <div> 7081537653</div>
+            <div>Aadarsh</div>
+            <div> 9155992335</div>
           </div>
           <div className="webNavbarLeft2">
             <div>Kartikey</div>
