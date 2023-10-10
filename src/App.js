@@ -137,7 +137,7 @@ useEffect(() => {
 
           <Route exact={true} path="/pevents" element={<EventBox />} />
           <Route exact={true} path="/payment" element={<Paymentbox />} />
-          <Route exact={true} path="/payment_finl" element={<NewPaymentbox/>} />
+          <Route exact={true} path="/payment_chu" element={<NewPaymentbox/>} />
           
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
