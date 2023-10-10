@@ -471,7 +471,7 @@ const NewPaymentBox = (
         >
           <>
             <p className="Payevent">
-            Accomodation in full now only get ticket for non accomodation
+            Accomodation is full now only get ticket for non accomodation
               (* Accommdation Compulsory for Female)
             </p>
             <div className="agree-terms-and-conditions">
@@ -705,7 +705,7 @@ const NewPaymentBox = (
     >
       <>
         <p className="MPayevent">
-        Accomodation in full now only get ticket for non accomodation
+        Accomodation is full now only get ticket for non accomodation
           (* Accommdation Compulsory for Female)
         </p>
         <div className="agree-terms-and-conditions">
