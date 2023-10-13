@@ -354,16 +354,16 @@ const PaymentBox = (
                   {userDetails?.is_iitr_alumn ? (
                     <div
                       className={
-                        locator.pathname === "/payment_closed"
+                        locator.pathname === "/payment"
                           ? "lsp-c2 c2-text"
                           : "lsp-c2 c2-text"
                       }
                     >
                       <img src={icon3} alt="icon3" />
                       <Link
-                        to="/payment_closed"
+                        to="/payment"
                         className={
-                          locator.pathname === "/payment_closed"
+                          locator.pathname === "/payment"
                             ? "c1-text"
                             : "c2-text"
                         }
@@ -375,9 +375,9 @@ const PaymentBox = (
                     <div className="lsp-c1">
                       <img src={icon3} alt="icon3" />
                       <Link
-                        to="/payment_closed"
+                        to="/payment"
                         className={
-                          locator.pathname === "/payment_closed"
+                          locator.pathname === "/payment"
                             ? "c1-text"
                             : "c2-text"
                         }
@@ -739,9 +739,9 @@ const PaymentBox = (
                   ) : (
                     <div className="mv-top-2">
                       <Link
-                        to="/payment_closed"
+                        to="/payment"
                         className={
-                          Locator.pathname === "/payment_closed"
+                          Locator.pathname === "/payment"
                           ? "nav-active"
                           : "nav-passive"
                         }
