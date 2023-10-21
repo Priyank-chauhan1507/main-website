@@ -169,6 +169,21 @@ z-index: 10;
 margin-top: -33vh;
 }
 
+.spons_cont4{
+    color: #000;
+text-align: center;
+margin-left: 23vw;
+font-family: Comic Sans MS;
+font-size: 1.1vw;
+font-style: normal;
+font-weight: 700;
+line-height: 4vh; /* 100% */
+letter-spacing: -0.4px;
+
+z-index: 10;
+margin-top: -33vh;
+}
+
 .spons_img{
     display: flex;
     margin-left: 25vw;
@@ -193,6 +208,16 @@ margin-top: -33vh;
     padding-right: 13vw;
 }
 
+.spons_heading1{
+    display: flex;
+    
+}
+
+.spons_heading1>p{
+    margin-left: -2vw;
+    padding-right: 21vw;
+}
+
 .spons_img2{
     display: flex;
     margin-left: -10vw;
@@ -207,8 +232,23 @@ margin-top: -33vh;
 
 }
 
+.spons_img3{
+    display: flex;
+    margin-left: -10vw;
+    margin-top: 8.5vh;
+}
+
+.spons_img3>img{
+    margin-left: 6.3vw;
+    margin-right: 2vw;
+    height: 14vh;
+    margin-top: -5vh;
+
+}
+
 .brand{
     width: 9vw;
+
 }
 
 .brandtitle{
@@ -245,6 +285,11 @@ margin-top: -33vh;
         margin-left: -7vw;
         padding-right: 17vw;
     }
+
+    .spons_heading1>p{
+        margin-left: -7vw;
+        padding-right: 17vw;
+    }
 }
 
 @media only screen and (max-width: 584px){
@@ -259,6 +304,9 @@ margin-top: -33vh;
     .spons_cont3{
         font-size: 2vw;
     }
+    .spons_cont4{
+        font-size: 2vw;
+    }
 }
 
 @media only screen and (max-width: 380px){
@@ -271,6 +319,10 @@ margin-top: -33vh;
     }
 
     .spons_cont3{
+        font-size: 2vw;
+    }
+
+    .spons_cont4{
         font-size: 2vw;
     }
 }
