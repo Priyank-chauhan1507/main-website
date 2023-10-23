@@ -91,6 +91,19 @@ import kabbadi from '../../assests/kabaddiadda logo png.png'
 import indinoir from '../../assests/Indinoir logo 1.jpg'
 import intern  from '../../assests/internshala_og_image.webp'
 
+import ongc from '../../assests/ONGC.png'
+import redchief from '../../assests/red chief.jpeg'
+import philips from '../../assests/philips.webp'
+import bingo from '../../assests/bingo.png'
+import instax from '../../assests/instax.png'
+import top from '../../assests/top.png'
+import wowl from '../../assests/wowl.png'
+import berrylush from '../../assests/berrylush.jpeg'
+import techno from '../../assests/techno.png'
+import fitcamp from '../../assests/fitcamp.png'
+import handilane from '../../assests/Handilane.webp'
+
+
 
 function NewSponsersmobile() {
 
@@ -184,7 +197,7 @@ function NewSponsersmobile() {
                 <p>BANKING PARTNER</p>
                 <p>EDUCATION PARTNER</p>
                 <p>ELECTRICITY PARTNER</p>
-                <p>INFRASTRUCTURE PARTNER</p>
+                <p>PAYMENT PARTNER</p>
                 
                 </div>
                 <div className='spons_img2'>
@@ -194,7 +207,7 @@ function NewSponsersmobile() {
                     <img src={line} alt=''/>
                     <img className='brand' src={rec} alt=''/>
                     <img src={line} alt=''/>
-                    <img className='brand' src={anantraj} alt=''/>
+                    <img className='brand' src={pnb} alt=''/>
                     
                 </div>
             </div>
