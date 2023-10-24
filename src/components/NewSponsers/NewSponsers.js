@@ -102,6 +102,9 @@ import berrylush from '../../assests/berrylush.jpeg'
 import techno from '../../assests/techno.png'
 import fitcamp from '../../assests/fitcamp.png'
 import handilane from '../../assests/Handilane.webp'
+import heroLogo from '../../assests/herologo.webp'
+import pepsiLogo from '../../assests/indieblog_pepsi_logo_history_2014.webp'
+import breezeLogo from '../../assests/breeze.webp';
 
 function NewSponsers() {
 
@@ -133,11 +136,8 @@ function NewSponsers() {
             <div className='spons_cont'>
                 <p>TITLE SPONSER</p>
                 <div className='spons_img'>
-                    {/* <img className='brandtitle' src={spons1} alt=''/>
-                    <img src={line} alt=''/>
-                    <img className='brandtitle' src={spons2} alt=''/>
-                    <img src={line} alt=''/>
-                    <img className='brandtitle' src={spons3} alt=''/> */}
+                    <img className="titlesponsimg" src={breezeLogo} alt=''/>
+
                 </div>
             </div>
          </div>
@@ -145,13 +145,9 @@ function NewSponsers() {
             <div className='spons_box1'>
             <img src={SponsBox2} alt=''/>
             <div className='spons_cont2'>
-                <p>TITLE SPONSER</p>
+                <p>CO-TITLE SPONSER</p>
                 <div className='spons_img'>
-                    {/* <img className='brand' src={spons1} alt=''/>
-                    <img src={line} alt=''/>
-                    <img className='brand' src={spons2} alt=''/>
-                    <img src={line} alt=''/>
-                    <img className='brand' src={spons3} alt=''/> */}
+                    <img className='co-titleimg' src={heroLogo} alt=''/>
                 </div>
             </div>
             </div>
@@ -159,14 +155,11 @@ function NewSponsers() {
 
             <div className='spons_box2'>
             <img src={SponsBox3} alt=''/>
-            <div className='spons_cont2'>
+            <div className='spons_cont2bev'>
                 <p> BEVARAGE PARTNER</p>
                 <div className='spons_img'>
-                    {/* <img className='brand' src={spons1} alt=''/>
-                    <img src={line} alt=''/>
-                    <img className='brand' src={spons2} alt=''/>
-                    <img src={line} alt=''/>
-                    <img className='brand' src={spons3} alt=''/> */}
+                    <img className='beverageimg' src={pepsiLogo} alt=''/>
+                    
                 </div>
             </div>
             </div>
