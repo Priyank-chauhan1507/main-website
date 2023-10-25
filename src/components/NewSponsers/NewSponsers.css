@@ -36,7 +36,9 @@
 .spons_box{
     display: flex;
     flex-direction: column;
-    /* overflow-y: scroll; */
+    overflow-y: hidden;
+    /* width: auto; */
+    overflow-x: hidden;
 }
 
 
@@ -351,6 +353,9 @@ margin-top: -33vh;
     }
     .lstevntimgspons{
         margin-left:5vw !important;
+    }
+    .lastsponsbox{
+        margin-bottom: 20vh;
     }
 }
 
