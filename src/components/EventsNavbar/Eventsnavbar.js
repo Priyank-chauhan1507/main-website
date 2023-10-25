@@ -5,7 +5,7 @@ import MobEventnavbar from "./MobEventnavbar";
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import img_profile from "../../assests/profile1.png.jpg";
-import {message} from "antd";
+import { message } from "antd";
 import axios from "axios";
 import { Payment } from "@mui/icons-material";
 
@@ -110,20 +110,37 @@ function Navbar({ color, disable, setregister, register, data }) {
           >
             Zonals
           </a>
-          {userDetails && userDetails.payment ? (<a
-            className={localStorage.getItem("token") ? "event-nav-right-compo hover-underline-animation" : "none_display"}
-            href="https://thomso.in/id_card"
-          >
-            ID-CARD
-          </a>): (
-             <a
-             className={localStorage.getItem("token") ? "event-nav-right-compo hover-underline-animation" : "none_display"}
-             href="https://thomso.in/payment"
-           >
-             ID-CARD
-           </a>
+          {userDetails && userDetails.payment ? (
+            <a
+              className={
+                localStorage.getItem("token")
+                  ? "event-nav-right-compo hover-underline-animation"
+                  : "none_display"
+              }
+              href="https://thomso.in/id_card"
+            >
+              ID-CARD
+            </a>
+          ) : (
+            <a
+              className={
+                localStorage.getItem("token")
+                  ? "event-nav-right-compo hover-underline-animation"
+                  : "none_display"
+              }
+              href="https://thomso.in/payment"
+            >
+              ID-CARD
+            </a>
           )}
-
+          <a
+            className="event-nav-right-compo hover-underline-animation"
+            onClick={() => {
+              navigate("/spons");
+            }}
+          >
+            Sponsers
+          </a>
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
