@@ -105,6 +105,10 @@ import handilane from '../../assests/Handilane.webp'
 import heroLogo from '../../assests/herologo.webp'
 import pepsiLogo from '../../assests/indieblog_pepsi_logo_history_2014.webp'
 import breezeLogo from '../../assests/breeze.webp';
+import titlesponsboxbg from '../../assests/title_spons_box_img.png';
+import cotitlesponsboxbg from '../../assests/co_title_spons_box_img.png';
+import cotitlesponsboxbg2 from '../../assests/co_title_spons_box_img_2.png';
+import gensponsbg from '../../assests/gen_spons_bg.png';
 
 function NewSponsers() {
 
@@ -516,18 +520,6 @@ function NewSponsers() {
             </div>
             </div> */}
 
-
-
-
-
-            
-
-            
-        
-
-
-        
-
            
      </div>        
 
@@ -536,9 +528,414 @@ function NewSponsers() {
        
      {/* </div> */}
 
-     
+     <div className="sponsmobilepg">
+     <div className='heading1_mob'>
+            <p>
+            OUR SPONSERS
+            </p>
+         </div>
+    
+     <div className='spons_box'>
 
 
+<div className='spons_box1'>
+   <img src={titlesponsboxbg} alt=''/>
+   <div className='spons_cont'>
+       <p>TITLE SPONSER</p>
+       <div className='spons_img'>
+           <img className="titlesponsimg" src={breezeLogo} alt=''/>
+
+       </div>
+   </div>
+</div>
+
+   <div className='spons_box1'>
+   <img src={cotitlesponsboxbg} className="cotitleimg1" alt=''/>
+   <div className='spons_cont2'>
+       <p>CO-TITLE SPONSER</p>
+       <div className='spons_img'>
+           <img className='co-titleimg' src={heroLogo} alt=''/>
+       </div>
+   </div>
+   </div>
+
+
+   <div className='spons_box2'>
+   <img src={cotitlesponsboxbg2} alt=''/>
+   <div className='spons_cont2bev'>
+       <p> BEVARAGE PARTNER</p>
+       <div className='spons_img'>
+           <img className='beverageimg' src={pepsiLogo} alt=''/>
+           
+       </div>
+       </div>
+   </div>
+   <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+                <p>BANKING PARTNER</p>
+                <p>EDUCATION PARTNER</p>
+                <p>ELECTRICITY PARTNER</p>
+
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={sbi} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={nextias} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={rec} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+             <div className='spons_cont3'>
+                <div className='spons_heading'>
+                <p>PAYMENT PARTNER</p>
+                <p>INFRASTRUCTURE PARTNER</p>
+                <p>HYDRATION PARTNER</p>
+                {/* <p className='last'>PAYMENT PARTNER</p> */}
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={pnb} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={anantraj} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={bailey} alt=''/>
+                    {/* <img className='last' src={line} alt=''/>
+                    <img className='brand last'  src={pnb} alt=''/> */}
+                </div>
+            </div>
+         </div>
+
+
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+             <div className='spons_cont3'>
+                <div className='spons_heading'>
+                <p>GOLD PARTNER</p>
+                <p>ALUMNI PARTNER</p>
+                <p>DIAMOND SPONSER</p>
+                {/* <p className='last'>PAYMENT PARTNER</p> */}
+                </div>
+                <div className='spons_img2'>
+                <img className='brand' src={tatachem} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={iitraa} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={treks} alt=''/>
+                    {/* <img className='last' src={line} alt=''/>
+                    <img className='brand last'  src={pnb} alt=''/> */}
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+                <p>PLATINUM PARTNER</p>
+                <p>MAJOR SPONSER</p>
+                <p>MERCHANDISE PARTNER</p>
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={ongc} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={shapoorji} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={bonkers} alt=''/>
+                    <img src={line} alt=''/>
+
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+             <div className='spons_cont3'>
+                <div className='spons_heading'>
+                <p>MAJOR SPONSER</p>
+                <p>FRAGRANCE PARTNER</p>
+                <p >FOOTWEAR PARTNER</p>
+                {/* <p className='last'>PAYMENT PARTNER</p> */}
+                </div>
+                <div className='spons_img2'>
+                <img className='brand' src={rohde} alt=''/>
+                <img src={line} alt=''/>
+                <img className='brand' src={fastrack} alt=''/>
+                <img className='last' src={line} alt=''/>
+                <img className='brand' src={redchief} alt=''/>
+
+                <img src={line} alt=''/>
+                    {/* <img className='last' src={line} alt=''/>
+                    <img className='brand last'  src={pnb} alt=''/> */}
+                </div>
+            </div>
+         </div>
+
+         
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+            <p>MAJOR SPONSER</p>
+                <p>SNACKING PARTNER</p>
+                <p>MAJOR SPONSER</p>
+                </div>
+                <div className='spons_img2'>
+
+                <img className='brand' src={philips} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={bingo} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={munjal} alt=''/>
+
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+                <p>VLSI PARTNER</p>
+                <p className='last'>SPONSER</p>
+                <p>DESSERT PARTNER</p>
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={vlsi} alt=''/>
+                    <img className='last' src={line} alt=''/>
+                    <img className='brand last' src={eil} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={wackers} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+
+                <p>SPONSER</p>
+                <p>STATIONARY PARTNER</p>
+                <p>MAJOR SPONSER</p>
+
+                </div>
+                <div className='spons_img2'>
+
+       
+                    <img className='brand' src={lapcare} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={luxor} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={parsan} alt=''/>
+
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+            <p className='last'>GOLD SPONSER</p>
+                <p>CO SPONSER</p>
+                <p>HEALTHY SNACKING PARTNER</p>
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand last' src={continental} alt=''/>
+                    <img className='last' src={line} alt=''/>
+                    <img className='brand' src={layer} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={tooyum} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+
+                <p>BATH AND BODY PARTNER</p>
+                <p>MOMENTS PARTNER</p>
+                <p className='last'>ZONALS TRAVEL PARTNER</p>
+                </div>
+                <div className='spons_img2'>
+
+                    <img src={line} alt=''/>
+                    <img className='brand' src={plum} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={instax} alt=''/>
+                    <img className='last' src={line} alt=''/>
+                    <img className='brand last' src={abhibus} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+                <p>CO SPONSER</p>
+                <p>Entertainment and Adventure Partner</p>
+                <p>MAJOR SPONSER</p>
+
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={IES} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={crystal} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={orion} alt=''/>
+
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+
+                <p>OVERSEAS EDUCATION PARTNER</p>
+                <p className='last'>LEARNING PARTNER</p>
+                <p>WORKSHOP PARTNER</p>
+
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={top} alt=''/>
+                    <img className='last' src={line} alt=''/>
+                    <img className='brand last' src={wowl} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={skillhub} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+            <p>SUPPLY CHAIN PARTNER</p>
+                <p>MAJOR SPONSER</p>
+                <p>PERFUME PARTNER</p>
+                
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={safex} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={berrylush} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={denver} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+
+                <p className='last'>SPORTS SPONSER</p>
+                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSER</p>
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand last' src={kabbadi} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={indinoir} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={techno} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+
+                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSER</p>
+                <p className='last'>MAJOR SPONSER</p>
+                </div>
+                <div className='spons_img2'>
+
+                    <img src={line} alt=''/>
+                    <img className='brand' src={intern} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={fitcamp} alt=''/>
+                    <img className='last' src={line} alt=''/>
+                    <img className='brand last' src={dkms} alt=''/>
+                </div>
+            </div>
+         </div>
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSER</p>
+
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={peta} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={fragile} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={young} alt=''/>
+
+                </div>
+            </div>
+         </div>
+
+
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+
+            <p>MAJOR SPONSER</p>
+                <p className='last'>EVENTS PARTNER</p>
+                <p>EVENTS PARTNER</p>
+                </div>
+                <div className='spons_img2'>
+                    <img className='brand' src={handilane} alt=''/>
+                    <img className='last' src={line} alt=''/>
+                    <img className='brand last' src={madame} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand' src={dsfm} alt=''/>
+
+                </div>
+            </div>
+         </div>
+         
+         <div className='spons_box3'>
+            <img src={gensponsbg} alt=''/>
+            <div className='spons_cont3'>
+            <div className='spons_heading'>
+
+            <p>EVENTS PARTNER</p>
+                <p>EVENTS PARTNER</p>
+                </div>
+                <div className='spons_img2'>
+                <img className='brand lasteventimgspons' src={pizleo} alt=''/>
+                    <img src={line} alt=''/>
+                    <img className='brand lstevntimgspons' src={course} alt=''/>
+                </div>
+            </div>
+         </div>
+
+
+   </div>
+    </div>
     </div>
 
     <div className='sponsmobview'>
