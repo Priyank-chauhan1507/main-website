@@ -193,11 +193,11 @@ function NewSponsersmobile() {
             <div className='spons_box3'>
             <img src={sponsbox} alt=''/>
             <div className='spons_cont3'>
-                <div className='spons_heading'>
-                    <p>BANKING PARTNER</p>
-                    <p>EDUCATION PARTNER</p>
-                    <p>ELECTRICITY PARTNER</p>
-                    <p>PAYMENT PARTNER</p>
+            <div className='spons_heading'>
+                <p>BANKING PARTNER</p>
+                <p>EDUCATION PARTNER</p>
+                <p>ELECTRICITY PARTNER</p>
+                <p>PAYMENT PARTNER</p>
                 
                 </div>
                 <div className='spons_img2'>

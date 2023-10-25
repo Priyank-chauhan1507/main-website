@@ -19,7 +19,6 @@
 .navbar{
     position: fixed;
     z-index: 20;
-    background-color: #101010;
 }
 .spons_home>img{
     position: fixed;
@@ -46,7 +45,7 @@
 
 .heading1{
     z-index: 10;
-    /* position: fixed; */
+    position: relative;
 }
 
 .heading1>p{
@@ -70,12 +69,6 @@ padding-top: 21vh;
    
 }
 
-
-.spons_box1>img{
-    width: 78vw;
-    height: 27vh;
-}
-
 .spons_box2{
     margin-top: 47vh;
    z-index: 10;
@@ -87,8 +80,7 @@ padding-top: 21vh;
 
 .spons_box2>img{
     width: 72vw;
-    height: 18vh;
-
+    height: 45vh;
 }
 
 
@@ -105,6 +97,11 @@ padding-top: 21vh;
     height: 45vh;
 }
 
+
+.spons_box1>img{
+    width: 78vw;
+    height: 39vh;
+}
 
 .spons_cont{
     color: #000;
@@ -206,26 +203,24 @@ margin-top: -33vh;
 .spons_heading>p{
     margin-left: -7vw;
     padding-right: 13vw;
-    line-height: 1.1;
 }
 
 .spons_img2{
     display: flex;
     margin-left: -10vw;
-    margin-top: 6.8vh;
+    margin-top: 8.5vh;
 }
 
 .spons_img2>img{
     margin-left: 1.3vw;
     margin-right: 2vw;
-    height: 6vh;
+    height: 14vh;
     margin-top: -5vh;
 
 }
 
 .brand{
-    width: 12.5vw;
-    aspect-ratio: 1;
+    width: 9vw;
 }
 
 .brandtitle{
@@ -240,10 +235,6 @@ margin-top: -33vh;
 /* 
     display: none
 } */
-
-.spons_box3>img{
-    height: 14vh;
-}
 
 @media only screen and (max-width: 768px){
     /* .last{
