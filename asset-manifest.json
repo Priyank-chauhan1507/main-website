@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab013b22.css",
-    "main.js": "/static/js/main.4b771edb.js",
+    "main.css": "/static/css/main.c4ec34ec.css",
+    "main.js": "/static/js/main.f1423203.js",
     "static/media/thomso.mp4": "/static/media/thomso.aecbb9f0cac93620247b.mp4",
     "static/media/simg1.svg": "/static/media/simg1.4ed1930450d10cf1b21ee02cfd569970.svg",
     "static/media/simg3.svg": "/static/media/simg3.2cc6b3eecdf80f05e1457a6bfc081a1a.svg",
@@ -149,6 +149,7 @@
     "static/media/after.webp": "/static/media/after.87b7b6350c737d9ccacf.webp",
     "static/media/NonAcco.webp": "/static/media/NonAcco.7b4f2c92e3e421fa9a65.webp",
     "static/media/bailey.jpg": "/static/media/bailey.90ac00e1052dbb0cd47b.jpg",
+    "static/media/title_spons_box_img.png": "/static/media/title_spons_box_img.1c854ba7b730f4f484ed.png",
     "static/media/sbi.png": "/static/media/sbi.56343a5957cc4f5f1255.png",
     "static/media/feelthevibelavenderback.webp": "/static/media/feelthevibelavenderback.cd7353db581a082be486.webp",
     "static/media/propic.svg": "/static/media/propic.39d1147898dd7f65cb0cd55d48ebe1ce.svg",
@@ -191,8 +192,10 @@
     "static/media/Abhi Bus.png": "/static/media/Abhi Bus.3ec9667451cb35f7fe8e.png",
     "static/media/thomsostrip.webp": "/static/media/thomsostrip.0ccebf0f12ea3fd654e7.webp",
     "static/media/memberimgbg.webp": "/static/media/memberimgbg.dd2533a59655a90b88ef.webp",
+    "static/media/co_title_spons_box_img_2.png": "/static/media/co_title_spons_box_img_2.d1575944051b1a61de3a.png",
     "static/media/merchsmily.webp": "/static/media/merchsmily.8b2f8a946d215d4ecb12.webp",
     "static/media/indieblog_pepsi_logo_history_2014.webp": "/static/media/indieblog_pepsi_logo_history_2014.77498a77138e716ba648.webp",
+    "static/media/co_title_spons_box_img.png": "/static/media/co_title_spons_box_img.35c341e66e8407bf217f.png",
     "static/media/abouttop.webp": "/static/media/abouttop.6411227c762878e6e928.webp",
     "static/media/Handilane.webp": "/static/media/Handilane.bddfc138f269b245e351.webp",
     "static/media/pay.svg": "/static/media/pay.1cc47b09e520356f23c74b99e352a2d4.svg",
@@ -253,11 +256,11 @@
     "static/media/line_2.svg": "/static/media/line_2.0d51758040a07ca2655eb326cd2e946e.svg",
     "static/media/pause.svg": "/static/media/pause.b00e0a737956c2de96fa9f99c61ab9f8.svg",
     "static/media/diamond.svg": "/static/media/diamond.7e6e6a15583877c88e6a71723e75f3b6.svg",
-    "main.ab013b22.css.map": "/static/css/main.ab013b22.css.map",
-    "main.4b771edb.js.map": "/static/js/main.4b771edb.js.map"
+    "main.c4ec34ec.css.map": "/static/css/main.c4ec34ec.css.map",
+    "main.f1423203.js.map": "/static/js/main.f1423203.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab013b22.css",
-    "static/js/main.4b771edb.js"
+    "static/css/main.c4ec34ec.css",
+    "static/js/main.f1423203.js"
   ]
 }
