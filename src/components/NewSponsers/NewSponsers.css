@@ -315,7 +315,9 @@
         z-index: 10;
         position: relative;
     }
-
+    .last_heading{
+        margin-left: 5vw;
+    }
     .heading1_mob p {
         color: #FFF;
         text-align: center;

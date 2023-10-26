@@ -862,7 +862,7 @@ function NewSPONSORs() {
             <div className="spons_box3 lastsponsbox">
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
-                <div className="spons_heading">
+                <div className="spons_heading last_heading">
                   <p>EVENTS PARTNER</p>
                   <p>EVENTS PARTNER</p>
                 </div>
