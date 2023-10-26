@@ -121,7 +121,7 @@ function NewSponsersmobile() {
 
          <div className='heading1'>
             <p>
-            OUR SPONSERS
+            OUR SPONSORS
             </p>
             
          </div>
@@ -132,7 +132,7 @@ function NewSponsersmobile() {
          <div className='spons_box1'>
             <img src={SponsCont} alt=''/>
             <div className='spons_cont'>
-                <p>TITLE SPONSER</p>
+                <p>TITLE SPONSOR</p>
                 <div className='spons_img'>
                     {/* <img className='brandtitle' src={spons1} alt=''/>
                     <img src={line} alt=''/>
@@ -146,7 +146,7 @@ function NewSponsersmobile() {
             <div className='spons_box1'>
             <img src={SponsBox2} alt=''/>
             <div className='spons_cont2'>
-                <p>TITLE SPONSER</p>
+                <p>TITLE SPONSOR</p>
                 <div className='spons_img'>
                     {/* <img className='brand' src={spons1} alt=''/>
                     <img src={line} alt=''/>
@@ -220,7 +220,7 @@ function NewSponsersmobile() {
                 <p className=' '>HYDRATION PARTNER</p>
                 <p>GOLD PARTNER</p>
                 <p>ALUMNI PARTNER</p>
-                <p>DIAMOND SPONSER</p>
+                <p>DIAMOND SPONSOR</p>
                 
                 </div>
                 <div className='spons_img2'>
@@ -245,8 +245,8 @@ function NewSponsersmobile() {
             <div className='spons_heading'>
             <p>FOOTWEAR PARTNER</p>
                 <p className=' '>PAYMENT PARTNER</p>
-                <p>MAJOR SPONSER</p>
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
+                <p>MAJOR SPONSOR</p>
                 
                 </div>
                 <div className='spons_img2'>
@@ -267,10 +267,10 @@ function NewSponsersmobile() {
             <img src={sponsbox} alt=''/>
             <div className='spons_cont3'>
             <div className='spons_heading'>
-            <p>GOLD SPONSER</p>
+            <p>GOLD SPONSOR</p>
                 <p>FRAGRANCE PARTNER</p>
                 <p className=' '>SNACKS PARTNER</p>
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
                 
                 </div>
                 <div className='spons_img2'>
@@ -295,9 +295,9 @@ function NewSponsersmobile() {
             <div className='spons_cont3'>
             <div className='spons_heading'>
             <p>MERCHANDISE PARTNER</p>
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
                 <p>SNACKS PARTNER</p>
-                <p className=' '>PLATINUM SPONSER</p>
+                <p className=' '>PLATINUM SPONSOR</p>
                 
                 </div>
                 <div className='spons_img2'>
@@ -321,7 +321,7 @@ function NewSponsersmobile() {
             <div className='spons_heading'>
                 <p>DRAMATICS PARTNER</p>
                 <p>VLSI PARTNER</p>
-                <p>SPONSER</p>
+                <p>SPONSOR</p>
                 <p>DESSERT PARTNER</p>
                 
                 </div>
@@ -343,7 +343,7 @@ function NewSponsersmobile() {
             <img src={sponsbox} alt=''/>
             <div className='spons_cont3'>
             <div className='spons_heading'>
-            <p className=' '>SPONSER</p>
+            <p className=' '>SPONSOR</p>
             <p>Social Initiative Partner</p>
                 <p>Social Initiative Partner</p>
                 <p>Social Initiative Partner</p>
@@ -365,10 +365,10 @@ function NewSponsersmobile() {
             <img src={sponsbox} alt=''/>
             <div className='spons_cont3'>
             <div className='spons_heading'>
-            <p>MAJOR SPONSER</p>
-                <p>GOLD SPONSER</p>
+            <p>MAJOR SPONSOR</p>
+                <p>GOLD SPONSOR</p>
                 <p>STATIONARY PARTNER</p>
-                <p className=' '>MAJOR SPONSER</p>
+                <p className=' '>MAJOR SPONSOR</p>
                 
                 </div>
                 <div className='spons_img2'>
@@ -391,8 +391,8 @@ function NewSponsersmobile() {
             <img src={sponsbox} alt=''/>
             <div className='spons_cont3'>
             <div className='spons_heading'>
-            <p>MAJOR SPONSER</p>
-                <p>CO SPONSER</p>
+            <p>MAJOR SPONSOR</p>
+                <p>CO SPONSOR</p>
                 <p className=' '>HEALTHY SNACKING PARTNER</p>
                 <p>Bath and Body Partner</p>
                 </div>
@@ -417,9 +417,9 @@ function NewSponsersmobile() {
             <div className='spons_cont3'>
             <div className='spons_heading'>
             <p>Zonals Travel Partner</p>
-                <p>MAJOR SPONSER</p>
-                <p>MAJOR SPONSER</p>
-                <p className=' '>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
+                <p>MAJOR SPONSOR</p>
+                <p className=' '>MAJOR SPONSOR</p>
                 
                 </div>
                 <div className='spons_img2'>
@@ -440,8 +440,8 @@ function NewSponsersmobile() {
             <div className='spons_cont3'>
             <div className='spons_heading'>
                 <p>Traditional Clothing Partner</p>
-                <p>MAJOR SPONSER</p>
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
+                <p>MAJOR SPONSOR</p>
                 <p>AUDIO PARTNER</p>
                 
                 </div>
@@ -463,7 +463,7 @@ function NewSponsersmobile() {
             <div className='spons_cont3'>
             <div className='spons_heading'>
             <p>JEWELLRY PARTNER</p>
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
                 <p>SNACKING PARTNER</p>
                 <p className=' '>Mobile accessories Partner</p>
                 </div>
@@ -486,9 +486,9 @@ function NewSponsersmobile() {
             <div className='spons_cont3'>
             <div className='spons_heading'>
             <p>ICE POPS PARTNER</p>
-                <p className=' '>MAJOR SPONSER</p>
+                <p className=' '>MAJOR SPONSOR</p>
                 <p>Overseas Eductaion Partner</p>
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
                 </div>
                 <div className='spons_img2'>
                 <img className='brand' src={skippi} alt=''/>
@@ -510,10 +510,10 @@ function NewSponsersmobile() {
             <div className='spons_heading'>
                 
                 
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
                 <p>WORKSHOP PARTNER</p>
                 <p className=' '>SUPPLY CHAIN PARTNER</p>
-                <p>MAJOR SPONSER</p>
+                <p>MAJOR SPONSOR</p>
                 </div>
                 <div className='spons_img2'>
                 <img className='brand' src={edwim} alt=''/>
@@ -536,7 +536,7 @@ function NewSponsersmobile() {
                
                 <p>FRAGRANCE PARTNER</p>
                 <p>SPORTS PARTNER</p>
-                <p>CO SPONSER</p>
+                <p>CO SPONSOR</p>
                 <p className=''>Skill Development Partner</p>
                 </div>
                 <div className='spons_img2'>
@@ -557,11 +557,11 @@ function NewSponsersmobile() {
             <img src={sponsbox} alt=''/>
             <div className='spons_cont3'>
             <div className='spons_heading'>
-                <p>TITLE SPONSER</p>
-                <p>TITLE SPONSER</p>
-                <p>TITLE SPONSER</p>
-                <p>TITLE SPONSER</p>
-                <p className=' '>TITLE SPONSER</p>
+                <p>TITLE SPONSOR</p>
+                <p>TITLE SPONSOR</p>
+                <p>TITLE SPONSOR</p>
+                <p>TITLE SPONSOR</p>
+                <p className=' '>TITLE SPONSOR</p>
                 </div>
                 <div className='spons_img2'>
                     <img className='brand' src={spons1} alt=''/>
