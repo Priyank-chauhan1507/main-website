@@ -139,7 +139,7 @@ function Navbar({ color, disable, setregister, register, data }) {
               navigate("/spons");
             }}
           >
-            Sponsers
+            Sponsor
           </a>
           {localStorage.getItem("token") ? (
             <>
