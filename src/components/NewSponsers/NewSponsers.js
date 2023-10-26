@@ -1,5 +1,5 @@
 import React from "react";
-import "./NewSponsors.css";
+import "./NewSponsers.css";
 import Navbar from "../EventsNavbar/Eventsnavbar";
 
 import SponsCont from "../../assests/sponscont.png";
@@ -88,7 +88,7 @@ import denver from "../../assests/denver_logo_600x.webp";
 import kabbadi from "../../assests/kabaddiadda logo png.png";
 import indinoir from "../../assests/Indinoir logo 1.jpg";
 import intern from "../../assests/internshala_og_image.webp";
-import NewSponsorsmobile from "./NewSponsorsmobile";
+import NewSPONSORsmobile from "./NewSponsersmobile";
 
 import philips from "../../assests/philips.webp";
 import bingo from "../../assests/bingo.png";
@@ -107,7 +107,7 @@ import cotitlesponsboxbg from "../../assests/co_title_spons_box_img.png";
 import cotitlesponsboxbg2 from "../../assests/co_title_spons_box_img_2.png";
 import gensponsbg from "../../assests/gen_spons_bg.png";
 
-function NewSponsors() {
+function NewSPONSORs() {
   return (
     <>
       <div className="spons_home">
@@ -129,7 +129,7 @@ function NewSponsors() {
             <div className="spons_box1">
               <img src={SponsCont} alt="" />
               <div className="spons_cont" style={{ marginTop: "-31vh" }}>
-                <p className="title_size">TITLE Sponsor</p>
+                <p className="title_size">TITLE SPONSOR</p>
                 <div className="spons_img">
                   <img className="titlesponsimg" src={breezeLogo} alt="" />
                 </div>
@@ -139,7 +139,7 @@ function NewSponsors() {
             <div className="spons_box1">
               <img src={SponsBox2} alt="" />
               <div className="spons_cont2">
-                <p className="title_size">CO-TITLE Sponsor</p>
+                <p className="title_size">CO-TITLE SPONSOR</p>
                 <div className="spons_img">
                   <img className="co-titleimg" src={heroLogo} alt="" />
                 </div>
@@ -201,7 +201,7 @@ function NewSponsors() {
                   <p>HYDRATION PARTNER</p>
                   <p>GOLD PARTNER</p>
                   <p>ALUMNI PARTNER</p>
-                  <p>DIAMOND Sponsor</p>
+                  <p>DIAMOND SPONSOR</p>
                   <p>PLATINUM PARTNER</p>
                   {/* <p className='last'>PAYMENT PARTNER</p> */}
                 </div>
@@ -225,9 +225,9 @@ function NewSponsors() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>MERCHANDISE PARTNER</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>FRAGRANCE PARTNER</p>
                   <p className="last">FOOTWEAR PARTNER</p>
                 </div>
@@ -249,11 +249,11 @@ function NewSponsors() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>SNACKING PARTNER</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>VLSI PARTNER</p>
-                  <p className="last">Sponsor</p>
+                  <p className="last">SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={philips} alt="" />
@@ -274,10 +274,10 @@ function NewSponsors() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>DESSERT PARTNER</p>
-                  <p>Sponsor</p>
+                  <p>SPONSOR</p>
                   <p>STATIONARY PARTNER</p>
-                  <p>MAJOR Sponsor</p>
-                  <p className="last">GOLD Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p className="last">GOLD SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={wackers} alt="" />
@@ -297,7 +297,7 @@ function NewSponsors() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>CO Sponsor</p>
+                  <p>CO SPONSOR</p>
                   <p>HEALTHY SNACKING PARTNER</p>
                   <p>BATH AND BODY PARTNER</p>
                   <p>MOMENTS PARTNER</p>
@@ -321,9 +321,9 @@ function NewSponsors() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>CO Sponsor</p>
+                  <p>CO SPONSOR</p>
                   <p>Entertainment and Adventure Partner</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>OVERSEAS EDUCATION PARTNER</p>
                   <p className="last">LEARNING PARTNER</p>
                 </div>
@@ -347,9 +347,9 @@ function NewSponsors() {
                 <div className="spons_heading">
                   <p>WORKSHOP PARTNER</p>
                   <p>SUPPLY CHAIN PARTNER</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>PERFUME PARTNER</p>
-                  <p className="last">SPORTS Sponsor</p>
+                  <p className="last">SPORTS SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={skillhub} alt="" />
@@ -369,11 +369,11 @@ function NewSponsors() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p className="last">MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p className="last">MAJOR SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={indinoir} alt="" />
@@ -393,10 +393,10 @@ function NewSponsors() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
                   <p className="last">EVENTS PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -441,10 +441,10 @@ function NewSponsors() {
                 <img src={sponsbox} alt=''/>
                 <div className='spons_cont3'>
                 <div className='spons_heading'>
-                    <p>MAJOR Sponsor</p>
+                    <p>MAJOR SPONSOR</p>
                     <p>FRAGRANCE PARTNER</p>
                     <p>SPORTS PARTNER</p>
-                    <p>CO Sponsor</p>
+                    <p>CO SPONSOR</p>
                     <p className='last'>Skill Development Partner</p>
                     </div>
                     <div className='spons_img2'>
@@ -465,11 +465,11 @@ function NewSponsors() {
                 <img src={sponsbox} alt=''/>
                 <div className='spons_cont3'>
                 <div className='spons_heading'>
-                    <p>TITLE Sponsor</p>
-                    <p>TITLE Sponsor</p>
-                    <p>TITLE Sponsor</p>
-                    <p>TITLE Sponsor</p>
-                    <p className='last'>TITLE Sponsor</p>
+                    <p>TITLE SPONSOR</p>
+                    <p>TITLE SPONSOR</p>
+                    <p>TITLE SPONSOR</p>
+                    <p>TITLE SPONSOR</p>
+                    <p className='last'>TITLE SPONSOR</p>
                     </div>
                     <div className='spons_img2'>
                         <img className='brand' src={spons1} alt=''/>
@@ -513,7 +513,7 @@ function NewSponsors() {
             <div className="spons_box1">
               <img src={titlesponsboxbg} alt="" />
               <div className="spons_cont">
-                <p className="title_size">TITLE Sponsor</p>
+                <p className="title_size">TITLE SPONSOR</p>
                 <div className="spons_img">
                   <img className="titlesponsimg" src={breezeLogo} alt="" />
                 </div>
@@ -523,7 +523,7 @@ function NewSponsors() {
             <div className="spons_box1">
               <img src={cotitlesponsboxbg} className="cotitleimg1" alt="" />
               <div className="spons_cont2">
-                <p style={{fontSize:"4vw"}}>CO-TITLE Sponsor</p>
+                <p style={{fontSize:"4vw"}}>CO-TITLE SPONSOR</p>
                 <div className="spons_img">
                   <img className="co-titleimg" src={heroLogo} alt="" />
                 </div>
@@ -584,7 +584,7 @@ function NewSponsors() {
                 <div className="spons_heading">
                   <p>GOLD PARTNER</p>
                   <p>ALUMNI PARTNER</p>
-                  <p>DIAMOND Sponsor</p>
+                  <p>DIAMOND SPONSOR</p>
                   {/* <p className='last'>PAYMENT PARTNER</p> */}
                 </div>
                 <div className="spons_img2">
@@ -604,7 +604,7 @@ function NewSponsors() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>PLATINUM PARTNER</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>MERCHANDISE PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -622,7 +622,7 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>FRAGRANCE PARTNER</p>
                   <p>FOOTWEAR PARTNER</p>
                   {/* <p className='last'>PAYMENT PARTNER</p> */}
@@ -645,9 +645,9 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>SNACKING PARTNER</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={philips} alt="" />
@@ -664,7 +664,7 @@ function NewSponsors() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>VLSI PARTNER</p>
-                  <p className="last">Sponsor</p>
+                  <p className="last">SPONSOR</p>
                   <p>DESSERT PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -681,9 +681,9 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>Sponsor</p>
+                  <p>SPONSOR</p>
                   <p>STATIONARY PARTNER</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={lapcare} alt="" />
@@ -699,8 +699,8 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p className="last">GOLD Sponsor</p>
-                  <p>CO Sponsor</p>
+                  <p className="last">GOLD SPONSOR</p>
+                  <p>CO SPONSOR</p>
                   <p>HEALTHY SNACKING PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -736,9 +736,9 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>CO Sponsor</p>
+                  <p>CO SPONSOR</p>
                   <p>Entertainment and Adventure Partner</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={IES} alt="" />
@@ -773,7 +773,7 @@ function NewSponsors() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>SUPPLY CHAIN PARTNER</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p>PERFUME PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -790,9 +790,9 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p className="last">SPORTS Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
+                  <p className="last">SPORTS SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand last" src={kabbadi} alt="" />
@@ -808,9 +808,9 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p className="last">MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p className="last">MAJOR SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img src={line} alt="" />
@@ -827,9 +827,9 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
+                  <p>MAJOR SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={peta} alt="" />
@@ -845,7 +845,7 @@ function NewSponsors() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR Sponsor</p>
+                  <p>MAJOR SPONSOR</p>
                   <p className="last">EVENTS PARTNER</p>
                   <p>EVENTS PARTNER</p>
                 </div>
@@ -882,10 +882,10 @@ function NewSponsors() {
       </div>
 
       <div className="sponsmobview">
-        <NewSponsorsmobile />
+        <NewSPONSORsmobile />
       </div>
     </>
   );
 }
 
-export default NewSponsors;
+export default NewSPONSORs;
