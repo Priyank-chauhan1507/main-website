@@ -129,7 +129,7 @@ function NewSponsers() {
             <div className="spons_box1">
               <img src={SponsCont} alt="" />
               <div className="spons_cont" style={{ marginTop: "-31vh" }}>
-                <p>TITLE SPONSER</p>
+                <p className="title_size">TITLE SPONSER</p>
                 <div className="spons_img">
                   <img className="titlesponsimg" src={breezeLogo} alt="" />
                 </div>
@@ -139,7 +139,7 @@ function NewSponsers() {
             <div className="spons_box1">
               <img src={SponsBox2} alt="" />
               <div className="spons_cont2">
-                <p>CO-TITLE SPONSER</p>
+                <p className="title_size">CO-TITLE SPONSER</p>
                 <div className="spons_img">
                   <img className="co-titleimg" src={heroLogo} alt="" />
                 </div>
@@ -149,7 +149,7 @@ function NewSponsers() {
             <div className="spons_box2">
               <img src={SponsBox3} alt="" />
               <div className="spons_cont2bev" style={{ marginTop: "-44vh" }}>
-                <p> BEVARAGE PARTNER</p>
+                <p className="title_size"> BEVARAGE PARTNER</p>
                 <div className="spons_img">
                   <img className="beverageimg" src={pepsiLogo} alt="" />
                 </div>
@@ -513,7 +513,7 @@ function NewSponsers() {
             <div className="spons_box1">
               <img src={titlesponsboxbg} alt="" />
               <div className="spons_cont">
-                <p>TITLE SPONSER</p>
+                <p className="title_size">TITLE SPONSER</p>
                 <div className="spons_img">
                   <img className="titlesponsimg" src={breezeLogo} alt="" />
                 </div>
@@ -523,7 +523,7 @@ function NewSponsers() {
             <div className="spons_box1">
               <img src={cotitlesponsboxbg} className="cotitleimg1" alt="" />
               <div className="spons_cont2">
-                <p>CO-TITLE SPONSER</p>
+                <p style={{fontSize:"4vw"}}>CO-TITLE SPONSER</p>
                 <div className="spons_img">
                   <img className="co-titleimg" src={heroLogo} alt="" />
                 </div>
@@ -533,7 +533,7 @@ function NewSponsers() {
             <div className="spons_box2">
               <img src={cotitlesponsboxbg2} alt="" />
               <div className="spons_cont2bev">
-                <p> BEVARAGE PARTNER</p>
+                <p className="title_size" style={{fontSize:"3vw"}}> BEVARAGE PARTNER</p>
                 <div className="spons_img">
                   <img className="beverageimg" src={pepsiLogo} alt="" />
                 </div>
