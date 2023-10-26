@@ -74,13 +74,13 @@
     margin-top: 24vh;
     z-index: 10;
     position: relative;
-    margin-bottom: 50vh;
+    margin-bottom: 10vh;
     display: grid;
     align-items: center;
 }
 
 .spons_box2 {
-    margin-top: 47vh;
+    margin-top: 20vh;
     z-index: 10;
     position: relative;
     margin-bottom: 7vh;
@@ -95,7 +95,7 @@
 
 
 .spons_box3 {
-    margin-top: 54vh;
+    margin-top: 20vh;
     z-index: 10;
     position: relative;
 

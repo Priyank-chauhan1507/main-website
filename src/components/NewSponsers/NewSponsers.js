@@ -122,7 +122,7 @@ function NewSponsers() {
           {/* <img src={cloud} alt=''/> */}
 
           <div className="heading1">
-            <p>OUR SPONSERS</p>
+            <p>OUR SPONSORS</p>
           </div>
 
           <div className="spons_box">
@@ -506,7 +506,7 @@ function NewSponsers() {
 
         <div className="sponsmobilepg">
           <div className="heading1_mob">
-            <p>OUR SPONSERS</p>
+            <p>OUR SPONSORS</p>
           </div>
 
           <div className="spons_box">
