@@ -167,9 +167,9 @@ useEffect(() => {
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
-          <Route exact={true} path="/merch_home" element={<Page1/>} />
-          <Route exact={true} path="/merch_selection/:id" element={<Page2/>} />
-          <Route exact={true} path="/merch_cart" element={<Page3/>} />
+          {/* <Route exact={true} path="/merch_home" element={<Page1/>} /> */}
+          {/* <Route exact={true} path="/merch_selection/:id" element={<Page2/>} /> */}
+          {/* <Route exact={true} path="/merch_cart" element={<Page3/>} /> */}
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
@@ -180,7 +180,7 @@ useEffect(() => {
 
           <Route exact={true} path="/our_team" element={<Ourteam/>} />
 
-          {/* <Route exact={true} path="/spons" element={<NewSponsers />} /> */}
+          <Route exact={true} path="/spons" element={<NewSponsers />} />
 
         </Routes>
       </Router>
