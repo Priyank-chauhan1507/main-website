@@ -173,7 +173,7 @@ function MobEventnavbar() {
               Profile
             </h5>
           )}
-          <h5>Sponsor</h5>
+          {/* <h5>Sponsor</h5> */}
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}
@@ -290,7 +290,7 @@ function MobEventnavbar() {
               Profile
             </h5>
           )}
-          <h5 onClick={()=>{navigate("/spons")}}>Sponsor</h5>
+          {/* <h5 onClick={()=>{navigate("/spons")}}>Sponsor</h5> */}
           {localStorage.getItem("token") ? (
             <>
               {/* <img src={profile} alt=""  onClick={() => navigate("/newprofile")} className="ca-profile1" /> */}

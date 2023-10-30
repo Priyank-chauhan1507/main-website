@@ -173,14 +173,14 @@ useEffect(() => {
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
-          <Route exact={true} path="/sponsers" element={<Sponsers/>} />
+          {/* <Route exact={true} path="/sponsers" element={<Sponsers/>} /> */}
           <Route exact={true} path="/PopUp" element={<PopUP/>} />
           <Route exact={true} path="/Carousel" element={<Carousel1/>} />
           <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
 
           <Route exact={true} path="/our_team" element={<Ourteam/>} />
 
-          <Route exact={true} path="/spons" element={<NewSponsers />} />
+          {/* <Route exact={true} path="/spons" element={<NewSponsers />} /> */}
 
         </Routes>
       </Router>
