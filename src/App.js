@@ -24,11 +24,11 @@ import WebNavbarNew from "./components/Navbar/WebNavbarNew";
 import Mobfooter from "./components/Footer/Mobfooter"
 import Eventsmobpage from "./components/EventsMobPage/Eventsmobpage";
 import PaymentSuccess from "./components/Profile/PaymentBox/PaymentSuccess";
-import Idcard from "./components/Profile/ID_card/Idcard";
-import IdcardBox from "./components/Profile/ID_card/idcardBox";
+// import Idcard from "./components/Profile/ID_card/Idcard";
+// import IdcardBox from "./components/Profile/ID_card/idcardBox";
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
-import AdmitCard from "./components/Profile/PaymentBox/AdmitCard";
+// import AdmitCard from "./components/Profile/PaymentBox/AdmitCard";
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
 import Home2 from "./components/MUNmobile/HomeMun/HomeMUN";
