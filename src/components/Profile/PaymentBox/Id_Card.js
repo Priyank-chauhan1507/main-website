@@ -22,18 +22,18 @@ import downloadd from "../../../assests/downloadsign.png";
 import { message } from "antd";
 import icon31 from "../../../assests/payment.svg";
 import line from "../../../assests/line1.svg";
-import paymentcenterpic from "../../../assests/paymentpic.webp";
-// import { useHistory } from "react-router-dom";
-import CircularProgress from "@mui/material/CircularProgress";
-import id_card_bg from "../../../assests/idback.webp";
-import qrcode from "../../../assests/qr.webp";
-import qr from "../../../PdfRenderer/qr.png";
+// import paymentcenterpic from "../../../assests/paymentpic.webp";
+// // import { useHistory } from "react-router-dom";
+// import CircularProgress from "@mui/material/CircularProgress";
+// import id_card_bg from "../../../assests/idback.webp";
+// import qrcode from "../../../assests/qr.webp";
+// import qr from "../../../PdfRenderer/qr.png";
 import "./Id_Card.css";
 import QRcode from "qrcode.react";
 import { useNavigate } from "react-router-dom";
-import PDFFile from "../../../PdfRenderer/Renderer";
+// import PDFFile from "../../../PdfRenderer/Renderer";
 import { fetchUser } from "../../User/UserActions";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+// import { PDFDownloadLink } from "@react-pdf/renderer";
 import pic1 from "../../../assests/profile1.png.jpg"
 const fileTypes = ["JPG", "PNG", "GIF"];
 
@@ -51,7 +51,7 @@ const Id_Card = () => {
 
   useEffect(() => {
     getData();
-    
+
   }, []);
   const navigate = useNavigate();
 
@@ -71,18 +71,18 @@ const Id_Card = () => {
     }
   });
 
-  
- 
+
+
   const QrChange = async ()   => {
     navigate("/pdf");
-    
+
     // setLoading(true);
     // const response = await axios.put(`/apiV1/registeruser/${localStorage.getItem("user_id")}`, {"qr" : JSON.stringify(vall)});
     // if (response.status == 200) {
     //   // setprofilepic(true);
     //   // fetchUser();
     //   setLoading(false);
-      
+
     //   console.log(response.data, "qr_response");
     //       navigate("/pdf");
     // } else {
@@ -132,17 +132,17 @@ const Id_Card = () => {
           // setprofilepic(true);
           // fetchUser();
           setLoading(false);
-          
+
           console.log(response.data, "qr_response");
-             
+
         } else {
           setLoading(false);
           message.error("Something went wrong while generating QR");
           setprofilepic(null);
         }
-             
+
           }, 1000);
-         
+
     }
   };
 

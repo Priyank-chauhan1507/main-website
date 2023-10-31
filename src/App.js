@@ -29,9 +29,6 @@ import IdcardBox from "./components/Profile/ID_card/idcardBox";
 import EventsMain from "./components/Profile/EventsPage/EventMainPage"
 import ProfileNameEditModel from "./components/Profile/MainProfileBox/ProfileNameEditModel";
 import AdmitCard from "./components/Profile/PaymentBox/AdmitCard";
-import PdfDownload from "./PdfRenderer/PdfDownload";
-// import Pdf from "./PdfRenderer/Renderer"
-import Qr from "./PdfRenderer/Qrcode"
 // import Home1 from "./components/Home/Home";
 import Home1 from "./components/MUN/Home/Home";
 import Home2 from "./components/MUNmobile/HomeMun/HomeMUN";
@@ -40,14 +37,7 @@ import Home2Reg from "./components/MUNmobile/Registration/Registration";
 import FAQ from "./components/MUN/FAQ/FAQ";
 import Footer1 from "./components/MUN/Footer/Footer";
 import Commitee from "./components/MUN/Commitee/Commitee";
-// import Footer1 from "./components/MUN/Judges/Judges";
-import ReactGA4 from 'react-ga4';
 import Judges from "./components/MUN/Judges/Judges";
-import Page1 from "./components/Merch_page/Page1/Page1";
-import Page2 from "./components/Merch_page/Page2/Page2";
-import PopUP from "./components/Merch_page/PopUp/PopUp";
-// require('dotenv').config()
-import Page3 from "./components/Merch_page/Page3/Page3";
 import MUNMoreInfoPage1 from "./components/MUN/MoreInfo/Moreinfopage1/Moreinfopage1";
 import MUNMoreInfoPage2 from "./components/MUN/MoreInfo/Moreinfopage2/Moreinfopage2";
 import MUNMoreInfoPage3 from "./components/MUN/MoreInfo/Moreinfopage3/Moreinfopage3";
@@ -56,7 +46,7 @@ import Attraction_new from "./components/Home/Attraction_new";
 import Sponsers from "./components/Sponsers/Sponsers"
 import Id_Card from "./components/Profile/PaymentBox/Id_Card";
 import axios from "axios"
-import Renderer from "./PdfRenderer/Renderer"
+
 
 import Ourteam from "./components/Teams/ourteams";
 import EventPayment from "./components/EventPayment/EventPayment";
@@ -64,9 +54,6 @@ import EventPayment from "./components/EventPayment/EventPayment";
 import NewSponsers from "./components/NewSponsers/NewSponsers";
 import NewSponsersmobile from "./components/NewSponsers/NewSponsersmobile";
 
-
-// console.log(process.env.REACT_APP_TRACKING_ID);
-// ReactGA4.initialize("G-FG974BLVDN");
 const App = (props) => {
 
 
@@ -80,16 +67,8 @@ useEffect(() => {
   };
   }, [user]);
 
-//  useEffect(() => {
-
-//       const items = JSON.parse(localStorage.getItem("dataKey"));
-//     if (items) {
-//       setItems(items);
-//         };
-//   }, []);
 
   useEffect(() => {
-    // ReactGA4.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("user_id");
     if (token) {
@@ -113,7 +92,7 @@ useEffect(() => {
     <>
       <Router>
         <Routes>
-        
+
           <Route exact={true} path="/" element={<Home />} />
           <Route exact={true} path="/sponsmobile" element={<NewSponsersmobile />} />
           {/* <Route exact={true} path="/personaldetails" element={<PersonalDetails />} /> */}
@@ -123,7 +102,7 @@ useEffect(() => {
           <Route exact={true} path="/login" element={<Login />} />
           <Route exact={true} path="/forgotpassword" element={<Forget/>} />
           <Route exact={true} path="/otpverify" element={<RegPage />} />
-          
+
           <Route
             exact={true}
             path="/auth/reset-password/:email/:token"
@@ -141,22 +120,14 @@ useEffect(() => {
           <Route exact={true} path="/payment_gupt" element={<NewPaymentbox/>} />
 
           <Route exact={true} path="/payment_thsp" element={<NewPaymentbox/>} />
-          
+
 
           <Route exact={true} path="/card" element={<EventCard/>} />
           <Route exact={true} path="/webnav" element={<WebNavbarNew/>} />
           <Route exact={true} path="/mobfooter" element={<Mobfooter/>} />
           <Route exact={true} path="/eventslist" element={<Eventsmobpage />} />
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
-          {/* <Route exact={true} path="/id_cards" element={<Idcard />} /> */}
-          <Route exact={true} path="/id_card" element={<Id_Card/>} />
-          <Route exact={true} path="/pdf" element={<PdfDownload data={user} items ={items} />} />
-          <Route exact={true} path="/renderer" element={<Renderer data ={user}  items = {items}/>} />
-          {/* <Route exact={true} path="/pdfs" element={<Pdf/>} /> */}
-          <Route exact={true} path="/qr" element={<Qr/>} />
 
-          {/* <Route exact={true} path="/id_card_box" element={<IdcardBox />} /> */}
-          {/* <Route exact={true} path="/admitcard" element={<AdmitCard />} /> */}
           <Route exact={true} path="/paymentsucess" element={<PaymentSuccess />} />
           <Route exact={true} path="/events" element={<EventsMain />} />
           <Route exact={true} path="/ProfileNameEdit" element={<ProfileNameEditModel />} />
@@ -167,14 +138,11 @@ useEffect(() => {
           <Route exact={true} path="/munfooter" element={<Footer1/>} />
           <Route exact={true} path="/muncommitee" element={<Commitee/>} />
           <Route exact={true} path="/judges" element={<Judges/>} />
-          {/* <Route exact={true} path="/merch_home" element={<Page1/>} /> */}
-          {/* <Route exact={true} path="/merch_selection/:id" element={<Page2/>} /> */}
-          {/* <Route exact={true} path="/merch_cart" element={<Page3/>} /> */}
+
           <Route exact={true} path="/muninfo_page1" element={<MUNMoreInfoPage1/>} />
           <Route exact={true} path="/muninfo_page2" element={<MUNMoreInfoPage2/>} />
           <Route exact={true} path="/muninfo_page3" element={<MUNMoreInfoPage3/>} />
           {/* <Route exact={true} path="/sponsers" element={<Sponsers/>} /> */}
-          <Route exact={true} path="/PopUp" element={<PopUP/>} />
           <Route exact={true} path="/Carousel" element={<Carousel1/>} />
           <Route exact={true} path="/attraction_new" element={<Attraction_new/>} />
 
