@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./EventPayment.css";
 import logo from "../../assests/paymentlogo.png";
 import axios from "axios";
-import PopUp from "../Merch_page/PopUp/PopUp";
+// import PopUp from "../Merch_page/PopUp/PopUp";
 import Loader from "../Loader/Loader";
 function EventPayment() {
   const [events, setevents] = useState([]);
@@ -89,9 +89,9 @@ function EventPayment() {
             );
           })}
       </div>
-      {details && (
-        <PopUp details={details} setdetails={setdetails} event={event} />
-      )}
+      {/* {details && (
+        <PopUp details={details} setdetails={setdetails} event={event}/>
+      )} */}
     </div>
   );
 }

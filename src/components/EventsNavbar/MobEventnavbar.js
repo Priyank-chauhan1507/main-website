@@ -98,14 +98,14 @@ function MobEventnavbar() {
           >
             Events
           </h1>
-          <h1
+          {/* <h1
             onClick={() => {
               navigate("/merch_home");
               window.location.reload(false);
             }}
           >
             Merch
-          </h1>
+          </h1> */}
           <h1
             onClick={() => {
               navigate("/MUN");
@@ -215,14 +215,14 @@ function MobEventnavbar() {
           >
             Events
           </h1>
-          <h1
+          {/* <h1
             onClick={() => {
               navigate("/merch_home");
               window.location.reload(false);
             }}
           >
             Merch
-          </h1>
+          </h1> */}
           <h1
             onClick={() => {
               navigate("/MUN");

@@ -30,7 +30,6 @@ import simg5 from '../../assests/simg5.svg'
 
 import pronite from '../../assests/mobpro.webp'
 import { Link, useNavigate } from "react-router-dom"
-import { customEvent } from '../../utils/analyticsHelper';
 import Thomso from "../../assests/thomso-unscreen.gif"
 
 import Attractions from './Attraction_new'
@@ -295,12 +294,12 @@ function Home() {
           <button className='register'>PROFILE</button>
         </Link>
           <Link to='/events'>
-            <button className='Explore' onClick={() => customEvent("Explore Events Btn", "user", "From Home page to events", 1)}>Explore Events</button>
+            <button className='Explore' >Explore Events</button>
           </Link></div>)
         :
         (<div className='butHolder' style={{ margin: "0 auto", display: "flex", gap: "3vw" }}>
           <Link to='/register'>
-            <button className='register' onClick={() => customEvent("REGISTER NOW! Btn", "user", "From Home page to registeration", 1)}>REGISTER NOW!</button>
+            <button className='register' >REGISTER NOW!</button>
           </Link>
           <Link to='/events'>
             <button className='Explore'>Explore Events</button>
@@ -436,7 +435,7 @@ The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or sta
           data-aos-duration="1200">DARSHAN RAWAL | 2022</div>
         <div className='sText5' ref={display9Ref} data-aos="fade-left"
           data-aos-duration="1200">JUBIN NAUTIYAL | 2019</div>
-      </div> 
+      </div>
 
 
        <div className='home3rdmob'>
@@ -446,7 +445,7 @@ The theme of Thomso’23 is ‘An Eclectic Elysia’, which means a place or sta
       </div> */}
 
 
-      
+
 
 
 
