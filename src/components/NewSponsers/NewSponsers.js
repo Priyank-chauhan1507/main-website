@@ -106,7 +106,7 @@ import titlesponsboxbg from "../../assests/title_spons_box_img.png";
 import cotitlesponsboxbg from "../../assests/co_title_spons_box_img.png";
 import cotitlesponsboxbg2 from "../../assests/co_title_spons_box_img_2.png";
 import gensponsbg from "../../assests/gen_spons_bg.png";
-
+import zebronicsimg from "../../assests/zebronicslogo.webp";
 function NewSPONSORs() {
   return (
     <>
@@ -299,7 +299,7 @@ function NewSPONSORs() {
                 <div className="spons_heading">
                   <p>CO SPONSOR</p>
                   <p>HEALTHY SNACKING PARTNER</p>
-                  <p>BATH AND BODY PARTNER</p>
+                  <p>AUDIO PARTNER</p>
                   <p>MOMENTS PARTNER</p>
                   <p className="last">ZONALS TRAVEL PARTNER</p>
                 </div>
@@ -308,7 +308,7 @@ function NewSPONSORs() {
                   <img src={line} alt="" />
                   <img className="brand" src={tooyum} alt="" />
                   <img src={line} alt="" />
-                  <img className="brand" src={plum} alt="" />
+                  <img className="brand" src={zebronicsimg} alt="" />
                   <img src={line} alt="" />
                   <img className="brand" src={instax} alt="" />
                   <img className="last" src={line} alt="" />
