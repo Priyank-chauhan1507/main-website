@@ -21,7 +21,7 @@ import rec from "../../assests/REC.png";
 import anantraj from "../../assests/Anant Raj.png";
 import bailey from "../../assests/bailey.jpg";
 
-import tatachem from "../../assests/tatachemicals.png";
+import tatachem from "../../assests/TATA CHEMICALS corporate ppt v3-11.png";
 import iitraa from "../../assests/iitraa.jpg";
 import sparx from "../../assests/sparx.png";
 import treks from "../../assests/trek.png";
@@ -31,7 +31,7 @@ import ongc from "../../assests/ONGC.png";
 import fastrack from "../../assests/Fastrack Perfumes White Logo.jpg";
 import unibic from "../../assests/download.png";
 import best from "../../assests/BEST_Undertaking_logo.png";
-import rohde from "../../assests/rohde.png";
+import rohde from "../../assests/Rohde and Schwarz.png";
 import shapoorji from "../../assests/Shapoorji Pallonji Logo.jpg";
 import redchief from "../../assests/red chief.jpeg";
 
@@ -49,14 +49,14 @@ import vlsi from "../../assests/VLSI Logo .jpg";
 
 import fragile from "../../assests/fragile.png";
 import dkms from "../../assests/DKMS BMST.jpeg";
-import peta from "../../assests/peta.png";
+import peta from "../../assests/petaindia.png";
 import luxor from "../../assests/luxor.png";
-import parsan from "../../assests/parsan.webp";
+import parsan from "../../assests/parsan logo.jpg";
 
 import pizleo from "../../assests/pizleo.png";
-import continental from "../../assests/continental.webp";
+import continental from "../../assests/CONTINENTALLOGO.png";
 import deals from "../../assests/deals.png";
-import layer from "../../assests/layer.png";
+import layer from "../../assests/layernew.png";
 import tooyum from "../../assests/Too-Yoom-2.png";
 
 import plum from "../../assests/plum.png";
@@ -67,13 +67,13 @@ import course from "../../assests/course.png";
 
 import lakshita from "../../assests/lakshita.webp";
 import thrill from "../../assests/thrill.png";
-import IES from "../../assests/IES.jpg";
+import IES from "../../assests/iesmaster.png";
 import zebronics from "../../assests/zebronics.png";
 import tessco from "../../assests/tessco.jpg";
 
 import dd from "../../assests/dd.jpg";
-import orion from "../../assests/orion.png";
-import crystal from "../../assests/crystal.jpg";
+import orion from "../../assests/Orion Logo.jpg";
+import crystal from "../../assests/crystalworld.png";
 import skippi from "../../assests/skippi.png";
 import yardley from "../../assests/yardley.png";
 
@@ -81,24 +81,24 @@ import study from "../../assests/study.png";
 import westland from "../../assests/rVz1fK6C6BEgO9nbEkZ9CjntXY.webp";
 import edwim from "../../assests/edvin.png";
 import skillhub from "../../assests/skill.webp";
-import safex from "../../assests/safex.png";
+import safex from "../../assests/safeexpress.png";
 
 import ace from "../../assests/ace.png";
-import denver from "../../assests/denver_logo_600x.webp";
+import denver from "../../assests/denver.png";
 import kabbadi from "../../assests/kabaddiadda logo png.png";
-import indinoir from "../../assests/Indinoir logo 1.jpg";
-import intern from "../../assests/internshala_og_image.webp";
+import indinoir from "../../assests/indinoir.png";
+import intern from "../../assests/internshala.png";
 import NewSPONSORsmobile from "./NewSponsersmobile";
 
-import philips from "../../assests/philips.webp";
+import philips from "../../assests/philipsnew.png";
 import bingo from "../../assests/bingo.png";
 import instax from "../../assests/instax.png";
-import top from "../../assests/top.png";
-import wowl from "../../assests/wowl.png";
+import top from "../../assests/topone.png";
+import wowl from "../../assests/wowlnew.png";
 import berrylush from "../../assests/berrylush.jpeg";
-import techno from "../../assests/techno.png";
-import fitcamp from "../../assests/fitcamp.png";
-import handilane from "../../assests/Handilane.webp";
+import techno from "../../assests/technomec.png";
+import fitcamp from "../../assests/Fit Camp Gym.png";
+import handilane from "../../assests/handilane.png";
 import heroLogo from "../../assests/herologo.webp";
 import pepsiLogo from "../../assests/indieblog_pepsi_logo_history_2014.webp";
 import breezeLogo from "../../assests/breeze.webp";
@@ -107,6 +107,10 @@ import cotitlesponsboxbg from "../../assests/co_title_spons_box_img.png";
 import cotitlesponsboxbg2 from "../../assests/co_title_spons_box_img_2.png";
 import gensponsbg from "../../assests/gen_spons_bg.png";
 import zebronicsimg from "../../assests/zebronicslogo.webp";
+import Furo from "../../assests/furo.png";
+import shakumbari from "../../assests/shakumabri.jpg";
+import deepam from "../../assests/deepamindustries.png";
+import bns from "../../assests/bns logo-2.png";
 function NewSPONSORs() {
   return (
     <>
@@ -177,7 +181,7 @@ function NewSPONSORs() {
                   <p>BANKING PARTNER</p>
                   <p>EDUCATION PARTNER</p>
                   <p>ELECTRICITY PARTNER</p>
-                  <p>PAYMENT PARTNER</p>
+                  <p>PAYMENTS PARTNER</p>
                   <p className="last">INFRASTRUCTURE PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -199,11 +203,11 @@ function NewSPONSORs() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>HYDRATION PARTNER</p>
-                  <p>GOLD PARTNER</p>
+                  <p>GOLD SPONSOR</p>
                   <p>ALUMNI PARTNER</p>
                   <p>DIAMOND SPONSOR</p>
-                  <p>PLATINUM PARTNER</p>
-                  {/* <p className='last'>PAYMENT PARTNER</p> */}
+                  <p>PLATINUM SPONSOR</p>
+                  {/* <p className='last'>PAYMENTS PARTNER</p> */}
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={bailey} alt="" />
@@ -228,7 +232,7 @@ function NewSPONSORs() {
                   <p>MAJOR SPONSOR</p>
                   <p>MERCHANDISE PARTNER</p>
                   <p>MAJOR SPONSOR</p>
-                  <p>FRAGRANCE PARTNER</p>
+                  <p>FOOTWEAR PARTNER</p>
                   <p className="last">FOOTWEAR PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -238,9 +242,10 @@ function NewSPONSORs() {
                   <img src={line} alt="" />
                   <img className="brand" src={rohde} alt="" />
                   <img src={line} alt="" />
-                  <img className="brand" src={fastrack} alt="" />
+                  <img className="brand" src={Furo} alt="" />
                   <img className="last" src={line} alt="" />
-                  <img className="brand last" src={redchief} alt="" />
+                  {/* <img className="brand last" src={Furo} alt=""/> */}
+                  <img className="brand" src={redchief} alt="" />
                 </div>
               </div>
             </div>
@@ -249,9 +254,9 @@ function NewSPONSORs() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR SPONSOR</p>
+                  <p>STYLING PARTNER</p>
                   <p>SNACKING PARTNER</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p>FRAGRANCE PARTNER</p>
                   <p>VLSI PARTNER</p>
                   <p className="last">SPONSOR</p>
                 </div>
@@ -260,7 +265,7 @@ function NewSPONSORs() {
                   <img src={line} alt="" />
                   <img className="brand" src={bingo} alt="" />
                   <img src={line} alt="" />
-                  <img className="brand" src={munjal} alt="" />
+                  <img className="brand" src={fastrack} alt="" />
                   <img src={line} alt="" />
                   <img className="brand" src={vlsi} alt="" />
                   <img className="last" src={line} alt="" />
@@ -323,7 +328,7 @@ function NewSPONSORs() {
                 <div className="spons_heading">
                   <p>CO SPONSOR</p>
                   <p>Entertainment and Adventure Partner</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p>SPONSOR</p>
                   <p>OVERSEAS EDUCATION PARTNER</p>
                   <p className="last">LEARNING PARTNER</p>
                 </div>
@@ -347,9 +352,9 @@ function NewSPONSORs() {
                 <div className="spons_heading">
                   <p>WORKSHOP PARTNER</p>
                   <p>SUPPLY CHAIN PARTNER</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p>VOGUE PARTNER</p>
                   <p>PERFUME PARTNER</p>
-                  <p className="last">SPORTS SPONSOR</p>
+                  <p className="last">SPORTS PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={skillhub} alt="" />
@@ -369,11 +374,11 @@ function NewSPONSORs() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p className="last">MAJOR SPONSOR</p>
+                  <p>CO-SPONSOR</p>
+                  <p>REAL ESTATE PARTNER</p>
+                  <p>SKILL DEVELOPMENT PARTNER</p>
+                  <p>FITNESS PARTNER</p>
+                  <p className="last">SOCIAL INITIATIVE PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={indinoir} alt="" />
@@ -394,10 +399,34 @@ function NewSPONSORs() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p className="last">EVENTS PARTNER</p>
+                  <p>FOURWHEELER PARTNER</p>
+                  <p>BATH AND BODY PARTNER</p>
+                  <p>INDUSTRY PARTNER</p>
+                  <p className="last">GROOMING PARTNER</p>
+                </div>
+                <div className="spons_img2">
+                  <img className="brand" src={munjal} alt="" />
+                  <img src={line} alt="" />
+                  <img className="brand" src={shakumbari} alt="" />
+                  <img src={line} alt="" />
+                  <img className="brand" src={plum} alt="" />
+                  <img src={line} alt="" />
+                  <img className="brand" src={deepam} alt="" />
+                  <img className="last" src={line} alt="" />
+                  <img className="brand last" src={bns} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="spons_box3">
+              <img src={sponsbox} alt="" />
+              <div className="spons_cont3">
+                <div className="spons_heading">
+                  <p>SOCIAL INITIATIVE PARTNER</p>
+                  <p>SOCIAL INITATIVE PARTNER</p>
+                  <p>YOUTH INTIATIVE PARTNER</p>
+                  <p>DECOR PARTNER</p>
+                  <p className="last">CAMPUS DIVA PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={peta} alt="" />
@@ -417,9 +446,9 @@ function NewSPONSORs() {
               <img src={sponsbox} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading1">
-                  <p>EVENTS PARTNER</p>
-                  <p>EVENTS PARTNER</p>
-                  <p>EVENTS PARTNER</p>
+                  <p>DRAMATICS PARTNER</p>
+                  <p>PAGEANT PARTNER</p>
+                  <p>MANAGEMENT PARTNER</p>
                   {/* <p>WORKSHOP PARTNER</p>
                     <p className='last'>SUPPLY CHAIN PARTNER</p> */}
                 </div>
@@ -561,10 +590,10 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>PAYMENT PARTNER</p>
+                  <p>PAYMENTS PARTNER</p>
                   <p>INFRASTRUCTURE PARTNER</p>
                   <p>HYDRATION PARTNER</p>
-                  {/* <p className='last'>PAYMENT PARTNER</p> */}
+                  {/* <p className='last'>PAYMENTS PARTNER</p> */}
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={pnb} alt="" />
@@ -582,10 +611,10 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>GOLD PARTNER</p>
+                  <p>GOLD SPONSOR</p>
                   <p>ALUMNI PARTNER</p>
                   <p>DIAMOND SPONSOR</p>
-                  {/* <p className='last'>PAYMENT PARTNER</p> */}
+                  {/* <p className='last'>PAYMENTS PARTNER</p> */}
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={tatachem} alt="" />
@@ -603,7 +632,7 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>PLATINUM PARTNER</p>
+                  <p>PLATINUM SPONSOR</p>
                   <p>MAJOR SPONSOR</p>
                   <p>MERCHANDISE PARTNER</p>
                 </div>
@@ -623,14 +652,14 @@ function NewSPONSORs() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>MAJOR SPONSOR</p>
-                  <p>FRAGRANCE PARTNER</p>
                   <p>FOOTWEAR PARTNER</p>
-                  {/* <p className='last'>PAYMENT PARTNER</p> */}
+                  <p>FOOTWEAR PARTNER</p>
+                  {/* <p className='last'>PAYMENTS PARTNER</p> */}
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={rohde} alt="" />
                   <img src={line} alt="" />
-                  <img className="brand" src={fastrack} alt="" />
+                  <img className="brand" src={Furo} alt="" />
                   <img className="last" src={line} alt="" />
                   <img className="brand" src={redchief} alt="" />
 
@@ -645,16 +674,16 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR SPONSOR</p>
+                  <p>STYLING PARTNER</p>
                   <p>SNACKING PARTNER</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p>FRAGRANCE PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={philips} alt="" />
                   <img src={line} alt="" />
                   <img className="brand" src={bingo} alt="" />
                   <img src={line} alt="" />
-                  <img className="brand" src={munjal} alt="" />
+                  <img className="brand" src={fastrack} alt="" />
                 </div>
               </div>
             </div>
@@ -717,13 +746,13 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>BATH AND BODY PARTNER</p>
+                  <p>AUDIO PARTNER</p>
                   <p>MOMENTS PARTNER</p>
                   <p className="last">ZONALS TRAVEL PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img src={line} alt="" />
-                  <img className="brand" src={plum} alt="" />
+                  <img className="brand" src={zebronics} alt="" />
                   <img src={line} alt="" />
                   <img className="brand" src={instax} alt="" />
                   <img className="last" src={line} alt="" />
@@ -738,7 +767,7 @@ function NewSPONSORs() {
                 <div className="spons_heading">
                   <p>CO SPONSOR</p>
                   <p>Entertainment and Adventure Partner</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p>SPONSOR</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={IES} alt="" />
@@ -773,7 +802,7 @@ function NewSPONSORs() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>SUPPLY CHAIN PARTNER</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p>VOGUE PARTNER</p>
                   <p>PERFUME PARTNER</p>
                 </div>
                 <div className="spons_img2">
@@ -790,9 +819,9 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p className="last">SPORTS SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p className="last">SPORTS PARTNER</p>
+                  <p>CO-SPONSOR</p>
+                  <p>REAL ESTATE PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand last" src={kabbadi} alt="" />
@@ -808,9 +837,9 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p className="last">MAJOR SPONSOR</p>
+                  <p>SKILL DEVELOPMENT PARTNER</p>
+                  <p>FITNESS PARTNER</p>
+                  <p className="last">SOCIAL INITIATIVE PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img src={line} alt="" />
@@ -827,9 +856,9 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading">
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
-                  <p>MAJOR SPONSOR</p>
+                  <p>SOCIAL INITIATIVE PARTNER</p>
+                  <p>SOCIAL INITIATIVE PARTNER</p>
+                  <p>YOUTH INITIATIVE PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={peta} alt="" />
@@ -846,8 +875,38 @@ function NewSPONSORs() {
               <div className="spons_cont3">
                 <div className="spons_heading">
                   <p>MAJOR SPONSOR</p>
-                  <p className="last">EVENTS PARTNER</p>
-                  <p>EVENTS PARTNER</p>
+                  <p>BATH AND BODY PARTNER</p>
+                  <p>INDUSTRY PARTNER</p>
+                </div>
+                <div className="spons_img2">
+                  <img className="brand" src={munjal} alt="" />
+                  <img src={line} alt="" />
+                  <img className="brand" src={plum} alt="" />
+                  <img src={line} alt="" />
+                  <img className="brand" src={deepam} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="spons_box3">
+              <img src={gensponsbg} alt="" />
+              <div className="spons_cont3">
+                <div className="spons_heading">
+                  <p>GROOMING PARTNER</p>
+                </div>
+                <div className="spons_img2">
+                  <img className="brand" src={bns} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="spons_box3">
+              <img src={gensponsbg} alt="" />
+              <div className="spons_cont3">
+                <div className="spons_heading">
+                  <p>DECOR PARTNER</p>
+                  <p className="last">CAMPUS DIVA PARTNER</p>
+                  <p>DRAMATICS PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img className="brand" src={handilane} alt="" />
@@ -863,8 +922,8 @@ function NewSPONSORs() {
               <img src={gensponsbg} alt="" />
               <div className="spons_cont3">
                 <div className="spons_heading last_heading">
-                  <p>EVENTS PARTNER</p>
-                  <p>EVENTS PARTNER</p>
+                  <p>PAGEANT PARTNER</p>
+                  <p>MANAGEMENT PARTNER</p>
                 </div>
                 <div className="spons_img2">
                   <img
