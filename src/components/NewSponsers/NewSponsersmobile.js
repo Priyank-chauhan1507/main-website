@@ -21,7 +21,7 @@ import rec from '../../assests/REC.png'
 import anantraj from '../../assests/Anant Raj.png'
 import bailey from '../../assests/bailey.jpg'
 
-import tatachem from '../../assests/tatachemicals.png'
+import tatachem from '../../assests/TATA CHEMICALS corporate ppt v3-11.png'
 import iitraa from '../../assests/iitraa.jpg'
 import sparx from '../../assests/sparx.png'
 import treks from '../../assests/trek.png'
@@ -31,7 +31,7 @@ import pnb from '../../assests/pnb.png'
 import fastrack from '../../assests/Fastrack Perfumes White Logo.jpg'
 import unibic from '../../assests/download.png'
 import best from '../../assests/BEST_Undertaking_logo.png'
-import rohde from '../../assests/rohde.png'
+import rohde from '../../assests/Rohde and Schwarz.png'
 import shapoorji from '../../assests/Shapoorji Pallonji Logo.jpg'
 
 
@@ -102,6 +102,8 @@ import berrylush from '../../assests/berrylush.jpeg'
 import techno from '../../assests/techno.png'
 import fitcamp from '../../assests/fitcamp.png'
 import handilane from '../../assests/Handilane.webp'
+import Furo from "../../assests/furo.png";
+import deepam from "../../assests/deepamindustries.png"
 
 
 

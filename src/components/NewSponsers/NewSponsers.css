@@ -280,6 +280,9 @@
     width: 9vw;
 
 }
+.brand1{
+    width:12vw;
+}
 
 .brandtitle {
     width: 9vw;
@@ -367,6 +370,9 @@
 
     .brand {
         width: 18vw !important;
+    }
+    .brand1{
+        width:20vw !important;
     }
 
     .spons_heading>p {
